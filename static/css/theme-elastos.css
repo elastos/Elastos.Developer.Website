@@ -1,0 +1,118 @@
+#logo img {
+    width: 70%
+}
+
+.ela-folder:before {
+    content: "\f07c";
+}
+
+.ela-page:before {
+    content: "\f15b";
+    width:20px;
+    display:inline-block
+}
+
+.tab-button{
+	position: relative;
+	z-index: 1;
+	color:#333;
+	border:none;
+	outline: none;
+	background-color: #e4e4e4;
+	padding: 5px 15px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.tab-button.active{
+	background-color: #326A90;
+	color:white;
+}
+.tab-content {
+	border: solid 1px #DDDDDD;
+}
+.tab-content .tab-pane{
+	display: none;
+}
+.tab-content .tab-pane.active{
+	display: block;
+}
+.tab-content .tab-pane pre {
+	margin:0
+}
+/* Treatment of copy buttons inside a tab module */ 
+/*.tab-content .copy, .tab-content .copied{
+	display: none;
+}
+.tab-content .tab-pane.active + .copy, .tab-content .tab-pane.active + .copied{
+	display: block;
+}*/
+
+
+
+.faqentry {
+	margin-bottom:20px;
+	border-top: dashed 1px #326A90;
+	padding-top:10px;
+}
+
+.faqentry .faqquestion {
+	font-weight: bold;
+	font-size: 20px;
+	color:#326A90;
+}
+
+.pleasetranslate {
+	background: #FAFAFA;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0 0 5px #CCC;
+}
+
+.pleasetranslate .title {
+	text-align: center;
+	font-size: 30px;
+	border-bottom: solid 1px #CCC;
+}
+
+.pleasetranslate .title .fas {
+	color: #326A90;
+}
+
+.pleasetranslate .subtitle {
+	margin-bottom: 10px;
+	color: #777;
+	font-size: 14px;
+	text-align: center;
+}
+
+.fixme {
+	background: #CE0100;
+	color: white;
+	padding: 5px;
+	border-radius: 10px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.fixme .fix {
+	font-weight: bold;
+	margin-right: 10px;
+	font-size: 18px;
+}
+
+.checkme {
+	background: #e89a00;
+	color: white;
+	padding: 5px;
+	border-radius: 10px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.checkme .check {
+	font-weight: bold;
+	margin-right: 10px;
+	font-size: 18px;
+}

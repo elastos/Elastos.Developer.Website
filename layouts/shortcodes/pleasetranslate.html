@@ -1,0 +1,12 @@
+{{ if .Inner }}{{/* We don't use the inner content, but Hugo will complain if we don't reference it. */}}{{ end }}
+<div class="pleasetranslate">
+    <div class="title">
+        <i class="fas fa-exclamation-triangle"></i> Please Translate <i class="fas fa-exclamation-triangle"></i>
+    </div>
+    <div class="subtitle">
+        Translators: please translate the following text and add it or merge it with the existing content, then remove this shortcode.
+    </div>
+    <div class="text">
+        {{ .Inner | markdownify }}
+    </div>
+</div>

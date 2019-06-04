@@ -1,0 +1,8 @@
+<div class="faqentry">
+    <div class="faqquestion">
+        <i class="far fa-question-circle"></i> {{ .Get "question" }}
+    </div>
+    <div class="faqanswer">
+        {{ .Inner | markdownify }}
+    </div>
+</div>
