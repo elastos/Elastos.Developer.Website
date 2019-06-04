@@ -8,6 +8,8 @@ alwaysopen = false
 
 {{< checkme >}}
 
+{{< todo "Merge content from https://www.elastos.org/developer/ ?" >}}
+
 {{< figure src="elastos_smart_web.png" >}}
 {{< fixme "Get a readable version of this picture." >}}
 

@@ -37,6 +37,8 @@ Generated content is located in **/public**.
 
 **Please check the DEMO PAGE link on the doc website at the bottom of the left panel menu, to view live examples of the following shortcodes.**
 
+Shortcodes are hugo-specific ways to automatically generate html content easily. They can be seen as meta-html. A simple **{{< todo "something" >}}** will generate the html code to display a nice todo box with given content.
+
 Shortcodes can be used in .md and .html files.
 
 ### Show an orange TODO box
@@ -125,7 +127,5 @@ Make sure to discuss major changes with the following persons first:
 # TODO
 1. Import existing data and split where necessary
 1. Homepage
-1. Publish to github as main readme/content and move older content to a deprecated folder
 1. Check how we can customize text styles in .md in order to underline some words or sentences like on the w3c did spec (colored, very nice to read)
-1. Find a way to make sure that when a page is edited in the future, other languages upgrade to the change too.
 1. Define how to layout/collect/update API references from heterogeneous projects.

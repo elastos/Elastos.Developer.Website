@@ -77,6 +77,13 @@ Note for readers. Please keep this in mind.
 ### Check me box
 {{< checkme >}}
 
+### Simple code snippet
+Here is some automatically higlighted code:
+
+    function() {
+        myObj.myVar += 30;
+    }
+
 ### Picture
 
 {{< figure src="/demo_picture.png" >}}
