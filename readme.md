@@ -113,6 +113,11 @@ Add the following code (one for each language) to config.toml:
     name = "<i class='fas fa-user'></i> DID explorer"
     url = "https://idchain.elastos.org/"
     weight = 20
+    
+### To add tags at the top of a page:
+Add the following code to your .md file header:
+
+    tags: ["tutorial", "theme"] 
 
 # Contacts
 Make sure to discuss major changes with the following persons first:

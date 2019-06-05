@@ -54,7 +54,7 @@ themeVariant = "elastos"
 [languages]
 [languages.en]
 # contentDir = "content/english"
-title = "Documentation for Hugo Learn Theme"
+title = "Elastos Developer Documentation"
 weight = 1
 languageName = "English"
 
