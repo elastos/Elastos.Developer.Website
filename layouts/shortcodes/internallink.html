@@ -1,0 +1,9 @@
+{{ $pageName := (.Get 0) }}
+{{ $pagePath := (.Get 1) }}
+{{ $page := .Site.GetPage $pagePath }}
+
+{{ with $page}}
+<a href="{{ $page.URL }}">{{ $pageName }}</a>
+{{ else }}
+<span class="invalidpagepatherror"><i class="fas fa-exclamation-triangle"></i> FIXME: Page not found ({{ $pagePath }} for "{{ $pageName }}"</span>
+{{ end}}

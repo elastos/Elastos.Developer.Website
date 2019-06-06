@@ -47,6 +47,10 @@
 	display: block;
 }*/
 
+.invalidpagepatherror {
+	color:red;
+}
+
 
 
 .faqentry {
@@ -122,8 +126,8 @@
 .apititle {
 	display:block !important;
 	background:#326A90;
-	border-top: solid 4px #555;
-	border-bottom: solid 4px #555;
+	border-top: solid 4px #528AAF;
+	border-bottom: solid 4px #528AAF;
 	font-size:20px;
 	padding:20px;
 	margin-top:60px;

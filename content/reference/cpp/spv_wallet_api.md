@@ -12,9 +12,9 @@ alwaysopen = false
 C++ version of the API.
 
 {{< apitocin >}}
-# CreateMultiSignMasterWallet
+# CreateMultiSignMasterWallet()
 {{< apitocout >}}
-{{< apititle "CreateMultiSignMasterWallet" >}}
+{{< apititle "CreateMultiSignMasterWallet()" >}}
 
 {{< apidescription >}}
 Creates a multi-signature wallet. With the wallet you can this and that. In case or error, the returned value may be non significant. And sometimes it will also do that.
@@ -70,9 +70,9 @@ RNElastosMainchain.CreateMultiSignMasterWallet(
 
 
 {{< apitocin >}}
-# AnotherApi
+# AnotherApi()
 {{< apitocout >}}
-{{< apititle "AnotherApi" >}}
+{{< apititle "AnotherApi()" >}}
 
 {{< apidescription >}}
 Does something else.
