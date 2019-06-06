@@ -60,16 +60,26 @@ languageName = "English"
 
 # Add a [[menu.shortcuts]] entry for each extra shortcut we want in the menu
 [[languages.en.menu.shortcuts]] 
-name = "<i class='fas fa-coins'></i> ELA Transaction explorer"
+name = "<i class='fas fa-coins menu-shortcut-icon'></i> ELA Transaction explorer"
 url = "https://blockchain.elastos.org/"
 weight = 10
 
 [[languages.en.menu.shortcuts]] 
-name = "<i class='fas fa-user'></i> DID explorer"
+name = "<i class='fas fa-user menu-shortcut-icon'></i> DID explorer"
 url = "https://idchain.elastos.org/"
 weight = 20
 
 [[languages.en.menu.shortcuts]] 
-name = "<i class='fas fa-envelope'></i> Contact us"
+name = "<i class='fas fa-user-friends menu-shortcut-icon'></i> Cyber Republic"
+url = "https://www.cyberrepublic.org/"
+weight = 5
+
+[[languages.en.menu.shortcuts]] 
+name = "<i class='fab fa-linode menu-shortcut-icon'></i> Carrier nodes statistics"
+url = "http://peerjet.net/"
+weight = 40
+
+[[languages.en.menu.shortcuts]] 
+name = "<i class='fas fa-envelope menu-shortcut-icon'></i> Contact us"
 url = "mailto:contact@elastos.org"
-weight = 30
+weight = 50

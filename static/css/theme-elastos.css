@@ -47,6 +47,11 @@
 	display: block;
 }*/
 
+.menu-shortcut-icon {
+	width: 20px;
+	text-align:center;
+}
+
 .invalidpagepatherror {
 	color:red;
 }
