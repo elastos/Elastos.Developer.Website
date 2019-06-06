@@ -30,9 +30,14 @@ Generated content is located in **/public**.
 * Everytime you need something custom that is not provided by markdown or by hugo, you probably need to create a new shortcode that will be reusable by more pages (ex: a different kind of "note box").
 * Building Elastos projects from source code (not for app developers) should remain documented on github projects. This documentation only provides setup instructions for app developers.
 
-# Folders
-* Editable .md files are located in the **content/** folder.<br>
-* Website string translations are in **i18n/**.
+# Content location
+> Editable content files are located in the **content/** folder.<br>
+
+# CSS Styling
+> /static/css/theme-elastos.css
+
+# Custom Javascript
+> /static/js/yourscript.js + add to /layouts/partials/custom_footer.html
 
 # Useful shortcodes
 
@@ -99,11 +104,10 @@ Use this shortcode when importing existing content that may be outdated, to make
     大家好
     {{% /pleasetranslate %}}
     
-# CSS Styling
-> /static/css/theme-elastos.css
+### Pictures
+Store pictures at the same location as their .md file, then use the following shortcode to display them:
 
-# Custom Javascript
-> /static/js/yourscript.js + add to /layouts/partials/custom_footer.html
+	{{< figure src="demo_picture.png" >}}
 
 # Hugo configurations
 

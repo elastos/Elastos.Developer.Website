@@ -75,6 +75,10 @@ Hello. There is something that needs to be completed here.
 Note for readers. Please keep this in mind.
 {{% /notice %}}
 
+### Noticeable information
+
+> Here is something to highlight
+
 ### Fix me box
 {{< fixme "Here is something broken, fix ASAP." >}}
 
