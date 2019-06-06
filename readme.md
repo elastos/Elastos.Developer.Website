@@ -28,6 +28,7 @@ Generated content is located in **/public**.
 * Discuss major folder or content reworks with other team members on wechat or telegram.
 * **We don't do multi-languages** as maintaining the whole documentation in several languages with limited resources would lead to bad quality. This documentation is therefore only written in english. A special shortcode must be used by non native english speakers to request help from translators while writting content.
 * Everytime you need something custom that is not provided by markdown or by hugo, you probably need to create a new shortcode that will be reusable by more pages (ex: a different kind of "note box").
+* Building Elastos projects from source code (not for app developers) should remain documented on github projects. This documentation only provides setup instructions for app developers.
 
 # Folders
 * Editable .md files are located in the **content/** folder.<br>
@@ -115,9 +116,9 @@ Add the following code (one for each language) to config.toml:
     weight = 20
     
 ### To add tags at the top of a page:
-Add the following code to your .md file header:
+Add this kind of code to your .md file header:
 
-    tags: ["tutorial", "theme"] 
+    tags = ["react native", "api"] 
 
 # Contacts
 Make sure to discuss major changes with the following persons first:
