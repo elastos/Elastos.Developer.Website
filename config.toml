@@ -11,13 +11,13 @@ home = [ "HTML", "RSS", "JSON"]
 # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page. 
 # Useful to give opportunity to people to create merge request for your doc.
 # See the config.toml file from this documentation site to have an example.
-editURL = ""
+editURL = "https://github.com/elastos/Elastos.Developer.Website/blob/master/content/"
 
 # Author of the site, will be used in meta information
-author = ""
+author = "Elastos Foundation"
 
 # Description of the site, will be used in meta information
-description = ""
+description = "Developers documentation for the Elastos ecosystem"
 
 # Shows a checkmark for visited pages on the menu
 showVisitedLinks = false
@@ -36,7 +36,7 @@ disableInlineCopyToClipBoard = false
 disableShortcutsTitle = false
 
 # When using mulitlingual website, disable the switch language button.
-disableLanguageSwitchingButton = false
+disableLanguageSwitchingButton = true
 
 # Hide breadcrumbs in the header and only show the current page title
 disableBreadcrumb = false

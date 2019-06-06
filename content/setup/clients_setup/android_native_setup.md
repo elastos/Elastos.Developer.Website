@@ -6,3 +6,5 @@ chapter = false
 pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++ 
+
+{{< todo "Android SDK requirements, gradle paths to be included, and specific configuration if needed" >}}

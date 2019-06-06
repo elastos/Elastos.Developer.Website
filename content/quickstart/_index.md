@@ -8,6 +8,6 @@ pre = "<i class='fa fa-folder-open'></i> "
 
 ### Elastos documentation
 
-# QUickstart
+# Quickstart
 
 Everything is setup? Let's start building an app!

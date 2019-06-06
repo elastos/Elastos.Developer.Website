@@ -1,6 +1,6 @@
 +++
-title = "iOS native samples"
-weight = 20
+title = "Trinity samples"
+weight = 40
 chapter = false
 pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
