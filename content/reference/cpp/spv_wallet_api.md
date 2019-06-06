@@ -17,7 +17,7 @@ C++ version of the API.
 {{< apititle "CreateMultiSignMasterWallet" >}}
 
 {{< apidescription >}}
-Creates a multi-signature wallet. 
+Creates a multi-signature wallet. With the wallet you can this and that. In case or error, the returned value may be non significant. And sometimes it will also do that.
 {{< /apidescription >}}
 
 {{< apiheader "Parameters" >}}

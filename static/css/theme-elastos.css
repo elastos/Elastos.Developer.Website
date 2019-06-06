@@ -121,17 +121,16 @@
 /* API Reference */
 .apititle {
 	display:block !important;
-	background:#F0F0F0;
-	border-top: solid 1px #555;
-	border-bottom: solid 1px #555;
+	background:#326A90;
+	border-top: solid 4px #555;
+	border-bottom: solid 4px #555;
 	font-size:20px;
 	padding:20px;
 	margin-top:60px;
 	margin-bottom:10px;
-	font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     text-align: center;
-    color: #222;
-	font-weight: 200;
+    color: #FFF;
+	font-weight: bold;
 	
 }
 
@@ -142,6 +141,7 @@
 
 .apidescription {
 	margin-top:20px;	
+	font-size: 20px
 }
 
 .apiheader {
