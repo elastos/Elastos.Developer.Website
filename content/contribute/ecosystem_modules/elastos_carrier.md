@@ -6,3 +6,21 @@ chapter = false
 pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
+
+## About Elastos Carrier
+
+Short intro here.
+
+## Useful skills
+
+* Android programming
+* Design
+* Marketing
+
+## Github location
+
+Github repo url here.
+
+## How to contribute ?
+
+Explain here.

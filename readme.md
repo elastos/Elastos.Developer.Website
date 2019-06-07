@@ -57,7 +57,7 @@ Shortcodes can be used in .md and .html files.
     
 Or:
 
-    {{%< todo "something to do" >}}
+    {{< todo "something to do" >}}
 
 ### Show a blue NOTE box
     {{% notice note %}}
@@ -136,9 +136,3 @@ Make sure to discuss major changes with the following persons first:
 | Carrier | Wechat: @stiartsly (Tang Zhilong) |
 | Hive | Wechat: @stiartsly (Tang Zhilong) |
 | Edition | Wechat: @XunDai |
-
-# TODO
-1. Import existing data and split where necessary
-1. Homepage
-1. Check how we can customize text styles in .md in order to underline some words or sentences like on the w3c did spec (colored, very nice to read)
-1. Define how to layout/collect/update API references from heterogeneous projects.

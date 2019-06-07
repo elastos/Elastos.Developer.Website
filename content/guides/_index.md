@@ -5,6 +5,7 @@ weight = 40
 chapter = true
 pre = "<i class='fa fa-folder-open'></i> "
 alwaysopen = false
+draft = true
 +++
 
 ### Elastos documentation

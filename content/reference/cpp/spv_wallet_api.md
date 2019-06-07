@@ -1,7 +1,7 @@
 +++
 title = "SPV Wallet API"
 date = 2019-05-24T21:15:46+02:00
-weight = 0
+weight = 10
 chapter = false
 pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
