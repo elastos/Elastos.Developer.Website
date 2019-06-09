@@ -5,4 +5,7 @@ weight = 20
 chapter = false
 pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
+draft = true
 +++ 
+
+{{< todo "This is for later, for example to be able to build a developer identity to sign trinity apps." >}}

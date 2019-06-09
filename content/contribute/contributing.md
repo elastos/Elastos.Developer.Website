@@ -11,6 +11,8 @@ alwaysopen = false
 
 {{< fixme "Just pasted from the Elastos wiki. Several parts may have to be reworked" >}}
 
+{{< todo "Move all the report bug part in a dedicated page. Same for suggesting enhancements and code contribution. Split in 3 parts.">}}
+
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
 Contributions are welcome and are greatly appreciated! Every little bit helps, and credit will always be given. 

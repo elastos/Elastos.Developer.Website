@@ -7,4 +7,4 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++ 
 
-{{< todo "ios SDK requirements, carthage and cocoapods howto, and specific configuration if needed" >}}
+{{< todo "ios SDK requirements, carthage and cocoapods howto (for each sub project - carrier, hive, etc), and specific configuration if needed" >}}

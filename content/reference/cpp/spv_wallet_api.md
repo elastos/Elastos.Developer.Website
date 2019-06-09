@@ -7,6 +7,8 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
+{{< todo "Anything to migrate from there? https://walletservice.readthedocs.io/en/latest/api_guide.html" >}}
+
 {{< todo "This is just an example. Feel free to add/remove sections for each API, but use the api shortcodes to keep the documentation style consistent." >}}
 
 C++ version of the API.

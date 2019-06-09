@@ -7,3 +7,4 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
+{{< todo "Explain how to get payment authorization from one of the available (now or future) wallet apps. Explain the communication/process between dapp, wallet, and blockchain" >}}

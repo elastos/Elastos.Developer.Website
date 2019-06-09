@@ -3,7 +3,9 @@
 }
 
 .ela-folder:before {
-    content: "\f07c";
+	content: "\f07c";
+	width:20px;
+	display:inline-block
 }
 
 .ela-page:before {

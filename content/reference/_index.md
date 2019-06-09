@@ -12,5 +12,3 @@ alwaysopen = false
 # API Reference
 
 All methods, parameters and technical documentation you need for the Elastos modules.
-
-{{< todo "Discuss what kind of structure we want here, regarding multiple client platforms">}}

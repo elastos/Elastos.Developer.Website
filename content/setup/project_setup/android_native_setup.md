@@ -8,3 +8,5 @@ alwaysopen = false
 +++ 
 
 {{< todo "Android SDK requirements, gradle paths to be included, and specific configuration if needed" >}}
+
+{{< todo "Explain how to import carrier, hive, did, etc, in gradle" >}}
