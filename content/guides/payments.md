@@ -7,4 +7,6 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
-{{< todo "Explain how to get payment authorization from one of the available (now or future) wallet apps. Explain the communication/process between dapp, wallet, and blockchain" >}}
+## Integrate ELA payments in your app
+
+{{< todo "Explain how to make payments in an app, using authorization from a wallet like elephant. What is the flow/process?" >}}
