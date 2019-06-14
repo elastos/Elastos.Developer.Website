@@ -20,3 +20,5 @@ The entirety of EBP contains several subsidiary programs:
 The amount of given ELA depends on task difficulty or importance. For instance, finding a minor issue will not be rewarded the same way as implementing a fix for a major bug or creating a new active community.
 
 Please contact the Elastos core team about those rewards whenever you feel your contribution deserves it.
+
+{{< todo "Check amounts and fix them if needed, from https://github.com/elastos/Elastos.Developer.Doc/blob/master/Ignore/Doc/Contribution_Award_Assessment.md, then give a list here to contributors, so they better know how much they can expect to get" >}}
