@@ -17,24 +17,6 @@ It is a decentralized ledger. Nothing more, nothing less.
 It is not possible. All those so called DApp platforms therefore rely on off chain solutions which is just a fancy word for the internet. Everything that doesn‘t run directly on the blockchain is not secure and not decentralized. That is where Elastos is different.
 {{% /faqentry %}}
 
-
-{{% faqentry question="What are the benefits of using ELA?" %}}
-Users can use the ELA coin to get a decentralized identification (DID) and use this DID to buy things such as DApps, cloud storage capacity and a lot of other resources including digital assets and more. On top of this you can also invest in ICO projects and products on the Elastos platform with the ELA coin.
-{{% /faqentry %}}
-
-{{% faqentry question="How will ELA gain value?" %}}
-{{< internallink "Read about the tokenomics of ELA." "/concepts/blockchain/tokenomics.md" >}}
-{{% /faqentry %}}
-
-{{% faqentry question="Does Elastos have a wallet?" %}}
-Yes, 3 actually: Elastos Wallet, Elephant Wallet, Web Wallet. 
-{{< internallink "More about wallets." "/concepts/core_modules/wallets.md" >}}
-{{% /faqentry %}}
-
-{{% faqentry question="Can I store my ELA on my Ledger Nano?" %}}
-Not yet but Elastos integration is in their roadmap.
-{{% /faqentry %}}
-
 {{% faqentry question="On which blockchain is ELA built?" %}}
 ELA has its own blockchain. Its mainnet is live since December 2017.
 {{% /faqentry %}}
@@ -45,6 +27,11 @@ On the [blockchain explorer](https://blockchain.elastos.org/).
 
 {{% faqentry question="Is the ELA blockchain decentralized?" %}}
 Yes, Elastos will merge mine with Bitcoin meaning it will be as decentralized as Bitcoin and additionally it will have a DPoS system to sign off every transaction.
+{{% /faqentry %}}
+
+
+{{% faqentry question="How will ELA gain value?" %}}
+{{< internallink "Read about the tokenomics of ELA." "/concepts/blockchain/tokenomics.md" >}}
 {{% /faqentry %}}
 
 {{% faqentry question="Is ELA pre-mined?" %}}
@@ -99,25 +86,6 @@ The ELA blockchain is made not to be forked. Elastos developed their merge minin
 Yes but forking ELA offers little interest as ELA forks will be incompatible with Elastos ecosystem already in place.
 {{% /faqentry %}}
 
-{{% faqentry question="Who can mine ELA through AuxPoW at this moment?" %}}
-The mining software is not open source for the moment. Only Bitmain and its BTC.com mining pool (more pools will be added soon, e.g. antpool) can mine ELA until version 1.0 of the software is released, which is mid-2019.
-{{% /faqentry %}}
-
-{{% faqentry question="Why does only Bitmain have this power for the moment?" %}}
-For the moment, the system is designed like this to prevent the risk of forks until version 1.0 of the software is released.
-{{% /faqentry %}}
-
-{{% faqentry question="Who will be able to merge-mine ELA with Bitcoin?" %}}
-Every bitcoin miner that wants to install the software on its machine will be able to mine ELA with the 1.0 version of the software, which will be open-source.
-{{% /faqentry %}}
-
-{{% faqentry question="Can I mine ELA?" %}}
-Yes, as long as you are a part of Bitmains BTC.com mining pool. It is impossible to solo mine at the moment, in this alpha version. This will change when version 1.0 will be released. Note that in any case, the complexity of the process will be analogous to that of Bitcoin.
-{{% /faqentry %}}
-
-{{% faqentry question="When is the beta version of the merge mining software with Bitcoin due?" %}}
-The beta version of the mining software is due in December 2018.
-{{% /faqentry %}}
 
 {{% faqentry question="Where do the transaction fees of each ELA transaction go?" %}}
 The fees go to the miners.
@@ -145,34 +113,6 @@ It is independent, it is a complete blockchain. Its characteristic is that it ca
 
 {{% faqentry question="What is a friendchain?" %}}
 A friendchain is an independent blockchain outside the elastos ecosystem that provides atomic swaps or DEX capabilities with the elastos chain.
-{{% /faqentry %}}
-
-{{% faqentry question="What is the use case of ELA, the currency of Elastos?" %}}
-{{< internallink "Elastos tokenomics." "/concepts/blockchain/tokenomics.md" >}}
-{{% /faqentry %}}
-
-{{% faqentry question="What will I be able to buy with ELA?" %}}
-* Cloud storage space (Interplanetary File System [IPFS])
-* Digital goods (with their Universally Unique Identifiers [UUID])
-* Computing Power if necessary
-* Music, films, games and other kinds of scarce digital assets
-* Services like domain name registrations and page rankings
-* Applications built upon Elastos can use ELA for their transactions.
-* ELA will be the principal payment method used to compensate developers for 
-    the creation of DApps on the Elastos platform.
-* Users can participate in the token sale (ICO) of a project, the presale of a 
-    product or a funding
-* And more…
-{{% /faqentry %}}
-
-{{% faqentry question="Is a part of Elastos’ code copied from another project?" %}}
-Some of the Onchain team members worked on both ontology and elastos early on to build the main chain code. This is why the main chain code for DNA and Elastos are similar. Keep in mind that these kind of practices are very common in the open source world and that the mainchain ELA is only a part of Elastos. Every sidechain and the development of the OS/Runtime/Carrier comes from original code and is way more complex.
-{{% /faqentry %}}
-
-{{% faqentry question="What is a sELA?" %}}
-It is a satoshi ELA.
-
-1 sELA = 0.00000001 ELA
 {{% /faqentry %}}
 
 

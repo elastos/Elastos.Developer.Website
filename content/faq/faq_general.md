@@ -15,6 +15,42 @@ alwaysopen = false
 
 {{< todo "Merge from the english version of the medium FAQ: https://medium.com/elastos-france/faq-4d5b0120ea27" >}}
 
+
+{{% faqentry question="What are the benefits of using ELA?" %}}
+Users can use the ELA coin to get a decentralized identification (DID) and use this DID to buy things such as DApps, cloud storage capacity and a lot of other resources including digital assets and more. On top of this you can also invest in ICO projects and products on the Elastos platform with the ELA coin.
+{{% /faqentry %}}
+
+
+{{% faqentry question="What is the use case of ELA, the currency of Elastos?" %}}
+{{< internallink "Elastos tokenomics." "/concepts/blockchain/tokenomics.md" >}}
+{{% /faqentry %}}
+
+{{% faqentry question="What will I be able to buy with ELA?" %}}
+* Cloud storage space (Interplanetary File System [IPFS])
+* Digital goods (with their Universally Unique Identifiers [UUID])
+* Computing Power if necessary
+* Music, films, games and other kinds of scarce digital assets
+* Services like domain name registrations and page rankings
+* Applications built upon Elastos can use ELA for their transactions.
+* ELA will be the principal payment method used to compensate developers for 
+    the creation of DApps on the Elastos platform.
+* Users can participate in the token sale (ICO) of a project, the presale of a 
+    product or a funding
+* And more…
+{{% /faqentry %}}
+
+{{% faqentry question="Is a part of Elastos’ code copied from another project?" %}}
+Some of the Onchain team members worked on both ontology and elastos early on to build the main chain code. This is why the main chain code for DNA and Elastos are similar. Keep in mind that these kind of practices are very common in the open source world and that the mainchain ELA is only a part of Elastos. Every sidechain and the development of the OS/Runtime/Carrier comes from original code and is way more complex.
+{{% /faqentry %}}
+
+{{% faqentry question="What is a sELA?" %}}
+It is a satoshi ELA.
+
+1 sELA = 0.00000001 ELA
+{{% /faqentry %}}
+
+
+
 {{% faqentry question="Who are Elastos’s competitors at the moment? And what makes Elastos different from others?" %}}
 EOS is called a blockchain operation system, but its development period and open source codes are much shorter than Elastos’ 17 years. Also, EOS is dependent on its main-chain, so no matter how optimized it becomes, its throughput is limited. Elastos can extend the throughput infinitely with flexible main-chain and side-chain solution. Meanwhile, Elastos Runtime can deliver the trust function of the blockchain to a user’s application (like a cell phone, laptop, etc), which applies the blockchain to various scenarios in daily life.
 {{% /faqentry %}}
@@ -57,64 +93,67 @@ As for Elastos, we will apply a similar method for digital assets storage. Users
 
 {{< todo "Cleanup + Format + Get links and formatting there: https://docs.google.com/document/d/16D2wtWHCx2r9OFctzqYGTLG4GWvqG4vOTFVPow2hd1k/edit" >}}
 
-What is Elastos?
+{{% faqentry question="What is Elastos?" %}}
 Elastos is a network operating system that works on top/in parallel, at the same time as a classic OS (Windows Android, iOS, …) providing a secure environment which permits access to all the applications and services of all the blockchains through a decentralized peer-to-peer network.
+{{% /faqentry %}}
 
-What is a network operating system?
+{{% faqentry question="What is a network operating system?" %}}
 A system that uses the internet as a base layer. The internet becomes the device. This system is extremely well secured and peer-to-peer. Your data and computing power are both on your device and on the internet.
+{{% /faqentry %}}
 
-Does Elastos compete with Windows, iOS and Android?
+{{% faqentry question="Does Elastos compete with Windows, iOS and Android?" %}}
 No. Elastos will exist as an application (virtual machine) on smartphones and personal computers. You can utilize the new internet at the same time as your classic environment.
+{{% /faqentry %}}
 
-What does Elastos stand for?
-e for the
-or e like in e-mail, e-commerce, etc
-or the e in eternal
-last: last
-OS: Operating System
-Elastic: elastic compute
+{{% faqentry question="What are the different parts of Elastos?" %}}
+* An internet browser: Trinity
+* A virtual machine: Runtime
+* A network: Carrier
+* A blockchain: ELA and its sidechains
+* A platform that allows connection to other blockchain services: Ethereum VM, 
+    NEO VM, etc
+* An operating system: Elastos OS, for the Internet of Things (IoT), etc
+* A system for distributed computing, elastic compute
+* A system for decentralised storage: IPFS
+* A completely secured environment
+{{% /faqentry %}}
 
-A last OS? A last operating system?
-The Elastos operating system will continuously update itself, without the intervention of the user.
-
-What are the different parts of Elastos?
-	•	An internet browser: Trinity
-	•	A virtual machine: Runtime
-	•	A network: Carrier
-	•	A blockchain: ELA and its sidechains
-	•	A platform that allows connection to other blockchain services: Ethereum VM, 
-		NEO VM, etc
-	•	An operating system: Elastos OS, for the Internet of Things (IoT), etc
-	•	A system for distributed computing, elastic compute
-	•	A system for decentralised storage: IPFS
-	•	A completely secured environment
-
-What is elastic compute?
+{{% faqentry question="What is elastic compute?" %}}
 It is a system for distributed computing that is shared peer-to-peer on the network.
+{{% /faqentry %}}
 
-What are the benefits of using this platform?
+{{% faqentry question="What are the benefits of using this platform?" %}}
 Threats and undesirable activity on the internet, such as malware, DDoS attacks, man in the middle attacks, trojan horses, network surveillance (NSA, etc), theft and collection of all kinds of data (cookies, etc), theft of intellectual property, spam and more are all avoided by Elastos’  highly secure, encrypted and peer-to-peer system.
+{{% /faqentry %}}
 
-What are the benefits to other blockchain projects to be of this ecosystem?
+{{% faqentry question="What are the benefits to other blockchain projects to be of this ecosystem?" %}}
 The benefit is to avoid all the dangers stated above.
+{{% /faqentry %}}
+
+{{% faqentry question="Does there exist a project similar to Elastos?" %}}
+No. No other projects similar to Elastos exists today. The only two other projects that use similar technology as Elastos are Amazons Elastic Compute Cloud (EC2) and Alibabas Alicloud, which are both centralized projects. Elastos can also be compared to Chrome OS.
+{{% /faqentry %}}
+
+{{% faqentry question="Are Ethereum, NEO, nOS, Cardano, EOS, Wanchain, Icon, etc competitors?" %}}
+No. These blockchains and their applications are in theory all accessible from Elastos and could benefit from this new environment. 
+{{% /faqentry %}}
+
+{{% faqentry question="What is the difference between Elastos and EOS?" %}}
+EOS profiles itself as a blockchain operating system but its development time and its open-source code are way shorter than those of Elastos, which already exists for 18 years. EOS gives you a software development kit (SDK) to interact with the blockchain and uses different methodologies while Elastos is both an SDK and a runtime environment (virtual machine) that allows the DApps to function with an extra layer of security. EOS is also completely reliant on its mainchain so no matter how optimized it is, its capacity is limited. Elastos can scale infinitely with its mainchain and flexible sidechain solution. On top of that, Elastos Runtime is trust zone that uses blockchain as a way to ensure this trust.
+{{% /faqentry %}}
+
+{{% faqentry question="What are the similarities and differences between Elastos and Ethereum?" %}}
+Ethereum has only one mainchain that is being pushed to its extreme limits in computing and scalability. Elastos proposes a mainchain and sidechains structure where the mainchain is solely responsible for ID verification and payments while the sidechains execute smart contracts to supports different applications and services. Ethereum has redundancy and network congestion problems.  The fact that all the data and code is placed on the mainchain causes a lot of data to be redundant in the primary storage. On Elastos the applications run in the Elastos Runtime. This method is more secure. All the data has to pass through trusted and verifiable channels. Elastos Runtime can come in multiple forms such as an independent OS, a virtual machine or a software development kit (SDK) that allows the integration of applications from other operating systems. On Ethereum, after the acquisition of the data, the DApps are executed on a user interface that can cause a risk  of exposing the data. Elastos is secured up until the hearth of your device. Because the DApps are not allowed to connect to the internet directly they are not subject to DDOS attacks.
+{{% /faqentry %}}
+
+
 
 Why choose or utilize this environment to access blockchain services provided by Ethereum or Neo?
 Read this article.
 
-Does there exist a project similar to Elastos?
-No. No other projects similar to Elastos exists today. The only two other projects that use similar technology as Elastos are Amazons Elastic Compute Cloud (EC2) and Alibabas Alicloud, which are both centralized projects. Elastos can also be compared to Chrome OS.
-
-Are Ethereum, NEO, nOS, Cardano, EOS, Wanchain, Icon, etc competitors?
-No. These blockchains and their applications are in theory all accessible from Elastos and could benefit from this new environment. 
-Elastos VS Wanchain & Icon
-Elastos VS EOS
 
 
-What is the difference between Elastos and EOS?
-EOS profiles itself as a blockchain operating system but its development time and its open-source code are way shorter than those of Elastos, which already exists for 18 years. EOS gives you a software development kit (SDK) to interact with the blockchain and uses different methodologies while Elastos is both an SDK and a runtime environment (virtual machine) that allows the DApps to function with an extra layer of security. EOS is also completely reliant on its mainchain so no matter how optimized it is, its capacity is limited. Elastos can scale infinitely with its mainchain and flexible sidechain solution. On top of that, Elastos Runtime is trust zone that uses blockchain as a way to ensure this trust.
 
-What are the similarities and differences between Elastos and Ethereum?
-Ethereum has only one mainchain that is being pushed to its extreme limits in computing and scalability. Elastos proposes a mainchain and sidechains structure where the mainchain is solely responsible for ID verification and payments while the sidechains execute smart contracts to supports different applications and services. Ethereum has redundancy and network congestion problems.  The fact that all the data and code is placed on the mainchain causes a lot of data to be redundant in the primary storage. On Elastos the applications run in the Elastos Runtime. This method is more secure. All the data has to pass through trusted and verifiable channels. Elastos Runtime can come in multiple forms such as an independent OS, a virtual machine or a software development kit (SDK) that allows the integration of applications from other operating systems. On Ethereum, after the acquisition of the data, the DApps are executed on a user interface that can cause a risk  of exposing the data. Elastos is secured up until the hearth of your device. Because the DApps are not allowed to connect to the internet directly they are not subject to DDOS attacks.
 
 Why should the ethereum community work on making their own operating system when they can just use ETH smart contracts on Elastos? What‘s their incentive to do this?
 
