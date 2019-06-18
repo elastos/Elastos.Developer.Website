@@ -8,3 +8,13 @@ alwaysopen = false
 +++
 
 {{< todo "Explain what the CLI is used for and list/explain its main commands" >}}
+
+## Initial setup
+
+Do we have a command that could iitialize everything an app developer will need at first?
+
+## Create a wallet
+
+## Get wallet information
+
+## Send manual payments

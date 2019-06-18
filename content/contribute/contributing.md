@@ -15,7 +15,7 @@ The following is set of guidelines for contributing to all [Elastos repositories
 
 ## How Can I Contribute?
 
-You can contribute in many ways! See how {{< internallink "here" "/contribute/how_to_contribute/_index.md" >}}.
+You can contribute in many ways! See how {{< internallink "here" "/contribute/contribution_guides/_index.md" >}}.
 
 ## How to get in touch / get answers?
  

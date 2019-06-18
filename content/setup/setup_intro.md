@@ -11,7 +11,7 @@ To start building apps on Elastos, you have to setup 2 parts.
 
 ### The environment
 
-The first one is the **environment**: install development tools, connect to the testnet, switch to the mainnet, create test ELA, and more. But don't worry, we tried to make this as easy as possible for you.
+The first one is the **environment**: install development tools, connect to the testnet, switch to the mainnet, get test ELA, and more. But don't worry, we tried to make this as easy as possible for you.
 
 {{< internallink "Setup the Elastos environment" "/setup/env_setup/_index.md" >}}
 

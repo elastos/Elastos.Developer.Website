@@ -7,14 +7,39 @@ pre = "<i class='fa ela-folder'></i> "
 alwaysopen = false
 +++ 
 
-{{< fixme "Not clear yet. App developers may only need to install elatos CLI then configure testnet or mainnet, and that would be enough to start. Getting some ELA will be necessary too." >}}
+## Install the Elastos CLI command line tool
 
-{{< todo "At the end of all those environment setup steps, the whole elastos system must be running and ready to receive calls from client apps. Setup steps should be as easy as possible. We don't talk about any manual compilation of C libs here. Only runtime installations." >}}
+The {{< internallink "Elastos CLI" "/guides/elastos_cli.md" >}} is a supertool that will help you doing several key operations on the Elastos environment. 
 
-{{< todo "Doing setup for test nets and main nets on other blockchains (ethereum, etc) are usually quite painful and fill our heads with too much information, sometimes too advanced information. Could we have a one liner setup command here? Can we have a simple default installation, then explain advanced configuration in another part of this section?" >}}
+You can simply install it with the following command:
 
-{{< todo "DID service setup? https://didservice.readthedocs.io/en/latest/index.html">}}
+{{< tabs >}} 
+    {{% tab name="Mac OS" %}} 
+    brew install elastos-cli
+    {{% /tab %}} 
+    {{% tab name="Ubuntu" %}} 
+    yum install elastos-cli
+    {{% /tab %}} 
+{{< /tabs >}}
 
-{{< todo "Wallet service setup? https://walletservice.readthedocs.io/en/latest/index.html" >}}
+{{< todo "Add tabs for every OS elastos-cli is available for" >}}
 
-{{< todo "Node setup, and more there? Many sub-links from which we can probably import content: https://github.com/elastos/Elastos.Developer.Doc" >}}
+Make sure everything was ok - type the following command in a shell:
+
+{{< highlight "shell" >}}
+$ elastos-cli info
+{{< /highlight >}}
+
+## Testnet setup
+
+Before deploying your applications on the mainnet, you will develop and test them on the **Elastos testnet**. Testnet is similar to the mainnet but makes it easy for example to get free ELA, debug smart contracts, and get faster blocks time, which makes it more convenience for development.
+
+By default, the active network is testnet.
+
+{{< todo "Explain is some things have to be configured or not here" >}}
+
+## Switching between testnet and mainnet
+
+{{< todo "switch + deployment flows" >}}
+
+{{< todo "Type something like 'elastos-cli testnet enable' ? ">}}

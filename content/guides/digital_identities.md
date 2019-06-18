@@ -17,6 +17,6 @@ alwaysopen = false
 
 {{< todo "Have we planned to allow third party apps to edit part of a user profile? If so, what is the process?" >}}
 
-## Signing users in / up
+## Signing users in / up in app
 
 {{< todo "Explain how to sign up/in in apps, using a wallet app like elephant" >}}

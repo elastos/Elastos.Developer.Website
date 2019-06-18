@@ -24,7 +24,7 @@ Just arrived? Not sure what Elastos is yet? Make sure to read {{< internallink "
 ## Start with Elastos
 
 * App developer
-    * {{< internallink "Build Your first DApp" "quickstart/quickstart.md" >}}
+    * {{< internallink "Setup Elastos" "/setup/_index.md" >}} first, then try a few {{< internallink "samples" "/samples/_index.md">}} and start reading our {{< internallink "guides" "/guides/_index.md" >}}.
 * Miner
     * {{< internallink "Mine ELA" "connect_to_elastos/mine_and_secure/merged_mining.md" >}}
     * {{< internallink "Run your own supernode" "connect_to_elastos/mine_and_secure/supernode.md" >}}
@@ -33,8 +33,3 @@ Just arrived? Not sure what Elastos is yet? Make sure to read {{< internallink "
 
 ## Contribute
 So you love Elastos and would like to bring your best skills to make it even better? Here is how to {{< internallink "contribute to the platform" "contribute/_index.md" >}}  with hundreds of other great developers.
-
-## Partnerships
-{{< todo "Partnerships" >}}
-
-{{< todo "Convert this page to .html to be able to build complex layout, according to the designer's requirements, and after we all agree on the home page content" >}}

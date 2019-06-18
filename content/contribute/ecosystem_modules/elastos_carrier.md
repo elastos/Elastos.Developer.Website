@@ -7,7 +7,9 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
-## About Elastos Carrier
+{{< todo >}}
+
+## About
 
 Short intro here.
 
@@ -19,7 +21,7 @@ Short intro here.
 
 ## Github location
 
-Github repo url here.
+[Github Repo name here](https://www.github.com/yourrepourl)
 
 ## How to contribute ?
 
