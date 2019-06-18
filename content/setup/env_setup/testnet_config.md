@@ -14,13 +14,17 @@ By default, testnet is the active network after installing Elastos. The followin
 ## Creating a new test wallet
 
 {{% highlight "shell" %}}
-elastos-cli wallet create (?)
+$ elastos-cli wallet create (?)
 {{% /highlight %}}
 
 ## Getting more test ELA
 
 {{% highlight "shell" %}}
-elastos-cli wallet ela add (?)
+$ elastos-cli wallet ela add (?)
 {{% /highlight %}}
 
 {{< todo "List all useful commands for app developers to be able to work on the testnet efficiently" >}}
+
+## Get wallet information
+
+## Send manual payments

@@ -7,14 +7,20 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
-{{< todo "Explain what the CLI is used for and list/explain its main commands" >}}
+The Elastos CLI provides several useful commands for development, deployment, identity management, etc. The main ones are listed in the table below.
 
-## Initial setup
+To get a more detailed list of commands and parameters:
 
-Do we have a command that could iitialize everything an app developer will need at first?
+{{% highlight "shell" %}}
+$ elastos-cli help
+{{% /highlight %}}
 
-## Create a wallet
+## Most useful commands
 
-## Get wallet information
+| Command | Description |
+| ------- | ----------- |
+| elastos-cli **info** | Get information about current network, statistics, version... |
+| elastos-cli **wallet list** | List all existing wallets on the device |
+| TODO | Other commands |
 
-## Send manual payments
+{{< todo "List/explain the most important commands" >}}
