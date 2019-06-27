@@ -28,3 +28,7 @@ Try our sample apps before coding to get familiar with Elastos.
 1. call elephant by scheme: https://github.com/elaphantapp/Elaphant.UnitTest.JS/
 2. super node vote: https://dev.elabank.net/Dpos/voteRate.html
 3. multi-sig wallet sample web page: http://app.51aiu.com/elastos/html/index.html
+
+{{< todo "Nice samples to be written (not existing)" >}}
+
+1. Load DApp: smart contracts for the loan, carrier for the negotiation and the hive for the long form contract that includes anything that can't be encoded into the smart contract, which you hash and put on the blockchain

@@ -7,9 +7,6 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
-{{< checkme >}}
-
-
 So you decided to contribute to some of [repository](https://github.com/elastos). Before contribution you should follow those rules:
 
 * **Always make a new branch for your work, no matter how small.** This makes it easy for others to take just that one set of changes from your repository, in case you have multiple unrelated changes floating around.

@@ -1,0 +1,6 @@
+<div class="jsonapireference">
+        {{ $datamaingroup := index .Site.Data.reference (.Get 0) }}
+        {{ $datasubgroup := index $datamaingroup (.Get 1) }}
+        {{ $data := index $datasubgroup (.Get 2) }}
+        {{ $data.body | safeHTML }}
+</div>

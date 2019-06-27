@@ -22,31 +22,3 @@ Just as the ELA blockchain wants to be as decentralized as Bitcoin and maintain 
 {{% faqentry question="Who governs the Cyber Republic?" %}}
 Fay Li, Kevin Zhang and Yipeng Su are the interim council for the Cyber Republic until the final version of the constitution and the voting system are out (planned for mid-2019).
 {{% /faqentry %}}
-
-{{% faqentry question="How is the work distributed between the team members in Beijing, in Shanghai and the West?" %}}
-The Beijing team is mostly responsible for the general operations and managing the development of the blockchain. The Shanghai team works on the OS/Runtime, including interface support for third party applications. The Chief Marketing Officer and our community development team are mostly based in San Fransisco. More info here.
-{{% /faqentry %}}
-
-{{% faqentry question="What is the most important in the communication and marketing of Elastos these days?" %}}
-We are looking for passionate and talented people who are interested in this innovative, first of its kind project. Elastos expands its community and is looking for community managers, partnership managers, marketeers, ambassadors, technical writers, writers, bloggers, video content creators, DApp developers, core-developers, technical support engineers and more.
-
-You can apply today by [visiting this site](https://www.cyberrepublic.org/) and join the Cyber Republic!
-{{% /faqentry %}}
-
-{{< todo "Format + Get links and formatting there: https://docs.google.com/document/d/16D2wtWHCx2r9OFctzqYGTLG4GWvqG4vOTFVPow2hd1k/edit" >}}
-
-What are the social media channels of Elastos?
-	•	Discord
-	•	Facebook
-	•	Facebook Group
-	•	Twitter
-	•	Instagram
-	•	International Telegram community
-
-Where can I find the newest info about Elastos?
-	•	The official announcements channel on Telegram
-	•	The elanews website
-	•	Reddit
-	•	Medium
-	•	Youtube
-	•	Cyber Republics youtube channel
