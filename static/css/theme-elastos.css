@@ -177,6 +177,10 @@
 	opacity: 1;
 }
 
+.jsonapireference h1 {
+	display:none; /* Hide the main title to prevent duplicate with hugo's page title */
+}
+
 .jsonapireference .breatheparameterlist {
 	padding-left:0;
 	margin-top:0;

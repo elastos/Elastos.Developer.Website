@@ -6,14 +6,11 @@ pre = "<i class='fa ela-page'></i>"
 alwaysopen = false
 +++
 
-{{< todo "Add titles, add text styling. Too much text in a row here" >}}
-{{< checkme >}}
-
-Elastos Carrier is a completely decentralized P2P network service platform. For Elastos, it is an important support infrastructure for decentralized application development and operation. It is the Elastos P2P Network Platform part of the architecture diagram.
+Elastos Carrier is a **completely decentralized P2P network service platform**. For Elastos, it is an important support infrastructure for decentralized application development and operation. It is the Elastos P2P Network Platform part of the architecture diagram.
 
 As the base platform for Elastos, the carrier itself is at a very initial level, not directly exposed to application developers. Ultimately, the entire platform will package the carrier within ElastosRT's operating environment and let RT expose the entire carrier function interface. Although the carrier now provides an API, it's still at the intermediate state. Of course, it also supports developers to develop some applications, do some development based on the API of the current carrier platform. But the final form will be integrated within the RT. Right now, Elastos has its own internal team dedicated to the integration of RT, which integrates all communication capabilities of the carrier within the RT. When doing the development, people only need to focus on RT's API. All features of the carrier can be accessed by using the RT's API.
 
-The foundation of the carrier's current technical architecture is based on the DHT-centric, decentralized distributed network. On top of it, a friend to friend basic communication network was made, which we provide several layers of functional interfaces. First, we have the relationship between nodes and nodes. On top of it, the message will be provided. On top of that, continuous data transmission, loss transmission, datagram transmission, and higher layer transmission semantics will be provided.
+The foundation of the carrier's current technical architecture is **based on the DHT-centric, decentralized distributed network**. On top of it, a friend to friend basic communication network was made, which we provide several layers of functional interfaces. First, we have the relationship between nodes and nodes. On top of it, the message will be provided. On top of that, continuous data transmission, loss transmission, datagram transmission, and higher layer transmission semantics will be provided.
 
 So the carrier's basic features are its own functionality in the framework of communication infrastructure. We had developers asked us before, is the carrier involved with RTC of Elastos's RT? In fact, this is an inverted relationship. Elastos RT will provide the RTC ability, but this RTC ability ultimately relies on the carrier to provide the foundation support. It means RT will have RTC, but the RTC eventually comes down on the carrier implementation, which means that the RTC is implemented with the carrier's communication channel. This is an inverted relationship. The carrier itself is involved with RTC, but the carrier's communication capabilities are injected into RT, which enables RT to achieve remote RTC.
 
