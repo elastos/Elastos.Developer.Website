@@ -14,6 +14,8 @@ Elastos is not a blockchain project but rather a **network operating system** pr
 
 Inside **Trinity**, Elastos uses internet as the base-layer infrastructure and decentralized applications are forced to never directly connect to the internet and only interact with Elastos runtime(which in turn acts as a middle layer, then connecting to the internet). Within the elastos ecosystem, everything from devices to virtual machines to users to DApps have a DID(Decentralized ID) issued by the blockchain and everytime the application requests any sort of internet access, the ID has to first be verified using the blockchain which in turn eliminates many of the man-in-the-middle attacks, virus attacks, etc.
 
+{{< figure src="elastos_architecture.png" >}}
+
 ### Trustable Sidechains
 Elastos gets its hashpower from Bitcoin and some of the largest mining pools in the world including Bitmain, this secures the ELA token which is also used for DPoS node voting. By distributing load across multiple sidechains and replacing expensive PoW consensus in major blockchains like Ethereum with DPoS, Elastos is able to achieve far greater performance while maintaining a secure trustless environment.
 
