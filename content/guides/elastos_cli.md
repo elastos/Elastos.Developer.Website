@@ -7,6 +7,8 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
+{{< todo "Migrate https://github.com/elastos/Elastos.ELA/blob/master/docs/cli_user_guide.md + simplify (basic commands first, complex later) + introduction" >}}
+
 The Elastos CLI provides several useful commands for development, deployment, identity management, etc. The main ones are listed in the table below.
 
 To get a more detailed list of commands and parameters:

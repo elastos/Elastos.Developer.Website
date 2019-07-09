@@ -7,6 +7,8 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
+{{< fixme "This should not be for dapp developers, but only for wallet app developers. Therefore we should move that to a new section" >}}
+
 {{< todo "Anything to migrate from there? https://walletservice.readthedocs.io/en/latest/api_guide.html" >}}
 
 {{< todo "This is just an example. Feel free to add/remove sections for each API, but use the api shortcodes to keep the documentation style consistent." >}}

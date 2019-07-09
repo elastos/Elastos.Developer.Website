@@ -7,8 +7,6 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
-{{< todo "See what's in there and import content: https://www.cyberrepublic.org/experimental-docs/#/" >}}
-
 # Elastos documentation
 
 {{< youtube vaJ5Pguxd4M  >}}
