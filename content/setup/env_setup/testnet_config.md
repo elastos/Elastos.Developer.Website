@@ -7,6 +7,8 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++ 
 
+{{< ownership "Kiran Pachhai" >}}
+
 By default, testnet is the active network after installing Elastos. The following information can be used to start coding:
 
 {{< todo "list info such default dev wallet address with some ELA inside, etc" >}}

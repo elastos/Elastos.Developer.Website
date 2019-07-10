@@ -7,10 +7,12 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++ 
 
+{{< ownership "?" >}}
+
 {{< checkme >}}
 
 {{% faqentry question="What is a blockchain really?" %}}
-It is a decentralized ledger. Nothing more, nothing less. 
+It is a decentralized ledger. A way to make sure that every content stored remains accessible and unaltered forever.
 {{% /faqentry %}}
 
 {{% faqentry question="How do you run an application efficiently on a ledger? " %}}
@@ -26,36 +28,23 @@ On the [blockchain explorer](https://blockchain.elastos.org/).
 {{% /faqentry %}}
 
 {{% faqentry question="Is the ELA blockchain decentralized?" %}}
-Yes, Elastos will merge mine with Bitcoin meaning it will be as decentralized as Bitcoin and additionally it will have a DPoS system to sign off every transaction.
+Yes, Elastos merge mines with Bitcoin. Meaning it is as decentralized as Bitcoin and additionally it has a DPoS system to sign off every transaction.
 {{% /faqentry %}}
 
+{{% faqentry question="What is a sidechain?" %}}
+It is a blockchain that can only function in the Elastos environment. Unlike projects with congested blockchains, DApps on Elastos use sidechains to fulfil their needs and approach almost infinite scalability. Sidechain can have their own token, smart contracts and be integrated in Elastos.
+{{% /faqentry %}}
+
+{{% faqentry question="Yes but what is the sidechain on?" %}}
+It is independent, it is a complete blockchain. Its characteristic is that it can only communicate with Elastos.
+{{% /faqentry %}}
+
+{{% faqentry question="What is a friendchain?" %}}
+A friendchain is an independent blockchain outside the elastos ecosystem that provides atomic swaps or DEX capabilities with the elastos chain.
+{{% /faqentry %}}
 
 {{% faqentry question="How will ELA gain value?" %}}
 {{< internallink "Read about the tokenomics of ELA." "/concepts/blockchain/tokenomics.md" >}}
-{{% /faqentry %}}
-
-{{% faqentry question="Is ELA pre-mined?" %}}
-Yes, 33 million coins were pre-mined by the foundation.
-{{% /faqentry %}}
-
-{{% faqentry question="Is ELA an inflationary system?" %}}
-Yes. ELA has 33 million pre-mined coins +4% inflation through AuxPoW+DPos: 4% x 33 million = +1.32million coins per year.
-{{% /faqentry %}}
-
-{{% faqentry question="Why 4% inflation?" %}}
-To compensate for the loss of coins over time, loss of passphrases resulting in loss of wallets, funding for the Cyber Republic, incentives for miners, compensation for stakers, …
-{{% /faqentry %}}
-
-{{% faqentry question="Who gets the 4% of ELAs inflation?" %}}
-From the 4% inflation, 35% goes to the miners, 35% to the stakers and 30% to the Cyber Republic.
-{{% /faqentry %}}
-
-{{% faqentry question="How is ELA mined?" %}}
-ELA is merge mined with Bitcoin through Auxiliary Proof of Work (AuxPoW) and it is also be mined through Delegated Proof of Stake (DPoS).
-{{% /faqentry %}}
-
-{{% faqentry question="How much ELA is needed to stake through DPoS?" %}}
-5000 ELA.
 {{% /faqentry %}}
 
 {{% faqentry question="Is there a lockup program?" %}}
@@ -86,13 +75,12 @@ The ELA blockchain is made not to be forked. Elastos developed their merge minin
 Yes but forking ELA offers little interest as ELA forks will be incompatible with Elastos ecosystem already in place.
 {{% /faqentry %}}
 
-
 {{% faqentry question="Where do the transaction fees of each ELA transaction go?" %}}
 The fees go to the miners.
 {{% /faqentry %}}
 
 {{% faqentry question="How will Elastos handle the scalability issues?" %}}
-Through their mainchain and sidechain architecture.
+Through its mainchain and sidechain architecture.
 {{% /faqentry %}}
 
 {{% faqentry question="How does the mainchain and sidechain architecture work?" %}}
@@ -103,17 +91,6 @@ Through their mainchain and sidechain architecture.
 No but it most likely will in the future once Elastos is fully released.
 {{% /faqentry %}}
 
-{{% faqentry question="What is a sidechain?" %}}
-It is a blockchain that can only function in the Elastos environment. Unlike projects with congested blockchains, DApps on Elastos use sidechains to fulfil their needs and approach almost infinite scalability. Sidechain can have their own token, smart contracts and be integrated in Elastos.
-{{% /faqentry %}}
-
-{{% faqentry question="Yes but what is the sidechain on?" %}}
-It is independent, it is a complete blockchain. Its characteristic is that it can only communicate with Elastos.
-{{% /faqentry %}}
-
-{{% faqentry question="What is a friendchain?" %}}
-A friendchain is an independent blockchain outside the elastos ecosystem that provides atomic swaps or DEX capabilities with the elastos chain.
-{{% /faqentry %}}
 
 
 

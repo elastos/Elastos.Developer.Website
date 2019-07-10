@@ -7,6 +7,8 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++ 
 
+{{< ownership "?" >}}
+
 {{< checkme >}}
 
 {{% faqentry question="Does Elastos have a wallet?" %}}

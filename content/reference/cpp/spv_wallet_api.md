@@ -1,13 +1,15 @@
 +++
 title = "SPV Wallet API"
 date = 2019-05-24T21:15:46+02:00
-weight = 10
+weight = 100
 chapter = false
 pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
-{{< fixme "This should not be for dapp developers, but only for wallet app developers. Therefore we should move that to a new section" >}}
+{{< ownership "XiaoMing ?">}}
+
+**Important** This API is only to be used by developers who plan to write their own wallet application, which is not a common use case.
 
 {{< todo "Anything to migrate from there? https://walletservice.readthedocs.io/en/latest/api_guide.html" >}}
 

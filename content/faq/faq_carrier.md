@@ -7,6 +7,8 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++ 
 
+{{< ownership "TangZhiLong" >}}
+
 {{% faqentry question="How will the network be maintained? How will the Carrier see to its own needs?" %}}
 With micro-taxes (fees) on each ELA transaction.
 {{% /faqentry %}}

@@ -7,6 +7,8 @@ pre = "<i class='fa ela-folder'></i> "
 alwaysopen = false
 +++ 
 
+{{< ownership "Kiran Pachhai" >}}
+
 ## Install the Elastos CLI command line tool
 
 The {{< internallink "Elastos CLI" "/guides/elastos_cli.md" >}} is a supertool that will help you doing several key operations on the Elastos environment. 

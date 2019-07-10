@@ -7,6 +7,8 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
+{{< ownership "BoCheng" >}}
+
 {{< todo "Simplify: basic commands first, complex later + introduction" >}}
 
 {{< todo "Tell users how to install a local ELA node, as that is used by the CLI. This part is unclear" >}}

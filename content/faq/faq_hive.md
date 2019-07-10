@@ -7,6 +7,8 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++ 
 
+{{< ownership "TangZhiLong" >}}
+
 Where is data being stored?
 
 If it behaves like a BitTorrent swarm, does that mean data is just being stored locally for dApps?

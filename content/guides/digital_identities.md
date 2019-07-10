@@ -25,3 +25,7 @@ alwaysopen = false
 ## Signing users in / up in app
 
 {{< todo "Explain how to sign up/in in apps, using a wallet app like elephant" >}}
+
+## Signing/Validating documents
+
+{{< todo "Explain how to validate documents using a wallet like elephant, to proove ownership, or approve some content" >}}

@@ -7,4 +7,25 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++ 
 
-{{< todo "ios SDK requirements, carthage and cocoapods howto (for each sub project - carrier, hive, etc), and specific configuration if needed" >}}
+
+## Cocoapod installation
+
+### Import cocoapod projects
+
+Add the following lines to your podfile:
+
+    pod 'ElastosCarrierSDK'
+    pod 'ElastosHiveSDK'
+
+{{< todo "Add pods for ELA main chain, eth, did, etc" >}}
+
+Then run the following command from your shell:
+
+    $ pod install
+
+### Add shell scripts for code signing
+
+In the project navigator, select tab **Build Phases** in the specific **TARGET** item. Then click + button on the right-top corner to choose **New Run Script Phase** and expand it to add shell scripts as below:
+
+    "${SRCROOT}/Pods/ElastosCarrierSDK/ElastosCarrier-framework/CocoaPods/codesigncarrierframework.sh"
+    "${SRCROOT}/Pods/ElastosHiveSDK/ElastosHive-framework/CocoaPods/codesignhiveframework.sh"
