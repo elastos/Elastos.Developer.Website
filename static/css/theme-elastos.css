@@ -133,6 +133,29 @@
 	font-size: 18px;
 }
 
+.ownership {
+	background: #326A90;
+	text-align: center;
+	padding:5px;
+	color: white;
+	box-shadow: 4px 4px 5px #CCC;
+	border-radius: 5px;
+}
+
+.ownership p {
+	line-height: 1em;
+}
+
+.ownership .header {
+	font-size: 12px;
+	border-bottom: dashed 1px white;
+	padding-bottom: 15px;
+}
+
+.ownership .owner {
+	font-weight: bold;
+	font-size: 18px;
+}
 
 /* API Reference */
 .apititle, .jsonapireference h4 {

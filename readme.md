@@ -158,3 +158,4 @@ Make sure to discuss major changes with the following persons first:
 | Carrier | Wechat: @stiartsly (Tang Zhilong) |
 | Hive | Wechat: @stiartsly (Tang Zhilong) |
 | Edition | Wechat: @XunDai |
+| Elastos CLI | Wechat: @BoCheng0000 (BoCheng) |
