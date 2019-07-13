@@ -8,10 +8,6 @@ alwaysopen = false
 
 {{< todo "Every Elastos team must add its own samples to the list. Each sample must be hosted on a github repository, and be directly compilable/runnable on the given platform." >}}
 
-### [Sample 1 name](https://www.github.com)
+### [Carrier Demo](https://github.com/elastos/Elastos.NET.Carrier.Samples.Android)
 
-Simple description.
-
-### [Sample 2 name](https://www.github.com)
-
-Simple description.
+Introduces how to use the Elastos Carrier SDK to achieve communication between phones and realize a simple version of a chat Dapp.
