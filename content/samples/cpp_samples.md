@@ -8,10 +8,17 @@ alwaysopen = false
 
 {{< todo "Every Elastos team must add its own samples to the list. Each sample must be hosted on a github repository, and be directly compilable/runnable on the given platform." >}}
 
-### [Sample 1 name](https://www.github.com)
 
-Simple description.
+### [Carrier - Multi-purpose shell demo](https://github.com/elastos/Elastos.NET.Carrier.Native.SDK/tree/master/apps/shell)
 
-### [Sample 2 name](https://www.github.com)
+Shell demo application that shows how to use various carrier APIs.
 
-Simple description.
+### [Carrier - File transfer](https://github.com/elastos/Elastos.NET.Carrier.Native.SDK/tree/master/apps/file)
+
+A file transfer example on the Elastos carrier network.
+
+## More advanced
+
+### [Carrier - Port forwarding](https://github.com/elastos/Elastos.NET.Carrier.Native.SDK/tree/master/apps/pfd)
+
+A port forwarding example using the Elastos carrier network.
