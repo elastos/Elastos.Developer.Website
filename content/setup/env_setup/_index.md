@@ -22,6 +22,9 @@ You can simply install it with the following command:
     {{% tab name="Ubuntu" %}} 
     yum install elastos-cli
     {{% /tab %}} 
+    {{% tab name="Others" %}} 
+Even if it hasn't been packaged for your usual package manager, you can try to build the elastos-cli from source by reading its github repository [here](https://github.com/elastos/Elastos.ELA.Client).
+    {{% /tab %}} 
 {{< /tabs >}}
 
 {{< todo "Add tabs for every OS elastos-cli is available for" >}}
