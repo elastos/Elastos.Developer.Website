@@ -19,7 +19,9 @@ Schemes and parameters are the sames for all programming environments. Neverthel
 
 The full reference is available {{< internallink "here" "/reference/wallet_scheme.md" >}}.
 
-Here is how to manage schemes calls in your programming environment:
+## Pick a wallet app that implements schemes
+
+Currently, only the Elephant wallet implements the Elastos scheme and provides features for payment, signing, and more. You (and your users) must install it on your mobile device (if you are building a mobile app) in order to be able to handle elastos scheme calls.
 
 ## Call a scheme
 
