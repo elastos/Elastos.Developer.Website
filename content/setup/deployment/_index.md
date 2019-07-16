@@ -23,7 +23,7 @@ For this, there are a few steps you need to do:
 
 ### Get your own server ready
 
-You have to run your own server/VPS on AWS or any hosting service you want. That server will run all the necesary nodes Elastos needs, and your app will connect to that server that will act as a bridge to the whole Elastos/blockchain ecosystem.
+You have to run your own server/VPS on AWS or any hosting service you want. That server will run all the necessary nodes Elastos needs, and your app will connect to that server that will act as a bridge to the whole Elastos/blockchain ecosystem.
 
 ### Install the Elastos ecosystem on your server
 
@@ -33,4 +33,4 @@ You have to run your own server/VPS on AWS or any hosting service you want. That
 
 Now it's time to let your app use **mainnet**. For this, it will go through your private server.
 
-{{< todo "Explain how to configure the cli to use private serv's ip address and switch to that mainnet" >}}
+{{< todo "Explain how to configure the cli to use private server's ip address and switch to that mainnet" >}}

@@ -31,3 +31,16 @@ Just arrived? Not sure what Elastos is yet? Make sure to read {{< internallink "
 
 ## Contribute
 So you love Elastos and would like to bring your best skills to make it even better? Here is how to {{< internallink "contribute to the platform" "contribute/_index.md" >}}  with hundreds of other great developers.
+
+## Modules status
+
+Elastos is being actively developed. You may wonder what you can actually do yet with each module. Here is a brief list (not exhaustive):
+
+| Module | Status |
+| ------ | ------ |
+| ELA mainchain | {{< todo >}} |
+| DID sidechain | {{< todo >}} |
+| Hive | {{< todo >}} |
+| Carrier | {{< todo >}} |
+| Ethereum sidechain | {{< todo >}} |
+| Elastos scheme | {{< todo >}} |
