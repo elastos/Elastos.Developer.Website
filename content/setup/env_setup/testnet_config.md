@@ -9,9 +9,7 @@ alwaysopen = false
 
 {{< ownership "Kiran Pachhai" >}}
 
-By default, testnet is the active network after installing Elastos. The following information can be used to start coding:
-
-{{< todo "list info such default dev wallet address with some ELA inside, etc" >}}
+By default, testnet is the active network after installing Elastos. The whole Elastos ecosystem is ready to be used. But you need to go through a few steps to get things ready, such as creating your initial wallets and getting test ELAs:
 
 ## Creating a new test wallet
 
@@ -29,4 +27,4 @@ $ elastos-cli wallet ela add (?)
 
 ## Get wallet information
 
-## Send manual payments
+{{< todo >}}
