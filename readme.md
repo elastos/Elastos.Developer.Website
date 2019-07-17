@@ -127,6 +127,28 @@ Add this kind of code to your .md file header:
 
     tags = ["react native", "api"] 
 
+# About API references
+There are 2 ways to write API reference pages in this project:
+
+1. Manually using markdown and shortcodes, for example for REST APIs.
+1. By importing sphinx generated documentation as json into pages.
+
+## Embedding sphinx API references
+
+In order to get doxygen-like code documentation built into hugo, please do the following things:
+
+* Use sphinx to generate a json output for your code documentation
+
+> sphinx-build -b json source dest
+
+* Store the generated .fjson file in /data/reference/PLATFORM-OR-LANGUAGE/YOUR_PROJECT and rename it as .json
+* From any .md file you can now use the jsonapireference shortcode like this (in case you stored your file in /data/cpp/carrier/carrier-api.json):
+
+        {{< jsonapireference "cpp" "carrier" "carrier-api" >}}
+        
+* If more styling is required, edit elastos-theme.css
+* Recommended: write a script to automatize generation + importation from the root project into this documentation project.
+
 # Contacts
 Make sure to discuss major changes with the following persons first:
 
@@ -136,3 +158,4 @@ Make sure to discuss major changes with the following persons first:
 | Carrier | Wechat: @stiartsly (Tang Zhilong) |
 | Hive | Wechat: @stiartsly (Tang Zhilong) |
 | Edition | Wechat: @XunDai |
+| Elastos CLI | Wechat: @BoCheng0000 (BoCheng) |

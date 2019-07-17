@@ -12,3 +12,5 @@ alwaysopen = false
 # F.A.Q.
 
 Some points are still unclear after reading our doc? Maybe you'll get lucky here.
+
+{{< todo "integrate new article https://news.cyberrepublic.org/thoughts-on-elastos-faq-part-2-to-part-6/" >}}

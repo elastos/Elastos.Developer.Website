@@ -7,6 +7,9 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++ 
 
+{{< ownership "TangZhiLong (for hive, carrier)" >}}
+
+
 {{< todo "Android SDK requirements, gradle paths to be included, and specific configuration if needed" >}}
 
 {{< todo "Explain how to import carrier, hive, did, etc, in gradle" >}}

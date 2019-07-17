@@ -7,8 +7,6 @@ pre = "<i class='fa ela-folder'></i> "
 alwaysopen = false
 +++ 
 
-{{< todo "Design/layout - at least 4 columns for platforms with android/ios/web/trinity icons plus some css effects" >}}
-
 **Your Elastos environment is ready to run?** Next step is to **choose your favorite platform** to configure your Elastos project.
 
 Pick your target:

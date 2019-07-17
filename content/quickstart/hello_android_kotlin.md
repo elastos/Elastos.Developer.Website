@@ -5,6 +5,7 @@ weight = 20
 chapter = false
 pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
+draft = true
 +++ 
 
 {{< fixme "This is just a layout test, content is wrong and must be written" >}}

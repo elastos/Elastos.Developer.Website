@@ -8,10 +8,6 @@ alwaysopen = false
 
 {{< todo "Every Elastos team must add its own samples to the list. Each sample must be hosted on a github repository, and be directly compilable/runnable on the given platform." >}}
 
-### [Sample 1 name](https://www.github.com)
+### [Carrier - IoT - Remote control](https://github.com/elastos/Elastos.NET.Carrier.Demo.Remoter.iOS)
 
-Simple description.
-
-### [Sample 2 name](https://www.github.com)
-
-Simple description.
+This is a demo application to show what can be done via the elastos carrier network. It shows how to remotely control other peers of the carrier network (ex: another phone): turn on a torch light, increase volume...

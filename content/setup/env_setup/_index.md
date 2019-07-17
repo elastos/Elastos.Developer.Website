@@ -7,14 +7,40 @@ pre = "<i class='fa ela-folder'></i> "
 alwaysopen = false
 +++ 
 
-{{< fixme "Not clear yet. App developers may only need to install elatos CLI then configure testnet or mainnet, and that would be enough to start. Getting some ELA will be necessary too." >}}
+{{< ownership "Kiran Pachhai" >}}
 
-{{< todo "At the end of all those environment setup steps, the whole elastos system must be running and ready to receive calls from client apps. Setup steps should be as easy as possible. We don't talk about any manual compilation of C libs here. Only runtime installations." >}}
+## Install the Elastos CLI command line tool
 
-{{< todo "Doing setup for test nets and main nets on other blockchains (ethereum, etc) are usually quite painful and fill our heads with too much information, sometimes too advanced information. Could we have a one liner setup command here? Can we have a simple default installation, then explain advanced configuration in another part of this section?" >}}
+The {{< internallink "Elastos CLI" "/guides/elastos_cli.md" >}} is a supertool that will help you doing several key operations on the Elastos environment. 
 
-{{< todo "DID service setup? https://didservice.readthedocs.io/en/latest/index.html">}}
+You can simply install it with the following command:
 
-{{< todo "Wallet service setup? https://walletservice.readthedocs.io/en/latest/index.html" >}}
+{{< tabs >}} 
+    {{% tab name="Mac OS" %}} 
+    brew install elastos-cli
+    {{% /tab %}} 
+    {{% tab name="Ubuntu" %}} 
+    yum install elastos-cli
+    {{% /tab %}} 
+    {{% tab name="Others" %}} 
+Even if it hasn't been packaged for your usual package manager, you can try to build the elastos-cli from source by reading its github repository [here](https://github.com/elastos/Elastos.ELA.Client).
+    {{% /tab %}} 
+{{< /tabs >}}
 
-{{< todo "Node setup, and more there? Many sub-links from which we can probably import content: https://github.com/elastos/Elastos.Developer.Doc" >}}
+{{< todo "Add tabs for every OS elastos-cli is available for" >}}
+
+Make sure everything was ok - type the following command in a shell:
+
+{{< highlight "shell" >}}
+$ elastos-cli info
+{{< /highlight >}}
+
+## Testnet setup
+
+{{< todo "Make sure if we use a testnet by default, or a privnet. Check if 10 ELA is enough and what to do if not enough. Make sure all the ecosystems modules run on the testnet as well as on the mainnet (testnet and mainnet have to behave exactly the same way for all apis)." >}}
+
+Before deploying your applications on the mainnet, you will develop and test them on the **Elastos testnet**. Testnet is similar to the mainnet but makes it easy for example to get free ELA, debug smart contracts, and get faster blocks time, which makes it more convenience for development.
+
+By default, the active network is testnet. You can go on with the {{< internallink "testnet configuration page" "/setup/env_setup/testnet_config.md" >}} to start creating your first wallet and get a few test ELAs. 
+
+Right after that, you can start {{< internallink "getting your application ready" "/setup/project_setup/_index.md" >}} and start using Elastos APIs!

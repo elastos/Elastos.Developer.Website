@@ -8,10 +8,10 @@ alwaysopen = false
 
 {{< todo "Every Elastos team must add its own samples to the list. Each sample must be hosted on a github repository, and be directly compilable/runnable on the given platform." >}}
 
-### [Sample 1 name](https://www.github.com)
+### [Create a multi-signature wallet]( http://app.51aiu.com/elastos/html/index.html)
 
-Simple description.
+Shows how to create a multi-signature wallet on the ELA main chain.
 
-### [Sample 2 name](https://www.github.com)
+### [Elephant wallet - scheme calls](https://github.com/elaphantapp/Elaphant.UnitTest.JS/)
 
-Simple description.
+Unit tests VueJS application that also demonstrates how to interact with the elephant app from a third party app, by calling elephant:// schemes, in order to verify user identity, make a payment, vote, send a red packet, etc.

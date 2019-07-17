@@ -15,22 +15,21 @@ The following is set of guidelines for contributing to all [Elastos repositories
 
 ## How Can I Contribute?
 
-You can contribute in many ways! See how {{< internallink "here" "/contribute/how_to_contribute/_index.md" >}}.
+You can contribute in many ways! See how {{< internallink "here" "/contribute/contribution_guides/_index.md" >}}.
 
 ## How to get in touch / get answers?
-
-> **Note:** Please don't file an issue to ask a question. You'll get faster results by using the resources below.
-
-{{< todo "migrate community FAQ here?" >}}
  
- * Read [Community FAQ](https://github.com/elastos/Elastos.Community#faq)
- * Join [Elastos Community Telegram](https://t.me/elastosgroup) for general questions
-    * Even though Telegram is a chat service, sometimes it takes several hours for community members to respond &mdash; please be patient!
- * Join [Elastos Developers Telegram](https://t.me/elastosdev) for more technical questions
-    * Core Developers are not usually watching this channel. If you need to contact core team, please use Github.
- * Create an issue with question in [Elastos](https://github.com/elastos/Elastos) for direct questions to core team.
+ * **Join** the [Elastos Community Telegram](https://t.me/elastosgroup) for general questions.
+    
+> Even though Telegram is a chat service, sometimes it takes several hours for community members to respond &mdash; please be patient!
+ 
+ * **Join** the [Elastos Developers Telegram](https://t.me/elastosdev) for more technical questions.
 
-{{< todo "Is that all, or do we have more ways to help contributors get in touch with the best persons, in order to be as efficient as possible?" >}}
+>Core Developers are not usually watching this channel. If you need to contact core team, please use Github.
+
+ * **Create an issue** describing your problem in the [Elastos repository](https://github.com/elastos/Elastos) for direct talks with the core team.
+
+ > Please don't file an issue to ask a question. Use social channels for questions.
 
 ## Credit
 

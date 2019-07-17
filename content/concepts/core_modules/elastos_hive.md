@@ -36,8 +36,7 @@ In the future, Hive’s performance will be further enhanced. Data synchronizati
 ### Difference between Hive and other decentralized storage solutions
 Hive is based on the popular IPFS project and has made many improvements. From the perspective of storage, most decentralized storage projects in the market are based on IPFS or mimic IPFS. Thus, functionally, Hive has many similarities to other storage projects.
 
-But there are also significant differences.
+But there are also significant differences:
 
-Hive is part of the Elastos ecosystem, so it is for dapps. Providing dapps with an excellent data storage platform is its most important task. It can be considered as the hard disk of Elastos’ operating system, but this hard disk spans different cities across different continents. It is physically separated and is a decentralized data storage pool, but it provides a similar user experience to traditional hard drives.
-
-Hive puts data security as the most important priority, protecting data from the perspective of physical security (data redundancy, high availability), logical security (preventing random modification), and network security (combining dapps with data encryption) to ensure data security. This realizes the statement that “I am the owner of my data”.
+* Hive is part of the Elastos ecosystem, so it is for dapps. Providing dapps with an excellent data storage platform is its most important task. It can be considered as the hard disk of Elastos’ operating system, but this hard disk spans different cities across different continents. It is physically separated and is a decentralized data storage pool, but it provides a similar user experience to traditional hard drives.
+* Hive puts data security as the most important priority, protecting data from the perspective of physical security (data redundancy, high availability), logical security (preventing random modification), and network security (combining dapps with data encryption) to ensure data security. This realizes the statement that “I am the owner of my data”.
