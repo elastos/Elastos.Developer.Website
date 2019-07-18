@@ -92,5 +92,32 @@ No but it most likely will in the future once Elastos is fully released.
 {{% /faqentry %}}
 
 
+{{% faqentry question="Can an existing project running on for example Ethereum or NEO achieve superior performance by default by running on top of Elastos or can something like this only be the case if the Ethereum or NEO network is experiencing bandwidth issues?" %}}
 
+That’s a tough question to answer because it depends. NEO or Eth DApps are not completely decentralized so a lot of data these apps host are still saved in some centralized servers. Only the critical component and smart contracts are stored on Blockchain. So a centralized solution or part centralized-decentralized solution is always faster or at least easier to get it up and running fast. You can decide to switch to elastos hybrid app as well where you have part centralized-decentralized solution and this speed would be comparable or faster sometimes. For pure elastos apps, these are completely decentralized. These will be slow at first but obviously they can be customized so they’re fast as well. It’s just that decentralized solution is going to be slower in general. This will change when we have lots of carrier nodes but for now, it would be slower. 
 
+{{% /faqentry %}}
+
+{{% faqentry question="If they decide to do so, will the existing friendchains of NEO and Ethereum have cross-chain compatibility with the newly created sidechain on Elastos?" %}}
+
+They would all have to go through elastos main chain. These sidechains wouldn’t be able to directly have interoperability with public chains. This is my understanding so far. Things might change in the future. At the moment, if two sidechains wanna interoperate with each other, they also always go through elastos main chain. But again, this might also change in the future where they might not need to go through main chain. It’s still in development so it’s hard to say at this point.
+
+{{% /faqentry %}}
+
+{{% faqentry question="Let's say a friendchain and sidechain run side by side, are they then able to guarantee more uptime and general robustness or would they experience more downtime in case one of them runs into issues of any kind? Can the friendchain or sidechain affect the robustness of its counterpart in any way is what I am wondering?" %}}
+
+I’m just trying to understand why a sidechain and a friendchain would need to interact so much with each other. In fact, it should be the other way around where the idea of a sidechain is so that the request doesn’t need to go outside of elastos ecosystem so everything is easy to implement and also faster and more robust. DApps should be able to just work fine by just interacting with the sidechains on elastos. When you port ethereum to elastos, it means this would be a sidechain and elastos apps can directly have ethereum smart contracts via the sidechain. Sidechains always live within the elastos ecosystem. Friendchains on the other hand are other public Blockchains which live outside the elastos ecosystem. So ethereum public chain will always be a friendchain. A ported ethereum will be called a sidechain and the team can even decide to change the name from ethereum to something else so as to avoid confusion since they’re different. That’s the basic idea of sidechains and friendchains
+
+{{% /faqentry %}}
+
+{{% faqentry question="Can Elastos also offer its digital identity security to its sidechains? NEO for example recently was suffering from spam attacks. Could the Elastos digital identity (DID) make it possible to block or provide temporary time outs to network spammers as a possible solution (in a way somewhat similar to how DDOS attacks are stopped on Elastos)?" %}}
+    
+That’s exactly the purpose of these sidechains. First of all, there are two kinds of sidechains on elastos. There’s a system level sidechain and a 3rd party sidechain. Examples of a system level sidechain are ID sidechain, digital assets sidechain, token generation sidechain, etc. An example of a 3rd party sidechain would be a ported ethereum or ported neo sidechain. 
+
+{{% /faqentry %}}
+
+{{% faqentry question="The first of Four pillars comprising Elastos Ecosystem is, “Blockchain and Smart Contracts“.  Rong has stated in several interviews and talks that code, specifically smart contracts, will not and should not run on the blockchain layer (Like Ethereum). Was combining blockchain and smart contracts into one pillar just a matter of convenience for marketing or is there a reason to have them comprise the same pillar?" %}}
+
+Elastos Blockchain is a multi-tier architecture so both blockchain and smart contracts are in this same architecture. Main chain - sidechain structure.
+
+{{% /faqentry %}}
