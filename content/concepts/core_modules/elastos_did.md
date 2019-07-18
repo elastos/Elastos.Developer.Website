@@ -1,6 +1,6 @@
 +++
-title = "Decentralized ID"
-weight = 50
+title = "Decentralized IDentifier Sidechain"
+weight = 20
 chapter = false
 pre = "<i class='fa ela-page'></i>"
 alwaysopen = false

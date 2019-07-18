@@ -1,5 +1,5 @@
 +++
-title = "Ethereum Sidechain"
+title = "NEO Sidechain"
 weight = 40
 chapter = false
 pre = "<i class='fa ela-page'></i>"

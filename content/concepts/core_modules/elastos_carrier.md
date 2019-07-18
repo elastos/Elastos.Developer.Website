@@ -1,6 +1,6 @@
 +++
 title = "Carrier"
-weight = 20
+weight = 60
 chapter = false
 pre = "<i class='fa ela-page'></i>"
 alwaysopen = false
