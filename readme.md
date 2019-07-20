@@ -149,6 +149,19 @@ In order to get doxygen-like code documentation built into hugo, please do the f
 * If more styling is required, edit elastos-theme.css
 * Recommended: write a script to automatize generation + importation from the root project into this documentation project.
 
+## Embedding complex external html API references
+In case it's not possible to smoothly integrate single page documentation using a tool like sphinx (that outputs json), we integrate externally generated docs in iframe the following way:
+
+* Generate your external api reference documentation using javadoc, appledoc, etc.
+* Copy the whole content to /static/references/your_folder
+* Create a new hugo doc page and add the following information to the hugo header without any other inner content in your .md file:
+
+   		+++
+	   	...
+   		iframedurl = "/references/your_folder/"
+		disableNextPrev = true
+		+++
+
 # Contacts
 Make sure to discuss major changes with the following persons first:
 
