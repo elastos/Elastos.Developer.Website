@@ -7,7 +7,9 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++ 
 
-{{< ownership "?" >}}
+{{% faqentry question="How is ELA mined?" %}}
+ELA is merge mined with Bitcoin through Auxiliary Proof of Work (AuxPoW) and it is also be mined through Delegated Proof of Stake (DPoS).
+{{% /faqentry %}}
 
 {{% faqentry question="Who can mine ELA through AuxPoW at this moment?" %}}
 The mining software is not open source for the moment. Only Bitmain and its BTC.com mining pool (more pools will be added soon, e.g. antpool) can mine ELA until version 1.0 of the software is released, which is mid-2019.
@@ -43,10 +45,6 @@ To compensate for the loss of coins over time, loss of passphrases resulting in 
 
 {{% faqentry question="Who gets the 4% of ELAs inflation?" %}}
 From the 4% inflation, 35% goes to the miners (PoW), 35% to the stakers (DPos and voters) and 30% to the Cyber Republic.
-{{% /faqentry %}}
-
-{{% faqentry question="How is ELA mined?" %}}
-ELA is merge mined with Bitcoin through Auxiliary Proof of Work (AuxPoW) and it is also be mined through Delegated Proof of Stake (DPoS).
 {{% /faqentry %}}
 
 {{% faqentry question="How much ELA is needed to stake through DPoS?" %}}

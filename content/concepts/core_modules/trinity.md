@@ -12,6 +12,10 @@ Trinity is truly a unique project because it is the browser that active users wi
 
 What Trinity offers is one level above blockchain-based trust because it interacts with all the Elastos services such as Elastos mainchain, DID sidechain, Ethereum sidechain, NEO sidechain, token sidechain, Elastos Carrier, Elastos Hive, etc while preventing applications from accessing any APIs or plugins that are not supported by the Runtime. In that way, users can utilize the blockchain or run smart contracts via the DApps that everyday users use on their devices without having to interface with the blockchain to begin with. Trinity hides away the infrastructure layer and provides a set number of APIs for DApp developers to use. In turn, users access the DApps with the trust and security of the blockchain without ever having to deal with it directly. Rather profoundly, Trinity combines on-chain and off-chain scalability solutions into one platform and packages data in such a way that developers don’t have to learn anything new to develop their DApps on its platform. It is a portal to the vast Elastos ecosystem that everyday users will interact with on a daily basis.
 
+## Trinity vs native Elastos apps
+
+{{< todo "Explain that trinity is a kind of exception in the Elastos ecosystem, compared to native apps" >}}
+
 ## DApp Lifecycle in Trinity Browser
 - Build an application using Ionic javascript framework utilizing various cordova plugins supported by the browser such as elastos carrier plugin, camera plugin, etc.
 - Use the toolchain scripts provided as part of the framework in order to convert your Ionic application to an elastos application that can be run inside Elastos Browser. This application will be signed using a developer’s own DID

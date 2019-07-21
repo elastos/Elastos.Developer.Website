@@ -7,10 +7,15 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++ 
 
-{{< ownership "TangZhiLong" >}}
+{{< ownership "Kiran Pachhai" >}}
 
-Where is data being stored?
+{{< todo "Provide answers to existing questions, and add more faq entries if needed" >}}
 
-If it behaves like a BitTorrent swarm, does that mean data is just being stored locally for dApps?
+{{< faqentry question="Where is data being stored?" >}}
+{{< /faqentry >}}
 
-Is there a plan to store data for dApps in decentralized cloud fashion?
+{{< faqentry question="If it behaves like a BitTorrent swarm, does that mean data is just being stored locally for dApps?" >}}
+{{< /faqentry >}}
+
+{{< faqentry question="Is there a plan to store data for dApps in decentralized cloud fashion?" >}}
+{{< /faqentry >}}

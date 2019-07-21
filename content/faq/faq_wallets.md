@@ -7,10 +7,6 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++ 
 
-{{< ownership "?" >}}
-
-{{< checkme >}}
-
 {{% faqentry question="Does Elastos have a wallet?" %}}
 Yes, 3 actually: Elastos Wallet, Elephant Wallet, Web Wallet. 
 {{< internallink "More about wallets." "/concepts/core_modules/wallets.md" >}}
