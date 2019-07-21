@@ -41,3 +41,27 @@ Rong Chen was a senior engineer at microsoft before founding Elastos/Kortide and
 {{% faqentry question="Can you give us more information on the creation of this investment fund? When will it be established? When can the community expect to see funding for the financing of DApps?" %}}
 The investment fund will originally be around 1 million ELA. He also invested as an angel investor using Bitcoin (this is another investment). Jihan Wu is a strong supporter of Elastos and believes in the long term future of the ecosystem. As long as there will be DApps to develop on Elastos he will continue investing in their development, be it with BTC or with ELA.
 {{% /faqentry %}}
+
+{{% faqentry question="How will ELA gain value?" %}}
+{{< internallink "Read about the tokenomics of ELA." "/concepts/blockchain/tokenomics.md" >}}
+{{% /faqentry %}}
+
+{{% faqentry question="Is there a lockup program?" %}}
+A lockup program finished in February 2018. You could choose to lock up a minimum of 300 ELA for 1, 2 or 3 years. You would get an interest on your locked up tokens of +4%, 5+% , +6% respectively for the first, second and third year respectively (not compounding).
+{{% /faqentry %}}
+
+{{% faqentry question="Can I participate in this lockup program or a program to come?" %}}
+No. There will be no other lockup program.
+{{% /faqentry %}}
+
+{{% faqentry question="Why will there not be another lockup program?" %}}
+For juridical reasons (among other because of the SEC).
+{{% /faqentry %}}
+
+{{% faqentry question="How do the airdrops work?" %}}
+Elastos ecosystem collaboration projects (dapps built on Elastos in collaboration with Elastos) have to lock no less than 2-5% of their project tokens published for converting into ELA. 20% of the project tokens (converted to ELA) will be used for Elastos foundation development. 80% of the actual project tokens will be rewards shared by all ELA holders. 
+{{% /faqentry %}}
+
+{{% faqentry question="Where do the transaction fees of each ELA transaction go?" %}}
+The fees go to the miners.
+{{% /faqentry %}}

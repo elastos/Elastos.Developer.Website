@@ -178,10 +178,6 @@ There are already 25 DApps (decentralized applications) in development on Elasto
 For the moment more than 80 developers are active in China. On top of that you can add all the developers that are part of the Cyber Republic and are spread all over the world.
 {{% /faqentry %}}
 
-{{% faqentry question="Does Elastos run on the Blockchain?" %}}
-No, the operating system (a virtual machine) does not run on the blockchain because if it did, the blockchain and the network would quickly become overloaded and very slow. The blockchain will be used to verify identities and link the ownership of data to each identity. Ela will serve as a currency in the Elastos ecosystem.
-{{% /faqentry %}}
-
 {{% faqentry question="This is all good and well but it still seems really complicated." %}}
 The foundation works on giving the user a pleasant user experience where possible. There will not be a lot of difference between surfing the classic internet and surfing on Elastos.
 {{% /faqentry %}}
@@ -194,14 +190,6 @@ The foundation works on giving the user a pleasant user experience where possibl
 Yes and no.
 [A DNS type service will allow each user to obtain a more accessible name and will replace the complex blockchain address.](https://elanews.net/2018/07/03/community-writer-series-elastos-did-the-backbone-of-the-new-internet/)
 This service is called the Elastos DID for Decentralised Identity.
-{{% /faqentry %}}
-
-{{% faqentry question="When will there be an official wallet app for my smartphone?" %}}
-By December there will be a mobile wallet that will work through the Trinity browser to store ELA and probably also the tokens of the sidechains.
-{{% /faqentry %}}
-
-{{% faqentry question="What is the Elastos TV Box? What purpose does it serve?" %}}
-[Here is an article about the TV Box.](https://elanews.net/2018/08/08/elastos-tv-box-to-bring-1-million-carrier-nodes-by-end-of-year/)
 {{% /faqentry %}}
 
 {{% faqentry question="What basic knowledge do you need to have to understand how Elastos works?" %}}
@@ -224,12 +212,6 @@ This will not only be a challenge for Elastos but one for the whole ecosystem. T
 
 {{% faqentry question="What is Elastos’ roadmap for 2019?" %}}
 It is the Cyber Republic that will define the roadmap for 2019. It will be released in December 2018. Jihan Wu (founder of Bitmain), announced that he will work together with Elastos in creating an investment funds for DApps that will be developed on Elastos. 
-{{% /faqentry %}}
-
-{{% faqentry question="What is the actual development status of Elastos?" %}}
-* The Elastos smart web is in its alpha version.
-* Ela is being merged mined with Bitcoin through Bitmain.
-* The Cyber Republic is officially active.
 {{% /faqentry %}}
 
 {{% faqentry question="What are the future use cases of Elastos?" %}}
@@ -258,20 +240,6 @@ Elastos is the infrastructure for a new internet, it offers a decentralized plat
 
 {{% faqentry question="What programming languages does Elastos support?" %}}
 C/C++, Java, Javascript and HTML5. The SDK will allow even more programming languages to be supported in the near future. An application on mac, PC, Android or Linux will be able to run on Elastos, the only thing that needs to be done is to modify it a bit so that it can communicate and be compatible with the network.
-{{% /faqentry %}}
-
-{{% faqentry question="What is C.A.R (Component Assembly Runtime)? Can I develop a DApp on Elastos with it?" %}}
-C.A.R uses the C.A.R language. This is a new language developed by Elastos during the last 18 years. You do not have to know C.A.R to develop DApps on Elastos. It serves as a bridge between different programming languages.
-
-It is very confusing to present C.A.R to the public which is why the foundation does not promote it. The only thing people need to know is that you can use Ionic and Javascript to develop DApps for the Elastos Trinity browser and soon using the React Native Framework. U can use the C++ SDK for the rest.
-{{% /faqentry %}}
-
-{{% faqentry question="Does C.A.R use Java, Javascript or C++?" %}}
-C.A.R does not use Java, Javascript or C++. It supports these languages. It will also support other languages. Because of these  languages, almost all devices will be able to use the services provided by Elastos.
-{{% /faqentry %}}
-
-{{% faqentry question="Can I say that C.A.R is a proprietary language, a bridge language in which developers can identify different components, in different languages that can interact with each other?" %}}
-You define the methods, classes, interfaces and specifications in the C.A.R. file and you can implement them in any language you want.
 {{% /faqentry %}}
 
 {{% faqentry question="How is the work distributed between the team members in Beijing, in Shanghai and the West?" %}}
@@ -311,56 +279,6 @@ Services as in IPFS for storage, different modules such as spv wallet, carrier, 
 
 {{< todo "Incomplete answer" >}}
 
-{{% faqentry question="In the Developers Beginner’s Guide to Elastos, there is very little info on the SDKs. Can you talk about the function of SDKs and how they fit into the project development workflow." %}}
-
-SDK is an Elastos Runtime SDK and this is targetted for different platforms such an android, linux, etc. The implementation is in C++. This is directly encoded within the trinity browser and through reflection, we can call on these C++ function calls from javascript. For native android apps, we can call on this SDK via java as a jar/aar package will be provided. For native ios apps, we can call on this SDK via objective c/swift(this is not 100% complete and is in development). For react native/flutter apps, we can create react native plugins and write the corresponding implementation in java/swift/objective c.
-
-{{% /faqentry %}}
-
-{{% faqentry question="Some virtual computers that I ran on Windows or Mac had very limited device drivers. Does the SDK provide USB, pen, keyboard, and printer drivers, or do we have to wait for device manufacturers to provide those?" %}}
-
-Currently, trinity browser uses cordova plugin to expose the underlying hardware to the elastos apps and this is for mobile devices. The plans for windows or mac have not yet been determined
-
-{{% /faqentry %}}
-
-{{% faqentry question="Is there an SDK plug-in for popular IDEs like; PyDev, Aptana, Visual Studio, etc.?" %}} 
-
-It’s a C++ SDK so this can be extended to be used from python, golang, etc. However, no plugin available for IDEs yet. Maybe in the future
-
-{{% /faqentry %}}
-
-{{< todo "Not right? Ex: On android, developers use a android sdk, not the C++ native part" >}}
-
-{{% faqentry question="Is there a difference between the terms ecosystem and platform in relation to Elastos?" %}}
-
-Platform usually refers to a set of SDKs and APIs that are provided that can be used to interact with ALL the services within the Elastos Network Operating System. An ecosystem extends way beyond that as it also refers to community governance and how the project is run
-
-{{% /faqentry %}}
-
-{{% faqentry question="Are core coders working from a formal design specification?" %}}
-
-Depends what project. Elastos has a lot of repositories. Eg. runtime, carrier, blockchain. And then there are 45+ other repos on github. The core code for the infrastructure is likely derived from a formal design specification (it’s all done internally as a team)
-
-{{% /faqentry %}}
-
-{{% faqentry question="Is a Remote Procedure Call (RPC) in Elastos an asynchronous call?" %}}
-This is a synchronous call
-{{% /faqentry %}}
-
-{{% faqentry question="Are SDKs written for specific language like C++, Python, and Java?" %}}
-
-It’s a C++ SDK so this can be extended to be used from python, golang, etc. For android, a corresponding JAR is created, etc.
-
-{{% /faqentry %}}
-
-{{< todo "Need to improve this answer" >}}
-
-
-{{% faqentry question="Does Elastos have error logging to capture bugs or abnormal events occurring in core code or carrier hardware?  If errors and events are logged, to whom are logs sent?" %}}
-
-For elastos carrier sdk (normal carrier node side),  application can get running logs by calling API ela_log_init(), and application (or upperlayer) can integrate those logs to their log systems; For elastos bootstrap node, all running logs would be output to syslog facility
-
-{{% /faqentry %}}
 
 {{% faqentry question="Does Elastos use any 3rd party code snippets, libraries, or source code?" %}}
 
@@ -407,32 +325,6 @@ IPFS is still in development so at the moment, it’s all loaded from local memo
 Elastos apps run inside elastos runtime environment so this means that data will never get out of this sandbox environment so you won’t be able to print from elastos dapps at all nor store them in these devices unless they have elastos carrier in them and are acting as a node that stores data. In which case, the data would not leak either as everything is encrypted
 
 {{% /faqentry %}}
-
-{{% faqentry question="Did Elastos implement a customized version of the IPFS protocol and embed it into the Elastos kernel or is Elastos using a plugin from a third party implementation?  If third party, what maintenance and a security risks does that create?" %}}
-
-This is currently in development
-
-{{% /faqentry %}}
-
-{{% faqentry question="In the event some nodes are unavailable, how does Elastos provide redundancy so data are available and not permanently lost?" %}}
-
-This is in development but this is more of an engineering problem and can always be modified later. Maybe one solution is to provide a redundancy of 10 at all times so the data is more resilient and more fault-tolerant
-
-{{% /faqentry %}}
-
-{{% faqentry question="Is it true that most projects like EOS, Cardano, Ethereum, can run as side chains on Elastos?" %}}
-
-Yes, Neo and Ethereum are currently being ported as sidechains to elastos. This can be done to any smart contract platforms
-
-{{% /faqentry %}}
-
-{{% faqentry question="Is it true that Elastos is the first project to provide security, decentralization, scalability, and interoperability for the crypto space?" %}}
-
-Security: Merge mining with bitcoin, Decentralization: decentralized carrier and storage, interoperability: DID system, smart contracts as sidechains, etc
-
-{{% /faqentry %}}
-
-{{< todo "The answer doesn't clearly state yes or no" >}}
 
 {{% faqentry question="I would like to create 1000 copies of a digital asset movie on elastos. The movie will have a unique ID stored in the DID side chain. Suppose that one user wants to sell the movie: 1) is the file’s copy from the same physically different from each other? (Mean that do we need to download the exact specific file from the seller’s device?). Or each copy is the same exact file (so everyone can download it but only few who have ownership via DID can watch the movie). 2) how can the user download the file after he bought it if the seller doesn’t have any IPFS or private cloud space? 3) when I want to see the downloaded movie, DID verification will launch first. So is it possible to launch the movie without internet? 4) where can he sell the movie? if we have something like a market place, does it act like a central place/ middle man and have the mopopoly (with restrictons/ fees.. ) ?" %}}
 

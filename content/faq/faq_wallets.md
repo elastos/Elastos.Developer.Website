@@ -16,3 +16,8 @@ Yes, 3 actually: Elastos Wallet, Elephant Wallet, Web Wallet.
 Not yet but Elastos integration is in their roadmap.
 {{% /faqentry %}}
 
+{{% faqentry question="When will there be an official wallet app for my smartphone?" %}}
+By December there will be a mobile wallet that will work through the Trinity browser to store ELA and probably also the tokens of the sidechains.
+{{% /faqentry %}}
+
+{{< todo "rework this answer" >}}

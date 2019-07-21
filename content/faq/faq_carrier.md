@@ -68,3 +68,7 @@ Not necessarily. The transfer of data is not affected by it. It’s only the enc
 There is a new project where we are looking for help in building a media steam protocol on top of elastos carrier. It’s entirely possible.
 
 {{% /faqentry %}}
+
+{{% faqentry question="What is the Elastos TV Box? What purpose does it serve?" %}}
+[Here is an article about the TV Box.](https://elanews.net/2018/08/08/elastos-tv-box-to-bring-1-million-carrier-nodes-by-end-of-year/)
+{{% /faqentry %}}

@@ -7,8 +7,6 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++ 
 
-{{< ownership "?" >}}
-
 {{% faqentry question="What is the Cyber Republic?" %}}
 Cyber Republic is a diverse democratic group of leaders, developers, organizers, designers, translators, lawyers and more formed to promote Elastos in our communities and help Elastos fulfil its vision. Membership is open to everyone.
 {{% /faqentry %}}

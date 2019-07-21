@@ -19,6 +19,10 @@ It is a decentralized ledger. A way to make sure that every content stored remai
 It is not possible. All those so called DApp platforms therefore rely on off chain solutions which is just a fancy word for the internet. Everything that doesn‘t run directly on the blockchain is not secure and not decentralized. That is where Elastos is different.
 {{% /faqentry %}}
 
+{{% faqentry question="Does Elastos run on the Blockchain?" %}}
+No, the operating system (a virtual machine) does not run on the blockchain because if it did, the blockchain and the network would quickly become overloaded and very slow. The blockchain will be used to verify identities and link the ownership of data to each identity. Ela will serve as a currency in the Elastos ecosystem.
+{{% /faqentry %}}
+
 {{% faqentry question="On which blockchain is ELA built?" %}}
 ELA has its own blockchain. Its mainnet is live since December 2017.
 {{% /faqentry %}}
@@ -43,26 +47,6 @@ It is independent, it is a complete blockchain. Its characteristic is that it ca
 A friendchain is an independent blockchain outside the elastos ecosystem that provides atomic swaps or DEX capabilities with the elastos chain.
 {{% /faqentry %}}
 
-{{% faqentry question="How will ELA gain value?" %}}
-{{< internallink "Read about the tokenomics of ELA." "/concepts/blockchain/tokenomics.md" >}}
-{{% /faqentry %}}
-
-{{% faqentry question="Is there a lockup program?" %}}
-A lockup program finished in February 2018. You could choose to lock up a minimum of 300 ELA for 1, 2 or 3 years. You would get an interest on your locked up tokens of +4%, 5+% , +6% respectively for the first, second and third year respectively (not compounding).
-{{% /faqentry %}}
-
-{{% faqentry question="Can I participate in this lockup program or a program to come?" %}}
-No. There will be no other lockup program.
-{{% /faqentry %}}
-
-{{% faqentry question="Why will there not be another lockup program?" %}}
-For juridical reasons (among other because of the SEC).
-{{% /faqentry %}}
-
-{{% faqentry question="How do the airdrops work?" %}}
-Elastos ecosystem collaboration projects (dapps built on Elastos in collaboration with Elastos) have to lock no less than 2-5% of their project tokens published for converting into ELA. 20% of the project tokens (converted to ELA) will be used for Elastos foundation development. 80% of the actual project tokens will be rewards shared by all ELA holders. 
-{{% /faqentry %}}
-
 {{% faqentry question="What is Elastos’ algorithm?" %}}
 SHA-256 just like Bitcoin.
 {{% /faqentry %}}
@@ -73,10 +57,6 @@ The ELA blockchain is made not to be forked. Elastos developed their merge minin
 
 {{% faqentry question="Nonetheless, nothing prevents the forking of this open source blockchain correct?" %}}
 Yes but forking ELA offers little interest as ELA forks will be incompatible with Elastos ecosystem already in place.
-{{% /faqentry %}}
-
-{{% faqentry question="Where do the transaction fees of each ELA transaction go?" %}}
-The fees go to the miners.
 {{% /faqentry %}}
 
 {{% faqentry question="How will Elastos handle the scalability issues?" %}}
@@ -90,7 +70,6 @@ Through its mainchain and sidechain architecture.
 {{% faqentry question="Does Elastos have an equivalent to the ERC20 token?" %}}
 No but it most likely will in the future once Elastos is fully released.
 {{% /faqentry %}}
-
 
 {{% faqentry question="Can an existing project running on for example Ethereum or NEO achieve superior performance by default by running on top of Elastos or can something like this only be the case if the Ethereum or NEO network is experiencing bandwidth issues?" %}}
 
@@ -121,3 +100,23 @@ That’s exactly the purpose of these sidechains. First of all, there are two ki
 Elastos Blockchain is a multi-tier architecture so both blockchain and smart contracts are in this same architecture. Main chain - sidechain structure.
 
 {{% /faqentry %}}
+
+{{% faqentry question="In the event some nodes are unavailable, how does Elastos provide redundancy so data are available and not permanently lost?" %}}
+
+This is in development but this is more of an engineering problem and can always be modified later. Maybe one solution is to provide a redundancy of 10 at all times so the data is more resilient and more fault-tolerant
+
+{{% /faqentry %}}
+
+{{% faqentry question="Is it true that most projects like EOS, Cardano, Ethereum, can run as side chains on Elastos?" %}}
+
+Yes, Neo and Ethereum are currently being ported as sidechains to elastos. This can be done to any smart contract platforms
+
+{{% /faqentry %}}
+
+{{% faqentry question="Is it true that Elastos is the first project to provide security, decentralization, scalability, and interoperability for the crypto space?" %}}
+
+Security: Merge mining with bitcoin, Decentralization: decentralized carrier and storage, interoperability: DID system, smart contracts as sidechains, etc
+
+{{% /faqentry %}}
+
+{{< todo "The answer doesn't clearly state yes or no" >}}
