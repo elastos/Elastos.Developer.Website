@@ -158,6 +158,8 @@ The compatibility with Ethereum and NEO, among others, is already in development
 Bitmain, META Union Alliance (avec BIT.GAME, Matrix AI Network (MAN), TrustNote (TTT), Achain, Aurora, and Elastos), IOEX, Weatherblock, Panda Green Energy, Origin Agritech, Reactor, HashWorld, Urban Catalyst & UK China Catalyst, Fresco, Huafu Group & Far Eastern Air Transport (FAT), Trust Credit Power (TCP), WeFilmChain, Zapya (Viewchain)…
 {{% /faqentry %}}
 
+{{< todo "Maybe unclear / outdated. To be checked" >}}
+
 {{% faqentry question="Elastos is completely open source, what is to stop someone from copying the code and releasing it themselves?" %}}
 There‘s something called a network effect and we already have hundred thousands of nodes active on the Elastos smart web. Besides that we have a head start of 18 years of development and a team of engineers and a community working on Elastos. All those things can‘t be copied easily.
 {{% /faqentry %}}

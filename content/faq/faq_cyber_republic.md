@@ -22,3 +22,5 @@ Just as the ELA blockchain wants to be as decentralized as Bitcoin and maintain 
 {{% faqentry question="Who governs the Cyber Republic?" %}}
 Fay Li, Kevin Zhang and Yipeng Su are the interim council for the Cyber Republic until the final version of the constitution and the voting system are out (planned for mid-2019).
 {{% /faqentry %}}
+
+{{< todo "Outdated?">}}
