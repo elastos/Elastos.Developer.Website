@@ -17,3 +17,13 @@ Please refer to <a href="https://github.com/cyber-republic/elastos-privnet">Priv
 
 ## Developer Workflow from private net to testnet to mainnet
 {{< todo "Explain how to switch the app to use privnet/testnet/mainnet" >}}
+
+## Create a test wallet using your own local node
+
+{{< todo "Improve. This is for people running their own nodes locally (privnet?) to generate a wallet using the CLI instead of the web interface. May be more convenient in some cases" >}}
+
+Connect your local main chain node to testnet using configuration available at <a href="https://github.com/elastos/Elastos.ELA/blob/master/docs/testnet_config.json.sample">Testnet Config Sample</a> and then using a command line interface, do the following:
+{{% highlight "shell" %}}
+$ ela-cli wallet create (?)
+{{% /highlight %}}
+

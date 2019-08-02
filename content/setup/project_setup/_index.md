@@ -7,7 +7,7 @@ pre = "<i class='fa ela-folder'></i> "
 alwaysopen = false
 +++ 
 
-**Your Elastos environment is ready to run?** Next step is to **choose your favorite platform** to configure your Elastos project.
+**Your Elastos environment is ready?** Next step is to **choose your favorite platform** to configure your Elastos project.
 
 Pick your target:
 

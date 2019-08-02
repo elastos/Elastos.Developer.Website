@@ -37,9 +37,7 @@ $ elastos-cli info
 
 ## Testnet setup
 
-{{< todo "Make sure if we use a testnet by default, or a privnet. Check if 10 ELA is enough and what to do if not enough. Make sure all the ecosystems modules run on the testnet as well as on the mainnet (testnet and mainnet have to behave exactly the same way for all apis)." >}}
-
-Before deploying your applications on the mainnet, you will develop and test them on the **Elastos testnet**. Testnet is similar to the mainnet but makes it easy for example to get free ELA, debug smart contracts, and get faster blocks time, which makes it more convenience for development.
+**What is testnet?** This is a clone of mainnet (the "prod" environment), where you can test your apps before releasing them, use test ELAs instead of real ELAs during development phase, test smart contracts more easily, with faster block times, etc.
 
 By default, the active network is testnet. You can go on with the {{< internallink "testnet configuration page" "/setup/env_setup/testnet_config.md" >}} to start creating your first wallet and get a few test ELAs. 
 
