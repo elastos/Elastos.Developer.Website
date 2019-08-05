@@ -6,12 +6,10 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
-{{< todo "Every Elastos team must add its own samples to the list. Each sample must be hosted on a github repository, and be directly compilable/runnable on the given platform." >}}
+### [Empty Trinity sample](https://github.com/elastos/Elastos.Trinity.DApps.Samples)
 
-### [Sample 1 name](https://www.github.com)
+A default trinity app example, based on ionic's tab sample app. Also contains a default trinity manifest file for a quickstart.
 
-Simple description.
+### [Trinity wallet DApp] (https://github.com/elastos/Elastos.Trinity.DApps.Wallet)
 
-### [Sample 2 name](https://www.github.com)
-
-Simple description.
+Default trinity wallet DApp that you can use as an example to start building your own wallet.

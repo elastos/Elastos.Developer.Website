@@ -6,8 +6,10 @@ pre = "<i class='fa ela-folder'></i> "
 alwaysopen = false
 +++
 
+{{< ownership "Kiran Pachhai" >}}
+
 You heard about Elastos, but maybe you wonder why you should use it, and not one of the other hundreds of blockchain platforms? We're going to try to convince you here. Keep reading!
 
-{{< todo "Convince here" >}}
+{{< todo "@KP Convince here" >}}
 
 {{< children >}}

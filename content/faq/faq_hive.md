@@ -9,7 +9,7 @@ alwaysopen = false
 
 {{< ownership "Kiran Pachhai" >}}
 
-{{< todo "Provide answers to existing questions, and add more faq entries if needed" >}}
+{{< todo "@KP Provide answers to existing questions, and add more faq entries if needed" >}}
 
 {{< faqentry question="Where is data being stored?" >}}
 {{< /faqentry >}}

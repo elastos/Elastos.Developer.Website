@@ -161,6 +161,14 @@ In case it's not possible to smoothly integrate single page documentation using 
    		iframedurl = "/references/your_folder/"
 		disableNextPrev = true
 		+++
+		
+## Opening html API references in a new tab
+In order to open a link in a new tab when clicking on a left menu item, the following header can be added:
+
+   		+++
+	   	...
+   		apireferenceexturl = "An_external_url or /references/internal_path_where_doc_is_stored"
+		+++
 
 # Contacts
 Make sure to discuss major changes with the following persons first:

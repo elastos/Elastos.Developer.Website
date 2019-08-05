@@ -1,0 +1,543 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Elastos Hive error number &mdash; Elastos Hive API References 5.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Elastos Hive API References 5.0 documentation" href="index.html"/>
+        <link rel="prev" title="Elastos Hive core APIs" href="hive-api.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Elastos Hive API References
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                5.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="hive-intro.html">Elastos Hive Client SDK introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hive-api.html">Elastos Hive core APIs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Elastos Hive error number</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#error-number-format">Error number format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#format-details">Format details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#error-codes">Error codes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hiveok">HIVEOK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-invalid-args">HIVEERR_INVALID_ARGS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-out-of-memory">HIVEERR_OUT_OF_MEMORY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-buffer-too-small">HIVEERR_BUFFER_TOO_SMALL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-bad-persistent-data">HIVEERR_BAD_PERSISTENT_DATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-invalid-persistence-file">HIVEERR_INVALID_PERSISTENCE_FILE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-invalid-credential">HIVEERR_INVALID_CREDENTIAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-not-ready">HIVEERR_NOT_READY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-not-exist">HIVEERR_NOT_EXIST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-already-exist">HIVEERR_ALREADY_EXIST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-invalid-userid">HIVEERR_INVALID_USERID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-wrong-state">HIVEERR_WRONG_STATE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-busy">HIVEERR_BUSY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-language-binding">HIVEERR_LANGUAGE_BINDING</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-encrypt">HIVEERR_ENCRYPT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-not-implemented">HIVEERR_NOT_IMPLEMENTED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-not-supported">HIVEERR_NOT_SUPPORTED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-limit-exceeded">HIVEERR_LIMIT_EXCEEDED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-encrypted-persistent-data">HIVEERR_ENCRYPTED_PERSISTENT_DATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-bad-bootstrap-host">HIVEERR_BAD_BOOTSTRAP_HOST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-bad-bootstrap-port">HIVEERR_BAD_BOOTSTRAP_PORT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-bad-address">HIVEERR_BAD_ADDRESS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-bad-json-format">HIVEERR_BAD_JSON_FORMAT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-try-again">HIVEERR_TRY_AGAIN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveerr-unknown">HIVEERR_UNKNOWN</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Elastos Hive API References</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Elastos Hive error number</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="elastos-hive-error-number">
+<h1>Elastos Hive error number<a class="headerlink" href="#elastos-hive-error-number" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="error-number-format">
+<h2>Error number format<a class="headerlink" href="#error-number-format" title="Permalink to this headline">¶</a></h2>
+<p>The Hive error numbering space is extensible. The numbering space has the following internal structure.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="37%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">0 ~ 3</th>
+<th class="head">4 ~ 7</th>
+<th class="head">8 ~ 31</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Severity</td>
+<td>Facility</td>
+<td>Code</td>
+</tr>
+</tbody>
+</table>
+<p>An error number value has 32 bits divided into three fields: a severity code, a facility code, and an error code. The severity code indicates whether the return value represents information, warning, or error. The facility code identifies the area of the system responsible for the error. The error code is a unique number that is assigned to represent the exception.</p>
+<div class="section" id="format-details">
+<h3>Format details<a class="headerlink" href="#format-details" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Severity - indicates a error<ul>
+<li>1 - Failure</li>
+</ul>
+</li>
+<li>Facility - indicates the Carrier module that is responsible for the error. Available facility codes are shown below:<ul>
+<li>1 - General</li>
+<li>2 - System</li>
+<li>3 - Reserved/not used</li>
+<li>4 - Curl</li>
+<li>5 - Curlu</li>
+<li>6 - HTTP status</li>
+</ul>
+</li>
+<li>Code - is the facility’s error code</li>
+</ul>
+</div>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>0x81000001</p>
+<ul class="simple">
+<li>0x8 - Error</li>
+<li>0x1 - General</li>
+<li>0x1 - The error number(HIVEERR_INVALID_ARGS)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="error-codes">
+<h2>Error codes<a class="headerlink" href="#error-codes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="hiveok">
+<h3>HIVEOK<a class="headerlink" href="#hiveok" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEOK">
+<span class="target" id="ela__hive_8h_1a9ea4de8b262ef4461fbe7ede597dce63"></span><code class="descname">HIVEOK</code> 0<a class="headerlink" href="#c.HIVEOK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Success. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-invalid-args">
+<h3>HIVEERR_INVALID_ARGS<a class="headerlink" href="#hiveerr-invalid-args" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_INVALID_ARGS">
+<span class="target" id="ela__hive_8h_1a8fa26ced129d84c41e9ed080fcaa5b98"></span><code class="descname">HIVEERR_INVALID_ARGS</code> 0x01<a class="headerlink" href="#c.HIVEERR_INVALID_ARGS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Argument(s) is(are) invalid. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-out-of-memory">
+<h3>HIVEERR_OUT_OF_MEMORY<a class="headerlink" href="#hiveerr-out-of-memory" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_OUT_OF_MEMORY">
+<span class="target" id="ela__hive_8h_1a7725d6059d0e6b5e7f5c9bd53c51fd84"></span><code class="descname">HIVEERR_OUT_OF_MEMORY</code> 0x02<a class="headerlink" href="#c.HIVEERR_OUT_OF_MEMORY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs out of memory. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-buffer-too-small">
+<h3>HIVEERR_BUFFER_TOO_SMALL<a class="headerlink" href="#hiveerr-buffer-too-small" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_BUFFER_TOO_SMALL">
+<span class="target" id="ela__hive_8h_1a27c649bc57f94204b9355ca70190673f"></span><code class="descname">HIVEERR_BUFFER_TOO_SMALL</code> 0x03<a class="headerlink" href="#c.HIVEERR_BUFFER_TOO_SMALL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Buffer size is too small. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-bad-persistent-data">
+<h3>HIVEERR_BAD_PERSISTENT_DATA<a class="headerlink" href="#hiveerr-bad-persistent-data" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_BAD_PERSISTENT_DATA">
+<span class="target" id="ela__hive_8h_1a2147da89d5903d6381306394ca7c8b88"></span><code class="descname">HIVEERR_BAD_PERSISTENT_DATA</code> 0x04<a class="headerlink" href="#c.HIVEERR_BAD_PERSISTENT_DATA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Persistent data is corrupted. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-invalid-persistence-file">
+<h3>HIVEERR_INVALID_PERSISTENCE_FILE<a class="headerlink" href="#hiveerr-invalid-persistence-file" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_INVALID_PERSISTENCE_FILE">
+<span class="target" id="ela__hive_8h_1aed6479e4238f09bc1825d5ce0197767a"></span><code class="descname">HIVEERR_INVALID_PERSISTENCE_FILE</code> 0x05<a class="headerlink" href="#c.HIVEERR_INVALID_PERSISTENCE_FILE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Persistent file is invalid. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-invalid-credential">
+<h3>HIVEERR_INVALID_CREDENTIAL<a class="headerlink" href="#hiveerr-invalid-credential" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_INVALID_CREDENTIAL">
+<span class="target" id="ela__hive_8h_1aef558041782e2c1d2ef85efaecac57b8"></span><code class="descname">HIVEERR_INVALID_CREDENTIAL</code> 0x06<a class="headerlink" href="#c.HIVEERR_INVALID_CREDENTIAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Credential is invalid. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-not-ready">
+<h3>HIVEERR_NOT_READY<a class="headerlink" href="#hiveerr-not-ready" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_NOT_READY">
+<span class="target" id="ela__hive_8h_1aaaf5a56f2b935eefbfd656cff0f192c9"></span><code class="descname">HIVEERR_NOT_READY</code> 0x07<a class="headerlink" href="#c.HIVEERR_NOT_READY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hive SDK not ready. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-not-exist">
+<h3>HIVEERR_NOT_EXIST<a class="headerlink" href="#hiveerr-not-exist" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_NOT_EXIST">
+<span class="target" id="ela__hive_8h_1ad875946627faa05a231f5674a8f60a1e"></span><code class="descname">HIVEERR_NOT_EXIST</code> 0x08<a class="headerlink" href="#c.HIVEERR_NOT_EXIST" title="Permalink to this definition">¶</a></dt>
+<dd><p>The requested entity does not exist. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-already-exist">
+<h3>HIVEERR_ALREADY_EXIST<a class="headerlink" href="#hiveerr-already-exist" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_ALREADY_EXIST">
+<span class="target" id="ela__hive_8h_1a8805280b50c7b9dee3d4f21ef549f0aa"></span><code class="descname">HIVEERR_ALREADY_EXIST</code> 0x09<a class="headerlink" href="#c.HIVEERR_ALREADY_EXIST" title="Permalink to this definition">¶</a></dt>
+<dd><p>The entity exists already. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-invalid-userid">
+<h3>HIVEERR_INVALID_USERID<a class="headerlink" href="#hiveerr-invalid-userid" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_INVALID_USERID">
+<span class="target" id="ela__hive_8h_1ac416379587f2abc660bb63ef88df79fb"></span><code class="descname">HIVEERR_INVALID_USERID</code> 0x0A<a class="headerlink" href="#c.HIVEERR_INVALID_USERID" title="Permalink to this definition">¶</a></dt>
+<dd><p>User ID is invalid. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-wrong-state">
+<h3>HIVEERR_WRONG_STATE<a class="headerlink" href="#hiveerr-wrong-state" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_WRONG_STATE">
+<span class="target" id="ela__hive_8h_1adbebd896b5133b0159686f1ea6ccebaf"></span><code class="descname">HIVEERR_WRONG_STATE</code> 0x0B<a class="headerlink" href="#c.HIVEERR_WRONG_STATE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Failed because wrong state. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-busy">
+<h3>HIVEERR_BUSY<a class="headerlink" href="#hiveerr-busy" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_BUSY">
+<span class="target" id="ela__hive_8h_1a6091a2f7c6980b32dc9b7f85abebdcb3"></span><code class="descname">HIVEERR_BUSY</code> 0x0C<a class="headerlink" href="#c.HIVEERR_BUSY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stream busy. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-language-binding">
+<h3>HIVEERR_LANGUAGE_BINDING<a class="headerlink" href="#hiveerr-language-binding" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_LANGUAGE_BINDING">
+<span class="target" id="ela__hive_8h_1a8e9b14bb1e32b45fbc6f4aa1b4857d79"></span><code class="descname">HIVEERR_LANGUAGE_BINDING</code> 0x0D<a class="headerlink" href="#c.HIVEERR_LANGUAGE_BINDING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Language binding error. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-encrypt">
+<h3>HIVEERR_ENCRYPT<a class="headerlink" href="#hiveerr-encrypt" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_ENCRYPT">
+<span class="target" id="ela__hive_8h_1a30476b3e779fd559a6983f95c403b1cc"></span><code class="descname">HIVEERR_ENCRYPT</code> 0x0E<a class="headerlink" href="#c.HIVEERR_ENCRYPT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encryption failed. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-not-implemented">
+<h3>HIVEERR_NOT_IMPLEMENTED<a class="headerlink" href="#hiveerr-not-implemented" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_NOT_IMPLEMENTED">
+<span class="target" id="ela__hive_8h_1a0811414dc579e0335ead9e468a8aaf22"></span><code class="descname">HIVEERR_NOT_IMPLEMENTED</code> 0x0F<a class="headerlink" href="#c.HIVEERR_NOT_IMPLEMENTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Not implemented yet. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-not-supported">
+<h3>HIVEERR_NOT_SUPPORTED<a class="headerlink" href="#hiveerr-not-supported" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_NOT_SUPPORTED">
+<span class="target" id="ela__hive_8h_1a0745cf32d02a72dfcc86de2dee2b66c1"></span><code class="descname">HIVEERR_NOT_SUPPORTED</code> 0x10<a class="headerlink" href="#c.HIVEERR_NOT_SUPPORTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Not supported. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-limit-exceeded">
+<h3>HIVEERR_LIMIT_EXCEEDED<a class="headerlink" href="#hiveerr-limit-exceeded" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_LIMIT_EXCEEDED">
+<span class="target" id="ela__hive_8h_1a84dc1fa379c5526845898f2555129565"></span><code class="descname">HIVEERR_LIMIT_EXCEEDED</code> 0x11<a class="headerlink" href="#c.HIVEERR_LIMIT_EXCEEDED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Limits are exceeded. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-encrypted-persistent-data">
+<h3>HIVEERR_ENCRYPTED_PERSISTENT_DATA<a class="headerlink" href="#hiveerr-encrypted-persistent-data" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_ENCRYPTED_PERSISTENT_DATA">
+<span class="target" id="ela__hive_8h_1a67225c7a6ca2fae0301cf3e0f54a4f4a"></span><code class="descname">HIVEERR_ENCRYPTED_PERSISTENT_DATA</code> 0x12<a class="headerlink" href="#c.HIVEERR_ENCRYPTED_PERSISTENT_DATA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Persistent data is encrypted, load failed. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-bad-bootstrap-host">
+<h3>HIVEERR_BAD_BOOTSTRAP_HOST<a class="headerlink" href="#hiveerr-bad-bootstrap-host" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_BAD_BOOTSTRAP_HOST">
+<span class="target" id="ela__hive_8h_1ae8f1270bdde15ea34983f2e754e6061a"></span><code class="descname">HIVEERR_BAD_BOOTSTRAP_HOST</code> 0x13<a class="headerlink" href="#c.HIVEERR_BAD_BOOTSTRAP_HOST" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invalid bootstrap host. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-bad-bootstrap-port">
+<h3>HIVEERR_BAD_BOOTSTRAP_PORT<a class="headerlink" href="#hiveerr-bad-bootstrap-port" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_BAD_BOOTSTRAP_PORT">
+<span class="target" id="ela__hive_8h_1abe12f7dd9c33bd8237e466312d016ec6"></span><code class="descname">HIVEERR_BAD_BOOTSTRAP_PORT</code> 0x14<a class="headerlink" href="#c.HIVEERR_BAD_BOOTSTRAP_PORT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invalid bootstrap port. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-bad-address">
+<h3>HIVEERR_BAD_ADDRESS<a class="headerlink" href="#hiveerr-bad-address" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_BAD_ADDRESS">
+<span class="target" id="ela__hive_8h_1a96fc302399dc835915805076663a2a7d"></span><code class="descname">HIVEERR_BAD_ADDRESS</code> 0x15<a class="headerlink" href="#c.HIVEERR_BAD_ADDRESS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invalid address. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-bad-json-format">
+<h3>HIVEERR_BAD_JSON_FORMAT<a class="headerlink" href="#hiveerr-bad-json-format" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_BAD_JSON_FORMAT">
+<span class="target" id="ela__hive_8h_1abc279af3ca6be7c2d0456e6dcb5db30d"></span><code class="descname">HIVEERR_BAD_JSON_FORMAT</code> 0x16<a class="headerlink" href="#c.HIVEERR_BAD_JSON_FORMAT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bad json format. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-try-again">
+<h3>HIVEERR_TRY_AGAIN<a class="headerlink" href="#hiveerr-try-again" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_TRY_AGAIN">
+<span class="target" id="ela__hive_8h_1a507f6a0672485ad34278429806a5f960"></span><code class="descname">HIVEERR_TRY_AGAIN</code> 0x17<a class="headerlink" href="#c.HIVEERR_TRY_AGAIN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try to call this api again. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveerr-unknown">
+<h3>HIVEERR_UNKNOWN<a class="headerlink" href="#hiveerr-unknown" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVEERR_UNKNOWN">
+<span class="target" id="ela__hive_8h_1a72e3b14cd710ed6d7114e1ec4dd76070"></span><code class="descname">HIVEERR_UNKNOWN</code> 0xFF<a class="headerlink" href="#c.HIVEERR_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unknown error. </p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="hive-api.html" class="btn btn-neutral" title="Elastos Hive core APIs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, elastos.org.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'5.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

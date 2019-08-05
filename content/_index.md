@@ -38,9 +38,9 @@ Elastos is being actively developed. You may wonder what you can actually do yet
 
 | Module | Status |
 | ------ | ------ |
-| ELA mainchain | {{< todo >}} |
-| DID sidechain | {{< todo >}} |
-| Hive | {{< todo >}} |
-| Carrier | {{< todo >}} |
-| Ethereum sidechain | {{< todo >}} |
-| Elastos scheme | {{< todo >}} |
+| ELA mainchain | {{< todo "@NiuJingyu" >}} |
+| DID sidechain | {{< todo "@NiuJingyu">}} |
+| Hive | {{< todo "@NiuJingyu">}} |
+| Carrier | {{< todo "@NiuJingyu">}} |
+| Ethereum sidechain | {{< todo "@NiuJingyu">}} |
+| Elastos scheme | {{< todo "@NiuJingyu">}} |

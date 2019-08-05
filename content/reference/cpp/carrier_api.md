@@ -5,8 +5,5 @@ weight = 30
 chapter = false
 pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
+apireferenceexturl = "/references/hive_cpp"
 +++
-
-{{< ownership "TangZhiLong" >}}
-
-{{< jsonapireference "cpp" "carrier" "carrier-api" >}}

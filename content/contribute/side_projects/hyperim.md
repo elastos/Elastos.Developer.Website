@@ -7,9 +7,9 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
-{{< ownership "HyperIM team" >}}
+{{< ownership "Benjamin Piette" >}}
 
-{{< todo >}}
+{{< todo "@BPI gather info from the hyperim team" >}}
 
 ## About
 

@@ -9,13 +9,13 @@ alwaysopen = false
 
 {{< ownership "Kiran Pachhai" >}}
 
-{{< todo "Q&A have been reviewed and sorted. Another review from KP can be good and some todos must be cleared" >}}
+{{< todo "@KP Q&A have been reviewed and sorted. Another review from KP can be good and some todos must be cleared" >}}
 
 {{% faqentry question="How will the network be maintained? How will the Carrier see to its own needs?" %}}
 With micro-taxes (fees) on each ELA transaction.
 {{% /faqentry %}}
 
-{{< todo "Anything wrong in the title? (see to its...)" >}}
+{{< todo "@KP Anything wrong in the title? (see to its...)" >}}
 
 {{% faqentry question="How can I make money with the Elastos Carrier?" %}}
 By renting a part of your hard drive to an IPFS service or share your computing power for example. As of mid 2019, this part of Carrier is not ready yet though.
@@ -29,7 +29,7 @@ This new ecosystem does not aim to be faster than the current internet but to be
 [The TV Box from Shanghai Shijiu TV is a node. 1 Million TV boxes will be distributed across the globe by the end of the year.](https://elanews.net/2018/08/08/elastos-tv-box-to-bring-1-million-carrier-nodes-by-end-of-year/)
 {{% /faqentry %}}
 
-{{< todo "Anything else than TV boxes?" >}}
+{{< todo "@KP Anything else than TV boxes?" >}}
 
 {{% faqentry question="How does the TV Box work?" %}}
 [Here is an article that explains how the box works.](https://elanews.net/2018/08/08/elastos-tv-box-to-bring-1-million-carrier-nodes-by-end-of-year/)

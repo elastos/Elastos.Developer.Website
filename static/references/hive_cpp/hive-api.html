@@ -1,0 +1,1314 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Elastos Hive core APIs &mdash; Elastos Hive API References 5.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Elastos Hive API References 5.0 documentation" href="index.html"/>
+        <link rel="next" title="Elastos Hive error number" href="hive-error-number.html"/>
+        <link rel="prev" title="Elastos Hive Client SDK introduction" href="hive-intro.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Elastos Hive API References
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                5.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="hive-intro.html">Elastos Hive Client SDK introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Elastos Hive core APIs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#constants">Constants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hive-max-user-id-len">HIVE_MAX_USER_ID_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hive-max-user-name-len">HIVE_MAX_USER_NAME_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hive-max-phone-len">HIVE_MAX_PHONE_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hive-max-email-len">HIVE_MAX_EMAIL_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hive-max-region-len">HIVE_MAX_REGION_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hive-max-drive-id-len">HIVE_MAX_DRIVE_ID_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hive-max-file-id-len">HIVE_MAX_FILE_ID_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hive-max-file-type-len">HIVE_MAX_FILE_TYPE_LEN</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-types">Data types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#elaloglevel">ElaLogLevel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hivedrivetype">HiveDriveType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveoptions">HiveOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#onedriveoptions">OneDriveOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiverpcnode">HiveRpcNode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ipfsoptions">IPFSOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiveclientinfo">HiveClientInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hivedriveinfo">HiveDriveInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hivefileinfo">HiveFileInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiverequestauthenticationcallback">HiveRequestAuthenticationCallback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keyvalue">KeyValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hivefilesiteratecallback">HiveFilesIterateCallback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#whence">Whence</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#client-instance-functions">Client instance functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hive-client-new">hive_client_new</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-cient-close">hive_cient_close</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-client-login">hive_client_login</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-client-logout">hive_client_logout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-client-get-info">hive_client_get_info</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#drive-instance-functions">Drive instance functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hive-drive-open">hive_drive_open</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-drive-close">hive_drive_close</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-drive-get-info">hive_drive_get_info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-drive-list-files">hive_drive_list_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-drive-mkdir">hive_drive_mkdir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-drive-move-file">hive_drive_move_file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-drive-copy-file">hive_drive_copy_file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-drive-delete-file">hive_drive_delete_file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-drive-file-stat">hive_drive_file_stat</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#file-instance-functions">File instance functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hive-file-open">hive_file_open</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-file-close">hive_file_close</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-file-seek">hive_file_seek</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-file-read">hive_file_read</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-file-write">hive_file_write</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-file-commit">hive_file_commit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-file-discard">hive_file_discard</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#utility-functions">Utility functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ela-log-init">ela_log_init</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-get-error">hive_get_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-clear-error">hive_clear_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hive-get-strerror">hive_get_strerror</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hive-error-number.html">Elastos Hive error number</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Elastos Hive API References</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Elastos Hive core APIs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="elastos-hive-core-apis">
+<h1>Elastos Hive core APIs<a class="headerlink" href="#elastos-hive-core-apis" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="hive-max-user-id-len">
+<h3>HIVE_MAX_USER_ID_LEN<a class="headerlink" href="#hive-max-user-id-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVE_MAX_USER_ID_LEN">
+<span class="target" id="ela__hive_8h_1af7bf140f0ca541b9512607b261dce615"></span><code class="descname">HIVE_MAX_USER_ID_LEN</code> 255<a class="headerlink" href="#c.HIVE_MAX_USER_ID_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>User ID max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-max-user-name-len">
+<h3>HIVE_MAX_USER_NAME_LEN<a class="headerlink" href="#hive-max-user-name-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVE_MAX_USER_NAME_LEN">
+<span class="target" id="ela__hive_8h_1a2cbf56c59e538f82d5e22ae2a3890862"></span><code class="descname">HIVE_MAX_USER_NAME_LEN</code> 63<a class="headerlink" href="#c.HIVE_MAX_USER_NAME_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>User name max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-max-phone-len">
+<h3>HIVE_MAX_PHONE_LEN<a class="headerlink" href="#hive-max-phone-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVE_MAX_PHONE_LEN">
+<span class="target" id="ela__hive_8h_1a2a58491c6b3a02a4f9245fc37857f9cc"></span><code class="descname">HIVE_MAX_PHONE_LEN</code> 31<a class="headerlink" href="#c.HIVE_MAX_PHONE_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>User phone number max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-max-email-len">
+<h3>HIVE_MAX_EMAIL_LEN<a class="headerlink" href="#hive-max-email-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVE_MAX_EMAIL_LEN">
+<span class="target" id="ela__hive_8h_1a4d00072c3c6d8f40562c66b453741e3c"></span><code class="descname">HIVE_MAX_EMAIL_LEN</code> 127<a class="headerlink" href="#c.HIVE_MAX_EMAIL_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>User email address max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-max-region-len">
+<h3>HIVE_MAX_REGION_LEN<a class="headerlink" href="#hive-max-region-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVE_MAX_REGION_LEN">
+<span class="target" id="ela__hive_8h_1a6d647428293c989cf7575e8a32e09402"></span><code class="descname">HIVE_MAX_REGION_LEN</code> 127<a class="headerlink" href="#c.HIVE_MAX_REGION_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>User region max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-max-drive-id-len">
+<h3>HIVE_MAX_DRIVE_ID_LEN<a class="headerlink" href="#hive-max-drive-id-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVE_MAX_DRIVE_ID_LEN">
+<span class="target" id="ela__hive_8h_1ab4cfc4b37647a9aeb9c55a8c1c5b7e9f"></span><code class="descname">HIVE_MAX_DRIVE_ID_LEN</code> 255<a class="headerlink" href="#c.HIVE_MAX_DRIVE_ID_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Drive ID max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-max-file-id-len">
+<h3>HIVE_MAX_FILE_ID_LEN<a class="headerlink" href="#hive-max-file-id-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVE_MAX_FILE_ID_LEN">
+<span class="target" id="ela__hive_8h_1aeb3a9c1b31ba7c18f694c22f2b543c98"></span><code class="descname">HIVE_MAX_FILE_ID_LEN</code> 127<a class="headerlink" href="#c.HIVE_MAX_FILE_ID_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Drive File Id max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-max-file-type-len">
+<h3>HIVE_MAX_FILE_TYPE_LEN<a class="headerlink" href="#hive-max-file-type-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.HIVE_MAX_FILE_TYPE_LEN">
+<span class="target" id="ela__hive_8h_1a4de64216dbbb23dc6c26fba256933f9c"></span><code class="descname">HIVE_MAX_FILE_TYPE_LEN</code> 127<a class="headerlink" href="#c.HIVE_MAX_FILE_TYPE_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Drive File type max length. </p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="data-types">
+<h2>Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="elaloglevel">
+<h3>ElaLogLevel<a class="headerlink" href="#elaloglevel" title="Permalink to this headline">¶</a></h3>
+<dl class="enum">
+<dt id="_CPPv411ElaLogLevel">
+<span id="_CPPv311ElaLogLevel"></span><span id="_CPPv211ElaLogLevel"></span><span class="target" id="ela__hive_8h_1a4fbef6bea7b800657c1ea4d56be02c61"></span><em class="property">enum </em><code class="descname">ElaLogLevel</code><a class="headerlink" href="#_CPPv411ElaLogLevel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Hive log level to control or filter log output. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv416ElaLogLevel_None">
+<span id="_CPPv316ElaLogLevel_None"></span><span id="_CPPv216ElaLogLevel_None"></span><span class="target" id="ela__hive_8h_1a4fbef6bea7b800657c1ea4d56be02c61a800b49e6551a34d6c0da51dcd1ca1b3c"></span><code class="descname">ElaLogLevel_None</code> = 0<a class="headerlink" href="#_CPPv416ElaLogLevel_None" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Log level None Indicate disable log output. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv417ElaLogLevel_Fatal">
+<span id="_CPPv317ElaLogLevel_Fatal"></span><span id="_CPPv217ElaLogLevel_Fatal"></span><span class="target" id="ela__hive_8h_1a4fbef6bea7b800657c1ea4d56be02c61a0875fc122998d076f09f9a390dac6d7e"></span><code class="descname">ElaLogLevel_Fatal</code> = 1<a class="headerlink" href="#_CPPv417ElaLogLevel_Fatal" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Log level fatal. </p>
+<p>Indicate output log with level ‘Fatal’ only. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv417ElaLogLevel_Error">
+<span id="_CPPv317ElaLogLevel_Error"></span><span id="_CPPv217ElaLogLevel_Error"></span><span class="target" id="ela__hive_8h_1a4fbef6bea7b800657c1ea4d56be02c61ac22515b5fec96b82bc3afba6ae5955da"></span><code class="descname">ElaLogLevel_Error</code> = 2<a class="headerlink" href="#_CPPv417ElaLogLevel_Error" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Log level error. </p>
+<p>Indicate output log above ‘Error’ level. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv419ElaLogLevel_Warning">
+<span id="_CPPv319ElaLogLevel_Warning"></span><span id="_CPPv219ElaLogLevel_Warning"></span><span class="target" id="ela__hive_8h_1a4fbef6bea7b800657c1ea4d56be02c61af09f1f33585da241bbf37de4aa4329df"></span><code class="descname">ElaLogLevel_Warning</code> = 3<a class="headerlink" href="#_CPPv419ElaLogLevel_Warning" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Log level warning. </p>
+<p>Indicate output log above ‘Warning’ level. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv416ElaLogLevel_Info">
+<span id="_CPPv316ElaLogLevel_Info"></span><span id="_CPPv216ElaLogLevel_Info"></span><span class="target" id="ela__hive_8h_1a4fbef6bea7b800657c1ea4d56be02c61a51ddf055c898234e9fc7103c82cd5310"></span><code class="descname">ElaLogLevel_Info</code> = 4<a class="headerlink" href="#_CPPv416ElaLogLevel_Info" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Log level info. </p>
+<p>Indicate output log above ‘Info’ level. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv417ElaLogLevel_Debug">
+<span id="_CPPv317ElaLogLevel_Debug"></span><span id="_CPPv217ElaLogLevel_Debug"></span><span class="target" id="ela__hive_8h_1a4fbef6bea7b800657c1ea4d56be02c61a498fe3976df73458127b99b60f9ed599"></span><code class="descname">ElaLogLevel_Debug</code> = 5<a class="headerlink" href="#_CPPv417ElaLogLevel_Debug" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Log level debug. </p>
+<p>Indicate output log above ‘Debug’ level. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv417ElaLogLevel_Trace">
+<span id="_CPPv317ElaLogLevel_Trace"></span><span id="_CPPv217ElaLogLevel_Trace"></span><span class="target" id="ela__hive_8h_1a4fbef6bea7b800657c1ea4d56be02c61aaa0ee7be1a52ac81394348ce4bae5a0d"></span><code class="descname">ElaLogLevel_Trace</code> = 6<a class="headerlink" href="#_CPPv417ElaLogLevel_Trace" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Log level trace. </p>
+<p>Indicate output log above ‘Trace’ level. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv419ElaLogLevel_Verbose">
+<span id="_CPPv319ElaLogLevel_Verbose"></span><span id="_CPPv219ElaLogLevel_Verbose"></span><span class="target" id="ela__hive_8h_1a4fbef6bea7b800657c1ea4d56be02c61ab437ce2751cef3e5a0dc29e707a06f55"></span><code class="descname">ElaLogLevel_Verbose</code> = 7<a class="headerlink" href="#_CPPv419ElaLogLevel_Verbose" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Log level verbose. </p>
+<p>Indicate output log above ‘Verbose’ level. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="hivedrivetype">
+<h3>HiveDriveType<a class="headerlink" href="#hivedrivetype" title="Permalink to this headline">¶</a></h3>
+<dl class="enum">
+<dt id="_CPPv413HiveDriveType">
+<span id="_CPPv313HiveDriveType"></span><span id="_CPPv213HiveDriveType"></span><span class="target" id="ela__hive_8h_1ab4f86b0b6ea667e8e37086474c57e405"></span><em class="property">enum </em><code class="descname">HiveDriveType</code><a class="headerlink" href="#_CPPv413HiveDriveType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Various Hive supporting backends. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv420HiveDriveType_Native">
+<span id="_CPPv320HiveDriveType_Native"></span><span id="_CPPv220HiveDriveType_Native"></span><span class="target" id="ela__hive_8h_1ab4f86b0b6ea667e8e37086474c57e405ac7fa34ebfd0026e9bab24c0b6165691c"></span><code class="descname">HiveDriveType_Native</code> = 0x0<a class="headerlink" href="#_CPPv420HiveDriveType_Native" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Native file system. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv418HiveDriveType_IPFS">
+<span id="_CPPv318HiveDriveType_IPFS"></span><span id="_CPPv218HiveDriveType_IPFS"></span><span class="target" id="ela__hive_8h_1ab4f86b0b6ea667e8e37086474c57e405a09d1827fe9ebf9af26395fdd4c8cf5a5"></span><code class="descname">HiveDriveType_IPFS</code> = 0x01<a class="headerlink" href="#_CPPv418HiveDriveType_IPFS" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>IPFS. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv422HiveDriveType_OneDrive">
+<span id="_CPPv322HiveDriveType_OneDrive"></span><span id="_CPPv222HiveDriveType_OneDrive"></span><span class="target" id="ela__hive_8h_1ab4f86b0b6ea667e8e37086474c57e405a5ebd1f19fe918a1efec10a4ab49d7792"></span><code class="descname">HiveDriveType_OneDrive</code> = 0x10<a class="headerlink" href="#_CPPv422HiveDriveType_OneDrive" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>OneDrive. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv422HiveDriveType_ownCloud">
+<span id="_CPPv322HiveDriveType_ownCloud"></span><span id="_CPPv222HiveDriveType_ownCloud"></span><span class="target" id="ela__hive_8h_1ab4f86b0b6ea667e8e37086474c57e405a4280814877773faa76886adaa4c31b65"></span><code class="descname">HiveDriveType_ownCloud</code> = 0x51<a class="headerlink" href="#_CPPv422HiveDriveType_ownCloud" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>OwnCloud(not implemented). </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt>
+<span class="target" id="ela__hive_8h_1ab4f86b0b6ea667e8e37086474c57e405ad457cbe6f26c1fa39949a09a2101a23e"></span></dt>
+<dd><p>Drive type bottom(not a valid type). </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="hiveoptions">
+<h3>HiveOptions<a class="headerlink" href="#hiveoptions" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv411HiveOptions">
+<span id="_CPPv311HiveOptions"></span><span id="_CPPv211HiveOptions"></span><span id="HiveOptions"></span><span class="target" id="struct_hive_options"></span><em class="property">struct </em><code class="descname">HiveOptions</code><a class="headerlink" href="#_CPPv411HiveOptions" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The common part of options that all kinds of client would need. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N11HiveOptions19persistent_locationE">
+<span id="_CPPv3N11HiveOptions19persistent_locationE"></span><span id="_CPPv2N11HiveOptions19persistent_locationE"></span><span id="HiveOptions::persistent_location__cP"></span><span class="target" id="struct_hive_options_1a8fa5bfac73ed8ff50dc54a10f8a13cc5"></span>char *<code class="descname">persistent_location</code><a class="headerlink" href="#_CPPv4N11HiveOptions19persistent_locationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The path to a directory where all client associating data stores. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N11HiveOptions10drive_typeE">
+<span id="_CPPv3N11HiveOptions10drive_typeE"></span><span id="_CPPv2N11HiveOptions10drive_typeE"></span><span id="HiveOptions::drive_type__i"></span><span class="target" id="struct_hive_options_1af08760f6060077d87c521ec27c7bef5e"></span>int <code class="descname">drive_type</code><a class="headerlink" href="#_CPPv4N11HiveOptions10drive_typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Specifies the backend type of the client. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="onedriveoptions">
+<h3>OneDriveOptions<a class="headerlink" href="#onedriveoptions" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv415OneDriveOptions">
+<span id="_CPPv315OneDriveOptions"></span><span id="_CPPv215OneDriveOptions"></span><span id="OneDriveOptions"></span><span class="target" id="struct_one_drive_options"></span><em class="property">struct </em><code class="descname">OneDriveOptions</code><a class="headerlink" href="#_CPPv415OneDriveOptions" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The OneDrive client options. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N15OneDriveOptions4baseE">
+<span id="_CPPv3N15OneDriveOptions4baseE"></span><span id="_CPPv2N15OneDriveOptions4baseE"></span><span id="OneDriveOptions::base__HiveOptions"></span><span class="target" id="struct_one_drive_options_1a2d5994dbbf0da8789e5f4a247a470427"></span><a class="reference internal" href="#_CPPv411HiveOptions" title="HiveOptions">HiveOptions</a> <code class="descname">base</code><a class="headerlink" href="#_CPPv4N15OneDriveOptions4baseE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Common options. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N15OneDriveOptions9client_idE">
+<span id="_CPPv3N15OneDriveOptions9client_idE"></span><span id="_CPPv2N15OneDriveOptions9client_idE"></span><span id="OneDriveOptions::client_id__cCP"></span><span class="target" id="struct_one_drive_options_1a7b31b366a7f59de98c28308554b511dc"></span><em class="property">const</em> char *<code class="descname">client_id</code><a class="headerlink" href="#_CPPv4N15OneDriveOptions9client_idE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The Client Id OneDrive assigns to the client. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N15OneDriveOptions5scopeE">
+<span id="_CPPv3N15OneDriveOptions5scopeE"></span><span id="_CPPv2N15OneDriveOptions5scopeE"></span><span id="OneDriveOptions::scope__cCP"></span><span class="target" id="struct_one_drive_options_1a9e2272b1dff976b60d0b1f029ea39a1a"></span><em class="property">const</em> char *<code class="descname">scope</code><a class="headerlink" href="#_CPPv4N15OneDriveOptions5scopeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The scope the client acquires from the delegated user. </p>
+<p>Drive and file reading apis require corresponding read permissions; Drive and file writing apis require corresponding write permissions; hive_client_get_info() requires User.Read scope. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N15OneDriveOptions12redirect_urlE">
+<span id="_CPPv3N15OneDriveOptions12redirect_urlE"></span><span id="_CPPv2N15OneDriveOptions12redirect_urlE"></span><span id="OneDriveOptions::redirect_url__cCP"></span><span class="target" id="struct_one_drive_options_1a37ab06456fa5b1ec2442ab2da7a77bd0"></span><em class="property">const</em> char *<code class="descname">redirect_url</code><a class="headerlink" href="#_CPPv4N15OneDriveOptions12redirect_urlE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The redirect URL through which the client gets the authorization code. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="hiverpcnode">
+<h3>HiveRpcNode<a class="headerlink" href="#hiverpcnode" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv411HiveRpcNode">
+<span id="_CPPv311HiveRpcNode"></span><span id="_CPPv211HiveRpcNode"></span><span id="HiveRpcNode"></span><span class="target" id="struct_hive_rpc_node"></span><em class="property">struct </em><code class="descname">HiveRpcNode</code><a class="headerlink" href="#_CPPv411HiveRpcNode" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The Hive RPC node. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N11HiveRpcNode4ipv4E">
+<span id="_CPPv3N11HiveRpcNode4ipv4E"></span><span id="_CPPv2N11HiveRpcNode4ipv4E"></span><span id="HiveRpcNode::ipv4__cCP"></span><span class="target" id="struct_hive_rpc_node_1a235499bc20966953035264fcb48dab12"></span><em class="property">const</em> char *<code class="descname">ipv4</code><a class="headerlink" href="#_CPPv4N11HiveRpcNode4ipv4E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The ip address supported with ipv4 protocol. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N11HiveRpcNode4ipv6E">
+<span id="_CPPv3N11HiveRpcNode4ipv6E"></span><span id="_CPPv2N11HiveRpcNode4ipv6E"></span><span id="HiveRpcNode::ipv6__cCP"></span><span class="target" id="struct_hive_rpc_node_1a741e55c857d19891e472df8cef2239bd"></span><em class="property">const</em> char *<code class="descname">ipv6</code><a class="headerlink" href="#_CPPv4N11HiveRpcNode4ipv6E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The ip address supported with ipv6 protocol. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N11HiveRpcNode4portE">
+<span id="_CPPv3N11HiveRpcNode4portE"></span><span id="_CPPv2N11HiveRpcNode4portE"></span><span id="HiveRpcNode::port__cCP"></span><span class="target" id="struct_hive_rpc_node_1af14beb23c596d82b2ef96a114b2460a2"></span><em class="property">const</em> char *<code class="descname">port</code><a class="headerlink" href="#_CPPv4N11HiveRpcNode4portE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The ip port. </p>
+<p>The default value is 9094. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="ipfsoptions">
+<h3>IPFSOptions<a class="headerlink" href="#ipfsoptions" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv411IPFSOptions">
+<span id="_CPPv311IPFSOptions"></span><span id="_CPPv211IPFSOptions"></span><span id="IPFSOptions"></span><span class="target" id="struct_i_p_f_s_options"></span><em class="property">struct </em><code class="descname">IPFSOptions</code><a class="headerlink" href="#_CPPv411IPFSOptions" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The IPFS client options. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N11IPFSOptions4baseE">
+<span id="_CPPv3N11IPFSOptions4baseE"></span><span id="_CPPv2N11IPFSOptions4baseE"></span><span id="IPFSOptions::base__HiveOptions"></span><span class="target" id="struct_i_p_f_s_options_1afcaa0fbdc6d1fea069bce914b8bd4d8c"></span><a class="reference internal" href="#_CPPv411HiveOptions" title="HiveOptions">HiveOptions</a> <code class="descname">base</code><a class="headerlink" href="#_CPPv4N11IPFSOptions4baseE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Common options. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N11IPFSOptions3uidE">
+<span id="_CPPv3N11IPFSOptions3uidE"></span><span id="_CPPv2N11IPFSOptions3uidE"></span><span id="IPFSOptions::uid__cCP"></span><span class="target" id="struct_i_p_f_s_options_1a7f47d072dce197654e53d0667cc2509b"></span><em class="property">const</em> char *<code class="descname">uid</code><a class="headerlink" href="#_CPPv4N11IPFSOptions3uidE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The unique uid for current user. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N11IPFSOptions14rpc_node_countE">
+<span id="_CPPv3N11IPFSOptions14rpc_node_countE"></span><span id="_CPPv2N11IPFSOptions14rpc_node_countE"></span><span id="IPFSOptions::rpc_node_count__s"></span><span class="target" id="struct_i_p_f_s_options_1a9c437276ba9acada944cdd15e8585f53"></span>size_t <code class="descname">rpc_node_count</code><a class="headerlink" href="#_CPPv4N11IPFSOptions14rpc_node_countE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The count of IPFS RPC nodes. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N11IPFSOptions8rpcNodesE">
+<span id="_CPPv3N11IPFSOptions8rpcNodesE"></span><span id="_CPPv2N11IPFSOptions8rpcNodesE"></span><span id="IPFSOptions::rpcNodes__HiveRpcNodeP"></span><span class="target" id="struct_i_p_f_s_options_1a3cc92b415a50abbbe01c1ee516d8a566"></span><a class="reference internal" href="#_CPPv411HiveRpcNode" title="HiveRpcNode">HiveRpcNode</a> *<code class="descname">rpcNodes</code><a class="headerlink" href="#_CPPv4N11IPFSOptions8rpcNodesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The array of addresses of IPFS RPC nodes. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="hiveclientinfo">
+<h3>HiveClientInfo<a class="headerlink" href="#hiveclientinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv414HiveClientInfo">
+<span id="_CPPv314HiveClientInfo"></span><span id="_CPPv214HiveClientInfo"></span><span id="HiveClientInfo"></span><span class="target" id="struct_hive_client_info"></span><em class="property">struct </em><code class="descname">HiveClientInfo</code><a class="headerlink" href="#_CPPv414HiveClientInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A structure representing the hive client associated user’s information. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N14HiveClientInfo7user_idE">
+<span id="_CPPv3N14HiveClientInfo7user_idE"></span><span id="_CPPv2N14HiveClientInfo7user_idE"></span><span id="HiveClientInfo::user_id__cA"></span><span class="target" id="struct_hive_client_info_1ab974f4f8615dab2a579af3f48e20f946"></span>char <code class="descname">user_id</code>[<code class="descname">HIVE_MAX_USER_ID_LEN</code> + 1]<a class="headerlink" href="#_CPPv4N14HiveClientInfo7user_idE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>User Id. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14HiveClientInfo12display_nameE">
+<span id="_CPPv3N14HiveClientInfo12display_nameE"></span><span id="_CPPv2N14HiveClientInfo12display_nameE"></span><span id="HiveClientInfo::display_name__cA"></span><span class="target" id="struct_hive_client_info_1aff003050bd111a9c0589740ae3de9eb7"></span>char <code class="descname">display_name</code>[<code class="descname">HIVE_MAX_USER_NAME_LEN</code> + 1]<a class="headerlink" href="#_CPPv4N14HiveClientInfo12display_nameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>User’s display name. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14HiveClientInfo5emailE">
+<span id="_CPPv3N14HiveClientInfo5emailE"></span><span id="_CPPv2N14HiveClientInfo5emailE"></span><span id="HiveClientInfo::email__cA"></span><span class="target" id="struct_hive_client_info_1a521d517cfa21388f0e5e263433136090"></span>char <code class="descname">email</code>[<code class="descname">HIVE_MAX_EMAIL_LEN</code> + 1]<a class="headerlink" href="#_CPPv4N14HiveClientInfo5emailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>User’s email address. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14HiveClientInfo12phone_numberE">
+<span id="_CPPv3N14HiveClientInfo12phone_numberE"></span><span id="_CPPv2N14HiveClientInfo12phone_numberE"></span><span id="HiveClientInfo::phone_number__cA"></span><span class="target" id="struct_hive_client_info_1a53ccf2c938a7e064c43068f8dc739613"></span>char <code class="descname">phone_number</code>[<code class="descname">HIVE_MAX_PHONE_LEN</code> + 1]<a class="headerlink" href="#_CPPv4N14HiveClientInfo12phone_numberE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>User’s phone number. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N14HiveClientInfo6regionE">
+<span id="_CPPv3N14HiveClientInfo6regionE"></span><span id="_CPPv2N14HiveClientInfo6regionE"></span><span id="HiveClientInfo::region__cA"></span><span class="target" id="struct_hive_client_info_1a78c473ec5568c357141a6dcb2215d9e9"></span>char <code class="descname">region</code>[<code class="descname">HIVE_MAX_REGION_LEN</code> + 1]<a class="headerlink" href="#_CPPv4N14HiveClientInfo6regionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>User’s region. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="hivedriveinfo">
+<h3>HiveDriveInfo<a class="headerlink" href="#hivedriveinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv413HiveDriveInfo">
+<span id="_CPPv313HiveDriveInfo"></span><span id="_CPPv213HiveDriveInfo"></span><span id="HiveDriveInfo"></span><span class="target" id="struct_hive_drive_info"></span><em class="property">struct </em><code class="descname">HiveDriveInfo</code><a class="headerlink" href="#_CPPv413HiveDriveInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A structure representing the hive drive information. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N13HiveDriveInfo7driveidE">
+<span id="_CPPv3N13HiveDriveInfo7driveidE"></span><span id="_CPPv2N13HiveDriveInfo7driveidE"></span><span id="HiveDriveInfo::driveid__cA"></span><span class="target" id="struct_hive_drive_info_1ad932d1ea49c88431ce5aac14ea4f71e9"></span>char <code class="descname">driveid</code>[<code class="descname">HIVE_MAX_DRIVE_ID_LEN</code> + 1]<a class="headerlink" href="#_CPPv4N13HiveDriveInfo7driveidE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Drive Id. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="hivefileinfo">
+<h3>HiveFileInfo<a class="headerlink" href="#hivefileinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv412HiveFileInfo">
+<span id="_CPPv312HiveFileInfo"></span><span id="_CPPv212HiveFileInfo"></span><span id="HiveFileInfo"></span><span class="target" id="struct_hive_file_info"></span><em class="property">struct </em><code class="descname">HiveFileInfo</code><a class="headerlink" href="#_CPPv412HiveFileInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A structure representing the hive file information. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N12HiveFileInfo6fileidE">
+<span id="_CPPv3N12HiveFileInfo6fileidE"></span><span id="_CPPv2N12HiveFileInfo6fileidE"></span><span id="HiveFileInfo::fileid__cA"></span><span class="target" id="struct_hive_file_info_1a61720d61407ba28382e57db3f28cbf44"></span>char <code class="descname">fileid</code>[<code class="descname">HIVE_MAX_FILE_ID_LEN</code> + 1]<a class="headerlink" href="#_CPPv4N12HiveFileInfo6fileidE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>File Id. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N12HiveFileInfo4typeE">
+<span id="_CPPv3N12HiveFileInfo4typeE"></span><span id="_CPPv2N12HiveFileInfo4typeE"></span><span id="HiveFileInfo::type__cA"></span><span class="target" id="struct_hive_file_info_1ae10144f70038fa05a000b5249ee0c950"></span>char <code class="descname">type</code>[<code class="descname">HIVE_MAX_FILE_TYPE_LEN</code> + 1]<a class="headerlink" href="#_CPPv4N12HiveFileInfo4typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>File type. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N12HiveFileInfo4sizeE">
+<span id="_CPPv3N12HiveFileInfo4sizeE"></span><span id="_CPPv2N12HiveFileInfo4sizeE"></span><span id="HiveFileInfo::size__s"></span><span class="target" id="struct_hive_file_info_1a5783c99a3a2059e9c294aab9cfc89b6b"></span>size_t <code class="descname">size</code><a class="headerlink" href="#_CPPv4N12HiveFileInfo4sizeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>File size. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="hiverequestauthenticationcallback">
+<h3>HiveRequestAuthenticationCallback<a class="headerlink" href="#hiverequestauthenticationcallback" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv433HiveRequestAuthenticationCallback">
+<span id="_CPPv333HiveRequestAuthenticationCallback"></span><span id="_CPPv233HiveRequestAuthenticationCallback"></span><span id="HiveRequestAuthenticationCallback"></span><span class="target" id="ela__hive_8h_1a045686fc1b7e1c85c96245cfe14cc602"></span><em class="property">typedef </em>int <code class="descname">HiveRequestAuthenticationCallback</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>url</em>, void *<em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv433HiveRequestAuthenticationCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>User defined function to open authentication URL during login process. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">url</span></code>: [in] Authentication URL to be opened. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] User data.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="keyvalue">
+<h3>KeyValue<a class="headerlink" href="#keyvalue" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv48KeyValue">
+<span id="_CPPv38KeyValue"></span><span id="_CPPv28KeyValue"></span><span id="KeyValue"></span><span class="target" id="struct_key_value"></span><em class="property">struct </em><code class="descname">KeyValue</code><a class="headerlink" href="#_CPPv48KeyValue" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A structure aimed to describing one of the properties of a file. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N8KeyValue3keyE">
+<span id="_CPPv3N8KeyValue3keyE"></span><span id="_CPPv2N8KeyValue3keyE"></span><span id="KeyValue::key__cP"></span><span class="target" id="struct_key_value_1aad9a48fb15b93b4c3ddf140226438aa3"></span>char *<code class="descname">key</code><a class="headerlink" href="#_CPPv4N8KeyValue3keyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Denotes the property’s name. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N8KeyValue5valueE">
+<span id="_CPPv3N8KeyValue5valueE"></span><span id="_CPPv2N8KeyValue5valueE"></span><span id="KeyValue::value__cP"></span><span class="target" id="struct_key_value_1a4a837397a8a9cd385eb9eff3202f7787"></span>char *<code class="descname">value</code><a class="headerlink" href="#_CPPv4N8KeyValue5valueE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Denotes the property’s value. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="hivefilesiteratecallback">
+<h3>HiveFilesIterateCallback<a class="headerlink" href="#hivefilesiteratecallback" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv424HiveFilesIterateCallback">
+<span id="_CPPv324HiveFilesIterateCallback"></span><span id="_CPPv224HiveFilesIterateCallback"></span><span id="HiveFilesIterateCallback"></span><span class="target" id="ela__hive_8h_1a8c2b2cebaa67e8aca7a9415e9e58f6ad"></span><em class="property">typedef </em>bool <code class="descname">HiveFilesIterateCallback</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv48KeyValue" title="KeyValue">KeyValue</a> *<em>info</em>, size_t <em>size</em>, void *<em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424HiveFilesIterateCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that iterate the each file info item. </p>
+<p>ElaFriendsIterateCallback is the callback function type.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Return true to continue iteration, false to abort from iteration immediately. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">info</span></code>: [in] A pointer to an array of <a class="reference internal" href="#struct_key_value"><span class="std std-ref">KeyValue</span></a> carrying various properties of the file. NULL means end of iteration. </li>
+<li><code class="docutils literal notranslate"><span class="pre">size</span></code>: [in] the size of the <a class="reference internal" href="#struct_key_value"><span class="std std-ref">KeyValue</span></a> array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application-defined context data.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="whence">
+<h3>Whence<a class="headerlink" href="#whence" title="Permalink to this headline">¶</a></h3>
+<dl class="enum">
+<dt id="_CPPv46Whence">
+<span id="_CPPv36Whence"></span><span id="_CPPv26Whence"></span><span class="target" id="ela__hive_8h_1a157e51c85caee5bec44a2f9a4e5605e6"></span><em class="property">enum </em><code class="descname">Whence</code><a class="headerlink" href="#_CPPv46Whence" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enumeration of whence parameter of hive_file_seek(). </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv412HiveSeek_Set">
+<span id="_CPPv312HiveSeek_Set"></span><span id="_CPPv212HiveSeek_Set"></span><span class="target" id="ela__hive_8h_1a157e51c85caee5bec44a2f9a4e5605e6afad3a014ddb95dcd7f018b0c82d0ef15"></span><code class="descname">HiveSeek_Set</code> = (int)0<a class="headerlink" href="#_CPPv412HiveSeek_Set" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The base is the beginning of the file. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv412HiveSeek_Cur">
+<span id="_CPPv312HiveSeek_Cur"></span><span id="_CPPv212HiveSeek_Cur"></span><span class="target" id="ela__hive_8h_1a157e51c85caee5bec44a2f9a4e5605e6a592c0078d4845abade8f5bd9723d5436"></span><code class="descname">HiveSeek_Cur</code> = (int)1<a class="headerlink" href="#_CPPv412HiveSeek_Cur" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The base is the current file’s position indicator. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv412HiveSeek_End">
+<span id="_CPPv312HiveSeek_End"></span><span id="_CPPv212HiveSeek_End"></span><span class="target" id="ela__hive_8h_1a157e51c85caee5bec44a2f9a4e5605e6a1faf75edc40c01add593dd23a1bbb627"></span><code class="descname">HiveSeek_End</code> = (int)2<a class="headerlink" href="#_CPPv412HiveSeek_End" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The base is the end of file. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="client-instance-functions">
+<h3>Client instance functions<a class="headerlink" href="#client-instance-functions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="hive-client-new">
+<h4>hive_client_new<a class="headerlink" href="#hive-client-new" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv415hive_client_newPK11HiveOptions">
+<span id="_CPPv315hive_client_newPK11HiveOptions"></span><span id="_CPPv215hive_client_newPK11HiveOptions"></span><span id="hive_client_new__HiveOptionsCP"></span><span class="target" id="ela__hive_8h_1a2eed5c9e9d0374df1440ac32096e2261"></span>HiveClient *<code class="descname">hive_client_new</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv411HiveOptions" title="HiveOptions">HiveOptions</a> *<em>options</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415hive_client_newPK11HiveOptions" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a new hive client instance to the specific backend. </p>
+<p>If the data is stored under options.peristent_location, the client instance would be created base on it. Otherwise, a new client instance would be created and returned without any user context. On sucessfully returning, the state of client instance is “raw”.</p>
+<p>All other hive APIs should be called after having client instance.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return the pointer of Hive client instance. Otherwise, return NULL, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">options</span></code>: [in] A pointer to a valid Options structure of specific backend.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-cient-close">
+<h4>hive_cient_close<a class="headerlink" href="#hive-cient-close" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv417hive_client_closeP10HiveClient">
+<span id="_CPPv317hive_client_closeP10HiveClient"></span><span id="_CPPv217hive_client_closeP10HiveClient"></span><span id="hive_client_close__HiveClientP"></span><span class="target" id="ela__hive_8h_1aeb456d48e88f80f4e198c0898caf3837"></span>int <code class="descname">hive_client_close</code><span class="sig-paren">(</span>HiveClient *<em>client</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417hive_client_closeP10HiveClient" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Close the hive client instance. </p>
+<p>After closing client instance, all derived instances of this client, such as drive and file instances would become invalid. And any calling APIs with invalid drive and file instance would be undefined.</p>
+<p>All derived instances such as drive and files should be closed before calling this API.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">client</span></code>: [in] A handle identifying the Hive client instance.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-client-login">
+<h4>hive_client_login<a class="headerlink" href="#hive-client-login" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv417hive_client_loginP10HiveClientP33HiveRequestAuthenticationCallbackPv">
+<span id="_CPPv317hive_client_loginP10HiveClientP33HiveRequestAuthenticationCallbackPv"></span><span id="_CPPv217hive_client_loginP10HiveClientP33HiveRequestAuthenticationCallbackPv"></span><span id="hive_client_login__HiveClientP.HiveRequestAuthenticationCallbackP.voidP"></span><span class="target" id="ela__hive_8h_1a3283979c74e92661043040a49c8cb7ac"></span>int <code class="descname">hive_client_login</code><span class="sig-paren">(</span>HiveClient *<em>client</em>, <a class="reference internal" href="#_CPPv433HiveRequestAuthenticationCallback" title="HiveRequestAuthenticationCallback">HiveRequestAuthenticationCallback</a> *<em>callback</em>, void *<em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417hive_client_loginP10HiveClientP33HiveRequestAuthenticationCallbackPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Associate a user with the client. </p>
+<p>During the process, the user delegates to the client. On successfully returning, the state of client becomes “logined”.</p>
+<p>This function is effective only when state of client is “raw”.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">client</span></code>: [in] A handle identifying the Hive client instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">callback</span></code>: [in] Callback to open authentication URL during login process. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] User data to be passed as context parameter to callback.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-client-logout">
+<h4>hive_client_logout<a class="headerlink" href="#hive-client-logout" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv418hive_client_logoutP10HiveClient">
+<span id="_CPPv318hive_client_logoutP10HiveClient"></span><span id="_CPPv218hive_client_logoutP10HiveClient"></span><span id="hive_client_logout__HiveClientP"></span><span class="target" id="ela__hive_8h_1a91ac281fa69d14df5432044e26ddd4ac"></span>int <code class="descname">hive_client_logout</code><span class="sig-paren">(</span>HiveClient *<em>client</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418hive_client_logoutP10HiveClient" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Dissociate the user from the client. </p>
+<p>All client’s data in persistent location is deleted. All derived instances of this client, such as drive and file instances would become invalid. And any calling APIs with invalid drive and file instance would be undefined.</p>
+<p>This function is effective only when state of client is “logined”. client.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">client</span></code>: [in] A handle identifying the Hive client instance.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-client-get-info">
+<h4>hive_client_get_info<a class="headerlink" href="#hive-client-get-info" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv420hive_client_get_infoP10HiveClientP14HiveClientInfo">
+<span id="_CPPv320hive_client_get_infoP10HiveClientP14HiveClientInfo"></span><span id="_CPPv220hive_client_get_infoP10HiveClientP14HiveClientInfo"></span><span id="hive_client_get_info__HiveClientP.HiveClientInfoP"></span><span class="target" id="ela__hive_8h_1a92760110df4b7f5016625043e81b7cdb"></span>int <code class="descname">hive_client_get_info</code><span class="sig-paren">(</span>HiveClient *<em>client</em>, <a class="reference internal" href="#_CPPv414HiveClientInfo" title="HiveClientInfo">HiveClientInfo</a> *<em>client_info</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420hive_client_get_infoP10HiveClientP14HiveClientInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get client associated user’s information. </p>
+<p>The result is filled into client_info.</p>
+<p>This function is effective only when state of client is “logined”.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">client</span></code>: [in] A handle identifying the Hive client instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">client_info</span></code>: [in] The <a class="reference internal" href="#struct_hive_client_info"><span class="std std-ref">HiveClientInfo</span></a> pointer to receive the client information.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="drive-instance-functions">
+<h3>Drive instance functions<a class="headerlink" href="#drive-instance-functions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="hive-drive-open">
+<h4>hive_drive_open<a class="headerlink" href="#hive-drive-open" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv415hive_drive_openP10HiveClient">
+<span id="_CPPv315hive_drive_openP10HiveClient"></span><span id="_CPPv215hive_drive_openP10HiveClient"></span><span id="hive_drive_open__HiveClientP"></span><span class="target" id="ela__hive_8h_1ac0d14ebb0a9fc897881d8e10aecfad59"></span>HiveDrive *<code class="descname">hive_drive_open</code><span class="sig-paren">(</span>HiveClient *<em>client</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415hive_drive_openP10HiveClient" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a new Hive drive instance representing the default drive of specific client. </p>
+<p>This function is effective only when state of client is “logined”. Caller is responsible for closing this drive instance to reclaim resources when drive instance would not be used anymore.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return the pointer of Hive drive instance. Otherwise, return NULL, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">client</span></code>: [in] A handle identifying the Hive client instance.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-drive-close">
+<h4>hive_drive_close<a class="headerlink" href="#hive-drive-close" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv416hive_drive_closeP9HiveDrive">
+<span id="_CPPv316hive_drive_closeP9HiveDrive"></span><span id="_CPPv216hive_drive_closeP9HiveDrive"></span><span id="hive_drive_close__HiveDriveP"></span><span class="target" id="ela__hive_8h_1a3c152455324a47d18ef593db93a1f8c2"></span>int <code class="descname">hive_drive_close</code><span class="sig-paren">(</span>HiveDrive *<em>drive</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416hive_drive_closeP9HiveDrive" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Close the hive drive instance to destroy all associated resources. </p>
+<p>As long as the drive instance is closed, it becomes invalid. And calling any function related invalid drive instance would be undefined.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">drive</span></code>: [in] A handle identifying the Hive drive instance.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-drive-get-info">
+<h4>hive_drive_get_info<a class="headerlink" href="#hive-drive-get-info" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv419hive_drive_get_infoP9HiveDriveP13HiveDriveInfo">
+<span id="_CPPv319hive_drive_get_infoP9HiveDriveP13HiveDriveInfo"></span><span id="_CPPv219hive_drive_get_infoP9HiveDriveP13HiveDriveInfo"></span><span id="hive_drive_get_info__HiveDriveP.HiveDriveInfoP"></span><span class="target" id="ela__hive_8h_1a28d6971aa482a817563f86a4eacd3978"></span>int <code class="descname">hive_drive_get_info</code><span class="sig-paren">(</span>HiveDrive *<em>drive</em>, <a class="reference internal" href="#_CPPv413HiveDriveInfo" title="HiveDriveInfo">HiveDriveInfo</a> *<em>drive_info</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419hive_drive_get_infoP9HiveDriveP13HiveDriveInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get drive’s information. </p>
+<p>The result is filled into drive_info.</p>
+<p>This function is effective only when state of client generating the drive is “logined”.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">drive</span></code>: [in] A handle identifying the Hive drive instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">drive_info</span></code>: [in] The <a class="reference internal" href="#struct_hive_drive_info"><span class="std std-ref">HiveDriveInfo</span></a> pointer to receive the drive information.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-drive-list-files">
+<h4>hive_drive_list_files<a class="headerlink" href="#hive-drive-list-files" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv421hive_drive_list_filesP9HiveDrivePKcP24HiveFilesIterateCallbackPv">
+<span id="_CPPv321hive_drive_list_filesP9HiveDrivePKcP24HiveFilesIterateCallbackPv"></span><span id="_CPPv221hive_drive_list_filesP9HiveDrivePKcP24HiveFilesIterateCallbackPv"></span><span id="hive_drive_list_files__HiveDriveP.cCP.HiveFilesIterateCallbackP.voidP"></span><span class="target" id="ela__hive_8h_1aa89c7ae134fadad14f2cb882684be265"></span>int <code class="descname">hive_drive_list_files</code><span class="sig-paren">(</span>HiveDrive *<em>drive</em>, <em class="property">const</em> char *<em>path</em>, <a class="reference internal" href="#_CPPv424HiveFilesIterateCallback" title="HiveFilesIterateCallback">HiveFilesIterateCallback</a> *<em>callback</em>, void *<em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421hive_drive_list_filesP9HiveDrivePKcP24HiveFilesIterateCallbackPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Iterate file info under the specified directory path. </p>
+<p>Callback would be invoked to iterate information of each file after having acquired the list of information under the directory from remote drive.</p>
+<p>This function is effective only when state of client generating drive is “logined”.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">drive</span></code>: [in] A handle identifying the Hive drive instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">path</span></code>: [in] The absolute path to a directory list its file infos. </li>
+<li><code class="docutils literal notranslate"><span class="pre">callback</span></code>: [in] An application-defined function to iterate each file info under directory. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-drive-mkdir">
+<h4>hive_drive_mkdir<a class="headerlink" href="#hive-drive-mkdir" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv416hive_drive_mkdirP9HiveDrivePKc">
+<span id="_CPPv316hive_drive_mkdirP9HiveDrivePKc"></span><span id="_CPPv216hive_drive_mkdirP9HiveDrivePKc"></span><span id="hive_drive_mkdir__HiveDriveP.cCP"></span><span class="target" id="ela__hive_8h_1a6f98a03d1f5c3703e3689f71cb80699a"></span>int <code class="descname">hive_drive_mkdir</code><span class="sig-paren">(</span>HiveDrive *<em>drive</em>, <em class="property">const</em> char *<em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416hive_drive_mkdirP9HiveDrivePKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a directory specified by path in drive. </p>
+<p>This function is effective only when state of client generating drive is “logined”.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">drive</span></code>: [in] A handle identifying the Hive drive instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">path</span></code>: [in] The absolute path to a directory in drive.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-drive-move-file">
+<h4>hive_drive_move_file<a class="headerlink" href="#hive-drive-move-file" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv420hive_drive_move_fileP9HiveDrivePKcPKc">
+<span id="_CPPv320hive_drive_move_fileP9HiveDrivePKcPKc"></span><span id="_CPPv220hive_drive_move_fileP9HiveDrivePKcPKc"></span><span id="hive_drive_move_file__HiveDriveP.cCP.cCP"></span><span class="target" id="ela__hive_8h_1aab4ccc3b727c0af828523151dc83ec79"></span>int <code class="descname">hive_drive_move_file</code><span class="sig-paren">(</span>HiveDrive *<em>drive</em>, <em class="property">const</em> char *<em>old</em>, <em class="property">const</em> char *<em>new</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420hive_drive_move_fileP9HiveDrivePKcPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Move the file specified by old to the new path new in drive. </p>
+<p>This function is effective only when state of client generating drive is “logined”.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">drive</span></code>: [in] A handle identifying the Hive drive instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">old</span></code>: [in] The absolute path of file that would be moved. </li>
+<li><code class="docutils literal notranslate"><span class="pre">new</span></code>: [in] The absolute path that a file would move to.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-drive-copy-file">
+<h4>hive_drive_copy_file<a class="headerlink" href="#hive-drive-copy-file" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv420hive_drive_copy_fileP9HiveDrivePKcPKc">
+<span id="_CPPv320hive_drive_copy_fileP9HiveDrivePKcPKc"></span><span id="_CPPv220hive_drive_copy_fileP9HiveDrivePKcPKc"></span><span id="hive_drive_copy_file__HiveDriveP.cCP.cCP"></span><span class="target" id="ela__hive_8h_1acf574464389b44090647405820e9d525"></span>int <code class="descname">hive_drive_copy_file</code><span class="sig-paren">(</span>HiveDrive *<em>drive</em>, <em class="property">const</em> char *<em>src</em>, <em class="property">const</em> char *<em>dest</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420hive_drive_copy_fileP9HiveDrivePKcPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy the file specified by src to path specified by dest in drive. </p>
+<p>This function is effective only when state of client generating drive is “logined”.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">drive</span></code>: [in] A handle identifying the Hive drive instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">src</span></code>: [in] The absolute path of file that would be copied. </li>
+<li><code class="docutils literal notranslate"><span class="pre">dest</span></code>: [in] The absolute path that a file would copy to.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-drive-delete-file">
+<h4>hive_drive_delete_file<a class="headerlink" href="#hive-drive-delete-file" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv422hive_drive_delete_fileP9HiveDrivePKc">
+<span id="_CPPv322hive_drive_delete_fileP9HiveDrivePKc"></span><span id="_CPPv222hive_drive_delete_fileP9HiveDrivePKc"></span><span id="hive_drive_delete_file__HiveDriveP.cCP"></span><span class="target" id="ela__hive_8h_1a2a6f20d5cd54e1e08c2813c61224f454"></span>int <code class="descname">hive_drive_delete_file</code><span class="sig-paren">(</span>HiveDrive *<em>drive</em>, <em class="property">const</em> char *<em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422hive_drive_delete_fileP9HiveDrivePKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Delete the file specified by path in drive. </p>
+<p>This function is effective only when state of client generating drive is “logined”.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">drive</span></code>: [in] A handle identifying the Hive drive instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">path</span></code>: [in] The absolute path to a file in drive.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-drive-file-stat">
+<h4>hive_drive_file_stat<a class="headerlink" href="#hive-drive-file-stat" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv420hive_drive_file_statP9HiveDrivePKcP12HiveFileInfo">
+<span id="_CPPv320hive_drive_file_statP9HiveDrivePKcP12HiveFileInfo"></span><span id="_CPPv220hive_drive_file_statP9HiveDrivePKcP12HiveFileInfo"></span><span id="hive_drive_file_stat__HiveDriveP.cCP.HiveFileInfoP"></span><span class="target" id="ela__hive_8h_1adff43bf4d090264ebd914fab1a12ee80"></span>int <code class="descname">hive_drive_file_stat</code><span class="sig-paren">(</span>HiveDrive *<em>drive</em>, <em class="property">const</em> char *<em>path</em>, <a class="reference internal" href="#_CPPv412HiveFileInfo" title="HiveFileInfo">HiveFileInfo</a> *<em>file_info</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420hive_drive_file_statP9HiveDrivePKcP12HiveFileInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get status of the file specified by path in drive. </p>
+<p>The result is filled into file_info.</p>
+<p>This function is effective only when state of client generating drive is “logined”.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">drive</span></code>: [in] A handle identifying the Hive drive instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">path</span></code>: [in] The absolute path to a file in drive. </li>
+<li><code class="docutils literal notranslate"><span class="pre">file_info</span></code>: [in] The <a class="reference internal" href="#struct_hive_file_info"><span class="std std-ref">HiveFileInfo</span></a> pointer to receive the drive information.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="file-instance-functions">
+<h3>File instance functions<a class="headerlink" href="#file-instance-functions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="hive-file-open">
+<h4>hive_file_open<a class="headerlink" href="#hive-file-open" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv414hive_file_openP9HiveDrivePKcPKc">
+<span id="_CPPv314hive_file_openP9HiveDrivePKcPKc"></span><span id="_CPPv214hive_file_openP9HiveDrivePKcPKc"></span><span id="hive_file_open__HiveDriveP.cCP.cCP"></span><span class="target" id="ela__hive_8h_1a27436ca8a8ca7a18c71eba3fb749cdb1"></span>HiveFile *<code class="descname">hive_file_open</code><span class="sig-paren">(</span>HiveDrive *<em>drive</em>, <em class="property">const</em> char *<em>path</em>, <em class="property">const</em> char *<em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414hive_file_openP9HiveDrivePKcPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Open a file specified by path under drive. </p>
+<p>This function is effective only when state of client generating drive is “logined”.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return the file instance. Otherwise, return NULL, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">drive</span></code>: [in] A handle identifying the Hive drive instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">path</span></code>: [in] The absolute path to a file in drive. </li>
+<li><code class="docutils literal notranslate"><span class="pre">mode</span></code>: [in] The operation mode of the file instance(same as type parameter of fopen()).</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-file-close">
+<h4>hive_file_close<a class="headerlink" href="#hive-file-close" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv415hive_file_closeP8HiveFile">
+<span id="_CPPv315hive_file_closeP8HiveFile"></span><span id="_CPPv215hive_file_closeP8HiveFile"></span><span id="hive_file_close__HiveFileP"></span><span class="target" id="ela__hive_8h_1a7cc2e89bb9c7733dd8e8745bc3328dec"></span>int <code class="descname">hive_file_close</code><span class="sig-paren">(</span>HiveFile *<em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415hive_file_closeP8HiveFile" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Close the hive file instance to destroy all associated resources. </p>
+<p>As long as the file instance is closed, it becomes invalid. And calling any function related invalid drive instance would be undefined.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">file</span></code>: [in] A handle identifying the Hive file instance.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-file-seek">
+<h4>hive_file_seek<a class="headerlink" href="#hive-file-seek" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv414hive_file_seekP8HiveFile7ssize_t6Whence">
+<span id="_CPPv314hive_file_seekP8HiveFile7ssize_t6Whence"></span><span id="_CPPv214hive_file_seekP8HiveFile7ssize_t6Whence"></span><span id="hive_file_seek__HiveFileP.ssize_t.Whence"></span><span class="target" id="ela__hive_8h_1aa83833e6beaf6f370d8071305677b972"></span>ssize_t <code class="descname">hive_file_seek</code><span class="sig-paren">(</span>HiveFile *<em>file</em>, ssize_t <em>offset</em>, <a class="reference internal" href="#_CPPv46Whence" title="Whence">Whence</a> <em>whence</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414hive_file_seekP8HiveFile7ssize_t6Whence" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Modify file’s position indicator. </p>
+<p>This function is effective only when state of client associated with file is “logined”.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return new file offset. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">file</span></code>: [in] A handle identifying the Hive file instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">offset</span></code>: [in] The offset relative to whence where file’s position indicator is to be positioned. </li>
+<li><code class="docutils literal notranslate"><span class="pre">whence</span></code>: [in] The base of offset.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-file-read">
+<h4>hive_file_read<a class="headerlink" href="#hive-file-read" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv414hive_file_readP8HiveFilePc6size_t">
+<span id="_CPPv314hive_file_readP8HiveFilePc6size_t"></span><span id="_CPPv214hive_file_readP8HiveFilePc6size_t"></span><span id="hive_file_read__HiveFileP.cP.s"></span><span class="target" id="ela__hive_8h_1a61817ee62c91fd2734ee9b69e6ce5ebc"></span>ssize_t <code class="descname">hive_file_read</code><span class="sig-paren">(</span>HiveFile *<em>file</em>, char *<em>buf</em>, size_t <em>bufsz</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414hive_file_readP8HiveFilePc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read bufsz bytes of data from file. </p>
+<p>This function is effective only when state of client associated with file is “logined”.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return length of data actually read. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">file</span></code>: [in] A handle identifying the Hive file instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">buf</span></code>: [in] Buffer to hold data. </li>
+<li><code class="docutils literal notranslate"><span class="pre">bufsz</span></code>: [in] Length of data to be read.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-file-write">
+<h4>hive_file_write<a class="headerlink" href="#hive-file-write" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv415hive_file_writeP8HiveFilePKc6size_t">
+<span id="_CPPv315hive_file_writeP8HiveFilePKc6size_t"></span><span id="_CPPv215hive_file_writeP8HiveFilePKc6size_t"></span><span id="hive_file_write__HiveFileP.cCP.s"></span><span class="target" id="ela__hive_8h_1aea0999417161dc81ce25911c96ed1540"></span>ssize_t <code class="descname">hive_file_write</code><span class="sig-paren">(</span>HiveFile *<em>file</em>, <em class="property">const</em> char *<em>buf</em>, size_t <em>bufsz</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415hive_file_writeP8HiveFilePKc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>write bufsz bytes of data to file. </p>
+<p>This function is effective only when state of client associated with file is “logined”.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return length of data actually written. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">file</span></code>: [in] A handle identifying the Hive file instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">buf</span></code>: [in] Buffer to hold data. </li>
+<li><code class="docutils literal notranslate"><span class="pre">bufsz</span></code>: [in] Length of data to be written.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-file-commit">
+<h4>hive_file_commit<a class="headerlink" href="#hive-file-commit" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv416hive_file_commitP8HiveFile">
+<span id="_CPPv316hive_file_commitP8HiveFile"></span><span id="_CPPv216hive_file_commitP8HiveFile"></span><span id="hive_file_commit__HiveFileP"></span><span class="target" id="ela__hive_8h_1a924b214a432ab97a294b355dce51d66e"></span>int <code class="descname">hive_file_commit</code><span class="sig-paren">(</span>HiveFile *<em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416hive_file_commitP8HiveFile" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Commit local change on file to backend. </p>
+<p>This function is effective only when state of client associated with file is “logined”.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">file</span></code>: [in] A handle identifying the Hive file instance.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-file-discard">
+<h4>hive_file_discard<a class="headerlink" href="#hive-file-discard" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv417hive_file_discardP8HiveFile">
+<span id="_CPPv317hive_file_discardP8HiveFile"></span><span id="_CPPv217hive_file_discardP8HiveFile"></span><span id="hive_file_discard__HiveFileP"></span><span class="target" id="ela__hive_8h_1a13478358b569e237aa8938d9faa104d2"></span>int <code class="descname">hive_file_discard</code><span class="sig-paren">(</span>HiveFile *<em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417hive_file_discardP8HiveFile" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Discard local change on file. </p>
+<p>This function is effective only when state of client associated with file is “logined”.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return 0. Otherwise, return -1, and a specific error code can be retrieved by calling hive_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">file</span></code>: [in] A handle identifying the Hive file instance.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="utility-functions">
+<h3>Utility functions<a class="headerlink" href="#utility-functions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ela-log-init">
+<h4>ela_log_init<a class="headerlink" href="#ela-log-init" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv412ela_log_init11ElaLogLevelPKcPFvPKc7va_listE">
+<span id="_CPPv312ela_log_init11ElaLogLevelPKcPFvPKc7va_listE"></span><span id="_CPPv212ela_log_init11ElaLogLevelPKcPFvPKc7va_listE"></span><span class="target" id="ela__hive_8h_1a079b8b6a8ad7a7127961a39f69ef047d"></span>void <code class="descname">ela_log_init</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv411ElaLogLevel" title="ElaLogLevel">ElaLogLevel</a> <em>level</em>, <em class="property">const</em> char *<em>log_file</em>, void (*<em>log_printer</em>)<span class="sig-paren">(</span><em class="property">const</em> char *format, va_list args<span class="sig-paren">)</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ela_log_init11ElaLogLevelPKcPFvPKc7va_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initialize log options for Hive. </p>
+<p>If this API is never called, the default log level is ‘Info’; The default log file is stdout.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">level</span></code>: [in] The log level to control internal log output. </li>
+<li><code class="docutils literal notranslate"><span class="pre">log_file</span></code>: [in] the log file name. If the log_file is NULL, Hive will not write log to file. </li>
+<li><code class="docutils literal notranslate"><span class="pre">log_printer</span></code>: [in] the user defined log printer. Can be NULL. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-get-error">
+<h4>hive_get_error<a class="headerlink" href="#hive-get-error" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv414hive_get_errorv">
+<span id="_CPPv314hive_get_errorv"></span><span id="_CPPv214hive_get_errorv"></span><span id="hive_get_error__void"></span><span class="target" id="ela__hive_8h_1a3beaa38e237c1334dd39803752ba31d8"></span>int <code class="descname">hive_get_error</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414hive_get_errorv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieves the last-error code value. </p>
+<p>The last-error code is maintained on a per-instance basis. Multiple instance do not overwrite each other’s last-error code.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The return value is the last-error code. </dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-clear-error">
+<h4>hive_clear_error<a class="headerlink" href="#hive-clear-error" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv416hive_clear_errorv">
+<span id="_CPPv316hive_clear_errorv"></span><span id="_CPPv216hive_clear_errorv"></span><span id="hive_clear_error__void"></span><span class="target" id="ela__hive_8h_1af365d6719cf41c7f0494149ad677ad52"></span>void <code class="descname">hive_clear_error</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416hive_clear_errorv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Clear the last-error code of a Carrier instance. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="hive-get-strerror">
+<h4>hive_get_strerror<a class="headerlink" href="#hive-get-strerror" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv417hive_get_strerroriPc6size_t">
+<span id="_CPPv317hive_get_strerroriPc6size_t"></span><span id="_CPPv217hive_get_strerroriPc6size_t"></span><span id="hive_get_strerror__i.cP.s"></span><span class="target" id="ela__hive_8h_1a1958dd119b08874d4bb0ed70e6a36de6"></span>char *<code class="descname">hive_get_strerror</code><span class="sig-paren">(</span>int <em>errnum</em>, char *<em>buf</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417hive_get_strerroriPc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get string description to error code. </p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="hive-error-number.html" class="btn btn-neutral float-right" title="Elastos Hive error number" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="hive-intro.html" class="btn btn-neutral" title="Elastos Hive Client SDK introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, elastos.org.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'5.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

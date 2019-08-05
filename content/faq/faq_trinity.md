@@ -9,7 +9,7 @@ alwaysopen = false
 
 {{< ownership "Kiran Pachhai" >}}
 
-{{< todo "Q&A have been checked and sorted. Now need to clear all the remaining TODOs" >}}
+{{< todo "@KP Q&A have been checked and sorted. Now need to clear all the remaining TODOs" >}}
 
 {{% faqentry question="Is there an internet browser for Elastos?" %}}
 Yes, it is called Trinity.
@@ -41,67 +41,67 @@ The elastos browser would have to expose the APIs for these exchanges. Otherwise
 
 {{% /faqentry %}}
 
-{{< todo "What is DEX? Need to detail the answer" >}}
+{{< todo "@KP What is DEX? Need to detail the answer" >}}
 
 {{% faqentry question="Could I install the Elastos operating system on my computer or my smartphone?" %}}
 No. For now, only the virtual machine will be able to be installed on devices from the general public.
 {{% /faqentry %}}
 
-{{< todo "We may want to clarify this answer" >}}
+{{< todo "@KP We may want to clarify this answer" >}}
 
 {{% faqentry question="How will I use Elastos on my smartphone?" %}}
 The light version of the Elastos Runtime can be installed on your smartphone. This application allows decentralized applications to be built on an agnostic platform and peer-to-peer.
 {{% /faqentry %}}
 
-{{< todo "Not sure about what the elastos runtime means here, and if this answer belongs to trinity" >}}
+{{< todo "@KP Not sure about what the elastos runtime means here, and if this answer belongs to trinity" >}}
 
 {{% faqentry question="What purpose does the operating system (OS) serve if I can’t use it?" %}}
 The operating system is mostly meant for the Internet of Things (IoT) devices.
 {{% /faqentry %}}
 
-{{< todo "Is this really related to trinity? still up to date?" >}}
+{{< todo "@KP Is this really related to trinity? still up to date?" >}}
 
 {{% faqentry question="What is the name of the virtual machine?" %}}
 Elastos Runtime.
 {{% /faqentry %}}
 
-{{< todo "Still up to date?" >}}
+{{< todo "@KP Still up to date?" >}}
 
 {{% faqentry question="What purpose does the virtual machine, Elastos Runtime, serve?" %}}
 The Runtime provides exactly the same services as the OS. It is a sandbox environment.
 {{% /faqentry %}}
 
-{{< todo "Unclear to me" >}}
+{{< todo "@KP Unclear to me" >}}
 
 {{% faqentry question="Why can’t I install the OS on my devices?" %}}
 Using the Runtime allows you to use the classic environment, which has access to the internet, while also having access to the Elastos ecosystem. There are only benefits. The OS would be a constraint for the majority of the people.
 {{% /faqentry %}}
 
-{{< todo "Do we really want to say that?" >}}
+{{< todo "@KP Do we really want to say that?" >}}
 
 {{% faqentry question="In that case, why would the OS be useful?" %}}
 Devices that will use the OS will be completely decoupled from the classic internet. Using the Elastos OS would allow you not having to pay for a mainstream OS.
 {{% /faqentry %}}
 
-{{< todo "Not sure the OS part of Elastos is relevant any more" >}}
+{{< todo "@KP Not sure the OS part of Elastos is relevant any more" >}}
 
 {{% faqentry question="When will I be able to install the Elastos Runtime on my smartphone?" %}}
 Version 1.0 is scheduled for mid-2019. Elastos Runtime is already available for download in its alpha version.
 {{% /faqentry %}}
 
-{{< todo "We should rename all occurences of 'Elastos runtime' with 'trinity' to reduce confusion. And I think the new plan for trinity alpha release is end of 2019 now?" >}}
+{{< todo "@KP We should rename all occurences of 'Elastos runtime' with 'trinity' to reduce confusion. And I think the new plan for trinity alpha release is end of 2019 now?" >}}
 
 {{% faqentry question="How do the operating system and the virtual machine work?" %}}
 [Read this article.](https://www.reddit.com/r/Elastos/comments/857bw9/casual_qa_with_rong_chen_after_dapp_meetup/)
 {{% /faqentry %}}
 
-{{< todo "Still relevant? Shoulw we talk about the OS?" >}}
+{{< todo "@KP Still relevant? Shoulw we talk about the OS?" >}}
 
 {{% faqentry question="What will internet sites on Elastos look like?" %}}
 Like applications.
 {{% /faqentry %}}
 
-{{< todo "I think we may not call them 'internet sites'. They are just dapps, right? Even if they use web tech" >}}
+{{< todo "@KP I think we may not call them 'internet sites'. They are just dapps, right? Even if they use web tech" >}}
 
 {{% faqentry question="What will the multimedia files look like in Elastos?" %}}
 As executable applications. They will be raw files that will be run directly by the OS without using a third party application.
@@ -117,7 +117,7 @@ Chromium fork so each dapp runs in its own process but that process can be multi
 
 {{% /faqentry %}}
 
-{{< todo "dapp here is only about trinity dapps, not native apps." >}}
+{{< todo "@KP dapp here is only about trinity dapps, not native apps." >}}
 
 {{% faqentry question="During several interviews Rong Chen emphasized that Elastos combines Code and Data to make a digital asset. If I were to create a video, which is DATA, a media player is required to view the video, which is CODE. My understanding is that data and code are encapsulated and hashed together and transported via network (carrier) nodes. If code and data are always hashed as a single digital asset, will that not bloat the super nodes with duplicate code and add extra web traffic?" %}}
 
@@ -125,7 +125,7 @@ Elastos is building its own version of IPFS that is more efficient than the regu
 
 {{% /faqentry %}}
 
-{{< todo "No answer provided for 'extra web traffic'" >}}
+{{< todo "@KP No answer provided for 'extra web traffic'" >}}
 
 {{% faqentry question="Is it true that even if your smartphone OS is compromised with malware, the Dapps running in the Elastos Runtime (VM) are still secure?" %}}
 

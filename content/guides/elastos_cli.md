@@ -7,13 +7,13 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
-{{< ownership "BoCheng" >}}
+{{< ownership "BoCheng, Benjamin Piette" >}}
 
-{{< todo "Simplify: basic commands first, complex later + introduction" >}}
+{{< todo "@BPI Simplify: basic commands first, complex later + introduction" >}}
 
-{{< todo "Tell users how to install a local ELA node, as that is used by the CLI. This part is unclear" >}}
+{{< todo "@BPI @BoCheng Tell users how to install a local ELA node, as that is used by the CLI. This part is unclear" >}}
 
-{{< todo "Explain a bit more to beginners. For example 'view public key': clarify what is that public key, when it is used, is that a test key or a permanent key, etc" >}}
+{{< todo "@BPI @NiuJingyu Explain a bit more to beginners. For example 'view public key': clarify what is that public key, when it is used, is that a test key or a permanent key, etc" >}}
 
 The Elastos CLI provides several useful commands for development, deployment, identity management, etc. The main ones are listed in the table below.
 
@@ -1041,5 +1041,3 @@ current height is 21
 blockhash before rollback: 18a38afc7942e4bed7040ed393cb761b84e6da222a1a43df0806968c60fcff8a
 blockhash after rollback: 0000000000000000000000000000000000000000000000000000000000000000
 {{% /highlight %}}
-
-{{< todo "List/explain the most important commands" >}}

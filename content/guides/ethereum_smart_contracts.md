@@ -7,16 +7,16 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
-{{< ownership "SongShiJun" >}}
+{{< ownership "BenjaminPiette NiuJingyu BoCheng" >}}
 
-{{< todo "Need to discuss how we reference the ETH documentation. Clone many things? Point to external links? Possibly the best way is to reference the ethereum documentation, and explain only what should be different from their steps." >}}
+{{< todo "@BPI @NiuJingyu @BoCheng Need to discuss how we reference the ETH documentation. Clone many things? Point to external links? Possibly the best way is to reference the ethereum documentation, and explain only what should be different from their steps." >}}
 
-{{< todo "Explain how to setup ethereum (or refer to their doc) and list prerequisites (tools to be installed, knowledge to have...)" >}}
+{{< todo "@BPI @NiuJingyu @BoCheng Explain how to setup ethereum (or refer to their doc) and list prerequisites (tools to be installed, knowledge to have...)" >}}
 
 ## Connect the ELA mainchain with the ETH sidechain
 
-{{< todo "Is this really what is explained here?" >}}
-{{< todo "Introduction to explain why we want to do this" >}}
+{{< todo "@BPI @NiuJingyu @BoCheng Is this really what is explained here?" >}}
+{{< todo "@BPI @NiuJingyu @BoCheng Introduction to explain why we want to do this" >}}
 
 {{< pleasetranslate >}}
 # 配置ETH侧链开发环境
@@ -66,14 +66,14 @@ Port: 8545
 
 {{< /pleasetranslate >}}
 
-{{< todo "Add link to the ETH sample when ready (see beijing 2019 hackathon)" >}}
+{{< todo "@BPI Add link to the ETH sample when ready (see beijing 2019 hackathon)" >}}
 
-{{< todo "replace links to ela-cli or other github links, with internal in-doc links" >}}
+{{< todo "@BPI replace links to ela-cli or other github links, with internal in-doc links" >}}
 
 ## Writing a ETH smart contract
 
-{{< todo >}}
+{{< todo "@BPI @NiuJingyu @BoCheng" >}}
 
 ## Calling a smart contract
 
-{{< todo >}}
+{{< todo "@BPI @NiuJingyu @BoCheng" >}}

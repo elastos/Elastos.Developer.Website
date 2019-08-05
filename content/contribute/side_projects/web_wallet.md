@@ -7,9 +7,9 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
-{{< ownership "Web wallet team" >}}
+{{< ownership "Benjamin Piette" >}}
 
-{{< todo >}}
+{{< todo "@BPI gather info from the web wallet team" >}}
 
 ## About
 

@@ -27,7 +27,7 @@ Even if it hasn't been packaged for your usual package manager, you can try to b
     {{% /tab %}} 
 {{< /tabs >}}
 
-{{< todo "Add tabs for every OS elastos-cli is available for" >}}
+{{< todo "@BoCheng When package managers are ready - Add tabs for every OS elastos-cli is available for" >}}
 
 Make sure everything was ok - type the following command in a shell:
 

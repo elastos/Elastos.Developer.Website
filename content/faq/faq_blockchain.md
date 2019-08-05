@@ -119,4 +119,4 @@ Security: Merge mining with bitcoin, Decentralization: decentralized carrier and
 
 {{% /faqentry %}}
 
-{{< todo "The answer doesn't clearly state yes or no" >}}
+{{< todo "@NiuJingyu The answer doesn't clearly state yes or no" >}}

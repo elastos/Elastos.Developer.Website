@@ -7,6 +7,8 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++ 
 
+{{< ownership "Kiran Pachhai" >}}
+
 {{% faqentry question="How is ELA mined?" %}}
 ELA is merge mined with Bitcoin through Auxiliary Proof of Work (AuxPoW) and it is also be mined through Delegated Proof of Stake (DPoS).
 {{% /faqentry %}}
@@ -15,25 +17,25 @@ ELA is merge mined with Bitcoin through Auxiliary Proof of Work (AuxPoW) and it 
 The mining software is not open source for the moment. Only Bitmain and its BTC.com mining pool (more pools will be added soon, e.g. antpool) can mine ELA until version 1.0 of the software is released, which is mid-2019.
 {{% /faqentry %}}
 
-{{< todo "Outdated - now everyone can mine elastos?" >}}
+{{< todo "@KP Outdated - now everyone can mine elastos?" >}}
 
 {{% faqentry question="Why does only Bitmain have this power for the moment?" %}}
 For the moment, the system is designed like this to prevent the risk of forks until version 1.0 of the software is released.
 {{% /faqentry %}}
 
-{{< todo "Outdated - now everyone can mine elastos?" >}}
+{{< todo "@KP Outdated - now everyone can mine elastos?" >}}
 
 {{% faqentry question="Who is able to merge-mine ELA with Bitcoin?" %}}
 Every bitcoin miner that wants to install the software on its machine will be able to mine ELA with the 1.0 version of the software, which will be open-source.
 {{% /faqentry %}}
 
-{{< todo "outdated - fix this answer">}}
+{{< todo "@KP outdated - fix this answer">}}
 
 {{% faqentry question="Can I mine ELA?" %}}
 Yes, as long as you are a part of Bitmains BTC.com mining pool. It is impossible to solo mine at the moment, in this alpha version. This will change when version 1.0 will be released. Note that in any case, the complexity of the process will be analogous to that of Bitcoin.
 {{% /faqentry %}}
 
-{{< todo "outdated answer" >}}
+{{< todo "@KP outdated answer" >}}
 
 {{% faqentry question="Is ELA pre-mined?" %}}
 Yes, 33 million coins were pre-mined by the foundation.

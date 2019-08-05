@@ -40,5 +40,3 @@ Remember that if you would like to deploy your app on mainnet, it means one of t
 - Wallet Service
 - Sidechain Service(includes DID, token, ethereum, etc)
 - MISC API Service
-
-{{< todo "Fill in the actual testnet IP addresses" >}}

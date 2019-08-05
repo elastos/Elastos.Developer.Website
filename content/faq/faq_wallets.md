@@ -13,11 +13,9 @@ Yes, 3 actually: Elastos Wallet, Elephant Wallet, Web Wallet.
 {{% /faqentry %}}
 
 {{% faqentry question="Can I store my ELA on my Ledger Nano?" %}}
-Not yet but Elastos integration is in their roadmap.
+Not yet but Elastos integration is in their roadmap. This should be available by Q4 2019.
 {{% /faqentry %}}
 
 {{% faqentry question="When will there be an official wallet app for my smartphone?" %}}
-By December there will be a mobile wallet that will work through the Trinity browser to store ELA and probably also the tokens of the sidechains.
+The Elastos wallet already runs on Android and iOS.
 {{% /faqentry %}}
-
-{{< todo "rework this answer" >}}

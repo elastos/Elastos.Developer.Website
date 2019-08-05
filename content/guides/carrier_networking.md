@@ -9,15 +9,15 @@ alwaysopen = false
 
 {{< ownership "TangZhiLong" >}}
 
-{{< todo "Migrate from https://github.com/elastos/Hackathon.2019.Beijing (使用carrier进行通信) after July 19 (beijing hackathon) - see SJun" >}}
+{{< todo "@TangZhiLong @BPI Migrate from https://github.com/elastos/Hackathon.2019.Beijing (使用carrier进行通信) after July 19 (beijing hackathon) - see SJun" >}}
 
-{{< todo "Make sure this hackathon content is what we want to explain to users" >}}
+{{< todo "@TangZhiLong @BPI Make sure this hackathon content is what we want to explain to users" >}}
 
-{{< todo "Fix pictures paths (import them to this doc project)" >}}
+{{< todo "@TangZhiLong @BPI Fix pictures paths (import them to this doc project)" >}}
 
-{{< todo "Make sure the guide works for all platforms (android, ios, etc)" >}}
+{{< todo "@TangZhiLong @BPI Make sure the guide works for all platforms (android, ios, etc)" >}}
 
-{{< todo "Replace manual AAR import with gradle maven imports" >}}
+{{< todo "@TangZhiLong @BPI Replace manual AAR import with gradle maven imports" >}}
 
 {{< pleasetranslate >}}
 # Carrier for Android 开发文档

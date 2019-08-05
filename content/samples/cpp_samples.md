@@ -1,13 +1,10 @@
 +++
-title = "C++ samples"
+title = "C / C++ samples"
 weight = 5
 chapter = false
 pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
-
-{{< todo "Every Elastos team must add its own samples to the list. Each sample must be hosted on a github repository, and be directly compilable/runnable on the given platform." >}}
-
 
 ### [Carrier - Multi-purpose shell demo](https://github.com/elastos/Elastos.NET.Carrier.Native.SDK/tree/master/apps/shell)
 

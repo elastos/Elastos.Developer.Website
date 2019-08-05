@@ -158,7 +158,7 @@ The compatibility with Ethereum and NEO, among others, is already in development
 Bitmain, META Union Alliance (avec BIT.GAME, Matrix AI Network (MAN), TrustNote (TTT), Achain, Aurora, and Elastos), IOEX, Weatherblock, Panda Green Energy, Origin Agritech, Reactor, HashWorld, Urban Catalyst & UK China Catalyst, Fresco, Huafu Group & Far Eastern Air Transport (FAT), Trust Credit Power (TCP), WeFilmChain, Zapya (Viewchain)…
 {{% /faqentry %}}
 
-{{< todo "Maybe unclear / outdated. To be checked" >}}
+{{< todo "@NiuJingyu BPI Maybe unclear / outdated. To be checked" >}}
 
 {{% faqentry question="Elastos is completely open source, what is to stop someone from copying the code and releasing it themselves?" %}}
 There‘s something called a network effect and we already have hundred thousands of nodes active on the Elastos smart web. Besides that we have a head start of 18 years of development and a team of engineers and a community working on Elastos. All those things can‘t be copied easily.
@@ -272,16 +272,6 @@ You can apply today by [visiting this site](https://www.cyberrepublic.org/) and 
 * [Cyber Republics youtube channel](https://www.youtube.com/channel/UCjHthS-zJr0axZF5Iw8En-w)
 {{% /faqentry %}}
 
-
-{{% faqentry question="You stated in the What is Elastos long summary section, “The Elastos OS gets upgraded when someone adds a new service …” . Please elaborate on what a service is in this context. How and where are those services added? Is there a formal code review or a vetting process before code is into ecosystem?" %}}
-
-Services as in IPFS for storage, different modules such as spv wallet, carrier, DID, etc
-
-{{% /faqentry %}}
-
-{{< todo "Incomplete answer" >}}
-
-
 {{% faqentry question="Does Elastos use any 3rd party code snippets, libraries, or source code?" %}}
 
 Depends what project. Trinity browser is based on chromium. Carrier uses lots of 3rd party libraries. Elastos mainchain is based on PoW but merged mined so it borrows a lot of ideas from namecoin (that is also merged mined with bitcoin). The elastos runtime however is unique to elastos and is home grown
@@ -300,11 +290,11 @@ Elastos Carrier serves as a way to automatically provide update services remotel
 
 {{% faqentry question="Is there a bug bounty?" %}}
 
-Yes, certainly. The process is still being determined however
+Yes, certainly. Please read more about it here:
+
+{{< internallink "Elastos bounty programme" "/contribute/why_contribute/bounty_programme.md" >}}
 
 {{% /faqentry %}}
-
-{{< todo "Out of date answer ?" >}}
 
 {{% faqentry question="Will there be bug tracking outside of the github repository?" %}}
 
@@ -352,4 +342,4 @@ Theoretically yea, it's possible. But even that tv box is already in over 230,00
 
 {{% /faqentry %}}
 
-{{< todo "ioex is out of elastos. Need to rephrase this answer" >}}
+{{< todo "@NiuJingyu BPI ioex is out of elastos. Need to rephrase this answer" >}}

@@ -24,11 +24,9 @@ Currently, trinity browser uses cordova plugin to expose the underlying hardware
 
 {{% faqentry question="Is there an SDK plug-in for popular IDEs like; PyDev, Aptana, Visual Studio, etc.?" %}} 
 
-It’s a C++ SDK so this can be extended to be used from python, golang, etc. However, no plugin available for IDEs yet. Maybe in the future
+No plugin available for IDEs yet. Maybe in the future.
 
 {{% /faqentry %}}
-
-{{< todo "Not right? Ex: On android, developers use a android sdk, not the C++ native part" >}}
 
 {{% faqentry question="Is there a difference between the terms ecosystem and platform in relation to Elastos?" %}}
 
@@ -45,15 +43,6 @@ Depends what project. Elastos has a lot of repositories. Eg. runtime, carrier, b
 {{% faqentry question="Is a Remote Procedure Call (RPC) in Elastos an asynchronous call?" %}}
 This is a synchronous call
 {{% /faqentry %}}
-
-{{% faqentry question="Are SDKs written for specific language like C++, Python, and Java?" %}}
-
-It’s a C++ SDK so this can be extended to be used from python, golang, etc. For android, a corresponding JAR is created, etc.
-
-{{% /faqentry %}}
-
-{{< todo "Need to improve this answer" >}}
-
 
 {{% faqentry question="Does Elastos have error logging to capture bugs or abnormal events occurring in core code or carrier hardware?  If errors and events are logged, to whom are logs sent?" %}}
 

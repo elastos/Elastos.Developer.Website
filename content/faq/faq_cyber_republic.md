@@ -7,6 +7,8 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++ 
 
+{{< ownership "NiuJingyu, Benjamin Piette">}}
+
 {{% faqentry question="What is the Cyber Republic?" %}}
 Cyber Republic is a diverse democratic group of leaders, developers, organizers, designers, translators, lawyers and more formed to promote Elastos in our communities and help Elastos fulfil its vision. Membership is open to everyone.
 {{% /faqentry %}}
@@ -23,4 +25,4 @@ Just as the ELA blockchain wants to be as decentralized as Bitcoin and maintain 
 Fay Li, Kevin Zhang and Yipeng Su are the interim council for the Cyber Republic until the final version of the constitution and the voting system are out (planned for mid-2019).
 {{% /faqentry %}}
 
-{{< todo "Outdated?">}}
+{{< todo "@NJI BPI Outdated?">}}

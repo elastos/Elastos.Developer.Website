@@ -103,6 +103,12 @@
           {{end}}
       {{end}}  
 
+{{ if isset .Params "apireferenceexturl" }}
+  <div style="text-align:center">
+    <a href="{{ .Params.apireferenceexturl }}" target="_blank">Click here to open the API reference.</a>
+  </div>
+{{ end }}
+
         {{define "breadcrumb"}}
           {{$parent := .page.Parent }}
           {{ if $parent }}

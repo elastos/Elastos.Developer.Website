@@ -17,7 +17,7 @@ Add the following lines to your podfile:
     pod 'ElastosCarrierSDK'
     pod 'ElastosHiveSDK'
 
-{{< todo "Add pods for ELA main chain, eth, did, etc" >}}
+{{< todo "Add pods for eth, neo, etc" >}}
 
 Then run the following command from your shell:
 
@@ -28,4 +28,3 @@ Then run the following command from your shell:
 In the project navigator, select tab **Build Phases** in the specific **TARGET** item. Then click + button on the right-top corner to choose **New Run Script Phase** and expand it to add shell scripts as below:
 
     "${SRCROOT}/Pods/ElastosCarrierSDK/ElastosCarrier-framework/CocoaPods/codesigncarrierframework.sh"
-    "${SRCROOT}/Pods/ElastosHiveSDK/ElastosHive-framework/CocoaPods/codesignhiveframework.sh"

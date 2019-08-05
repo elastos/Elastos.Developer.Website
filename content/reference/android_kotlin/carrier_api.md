@@ -5,6 +5,5 @@ weight = 30
 chapter = false
 pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
-iframedurl = "/references/carrier_java/"
-disableNextPrev = true
+apireferenceexturl = "/references/carrier_java/"
 +++

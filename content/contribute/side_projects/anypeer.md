@@ -7,9 +7,9 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
-{{< ownership "Any/Anypeer owner (telegram)" >}}
+{{< ownership "Benjamin Piette" >}}
 
-{{< todo >}}
+{{< todo "@BPI to discuss with anypeer developer" >}}
 
 ## About
 

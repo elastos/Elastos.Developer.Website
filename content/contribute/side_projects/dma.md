@@ -7,9 +7,9 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
-{{< ownership "Brian Xin's team" >}}
+{{< ownership "Benjamin Piette" >}}
 
-{{< todo >}}
+{{< todo "@BPI discuss with brian xin from DMA" >}}
 
 ## About
 

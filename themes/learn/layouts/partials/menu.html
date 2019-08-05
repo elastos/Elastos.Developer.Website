@@ -151,7 +151,11 @@
   {{else}}
     {{ if not .Params.Hidden }}
       <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}">
-        <a href="{{ .RelPermalink}}">
+        {{if isset .Params "apireferenceexturl" }}
+          <a href="{{ .Params.apireferenceexturl}}" target="_blank">
+        {{ else }}
+          <a href="{{ .RelPermalink}}">
+        {{ end }}
         {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
         {{ if $showvisitedlinks}}<i class="fas fa-check read-icon"></i>{{end}}
         </a>

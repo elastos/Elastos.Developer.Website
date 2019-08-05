@@ -5,7 +5,6 @@ weight = 30
 chapter = false
 pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
-iframedurl = "/references/carrier_objc/html"
-disableNextPrev = true
+apireferenceexturl = "/references/carrier_objc/html"
 +++
 
