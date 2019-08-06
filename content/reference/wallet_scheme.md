@@ -7,7 +7,10 @@ pre = "<i class='fa ela-page'></i> "
 alwaysopen = false
 +++
 
-{{< ownership "SongShiJun" >}}
+{{< ownership "BenjaminPiette" >}}
+
+{{< todo "@BPI Rework indentation (broken starting at identity command)">}}
+{{< todo "@BPI replace elaphant with elastos - remove occurences of 'elephant wallet'">}}
 
 ## Introduction
 
@@ -15,89 +18,82 @@ The Elastos wallet scheme is the way for DApps to request operations to be compl
 
 Schemes and parameters are the sames for all programming environments. Nevertheless, the way to call them and get response changes. Please refer to the {{< internallink "elastos scheme guide" "/guides/elastos_schemes.md" >}} for more information about your platform.
 
-{{< pleasetranslate >}}
+## Deployment Method
 
+Apps can call and deploy Elephant through a special scheme, "elaphant://". They can also convert the target URI code into a QR code (ex: scan to pay). The Elastos wallet can automatically scan the QR code to execute the corresponding operation. 
 
-# 介绍
+A scheme has three parts: command, required parameters, and command parameters.
 
-为了让第三方应用简单方便地接入区块链，拥有使用区块链的能力，Elephant钱包开放接口给第三方应用，让第三方应用可以通过Elephant完成支付数字币、使用DID身份、向区块链写入数据。
+## Scheme format
 
-# 调用方式
-
-第三方可以通过特殊的Scheme “elaphant://”来唤起和调用Elephant，也可以将调用的URI编码成二维码，让Elephant主动扫描二维码来执行相应操作。
-scheme包括三部分：指令，必选参数和指令的参数。
-
-## scheme格式：
-```
 elaphant://<command></RequiredParameters...>[/CommandParameters...]
+
+### Commands list
+
+- [identity](#identity-command)
+- [elapay](#elapay-command)
+- [eladposvote](#eladposvote-command)
+- [sign](#sign-command)
+- [setproperty](#setproperty-command)
+- [getproperty](#getproperty-command)
+
+### Required parameters
+
+Any third-party initiating a deployment to Elephant must provide relevant parameters about information pertaining to the app, which is used to verify the truthfulnesstrustfulness of the deployer's identity and data.
+
+| **Fieldname** | **Category**       | **Required?** | **Description**                                              |
+| ------------- | ------------------ | ------------- | ------------------------------------------------------------ |
+| AppName       | String & URLEncode | Required      | Name of your app; may not exceed 64 characters               |
+| AppID         | String             | Required      | The App ID is a string, which is produced after the developer's DID creates a signature for the App Name. |
+| Description   | String & URLEncode | Required      | Descriptions of the app and previous operations so that the user can decide whether to give authorization |
+| DID           | String             | Required      | Developer's DID                                              |
+| PublicKey     | String             | Required      | DID Public Key                                               |
+
+Verification Method:
+
+1. Verify whether the AppID value is the the DID signature for the App Name, and use the public key to conduct verification.
+2. When verifying whether the DID corresponds with the public key, the Public Key can derive from the DID.
+
+### Callback and backtrack parameters
+
+| **Fieldname** | **Category**       | **Required?** | **Description**                                              |
+| ------------- | ------------------ | ------------- | ------------------------------------------------------------ |
+| CallbackUrl   | String & URLEncode | Optional      | Callback URL resulting from the request                      |
+| ReturnUrl     | String & URLEncode | Optional      | Request backtrack page URL                                   |
+| Target        | String             | Optional      | The Return URL can be opened in the Elephant internal webview or in external browsers. "Internal" indicates that the internal webview is being used to open it, where "browser" indicates the use of an external browser to open it. |
+
+** Note that when the request is made, the field for the URL Encode must be coded using the URL Encode method in UTF8 characters, as it will be decoded by Elephant using URL Decode.
+
+Elephant provides two kinds of backtrack information to third parties: [Callback URL] and [Return URL]. The differences between the two is as follows:
+
+- Callback URL: Elephant uses HTTP Post or other equivalent methods to asynchronously backtrack information on the back end.
+- Return URL: Elephant utilizes HTTP Get or equivalent methods to jump and open the corresponding URL page on the front end.
+
+Third-party apps can select to use one or both kinds.
+
+If third-party apps simultaneously serve multiple users, tracking parameters can be appended to the callback URL of the Return URL.When Elephant backtracks, it will maintain its original parameter settings to callback the third-party app.
+
+# **Identity Command**
+
+## **Outline**
+
+When third-party app programs need to verify user DID identities, or need personal information, they can initiate a request to Elephant, and after the user gives their authorization, Elephant will return the information and signature to the third-party.
+
+A classic use case is login:
+
+1. A third-party generates request content, including requestor's information and a random number.
+2. After receiving user authorization, signature of the random number and DID information is carried out.
+3. A notification of the information and signature is sent to the third-party through the two methods of callback and return.
+
+Third-party requests should be accompanied by the random number. The random number should consist of unrepeatable, unguessable random content, to prevent attackers from carrying out replay attacks, in which pre-signed content is used to deceive the third-party and user identities are illegally used.
+
+After the Elephant return information is received, the random number accompanying the return must be verified, and incorrect numbers are invalid.
+
+## **Step 1, Third-party initiation of requests**
+
+Request format:
 ```
-
-### 指令包括：
-- [身份鉴权identity](#identity指令)
-- [支付elapay](#elapay指令)
-- [DPoS投票eladposvote](#eladposvote指令)
-- [签名授权sign](#sign指令)
-- [setproperty](#setproperty指令)
-- [getproperty](#getproperty指令)
-- [请求创建多签钱包multicreate](#multicreate指令)
-- [多签交易请求签名multitx](#multitx指令)
-
-### 必选参数：
-任何第三方向Elephant发起调用都必须提供关于App相关信息的参数，用于验证调用者身份和数据可信性。
-
-字段名称           | 类型              | 是否必选 | 描述
-----------------------| ------------------- | ------------------- | -------------------
-AppName                 | String & URLEncode | 必选 | 你的应用名称; 长度不超过64个字节
-AppID                   | String     | 必选 | 由开发者DID对AppName签名后产生的签名字符串，作为该App的ID。
-Description             | String & URLEncode | 必选 | 对于App和当前操作的描述，方便用户判断是否授权
-DID                     | String     | 必选 | 开发者DID
-PublicKey               | String     | 必选 | DID的公钥
-
-
-**验证方法：**
-1. 验证AppID的值是否是DID对AppName的签名，使用PublicKey进行验证。
-2. 验证DID与PublicKey是否对应，可以由PublicKey推导出DID。
-
-
-### 回调和返回参数：
-字段名称           | 类型              | 是否必选 | 描述
-----------------------| ------------------- | ------------------- | -------------------
-CallbackUrl             | String & URLEncode | 可选 | 请求结果的回调URL
-ReturnUrl               | String & URLEncode | 可选 | 请求返回的页面URL
-Target                  | String | 可选 | 可以在Elephant内部webview或者在外部浏览器打开Return URL。"internal"表示用内部webview打开，"browser"表示用外部浏览器打开。
-
-** 其中标注URLEncode的字段，在请求时必须使用UTF8字符集和URL Encode方法编码，Elephant处理时会使用URL Decode解码。
-
-Elephant提供两种方式返回信息给第三方：[Callback URL]和[Return URL]。
-它们的区别是：
-- Callback URL：Elephant采用HTTP Post方法或等同方法，在后台异步地返回信息。
-- Return URL：Elephant采用HTTP Get方法或等同方法，在前台跳转、打开对应的URL页面。
-
-第三方应用可以自己选择哪一种或者两种。
-
-如果第三方应用同时面向多位用户服务，可以在Callback URL或者Return URL里附加追踪参数，Elephant在返回的时候也会保持原始参数设置来回调第三方App。
-
-# identity指令
-
-## 概要
-当第三方应用程序需要验证用户DID身份、需要个人信息时，它可以向Elephant 发起请求，用户授权以后，Elephant将第三方请求的信息和签名一起返回给第三方。
-
-一个典型的用例是登录：
-
-1. 第三方生成请求内容，包括请求者信息和随机数。
-2. 获得用户授权后，对随机数和DID信息进行签名。
-3. 将信息和签名通过回调和返回两种方式通知第三方应用。
-
-第三方请求时要附带随机数，这个随机数应该是一个不会重复的、不可推测的随机内容，通过以防止攻击者进行重放攻击——使用事先准备好的签名内容来欺骗第三方，冒用其他用户的身份。
-
-当收到Elephant返回的信息时，必须验证返回的随机数是否正确，如果不正确则无效。
-
-
-## 步骤1, 第三方发起请求
-
-**请求格式：**
-```
-elaphant://identity?
+elephant://identity?
 	AppName=<AppName>&
 	AppID=<AppID>&
 	Description=<Description>&
@@ -107,54 +103,50 @@ elaphant://identity?
 	[&RequestInfo=<Required Fields>]
 	[&CallbackUrl=<Callback URL>]
 	[&ReturnUrl=<Return URL>&Target=<"internal" | "browser">]
-
 ```
-**指令参数：**
 
-字段名称           | 类型              | 是否必选 | 描述
-----------------------| ------------------- | ------------------- | -------------------
-RandomNumber            | String & URLEncode | 必选 | 采用“请求/应答”方式验证用户是否是DID持有者，用户必须使用DID对Random Number进行签名，并将它返回给请求者。
-RequestInfo**           | String & URLEncode | 可选 | 请求获取用户DID的信息列表
+Command parameter:
 
+| **Fieldname** | **Category**       | **Required?** | **Description**                                              |
+| ------------- | ------------------ | ------------- | ------------------------------------------------------------ |
+| RandomNumber  | String & URLEncode | Required      | Utilize the "request/response" method to verify whether users possess a DID. Users must sign by using the DID and the random number, and return it to the requestor. |
+| RequestInfo** | String & URLEncode | Optional      | Request to obtain the user's DID information list            |
 
+** RequestInfo field is an information field required by the third-party, separated by commas. The fields that can be requested include:
 
-** RequestInfo字段是第三方需要的信息字段，以逗号分隔，可请求的字段包括
-```
 Nickname, ELAAddress, BTCAddress, BCHAddress, ETHAddress, IOEXAddress, Email, PhoneNumber, ChineseIDCard
-```
 
-** 其中标注URLEncode的字段，在请求时必须使用UTF8字符集和URL Encode方法编码，Elephant处理时会使用URL Decode解码。
+** Note that when the request is made, the field for the URL Encode must be coded using the URL Encode method in UTF8 characters, as it will be decoded by Elephant using URL Decode.
 
-RequestInfo示例
+RequestInfo Example
 ```
 RequestInfo="Nickname,ELAAddress,Email,PhoneNumber"
 ```
-
-**identity请求示例：**
+Identity Request Example:
 ```
 elaphant://identity?
 AppID=cc053c61afc22dda9a309e96943c1734&
 AppName=RedPacket&
 Description=red&
-DID=iZW9ozTSXk4ukRXx7vCTTFYebZHFwMUtz7&
 PublicKey=028971D6DA990971ABF7E8338FA1A81E1342D0E0FD8C4D2A4DF68F776CA66EA0B1&
 RequestInfo=BTCAddress%2CETHAddress%2CEmail%2CPhoneNumber
 CallbackUrl=http%3A%2F%2Flocalhost%3A8081%2Fpacket%2Fgrab%2F1509893100600982-0&
 ```
 
-也可以将URI生成二维码，用户通过Elephant扫描二维码完成请求。
+It is also possible to generate a QR Code using the URI. The user scans the QR code in Elephant to complete the request.
 
+## **Step 2, Return Information**
 
-## 步骤2, 返回信息
-在用户授权以后，Elephant将用户DID相关信息按第三方请求的方式返回。
-- 对于Callback方式，目前仅支持HTTP Post方法，将按照请求时Callback URL的地址发起Post调用，并在Body里附带返回信息。
-- 对于Return方式，目前仅支持HTTP Get方法，将按照请求时Return URL的地址在内部Webview或者外部浏览器打开页面。
+After the user gives authorization, Elephant will return the information pertaining to the user DID according to the third-party's request.
 
-**返回信息格式：**
+- Currently, the only callback method supported is HTTP Post. A post call will be initiated according to the address of the callback URL at the time of request, and the return information will be attached to the body.
+- Currently, the only Return method supported is HTTP Get. A page will be opened in an internal Webview or external browser according to the return URL address at the time of request.
 
-返回信息包括两部分：Data（数据）和Sign（签名）。Data是一个JSON对象序列化后的字符串。Sign是使用DID对Data字符串内容的签名。
+Return information format:
 
-返回格式示例
+The return information includes two parts: Data and Sign. Data is a JSON object serialized character string. Sign is a signature that uses DID to provide a signature for data character string content.
+
+Return format example
 ```
 Data="{
 	\"DID\":<DID>,
@@ -174,28 +166,27 @@ Data="{
 Sign="<signature>"
 ```
 
-**返回参数说明：**
+Instructions for trackback parameter:
 
+| **Fieldname** | **Category** | **Required?** | **Description**                                              |
+| ------------- | ------------ | ------------- | ------------------------------------------------------------ |
+| DID           | String       | Required      | User DID                                                     |
+| PublicKey     | String       | Required      | DID Public Key                                               |
+| RandomNumber  | String       | Required      | Third-party request random number                            |
+| Nickname      | String       | Optional      | User nickname                                                |
+| ELAAddress    | String       | Optional      | User's ELA wallet address                                    |
+| BTCAddress    | String       | Optional      | User's BTC wallet address                                    |
+| BCHAddress    | String       | Optional      | User's BCH wallet address                                    |
+| ETHAddress    | String       | Optional      | User's ETH wallet address                                    |
+| IOEXAddress   | String       | Optional      | User's IOEX wallet address                                   |
+| Email         | String       | Optional      | User's email address                                         |
+| PhoneNumber   | String       | Optional      | User's telephone number                                      |
+| ChineseIDCard | String       | Optional      | Use JSON format to return user's Chinese identity card information |
+| Signature     | String       | Required      | Regarding signatures for return information                  |
 
-字段名称           | 类型              | 是否必选 | 描述
-----------------------| ------------------- | ------------------- | -------------------
-DID             | String    | 必选 | 用户的DID
-PublicKey       | String    | 必选 | DID的公钥
-RandomNumber    | String    | 必选 | 第三方请求的随机数
-Nickname        | String    | 可选 | 用户的昵称
-ELAAddress      | String    | 可选 | 用户的ELA钱包地址
-BTCAddress      | String    | 可选 | 用户的BTC钱包地址
-BCHAddress      | String    | 可选 | 用户的BCH钱包地址
-ETHAddress      | String    | 可选 | 用户的ETH钱包地址
-IOEXAddress     | String    | 可选 | 用户的IOEX钱包地址
-Email           | String    | 可选 | 用户的电子邮件
-PhoneNumber     | String    | 可选 | 用户的电话号码
-ChineseIDCard   | String    | 可选 | 以JSON格式返回用户的中国身份证信息
-Signature       | String    | 必选 | 针对返回信息的签名
+HTTP Callback Example:
 
-**HTTP Callback示例**：
-
-Callback是以Post方式返回信息，在Body中使用JSON格式,包含Data和Sign两个字段。
+Callback returns information using Post, and uses JSON formatting in the body, including in the two fields of Data and Sign.
 ```
 [Method]: POST
 [URL]: https://redpacket.elastos.org/packet/grab/3176517663416268-1?_locale=zh_CN&offset=-480
@@ -204,39 +195,40 @@ Callback是以Post方式返回信息，在Body中使用JSON格式,包含Data和S
     "Data":"{\"BTCAddress\":\"1Fmb9MLJ74ShWG5WcJWqMTDBfPTJPnQzVP\",\"DID\":\"iYarsyzWeaSRa7XVqeCeNpa1J9sGB4Uwyr\",\"ELAAddress\":\"EHeSKgaFNxPJiLScvase437D2pM9isw4pX\",\"Email\":\"\",\"ETHAddress\":\"0x6601F031E63cb2C477beE183D671F0517a37CdC7\",\"NickName\":\"中文测试\",\"PhoneNumber\":\"\",\"PublicKey\":\"03b27a7ae64d9f11c9685475f76d9e3ba6498953c49f69962b6566655146820d71\"}",
     "Sign": "02e1df21bc11744421ece9be874691ebace8f6ce7ea4443d0f96500e9a9db3978ce90eecc9863be8de27648eb316560df904eaf1c6fc2dc8bf630822cdb9c176"
 }
-
 ```
 
-**HTTP Return示例**：
+HTTP Return Example:
 
-Return是以Get方式返回信息，在URL的参数中附加Data和Sign参数，请第三方在其ReturnURL中避免使用这两个参数名，以免冲突。
+Return returns information using the Get method, and appends Data and Sign parameters inside the URL parameters. Third-parties should avoid using these two parameter names in the ReturnURL, to avoid conflicts.
 ```
 [Method]: GET
 [URL]: https://redpacket.elastos.org/packet/grab/3176517663416268-1?_locale=zh_CN&offset=-480&Data={\"BTCAddress\":\"1Fmb9MLJ74ShWG5WcJWqMTDBfPTJPnQzVP\",\"DID\":\"iYarsyzWeaSRa7XVqeCeNpa1J9sGB4Uwyr\",\"ELAAddress\":\"EHeSKgaFNxPJiLScvase437D2pM9isw4pX\",\"Email\":\"\",\"ETHAddress\":\"0x6601F031E63cb2C477beE183D671F0517a37CdC7\",\"NickName\":\"中文测试\",\"PhoneNumber\":\"\",\"PublicKey\":\"03b27a7ae64d9f11c9685475f76d9e3ba6498953c49f69962b6566655146820d71\"}&Sign= 02e1df21bc11744421ece9be874691ebace8f6ce7ea4443d0f96500e9a9db3978ce90eecc9863be8de27648eb316560df904eaf1c6fc2dc8bf630822cdb9c176
-
 ```
 
-## 步骤3, 解析和验证
-1. 将参数Data的字符串内容转换为JSON对象；
-2. 从JSON对象中恢复PublicKey、DID字段内容；
-3. 验证PublicKey与DID是否匹配；
-4. 验证Data字符串内容、PublicKey和Sign的签名内容是否匹配；
-5. 验证返回的RandomNumber字段与“步骤1”请求时的RandomNumber值是否一致；
 
-# elapay指令
+## **Step 3, Analyze and Verify**
 
-## 概要
-当第三方应用程序需要使用数字币支付时，它可以向Elephant发起请求，用户授权以后会转账到请求的地址，这个过程类似于第三方请求支付宝和Paypal完成支付一样。
+1. Turn the parameter data string content into a JSON object;
+2. Recover the PublicKey and DID field from the JSON object;
+3. Verify that the Public Key and DID match;
+4. Verify that the data character string content, the PublicKey and Sign signature content match;
+5. Verify the returned random number field and the Random Number value requested in "Step 1" are consistent;
 
-- 步骤1：第三方发起请求，包括收款地址，金额，数字币种名称和订单唯一标识符。
-- 步骤2：Elephant显示转账支付页面，用户确认后发起转账。
-- 步骤3：向第三方返回转账交易的TXID，第三方可以通过它查询交易状态。
+# **Elapay Command**
 
+## **Outline**
 
-## 第三方发起支付请求
-**请求格式：**
+When a third-party program requires the use of digital currency for payments, the program can send a request to Elephant, and after users give authorization, the currency will be transferredtransfered to the requested address. This process is similar to third-party requests for Alipay and Paypal to complete payments.
+
+- Step 1: The third-party initiated the request, including the recipient's address, balance, name of the digital currency, and the unique order identifier.
+- Step 2: Elephant will display the payment transfer page, and after the user has confirmed, the transfer is be initiated.
+- Step 3: The transfer transaction TXID will be returned, and the third-party can use it to check the status of the transaction.
+
+## **Third-party initiations of payment requests**
+
+Request format:
 ```
-elaphant://elapay?
+elephant://elapay?
 	AppName=<AppName>&
 	AppID=<AppID>&
 	Description=<Description>&
@@ -247,19 +239,18 @@ elaphant://elapay?
 	ReceivingAddress=<Receiving Address>
 	[&CallbackUrl=<Callback URL>]
 	[&ReturnUrl=<Return URL>&Target=<"internal" | "browser">]
+ ```
 
-```
-**指令参数：**
+Command parameter:
 
-字段名称           | 类型              | 是否必选 | 描述
-----------------------| ------------------- | ------------------- | -------------------
-OrderID                 | String     | 必选 | 订单编号，用于第三方追踪支付结果
-CoinName                | String     | 必选 | 数字币种名称
-Amount                  | Number     | 必选 | 转账的金额
-ReceivingAddress          | String     | 必选 | 用于收款的地址
+| **Fieldname**    | **Category** | **Required?** | **Description**                                              |
+| ---------------- | ------------ | ------------- | ------------------------------------------------------------ |
+| OrderID          | String       | Required      | Order number, used for third-party tracking of transaction results |
+| CoinName         | String       | Required      | Name of digital currency type                                |
+| Amount           | Number       | Required      | Transfer balance                                             |
+| ReceivingAddress | String       | Required      | Address used for receiving funds                             |
 
-
-**elapay请求示例：**
+Elapay request example:
 ```
 elaphant://elapay?
 AppID=cc053c61afc22dda9a309e96943c1734&
@@ -273,28 +264,24 @@ ReceivingAddress=EXRNP8Pm3KQR7EeLXFGRtfLdkBaeZsMLyy&
 CallbackUrl=http%3A%2F%2Flocalhost%3A8081%2Fpacket%2Fgrab%2F1509893100600982-0&
 ```
 
-## 返回支付信息
+## **Return payment information**
 
-**返回信息格式：**
+Return information format:
 
-无论是Callback或者Return哪种方式，都以字符串格式返回信息，字符串包含两个参数"TXID"和"OrderID"。
-返回信息包括两部分：TXID（交易hash）和OrderID（第三方订单号）。TXID是本次交易的Hash，OrderID是第三方请求时传入的OrderID值，便于第三方跟踪支付过程。
+Regardless of whether Callback or Return method is used, information is returned in a  character string format. A character string has two parameters: "TXID" and "OrderID." Return information includes two parts: TXID (the transaction hash) and OrderID (the third-party order number). The TEXID is this transaction's hash, and the OrderID is the OrderID value input by the third-party at the time of request, for the purpose of the tracking the payment process by the third-party.
 ```
 TXID="bb14a5898ca81ee0207ab9178df1d1e4617be3aa5e9dfec9e185d41ff13786fc"&OrderID=“354199ds9213k1f"
 ```
+Instructions for trackback parameter:
 
+| **Fieldname** | **Category** | **Required?** | **Description**                           |
+| ------------- | ------------ | ------------- | ----------------------------------------- |
+| TXID          | String       | Required      | Transfer transaction TXID                 |
+| OrderID       | String       | Required      | OrderID corresponding to the request time |
 
-**返回参数说明：**
+HTTP Callback example:
 
-字段名称           | 类型              | 是否必选 | 描述
-----------------------| ------------------- | ------------------- | -------------------
-TXID             | String    | 必选 | 转账交易的TXID
-OrderID          | String    | 必选 | 对应请求时的OrderID
-
-
-**HTTP Callback回调示例:**
-
-Callback是以Post方式返回信息，在Body中使用JSON格式,包含TXID和OrderID两个字段。
+Callback returns information using the Post method, utilizes JSON formatting in the body, and includes the two fields of TXID and OrderID.
 ```
 Method: POST
 URL: https://redpacket.elastos.org/packet/grab/3176517663416268-1?_locale=zh_CN&offset=-480
@@ -305,32 +292,34 @@ Body:
 }
 ```
 
-**HTTP Return返回示例:**
+HTTP Return return example:
 
-Return是以Get方式返回信息，在URL的参数中附加TXID和OrderID参数，请第三方在其ReturnURL中避免使用这两个参数名，以免冲突。
+Return uses the Get method to return information by appending TXID and OrderID parameters into the URL parameters. Third-parties should not use these two parameters in ReturnURLs, in order to avoid conflicts.
+
 ```
 Method: GET
 URL: https://redpacket.elastos.org/packet/grab/3176517663416268-1?_locale=zh_CN&offset=-480&TXID=895630890fa53437cdd09e1f3bb4934585e1914eb45eb3a6b1e4a4d6bd789718&OrderID=354199ds9213k1f
 ```
 
-您可以通 `blockchain.elastos.org` 确认交易状态.
+You can confirm the status of transactions at blockchain.elastos.org.
+
 <https://blockchain.elastos.org/tx/895630890fa53437cdd09e1f3bb4934585e1914eb45eb3a6b1e4a4d6bd789718>
 
-# eladposvote指令
+# **Eladposvote Command**
 
-## 概要
-第三方应用可以通过投票指令发起DPoS投票，用户授权以后，将使用全部ELA余额发起投票交易。
+## **Outline**
 
-- 步骤1：第三方发起请求，包括候选人公钥列表。
-- 步骤2：Elephant显示投票信息，用户确认后发起投票交易。
-- 步骤3：向第三方返回投票交易的TXID，第三方可以通过它查询交易状态。
+Third-party apps can issue DPoS votes through the vote command. After users give authorization, the entire ELA balance will be used to issue the vote transaction.
 
+- Step 1: The third-party issues the request, including the candidate public key list.
+- Step 2: Elephant displays the vote information, and the vote transaction is issue after the user confirms.
+- Step 3: The TXID of the vote transaction is returned to the third-party, and the third party can use it to check the transaction status.
 
-## 第三方发起投票请求
-**请求格式：**
+## **Third-Party initiation of vote requests**
 
+Request format:
 ```
-elaphant://eladposvote?
+elephant://eladposvote?
 	AppName=<AppName>&
 	AppID=<AppID>&
 	Description=<Description>&
@@ -339,18 +328,15 @@ elaphant://eladposvote?
 	CandidatePublicKeys=<Supernode public key list>
 	[&CallbackUrl=<Callback URL>]
 	[&ReturnUrl=<Return URL>&Target=<"internal" | "browser">]
-
 ```
-**请求参数：**
 
+Request parameters:
 
-字段名称           | 类型              | 是否必选 | 描述
-----------------------| ------------------- | ------------------- | -------------------
-CandidatePublicKeys                 | String & URLEncode     | 必选 | 候选人的公钥列表，用逗号分隔
+| **Fieldname**       | **Category**       | **Required?** | **Description**                                           |
+| ------------------- | ------------------ | ------------- | --------------------------------------------------------- |
+| CandidatePublicKeys | String & URLEncode | Required      | Candidate public key lists should be separated by a comma |
 
-
-**eladposvote请求示例：**
-
+eladposvote request example:
 ```
 elaphant://eladposvote?
 AppID=cc053c61afc22dda9a309e96943c1734&
@@ -359,31 +345,25 @@ Description=DPoSVote%20mini%20app&
 PublicKey=028971D6DA990971ABF7E8338FA1A81E1342D0E0FD8C4D2A4DF68F776CA66EA0B1&
 CallbackUrl=http%3A%2F%2Flocalhost%3A8081%2Fpacket%2Fgrab%2F1509893100600982-0&
 CandidatePublicKeys=03ef5f8b0534c82aa4db218f7cead278124efc0411e4ca38b6131954a58e8ae3c0%2C03ef5f8b0534c82aa4db218f7cead278124efc0411e4ca38b6131954a58e8ae3c0
-
 ```
 
-## 返回投票信息
+## **Return Vote Information**
 
-**返回信息格式：**
+Return information format:
 
-无论是Callback或者Return哪种方式，都以字符串格式返回信息。
+Regardless of whether the Callback or Return method is used, information is returned in a character string format.
 ```
 TXID="bb14a5898ca81ee0207ab9178df1d1e4617be3aa5e9dfec9e185d41ff13786fc"
 ```
+Instructions for trackback parameter:
 
+| **Fieldname** | **Category** | **Required?** | **Description**        |
+| ------------- | ------------ | ------------- | ---------------------- |
+| TXID          | String       | Required      | Vote Transaction TXIDs |
 
-**返回参数说明：**
+HTTP Callback example:
 
-
-字段名称           | 类型              | 是否必选 | 描述
-----------------------| ------------------- | ------------------- | -------------------
-TXID             | String    | 必选 | 投票交易的TXID
-
-
-
-**HTTP Callback回调示例:**
-
-Callback以Post方法返回信息，在Body里以JSON格式返回信息。
+Callbacks use the Post method to return information, returning information in the Body in JSON format.
 ```
 Method: POST
 URL: https://redpacket.elastos.org/packet/grab/3176517663416268-1?_locale=zh_CN&offset=-480
@@ -393,34 +373,34 @@ Body:
 }
 ```
 
-**HTTP Return返回示例:**
-Return以Get方法返回信息，投票交易对应的TXID以参数方式返回，请第三方避免在ReturnURL参数中使用TXID参数名，以免冲突。
+HTTP Return example: Return uses the Get method to return information, the TXID corresponding to vote transactions are returned using the parameter method. Third-parties should not use TXID parameter names in the ReturnURL, to avoid conflicts.
 ```
 Method: GET
 URL: https://redpacket.elastos.org/packet/grab/3176517663416268-1?_locale=zh_CN&offset=-480&TXID=895630890fa53437cdd09e1f3bb4934585e1914eb45eb3a6b1e4a4d6bd789718
 ```
 
-您可以通 `blockchain.elastos.org` 确认交易状态.
+You can confirm the status of transactions at blockchain.elastos.org.
+
 <https://blockchain.elastos.org/tx/895630890fa53437cdd09e1f3bb4934585e1914eb45eb3a6b1e4a4d6bd789718>
 
+# **Sign Command**
 
-# sign指令
+## **Outline**
 
-## 概要
-当第三方应用程序需要验证用户DID身份、需要个人信息时，它可以向Elephant 发起请求，用户授权以后，Elephant将构造一个签名证书返回给第三方。
+When third-party app programs need to verify user DID identities, or need personal information, they can initiate a request to Elephant, and after the user gives their authorization, Elephant will construct a signature certification and return it to the third-party.
 
-比如第三方请求用户对写对文章进行签名：
+For example, third-party requests a user's signature on an article they wrote:
 
-1. 第三方将文章的Hash作为签名请求的内容发送给Elephant。
-2. Elephant显示请求者信息、请求签名的内容和“用途声明”输入框
-3. 用户主动填写“用途声明”为：文章署名，并将请求内容、用途声明、时间戳、请求者信息打包并签名，构造成为授权证书。
-4. 将授权证书通过回调和返回两种方式通知第三方应用。
+1. The third-party will use the article's hash as the signature request content and sends it to Elephant.
+2. Elephant displays the requestor's information, the content of the signature request and the "use statementstatemetn" input window
+3. The user voluntarily inputs the "use statement" as: article signature, and packages and signs the request content, use statement, timestamp, requester information, creating an authorization certificate.
+4. The third-party app is notified of the authorization certificate through the two methods of callback and return.
 
-## 步骤1, 第三方发起请求
+## **Step 1, Third-party initiation of requests**
 
-**请求格式：**
+Request format:
 ```
-elaphant://sign?
+elephant://sign?
 	AppName=<AppName>&
 	AppID=<AppID>&
 	Description=<Description>&
@@ -430,19 +410,18 @@ elaphant://sign?
 	UseStatement=<UseStatement>&
 	[&CallbackUrl=<Callback URL>]
 	[&ReturnUrl=<Return URL>&Target=<"internal" | "browser">]
-
 ```
-**指令参数：**
 
-字段名称           | 类型              | 是否必选 | 描述
-----------------------| ------------------- | ------------------- | -------------------
-RequestedContent       | String & URLEncode | 必选 | 第三方请求用户签名的内容。
-UseStatement           | String & URLEncode | 可选 | 提示用户此次签名的用途
+Command parameter:
 
+| **Fieldname**    | **Category**       | **Required?** | **Description**                                              |
+| ---------------- | ------------------ | ------------- | ------------------------------------------------------------ |
+| RequestedContent | String & URLEncode | Required      | Third-party requests user-signed content.                    |
+| UseStatement     | String & URLEncode | Optional      | Display the reason for this instance of collecting the user's signature |
 
-**sign请求示例：**
+Sign Request Example:
 ```
-elaphant://sign?
+elaphant://Sign?
 AppID=cc053c61afc22dda9a309e96943c1734&
 AppName=RedPacket&
 Description=red&
@@ -452,17 +431,17 @@ UseStatement=Sign%20the%20hash%20of%20the%20block%2C%20indicating%20the%20recogn
 CallbackUrl=http%3A%2F%2Flocalhost%3A8081%2Fpacket%2Fgrab%2F1509893100600982-0&
 ```
 
-也可以将URI生成二维码，用户通过Elephant扫描二维码完成请求。
+It is also possible to generate a QR Code using the URI. The user scans the QR code in Elephant to complete the request.
 
+## **Step 2, Return Information**
 
-## 步骤2, 返回信息
-在用户授权以后，Elephant将生成授权证书返回给第三方。
+After the user has provided authorization, Elephant will generate a authorization certificate and return it to the third-party.
 
-**返回信息格式：**
+Return information format:
 
-返回信息包括两部分：Data（数据）和Sign（签名）。Data是一个JSON对象序列化后的字符串。Sign是使用DID对Data字符串内容的签名。
+The return information includes two parts: Data and Sign. Data is a JSON object serialized character string. Sign is a signature that uses DID to provide a signature for data character string content.
 
-返回格式示例
+Return format example
 ```
 Data="{
 	\"DID\":<DID>,
@@ -476,24 +455,23 @@ Data="{
 Sign="<signature>"
 ```
 
-**返回参数说明：**
+Instructions for trackback parameter:
 
+| **Fieldname**   | **Category**       | **Required?** | **Description**                                              |
+| --------------- | ------------------ | ------------- | ------------------------------------------------------------ |
+| DID             | String             | Required      | User DID                                                     |
+| PublicKey       | String             | Required      | DID Public Key                                               |
+| RequesterDID    | String             | Required      | DID of the third-party requester                             |
+| AppName         | String & URLEncode | Required      | Name of the third-party request application; length must not exceed 64 characters |
+| AppID           | String             | Required      | The App ID is a string, which is produced after the developer's DID creates a signature for the App Name. |
+| RequestedConent | String & URLEncode | Required      | Content for which signature is being requested               |
+| Timestamp       | String             | Required      | User authorization timestamp                                 |
+| UseStatement    | String & URLEncode | Required      | User statement for the reason for collecting this signature  |
+| Signature       | String             | Required      | Regarding signatures for return information                  |
 
-字段名称           | 类型              | 是否必选 | 描述
-----------------------| ------------------- | ------------------- | -------------------
-DID             | String    | 必选 | 用户的DID
-PublicKey       | String    | 必选 | DID的公钥
-RequesterDID    | String    | 必选 | 第三方请求者的DID
-AppName                 | String & URLEncode | 必选 | 第三方请求应用的名称; 长度不超过64个字节
-AppID                   | String     | 必选 | 由开发者DID对AppName签名后产生的签名字符串，作为该App的ID。
-RequestedConent | String & URLEncode    | 必选 | 请求签名的内容
-Timestamp       | String    | 必选 | 用户授权的时间戳
-UseStatement    | String & URLEncode    | 必选 | 用户声明的此次签名的用途
-Signature       | String    | 必选 | 针对返回信息的签名
+HTTP Callback Example:
 
-**HTTP Callback示例**：
-
-Callback是以Post方式返回信息，在Body中使用JSON格式,包含Data和Sign两个字段。
+Callback returns information using Post, and uses JSON formatting in the body, including in the two fields of Data and Sign.
 ```
 [Method]: POST
 [URL]: https://redpacket.elastos.org/packet/grab/3176517663416268-1?_locale=zh_CN&offset=-480
@@ -502,95 +480,93 @@ Callback是以Post方式返回信息，在Body中使用JSON格式,包含Data和S
     "Data":"{\"RequesterDID\":\"iYarsyzWeaSRa7XVqeCeNpa1J9sGB4Uwyr\",\"DID\":\"iYarsyzWeaSRa7XVqeCeNpa1J9sGB4Uwyr\",\"AppID\":\"cc053c61afc22dda9a309e96943c1734\",\"AppName\":\"RedPacket\",\"RequestedConent\":\"7aae6c4f8da0799063f1db14024413ba7aba70e61312f291527dfde3605ea322\",\"UseStatement\":\"Sign%20the%20hash%20of%20the%20block%2C%20indicating%20the%20recognition%20of%20the%20contents%20of%20the%20block\",\"Timestamp\":\"0x6601F031E63cb2C477beE183D671F0517a37CdC7\",\"PublicKey\":\"03b27a7ae64d9f11c9685475f76d9e3ba6498953c49f69962b6566655146820d71\"}",
     "Sign": "02e1df21bc11744421ece9be874691ebace8f6ce7ea4443d0f96500e9a9db3978ce90eecc9863be8de27648eb316560df904eaf1c6fc2dc8bf630822cdb9c176"
 }
-
 ```
 
-**HTTP Return示例**：
+HTTP Return Example:
 
-Return是以Get方式返回信息，在URL的参数中附加Data和Sign参数，请第三方在其ReturnURL中避免使用这两个参数名，以免冲突。
+Return returns information using the Get method, and appends Data and Sign parameters inside the URL parameters. Third-parties should avoid using these two parameter names in the ReturnURL, to avoid conflicts.
 ```
 [Method]: GET
 [URL]: https://redpacket.elastos.org/packet/grab/3176517663416268-1?_locale=zh_CN&offset=-480&Data={\"RequesterDID\":\"iYarsyzWeaSRa7XVqeCeNpa1J9sGB4Uwyr\",\"DID\":\"iYarsyzWeaSRa7XVqeCeNpa1J9sGB4Uwyr\",\"AppID\":\"cc053c61afc22dda9a309e96943c1734\",\"AppName\":\"RedPacket\",\"RequestedConent\":\"7aae6c4f8da0799063f1db14024413ba7aba70e61312f291527dfde3605ea322\",\"UseStatement\":\"Sign%20the%20hash%20of%20the%20block%2C%20indicating%20the%20recognition%20of%20the%20contents%20of%20the%20block\",\"Timestamp\":\"0x6601F031E63cb2C477beE183D671F0517a37CdC7\",\"PublicKey\":\"03b27a7ae64d9f11c9685475f76d9e3ba6498953c49f69962b6566655146820d71\"}&Sign= 02e1df21bc11744421ece9be874691ebace8f6ce7ea4443d0f96500e9a9db3978ce90eecc9863be8de27648eb316560df904eaf1c6fc2dc8bf630822cdb9c176
-
 ```
 
-## 步骤3, 解析和验证
-1. 将参数Data的字符串内容转换为JSON对象；
-2. 从JSON对象中恢复PublicKey、DID字段内容；
-3. 验证PublicKey与DID是否匹配；
-4. 验证Data字符串内容、PublicKey和Sign的签名内容是否匹配；
-5. 验证返回的RequestedConent字段与“步骤1”请求时的RequestedConent值是否一致；
+## **Step 3, Analyze and Verify**
 
-# multicreate指令
+1. Turn the parameter data string content into a JSON object;
+2. Recover the PublicKey and DID field from the JSON object;
+3. Verify that the Public Key and DID match;
+4. Verify that the data character string content, the PublicKey and Sign signature content match;
+5. Verify the returned Requested Content field and the Requested Content value requested in "Step 1" are consistent;
 
-## 步骤1, 请求
 
-**指令参数：**
+# **Request create multi-sig wallet**
 
-字段名称           | 类型            | 描述
+## **Step1, Request**
+
+Parameters:
+
+Field Name           | Type            | Description
 ----------------------| ------------------- | -------------------
-AppName               | String     | 你的应用名称; 长度不超过64个字节
-AppID                 | String     | 你的app id; 长度不超过64字节，base58编码，并且在开发人员的DID中是唯一的。
-DID                   | String     | 开发人员的DID
-PublicKey             | String     | DID的公钥
-PublicKeys            | String     | 创建多签钱包的所有公钥，用逗号分隔
-RequiredCount         | String     | 交易最少的签名数
-CallbackUrl           | String     | 请求结果的回调URI，返回多签钱包地址
-ReturnUrl             | String     | 回调后返回的页面URI
+AppName               | String     | Your app name; the length is no more than 64 bytes.
+AppID                 | String     | Your app id; the length is no more than 64 bytes, base58 encoding and is unique within the developer's DID.
+DID                   | String     | The developer's DID.
+PublicKey             | String     | Public key of the DID.
+PublicKeys            | String     | Public keys to create multi-sig wallet，Separated by commas
+RequiredCount         | String     | The least number of signatures
+CallbackUrl           | String     | Callback URI of the request result
+ReturnUrl             | String     | Returned page URI after the callback
 
-**通过scheme调用请求的示例：**
+scheme sample：
 ```
 elaphant://multicreate?AppID=6d3936396579af659f8faa82e2105e33d2b8adbe77be97f698e4e19ac9e7711ed341936aa2641d03e5238fe81f404f273d7932ff63019ad8e50c09b853204f01&AppName=elastos.multisign.test&PublicKey=02ab56c5493d1b26639dcdbc53a664c5eceb4739043ce06eae358b2d8366f358b1&DID=iWgMpqouJPK2H4WM4r2zvLp8XpdZwDihZS&ReturnUrl=http%3A%2F%2Fapp.51aiu.com%2Felastos%2Fhtml%2Fwallet.html&PublicKeys=031ed85c1a56e912de5562657c6d6a03cfe974aab8b62d484cea7f090dac9ff1cf%2C02afa15bf70b80b9398e467613e5ffecb491e339be7e49ef6687bab46e564218d0%2C02aa8bc1c0f935be03c6c4d3c7c200944f1ab5413f15925ba0ee4186b88d695a20&RequiredCount=2
 ```
 
-## 步骤2, 返回信息
+## **Step2, Response**
 
-参数：
+Parameters:
 
-字段名称           | 类型             | 描述
+Field Name           | Type             | Description
 -------------------------- | ------------------ | -------------------
-DID                 | String        | 用户的DID
-PublicKey           | String        | DID的公钥
-Address             |  String       | 多签钱包地址
+DID                 | String        | User's DID.
+PublicKey           | String        | Public key of the DID.
+Address             |  String       | Multi-sig wallet address.
 
-Return url回调示例：
+Return url sample：
 ```
  http://app.51aiu.com/elastos/html/wallet.html?Data=%7B%22Address%22%3A%228UKQAU6AjphwAehoeD4f4cknodah2A9qsY%22%2C%22DID%22%3A%22iii89hfPzr4vKkhJhg1vKAyP5XvP72BASn%22%2C%22PublicKey%22%3A%2202afa15bf70b80b9398e467613e5ffecb491e339be7e49ef6687bab46e564218d0%22%7D&Sign=d194ffed53f04a7cf0a8816b020ad989cbcf05c352d94e911b6e236390b968a25798994faaaebbcb92df66fea5f16b64daf7d72ea5959afd799880f7a921ea8e&Scheme=multicreate
 ```
 
-## 步骤3, 解析和验证
-1. 将参数Data的字符串内容转换为JSON对象；
-2. 从JSON对象中恢复PublicKey、DID字段内容；
-3. 验证PublicKey与DID是否匹配；
-4. 验证Data字符串内容、PublicKey和Sign的签名内容是否匹配；
+## **Step 3, Verify & Return**
+
+1. Turn the parameter data string content into a JSON object;
+2. Recover the PublicKey and DID field from the JSON object;
+3. Verify that the Public Key and DID match;
+4. Verify that the data character string content, the PublicKey and Sign signature content match;
 
 
-# multitx指令
+# **Request multi-sig wallet payment**
 
-## 步骤1, 请求
+## **Step1, Request**
 
-**指令参数：**
+Parameters:
 
-字段名称           | 类型            | 描述
+Field Name           | Type            | Description
 ----------------------| ------------------- | -------------------
-AppName               | String     | 你的应用名称; 长度不超过64个字节
-AppID                 | String     | 你的app id; 长度不超过64字节，base58编码，并且在开发人员的DID中是唯一的。
-DID                   | String     | 开发人员的DID
-PublicKey             | String     | DID的公钥
-Tx                    | String     | 交易json
-CallbackUrl           | String     | 请求结果的回调URI
-ReturnUrl             | String     | 回调后返回的页面URI
+AppName               | String     | Your app name; the length is no more than 64 bytes.
+AppID                 | String     | Your app id; the length is no more than 64 bytes, base58 encoding and is unique within the developer's DID.
+DID                   | String     | The developer's DID.
+PublicKey             | String     | Public key of the DID.
+Tx                    | String     | Json string of the transaction.
+CallbackUrl           | String     | Callback URI of the request result
+ReturnUrl             | String     | Returned page URI after the callback
 
-**通过scheme调用请求的示例：**
+scheme sample:
 ```
 elaphant://multitx?AppID=6d3936396579af659f8faa82e2105e33d2b8adbe77be97f698e4e19ac9e7711ed341936aa2641d03e5238fe81f404f273d7932ff63019ad8e50c09b853204f01&AppName=elastos.multisign.test&PublicKey=02ab56c5493d1b26639dcdbc53a664c5eceb4739043ce06eae358b2d8366f358b1&DID=iWgMpqouJPK2H4WM4r2zvLp8XpdZwDihZS&Tx=%7B%22Transactions%22%3A%5B%7B%22UTXOInputs%22%3A%5B%7B%22address%22%3A%228UKQAU6AjphwAehoeD4f4cknodah2A9qsY%22%2C%22txid%22%3A%222e4d2a77fadce79873468f1ce650d5e559631736717c61329e8842199ddfb9cf%22%2C%22index%22%3A1%7D%5D%2C%22Fee%22%3A4860%2C%22Outputs%22%3A%5B%7B%22amount%22%3A10000000%2C%22address%22%3A%22EgCrEaSfKrLAXP4DFqaxQVFYUjDHzDfxGZ%22%7D%2C%7B%22amount%22%3A899951400%2C%22address%22%3A%228UKQAU6AjphwAehoeD4f4cknodah2A9qsY%22%7D%5D%2C%22Memo%22%3A%22%22%7D%5D%7D
 ```
 
-## 步骤2, 返回信息
+## **Step2, Response**
 
-当前版本不返回任何信息，回调仅用于通知转账完成。
+No return data.
 
-## 步骤3, 解析和验证
-
-
-{{< /pleasetranslate >}}
+## **Step 3, Verify & Return**
