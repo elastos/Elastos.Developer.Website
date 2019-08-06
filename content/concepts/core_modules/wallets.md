@@ -2,7 +2,7 @@
 title = "Wallets"
 weight = 50
 chapter = false
-pre = "<i class='fa ela-page'></i>"
+pre = ""
 alwaysopen = false
 +++
 

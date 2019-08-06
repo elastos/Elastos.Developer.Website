@@ -2,7 +2,7 @@
 title = "Tokenomics of ELA"
 weight = 30
 chapter = false
-pre = "<i class='fa ela-page'></i> "
+pre = ""
 alwaysopen = false
 +++
 

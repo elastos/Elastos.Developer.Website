@@ -2,7 +2,7 @@
 title = "Elastos vs competitors"
 weight = 10
 chapter = false
-pre = "<i class='fa ela-page'></i> "
+pre = ""
 alwaysopen = false
 +++
 

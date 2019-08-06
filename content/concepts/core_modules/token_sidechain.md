@@ -2,7 +2,7 @@
 title = "Token Sidechain"
 weight = 30
 chapter = false
-pre = "<i class='fa ela-page'></i>"
+pre = ""
 alwaysopen = false
 +++
 

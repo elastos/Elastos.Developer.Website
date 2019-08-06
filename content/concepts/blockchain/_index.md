@@ -2,7 +2,7 @@
 title = "Blockchain"
 weight = 40
 chapter = false
-pre = "<i class='fa ela-folder'></i> "
+pre = ""
 alwaysopen = false
 +++
 

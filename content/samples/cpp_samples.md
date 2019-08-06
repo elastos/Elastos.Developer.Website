@@ -2,7 +2,7 @@
 title = "C / C++ samples"
 weight = 5
 chapter = false
-pre = "<i class='fa ela-page'></i> "
+pre = ""
 alwaysopen = false
 +++
 

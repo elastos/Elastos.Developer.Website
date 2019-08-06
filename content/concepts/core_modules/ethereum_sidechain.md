@@ -2,7 +2,7 @@
 title = "Ethereum Sidechain"
 weight = 40
 chapter = false
-pre = "<i class='fa ela-page'></i>"
+pre = ""
 alwaysopen = false
 +++
 

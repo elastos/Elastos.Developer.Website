@@ -2,7 +2,7 @@
 title = "Elastos core modules"
 weight = 50
 chapter = false
-pre = "<i class='fa ela-folder'></i> "
+pre = ""
 alwaysopen = false
 +++
 

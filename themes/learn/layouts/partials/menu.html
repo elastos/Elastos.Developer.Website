@@ -31,6 +31,15 @@
         {{end}} 
     </ul>
 
+    <div class="menubuttons">
+      <a class="menubutton elastosacademy" href="https://elastos.academy" target="_blank">
+        Elastos Academy
+      </a>
+      <a class="menubutton elastoshome" href="https://www.elastos.org" target="_blank">
+        Elastos Home
+      </a>
+    </div>
+
     {{ $disableShortcutsTitle := .Site.Params.DisableShortcutsTitle}}
     {{with .Site.Menus.shortcuts}}
       <section id="shortcuts">
@@ -120,6 +129,12 @@
           {{ end }}
           {{ if $showvisitedlinks}}
             <i class="fas fa-check read-icon"></i>
+          {{ end }}
+
+          {{ if $isParent }}
+          <img src="/images/down_menu_icon.png" style="width:12px;margin-left:3px;margin-bottom:1px"/>
+          {{ else }}
+          <img src="/images/right_menu_icon.png" style="height:12px;margin-left:3px;margin-bottom:-1px"/>
           {{ end }}
       </a>
       {{ if ne $numberOfPages 0 }}

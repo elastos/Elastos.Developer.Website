@@ -2,7 +2,7 @@
 title = "Trinity"
 weight = 80
 chapter = false
-pre = "<i class='fa ela-page'></i>"
+pre = ""
 alwaysopen = false
 +++
 

@@ -2,7 +2,7 @@
 title = "The smart web"
 weight = 10
 chapter = false
-pre = "<i class='fa ela-page'></i>"
+pre = ""
 alwaysopen = false
 +++
 
