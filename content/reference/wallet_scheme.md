@@ -7,11 +7,6 @@ pre = ""
 alwaysopen = false
 +++
 
-{{< ownership "BenjaminPiette" >}}
-
-{{< todo "@BPI Rework indentation (broken starting at identity command)">}}
-{{< todo "@BPI replace elaphant with elastos - remove occurences of 'elephant wallet'">}}
-
 ## Introduction
 
 The Elastos wallet scheme is the way for DApps to request operations to be completed by an Elastos wallet, on behalf of the user. For example, if your DApp wishes to request a payment from a user, it will call the payment scheme, which will open the installed wallet app, which will proceed to the payment (because it's the only one to know private user information), and send the payment confirmation to your app.
@@ -20,13 +15,13 @@ Schemes and parameters are the sames for all programming environments. Neverthel
 
 ## Deployment Method
 
-Apps can call and deploy Elephant through a special scheme, "elaphant://". They can also convert the target URI code into a QR code (ex: scan to pay). The Elastos wallet can automatically scan the QR code to execute the corresponding operation. 
+Apps can request operations from the Elastos wallet through a special scheme, "elastos://". They can also convert the target URI code into a QR code (ex: scan to pay). The Elastos wallet can automatically scan the QR code to execute the corresponding operation. 
 
 A scheme has three parts: command, required parameters, and command parameters.
 
 ## Scheme format
 
-elaphant://<command></RequiredParameters...>[/CommandParameters...]
+elastos://<command></RequiredParameters...>[/CommandParameters...]
 
 ### Commands list
 
@@ -39,7 +34,7 @@ elaphant://<command></RequiredParameters...>[/CommandParameters...]
 
 ### Required parameters
 
-Any third-party initiating a deployment to Elephant must provide relevant parameters about information pertaining to the app, which is used to verify the truthfulnesstrustfulness of the deployer's identity and data.
+Any application sending an operation request to the wallet app must provide relevant parameters about information pertaining to the app, which is used to verify the truthfulnesstrustfulness of the deployer's identity and data.
 
 | **Fieldname** | **Category**       | **Required?** | **Description**                                              |
 | ------------- | ------------------ | ------------- | ------------------------------------------------------------ |
@@ -60,24 +55,24 @@ Verification Method:
 | ------------- | ------------------ | ------------- | ------------------------------------------------------------ |
 | CallbackUrl   | String & URLEncode | Optional      | Callback URL resulting from the request                      |
 | ReturnUrl     | String & URLEncode | Optional      | Request backtrack page URL                                   |
-| Target        | String             | Optional      | The Return URL can be opened in the Elephant internal webview or in external browsers. "Internal" indicates that the internal webview is being used to open it, where "browser" indicates the use of an external browser to open it. |
+| Target        | String             | Optional      | The Return URL can be opened in the wallet app internal webview or in external browsers. "Internal" indicates that the internal webview is being used to open it, where "browser" indicates the use of an external browser to open it. |
 
-** Note that when the request is made, the field for the URL Encode must be coded using the URL Encode method in UTF8 characters, as it will be decoded by Elephant using URL Decode.
+** Note that when the request is made, the field for the URL Encode must be coded using the URL Encode method in UTF8 characters, as it will be decoded by the wallet app using URL Decode.
 
-Elephant provides two kinds of backtrack information to third parties: [Callback URL] and [Return URL]. The differences between the two is as follows:
+The wallet app provides two kinds of backtrack information to third parties: [Callback URL] and [Return URL]. The differences between the two is as follows:
 
-- Callback URL: Elephant uses HTTP Post or other equivalent methods to asynchronously backtrack information on the back end.
-- Return URL: Elephant utilizes HTTP Get or equivalent methods to jump and open the corresponding URL page on the front end.
+- Callback URL: The wallet app uses HTTP Post or other equivalent methods to asynchronously backtrack information on the back end.
+- Return URL: The wallet app utilizes HTTP Get or equivalent methods to jump and open the corresponding URL page on the front end.
 
 Third-party apps can select to use one or both kinds.
 
-If third-party apps simultaneously serve multiple users, tracking parameters can be appended to the callback URL of the Return URL.When Elephant backtracks, it will maintain its original parameter settings to callback the third-party app.
+If third-party apps simultaneously serve multiple users, tracking parameters can be appended to the callback URL of the Return URL. When the wallet app backtracks, it will maintain its original parameter settings to callback the third-party app.
 
-# **Identity Command**
+### Identity Command
 
-## **Outline**
+#### **Outline**
 
-When third-party app programs need to verify user DID identities, or need personal information, they can initiate a request to Elephant, and after the user gives their authorization, Elephant will return the information and signature to the third-party.
+When third-party app programs need to verify user DID identities, or need personal information, they can initiate a request to the wallet app, and after the user gives their authorization, the wallet app will return the information and signature to the third-party.
 
 A classic use case is login:
 
@@ -87,13 +82,13 @@ A classic use case is login:
 
 Third-party requests should be accompanied by the random number. The random number should consist of unrepeatable, unguessable random content, to prevent attackers from carrying out replay attacks, in which pre-signed content is used to deceive the third-party and user identities are illegally used.
 
-After the Elephant return information is received, the random number accompanying the return must be verified, and incorrect numbers are invalid.
+After the wallet app return information is received, the random number accompanying the return must be verified, and incorrect numbers are invalid.
 
-## **Step 1, Third-party initiation of requests**
+#### **Step 1, Third-party initiation of requests**
 
 Request format:
 ```
-elephant://identity?
+elastos://identity?
 	AppName=<AppName>&
 	AppID=<AppID>&
 	Description=<Description>&
@@ -116,7 +111,7 @@ Command parameter:
 
 Nickname, ELAAddress, BTCAddress, BCHAddress, ETHAddress, IOEXAddress, Email, PhoneNumber, ChineseIDCard
 
-** Note that when the request is made, the field for the URL Encode must be coded using the URL Encode method in UTF8 characters, as it will be decoded by Elephant using URL Decode.
+** Note that when the request is made, the field for the URL Encode must be coded using the URL Encode method in UTF8 characters, as it will be decoded by the wallet app using URL Decode.
 
 RequestInfo Example
 ```
@@ -124,7 +119,7 @@ RequestInfo="Nickname,ELAAddress,Email,PhoneNumber"
 ```
 Identity Request Example:
 ```
-elaphant://identity?
+elastos://identity?
 AppID=cc053c61afc22dda9a309e96943c1734&
 AppName=RedPacket&
 Description=red&
@@ -133,11 +128,11 @@ RequestInfo=BTCAddress%2CETHAddress%2CEmail%2CPhoneNumber
 CallbackUrl=http%3A%2F%2Flocalhost%3A8081%2Fpacket%2Fgrab%2F1509893100600982-0&
 ```
 
-It is also possible to generate a QR Code using the URI. The user scans the QR code in Elephant to complete the request.
+It is also possible to generate a QR Code using the URI. The user scans the QR code in the wallet app to complete the request.
 
-## **Step 2, Return Information**
+#### **Step 2, Return Information**
 
-After the user gives authorization, Elephant will return the information pertaining to the user DID according to the third-party's request.
+After the user gives authorization, the wallet app will return the information pertaining to the user DID according to the third-party's request.
 
 - Currently, the only callback method supported is HTTP Post. A post call will be initiated according to the address of the callback URL at the time of request, and the return information will be attached to the body.
 - Currently, the only Return method supported is HTTP Get. A page will be opened in an internal Webview or external browser according to the return URL address at the time of request.
@@ -206,7 +201,7 @@ Return returns information using the Get method, and appends Data and Sign param
 ```
 
 
-## **Step 3, Analyze and Verify**
+#### **Step 3, Analyze and Verify**
 
 1. Turn the parameter data string content into a JSON object;
 2. Recover the PublicKey and DID field from the JSON object;
@@ -214,21 +209,21 @@ Return returns information using the Get method, and appends Data and Sign param
 4. Verify that the data character string content, the PublicKey and Sign signature content match;
 5. Verify the returned random number field and the Random Number value requested in "Step 1" are consistent;
 
-# **Elapay Command**
+### Elapay Command
 
-## **Outline**
+#### **Outline**
 
-When a third-party program requires the use of digital currency for payments, the program can send a request to Elephant, and after users give authorization, the currency will be transferredtransfered to the requested address. This process is similar to third-party requests for Alipay and Paypal to complete payments.
+When a third-party program requires the use of digital currency for payments, the program can send a request to the wallet app, and after users give authorization, the currency will be transferredtransfered to the requested address. This process is similar to third-party requests for Alipay and Paypal to complete payments.
 
 - Step 1: The third-party initiated the request, including the recipient's address, balance, name of the digital currency, and the unique order identifier.
-- Step 2: Elephant will display the payment transfer page, and after the user has confirmed, the transfer is be initiated.
+- Step 2: The wallet app will display the payment transfer page, and after the user has confirmed, the transfer is be initiated.
 - Step 3: The transfer transaction TXID will be returned, and the third-party can use it to check the status of the transaction.
 
-## **Third-party initiations of payment requests**
+#### **Third-party initiations of payment requests**
 
 Request format:
 ```
-elephant://elapay?
+elastos://elapay?
 	AppName=<AppName>&
 	AppID=<AppID>&
 	Description=<Description>&
@@ -252,7 +247,7 @@ Command parameter:
 
 Elapay request example:
 ```
-elaphant://elapay?
+elastos://elapay?
 AppID=cc053c61afc22dda9a309e96943c1734&
 AppName=RedPacket&
 Description=red&
@@ -264,7 +259,7 @@ ReceivingAddress=EXRNP8Pm3KQR7EeLXFGRtfLdkBaeZsMLyy&
 CallbackUrl=http%3A%2F%2Flocalhost%3A8081%2Fpacket%2Fgrab%2F1509893100600982-0&
 ```
 
-## **Return payment information**
+#### **Return payment information**
 
 Return information format:
 
@@ -305,21 +300,21 @@ You can confirm the status of transactions at blockchain.elastos.org.
 
 <https://blockchain.elastos.org/tx/895630890fa53437cdd09e1f3bb4934585e1914eb45eb3a6b1e4a4d6bd789718>
 
-# **Eladposvote Command**
+### Eladposvote Command
 
-## **Outline**
+#### **Outline**
 
 Third-party apps can issue DPoS votes through the vote command. After users give authorization, the entire ELA balance will be used to issue the vote transaction.
 
 - Step 1: The third-party issues the request, including the candidate public key list.
-- Step 2: Elephant displays the vote information, and the vote transaction is issue after the user confirms.
+- Step 2: The wallet app displays the vote information, and the vote transaction is issue after the user confirms.
 - Step 3: The TXID of the vote transaction is returned to the third-party, and the third party can use it to check the transaction status.
 
-## **Third-Party initiation of vote requests**
+#### **Third-Party initiation of vote requests**
 
 Request format:
 ```
-elephant://eladposvote?
+elastos://eladposvote?
 	AppName=<AppName>&
 	AppID=<AppID>&
 	Description=<Description>&
@@ -338,7 +333,7 @@ Request parameters:
 
 eladposvote request example:
 ```
-elaphant://eladposvote?
+elastos://eladposvote?
 AppID=cc053c61afc22dda9a309e96943c1734&
 AppName=DPoSVote&
 Description=DPoSVote%20mini%20app&
@@ -347,7 +342,7 @@ CallbackUrl=http%3A%2F%2Flocalhost%3A8081%2Fpacket%2Fgrab%2F1509893100600982-0&
 CandidatePublicKeys=03ef5f8b0534c82aa4db218f7cead278124efc0411e4ca38b6131954a58e8ae3c0%2C03ef5f8b0534c82aa4db218f7cead278124efc0411e4ca38b6131954a58e8ae3c0
 ```
 
-## **Return Vote Information**
+#### **Return Vote Information**
 
 Return information format:
 
@@ -383,24 +378,24 @@ You can confirm the status of transactions at blockchain.elastos.org.
 
 <https://blockchain.elastos.org/tx/895630890fa53437cdd09e1f3bb4934585e1914eb45eb3a6b1e4a4d6bd789718>
 
-# **Sign Command**
+### Sign Command
 
-## **Outline**
+#### **Outline**
 
-When third-party app programs need to verify user DID identities, or need personal information, they can initiate a request to Elephant, and after the user gives their authorization, Elephant will construct a signature certification and return it to the third-party.
+When third-party app programs need to verify user DID identities, or need personal information, they can initiate a request to the wallet app, and after the user gives their authorization, the wallet app will construct a signature certification and return it to the third-party.
 
 For example, third-party requests a user's signature on an article they wrote:
 
-1. The third-party will use the article's hash as the signature request content and sends it to Elephant.
-2. Elephant displays the requestor's information, the content of the signature request and the "use statementstatemetn" input window
+1. The third-party will use the article's hash as the signature request content and sends it to the wallet app.
+2. The wallet app displays the requestor's information, the content of the signature request and the "use statementstatemetn" input window
 3. The user voluntarily inputs the "use statement" as: article signature, and packages and signs the request content, use statement, timestamp, requester information, creating an authorization certificate.
 4. The third-party app is notified of the authorization certificate through the two methods of callback and return.
 
-## **Step 1, Third-party initiation of requests**
+#### **Step 1, Third-party initiation of requests**
 
 Request format:
 ```
-elephant://sign?
+elastos://sign?
 	AppName=<AppName>&
 	AppID=<AppID>&
 	Description=<Description>&
@@ -421,7 +416,7 @@ Command parameter:
 
 Sign Request Example:
 ```
-elaphant://Sign?
+elastos://Sign?
 AppID=cc053c61afc22dda9a309e96943c1734&
 AppName=RedPacket&
 Description=red&
@@ -431,11 +426,11 @@ UseStatement=Sign%20the%20hash%20of%20the%20block%2C%20indicating%20the%20recogn
 CallbackUrl=http%3A%2F%2Flocalhost%3A8081%2Fpacket%2Fgrab%2F1509893100600982-0&
 ```
 
-It is also possible to generate a QR Code using the URI. The user scans the QR code in Elephant to complete the request.
+It is also possible to generate a QR Code using the URI. The user scans the QR code in the wallet app to complete the request.
 
-## **Step 2, Return Information**
+#### **Step 2, Return Information**
 
-After the user has provided authorization, Elephant will generate a authorization certificate and return it to the third-party.
+After the user has provided authorization, the wallet app will generate a authorization certificate and return it to the third-party.
 
 Return information format:
 
@@ -490,7 +485,7 @@ Return returns information using the Get method, and appends Data and Sign param
 [URL]: https://redpacket.elastos.org/packet/grab/3176517663416268-1?_locale=zh_CN&offset=-480&Data={\"RequesterDID\":\"iYarsyzWeaSRa7XVqeCeNpa1J9sGB4Uwyr\",\"DID\":\"iYarsyzWeaSRa7XVqeCeNpa1J9sGB4Uwyr\",\"AppID\":\"cc053c61afc22dda9a309e96943c1734\",\"AppName\":\"RedPacket\",\"RequestedConent\":\"7aae6c4f8da0799063f1db14024413ba7aba70e61312f291527dfde3605ea322\",\"UseStatement\":\"Sign%20the%20hash%20of%20the%20block%2C%20indicating%20the%20recognition%20of%20the%20contents%20of%20the%20block\",\"Timestamp\":\"0x6601F031E63cb2C477beE183D671F0517a37CdC7\",\"PublicKey\":\"03b27a7ae64d9f11c9685475f76d9e3ba6498953c49f69962b6566655146820d71\"}&Sign= 02e1df21bc11744421ece9be874691ebace8f6ce7ea4443d0f96500e9a9db3978ce90eecc9863be8de27648eb316560df904eaf1c6fc2dc8bf630822cdb9c176
 ```
 
-## **Step 3, Analyze and Verify**
+#### **Step 3, Analyze and Verify**
 
 1. Turn the parameter data string content into a JSON object;
 2. Recover the PublicKey and DID field from the JSON object;
@@ -499,9 +494,9 @@ Return returns information using the Get method, and appends Data and Sign param
 5. Verify the returned Requested Content field and the Requested Content value requested in "Step 1" are consistent;
 
 
-# **Request create multi-sig wallet**
+### Request create multi-sig wallet
 
-## **Step1, Request**
+#### **Step1, Request**
 
 Parameters:
 
@@ -518,10 +513,10 @@ ReturnUrl             | String     | Returned page URI after the callback
 
 scheme sample：
 ```
-elaphant://multicreate?AppID=6d3936396579af659f8faa82e2105e33d2b8adbe77be97f698e4e19ac9e7711ed341936aa2641d03e5238fe81f404f273d7932ff63019ad8e50c09b853204f01&AppName=elastos.multisign.test&PublicKey=02ab56c5493d1b26639dcdbc53a664c5eceb4739043ce06eae358b2d8366f358b1&DID=iWgMpqouJPK2H4WM4r2zvLp8XpdZwDihZS&ReturnUrl=http%3A%2F%2Fapp.51aiu.com%2Felastos%2Fhtml%2Fwallet.html&PublicKeys=031ed85c1a56e912de5562657c6d6a03cfe974aab8b62d484cea7f090dac9ff1cf%2C02afa15bf70b80b9398e467613e5ffecb491e339be7e49ef6687bab46e564218d0%2C02aa8bc1c0f935be03c6c4d3c7c200944f1ab5413f15925ba0ee4186b88d695a20&RequiredCount=2
+elastos://multicreate?AppID=6d3936396579af659f8faa82e2105e33d2b8adbe77be97f698e4e19ac9e7711ed341936aa2641d03e5238fe81f404f273d7932ff63019ad8e50c09b853204f01&AppName=elastos.multisign.test&PublicKey=02ab56c5493d1b26639dcdbc53a664c5eceb4739043ce06eae358b2d8366f358b1&DID=iWgMpqouJPK2H4WM4r2zvLp8XpdZwDihZS&ReturnUrl=http%3A%2F%2Fapp.51aiu.com%2Felastos%2Fhtml%2Fwallet.html&PublicKeys=031ed85c1a56e912de5562657c6d6a03cfe974aab8b62d484cea7f090dac9ff1cf%2C02afa15bf70b80b9398e467613e5ffecb491e339be7e49ef6687bab46e564218d0%2C02aa8bc1c0f935be03c6c4d3c7c200944f1ab5413f15925ba0ee4186b88d695a20&RequiredCount=2
 ```
 
-## **Step2, Response**
+#### **Step2, Response**
 
 Parameters:
 
@@ -536,7 +531,7 @@ Return url sample：
  http://app.51aiu.com/elastos/html/wallet.html?Data=%7B%22Address%22%3A%228UKQAU6AjphwAehoeD4f4cknodah2A9qsY%22%2C%22DID%22%3A%22iii89hfPzr4vKkhJhg1vKAyP5XvP72BASn%22%2C%22PublicKey%22%3A%2202afa15bf70b80b9398e467613e5ffecb491e339be7e49ef6687bab46e564218d0%22%7D&Sign=d194ffed53f04a7cf0a8816b020ad989cbcf05c352d94e911b6e236390b968a25798994faaaebbcb92df66fea5f16b64daf7d72ea5959afd799880f7a921ea8e&Scheme=multicreate
 ```
 
-## **Step 3, Verify & Return**
+#### **Step 3, Verify & Return**
 
 1. Turn the parameter data string content into a JSON object;
 2. Recover the PublicKey and DID field from the JSON object;
@@ -544,9 +539,9 @@ Return url sample：
 4. Verify that the data character string content, the PublicKey and Sign signature content match;
 
 
-# **Request multi-sig wallet payment**
+### **Request multi-sig wallet payment**
 
-## **Step1, Request**
+#### **Step1, Request**
 
 Parameters:
 
@@ -562,11 +557,11 @@ ReturnUrl             | String     | Returned page URI after the callback
 
 scheme sample:
 ```
-elaphant://multitx?AppID=6d3936396579af659f8faa82e2105e33d2b8adbe77be97f698e4e19ac9e7711ed341936aa2641d03e5238fe81f404f273d7932ff63019ad8e50c09b853204f01&AppName=elastos.multisign.test&PublicKey=02ab56c5493d1b26639dcdbc53a664c5eceb4739043ce06eae358b2d8366f358b1&DID=iWgMpqouJPK2H4WM4r2zvLp8XpdZwDihZS&Tx=%7B%22Transactions%22%3A%5B%7B%22UTXOInputs%22%3A%5B%7B%22address%22%3A%228UKQAU6AjphwAehoeD4f4cknodah2A9qsY%22%2C%22txid%22%3A%222e4d2a77fadce79873468f1ce650d5e559631736717c61329e8842199ddfb9cf%22%2C%22index%22%3A1%7D%5D%2C%22Fee%22%3A4860%2C%22Outputs%22%3A%5B%7B%22amount%22%3A10000000%2C%22address%22%3A%22EgCrEaSfKrLAXP4DFqaxQVFYUjDHzDfxGZ%22%7D%2C%7B%22amount%22%3A899951400%2C%22address%22%3A%228UKQAU6AjphwAehoeD4f4cknodah2A9qsY%22%7D%5D%2C%22Memo%22%3A%22%22%7D%5D%7D
+elastos://multitx?AppID=6d3936396579af659f8faa82e2105e33d2b8adbe77be97f698e4e19ac9e7711ed341936aa2641d03e5238fe81f404f273d7932ff63019ad8e50c09b853204f01&AppName=elastos.multisign.test&PublicKey=02ab56c5493d1b26639dcdbc53a664c5eceb4739043ce06eae358b2d8366f358b1&DID=iWgMpqouJPK2H4WM4r2zvLp8XpdZwDihZS&Tx=%7B%22Transactions%22%3A%5B%7B%22UTXOInputs%22%3A%5B%7B%22address%22%3A%228UKQAU6AjphwAehoeD4f4cknodah2A9qsY%22%2C%22txid%22%3A%222e4d2a77fadce79873468f1ce650d5e559631736717c61329e8842199ddfb9cf%22%2C%22index%22%3A1%7D%5D%2C%22Fee%22%3A4860%2C%22Outputs%22%3A%5B%7B%22amount%22%3A10000000%2C%22address%22%3A%22EgCrEaSfKrLAXP4DFqaxQVFYUjDHzDfxGZ%22%7D%2C%7B%22amount%22%3A899951400%2C%22address%22%3A%228UKQAU6AjphwAehoeD4f4cknodah2A9qsY%22%7D%5D%2C%22Memo%22%3A%22%22%7D%5D%7D
 ```
 
-## **Step2, Response**
+#### **Step2, Response**
 
 No return data.
 
-## **Step 3, Verify & Return**
+#### **Step 3, Verify & Return**
