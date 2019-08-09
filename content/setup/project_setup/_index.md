@@ -13,5 +13,4 @@ Pick your target:
 
 * {{< internallink "Android native application" "android_native_setup.md" >}}
 * {{< internallink "iOS native application" "ios_native_setup.md" >}}
-* {{< internallink "Web application" "web_setup.md" >}}
 * {{< internallink "Trinity application" "trinity_setup.md" >}}

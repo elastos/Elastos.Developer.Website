@@ -42,3 +42,7 @@ $ elastos-cli info
 By default, the active network is testnet. You can go on with the {{< internallink "testnet configuration page" "/setup/env_setup/testnet_config.md" >}} to start creating your first wallet and get a few test ELAs. 
 
 Right after that, you can start {{< internallink "getting your application ready" "/setup/project_setup/_index.md" >}} and start using Elastos APIs!
+
+## Trinity setup
+
+If you plan to build Trinity DApps, you need a bit of setup for that. Please read the {{< internallink "trinity setup page" "setup/env_setup/trinity_setup.md" >}}.

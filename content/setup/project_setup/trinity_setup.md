@@ -7,59 +7,62 @@ pre = ""
 alwaysopen = false
 +++ 
 
-{{< ownership "Benjamin Piette" >}}
+## Environment setup
 
+Make sure to first {{< internallink "setup your computer for trinity" "setup/env_setup/trinity_setup.md" >}}.
 
-{{< todo "@BPI Import content from there? https://github.com/elastos/Elastos.Developer.Doc/blob/master/Ignore/Doc/DApp_manual.md" >}}
+## Creating a new app
 
-# Elastos.Trinity.ToolChains
-
-## Tutorial
-
-### Starting a New Ionic App
-
-To start a new app, open your terminal/command prompt and run:
+Open a terminal at the location you want your application to be created. A subfolder will be created for you. Then run the following command
 
 ```bash
-$ ionic start helloWorld tutorial
+$ trinity-cli new
 ```
+
+Provide a few information such as your app name, package name, author information, and a new folder will be created with your DApp.
+
+The created application uses the ionic framework. It simply embeds an additional *manifest.json* file to be considered as a trinity application.
+
+## Converting an existing ionic app to a trinity DApp
+
+In case you already have a ionic application, and would like to run it inside trinity, you have to generate a trinity manifest to make it become compatible. 
+
+Enter your ionic app's folder then run the following command:
+
+```bash
+$ trinity-cli manifest
+```
+
+### Learning Ionic
 
 For more detail about Ionic, please visit [here](https://ionicframework.com/docs/).
+You can build any kind of ionic-based application in Elastos, as the whole ionic framework is available. In addition, Elastos plugins are available too, such as carrier, hive, or access to payments and digital identities (DID).
 
-### Viewing the app in a browser
+### Running your DApp on Android
 
-Start Ionic Lab for multi-platform dev/testing:
+**Checklist:**
+
+- Trinity must be installed on your device
+- Connect your device to your computer using a USB cable.
+- Make sure adb is in your path.
+
+Enter your app's folder in a terminal then run the following command:
 
 ```bash
-$ cd helloWorld/
-$ ionic lab
+$ trinity-cli run -p android
 ```
 
-NOTE: `ionic lab` is just a convenient shortcut for `ionic serve --lab`.
+That will package your application as a EPK file, send it to your device, install it inside Trinity, and run it.
 
-### Testing and debugging the app on a device
+### Developping your DApp
 
-Before a production build, you may want to test your App on a device.
+After your app is launched inside trinity, you can directly edit your app content from its src/ folder. Changes will automatically reload in trinity.
 
-And you don't want to pack and install your app again and again when you debugging your code.
+### Trinity DApps manifest
 
-You could follow these instructions:
+A *manifest.json* file is created by default in your trinity DApp project. 
 
-1. Serve your App
-
-   ```bash
-   $ ionic serve --no-open
-   ...
-   [INFO] Development server running!
-
-       Local: http://localhost:8100
-       External: http://192.168.0.2:8100
-   ...
-   ```
-
-   Please remember the `External` URL. It's needed for the next step.
-
-1. Create a `manifest_debug.json` like this:
+It looks like the following sample. You can manually edit it whenever needed:
 
    ```json
    {
@@ -69,6 +72,7 @@ You could follow these instructions:
      "short_name": "My App",
      "description": "My Sample App",
      "start_url": "http://192.168.0.2:8100",
+     "type":"url",
      "icons": [
        {
          "src": "logo.png",
@@ -92,83 +96,6 @@ You could follow these instructions:
    }
    ```
 
-   The `start_url ` of the `manifest_debug.json` is intended set to the external URL of the previous step.
-
-1. Create a wrapper app with the debug manifest json file
-
-   We only pack the json and logo file to the EPK.
-
-   ```bash
-   $ pack_epk --manifest manifest_debug.json --root-dir src/assets/imgs/ helloWorld_wrapper.epk
-   ```
-
-   NOTE: You could type `pack_epk --help` for more details.
-
-1. Install and test your app
-
-   Install the wrapper EPK file and launch the DApp for debugging.
-
-   If the `URL authority request` dialog pops up, click `ALLOW`. Then click the back button return back to launcher app. And launch your wrapper DApp again to load your pages from the host computer.
-
-1. Use browser to inspect and debug the pages
-
-   Open Chrome browser and visit `chrome://inspect` to inspect your DApp pages.
-
-### Deploy your DApp
-
-After test, you may want to deploy your DApp as a product.
-
-1. Create a production manifest json file
-
-   Create a `manifest_prod.json` like this:
-
-   ```json
-   {
-     "id": "com.mycompany.myapp",
-     "version": "0.0.1",
-     "name": "My App",
-     "short_name": "My App",
-     "description": "My Sample App",
-     "start_url": "index.html",
-     "icons": [
-       {
-         "src": "assets/imgs/logo.png",
-         "sizes": "512x512",
-         "type": "image/png"
-       },
-       {
-         "src": "assets/imgs/logo.png",
-         "sizes": "128x128",
-         "type": "image/png"
-       }
-     ],
-     "author": {
-       "name": "MyName",
-       "email": "myname@mycompany.com"
-     },
-     "default_locale": "en",
-     "background_color": "#4e8ef7",
-     "theme": {
-       "theme_display": "show",
-       "theme_color": "#4e8ef7"
-     }
-   }
-   ```
-
-1. Generate production code
-
-   Run this command inside the `helloWorld` folder to generate the production code:
-
-   ```bash
-   $ ionic build --prod
-   ```
-
-1. Create a production EPK file
-
-   ```bash
-   $ pack_epk --manifest manifest_prod.json --root-dir www/ helloWorld.epk
-   ```
-
-
-{{< todo "@BPI How to install the EPK in trinity?" >}}
-{{< todo "@BPI How to get the pack_epk script without installing trinity source code?" >}}
+### Debugging your application
+   
+Open the Chrome browser on your computer and visit `chrome://inspect` to inspect your DApp pages.
