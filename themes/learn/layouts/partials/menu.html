@@ -1,5 +1,10 @@
 <nav id="sidebar" class="{{if $.Site.Params.showVisitedLinks }}showVisitedLinks{{end}}">
   
+  <div style="z-index: 999999999;background:rgba(255,0,0,0.6);color:white;font-weight:bold;text-align:center">
+    <i class="fas fa-exclamation-triangle"></i> Site under construction <i class="fas fa-exclamation-triangle"></i>
+  </div>
+
+
 {{ $currentNode := . }}
 
 {{ $showvisitedlinks := .Site.Params.showVisitedLinks }}
@@ -30,6 +35,15 @@
           {{end}}
         {{end}} 
     </ul>
+
+    <div class="menubuttons">
+      <a class="menubutton elastosacademy" href="https://elastos.academy" target="_blank">
+        Elastos Academy
+      </a>
+      <a class="menubutton elastoshome" href="https://www.elastos.org" target="_blank">
+        Elastos Home
+      </a>
+    </div>
 
     {{ $disableShortcutsTitle := .Site.Params.DisableShortcutsTitle}}
     {{with .Site.Menus.shortcuts}}
@@ -121,6 +135,12 @@
           {{ if $showvisitedlinks}}
             <i class="fas fa-check read-icon"></i>
           {{ end }}
+
+          {{ if $isParent }}
+          <img src="/images/down_menu_icon.png" style="width:12px;margin-left:3px;margin-bottom:1px"/>
+          {{ else }}
+          <img src="/images/right_menu_icon.png" style="height:12px;margin-left:3px;margin-bottom:-1px"/>
+          {{ end }}
       </a>
       {{ if ne $numberOfPages 0 }}
         <ul>
@@ -151,7 +171,11 @@
   {{else}}
     {{ if not .Params.Hidden }}
       <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}">
-        <a href="{{ .RelPermalink}}">
+        {{if isset .Params "apireferenceexturl" }}
+          <a href="{{ .Params.apireferenceexturl}}" target="_blank">
+        {{ else }}
+          <a href="{{ .RelPermalink}}">
+        {{ end }}
         {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
         {{ if $showvisitedlinks}}<i class="fas fa-check read-icon"></i>{{end}}
         </a>

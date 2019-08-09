@@ -41,6 +41,10 @@
     {{ partial "menu.html" . }}
         <section id="body">
         <div id="overlay"></div>
+
+        {{if isset .Params "iframedurl" }}
+        <iframe height="100%" src="{{ .Params.iframedurl }}" style="position:absolute;width:100%;height:100vh"></iframe>
+        {{else}}
         <div class="padding highlightable">
               {{if not .IsHome}}
               <div>
@@ -97,6 +101,13 @@
               {{.Title}}
             </h1>
           {{end}}
+      {{end}}  
+
+{{ if isset .Params "apireferenceexturl" }}
+  <div style="text-align:center">
+    <a href="{{ .Params.apireferenceexturl }}" target="_blank">Click here to open the API reference.</a>
+  </div>
+{{ end }}
 
         {{define "breadcrumb"}}
           {{$parent := .page.Parent }}
@@ -107,4 +118,3 @@
             {{.value|safeHTML}}
           {{end}}
         {{end}}
-

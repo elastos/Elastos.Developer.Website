@@ -7,6 +7,14 @@
 	line-height: 1.5 !important;
 }
 
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.8rem;
+}
+
 .ela-folder:before {
 	content: "\f07c";
 	width:20px;
@@ -59,10 +67,42 @@
 	text-align:center;
 }
 
+#sidebar .menubuttons {
+	text-align:center;
+	margin-top:50px;
+}
+
+#sidebar .menubuttons .menubutton {
+	display: block;
+	width:170px;
+	margin: 20px auto;
+	padding:10px;
+	color:white;
+	border-radius: 24px;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+#sidebar .menubuttons a.elastosacademy {
+	background:#32c2f3;
+}
+#sidebar .menubuttons a.elastosacademy:hover {
+	background:#42d2f3;
+}
+
+#sidebar .menubuttons a.elastoshome {
+	background:transparent;
+	color:#5a5b5b;
+	border: solid 2px #5a5b5b;
+}
+#sidebar .menubuttons a.elastoshome:hover {
+	background:#5a5b5b;
+	color:white;
+}
+
 .invalidpagepatherror {
 	color:red;
 }
-
 
 
 .faqentry {

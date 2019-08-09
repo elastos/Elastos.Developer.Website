@@ -3,83 +3,174 @@ title = "Carrier networking"
 date = 2019-07-09T21:15:40+02:00
 weight = 40
 chapter = false
-pre = "<i class='fa ela-page'></i> "
+pre = ""
 alwaysopen = false
 +++
 
 {{< ownership "TangZhiLong" >}}
 
-{{< todo "Migrate from https://github.com/elastos/Hackathon.2019.Beijing (使用carrier进行通信) after July 19 (beijing hackathon) - see SJun" >}}
+{{< todo "@BPI @ZhiLong CarrierSessionHelper-based content" >}}
 
-{{< todo "Make sure this hackathon content is what we want to explain to users" >}}
 
-{{< todo "Fix pictures paths (import them to this doc project)" >}}
+## Introduction
 
-{{< todo "Make sure the guide works for all platforms (android, ios, etc)" >}}
+Elastos Carrier provides features such as direct messaging (text or binary) to a peer, group messaging, or file transfer. This guide will show several of carrier's main features.
 
-{{< todo "Replace manual AAR import with gradle maven imports" >}}
+## Initialize carrier
 
-{{< pleasetranslate >}}
-# Carrier for Android 开发文档
+### Configure carrier options
 
-## 0 Carrier介绍
+Carrier needs a few options to be configured first. Mostly, we must tell him which bootstrap nodes it should use to start communicating with the rest of the P2P network.
 
-Carrier是一个去中心通信库，类似区块链钱包，用户通过一个私钥创建一个Carrier地址，并使用这个私钥来创建一个Carrier实例（节点），这个私钥即代表一个用户。
+{{< tabs >}} 
+    {{< tab name="Java" codelang="java" >}} 
+public class DefaultCarrierOptions extends Carrier.Options {
+    public DefaultCarrierOptions(String path) {
+        super();
 
-任何两个Carrier用户想互相发送消息，必须先将对方的Carrier地址加为好友，然后才能互相发送消息，也就是说，Carrier的通信是基于好友的。
+        setOptions(path);
+    }
 
-你不必拥有IP地址或者域名，通过一个Carrier地址即可找到彼此，加了好友以后就可以加密点对点通信，可以不依赖任何服务器通信。
+    private void setOptions(String path) {
+        setUdpEnabled(true);
+        setPersistentLocation(path); // path is used to cache carrier data for better performance
 
-所以，基于Carrier编程通常的流程是：
-1. 初始化一个Carrier实例（节点）
-2. 添加好友地址
-3. 收发Message
+        ArrayList<BootstrapNode> arrayList = new ArrayList<>();
+        BootstrapNode node;
 
-## 1 环境准备
+        node = new BootstrapNode();
+        node.setIpv4("13.58.208.50");
+        node.setPort("33445");
+        node.setPublicKey("89vny8MrKdDKs7Uta9RdVmspPjnRMdwMmaiEW27pZ7gh");
+        arrayList.add(node);
 
-1. 两台API21以上的 Android 手机。
-2. 安装有 AndroidStudio 的PC机。
+        node = new BootstrapNode();
+        node.setIpv4("18.216.102.47");
+        node.setPort("33445");
+        node.setPublicKey("G5z8MqiNDFTadFUPfMdYsYtkUDbX5mNCMVHMZtsCnFeb");
+        arrayList.add(node);
 
-## 2 建立工程
+        node = new BootstrapNode();
+        node.setIpv4("52.83.127.216");
+        node.setPort("33445");
+        node.setPublicKey("4sL3ZEriqW7pdoqHSoYXfkc1NMNpiMz7irHMMrMjp9CM");
+        arrayList.add(node);
 
-1. 在网址 <https://github.com/elastos/Elastos.NET.Carrier.Android.SDK/releases> 中下载 [org.elastos.carrier-release/debug.aar](https://github.com/elastos/Elastos.NET.Carrier.Android.SDK/releases/download/release-v5.3.1/org.elastos.carrier-release.aar)。
+        node = new BootstrapNode();
+        node.setIpv4("52.83.127.85");
+        node.setPort("33445");
+        node.setPublicKey("CDkze7mJpSuFAUq6byoLmteyGYMeJ6taXxWoVvDMexWC");
+        arrayList.add(node);
 
-2. 在 AndroidStudio 中新建 android 工程如 CarrierDemo，minimum SDK 选择 API21 或以上。
+        node = new BootstrapNode();
+        node.setIpv4("18.216.6.197");
+        node.setPort("33445");
+        node.setPublicKey("H8sqhRrQuJZ6iLtP2wanxt4LzdNrN2NNFnpPdq1uJ9n2");
+        arrayList.add(node);
 
-3. 将 org.elastos.carrier-release.aar 文件拷贝到 CarrierDemo/app/libs/ 下。
-    ![2.3](./images/get-started-for-android/2.3.png)
-4. 修改 CarrierDemo/app/build.gradle，在其中添加对本地aar的依赖：
-    ![2.4](./images/get-started-for-android/2.4.png)
-5. 在 AndroidManifest.xml 中添加 internet 权限。
-    ![2.5](./images/get-started-for-android/2.5.png)
+        node = new BootstrapNode();
+        node.setIpv4("52.83.171.135");
+        node.setPort("33445");
+        node.setPublicKey("5tuHgK1Q4CYf4K5PutsEPK5E3Z7cbtEBdx7LwmdzqXHL");
+        arrayList.add(node);
 
-    
+        setBootstrapNodes(arrayList);
+    }
+}
+    {{< /tab >}} 
+    {{< tab name="Swift" codelang="swift" >}} 
+    {{< /tab >}} 
+    {{< tab name="Trinity" codelang="js" >}} 
+    {{< /tab >}} 
+{{< /tabs >}}
 
-## 3 启动 Carrier
+### Create a handler to receive status changes
 
-1. 新建 DefaultCarrierOptions.java，并继承于 Carrier.Options。设置 BootstrapNodes，可参照 CarrierDemo的[DefaultCarrierOptions.java](https://github.com/mengxiaokun/CarrierDemo/blob/master/app/src/main/java/org/elastos/carrier/demo/DefaultCarrierOptions.java)。
-2. 新建 DefaultCarrierHandler.java，并继承于 AbstractCarrierHandler。可参照 CarrierDemo的[DefaultCarrierHandler.java](https://github.com/mengxiaokun/CarrierDemo/blob/master/app/src/main/java/org/elastos/carrier/demo/DefaultCarrierHandler.java)。
-3. 新建 CarrierHelper.java，用于对外提供简单的 API。新建 startCarrier函数用于启动 Carrier。在这个函数中添加 DefaultCarrierHandler 和 DefaultCarrierHandler 的实例，最后调用 Carrier.start()。 实现可参照 CarrierDemo的[CarrierHelper.java](https://github.com/mengxiaokun/CarrierDemo/blob/master/app/src/main/java/org/elastos/carrier/demo/CarrierHelper.java)。
-    ```java
-    public final class CarrierHelper {
-        ......
-        public static void startCarrier(Context context) {
-            try {
-                String dir = context.getFilesDir().getAbsolutePath();
-                Carrier.Options options = new DefaultCarrierOptions(dir);
-                CarrierHandler handler = new DefaultCarrierHandler();
+A handler object will be provided to carrier, and several callbacks will be triggered there. From that handler you will be able to handle some of your app's logic.
 
-                Carrier.getInstance(options, handler);
-                Carrier carrier = Carrier.getInstance();
+{{< tabs >}} 
+    {{< tab name="Java" codelang="java" >}} 
+public class DefaultCarrierHandler extends AbstractCarrierHandler {
+    @Override
+    public void onConnection(Carrier carrier, ConnectionStatus status) {
+        Logger.info("Carrier connection status: " + status);
 
-                carrier.start(1000);
-                Logger.info("start carrier.");
-            } catch (Exception e) {
-                Logger.error("Failed to start carrier.", e);
+        if(status == ConnectionStatus.Connected) {
+            String msg = "Friend List:";
+            List<FriendInfo> friendList = CarrierHelper.getFriendList();
+            if(friendList != null) {
+                for(FriendInfo info: friendList) {
+                    msg += "\n  " + info.getUserId();
+                }
             }
+            Logger.info(msg);
         }
     }
-    ```
+
+    @Override
+    public void onFriendRequest(Carrier carrier, String userId, UserInfo info, String hello) {
+        Logger.info("Carrier received friend request. Peer UserId: " + userId);
+        CarrierHelper.acceptFriend(userId, hello);
+    }
+
+    @Override
+    public void onFriendAdded(Carrier carrier, FriendInfo info) {
+        Logger.info("Carrier friend added. Peer UserId: " + info.getUserId());
+    }
+
+    @Override
+    public void onFriendConnection(Carrier carrier, String friendId, ConnectionStatus status) {
+        Logger.info("Carrier friend connect. peer UserId: " + friendId + " status:" + status);
+        if(status == ConnectionStatus.Connected) {
+            CarrierHelper.setPeerUserId(friendId);
+        } else {
+            CarrierHelper.setPeerUserId(null);
+        }
+    }
+
+    @Override
+    public void onFriendMessage(Carrier carrier, String from, byte[] message) {
+        Logger.info("Carrier receiver message from UserId: " + from + "\nmessage: " + new String(message));
+    }
+}
+  {{< /tab >}} 
+    {{< tab name="Swift" codelang="swift" >}} 
+    {{< /tab >}} 
+    {{< tab name="Trinity" codelang="js" >}} 
+    {{< /tab >}} 
+{{< /tabs >}}
+
+### Start Carrier
+
+Now that we have options, and a handler, we can start carrier like this:
+
+{{< todo "explain what is the 1000 parameter" >}}
+
+{{< tabs >}} 
+    {{< tab name="Java" codelang="java" >}} 
+// Initial setup
+Carrier.Options options = new DefaultCarrierOptions(context.getFilesDir().getAbsolutePath());
+CarrierHandler handler = new DefaultCarrierHandler();
+
+// Create or get an instance
+Carrier.getInstance(options, handler);
+Carrier carrier = Carrier.getInstance();
+
+// Start the service
+carrier.start(1000);
+    {{< /tab >}} 
+    {{< tab name="Swift" codelang="swift" >}} 
+    {{< /tab >}} 
+    {{< tab name="Trinity" codelang="js" >}} 
+    {{< /tab >}} 
+{{< /tabs >}}
+
+
+
+{{< pleasetranslate >}}
+
+3. 新建 CarrierHelper.java，用于对外提供简单的 API。新建 startCarrier函数用于启动 Carrier。在这个函数中添加 DefaultCarrierHandler 和 DefaultCarrierHandler 的实例，最后调用 Carrier.start()。 实现可参照 CarrierDemo的[CarrierHelper.java](https://github.com/mengxiaokun/CarrierDemo/blob/master/app/src/main/java/org/elastos/carrier/demo/CarrierHelper.java)。
+    
 4. 在 MainActivity.java 中调用 CarrierHelper.startCarrier()。
 5. 在 DefaultCarrierHandler.java 中重载 onConnection() 函数，监听 Carrier 和 BootstrapNode 的连接状态（Online/Offline）。
 6. 运行 CarrierDemo， Carrier 就启动起来了。

@@ -2,7 +2,7 @@
 title = "What is Elastos?"
 weight = 10
 chapter = false
-pre = "<i class='fa ela-folder'></i> "
+pre = ""
 alwaysopen = false
 +++
 

@@ -1,0 +1,1517 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/BootstrapNode.swift",
+      "line": 26,
+      "symbol": "BootstrapNode",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/BootstrapNode.swift",
+      "line": 48,
+      "symbol": "BootstrapNode.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/BootstrapNode.swift",
+      "line": 56,
+      "symbol": "BootstrapNode.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/BootstrapNode.swift",
+      "line": 61,
+      "symbol": "HiveBootstrapNode",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/BootstrapNode.swift",
+      "line": 78,
+      "symbol": "HiveBootstrapNode.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/BootstrapNode.swift",
+      "line": 85,
+      "symbol": "HiveBootstrapNode.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/BootstrapNode.swift",
+      "line": 90,
+      "symbol": "convertBootstrapNodesToCBootstrapNodes(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/BootstrapNode.swift",
+      "line": 120,
+      "symbol": "convertBootstrapNodesToCHiveBootstrapNode(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/BootstrapNode.swift",
+      "line": 145,
+      "symbol": "cleanupCBootstrap(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/BootstrapNode.swift",
+      "line": 164,
+      "symbol": "cleanupCBootstraphive(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Callbacks.swift",
+      "line": 26,
+      "symbol": "getCarrier(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Callbacks.swift",
+      "line": 292,
+      "symbol": "getNativeHandlers()",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Carrier.swift",
+      "line": 25,
+      "symbol": "getErrorCode()",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Carrier.swift",
+      "line": 34,
+      "symbol": "Carrier.CarrierFriendInviteResponseHandler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Carrier.swift",
+      "line": 47,
+      "symbol": "Carrier.ccarrier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Carrier.swift",
+      "line": 51,
+      "symbol": "Carrier.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Carrier.swift",
+      "line": 53,
+      "symbol": "Carrier.friends",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Carrier.swift",
+      "line": 55,
+      "symbol": "Carrier.groups",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Carrier.swift",
+      "line": 164,
+      "symbol": "Carrier.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Carrier.swift",
+      "line": 317,
+      "symbol": "Carrier.getSelfNospam(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Carrier.swift",
+      "line": 411,
+      "symbol": "Carrier.getSelfPresence(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/CarrierOptions.swift",
+      "line": 32,
+      "symbol": "CarrierOptions.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/CarrierOptions.swift",
+      "line": 50,
+      "symbol": "CarrierOptions.bootstrapNodes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/CarrierOptions.swift",
+      "line": 52,
+      "symbol": "CarrierOptions.hivebootstrapNodes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/CarrierOptions.swift",
+      "line": 56,
+      "symbol": "convertCarrierOptionsToCOptions(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/CarrierOptions.swift",
+      "line": 74,
+      "symbol": "cleanupCOptions(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/ConnectionStatus.swift",
+      "line": 40,
+      "symbol": "CarrierConnectionStatus.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/ConnectionStatus.swift",
+      "line": 57,
+      "symbol": "convertCConnectionStatusToCarrierConnectionStatus(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/FriendInfo.swift",
+      "line": 39,
+      "symbol": "CarrierFriendInfo.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/FriendInfo.swift",
+      "line": 79,
+      "symbol": "CarrierFriendInfo.format2(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/FriendInfo.swift",
+      "line": 88,
+      "symbol": "CarrierFriendInfo.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/FriendInfo.swift",
+      "line": 93,
+      "symbol": "convertCarrierFriendInfoToCFriendInfo(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/FriendInfo.swift",
+      "line": 105,
+      "symbol": "convertCFriendInfoToCarrierFriendInfo(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Group.swift",
+      "line": 36,
+      "symbol": "CarrierGroup.ccarrier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Group.swift",
+      "line": 37,
+      "symbol": "CarrierGroup.groupid",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Group.swift",
+      "line": 39,
+      "symbol": "CarrierGroup.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Group.swift",
+      "line": 41,
+      "symbol": "CarrierGroup.init(_:_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Group.swift",
+      "line": 52,
+      "symbol": "CarrierGroup.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/Group.swift",
+      "line": 57,
+      "symbol": "CarrierGroup.leave()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/GroupPeer.swift",
+      "line": 37,
+      "symbol": "CarrierGroupPeer.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/GroupPeer.swift",
+      "line": 51,
+      "symbol": "CarrierGroupPeer.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/GroupPeer.swift",
+      "line": 57,
+      "symbol": "CarrierGroupPeer.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/GroupPeer.swift",
+      "line": 62,
+      "symbol": "convertCarrierGroupPeerToCGroupPeer(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/GroupPeer.swift",
+      "line": 71,
+      "symbol": "convertCGroupPeerToCarrierGroupPeer(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/LogLevel.swift",
+      "line": 64,
+      "symbol": "CarrierLogLevel.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/LogLevel.swift",
+      "line": 93,
+      "symbol": "convertCarrierLogLevelToCLogLevel(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/LogLevel.swift",
+      "line": 97,
+      "symbol": ">=(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/PresenceStatus.swift",
+      "line": 41,
+      "symbol": "CarrierPresenceStatus.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/PresenceStatus.swift",
+      "line": 60,
+      "symbol": "convertCPresenceStatusToCarrierPresenceStatus(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/PresenceStatus.swift",
+      "line": 64,
+      "symbol": "convertCarrierPresenceStatusToCPresenceStatus(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/UserInfo.swift",
+      "line": 55,
+      "symbol": "CarrierUserInfo.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/UserInfo.swift",
+      "line": 100,
+      "symbol": "CarrierUserInfo.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/UserInfo.swift",
+      "line": 114,
+      "symbol": "CarrierUserInfo.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/UserInfo.swift",
+      "line": 119,
+      "symbol": "convertCarrierUserInfoToCUserInfo(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Carrier/UserInfo.swift",
+      "line": 135,
+      "symbol": "convertCUserInfoToCarrierUserInfo(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Exceptions/CarrierError.swift",
+      "line": 25,
+      "symbol": "CarrierError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Exceptions/CarrierError.swift",
+      "line": 26,
+      "symbol": "CarrierError.InvalidArgument",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Exceptions/CarrierError.swift",
+      "line": 27,
+      "symbol": "CarrierError.GeneralError(ecode:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Exceptions/CarrierError.swift",
+      "line": 28,
+      "symbol": "CarrierError.DHTError(ecode:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Exceptions/CarrierError.swift",
+      "line": 29,
+      "symbol": "CarrierError.SystemError(ecode:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Exceptions/CarrierError.swift",
+      "line": 30,
+      "symbol": "CarrierError.ICEError(ecode:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Exceptions/CarrierError.swift",
+      "line": 31,
+      "symbol": "CarrierError.UnknowError(ecode:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Exceptions/CarrierError.swift",
+      "line": 34,
+      "symbol": "getErrorString(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Exceptions/CarrierError.swift",
+      "line": 45,
+      "symbol": "CarrierError",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Exceptions/CarrierError.swift",
+      "line": 65,
+      "symbol": "CarrierError",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Exceptions/CarrierError.swift",
+      "line": 84,
+      "symbol": "CarrierError",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Exceptions/CarrierError.swift",
+      "line": 85,
+      "symbol": "CarrierError.getFacility(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Exceptions/CarrierError.swift",
+      "line": 89,
+      "symbol": "CarrierError.getCode(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Exceptions/CarrierError.swift",
+      "line": 93,
+      "symbol": "CarrierError.FromErrorCode(errno:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransfer.swift",
+      "line": 31,
+      "symbol": "CarrierFileTransfer.MAX_FILE_ID_LEN",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransfer.swift",
+      "line": 32,
+      "symbol": "CarrierFileTransfer.MAX_FILE_NAME_LEN",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransfer.swift",
+      "line": 37,
+      "symbol": "CarrierFileTransfer.cfiletransfer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransfer.swift",
+      "line": 38,
+      "symbol": "CarrierFileTransfer.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransfer.swift",
+      "line": 40,
+      "symbol": "CarrierFileTransfer.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransfer.swift",
+      "line": 46,
+      "symbol": "CarrierFileTransfer.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferConnectionState.swift",
+      "line": 30,
+      "symbol": "CarrierFileTransferConnectionState",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferConnectionState.swift",
+      "line": 46,
+      "symbol": "CarrierFileTransferConnectionState.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferConnectionState.swift",
+      "line": 70,
+      "symbol": "convertCFileTransferConnectionToCarrierFileTransferConnection(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferInfo.swift",
+      "line": 38,
+      "symbol": "CarrierFileTransferInfo.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferInfo.swift",
+      "line": 59,
+      "symbol": "CarrierFileTransferInfo.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferInfo.swift",
+      "line": 67,
+      "symbol": "CarrierFileTransferInfo.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferInfo.swift",
+      "line": 72,
+      "symbol": "convertCarrierFileTransferInfoToCFileTransferInfo(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferInfo.swift",
+      "line": 82,
+      "symbol": "convertCFileTransferInfoToCarrierFileTransferInfo(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferManager.swift",
+      "line": 30,
+      "symbol": "onStateChanged(_:cState:cctxt:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferManager.swift",
+      "line": 44,
+      "symbol": "onFileReceived(_:cFileId:cFileName:fileSize:cctxt:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferManager.swift",
+      "line": 61,
+      "symbol": "onPullReceived(_:cFileId:offset:cctxt:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferManager.swift",
+      "line": 76,
+      "symbol": "onDataReceived(_:cFileId:cData:cLength:cctxt:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferManager.swift",
+      "line": 101,
+      "symbol": "onPendReceived(_:cFileId:cctxt:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferManager.swift",
+      "line": 116,
+      "symbol": "onResumeReceived(_:cFileId:cctxt:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferManager.swift",
+      "line": 131,
+      "symbol": "onCancelReceived(_:cFileId:cStatus:cReason:cctxt:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferManager.swift",
+      "line": 150,
+      "symbol": "CarrierFileTransferConnectHandler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/FileTransfer/FileTransferManager.swift",
+      "line": 261,
+      "symbol": "CarrierFileTransferManager.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 26,
+      "symbol": "CarrierAddressInfo",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 29,
+      "symbol": "CarrierAddressInfo.CandidateType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 31,
+      "symbol": "CarrierAddressInfo.CandidateType.Host",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 33,
+      "symbol": "CarrierAddressInfo.CandidateType.ServerReflexive",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 35,
+      "symbol": "CarrierAddressInfo.CandidateType.PeerReflexive",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 37,
+      "symbol": "CarrierAddressInfo.CandidateType.Relayed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 58,
+      "symbol": "CarrierAddressInfo.SocketAddress",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 59,
+      "symbol": "CarrierAddressInfo.SocketAddress.hostname",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 60,
+      "symbol": "CarrierAddressInfo.SocketAddress.port",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 62,
+      "symbol": "CarrierAddressInfo.SocketAddress.init(hostname:port:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 69,
+      "symbol": "CarrierAddressInfo.SocketAddress.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 76,
+      "symbol": "CarrierAddressInfo.candidateType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 77,
+      "symbol": "CarrierAddressInfo.address",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 78,
+      "symbol": "CarrierAddressInfo.relatedAddress",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 80,
+      "symbol": "CarrierAddressInfo.init(candidateType:address:port:relatedAddress:relatedPort:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 96,
+      "symbol": "CarrierAddressInfo.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 103,
+      "symbol": "CarrierAddressInfo.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/AddressInfo.swift",
+      "line": 108,
+      "symbol": "convertCAddressInfoToCarrierAddressInfo(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/CloseReason.swift",
+      "line": 37,
+      "symbol": "CloseReason.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/CloseReason.swift",
+      "line": 57,
+      "symbol": "convertCCloseReasonToCloseReason(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/NetworkTopology.swift",
+      "line": 26,
+      "symbol": "CarrierNetworkTopology",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/NetworkTopology.swift",
+      "line": 28,
+      "symbol": "CarrierNetworkTopology.LAN",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/NetworkTopology.swift",
+      "line": 30,
+      "symbol": "CarrierNetworkTopology.P2P",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/NetworkTopology.swift",
+      "line": 32,
+      "symbol": "CarrierNetworkTopology.Relayed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/NetworkTopology.swift",
+      "line": 34,
+      "symbol": "CarrierNetworkTopology.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/NetworkTopology.swift",
+      "line": 54,
+      "symbol": "convertCNetworkTopologyToCarrierNetworkTopology(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/PortForwardingProtocol.swift",
+      "line": 31,
+      "symbol": "PortForwardingProtocol.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/PortForwardingProtocol.swift",
+      "line": 47,
+      "symbol": "convertPortForwardingProtocolToCPortForwardingProtocol(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Session.swift",
+      "line": 30,
+      "symbol": "onStateChanged(_:cstream:cstate:cctxt:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Session.swift",
+      "line": 44,
+      "symbol": "onStreamData(_:cstream:cdata:clen:cctxt:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Session.swift",
+      "line": 61,
+      "symbol": "onChannelOpen(_:cstream:cchannel:ccookie:cctxt:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Session.swift",
+      "line": 81,
+      "symbol": "onChannelOpened(_:cstream:cchannel:cctxt:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Session.swift",
+      "line": 93,
+      "symbol": "onChannelClose(_:cstream:cchannel:creason:cctxt:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Session.swift",
+      "line": 108,
+      "symbol": "onChannelData(_:cstream:cchannel:cdata:clen:cctxt:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Session.swift",
+      "line": 131,
+      "symbol": "onChannelPending(_:cstream:cchannel:cctxt:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Session.swift",
+      "line": 143,
+      "symbol": "onChannelResume(_:cstream:cchannel:cctxt:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Session.swift",
+      "line": 157,
+      "symbol": "CarrierSessionRequestCompleteHandler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Session.swift",
+      "line": 164,
+      "symbol": "CarrierSession.csession",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Session.swift",
+      "line": 169,
+      "symbol": "CarrierSession.init(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Session.swift",
+      "line": 177,
+      "symbol": "CarrierSession.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/SessionManager.swift",
+      "line": 27,
+      "symbol": "CarrierSessionRequestHandler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/SessionManager.swift",
+      "line": 160,
+      "symbol": "CarrierSessionManager.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Stream.swift",
+      "line": 34,
+      "symbol": "CarrierStream.streamId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Stream.swift",
+      "line": 36,
+      "symbol": "CarrierStream.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Stream.swift",
+      "line": 38,
+      "symbol": "CarrierStream.init(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Stream.swift",
+      "line": 60,
+      "symbol": "CarrierStream.getStreamId()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/Stream.swift",
+      "line": 65,
+      "symbol": "CarrierStream.getTransportInfo()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/StreamState.swift",
+      "line": 52,
+      "symbol": "CarrierStreamState.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/StreamState.swift",
+      "line": 80,
+      "symbol": "convertCStreamStateToCarrierStreamState(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/StreamType.swift",
+      "line": 49,
+      "symbol": "CarrierStreamType.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/StreamType.swift",
+      "line": 73,
+      "symbol": "convertCarrierStreamTypeToCStreamType(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/StreamType.swift",
+      "line": 77,
+      "symbol": "convertCStreamTypeToCarrierStreamType(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/TransportInfo.swift",
+      "line": 26,
+      "symbol": "CarrierTransportInfo",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/TransportInfo.swift",
+      "line": 28,
+      "symbol": "CarrierTransportInfo.networkTopology",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/TransportInfo.swift",
+      "line": 29,
+      "symbol": "CarrierTransportInfo.localAddressInfo",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/TransportInfo.swift",
+      "line": 30,
+      "symbol": "CarrierTransportInfo.remoteAddressInfo",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/TransportInfo.swift",
+      "line": 32,
+      "symbol": "CarrierTransportInfo.init(networkTopology:localAddressInfo:remoteAddressInfo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/TransportInfo.swift",
+      "line": 41,
+      "symbol": "CarrierTransportInfo.format(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/TransportInfo.swift",
+      "line": 50,
+      "symbol": "CarrierTransportInfo.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Session/TransportInfo.swift",
+      "line": 55,
+      "symbol": "convertCTransportInfoToCarrierTransportInfo(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Utilities/Base58.swift",
+      "line": 25,
+      "symbol": "Base58",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Utilities/Base58.swift",
+      "line": 28,
+      "symbol": "Base58.encode(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Utilities/Base58.swift",
+      "line": 67,
+      "symbol": "Base58.decode(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Utilities/Log.swift",
+      "line": 25,
+      "symbol": "Log",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Utilities/Log.swift",
+      "line": 28,
+      "symbol": "Log.setLevel(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Utilities/Log.swift",
+      "line": 32,
+      "symbol": "Log.d(_:_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Utilities/Log.swift",
+      "line": 39,
+      "symbol": "Log.i(_:_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Utilities/Log.swift",
+      "line": 46,
+      "symbol": "Log.w(_:_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Utilities/Log.swift",
+      "line": 53,
+      "symbol": "Log.e(_:_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Utilities/String.swift",
+      "line": 25,
+      "symbol": "String.toHardString(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Utilities/String.swift",
+      "line": 35,
+      "symbol": "String.init(cCharPointer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Utilities/String.swift",
+      "line": 39,
+      "symbol": "String.writeToCCharPointer(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Utilities/String.swift",
+      "line": 47,
+      "symbol": "createCStringDuplicate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/ElastosCarrier/Utilities/String.swift",
+      "line": 57,
+      "symbol": "deallocCString(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CCarrier.swift",
+      "line": 61,
+      "symbol": "CBootstrapNode.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CCarrier.swift",
+      "line": 90,
+      "symbol": "CHiveBootstrapNode.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CCarrier.swift",
+      "line": 151,
+      "symbol": "COptions.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CCarrier.swift",
+      "line": 167,
+      "symbol": "CLogLevel.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CCarrier.swift",
+      "line": 213,
+      "symbol": "CLogLevel_Debug",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CCarrier.swift",
+      "line": 219,
+      "symbol": "CLogLevel_Trace",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CCarrier.swift",
+      "line": 225,
+      "symbol": "CLogLevel_Verbose",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CCarrier.swift",
+      "line": 233,
+      "symbol": "CConnectionStatus.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CCarrier.swift",
+      "line": 263,
+      "symbol": "CPresenceStatus.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CCarrier.swift",
+      "line": 349,
+      "symbol": "CUserInfo.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CCarrier.swift",
+      "line": 385,
+      "symbol": "CFriendInfo.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CCarrier.swift",
+      "line": 407,
+      "symbol": "CGroupPeer.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CCarrier.swift",
+      "line": 498,
+      "symbol": "CGroupCallbacks.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CCarrier.swift",
+      "line": 729,
+      "symbol": "CCallbacks.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CCarrier.swift",
+      "line": 1634,
+      "symbol": "ela_get_error()",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CFileTransfer.swift",
+      "line": 51,
+      "symbol": "CFileTransferInfo.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CFileTransfer.swift",
+      "line": 54,
+      "symbol": "CFileTransferConnection",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CFileTransfer.swift",
+      "line": 56,
+      "symbol": "CFileTransferConnection.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CFileTransfer.swift",
+      "line": 204,
+      "symbol": "CFileTransferCallbacks.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 34,
+      "symbol": "CStreamType.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 71,
+      "symbol": "CCandidateType",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 73,
+      "symbol": "CCandidateType.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 84,
+      "symbol": "CCandidateType_Host",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 85,
+      "symbol": "CCandidateType_ServerReflexive",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 86,
+      "symbol": "CCandidateType_PeerReflexive",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 87,
+      "symbol": "CCandidateType_Relayed",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 89,
+      "symbol": "CNetworkTopology",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 91,
+      "symbol": "CNetworkTopology.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 101,
+      "symbol": "CNetworkTopology_LAN",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 102,
+      "symbol": "CNetworkTopology_P2P",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 103,
+      "symbol": "CNetworkTopology_RELAYED",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 105,
+      "symbol": "CAddressInfo",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 107,
+      "symbol": "CAddressInfo.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 109,
+      "symbol": "CAddressInfo.addr",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 111,
+      "symbol": "CAddressInfo.port",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 113,
+      "symbol": "CAddressInfo.related_addr",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 115,
+      "symbol": "CAddressInfo.related_port",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 117,
+      "symbol": "CAddressInfo.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 120,
+      "symbol": "CTransportInfo",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 122,
+      "symbol": "CTransportInfo.topology",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 124,
+      "symbol": "CTransportInfo.local",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 126,
+      "symbol": "CTransportInfo.remote",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 128,
+      "symbol": "CTransportInfo.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 402,
+      "symbol": "CStreamState.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 434,
+      "symbol": "CPortForwardingProtocol.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 454,
+      "symbol": "CCloseReason.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 466,
+      "symbol": "CCloseReason_Normal",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 468,
+      "symbol": "CCloseReason_Timeout",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 470,
+      "symbol": "CCloseReason_Error",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK/NativeDistributions/include/CSession.swift",
+      "line": 630,
+      "symbol": "CStreamCallbacks.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Carrier.Swift.SDK"
+}

@@ -2,7 +2,7 @@
 title = "Development history"
 weight = 20
 chapter = false
-pre = "<i class='fa ela-page'></i>"
+pre = ""
 alwaysopen = false
 +++
 

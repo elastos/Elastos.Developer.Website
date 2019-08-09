@@ -2,7 +2,7 @@
 title = "Hive"
 weight = 70
 chapter = false
-pre = "<i class='fa ela-page'></i>"
+pre = ""
 alwaysopen = false
 +++
 

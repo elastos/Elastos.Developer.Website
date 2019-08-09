@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HiveDirectoryHandle Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/HiveDirectoryHandle" class="dashAnchor"></a>
+    <a title="HiveDirectoryHandle Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">ElastosHiveSDK Docs</a> (59% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">ElastosHiveSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        HiveDirectoryHandle Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AttributeMap.html">AttributeMap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DriveParameter.html">DriveParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DropBoxParameter.html">DropBoxParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveCallback.html">HiveCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveChildren.html">HiveChildren</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveClientHandle.html">HiveClientHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveClientInfo.html">HiveClientInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveDirectoryHandle.html">HiveDirectoryHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveDirectoryInfo.html">HiveDirectoryInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveDriveHandle.html">HiveDriveHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveDriveInfo.html">HiveDriveInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveFileHandle.html">HiveFileHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveFileInfo.html">HiveFileInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveItemInfo.html">HiveItemInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IPFSEntry.html">IPFSEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IPFSParameter.html">IPFSParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NativeParameter.html">NativeParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:14ElastosHiveSDK9NullEntryC">NullEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OAuthEntry.html">OAuthEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OneDriveParameter.html">OneDriveParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OwnCloudParameter.html">OwnCloudParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@ElastosHiveSDK@objc(cs)Result">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:14ElastosHiveSDK10SdkVersionC">SdkVersion</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/DriveType.html">DriveType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HiveError.html">HiveError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/DirectoryItem.html">DirectoryItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/FileItem.html">FileItem</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Authenticator.html">Authenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ResourceItem.html">ResourceItem</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>HiveDirectoryHandle</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@objc(HiveDirectory)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">HiveDirectoryHandle</span> <span class="p">:</span> <span class="kt"><a href="../Classes.html#/c:@M@ElastosHiveSDK@objc(cs)Result">Result</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/ResourceItem.html">ResourceItem</a></span><span class="p">,</span> <span class="kt">FileItem</span><span class="p">,</span> <span class="kt">DirectoryItem</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC12resourceTypea"></a>
+                    <a name="//apple_ref/swift/Alias/resourceType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC12resourceTypea">resourceType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>HiveDirectoryInfo</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="n">resourceType</span> <span class="o">=</span> <span class="kt"><a href="../Classes/HiveDirectoryInfo.html">HiveDirectoryInfo</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC5driveAA0b5DriveE0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/drive" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC5driveAA0b5DriveE0CSgvp">drive</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current drive</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">drive</span><span class="p">:</span> <span class="kt"><a href="../Classes/HiveDriveHandle.html">HiveDriveHandle</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC11directoryIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/directoryId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC11directoryIdSSvp">directoryId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The unique identifier of the directory within the Drive.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">directoryId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC8pathNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/pathName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC8pathNameSSvp">pathName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the directory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">pathName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC8lastInfoAA0bdG0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lastInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC8lastInfoAA0bdG0CSgvp">lastInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The HiveDirectory info</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lastInfo</span><span class="p">:</span> <span class="kt"><a href="../Classes/HiveDirectoryInfo.html">HiveDirectoryInfo</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC14parentPathNameSSyF"></a>
+                    <a name="//apple_ref/swift/Method/parentPathName()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC14parentPathNameSSyF">parentPathName()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Parent path</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">parentPathName</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns the parent path of the subclasses</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC15lastUpdatedInfoyXeycACF"></a>
+                    <a name="//apple_ref/swift/Method/lastUpdatedInfo()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC15lastUpdatedInfoyXeycACF">lastUpdatedInfo()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Latst update for <code>HiveDirectory</code> subclasses</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lastUpdatedInfo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="n"><a href="../Classes/HiveDirectoryHandle.html#/s:14ElastosHiveSDK0B15DirectoryHandleC12resourceTypea">resourceType</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns the last update info for the subclasses</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC15lastUpdatedInfoyXeAA0B8CallbackCyAA0bdH0CG_tcACF"></a>
+                    <a name="//apple_ref/swift/Method/lastUpdatedInfo(handleBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC15lastUpdatedInfoyXeAA0B8CallbackCyAA0bdH0CG_tcACF">lastUpdatedInfo(handleBy:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Latst update for <code>HiveDirectory</code> subclasses</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lastUpdatedInfo</span><span class="p">(</span><span class="nv">handleBy</span><span class="p">:</span> <span class="kt"><a href="../Classes/HiveCallback.html">HiveCallback</a></span><span class="o">&lt;</span><span class="n"><a href="../Classes/HiveDirectoryHandle.html#/s:14ElastosHiveSDK0B15DirectoryHandleC12resourceTypea">resourceType</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="n"><a href="../Classes/HiveDirectoryHandle.html#/s:14ElastosHiveSDK0B15DirectoryHandleC12resourceTypea">resourceType</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handleBy</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns the last update info for the subclasses</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC06createD0yXeSS_tcACF"></a>
+                    <a name="//apple_ref/swift/Method/createDirectory(withName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC06createD0yXeSS_tcACF">createDirectory(withName:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a directory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createDirectory</span><span class="p">(</span><span class="nv">withName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt">HiveDirectoryHandle</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name with the create directory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns a directory for subclassees</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC06createD0yXeSS_AA0B8CallbackCyACGtcACF"></a>
+                    <a name="//apple_ref/swift/Method/createDirectory(withName:handleBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC06createD0yXeSS_AA0B8CallbackCyACGtcACF">createDirectory(withName:handleBy:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a directory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createDirectory</span><span class="p">(</span><span class="nv">withName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">handleBy</span><span class="p">:</span> <span class="kt"><a href="../Classes/HiveCallback.html">HiveCallback</a></span><span class="o">&lt;</span><span class="kt">HiveDirectoryHandle</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt">HiveDirectoryHandle</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name with the create directory</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handleBy</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns a directory for subclasses</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC09directoryE0yXeSS_tcACF"></a>
+                    <a name="//apple_ref/swift/Method/directoryHandle(atName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC09directoryE0yXeSS_tcACF">directoryHandle(atName:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Request a directory with the current directory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">directoryHandle</span><span class="p">(</span><span class="nv">atName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt">HiveDirectoryHandle</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>atName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name with the request directory</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns a directory with the given name for subclassses</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC09directoryE0yXeSS_AA0B8CallbackCyACGtcACF"></a>
+                    <a name="//apple_ref/swift/Method/directoryHandle(atName:handleBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC09directoryE0yXeSS_AA0B8CallbackCyACGtcACF">directoryHandle(atName:handleBy:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Request a directory with the current directory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">directoryHandle</span><span class="p">(</span><span class="nv">atName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">handleBy</span><span class="p">:</span> <span class="kt"><a href="../Classes/HiveCallback.html">HiveCallback</a></span><span class="o">&lt;</span><span class="kt">HiveDirectoryHandle</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt">HiveDirectoryHandle</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>atName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name with the request directory</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handleBy</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns a directory with the given name for subclasses</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC10createFileyXeSS_tcACF"></a>
+                    <a name="//apple_ref/swift/Method/createFile(withName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC10createFileyXeSS_tcACF">createFile(withName:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a file with the current directory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createFile</span><span class="p">(</span><span class="nv">withName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HiveFileHandle.html">HiveFileHandle</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name with the create file</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns a file with the given name for subclasses</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC10createFileyXeSS_AA0B8CallbackCyAA0bgE0CGtcACF"></a>
+                    <a name="//apple_ref/swift/Method/createFile(withName:handleBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC10createFileyXeSS_AA0B8CallbackCyAA0bgE0CGtcACF">createFile(withName:handleBy:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a file with the current directory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createFile</span><span class="p">(</span><span class="nv">withName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">handleBy</span><span class="p">:</span> <span class="kt"><a href="../Classes/HiveCallback.html">HiveCallback</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HiveFileHandle.html">HiveFileHandle</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HiveFileHandle.html">HiveFileHandle</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name with the create file</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handleBy</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns a file with the given name for subclasses</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC04fileE0yXeSS_tcACF"></a>
+                    <a name="//apple_ref/swift/Method/fileHandle(atName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC04fileE0yXeSS_tcACF">fileHandle(atName:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Requst a file with the current directory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fileHandle</span><span class="p">(</span><span class="nv">atName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HiveFileHandle.html">HiveFileHandle</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>atName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name with the request file</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns a file with the given name for subclasses</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC04fileE0yXeSS_AA0B8CallbackCyAA0b4FileE0CGtcACF"></a>
+                    <a name="//apple_ref/swift/Method/fileHandle(atName:handleBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC04fileE0yXeSS_AA0B8CallbackCyAA0b4FileE0CGtcACF">fileHandle(atName:handleBy:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Requst a file with the current directory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fileHandle</span><span class="p">(</span><span class="nv">atName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">handleBy</span><span class="p">:</span> <span class="kt"><a href="../Classes/HiveCallback.html">HiveCallback</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HiveFileHandle.html">HiveFileHandle</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HiveFileHandle.html">HiveFileHandle</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>atName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name with the request file</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handleBy</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Resturns a file with the given name for subclasses</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC11getChildrenyXeycACF"></a>
+                    <a name="//apple_ref/swift/Method/getChildren()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC11getChildrenyXeycACF">getChildren()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>List for current directory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getChildren</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HiveChildren.html">HiveChildren</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns list for current directory</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC11getChildrenyXeAA0B8CallbackCyAA0bG0CG_tcACF"></a>
+                    <a name="//apple_ref/swift/Method/getChildren(handleBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC11getChildrenyXeAA0B8CallbackCyAA0bG0CG_tcACF">getChildren(handleBy:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>List for current directory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getChildren</span><span class="p">(</span><span class="nv">handleBy</span><span class="p">:</span> <span class="kt"><a href="../Classes/HiveCallback.html">HiveCallback</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HiveChildren.html">HiveChildren</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HiveChildren.html">HiveChildren</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handleBy</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Resturns children for current directory</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC6moveToyXeSS_tcACF"></a>
+                    <a name="//apple_ref/swift/Method/moveTo(newPath:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC6moveToyXeSS_tcACF">moveTo(newPath:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current directory move to the new path</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">moveTo</span><span class="p">(</span><span class="nv">newPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>newPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new path with the directory</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns <code>Void</code> if the move succees, <code><a href="../Enums/HiveError.html">HiveError</a></code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC6moveToyXeSS_AA0B8CallbackCyytGtcACF"></a>
+                    <a name="//apple_ref/swift/Method/moveTo(newPath:handleBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC6moveToyXeSS_AA0B8CallbackCyytGtcACF">moveTo(newPath:handleBy:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current directory move to the new path</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">moveTo</span><span class="p">(</span><span class="nv">newPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">handleBy</span><span class="p">:</span> <span class="kt"><a href="../Classes/HiveCallback.html">HiveCallback</a></span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>newPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new path with the directory</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handleBy</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns <code>Void</code> if the move succees, <code><a href="../Enums/HiveError.html">HiveError</a></code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC6copyToyXeSS_tcACF"></a>
+                    <a name="//apple_ref/swift/Method/copyTo(newPath:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC6copyToyXeSS_tcACF">copyTo(newPath:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current directory copy to the new path</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">copyTo</span><span class="p">(</span><span class="nv">newPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>newPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new path to copy</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns <code>Void</code> if the copy succees, <code><a href="../Enums/HiveError.html">HiveError</a></code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC6copyToyXeSS_AA0B8CallbackCyytGtcACF"></a>
+                    <a name="//apple_ref/swift/Method/copyTo(newPath:handleBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC6copyToyXeSS_AA0B8CallbackCyytGtcACF">copyTo(newPath:handleBy:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current directory copy to the new path</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">copyTo</span><span class="p">(</span><span class="nv">newPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">handleBy</span><span class="p">:</span> <span class="kt"><a href="../Classes/HiveCallback.html">HiveCallback</a></span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>newPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new path to copy</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handleBy</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns <code>Void</code> if the copy succees, <code><a href="../Enums/HiveError.html">HiveError</a></code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC10deleteItemyXeycACF"></a>
+                    <a name="//apple_ref/swift/Method/deleteItem()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC10deleteItemyXeycACF">deleteItem()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delete the current directory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteItem</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns <code>Void</code> if the delete succees, <code><a href="../Enums/HiveError.html">HiveError</a></code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B15DirectoryHandleC10deleteItemyXeAA0B8CallbackCyytG_tcACF"></a>
+                    <a name="//apple_ref/swift/Method/deleteItem(handleBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B15DirectoryHandleC10deleteItemyXeAA0B8CallbackCyytG_tcACF">deleteItem(handleBy:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delete the current directory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteItem</span><span class="p">(</span><span class="nv">handleBy</span><span class="p">:</span> <span class="kt"><a href="../Classes/HiveCallback.html">HiveCallback</a></span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handleBy</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns <code>Void</code> if the delete succees, <code><a href="../Enums/HiveError.html">HiveError</a></code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://www.elastos.org" target="_blank" rel="external">carrier-dev</a>. All rights reserved. (Last updated: 2019-08-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

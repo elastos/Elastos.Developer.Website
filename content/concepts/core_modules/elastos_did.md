@@ -2,7 +2,7 @@
 title = "Decentralized IDentifier Sidechain"
 weight = 20
 chapter = false
-pre = "<i class='fa ela-page'></i>"
+pre = ""
 alwaysopen = false
 +++
 

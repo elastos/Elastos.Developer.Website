@@ -3,7 +3,7 @@ title = "Deployment"
 date = 2019-05-24T21:15:33+02:00
 weight = 40
 chapter = false
-pre = "<i class='fa ela-page'></i> "
+pre = ""
 alwaysopen = false
 +++ 
 
@@ -13,7 +13,7 @@ When your application is ready for deployment, you need to go live to the mainne
 
 ## Checklist before going live
 
-{{< todo >}}
+{{< todo "@KP" >}}
 
 ## Switching from testnet to mainnet
 
@@ -27,10 +27,10 @@ You have to run your own server/VPS on AWS or any hosting service you want. That
 
 ### Install the Elastos ecosystem on your server
 
-{{< todo "Explain how to install and configure everything needed on a private server, so that all client libraries in the client app can work" >}}
+{{< todo "@KP Explain how to install and configure everything needed on a private server, so that all client libraries in the client app can work" >}}
 
 ### Switch your app to use your server
 
 Now it's time to let your app use **mainnet**. For this, it will go through your private server.
 
-{{< todo "Explain how to configure the cli to use private server's ip address and switch to that mainnet" >}}
+{{< todo "@KP Explain how to configure the cli to use private server's ip address and switch to that mainnet" >}}

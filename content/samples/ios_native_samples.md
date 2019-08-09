@@ -2,11 +2,9 @@
 title = "iOS native samples"
 weight = 20
 chapter = false
-pre = "<i class='fa ela-page'></i> "
+pre = ""
 alwaysopen = false
 +++
-
-{{< todo "Every Elastos team must add its own samples to the list. Each sample must be hosted on a github repository, and be directly compilable/runnable on the given platform." >}}
 
 ### [Carrier - IoT - Remote control](https://github.com/elastos/Elastos.NET.Carrier.Demo.Remoter.iOS)
 

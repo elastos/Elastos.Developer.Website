@@ -3,7 +3,7 @@ title = "FAQ"
 date = 2019-05-24T21:15:33+02:00
 weight = 90
 chapter = true
-pre = "<i class='fa ela-folder'></i> "
+pre = ""
 alwaysopen = false
 +++ 
 
@@ -12,5 +12,3 @@ alwaysopen = false
 # F.A.Q.
 
 Some points are still unclear after reading our doc? Maybe you'll get lucky here.
-
-{{< todo "integrate new article https://news.cyberrepublic.org/thoughts-on-elastos-faq-part-2-to-part-6/" >}}

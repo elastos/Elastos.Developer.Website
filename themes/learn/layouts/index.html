@@ -4,7 +4,10 @@
 	<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
 </span>
 
-{{if .Site.Home.Content }} 
-	{{.Site.Home.Content}}	
-{{ end }}  
-{{ partial "footer.html" . }}
+{{if isset .Params "iframedurl" }}
+{{ else }}
+	{{if .Site.Home.Content }} 
+		{{.Site.Home.Content}}	
+	{{ end }}  
+	{{ partial "footer.html" . }}
+{{ end }}

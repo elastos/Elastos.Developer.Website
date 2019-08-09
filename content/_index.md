@@ -3,7 +3,7 @@ title = "Home"
 date = 2019-05-24T21:15:40+02:00
 weight = 5
 chapter = false
-pre = "<i class='fa ela-page'></i> "
+pre = ""
 alwaysopen = false
 +++
 
@@ -38,9 +38,9 @@ Elastos is being actively developed. You may wonder what you can actually do yet
 
 | Module | Status |
 | ------ | ------ |
-| ELA mainchain | {{< todo >}} |
-| DID sidechain | {{< todo >}} |
-| Hive | {{< todo >}} |
-| Carrier | {{< todo >}} |
-| Ethereum sidechain | {{< todo >}} |
-| Elastos scheme | {{< todo >}} |
+| ELA mainchain | {{< todo "@NiuJingyu" >}} |
+| DID sidechain | {{< todo "@NiuJingyu">}} |
+| Hive | {{< todo "@NiuJingyu">}} |
+| Carrier | {{< todo "@NiuJingyu">}} |
+| Ethereum sidechain | {{< todo "@NiuJingyu">}} |
+| Elastos scheme | {{< todo "@NiuJingyu">}} |

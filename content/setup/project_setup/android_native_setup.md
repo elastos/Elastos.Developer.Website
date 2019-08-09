@@ -3,13 +3,13 @@ title = "Android native app setup"
 date = 2019-05-24T21:15:33+02:00
 weight = 10
 chapter = false
-pre = "<i class='fa ela-page'></i> "
+pre = ""
 alwaysopen = false
 +++ 
 
 {{< ownership "TangZhiLong (for hive, carrier)" >}}
 
 
-{{< todo "Android SDK requirements, gradle paths to be included, and specific configuration if needed" >}}
+{{< todo "@TangZhiLong Android SDK requirements, gradle paths to be included, and specific configuration if needed" >}}
 
-{{< todo "Explain how to import carrier, hive, did, etc, in gradle" >}}
+{{< todo "@TangZhiLong Explain how to import carrier, hive, did, etc, in gradle" >}}

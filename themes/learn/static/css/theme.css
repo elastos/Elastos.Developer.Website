@@ -38,6 +38,18 @@
     font-weight: 500;
     src: url("../fonts/Work_Sans_500.eot?#iefix") format("embedded-opentype"), url("../fonts/Work_Sans_500.woff") format("woff"), url("../fonts/Work_Sans_500.woff2") format("woff2"), url("../fonts/Work_Sans_500.svg#WorkSans") format("svg"), url("../fonts/Work_Sans_500.ttf") format("truetype");
 }
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/NotoSans-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/NotoSans-Bold.ttf") format("truetype");
+}
 body {
     background: #fff;
     color: #777;
@@ -102,10 +114,11 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     box-shadow: inset 0 1px 3px rgba(0,0,0,.06),0 0 5px rgba(0,169,218,.7)
 }
 #header-wrapper {
-    background: #326A90;
+    /*background: #326A90;*/
+    background:#f4fcff;
     color: #fff;
     text-align: center;
-    border-bottom: 4px solid #528AB0;
+    /*border-bottom: 4px solid #528AB0;*/
     padding: 1rem;
 }
 #header a {
@@ -122,28 +135,29 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     margin-top: 1rem;
     position: relative;
     border: 1px solid #528AB0;
-    background: #124A70;
+    /*background: #124A70;*/
+    background: #FFFFFF;
     border-radius: 4px;
 }
 .searchbox label {
-    color: rgba(255, 255, 255, 0.8);
+    color: #1ebdf2;
     position: absolute;
     left: 10px;
     top: 3px;
 }
 .searchbox span {
-    color: rgba(255, 255, 255, 0.6);
+    color: #1ebdf2;
     position: absolute;
     right: 10px;
     top: 3px;
     cursor: pointer;
 }
 .searchbox span:hover {
-    color: rgba(255, 255, 255, 0.9);
+    color: #c4c4c4;
 }
 .searchbox input {
     display: inline-block;
-    color: #fff;
+    color: #c4c4c4;
     width: 100%;
     height: 30px;
     background: transparent;
@@ -153,16 +167,16 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     font-weight: 300;
 }
 .searchbox input::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: #c4c4c4;
 }
 .searchbox input::-moz-placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: #c4c4c4;
 }
 .searchbox input:-moz-placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: #c4c4c4;
 }
 .searchbox input:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: #c4c4c4;
 }
 #sidebar-toggle-span {
     display: none;
@@ -173,20 +187,23 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     }
 }
 #sidebar {
-    background-color: #322A38;
+    /*background-color: #322A38;*/
+    background-color:#f4fcff;
     position: fixed;
     top: 0;
-    width: 300px;
+    width: 350px;
     bottom: 0;
     left: 0;
     font-weight: 400;
     font-size: 15px;
 }
 #sidebar a {
-    color: #ccc;
+    /*color: #ccc;*/
+    color: #7f7f7f;
 }
 #sidebar a:hover {
-    color: #e6e6e6;
+    /*color: #e6e6e6;*/
+    color: #5f5f5f;
 }
 #sidebar a.subtitle {
     color: rgba(204, 204, 204, 0.6);
@@ -267,6 +284,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 #sidebar ul.topics > li > a {
     line-height: 2rem;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 #sidebar ul.topics > li > a b {
     opacity: 0.5;
@@ -276,7 +294,8 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     margin-top: 9px;
 }
 #sidebar ul.topics > li.parent, #sidebar ul.topics > li.active {
-    background: #251f29;
+    /*background: #251f29;*/
+    background:#ffffff;
     margin-left: -1rem;
     margin-right: -1rem;
     padding-left: 1rem;
@@ -284,7 +303,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 #sidebar ul li.active > a {
     background: #fff;
-    color: #777 !important;
+    color: #333 !important;
     margin-left: -1rem;
     margin-right: -1rem;
     padding-left: 1rem;
@@ -299,6 +318,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 #sidebar ul li a {
     display: block;
     padding: 2px 0;
+    font-size: 0.8rem;
 }
 #sidebar ul li a span {
     text-overflow: ellipsis;
@@ -323,7 +343,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 #body {
     position: relative;
-    margin-left: 300px;
+    margin-left: 350px;
     min-height: 100%;
 }
 #body img, #body .video-container {
@@ -448,16 +468,16 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     margin: 0;
 }
 body {
-    font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-family: "Noto Sans", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     font-weight: 300;
     line-height: 1.6;
     font-size: 18px !important;
 }
 h2, h3, h4, h5, h6 {
-    font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-family: "Noto Sans", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     text-rendering: optimizeLegibility;
     color: #5e5e5e;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: -1px;
 }
 h1 {
@@ -809,7 +829,7 @@ td {
     z-index: 1000000;
     display: none;
     padding: 5px 8px;
-    font: normal normal 11px/1.5 "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font: normal normal 11px/1.5 "Noto Sans", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     color: #fff;
     text-align: center;
     text-decoration: none;

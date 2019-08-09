@@ -3,15 +3,17 @@ title = "Modules list"
 date = 2019-05-24T21:15:52+02:00
 weight = 40
 chapter = false
-pre = "<i class='fa ela-page'></i> "
+pre = ""
 alwaysopen = false
 +++
 
-{{< todo "Check and remove deprecated" >}}
-{{< todo "Reorganize a bit if needed" >}}
-{{< todo "Add links to githubs" >}}
-{{< todo "Add short description for each project + short introduction for each section" >}}
-{{< todo "Cleanup the unknown section" >}}
+{{< ownership "Benjamin Piette" >}}
+
+{{< todo "@BPI Check and remove deprecated" >}}
+{{< todo "@BPI Reorganize a bit if needed" >}}
+{{< todo "@BPI Add links to githubs" >}}
+{{< todo "@BPI Add short description for each project + short introduction for each section" >}}
+{{< todo "@BPI Cleanup the unknown section" >}}
 
 If you're willing to contribute as a community leader, designer, or by running a supernode, please join Elastos telegram groups to get in touch with the Elastos community.
 

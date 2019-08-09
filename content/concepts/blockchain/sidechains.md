@@ -2,7 +2,7 @@
 title = "Sidechains"
 weight = 20
 chapter = false
-pre = "<i class='fa ela-page'></i> "
+pre = ""
 alwaysopen = false
 +++
 
