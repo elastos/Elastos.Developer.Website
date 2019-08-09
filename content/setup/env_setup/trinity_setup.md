@@ -36,4 +36,4 @@ $ trinity-cli
 
 ### Next steps
 
-You can now create a first trinity DApp, and run it on your device. Check the {{< internallink "trinity project setup page" "setup/project_setup/trinity_setup.md" >}}
+You can now create a first trinity DApp, and run it on your device. Check the {{< internallink "trinity project setup page" "setup/project_setup/trinity_project_setup.md" >}}
