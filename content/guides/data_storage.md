@@ -13,10 +13,13 @@ alwaysopen = false
 
 ## Hive storage
 
-Whqt kind of file should be stored or not, on Hive?
+What kind of file should be stored or not, on Hive?
 
 ## Store a file on Hive
+ 
 
 ## Download a file from Hive
+
+
 
 ## Storage cost

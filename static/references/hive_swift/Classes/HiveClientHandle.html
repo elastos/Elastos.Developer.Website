@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HiveClientHandle Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/HiveClientHandle" class="dashAnchor"></a>
+    <a title="HiveClientHandle Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">ElastosHiveSDK Docs</a> (59% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">ElastosHiveSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        HiveClientHandle Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AttributeMap.html">AttributeMap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DriveParameter.html">DriveParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DropBoxParameter.html">DropBoxParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveCallback.html">HiveCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveChildren.html">HiveChildren</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveClientHandle.html">HiveClientHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveClientInfo.html">HiveClientInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveDirectoryHandle.html">HiveDirectoryHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveDirectoryInfo.html">HiveDirectoryInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveDriveHandle.html">HiveDriveHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveDriveInfo.html">HiveDriveInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveFileHandle.html">HiveFileHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveFileInfo.html">HiveFileInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveItemInfo.html">HiveItemInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IPFSEntry.html">IPFSEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IPFSParameter.html">IPFSParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NativeParameter.html">NativeParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:14ElastosHiveSDK9NullEntryC">NullEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OAuthEntry.html">OAuthEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OneDriveParameter.html">OneDriveParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OwnCloudParameter.html">OwnCloudParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@ElastosHiveSDK@objc(cs)Result">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:14ElastosHiveSDK10SdkVersionC">SdkVersion</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/DriveType.html">DriveType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HiveError.html">HiveError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/DirectoryItem.html">DirectoryItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/FileItem.html">FileItem</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Authenticator.html">Authenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ResourceItem.html">ResourceItem</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>HiveClientHandle</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@objc(HiveClient)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">HiveClientHandle</span> <span class="p">:</span> <span class="kt"><a href="../Classes.html#/c:@M@ElastosHiveSDK@objc(cs)Result">Result</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/ResourceItem.html">ResourceItem</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B12ClientHandleC12resourceTypea"></a>
+                    <a name="//apple_ref/swift/Alias/resourceType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B12ClientHandleC12resourceTypea">resourceType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>HiveClientInfo</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="n">resourceType</span> <span class="o">=</span> <span class="kt"><a href="../Classes/HiveClientInfo.html">HiveClientInfo</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B12ClientHandleC9driveTypeAA05DriveG0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/driveType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B12ClientHandleC9driveTypeAA05DriveG0Ovp">driveType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The HiveDrive type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">driveType</span><span class="p">:</span> <span class="kt"><a href="../Enums/DriveType.html">DriveType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B12ClientHandleC8handleIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/handleId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B12ClientHandleC8handleIdSSSgvp">handleId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The unique identifier for the user.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">handleId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B12ClientHandleC8lastInfoAA0bdG0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lastInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B12ClientHandleC8lastInfoAA0bdG0CSgvp">lastInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The HiveClient info</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lastInfo</span><span class="p">:</span> <span class="kt"><a href="../Classes/HiveClientInfo.html">HiveClientInfo</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B12ClientHandleC14createInstanceyyAA14DriveParameterCFZ"></a>
+                    <a name="//apple_ref/swift/Method/createInstance(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B12ClientHandleC14createInstanceyyAA14DriveParameterCFZ">createInstance(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an instance with the specific <code><a href="../Classes/OneDriveParameter.html">OneDriveParameter</a></code>,
+<code><a href="../Classes/DropBoxParameter.html">DropBoxParameter</a></code>, <code><a href="../Classes/OwnCloudParameter.html">OwnCloudParameter</a></code>, &lsquo;IPFSParameter&rsquo; and &lsquo;NativeParameter&rsquo;.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">createInstance</span><span class="p">(</span><span class="n">_</span> <span class="nv">param</span><span class="p">:</span> <span class="kt"><a href="../Classes/DriveParameter.html">DriveParameter</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>param</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Client singleton type &amp; requred param,
+for example: use a OneDriveParameter will create OneDriveClient singleton</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B12ClientHandleC14sharedInstance4typeACSgAA9DriveTypeO_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/sharedInstance(type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B12ClientHandleC14sharedInstance4typeACSgAA9DriveTypeO_tFZ">sharedInstance(type:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a spacific HiveClient singleton</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sharedInstance</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/DriveType.html">DriveType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">HiveClientHandle</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>will returns type</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>return a HiveClient singleton</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B12ClientHandleC5loginyyAA13Authenticator_pKF"></a>
+                    <a name="//apple_ref/swift/Method/login(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B12ClientHandleC5loginyyAA13Authenticator_pKF">login(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Login with account</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">login</span><span class="p">(</span><span class="n">_</span> <span class="nv">authenticator</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Authenticator.html">Authenticator</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>Authenticator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>authenticator instance,
+implement related delegate for authorization</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns <code>Void</code> if the login succees, <code><a href="../Enums/HiveError.html">HiveError</a></code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B12ClientHandleC6logoutyyKF"></a>
+                    <a name="//apple_ref/swift/Method/logout()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B12ClientHandleC6logoutyyKF">logout()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Logout with account</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">logout</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns <code>Void</code> if the logout succees, <code><a href="../Enums/HiveError.html">HiveError</a></code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B12ClientHandleC15lastUpdatedInfoyXeycACF"></a>
+                    <a name="//apple_ref/swift/Method/lastUpdatedInfo()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B12ClientHandleC15lastUpdatedInfoyXeycACF">lastUpdatedInfo()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Last update for HiveClientHandle subclasses</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lastUpdatedInfo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="n"><a href="../Classes/HiveClientHandle.html#/s:14ElastosHiveSDK0B12ClientHandleC12resourceTypea">resourceType</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns the latest update information for the subclasses</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B12ClientHandleC15lastUpdatedInfoyXeAA0B8CallbackCyAA0bdH0CG_tcACF"></a>
+                    <a name="//apple_ref/swift/Method/lastUpdatedInfo(handleBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B12ClientHandleC15lastUpdatedInfoyXeAA0B8CallbackCyAA0bdH0CG_tcACF">lastUpdatedInfo(handleBy:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Last update for HiveClientHandle subclasses</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lastUpdatedInfo</span><span class="p">(</span><span class="nv">handleBy</span><span class="p">:</span> <span class="kt"><a href="../Classes/HiveCallback.html">HiveCallback</a></span><span class="o">&lt;</span><span class="n"><a href="../Classes/HiveClientHandle.html#/s:14ElastosHiveSDK0B12ClientHandleC12resourceTypea">resourceType</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="n"><a href="../Classes/HiveClientHandle.html#/s:14ElastosHiveSDK0B12ClientHandleC12resourceTypea">resourceType</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handleBy</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the result of returns</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns the latest update information for the subclasses</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B12ClientHandleC012defaultDriveE0yXeycACF"></a>
+                    <a name="//apple_ref/swift/Method/defaultDriveHandle()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B12ClientHandleC012defaultDriveE0yXeycACF">defaultDriveHandle()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a default HiveDriveHandle for subclasses</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">defaultDriveHandle</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HiveDriveHandle.html">HiveDriveHandle</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns singleton instance for subclasses</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ElastosHiveSDK0B12ClientHandleC012defaultDriveE0yXeAA0B8CallbackCyAA0bgE0CG_tcACF"></a>
+                    <a name="//apple_ref/swift/Method/defaultDriveHandle(handleBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ElastosHiveSDK0B12ClientHandleC012defaultDriveE0yXeAA0B8CallbackCyAA0bgE0CG_tcACF">defaultDriveHandle(handleBy:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a default HiveDriveHandle for subclasses</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">defaultDriveHandle</span><span class="p">(</span><span class="nv">handleBy</span><span class="p">:</span> <span class="kt"><a href="../Classes/HiveCallback.html">HiveCallback</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HiveDriveHandle.html">HiveDriveHandle</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HiveDriveHandle.html">HiveDriveHandle</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handleBy</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the result of returns</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns singleton instance for subclasses</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://www.elastos.org" target="_blank" rel="external">carrier-dev</a>. All rights reserved. (Last updated: 2019-08-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

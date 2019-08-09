@@ -1,0 +1,544 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/AttributeMap.swift",
+      "line": 25,
+      "symbol": "AttributeMap",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/AttributeMap.swift",
+      "line": 40,
+      "symbol": "AttributeMap.hasKey(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/Authenticator.swift",
+      "line": 27,
+      "symbol": "Authenticator.requestAuthentication(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 30,
+      "symbol": "DirectoryItem.createDirectory(withPath:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 33,
+      "symbol": "DirectoryItem.createDirectory(withPath:handleBy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 39,
+      "symbol": "DirectoryItem.directoryHandle(atPath:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 42,
+      "symbol": "DirectoryItem.directoryHandle(atPath:handleBy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 48,
+      "symbol": "DirectoryItem.createFile(withPath:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 51,
+      "symbol": "DirectoryItem.createFile(withPath:handleBy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 57,
+      "symbol": "DirectoryItem.fileHandle(atPath:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 60,
+      "symbol": "DirectoryItem.fileHandle(atPath:handleBy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 66,
+      "symbol": "DirectoryItem.createDirectory(withName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 69,
+      "symbol": "DirectoryItem.createDirectory(withName:handleBy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 75,
+      "symbol": "DirectoryItem.directoryHandle(atName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 78,
+      "symbol": "DirectoryItem.directoryHandle(atName:handleBy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 84,
+      "symbol": "DirectoryItem.createFile(withName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 87,
+      "symbol": "DirectoryItem.createFile(withName:handleBy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 93,
+      "symbol": "DirectoryItem.fileHandle(atName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DirectoryItem.swift",
+      "line": 96,
+      "symbol": "DirectoryItem.fileHandle(atName:handleBy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DriveParameter.swift",
+      "line": 28,
+      "symbol": "DriveParameter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DriveType.swift",
+      "line": 25,
+      "symbol": "DriveType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DriveType.swift",
+      "line": 28,
+      "symbol": "DriveType.nativeStorage",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DriveType.swift",
+      "line": 29,
+      "symbol": "DriveType.oneDrive",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DriveType.swift",
+      "line": 30,
+      "symbol": "DriveType.hiveIPFS",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DriveType.swift",
+      "line": 31,
+      "symbol": "DriveType.dropBox",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/DriveType.swift",
+      "line": 32,
+      "symbol": "DriveType.ownCloud",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/FileItem.swift",
+      "line": 38,
+      "symbol": "FileItem",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/FileItem.swift",
+      "line": 40,
+      "symbol": "FileItem.readData(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/FileItem.swift",
+      "line": 43,
+      "symbol": "FileItem.readData(_:handleBy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/FileItem.swift",
+      "line": 48,
+      "symbol": "FileItem.readData(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/FileItem.swift",
+      "line": 51,
+      "symbol": "FileItem.readData(_:_:handleBy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/FileItem.swift",
+      "line": 56,
+      "symbol": "FileItem.writeData(withData:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/FileItem.swift",
+      "line": 59,
+      "symbol": "FileItem.writeData(withData:handleBy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/FileItem.swift",
+      "line": 63,
+      "symbol": "FileItem.writeData(withData:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/FileItem.swift",
+      "line": 66,
+      "symbol": "FileItem.writeData(withData:_:handleBy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/FileItem.swift",
+      "line": 71,
+      "symbol": "FileItem.commitData()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/FileItem.swift",
+      "line": 75,
+      "symbol": "FileItem.commitData(handleBy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/FileItem.swift",
+      "line": 80,
+      "symbol": "FileItem.discardData()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/HiveCallback.swift",
+      "line": 25,
+      "symbol": "HiveCallback",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/HiveCallback.swift",
+      "line": 26,
+      "symbol": "HiveCallback.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/HiveCallback.swift",
+      "line": 28,
+      "symbol": "HiveCallback.didSucceed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/HiveCallback.swift",
+      "line": 29,
+      "symbol": "HiveCallback.runError(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/HiveChildren.swift",
+      "line": 25,
+      "symbol": "HiveChildren",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/HiveChildren.swift",
+      "line": 26,
+      "symbol": "HiveChildren.children",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/HiveChildren.swift",
+      "line": 28,
+      "symbol": "HiveChildren.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/HiveClient.swift",
+      "line": 26,
+      "symbol": "HivePromise",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/HiveClient.swift",
+      "line": 29,
+      "symbol": "HiveClientHandle",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/HiveDirectory.swift",
+      "line": 27,
+      "symbol": "HiveDirectoryHandle",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/HiveDrive.swift",
+      "line": 27,
+      "symbol": "HiveDriveHandle",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/HiveError.swift",
+      "line": 25,
+      "symbol": "HiveError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/HiveError.swift",
+      "line": 26,
+      "symbol": "HiveError.failue(des:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/HiveFile.swift",
+      "line": 27,
+      "symbol": "HiveFileHandle",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/IPFSEntry.swift",
+      "line": 13,
+      "symbol": "IPFSEntry.init(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/NullEntry.swift",
+      "line": 25,
+      "symbol": "NullEntry",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/ResourceItem.swift",
+      "line": 26,
+      "symbol": "ResourceItem",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/ResourceItem.swift",
+      "line": 27,
+      "symbol": "ResourceItem.resourceType",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/ResourceItem.swift",
+      "line": 29,
+      "symbol": "ResourceItem.lastUpdatedInfo()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/ResourceItem.swift",
+      "line": 30,
+      "symbol": "ResourceItem.lastUpdatedInfo(handleBy:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/Result.swift",
+      "line": 25,
+      "symbol": "Result",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Core/SdkVersion.swift",
+      "line": 25,
+      "symbol": "SdkVersion",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/SwiftyJSON/SwiftyJSON.swift",
+      "line": 367,
+      "symbol": "JSON",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/DropBox/DropBoxParameter.swift",
+      "line": 26,
+      "symbol": "DropBoxParameter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/DropBox/DropBoxParameter.swift",
+      "line": 30,
+      "symbol": "DropBoxParameter.init(_:_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/DropBox/DropBoxParameter.swift",
+      "line": 34,
+      "symbol": "DropBoxParameter.driveType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/DropBox/DropBoxParameter.swift",
+      "line": 40,
+      "symbol": "DropBoxParameter.getAuthEntry()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/IPFS/IPFSParameter.swift",
+      "line": 26,
+      "symbol": "IPFSParameter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/IPFS/IPFSParameter.swift",
+      "line": 34,
+      "symbol": "IPFSParameter.getAuthEntry()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/IPFS/IPFSParameter.swift",
+      "line": 38,
+      "symbol": "IPFSParameter.init(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/Native/NativeParameter.swift",
+      "line": 26,
+      "symbol": "NativeParameter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/Native/NativeParameter.swift",
+      "line": 29,
+      "symbol": "NativeParameter.driveType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/Native/NativeParameter.swift",
+      "line": 35,
+      "symbol": "NativeParameter.getAuthEntry()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/OneDrive/OneDriveParameter.swift",
+      "line": 26,
+      "symbol": "OneDriveParameter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/OneDrive/OneDriveParameter.swift",
+      "line": 28,
+      "symbol": "OneDriveParameter.init(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/OneDrive/OneDriveParameter.swift",
+      "line": 38,
+      "symbol": "OneDriveParameter.getAuthEntry()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/OwnCloud/OwnCloudParameter.swift",
+      "line": 26,
+      "symbol": "OwnCloudParameter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/OwnCloud/OwnCloudParameter.swift",
+      "line": 29,
+      "symbol": "OwnCloudParameter.driveType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK/ElastosHiveSDK/Vendors/OwnCloud/OwnCloudParameter.swift",
+      "line": 35,
+      "symbol": "OwnCloudParameter.getAuthEntry()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.NET.Hive.Swift.SDK"
+}

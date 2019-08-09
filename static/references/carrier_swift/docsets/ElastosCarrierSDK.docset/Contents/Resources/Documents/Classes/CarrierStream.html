@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CarrierStream Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CarrierStream" class="dashAnchor"></a>
+    <a title="CarrierStream Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">ElastosCarrierSDK Docs</a> (67% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">ElastosCarrierSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CarrierStream Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Base58.html">Base58</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BootstrapNode.html">BootstrapNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Carrier.html">Carrier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrierAddressInfo.html">CarrierAddressInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrierAddressInfo/CandidateType.html">– CandidateType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrierAddressInfo/SocketAddress.html">– SocketAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrierFileTransfer.html">CarrierFileTransfer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrierFileTransferInfo.html">CarrierFileTransferInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrierFileTransferManager.html">CarrierFileTransferManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrierFriendInfo.html">CarrierFriendInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrierGroup.html">CarrierGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrierGroupPeer.html">CarrierGroupPeer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrierOptions.html">CarrierOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrierSession.html">CarrierSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrierSessionManager.html">CarrierSessionManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrierStream.html">CarrierStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrierTransportInfo.html">CarrierTransportInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CarrierUserInfo.html">CarrierUserInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HiveBootstrapNode.html">HiveBootstrapNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Log.html">Log</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK19CCandidateType_HostAA0dE0Vvp">CCandidateType_Host</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK28CCandidateType_PeerReflexiveAA0dE0Vvp">CCandidateType_PeerReflexive</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK22CCandidateType_RelayedAA0dE0Vvp">CCandidateType_Relayed</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK30CCandidateType_ServerReflexiveAA0dE0Vvp">CCandidateType_ServerReflexive</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK18CCloseReason_ErrorAA0dE0Vvp">CCloseReason_Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK19CCloseReason_NormalAA0dE0Vvp">CCloseReason_Normal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK20CCloseReason_TimeoutAA0dE0Vvp">CCloseReason_Timeout</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK27CConnectionStatus_ConnectedAA0dE0Vvp">CConnectionStatus_Connected</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK30CConnectionStatus_DisconnectedAA0dE0Vvp">CConnectionStatus_Disconnected</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK30CFileTransferConnection_closedAA0deF0Vvp">CFileTransferConnection_closed</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK33CFileTransferConnection_connectedAA0deF0Vvp">CFileTransferConnection_connected</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK34CFileTransferConnection_connectingAA0deF0Vvp">CFileTransferConnection_connecting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK30CFileTransferConnection_failedAA0deF0Vvp">CFileTransferConnection_failed</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK35CFileTransferConnection_initializedAA0deF0Vvp">CFileTransferConnection_initialized</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK15CLogLevel_DebugAA0dE0Vvp">CLogLevel_Debug</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK15CLogLevel_ErrorAA0dE0Vvp">CLogLevel_Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK15CLogLevel_FatalAA0dE0Vvp">CLogLevel_Fatal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK14CLogLevel_InfoAA0dE0Vvp">CLogLevel_Info</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK14CLogLevel_NoneAA0dE0Vvp">CLogLevel_None</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK15CLogLevel_TraceAA0dE0Vvp">CLogLevel_Trace</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK17CLogLevel_VerboseAA0dE0Vvp">CLogLevel_Verbose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK17CLogLevel_WarningAA0dE0Vvp">CLogLevel_Warning</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK20CNetworkTopology_LANAA0dE0Vvp">CNetworkTopology_LAN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK20CNetworkTopology_P2PAA0dE0Vvp">CNetworkTopology_P2P</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK24CNetworkTopology_RELAYEDAA0dE0Vvp">CNetworkTopology_RELAYED</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK27CPortForwardingProtocol_TCPAA0deF0Vvp">CPortForwardingProtocol_TCP</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK20CPresenceStatus_AwayAA011CConnectionE0Vvp">CPresenceStatus_Away</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK20CPresenceStatus_BusyAA011CConnectionE0Vvp">CPresenceStatus_Busy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK20CPresenceStatus_NoneAA0dE0Vvp">CPresenceStatus_None</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK19CStreamState_closedAA0dE0Vvp">CStreamState_closed</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK22CStreamState_connectedAA0dE0Vvp">CStreamState_connected</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK23CStreamState_connectingAA0dE0Vvp">CStreamState_connecting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK24CStreamState_deactivatedAA0dE0Vvp">CStreamState_deactivated</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK19CStreamState_failedAA0dE0Vvp">CStreamState_failed</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK24CStreamState_initializedAA0dE0Vvp">CStreamState_initialized</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK28CStreamState_transport_readyAA0dE0Vvp">CStreamState_transport_ready</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK23CStreamType_applicationAA0dE0Vvp">CStreamType_application</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK17CStreamType_audioAA0dE0Vvp">CStreamType_audio</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK19CStreamType_messageAA0dE0Vvp">CStreamType_message</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK16CStreamType_textAA0dE0Vvp">CStreamType_text</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:17ElastosCarrierSDK17CStreamType_videoAA0dE0Vvp">CStreamType_video</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CarrierConnectionStatus.html">CarrierConnectionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CarrierError.html">CarrierError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CarrierFileTransferConnectionState.html">CarrierFileTransferConnectionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CarrierLogLevel.html">CarrierLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CarrierNetworkTopology.html">CarrierNetworkTopology</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CarrierPresenceStatus.html">CarrierPresenceStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CarrierStreamState.html">CarrierStreamState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CarrierStreamType.html">CarrierStreamType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CloseReason.html">CloseReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PortForwardingProtocol.html">PortForwardingProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK2geoiySbAA0B8LogLevelO_ADtF">&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK17cleanupCBootstrapyySPyAA0E4NodeVG_SitF">cleanupCBootstrap(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK21cleanupCBootstraphiveyySPyAA18CHiveBootstrapNodeVG_SitF">cleanupCBootstraphive(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK15cleanupCOptionsyyAA0E0VF">cleanupCOptions(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK033convertBootstrapNodesToCBootstrapF0ySpyAA0H4NodeVGSg_SitSayAA0eI0CGF">convertBootstrapNodesToCBootstrapNodes(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK028convertBootstrapNodesToCHiveE4NodeySpyAA0heI0VGSg_SitSayAA04HiveeI0CGF">convertBootstrapNodesToCHiveBootstrapNode(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK021convertCAddressInfoTob7AddressF0yAA0bhF0CAA0eF0VF">convertCAddressInfoToCarrierAddressInfo(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK026convertCCloseReasonToCloseF0yAA0hF0OAA0eF0VF">convertCCloseReasonToCloseReason(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK026convertCConnectionStatusTob10ConnectionF0yAA0bhF0Os5Int32VF">convertCConnectionStatusToCarrierConnectionStatus(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK032convertCFileTransferConnectionTob4FilefG0yAA0bifG5StateOAA0efG0VF">convertCFileTransferConnectionToCarrierFileTransferConnection(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK026convertCFileTransferInfoTob4FilefG0yAA0bifG0CAA0efG0VF">convertCFileTransferInfoToCarrierFileTransferInfo(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK020convertCFriendInfoTob6FriendF0yAA0bhF0CAA0eF0VF">convertCFriendInfoToCarrierFriendInfo(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK019convertCGroupPeerTob5GroupF0yAA0bhF0CAA0eF0VF">convertCGroupPeerToCarrierGroupPeer(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK025convertCNetworkTopologyTob7NetworkF0yAA0bhF0OAA0eF0VF">convertCNetworkTopologyToCarrierNetworkTopology(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK024convertCPresenceStatusTob8PresenceF0yAA0bhF0Os5Int32VF">convertCPresenceStatusToCarrierPresenceStatus(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK021convertCStreamStateTob6StreamF0yAA0bhF0OAA0eF0VF">convertCStreamStateToCarrierStreamState(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK020convertCStreamTypeTob6StreamF0yAA0bhF0OAA0eF0VF">convertCStreamTypeToCarrierStreamType(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK023convertCTransportInfoTob9TransportF0yAA0bhF0CAA0eF0VF">convertCTransportInfoToCarrierTransportInfo(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK018convertCUserInfoTob4UserF0yAA0bhF0CAA0eF0VF">convertCUserInfoToCarrierUserInfo(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK07convertb23FileTransferInfoToCFilefG0yAA0ifG0VAA0befG0CF">convertCarrierFileTransferInfoToCFileTransferInfo(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK07convertb19FriendInfoToCFriendF0yAA0hF0VAA0beF0CF">convertCarrierFriendInfoToCFriendInfo(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK07convertb17GroupPeerToCGroupF0yAA0hF0VAA0beF0CF">convertCarrierGroupPeerToCGroupPeer(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK07convertb14LogLevelToCLogF0yAA0hF0VAA0beF0OF">convertCarrierLogLevelToCLogLevel(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK07convertB17OptionsToCOptionsyAA0G0VAA0bE0CF">convertCarrierOptionsToCOptions(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK07convertb25PresenceStatusToCPresenceF0yAA0hF0VAA0beF0OF">convertCarrierPresenceStatusToCPresenceStatus(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK07convertb19StreamTypeToCStreamF0yAA0hF0VAA0beF0OF">convertCarrierStreamTypeToCStreamType(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK07convertb15UserInfoToCUserF0yAA0hF0VAA0beF0CF">convertCarrierUserInfoToCUserInfo(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK036convertPortForwardingProtocolToCPortfG0yAA0ifG0VAA0efG0OF">convertPortForwardingProtocolToCPortForwardingProtocol(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK22createCStringDuplicateySPys4Int8VGSgSSSgF">createCStringDuplicate(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK14deallocCStringyySPys4Int8VGSgF">deallocCString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK17ela_accept_friendys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgtF">ela_accept_friend(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK14ela_add_friendys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgAKtF">ela_add_friend(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK20ela_address_is_validySbSPys4Int8VGSgF">ela_address_is_valid(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK15ela_clear_erroryyF">ela_clear_error()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK31ela_filetransfer_accept_connectys5Int32Vs13OpaquePointerVSgF">ela_filetransfer_accept_connect(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK20ela_filetransfer_addys5Int32Vs13OpaquePointerVSg_SPyAA17CFileTransferInfoVGSgtF">ela_filetransfer_add(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK23ela_filetransfer_cancelys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgAdKtF">ela_filetransfer_cancel(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK24ela_filetransfer_cleanupyys13OpaquePointerVSgF">ela_filetransfer_cleanup(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK22ela_filetransfer_closeyys13OpaquePointerVSgF">ela_filetransfer_close(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK24ela_filetransfer_connectys5Int32Vs13OpaquePointerVSgF">ela_filetransfer_connect(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK23ela_filetransfer_fileidySPys4Int8VGSgSpyADGSg_SitF">ela_filetransfer_fileid(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK27ela_filetransfer_get_fileidySPys4Int8VGSgs13OpaquePointerVSg_AFSpyADGSgSitF">ela_filetransfer_get_fileid(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK29ela_filetransfer_get_filenameySPys4Int8VGSgs13OpaquePointerVSg_AFSpyADGSgSitF">ela_filetransfer_get_filename(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK21ela_filetransfer_initys5Int32Vs13OpaquePointerVSg_yAG_SPys4Int8VGSgSVSgSvSgtXCSgAMtF">ela_filetransfer_init(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK20ela_filetransfer_newys13OpaquePointerVSgAE_SPys4Int8VGSgSPyAA17CFileTransferInfoVGSgAA0jK9CallbacksVSgSvSgtF">ela_filetransfer_new(_:_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK21ela_filetransfer_pendys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgtF">ela_filetransfer_pend(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK21ela_filetransfer_pullys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgs6UInt64VtF">ela_filetransfer_pull(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK23ela_filetransfer_resumeys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgtF">ela_filetransfer_resume(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK21ela_filetransfer_sendys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgAKs6UInt32VtF">ela_filetransfer_send(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK29ela_filetransfer_set_userdataySvSgs13OpaquePointerVSg_SPys4Int8VGSgtF">ela_filetransfer_set_userdata(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK29ela_filetransfer_set_userdatays5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgSvSgtF">ela_filetransfer_set_userdata(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK15ela_get_addressySpys4Int8VGSgs13OpaquePointerVSg_AFSitF">ela_get_address(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK13ela_get_errors5Int32VyF">ela_get_error()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK19ela_get_friend_infoys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgSpyAA11CFriendInfoVGSgtF">ela_get_friend_info(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK15ela_get_friendsys5Int32Vs13OpaquePointerVSg_SbSVSg_SvSgtXCSgAItF">ela_get_friends(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK14ela_get_groupsys5Int32Vs13OpaquePointerVSg_SbSVSg_SvSgtXCSvtF">ela_get_groups(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK14ela_get_nodeidySpys4Int8VGSgs13OpaquePointerVSg_AFSitF">ela_get_nodeid(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK17ela_get_self_infoys5Int32Vs13OpaquePointerVSg_SpyAA9CUserInfoVGSgtF">ela_get_self_info(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK19ela_get_self_nospamys5Int32Vs13OpaquePointerVSg_Spys6UInt32VGSgtF">ela_get_self_nospam(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK21ela_get_self_presenceys5Int32Vs13OpaquePointerVSg_SpyAA15CPresenceStatusVGtF">ela_get_self_presence(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK16ela_get_strerrorySpys4Int8VGSgSi_AFSitF">ela_get_strerror(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK14ela_get_useridySpys4Int8VGSgs13OpaquePointerVSg_AFSitF">ela_get_userid(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK15ela_get_versionSPys4Int8VGSgyF">ela_get_version()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK18ela_group_get_peerys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgAKSPyAA10CGroupPeerVGtF">ela_group_get_peer(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK19ela_group_get_peersys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgSbSVSg_SvSgtXCSvtF">ela_group_get_peers(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK19ela_group_get_titleys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgSpyAIGSgSitF">ela_group_get_title(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK16ela_group_inviteys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgAKtF">ela_group_invite(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK14ela_group_joinys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgAKSiSpyAIGSgSitF">ela_group_join(_:_:_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK22ela_group_send_messageys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgAKSitF">ela_group_send_message(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK19ela_group_set_titleys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgAKtF">ela_group_set_title(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK15ela_id_is_validySbSPys4Int8VGSgF">ela_id_is_valid(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK17ela_invite_friendys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgA2KSiyAG_A2kd2KSiSvSgtXCSgALtF">ela_invite_friend(_:_:_:_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK13ela_is_friendySbs13OpaquePointerVSg_SPys4Int8VGSgtF">ela_is_friend(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK12ela_is_readyySbs13OpaquePointerVSgF">ela_is_ready(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK8ela_killyys13OpaquePointerVSgF">ela_kill(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK15ela_leave_groupys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgtF">ela_leave_group(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK12ela_log_inityyAA9CLogLevelV_SPys4Int8VGSgyAH_s14CVaListPointerVSgtcSgtF">ela_log_init(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK7ela_newys13OpaquePointerVSgSPyAA8COptionsVGSg_SpyAA10CCallbacksVGSgSvSgtF">ela_new(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK13ela_new_groupys5Int32Vs13OpaquePointerVSg_Spys4Int8VGSgSitF">ela_new_group(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK17ela_remove_friendys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgtF">ela_remove_friend(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK23ela_reply_friend_inviteys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgAkd2KSitF">ela_reply_friend_invite(_:_:_:_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK7ela_runys5Int32Vs13OpaquePointerVSg_ADtF">ela_run(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK23ela_send_friend_messageys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgAKSitF">ela_send_friend_message(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK23ela_session_add_serviceys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgAA23CPortForwardingProtocolVA2KtF">ela_session_add_service(_:_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK22ela_session_add_streamys5Int32Vs13OpaquePointerVSg_AA11CStreamTypeVADSpyAA0K9CallbacksVGSgSvSgtF">ela_session_add_stream(_:_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK19ela_session_cleanupyys13OpaquePointerVSgF">ela_session_cleanup(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK17ela_session_closeyys13OpaquePointerVSgF">ela_session_close(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK20ela_session_get_peerySPys4Int8VGSgs13OpaquePointerVSg_AFSitF">ela_session_get_peer(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK24ela_session_get_userdataySvSgs13OpaquePointerVSgF">ela_session_get_userdata(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK16ela_session_initys5Int32Vs13OpaquePointerVSgF">ela_session_init(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK15ela_session_newys13OpaquePointerVSgAE_SPys4Int8VGSgtF">ela_session_new(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK26ela_session_remove_serviceyys13OpaquePointerVSg_SPys4Int8VGSgtF">ela_session_remove_service(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK25ela_session_remove_streamys5Int32Vs13OpaquePointerVSg_ADtF">ela_session_remove_stream(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK25ela_session_reply_requestys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgAdKtF">ela_session_reply_request(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK19ela_session_requestys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgyAG_Akd2KSiSvSgtXCSgALtF">ela_session_request(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK24ela_session_set_callbackys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgyAG_A3KSiSvSgtXCSgALtF">ela_session_set_callback(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK24ela_session_set_userdatayys13OpaquePointerVSg_SvSgtF">ela_session_set_userdata(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK17ela_session_startys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgSitF">ela_session_start(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK20ela_set_friend_labelys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgAKtF">ela_set_friend_label(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK17ela_set_self_infoys5Int32Vs13OpaquePointerVSg_SPyAA9CUserInfoVGSgtF">ela_set_self_info(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK19ela_set_self_nospamys5Int32Vs13OpaquePointerVSg_s6UInt32VtF">ela_set_self_nospam(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK21ela_set_self_presenceys5Int32Vs13OpaquePointerVSg_AA15CPresenceStatusVtF">ela_set_self_presence(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK24ela_stream_close_channelys5Int32Vs13OpaquePointerVSg_A2DtF">ela_stream_close_channel(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK32ela_stream_close_port_forwardingys5Int32Vs13OpaquePointerVSg_A2DtF">ela_stream_close_port_forwarding(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK20ela_stream_get_stateys5Int32Vs13OpaquePointerVSg_ADSpyAA12CStreamStateVGtF">ela_stream_get_state(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK29ela_stream_get_transport_infoys5Int32Vs13OpaquePointerVSg_ADSpyAA14CTransportInfoVGSgtF">ela_stream_get_transport_info(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK19ela_stream_get_typeys5Int32Vs13OpaquePointerVSg_ADSpyAA11CStreamTypeVGSgtF">ela_stream_get_type(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK23ela_stream_open_channelys5Int32Vs13OpaquePointerVSg_ADSPys4Int8VGSgtF">ela_stream_open_channel(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK31ela_stream_open_port_forwardingys5Int32Vs13OpaquePointerVSg_ADSPys4Int8VGSgAA23CPortForwardingProtocolVA2KtF">ela_stream_open_port_forwarding(_:_:_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK23ela_stream_pend_channelys5Int32Vs13OpaquePointerVSg_A2DtF">ela_stream_pend_channel(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK25ela_stream_resume_channelys5Int32Vs13OpaquePointerVSg_A2DtF">ela_stream_resume_channel(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK16ela_stream_writeySis13OpaquePointerVSg_s5Int32VSVSgSitF">ela_stream_write(_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK24ela_stream_write_channelySis13OpaquePointerVSg_s5Int32VAGSVSgSitF">ela_stream_write_channel(_:_:_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK03getB0yAA0B0CSvF">getCarrier(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK12getErrorCodeSiyF">getErrorCode()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK14getErrorStringySSSiF">getErrorString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK17getNativeHandlersAA10CCallbacksVyF">getNativeHandlers()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK16onCancelReceived_7cFileId7cStatus7cReason5cctxtys13OpaquePointerVSg_SPys4Int8VGSgs5Int32VAMSvSgtF">onCancelReceived(_:cFileId:cStatus:cReason:cctxt:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK14onChannelClose_7cstream8cchannel7creason5cctxtys13OpaquePointerVSg_s5Int32VAKs6UInt32VSvSgtF">onChannelClose(_:cstream:cchannel:creason:cctxt:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK13onChannelData_7cstream8cchannel5cdata4clen5cctxtSbs13OpaquePointerVSg_s5Int32VALSVSgSiSvSgtF">onChannelData(_:cstream:cchannel:cdata:clen:cctxt:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK13onChannelOpen_7cstream8cchannel7ccookie5cctxtSbs13OpaquePointerVSg_s5Int32VAKSPys4Int8VGSgSvSgtF">onChannelOpen(_:cstream:cchannel:ccookie:cctxt:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK15onChannelOpened_7cstream8cchannel5cctxtys13OpaquePointerVSg_s5Int32VAJSvSgtF">onChannelOpened(_:cstream:cchannel:cctxt:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK16onChannelPending_7cstream8cchannel5cctxtys13OpaquePointerVSg_s5Int32VAJSvSgtF">onChannelPending(_:cstream:cchannel:cctxt:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK15onChannelResume_7cstream8cchannel5cctxtys13OpaquePointerVSg_s5Int32VAJSvSgtF">onChannelResume(_:cstream:cchannel:cctxt:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK14onDataReceived_7cFileId01cE07cLength5cctxtSbs13OpaquePointerVSg_SPys4Int8VGSgALs6UInt32VSvSgtF">onDataReceived(_:cFileId:cData:cLength:cctxt:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK14onFileReceived_01cE2Id01cE4Name8fileSize5cctxtys13OpaquePointerVSg_SPys4Int8VGSgAMs6UInt64VSvSgtF">onFileReceived(_:cFileId:cFileName:fileSize:cctxt:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK14onPendReceived_7cFileId5cctxtys13OpaquePointerVSg_SPys4Int8VGSgSvSgtF">onPendReceived(_:cFileId:cctxt:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK14onPullReceived_7cFileId6offset5cctxtys13OpaquePointerVSg_SPys4Int8VGSgs6UInt64VSvSgtF">onPullReceived(_:cFileId:offset:cctxt:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK16onResumeReceived_7cFileId5cctxtys13OpaquePointerVSg_SPys4Int8VGSgSvSgtF">onResumeReceived(_:cFileId:cctxt:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK14onStateChanged_01cE05cctxtys13OpaquePointerVSg_s5Int32VSvSgtF">onStateChanged(_:cState:cctxt:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK14onStateChanged_7cstream6cstate5cctxtys13OpaquePointerVSg_s5Int32Vs6UInt32VSvSgtF">onStateChanged(_:cstream:cstate:cctxt:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:17ElastosCarrierSDK12onStreamData_7cstream5cdata4clen5cctxtys13OpaquePointerVSg_s5Int32VSVSgSiSvSgtF">onStreamData(_:cstream:cdata:clen:cctxt:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CarrierDelegate.html">CarrierDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CarrierFileTransferDelegate.html">CarrierFileTransferDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CarrierGroupDelegate.html">CarrierGroupDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CarrierStreamDelegate.html">CarrierStreamDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/CAddressInfo.html">CAddressInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CBootstrapNode.html">CBootstrapNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CCallbacks.html">CCallbacks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CCandidateType.html">CCandidateType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CCloseReason.html">CCloseReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CConnectionStatus.html">CConnectionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CFileTransferCallbacks.html">CFileTransferCallbacks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CFileTransferConnection.html">CFileTransferConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CFileTransferInfo.html">CFileTransferInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CFriendInfo.html">CFriendInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CGroupCallbacks.html">CGroupCallbacks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CGroupPeer.html">CGroupPeer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CHiveBootstrapNode.html">CHiveBootstrapNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CLogLevel.html">CLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CNetworkTopology.html">CNetworkTopology</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/COptions.html">COptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CPortForwardingProtocol.html">CPortForwardingProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CPresenceStatus.html">CPresenceStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CStreamCallbacks.html">CStreamCallbacks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CStreamState.html">CStreamState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CStreamType.html">CStreamType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CTransportInfo.html">CTransportInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CUserInfo.html">CUserInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17ElastosCarrierSDK28CFileTransferConnectCallbacka">CFileTransferConnectCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17ElastosCarrierSDK29CFriendInviteResponseCallbacka">CFriendInviteResponseCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17ElastosCarrierSDK23CFriendsIterateCallbacka">CFriendsIterateCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17ElastosCarrierSDK26CGroupPeersIterateCallbacka">CGroupPeersIterateCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17ElastosCarrierSDK22CGroupsIterateCallbacka">CGroupsIterateCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17ElastosCarrierSDK23CSessionRequestCallbacka">CSessionRequestCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17ElastosCarrierSDK31CSessionRequestCompleteCallbacka">CSessionRequestCompleteCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17ElastosCarrierSDK0B26FileTransferConnectHandlera">CarrierFileTransferConnectHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17ElastosCarrierSDK0B29SessionRequestCompleteHandlera">CarrierSessionRequestCompleteHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17ElastosCarrierSDK0B21SessionRequestHandlera">CarrierSessionRequestHandler</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CarrierStream</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@objc(ELACarrierStream)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">CarrierStream</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>The class representing carrier stream.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElastosCarrierSDK0B6StreamC8streamIdSivp"></a>
+                    <a name="//apple_ref/swift/Property/streamId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElastosCarrierSDK0B6StreamC8streamIdSivp">streamId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">internal</span> <span class="k">var</span> <span class="nv">streamId</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElastosCarrierSDK0B6StreamC8delegateAA0bD8Delegate_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElastosCarrierSDK0B6StreamC8delegateAA0bD8Delegate_pSgvp">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">internal</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CarrierStreamDelegate.html">CarrierStreamDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElastosCarrierSDK0B6StreamCyACs13OpaquePointerV_AA0bD4TypeOtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElastosCarrierSDK0B6StreamCyACs13OpaquePointerV_AA0bD4TypeOtcfc">init(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">internal</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">csession</span><span class="p">:</span> <span class="kt">OpaquePointer</span><span class="p">,</span> <span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/CarrierStreamType.html">CarrierStreamType</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)getType"></a>
+                    <a name="//apple_ref/swift/Method/getType()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)getType">getType()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the carrier stream type.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(getType)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getType</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/CarrierStreamType.html">CarrierStreamType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The stream type defined in CarrierStreamType</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)getStreamId"></a>
+                    <a name="//apple_ref/swift/Method/getStreamId()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)getStreamId">getStreamId()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(getStreamId)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getStreamId</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)getTransportInfo:"></a>
+                    <a name="//apple_ref/swift/Method/getTransportInfo()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)getTransportInfo:">getTransportInfo()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(getTransportInfo:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getTransportInfo</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CarrierTransportInfo.html">CarrierTransportInfo</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)writeData:error:"></a>
+                    <a name="//apple_ref/swift/Method/writeData(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)writeData:error:">writeData(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send outgoing data to remote peer.</p>
+
+<p>If the stream is in multiplexing mode, application can not call this
+function to send data. If this function is called on multiplexing mode
+stream, it will throw Error.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>CarrierError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(writeData:error:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">writeData</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">NSNumber</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ougoing data</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Bytes of data sent on success</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)openChannelWithCookie:error:"></a>
+                    <a name="//apple_ref/swift/Method/openChannel(cookie:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)openChannelWithCookie:error:">openChannel(cookie:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Open a new channel on multiplexing stream.</p>
+
+<p>If the stream is not multiplexing this function will throw Error.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>CarrierError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(openChannelWithCookie:error:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">openChannel</span><span class="p">(</span><span class="nv">cookie</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
+    <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">NSNumber</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cookie</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The application defined data passed to remote peer.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>New channel ID</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)closeChannel:error:"></a>
+                    <a name="//apple_ref/swift/Method/closeChannel(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)closeChannel:error:">closeChannel(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Close a new channel on multiplexing stream.</p>
+
+<p>If the stream is not multiplexing this function will throw Error.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>CarrierError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(closeChannel:error:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">closeChannel</span><span class="p">(</span><span class="n">_</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)writeChannel:data:error:"></a>
+                    <a name="//apple_ref/swift/Method/writeChannel(_:data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)writeChannel:data:error:">writeChannel(_:data:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send outgoing data to remote peer.</p>
+
+<p>If the stream is not multiplexing this function will throw Error.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>CarrierError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(writeChannel:data:error:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">writeChannel</span><span class="p">(</span><span class="n">_</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">NSNumber</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The channel ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The outgoing data</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Bytes of data sent on sucess</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)pendChannel:error:"></a>
+                    <a name="//apple_ref/swift/Method/pendChannel(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)pendChannel:error:">pendChannel(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Request remote peer to pend channel data sending.</p>
+
+<p>If the stream is not multiplexing this function will throw Error.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>CarrierError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(pendChannel:error:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">pendChannel</span><span class="p">(</span><span class="n">_</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The channel ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)resumeChannel:error:"></a>
+                    <a name="//apple_ref/swift/Method/resumeChannel(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)resumeChannel:error:">resumeChannel(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Request remote peer to resume channel data sending.</p>
+
+<p>If the stream is not multiplexing this function will throw Error.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>CarrierError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(resumeChannel:error:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">resumeChannel</span><span class="p">(</span><span class="n">_</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The channel ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)openPortForwardingForService:withProtocol:host:port:error:"></a>
+                    <a name="//apple_ref/swift/Method/openPortForwarding(service:ptotocol:host:port:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)openPortForwardingForService:withProtocol:host:port:error:">openPortForwarding(service:ptotocol:host:port:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Open a port forwarding to remote service over multiplexing.</p>
+
+<p>If the stream is not multiplexing this function will throw Error.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>CarrierError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(openPortForwardingForService:withProtocol:host:port:error:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">openPortForwarding</span><span class="p">(</span><span class="nv">service</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                               <span class="n">ptotocol</span> <span class="nv">proto</span><span class="p">:</span> <span class="kt"><a href="../Enums/PortForwardingProtocol.html">PortForwardingProtocol</a></span><span class="p">,</span>
+                               <span class="nv">host</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"localhost"</span><span class="p">,</span>
+                               <span class="nv">port</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">NSNumber</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>service</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The remote service name</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>proto</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Port forwarding protocol</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>host</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Local host or ip to bind. Defaultlly port forwarding
+  will bind to localhost</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>port</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Local port to bind</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Port forwarding ID</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)closePortForwarding:error:"></a>
+                    <a name="//apple_ref/swift/Method/closePortForwarding(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ElastosCarrierSDK@objc(cs)ELACarrierStream(im)closePortForwarding:error:">closePortForwarding(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Close a port forwarding.</p>
+
+<p>If the stream is not multiplexing this function will throw Error.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>CarrierError</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(closePortForwarding:error:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">closePortForwarding</span><span class="p">(</span><span class="n">_</span> <span class="nv">portForwarding</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>portForwarding</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The port forwarding ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://www.elastos.org" target="_blank" rel="external">carrier-dev</a>. All rights reserved. (Last updated: 2019-08-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

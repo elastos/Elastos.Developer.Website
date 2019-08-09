@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ElastosHiveSDK  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="ElastosHiveSDK  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">ElastosHiveSDK Docs</a> (59% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">ElastosHiveSDK Reference</a>
+        <img id="carat" src="img/carat.png" />
+        ElastosHiveSDK  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AttributeMap.html">AttributeMap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DriveParameter.html">DriveParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DropBoxParameter.html">DropBoxParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HiveCallback.html">HiveCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HiveChildren.html">HiveChildren</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HiveClientHandle.html">HiveClientHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HiveClientInfo.html">HiveClientInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HiveDirectoryHandle.html">HiveDirectoryHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HiveDirectoryInfo.html">HiveDirectoryInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HiveDriveHandle.html">HiveDriveHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HiveDriveInfo.html">HiveDriveInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HiveFileHandle.html">HiveFileHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HiveFileInfo.html">HiveFileInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HiveItemInfo.html">HiveItemInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/IPFSEntry.html">IPFSEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/IPFSParameter.html">IPFSParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NativeParameter.html">NativeParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/s:14ElastosHiveSDK9NullEntryC">NullEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OAuthEntry.html">OAuthEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OneDriveParameter.html">OneDriveParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OwnCloudParameter.html">OwnCloudParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:@M@ElastosHiveSDK@objc(cs)Result">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/s:14ElastosHiveSDK10SdkVersionC">SdkVersion</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/DriveType.html">DriveType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/HiveError.html">HiveError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/DirectoryItem.html">DirectoryItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/FileItem.html">FileItem</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/Authenticator.html">Authenticator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ResourceItem.html">ResourceItem</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:14ElastosHiveSDK0B7Promisea">HivePromise</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='elastos-hive-swift-framework' class='heading'>Elastos Hive Swift Framework</h1>
+
+<p><a href="https://travis-ci.com/elastos/Elastos.NET.Hive.Swift.SDK"><img src="https://travis-ci.com/elastos/Elastos.NET.Hive.Swift.SDK.svg?" alt="Build Status"></a></p>
+<h2 id='summary' class='heading'>Summary</h2>
+
+<p>Elastos Hive Swift Framework is a set of Swift APIs as well as an uniform layer that would be used by Elastos dApps  to access  (or store)  their files or datum from (or to) cloud driver backends, which is currently including the list of following cloud drivers supported:</p>
+
+<ul>
+<li>OneDriver</li>
+<li>Hive IPFS/Cluster</li>
+<li>ownCloud  on WebDav (Not supported yet)</li>
+</ul>
+<h2 id='table-of-contents' class='heading'>Table of Contents</h2>
+
+<ul>
+<li><a href="#elastos-hive-swift-framework">Elastos Hive Swift Framework</a><br>
+
+<ul>
+<li><a href="#summary">Summary</a><br></li>
+<li><a href="#table-of-contents">Table of Contents</a><br></li>
+<li><a href="#build-from-source">Build from source</a><br></li>
+<li><a href="#tests">Tests</a><br></li>
+<li><a href="#cocoaPods">CocoaPods</a><br></li>
+<li><a href="#how-to-use-APIs">How-to use APIs</a> 
+
+<ul>
+<li><a href="#hiveclient-class">HiveClient class</a></li>
+<li><a href="#hivedrive-class">HiveDrive class</a></li>
+<li><a href="#hivedirectory-class">HiveDirectory class</a></li>
+<li><a href="#hivefile-calss">HiveFile calss</a></li>
+</ul></li>
+<li><a href="#license">License</a><br></li>
+<li><a href="#build-docs">Build Docs</a>
+
+<ul>
+<li><a href="#1-swift-apis-docs">1. Swift APIs Docs</a></li>
+<li><a href="#2-object-c-apis-docs">2. Object-C APIs Docs</a></li>
+</ul></li>
+<li><a href="#thanks">Thanks</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#license">License</a></li>
+</ul></li>
+</ul>
+<h2 id='build-from-source' class='heading'>Build from source</h2>
+
+<p>Use the following commands to download and build source code:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>git clone https://github.com/elastos/Elastos.NET.Hive.Swift.SDK
+<span class="nv">$ </span><span class="nb">cd </span>Elastos.NET.Hive.Swift.SDK
+<span class="nv">$ </span>pod <span class="nb">install</span>
+<span class="nv">$ </span>open <span class="nt">-a</span> Xcode ElastosHiveSDK.xcworkspace
+</code></pre>
+
+<p>Then use the <strong>Apple Xcode</strong> to build ElastosHiveSDK target and generate <strong>ElastosHiveSDK.framework</strong>.</p>
+<h2 id='tests' class='heading'>Tests</h2>
+<h3 id='getting-started' class='heading'>Getting started</h3>
+
+<p>Open the ElastosHiveSDK.xcworkspace and Select TestHost target to run unit tests. Then press <strong>Command-6</strong> to open the Test navigator.
+There are three ways to run the tests:</p>
+
+<p>1.<strong>Product ▸ Test</strong> or <strong>Command-U</strong>. Both of these run all test classes.</p>
+
+<p>2.Click the arrow button in the Test navigator.</p>
+
+<p>3.Click the diamond button in the gutter.</p>
+
+<p>You can alse run an individual test method by clicking its diamond, either in the Test navigator or in the gutter.</p>
+
+<p>When all the tests succeed, the diamonds will turn green and show check marks.</p>
+<h2 id='cocoapods' class='heading'>CocoaPods</h2>
+<h3 id='pod-install' class='heading'>Pod install</h3>
+
+<p>The distribution would be published to CocoaPods platform. So, the simple way to use <strong>ElastosHiveSDK.framework</strong> is just to add the following line to your <strong>Podfile</strong>:</p>
+<pre class="highlight plaintext"><code>$ pod 'ElastosHiveSDK'
+</code></pre>
+
+<p>Then run the command below to install it before open your Xcode workspace:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>pod <span class="nb">install</span>
+</code></pre>
+<h2 id='how-to-use-apis' class='heading'>How-to use APIs</h2>
+<h3 id='hiveclient-class' class='heading'>HiveClient class</h3>
+
+<p>Firstly，<strong>Making a Client：</strong></p>
+
+<p>Create different clients with specified parameters.</p>
+
+<p>a.g. :</p>
+
+<p>Create a client for Onedrive.</p>
+<pre class="highlight plaintext"><code>let outhEnty = OAuthEntry(YOUR-CLIENT-ID, YOUR-SCOPE, YOUR-REIRECTURL)
+hiveParam = OneDriveParameter(outhEnty, YOUR-STORE-PATH)
+HiveClientHandle.createInstance(hiveParam!)
+hiveClient = HiveClientHandle.sharedInstance(type: .oneDrive)
+</code></pre>
+
+<p>Then，<strong>Login：</strong> </p>
+
+<p>All interfaces need to be logged in before they can be invoked except getVersion interface. Networking in ElastosHiveSDK is done asynchronously except for login and logout. </p>
+
+<p><strong>Note：</strong> Please implement Authenticator protocol.</p>
+<pre class="highlight plaintext"><code>try hiveClient.login(self as Authenticator)
+</code></pre>
+
+<p>Finaly，<strong>Get a default drive</strong></p>
+<pre class="highlight plaintext"><code>hiveClient.defaultDriveHandle()
+          .done{ drive in
+             // drive
+         }.catch{ error in
+            // error
+        }
+</code></pre>
+
+<p>Then, you can  use the <strong>drive</strong> operate files and directories with path,etc:</p>
+<h3 id='hivedrive-class' class='heading'>HiveDrive class</h3>
+
+<p><strong>1. create directory with path</strong></p>
+<pre class="highlight plaintext"><code>hiveClient.defaultDriveHandle()
+          .then{ drive -&gt; HivePromise&lt;HiveDirectoryHandle&gt; in
+              return drive.createDirectory(withPath: "/od_createD_001")
+         }.done{ directory in
+              // directory
+         }.catch{ error in
+             // error
+         }
+</code></pre>
+
+<p><strong>2. create file with path</strong></p>
+<pre class="highlight plaintext"><code>hiveClient.defaultDriveHandle()
+          .then{ drive -&gt; HivePromise&lt;HiveFileHandle&gt; in
+              return drive.createFile(withPath: "/od_createF_002")
+         }.done{ file in
+             // file
+         }.catch{ error in
+             // error
+         }
+</code></pre>
+
+<p><strong>3. get a file with path</strong></p>
+
+<p>You can  use the <strong>drive</strong> get a file 、directory or getItemInfo at a path:</p>
+<pre class="highlight plaintext"><code>hiveClient.defaultDriveHandle()
+          .then{ drive -&gt; HivePromise&lt;HiveFileHandle&gt; in
+            return drive.fileHandle(atPath: "/od_createF_003")
+         }.done{ file in
+             // file
+         }.catch{ error in
+            // error
+        }
+</code></pre>
+
+<p><strong>4. get a directory with path</strong></p>
+<pre class="highlight plaintext"><code>hiveClient.defaultDriveHandle()
+          .then{ drive -&gt; HivePromise&lt;HiveDirectoryHandle&gt; in
+              return drive.directoryHandle(atPath: "/od_createD_004)
+         }.done{ directory in
+             // directory
+         }.catch{ error in
+             // error
+         }
+</code></pre>
+
+<p><strong>5. get itemInfo with path</strong></p>
+<pre class="highlight plaintext"><code>hiveClient.defaultDriveHandle()
+          .then{ drive -&gt; HivePromise&lt;HiveItemInfo&gt; in
+              return drive.getItemInfo("/od_createF_005")
+         }.done{ itemInfo in
+             // file itemInfo
+        }.catch{ error in
+            // error
+        }
+</code></pre>
+<h3 id='hivedirectory-class' class='heading'>HiveDirectory class</h3>
+
+<p>You can create directory or file with a name in HiveDirectory class.</p>
+
+<p><strong>1. create directory with name</strong></p>
+<pre class="highlight plaintext"><code>directory.createDirectory(withName: "od_createD_001")
+        }.done{ directory in
+            // directory
+        }.catch{ error in
+            // error
+        }
+</code></pre>
+
+<p><strong>2. create file with name</strong></p>
+<pre class="highlight plaintext"><code>directory.createFile(withName: "od_createF_002")
+        }.done{ file in
+            // file
+        }.catch{ error in
+          // error
+        }
+</code></pre>
+
+<p><strong>3. copy to a new path</strong></p>
+<pre class="highlight plaintext"><code>directory.copyTo(newPath: "/od_createD_003")
+        }.done{ succeed in
+            // succeed
+        }.catch{ error in
+           // error
+        }
+</code></pre>
+
+<p><strong>4. move to a new path</strong></p>
+<pre class="highlight plaintext"><code>directory.moveTo(newPath: "/od_createD_004")
+        }.done{ succeed in
+            // succeed
+        }.catch{ error in
+           // error
+        }
+</code></pre>
+
+<p><strong>5. delete</strong></p>
+<pre class="highlight plaintext"><code>directory.deleteItem()
+        }.done{ succeed in
+            // succeed
+        }.catch{ error in
+           // error
+        }
+</code></pre>
+<h3 id='hivefile-calss' class='heading'>HiveFile calss</h3>
+
+<p>You can move 、copy、 delete、read and write in HiveFile class.</p>
+
+<p><strong>1. copy to a new path</strong></p>
+<pre class="highlight plaintext"><code>file.copyTo(newPath: "/od_createD_001")
+   }.done{ succeed in
+       // succeed
+   }.catch{ error in
+      // error
+   }
+</code></pre>
+
+<p><strong>2. file delete</strong></p>
+<pre class="highlight plaintext"><code>file.deleteItem()
+   }.done{ succeed in
+       // succeed
+   }.catch{ error in
+      // error
+   }
+</code></pre>
+
+<p><strong>3. move to a new path</strong></p>
+<pre class="highlight plaintext"><code>file.moveTo(newPath: "/od_createD_003")
+   }.done{ succeed in
+       // succeed
+  }.catch{ error in
+      // error
+  }
+</code></pre>
+
+<p><strong>4. write data:</strong></p>
+
+<p>Invoking writeData(withData: data) api writes local caches and invoke commitData() api will submitsto the remote.</p>
+
+<p>Invoke writeData(withData: Data, _ position: UInt64) api will insert the written data at the specified position.</p>
+<pre class="highlight plaintext"><code>file.writeData(withData: data)
+    .then{ length -&gt; HivePromise&lt;HiveVoid&gt; in
+        return (file.commitData())
+   }.done{ data in
+       // succeed
+  }.catch{ error in
+      // error
+  }
+</code></pre>
+
+<p><strong>5. read data:</strong></p>
+
+<p>Invoking readData(_ length: Int) api read data of a specified length sequentially.</p>
+
+<p>Invoke readData(_ length: Int, _ position: UInt64) api read data of a specified length form the specified position.</p>
+<pre class="highlight plaintext"><code>file.readData(length)
+   }.done{ data in
+       // succeed
+  }.catch{ error in
+      // error
+  }
+</code></pre>
+<h2 id='build-docs' class='heading'>Build Docs</h2>
+<h3 id='1-swift-apis-docs' class='heading'>1. Swift APIs Docs</h3>
+
+<p>Run following script command to generate swift APIs document with appledoc tool:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>./docs.sh
+<span class="nv">$ </span><span class="nb">cd </span>docs
+</code></pre>
+
+<p>Open index.html in the docs folder</p>
+<h3 id='2-object-c-apis-docs' class='heading'>2. Object-C APIs Docs</h3>
+
+<p>TODO.</p>
+<h2 id='thanks' class='heading'>Thanks</h2>
+
+<p>Sincerely thanks to all teams and projects that we relies on directly or indirectly.</p>
+<h2 id='contributing' class='heading'>Contributing</h2>
+
+<p>We welcome contributions to the Elastos Hive Swfit Project in many forms.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>MIT</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://www.elastos.org" target="_blank" rel="external">carrier-dev</a>. All rights reserved. (Last updated: 2019-08-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
