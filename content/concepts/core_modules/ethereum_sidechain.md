@@ -16,7 +16,7 @@ The structure of the ethereum blockchain is very similar to bitcoin's in that it
 - Use ETH ELA to pay for all the gas fees for every single smart contracts running in the sidechain
 - Create ERC20, ERC721 tokens
 - Ethereum Sidechain is programmable unlike the Elastos main chain which means that developers can use it to build new kinds of applications using smart contract logic where the applications will always run as programmed
-- SOme applications that can be built using Ethereum sidechain include cryptocurrency wallets, financial applications, decentralized markets, games, and much more
+- Some applications that can be built using Ethereum sidechain include cryptocurrency wallets, financial applications, decentralized markets, games, and much more
 
 ### Differences between Elastos ETH Sidechain and ETH blockchain
 - ETH blockchain uses PoW and is currently in the process of switching to Proof of Stake(PoS) while the Elastos ETH sidechain uses DPoS
