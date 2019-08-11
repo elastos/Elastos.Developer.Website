@@ -8,4 +8,17 @@ alwaysopen = false
 
 {{< ownership "Kiran Pachhai" >}}
 
-{{< todo "Probably need to write something from scratch here. Make sure readers clearly understand that they cannot do everything with blockchains, that not all apps are suitable over blockchains, but if they are, how to start thinking 'blockchain' instead of traditional architecture" >}}
+### Differences between centralized and decentralized apps
+{{< todo >}}
+
+### Should you go 100% decentralized?
+{{< todo >}}
+
+### How to choose between using blockchain, carrier and hive
+{{< todo >}}
+
+### Should you choose to do everything on the blockchain?
+{{< todo >}}
+
+### Thinking about Decentralized Applications in a New Way
+{{< todo >}}
