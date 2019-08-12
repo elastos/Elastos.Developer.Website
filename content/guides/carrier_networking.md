@@ -11,6 +11,9 @@ alwaysopen = false
 
 {{< todo "@BPI @ZhiLong CarrierSessionHelper-based content" >}}
 
+{{< todo "@BPI @TangZhiLong What else can we do with carrier and want to explain to developers here?">}}
+
+{{< todo "Find the equivalent codes for swift and trinity" >}}
 
 ## Introduction
 
@@ -108,7 +111,10 @@ public class DefaultCarrierHandler extends AbstractCarrierHandler {
     }
 
     @Override
-    public void onFriendRequest(Carrier carrier, String userId, UserInfo info, String hello) {
+    public void onFriendRequest(Carrier carrier, 
+                                String userId, 
+                                UserInfo info, 
+                                String hello) {
         Logger.info("Carrier received friend request. Peer UserId: " + userId);
         CarrierHelper.acceptFriend(userId, hello);
     }
@@ -119,8 +125,12 @@ public class DefaultCarrierHandler extends AbstractCarrierHandler {
     }
 
     @Override
-    public void onFriendConnection(Carrier carrier, String friendId, ConnectionStatus status) {
-        Logger.info("Carrier friend connect. peer UserId: " + friendId + " status:" + status);
+    public void onFriendConnection(Carrier carrier, 
+                                   String friendId, 
+                                   ConnectionStatus status) {
+        Logger.info("Carrier friend connect. peer UserId: " + friendId);
+        Logger.info("Friend status:" + status);
+
         if(status == ConnectionStatus.Connected) {
             CarrierHelper.setPeerUserId(friendId);
         } else {
@@ -130,7 +140,8 @@ public class DefaultCarrierHandler extends AbstractCarrierHandler {
 
     @Override
     public void onFriendMessage(Carrier carrier, String from, byte[] message) {
-        Logger.info("Carrier receiver message from UserId: " + from + "\nmessage: " + new String(message));
+        Logger.info("Message from userId: " + from);
+        Logger.info("Message: " + new String(message));
     }
 }
   {{< /tab >}} 
@@ -165,115 +176,123 @@ carrier.start(1000);
     {{< /tab >}} 
 {{< /tabs >}}
 
+### Add a friend
 
+{{< todo "Explain if we can we request adding friend when peer is offline? So he can accept when he comes online?" >}}
 
-{{< pleasetranslate >}}
+Carrier supports friends management. You can add a peer as a friend using its peer address. That address can be retrieved from your friend's application context. This can be provided by the application through a QR code, for instance.
 
-3. 新建 CarrierHelper.java，用于对外提供简单的 API。新建 startCarrier函数用于启动 Carrier。在这个函数中添加 DefaultCarrierHandler 和 DefaultCarrierHandler 的实例，最后调用 Carrier.start()。 实现可参照 CarrierDemo的[CarrierHelper.java](https://github.com/mengxiaokun/CarrierDemo/blob/master/app/src/main/java/org/elastos/carrier/demo/CarrierHelper.java)。
+{{< tabs >}} 
+    {{< tab name="Java" codelang="java" >}} 
+String userId = Carrier.getIdFromAddress(peerAddr);
+if(!Carrier.getInstance().isFriend(userId)) {
+    Carrier.getInstance().addFriend(peerAddr, CARRIER_HELLO_AUTH);
+}
+    {{< /tab >}} 
+    {{< tab name="Swift" codelang="swift" >}} 
+    {{< /tab >}} 
+    {{< tab name="Trinity" codelang="js" >}} 
+    {{< /tab >}} 
+{{< /tabs >}}
+
+After requesting a peer address to become friend, that peer will receive your request in its DefaultCarrierHandler, inside onFriendRequest(). At that time, peer's app can choose to accept or reject your invitation.
+
+### Accept an invitation to become friend
+
+When a peer receives an invitation in onFriendRequest(), he can accept it like this:
+
+{{< tabs >}} 
+    {{< tab name="Java" codelang="java" >}} 
+if (hello.equals(CARRIER_HELLO_AUTH) == false) {
+    Logger.error("Ignore to accept friend, not expected.");
+    return;
+}
+Carrier.getInstance().acceptFriend(peerUserId);
+    {{< /tab >}} 
+    {{< tab name="Swift" codelang="swift" >}} 
+    {{< /tab >}} 
+    {{< tab name="Trinity" codelang="js" >}} 
+    {{< /tab >}} 
+{{< /tabs >}}
+
+When the request is accepted, both parties receive the information in onFriendAdded().
+
+### Listen to friends activity
+
+You can know when friends come online or offline listening to the onFriendConnection() callback:
+
+{{< todo "Clarify what setPeerUserId does" >}}
+
+{{< tabs >}} 
+    {{< tab name="Java" codelang="java" >}} 
+@Override
+public void onFriendConnection(Carrier carrier, String friendId, ConnectionStatus status) {
+    if(status == ConnectionStatus.Connected) {
+        CarrierHelper.setPeerUserId(friendId);
+    }
+}
+    {{< /tab >}} 
+    {{< tab name="Swift" codelang="swift" >}} 
+    {{< /tab >}} 
+    {{< tab name="Trinity" codelang="js" >}} 
+    {{< /tab >}} 
+{{< /tabs >}}
+
+### Send a message to a friend
+
+Sending a message to a friend is as easy as this. Please note that only friends can receive messages to prevent spam.
+
+{{< todo "What is sPeerUserId?" >}}
     
-4. 在 MainActivity.java 中调用 CarrierHelper.startCarrier()。
-5. 在 DefaultCarrierHandler.java 中重载 onConnection() 函数，监听 Carrier 和 BootstrapNode 的连接状态（Online/Offline）。
-6. 运行 CarrierDemo， Carrier 就启动起来了。
+{{< tabs >}} 
+    {{< tab name="Java" codelang="java" >}} 
+Carrier.getInstance().sendFriendMessage(sPeerUserId, message);
+    {{< /tab >}} 
+    {{< tab name="Swift" codelang="swift" >}} 
+    {{< /tab >}} 
+    {{< tab name="Trinity" codelang="js" >}} 
+    {{< /tab >}} 
+{{< /tabs >}}
 
-## 4 显示和扫描地址（可选）
+### Receive a message
 
-为了快速添加好友，在 CarrierDemo 中添加了扫描二维码功能，这个功能与 Carrier 使用无关，可忽略。
+Messages are received by the carrier handler:
 
-1. 显示地址。添加 MyAddr 按钮，并实现点击显示二维码，具体实现可参照 CarrierDemo的 [MainActivity.java](https://github.com/mengxiaokun/CarrierDemo/blob/master/app/src/main/java/org/elastos/carrier/demo/MainActivity.java) 的 showAddress() 函数。
-2. 扫描好友地址。添加 CAMERA， VIBRATE 等权限，添加 ScanAddr 按钮，并实现点击扫描二维码，具体实现可参照 CarrierDemo的 [MainActivity.java](https://github.com/mengxiaokun/CarrierDemo/blob/master/app/src/main/java/org/elastos/carrier/demo/MainActivity.java) 的  函数。
+{{< tabs >}} 
+    {{< tab name="Java" codelang="java" >}} 
+@Override
+public void onFriendMessage(Carrier carrier, String from, String message) {
+}
+    {{< /tab >}} 
+    {{< tab name="Swift" codelang="swift" >}} 
+    {{< /tab >}} 
+    {{< tab name="Trinity" codelang="js" >}} 
+    {{< /tab >}} 
+{{< /tabs >}}
 
-## 5 添加好友
+### Stop Carrier
 
-1. 两个手机分别称为A和B。均安装有 CarrierDemo。
-2. 在A、B双方都处于 Online 状态时，A获取到B的好友地址，并调用 addFriend() 函数添加好友B，该函数使用的是B的 Address。可参照 CarrierDemo的 [CarrierHelper.java](https://github.com/mengxiaokun/CarrierDemo/blob/master/app/src/main/java/org/elastos/carrier/demo/CarrierHelper.java) 的 addFriend()。
-    ```java
-    public final class CarrierHelper {
-        ......
-        public static void addFriend(String peerAddr) {
-            try {
-                String userId = Carrier.getIdFromAddress(peerAddr);
-                if(Carrier.getInstance().isFriend(userId)) {
-                    Logger.info("Carrier ignore to add friend address: " + peerAddr);
-                    return;
-                }
+{{< tabs >}} 
+    {{< tab name="Java" codelang="java" >}} 
+Carrier carrier = Carrier.getInstance();
+carrier.kill();
+    {{< /tab >}} 
+    {{< tab name="Swift" codelang="swift" >}} 
+    {{< /tab >}} 
+    {{< tab name="Trinity" codelang="js" >}} 
+    {{< /tab >}} 
+{{< /tabs >}}
 
-                Carrier.getInstance().addFriend(peerAddr, CARRIER_HELLO_AUTH);
-                Logger.info("Carrier add friend address: " + peerAddr);
-            } catch (Exception e) {
-                Logger.error("Failed to add friend.", e);
-            }
-            return;
-        }
-    }
-    ```
-3. 当A调用 addFriend() 后，被添加的一方会收到 onFriendRequest() 回调，在该回调中， Carrier 会将A的 Address 转换为 UserId，从此处开始， Carrier 将全部使用 UserId 进行身份辨识。可以在 DefaultCarrierHandler.java 重载此函数进行好友认证处理，可参照 CarrierDemo的 [CarrierHelper.java](https://github.com/mengxiaokun/CarrierDemo/blob/master/app/src/main/java/org/elastos/carrier/demo/CarrierHelper.java) 的 acceptFriend()。
-    ```java
-    public final class CarrierHelper {
-        ......
-        public static void acceptFriend(String peerUserId, String hello) {
-            try {
-                if (hello.equals(CARRIER_HELLO_AUTH) == false) {
-                    Logger.error("Ignore to accept friend, not expected.");
-                    return;
-                }
+### TODO
 
-                Carrier.getInstance().AcceptFriend(peerUserId);
-                Logger.info("Carrier accept friend UserId: " + peerUserId);
-            } catch (Exception e) {
-                Logger.error("Failed to add friend.", e);
-            }
-        }
-    }
-    ```
-4. 通过B的认证后，A会收到 onFriendAdded() 回调，可以在 DefaultCarrierHandler.java 重载此函数进行后续处理。
-5. 已经存在的好友不能重复添加，可以通过 getFriends() 函数获取好友列表。
-
-## 6 发送消息
-
-1. A、B双方 Online 后，对方均会收到 onFriendConnection() 回调，可以在 DefaultCarrierHandler.java 重载此函数进行后续处理。
-    ```java
-    public class DefaultCarrierHandler extends AbstractCarrierHandler {
-        ......
-        @Override
-        public void onFriendConnection(Carrier carrier, String friendId, ConnectionStatus status) {
-            Logger.info("Carrier friend connect. peer UserId: " + friendId + " status:" + status);
-            if(status == ConnectionStatus.Connected) {
-                CarrierHelper.setPeerUserId(friendId);
-            }
-        }
-    }
-    ```
-2. 在A、B双方都处于 Online 状态时，可以通过 sendFriendMessage() 函数向对方发送消息，可参照 CarrierDemo的 [CarrierHelper.java](https://github.com/mengxiaokun/CarrierDemo/blob/master/app/src/main/java/org/elastos/carrier/demo/CarrierHelper.java) 的 sendMessage()。
-    ```java
-    public final class CarrierHelper {
-        ......
-        public static void sendMessage(String message) {
-            if(sPeerUserId == null) {
-                Logger.error("Failed to send message, friend not found.");
-                return;
-            }
-
-            try {
-                Carrier.getInstance().sendFriendMessage(sPeerUserId, message);
-                Logger.info("Carrier send message to UserId: " + sPeerUserId
-                        + "\nmessage: " + message);
-            } catch (Exception e) {
-                Logger.error("Failed to send message.", e);
-            }
-        }
-    }
-    ```
-3. 当A发送消息给B后，B会收到 onFriendMessage() 回调，可以在 DefaultCarrierHandler.java 重载此函数进行消息处理。
-    ```java
-    public class DefaultCarrierHandler extends AbstractCarrierHandler {
-        ......
-        @Override
-        public void onFriendMessage(Carrier carrier, String from, String message) {
-            Logger.info("Carrier receiver message from UserId: " + from
-                    + "\nmessage: " + message);
-        }
-    }
-    ```
+{{< tabs >}} 
+    {{< tab name="Java" codelang="java" >}} 
+    {{< /tab >}} 
+    {{< tab name="Swift" codelang="swift" >}} 
+    {{< /tab >}} 
+    {{< tab name="Trinity" codelang="js" >}} 
+    {{< /tab >}} 
+{{< /tabs >}}
 
 ## 7 建立 Session（高级Carrier编程，非必选）
 
@@ -298,6 +317,12 @@ carrier.start(1000);
     }
     ```
 3. session 状态可以通过 StreamHandler.onStateChanged() 回调获得，可以在 DefaultSessionHandler.java 重载此函数进行状态处理。
+
+
+
+
+
+{{< pleasetranslate >}}
 
 4. A创建 session，可参照 CarrierDemo的 [CarrierSessionHelper.java](https://github.com/mengxiaokun/CarrierDemo/blob/master/app/src/main/java/org/elastos/carrier/demo/session/CarrierSessionHelper.java) 的 newSessionAndStream() 函数实现。
    * 初始化 SessionManager ，调用 Manager.getInstance(Carrier.getInstance(), sessionHandler) 实现初始化。
