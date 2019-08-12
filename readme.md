@@ -48,7 +48,7 @@ Shortcodes are hugo-specific ways to automatically generate html content easily.
 Shortcodes can be used in .md and .html files.
 
 ### Generate a simple internal link (secure - will check if page is missing)
-	{{< internallink "What is Elastos?" "concepts/what_is_elastos/_index.md" >}} 
+	{{< internallink "What is Elastos?" "discover_elastos/what_is_elastos/_index.md" >}} 
 
 ### Show an orange TODO box
     {{% notice todo %}}

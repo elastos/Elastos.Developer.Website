@@ -11,7 +11,7 @@ This demo page is for doc contributors to find examples of usable shortcodes.<br
 This page is located at **/content/demo_internal.md**.
 
 ### Secure links
-Valid link: {{< internallink "What is Elastos?" "concepts/what_is_elastos/_index.md" >}} <br>
+Valid link: {{< internallink "What is Elastos?" "discover_elastos/what_is_elastos/_index.md" >}} <br>
 Invalid link (page moved, etc): {{< internallink "What is Elastos?" "concepts/moved/_index.md" >}} 
 
 ### FAQ entries
