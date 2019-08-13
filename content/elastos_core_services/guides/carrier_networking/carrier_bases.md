@@ -170,15 +170,25 @@ carrier.start(500); // Start carrier. Wait 500 milliseconds between each check o
 
 ### Create a peer address
 
-As a peer on carrier network, TODO TODO
+As a peer on carrier network, you can retrieve your carrier unique address using the following code:
 
+{{< tabs >}} 
+    {{< tab name="Java" codelang="java" >}} 
 String myPeerAddress = Carrier.getInstance().getAddress()
+    {{< /tab >}} 
+    {{< tab name="Swift" codelang="swift" >}} 
+    {{< /tab >}} 
+    {{< tab name="Trinity" codelang="js" >}} 
+    {{< /tab >}} 
+{{< /tabs >}}
+
+This address can send me send to a friend (usually, through a QR code or a link) so he can add it into his own app to request to connect as a friend.
 
 ### Add a friend
 
-{{< todo "Explain if we can we request adding friend when peer is offline? So he can accept when he comes online?" >}}
-
 Carrier supports friends management. You can add a peer as a friend using its peer address. That address can be retrieved from your friend's application context. This can be provided by the application through a QR code, for instance.
+
+Note that all operations such as adding a friend or sending a message currently require **both parties to be online**.
 
 {{< tabs >}} 
     {{< tab name="Java" codelang="java" >}} 
