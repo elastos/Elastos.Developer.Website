@@ -6,8 +6,6 @@ pre = ""
 alwaysopen = false
 +++
 
-{{< ownership "Kiran Pachhai" >}}
-
 ### Differences between centralized and decentralized apps
 {{< todo >}}
 
