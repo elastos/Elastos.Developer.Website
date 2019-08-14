@@ -22,27 +22,39 @@ The exchange maintains the UTXO set of every address to generate the currency tr
 
 ## Reference
 
-### ELA Node
+### ELA (mainchain) Node
 
 <https://github.com/elastos/Elastos.ELA>
+
+Standalone server to run a Elastos mainchain node.
 
 #### Main net config file
 
 <https://github.com/elastos/Elastos.ELA/blob/master/docs/mainnet_config.json.sample>
 
-Please put this file in the directory of ELA node and change file name to config.json.
+Download this file to the ELA node directory and rename it to **mainnet_config.json**
 
 #### Test net config file
 
 <https://github.com/elastos/Elastos.ELA/blob/master/docs/testnet_config.json.sample>
 
-Please put this file in the directory of ELA node and change file name to config.json.
+Download this file to the ELA node directory and rename it to **testnet_config.json**
+
+### Running your node on mainnet or testnet
+
+> ./ela --datadir data_mn --conf mainnet_config.json
+
+or 
+
+> ./ela --datadir data_tn --conf testnet_config.json
+
+**datadir** is the output folder in which your node will store its files.
 
 ### Transaction utility
 
 <https://github.com/elastos/Elastos.ELA.Utilities.Java>
 
-Make and sign transaction
+Java service that runs on exchange servers or wallets that manage users private keys on the server side. Used to make and sign Elastos transactions, get and create private and public keys.
 
 ### RPC interface
 
