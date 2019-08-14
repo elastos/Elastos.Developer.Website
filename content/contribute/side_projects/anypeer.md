@@ -7,24 +7,25 @@ pre = ""
 alwaysopen = false
 +++
 
-{{< ownership "Benjamin Piette" >}}
-
-{{< todo "@BPI to discuss with anypeer developer" >}}
-
 ## About
 
-Short intro here.
+AnyPeer is a social application powered by Elastos, which includes decentralized chat and decentralized wallet. In the future, we will join games based on Elastos smart contract sidechain.
 
 ## Useful skills
 
 * Android programming
+* iOs programming
 * Design
 * Marketing
 
 ## Github location
 
-[Github Repo name here](https://www.github.com/yourrepourl)
+[Android base version](https://github.com/anyxxx/AnyPeer)
 
 ## How to contribute ?
 
-Explain here.
+**Please contact us first:**
+
+* By email: [anyxxxpeer@gmail.com](mailto:anyxxxpeer@gmail.com)
+* In the AnyPeer app: **9nxSweVXFhuHSC6rjEz6QH447T5Vy2zBvmJKxqZMW3zamhSwbm8J**
+
