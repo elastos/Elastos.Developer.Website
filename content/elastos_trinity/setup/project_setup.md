@@ -62,7 +62,9 @@ After your app is launched inside trinity, you can directly edit your app conten
 
 A *manifest.json* file is created by default in your trinity DApp project. 
 
-It looks like the following sample. You can manually edit it whenever needed:
+It looks like the following sample. You can manually edit it whenever needed. 
+
+Trinity manifest format is fully described in the {{< internallink "trinity manifest guide" "elastos_trinity/guides/trinity_manifest.md" >}}.
 
    ```json
    {
