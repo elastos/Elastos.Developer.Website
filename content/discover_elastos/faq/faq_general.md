@@ -7,16 +7,12 @@ pre = ""
 alwaysopen = false
 +++ 
 
-{{< ownership "Kiran Pachhai / Clarence Liu" >}}
-
-{{< checkme >}}
-
 {{% faqentry question="What is Elastos?" %}}
-Elastos is a network operating system that works on top/in parallel, at the same time as a classic OS (Windows Android, iOS, …) providing a secure environment which permits access to all the applications and services of all the blockchains through a decentralized peer-to-peer network.
+Elastos is the world’s leading provider of open source solutions, employing not only blockchain technology, but a peer-to-peer network for communication, decentralized data storage services, and a decentralized ID system for all digital assets. We are revolutionizing the Internet with Elastos. Now, we have a suite of services, including [Carrier](https://elastos.academy/carrier/), [Hive](https://elastos.academy/hive/), [Runtime](https://elastos.academy/runtime/), [Decentralized Identity](https://elastos.academy/did/), and [Blockchain](https://elastos.academy/mainchain/), among others. With Elastos technologies, developers and companies can successfully adapt as the world’s demand for data rights strengthens.
 {{% /faqentry %}}
 
 {{% faqentry question="What is a network operating system?" %}}
-A system that uses the internet as a base layer. The internet becomes the device. This system is extremely well secured and peer-to-peer. Your data and computing power are both on your device and on the internet.
+A network operating system refers to a system that uses the internet as a base layer. The internet becomes the device. This system is extremely well secured and peer-to-peer. Your data and computing power are both on your device and on the internet.
 {{% /faqentry %}}
 
 {{% faqentry question="Is Elastos a company?" %}}
@@ -44,11 +40,11 @@ No, Elastos private sales are not considered as a token sale by the Chinese gove
 {{% /faqentry %}}
 
 {{% faqentry question="When will Elastos publish English documents on github or other technical exchange platform?" %}}
-We have started to publish ten million lines of codes on https://github.com/elastos and https://gitlab.com/elastos/CM12_0-Android501. Later, we will also publish the code on Reddit, Slack, Steemit and other platforms.
+Everything is already available on [https://github.com/elastos](https://github.com/elastos).
 {{% /faqentry %}}
 
 {{% faqentry question="What will be the future application cases in Elastos?" %}}
-Because our vision is to provide users with a trustful operating system based on their application scenarios and as well as on blockchain technology, we will definitely have a lot of potential future applications.
+Because our vision is to provide users with a trustful environment using trustless computing based on each application scenarios and as well as on blockchain technology, we will definitely have a lot of potential future applications.
 
 The followings are some example of the applications:
 
@@ -57,60 +53,46 @@ The followings are some example of the applications:
 * Support digital content APP, like: electronic books, games, video player. All digital assets can be protected in a trustful environment.
 * Support applications about evidence, traceability to source, ID verification, etc. through trustful storage.
 
-Our projects that are currently in the business phase include: automatic driving system for one of China’s top automobile company, point-to-point document transfer system in personal mobile phones, evidence for credit investigation, single ID verification platform, and traceability of luxury goods.
+Our projects that are currently in the business phase include: point-to-point document transfer system in personal mobile phones, evidence for credit investigation, single ID verification platform, and traceability of luxury goods.
 {{% /faqentry %}}
 
 {{% faqentry question="Did anybody ask the similarity and difference between Elastos and blockstack?" %}}
 Blockstack realizes a decentralized browser based on distributed storage, and supply applications depending on browser. It combines encrypted, distributed storage and blockchain ID to make sure all the data belongs to the owner.
 
-As for Elastos, we will apply a similar method for digital assets storage. Users could apply for an ID for their digital assets on the blockchain, which guarantees the ownership of those digital contents. Based on the clarification of ownership, the digital contents will also be transferable and tradable. Finally, we make sure that all the digital contents can be used in trustful environment by the Elastos Runtime. Even though it is decrypted, it cannot escape from Elastos Runtime operating environment, which guarantees that it will never disclose or damage the ownership of the digital contents.
+As for Elastos, we apply a similar method for digital assets storage. Users could apply for an ID for their digital assets on the blockchain, which guarantees the ownership of those digital contents. Based on the clarification of ownership, the digital contents will also be transferable and tradable. Finally, we make sure that all the digital contents can be used in trustable environment provided by Elastos Runtime. Even though it is decrypted, it cannot escape from Elastos Runtime operating environment, which guarantees that it will never disclose or damage the ownership of the digital contents.
 {{% /faqentry %}}
 
 {{% faqentry question="What are the benefits of using ELA?" %}}
-Users can use the ELA coin to get a decentralized identification (DID) and use this DID to buy things such as DApps, cloud storage capacity and a lot of other resources including digital assets and more. On top of this you can also invest in ICO projects and products on the Elastos platform with the ELA coin.
+ELA fuels the entire Elastos ecosystem. ELA is the main chain’s base currency used for processing peer-to-peer payments, storing info on the DID Sidechain and executing smart contracts on ETH and NEO Sidechains. It is also used for the trading of digital goods throughout the entire ecosystem. Refer to [https://elastos.academy/ela-the-elastos-token/](https://elastos.academy/ela-the-elastos-token/) for more info.
 {{% /faqentry %}}
 
 {{% faqentry question="What is the use case of ELA, the currency of Elastos?" %}}
 {{< internallink "Elastos tokenomics." "elastos_blockchain/concepts/tokenomics.md" >}}
 {{% /faqentry %}}
 
-{{% faqentry question="What will I be able to buy with ELA?" %}}
-* Cloud storage space (Interplanetary File System [IPFS])
-* Digital goods (with their Universally Unique Identifiers [UUID])
-* Computing Power if necessary
-* Music, films, games and other kinds of scarce digital assets
-* Services like domain name registrations and page rankings
-* Applications built upon Elastos can use ELA for their transactions.
-* ELA will be the principal payment method used to compensate developers for 
-    the creation of DApps on the Elastos platform.
-* Users can participate in the token sale (ICO) of a project, the presale of a 
-    product or a funding
-* And more…
-{{% /faqentry %}}
-
 {{% faqentry question="Is a part of Elastos’ code copied from another project?" %}}
-Some of the Onchain team members worked on both ontology and elastos early on to build the main chain code. This is why the main chain code for DNA and Elastos are similar. Keep in mind that these kind of practices are very common in the open source world and that the mainchain ELA is only a part of Elastos. Every sidechain and the development of the OS/Runtime/Carrier comes from original code and is way more complex.
+Some of the Onchain team members worked on both ontology and elastos early on to build the main chain code. This is why the main chain code for DNA and Elastos are similar. Keep in mind that these kind of practices are very common in the open source world and that the mainchain ELA is only a part of Elastos. Also, as of today, even the main chain code of Elastos does much more than what it looked like on its inception so it's unlike any other projects out there. Every sidechain and the development of the Runtime/Carrier comes from original code and is way more complex.
 {{% /faqentry %}}
 
 {{% faqentry question="Does Elastos compete with Windows, iOS and Android?" %}}
-No. Elastos will exist as an application (virtual machine) on smartphones and personal computers. You can utilize the new internet at the same time as your classic environment.
+No. Elastos will exist as an application (virtual machine) on smartphones and personal computers. You can utilize the new internet at the same time as your classic environment. You would just be doing this via your Elastos Browser(codename: Trinity) so Elastos Browser including all the apps built using Elastos still run on top of Windows, iOS and Android.
 {{% /faqentry %}}
 
 {{% faqentry question="What are the different parts of Elastos?" %}}
-* An internet browser: Trinity
-* A virtual machine: Runtime
-* A network: Carrier
+* An internet browser: Elastos Browser(codename: Trinity)
+* A virtual machine: Elastos Runtime
+* A network: Elastos Carrier
 * A blockchain: ELA and its sidechains
 * A platform that allows connection to other blockchain services: Ethereum VM, 
     NEO VM, etc
 * An operating system: Elastos OS, for the Internet of Things (IoT), etc
 * A system for distributed computing, elastic compute
-* A system for decentralised storage: IPFS
+* A system for decentralised storage: Hive
 * A completely secured environment
 {{% /faqentry %}}
 
 {{% faqentry question="What is elastic compute?" %}}
-It is a system for distributed computing that is shared peer-to-peer on the network.
+It is a system for distributed computing that uses the shared peer-to-peer network called Elastos Carrier.
 {{% /faqentry %}}
 
 {{% faqentry question="What are the benefits of using this platform?" %}}
@@ -118,15 +100,11 @@ Threats and undesirable activity on the internet, such as malware, DDoS attacks,
 {{% /faqentry %}}
 
 {{% faqentry question="What are the benefits to other blockchain projects to be of this ecosystem?" %}}
-The benefit is to avoid all the dangers stated above.
-{{% /faqentry %}}
-
-{{% faqentry question="Does there exist a project similar to Elastos?" %}}
-No. No other projects similar to Elastos exists today. The only two other projects that use similar technology as Elastos are Amazons Elastic Compute Cloud (EC2) and Alibabas Alicloud, which are both centralized projects. Elastos can also be compared to Chrome OS.
+The benefit is to avoid all the dangers stated above or at least minimize the dangers.
 {{% /faqentry %}}
 
 {{% faqentry question="Are Ethereum, NEO, nOS, Cardano, EOS, Wanchain, Icon, etc competitors?" %}}
-No. These blockchains and their applications are in theory all accessible from Elastos and could benefit from this new environment. 
+No. These blockchains and their applications are in theory all accessible from Elastos and could benefit from this new environment as every one of these listed projects can be ported as sidechains to the ever growing Elastos ecosystem.
 {{% /faqentry %}}
 
 {{% faqentry question="What is the difference between Elastos and EOS?" %}}
@@ -151,7 +129,7 @@ Yes it is possible to access these blockchains and the functions they provide (e
 {{% /faqentry %}}
 
 {{% faqentry question="Which blockchains will become a part of the Elastos ecosystem?" %}}
-The compatibility with Ethereum and NEO, among others, is already in development. All the blockchains that will become a sidechain/friendchain of Elastos will be part of the ecosystem.
+The compatibility with Ethereum and NEO, among others, is already in production as sidechains. Any current blockchain platforms can be ported as one of the sidechains of Elastos.
 {{% /faqentry %}}
 
 {{% faqentry question="Who are the partners of Elastos?" %}}
@@ -168,16 +146,12 @@ There‘s something called a network effect and we already have hundred thousand
 This platform prevents more than 90% of the dangers on the internet, solves the problem of digital asset ownership and offers a certain amount of anonymity with an encrypted connection.
 {{% /faqentry %}}
 
-{{% faqentry question="How many applications will run on Elastos?" %}}
-There are already 25 DApps (decentralized applications) in development on Elastos for financial services, medical care, Internet of Things (IoT), digital objects, etc; without taking into account the Ethereum VM and the NEO VM.
-{{% /faqentry %}}
-
 {{% faqentry question="Is Elastos really decentralized?" %}}
 [The mainchain of the blockchain, the sidechains, the applications, the data, will all be decentralized.](https://elanews.net/2018/07/09/community-writer-series-will-the-real-decentralized-app-please-stand-up/)
 {{% /faqentry %}}
 
 {{% faqentry question="How many people work on the project?" %}}
-For the moment more than 80 developers are active in China. On top of that you can add all the developers that are part of the Cyber Republic and are spread all over the world.
+For the moment more than 80 developers are active in China. On top of that, you can add all the developers that are part of the Cyber Republic and are spread all over the world.
 {{% /faqentry %}}
 
 {{% faqentry question="This is all good and well but it still seems really complicated." %}}
@@ -188,32 +162,21 @@ The foundation works on giving the user a pleasant user experience where possibl
 [There is an article called “Elastos’ Ambition”.](https://elanews.net/2018/05/15/community-writer-series-the-ambition-of-elastos/)
 {{% /faqentry %}}
 
-{{% faqentry question="Will each user have a name/address that resembles the complex addresses Bitcoin uses?" %}}
-Yes and no.
-[A DNS type service will allow each user to obtain a more accessible name and will replace the complex blockchain address.](https://elanews.net/2018/07/03/community-writer-series-elastos-did-the-backbone-of-the-new-internet/)
-This service is called the Elastos DID for Decentralised Identity.
-{{% /faqentry %}}
-
 {{% faqentry question="What basic knowledge do you need to have to understand how Elastos works?" %}}
 You need to have an understanding of how blockchain works of course (Bitcoin, Ethereum, PoW, PoS, smart contracts, etc) but you also need to know how the internet works (TCP/IP protocol, DNS service, firewall, etc) and have some basic knowledge about encrypted communication (PGP, private/public key, etc).
 {{% /faqentry %}}
 
 {{% faqentry question="Why use Elastos instead of another crypto asset?" %}}
-Elastos offers an operating system that can be installed on any device in the world, giving its unparalleled security to desktop computers, smartphones, autonomous vehicles, virtual/augmented reality  (VR/AR) platforms, connected devices (IoT) and smart routers.
+Elastos offers a Browser and its various SDKs that are compatible on any device in the world, giving its unparalleled security to desktop computers, smartphones, autonomous vehicles, virtual/augmented reality  (VR/AR) platforms, connected devices (IoT) and smart routers.
 {{% /faqentry %}}
 
 {{% faqentry question="I would like to know more about the development of Elastos. Where can I get more info and how can I get involved?" %}}
 On [GitHub](https://github.com/elastos),
-By visiting the [Cyber Republic](https://www.cyberrepublic.org/),
-and feel free to directly contact Kevin Zhang, the head of the developers community.
+By visiting the [Cyber Republic](https://www.cyberrepublic.org/)
 {{% /faqentry %}}
 
 {{% faqentry question="What will be the biggest challenge for Elastos?" %}}
 This will not only be a challenge for Elastos but one for the whole ecosystem. To convince new users to accept blockchain and understand the benefits of DApps. As a community driven open-source project, the marketing towards developers will be crucial for the future of Elastos. We survive because of the community, we take care of the community, we listen to the community and even more so we work together as a community to build this ecosystem as best as we can.
-{{% /faqentry %}}
-
-{{% faqentry question="What is Elastos’ roadmap for 2019?" %}}
-It is the Cyber Republic that will define the roadmap for 2019. It will be released in December 2018. Jihan Wu (founder of Bitmain), announced that he will work together with Elastos in creating an investment funds for DApps that will be developed on Elastos. 
 {{% /faqentry %}}
 
 {{% faqentry question="What are the future use cases of Elastos?" %}}
@@ -226,9 +189,6 @@ Because of our vision of giving the users an operating system they can trust whi
 		assets can be protected in a trusted environment.
 * Authentication of assets, ID verification, evidence/proof, etc through storage 
 		of trusted data.
-
-Our projects that are in the negotiation phase/being developed are:
-
 * A peer-to-peer file distribution system for personal smartphones
 * Proof for credit scoring
 * A platform for simple identity checks
@@ -241,11 +201,11 @@ Elastos is the infrastructure for a new internet, it offers a decentralized plat
 {{% /faqentry %}}
 
 {{% faqentry question="What programming languages does Elastos support?" %}}
-C/C++, Java, Javascript and HTML5. The SDK will allow even more programming languages to be supported in the near future. An application on mac, PC, Android or Linux will be able to run on Elastos, the only thing that needs to be done is to modify it a bit so that it can communicate and be compatible with the network.
+C/C++, Java, Swift, Javascript and HTML5. The various SDKs will allow even more programming languages to be supported targetted for other platforms.
 {{% /faqentry %}}
 
 {{% faqentry question="How is the work distributed between the team members in Beijing, in Shanghai and the West?" %}}
-The Beijing team is mostly responsible for the general operations and managing the development of the blockchain. The Shanghai team works on the OS/Runtime, including interface support for third party applications. The Chief Marketing Officer and our community development team are mostly based in San Fransisco. More info here.
+The Beijing team is mostly responsible for the general operations and managing the development of the blockchain. The Shanghai team works on the OS/Runtime, including interface support for third party applications. The Western team works on international PR and Communications, Devstudio, Dev Experience and Business Development.
 {{% /faqentry %}}
 
 {{% faqentry question="What is the most important in the communication and marketing of Elastos these days?" %}}
@@ -254,27 +214,9 @@ We are looking for passionate and talented people who are interested in this inn
 You can apply today by [visiting this site](https://www.cyberrepublic.org/) and join the Cyber Republic!
 {{% /faqentry %}}
 
-{{% faqentry question="What are the social media channels of Elastos?" %}}
-* [Discord](https://discord.gg/MHSUVZN)
-* [Facebook](https://www.facebook.com/elastosorg/)
-* [Facebook Group](https://m.facebook.com/groups/155267621839487)
-* [Twitter](https://twitter.com/Elastos_org)
-* [Instagram](https://www.instagram.com/elastosofficial/)
-* [International Telegram community](https://t.me/elastosgroup)
-{{% /faqentry %}}
-
-{{% faqentry question="Where can I find the newest info about Elastos?" %}}
-* [The official announcements channel on Telegram](https://t.me/elastos_org)
-* [The elanews website](https://elanews.net/)
-* [Reddit](https://www.reddit.com/r/Elastos/)
-* [Medium](https://medium.com/elastos/)
-* [Youtube](https://www.youtube.com/channel/UCy5AjgpQIQq3bv8oy_L5WTQ)
-* [Cyber Republics youtube channel](https://www.youtube.com/channel/UCjHthS-zJr0axZF5Iw8En-w)
-{{% /faqentry %}}
-
 {{% faqentry question="Does Elastos use any 3rd party code snippets, libraries, or source code?" %}}
 
-Depends what project. Trinity browser is based on chromium. Carrier uses lots of 3rd party libraries. Elastos mainchain is based on PoW but merged mined so it borrows a lot of ideas from namecoin (that is also merged mined with bitcoin). The elastos runtime however is unique to elastos and is home grown
+Depends on the project. Trinity browser is based on chromium. Carrier uses lots of 3rd party libraries. Elastos mainchain is based on PoW and DPoS but merged mined so it borrows a lot of ideas from namecoin (that is also merged mined with bitcoin). The elastos runtime however is unique to elastos and is home grown
 
 {{% /faqentry %}}
 
@@ -303,12 +245,12 @@ Unlikely. We’ll be using github for bug tracking. Maybe integrate github issue
 {{% /faqentry %}}
 
 {{% faqentry question="Who decides when to publish code updates?" %}}
-At the moment, the elastos foundation
+At the moment, the elastos foundation but this will be transferred over to Cyber Republic eventually.
 {{% /faqentry %}}
 
-{{% faqentry question="Are user preferences for Elastos Dapps stored and loaded from local memory or is this done through IPFS?" %}}
+{{% faqentry question="Are user preferences for Elastos Dapps stored and loaded from local memory or is this done through IPFS/Hive?" %}}
 
-IPFS is still in development so at the moment, it’s all loaded from local memory
+Hive is still in development so at the moment, it’s all loaded from local memory
 
 {{% /faqentry %}}
 
@@ -320,9 +262,9 @@ Elastos apps run inside elastos runtime environment so this means that data will
 
 {{% faqentry question="I would like to create 1000 copies of a digital asset movie on elastos. The movie will have a unique ID stored in the DID side chain. Suppose that one user wants to sell the movie: 1) is the file’s copy from the same physically different from each other? (Mean that do we need to download the exact specific file from the seller’s device?). Or each copy is the same exact file (so everyone can download it but only few who have ownership via DID can watch the movie). 2) how can the user download the file after he bought it if the seller doesn’t have any IPFS or private cloud space? 3) when I want to see the downloaded movie, DID verification will launch first. So is it possible to launch the movie without internet? 4) where can he sell the movie? if we have something like a market place, does it act like a central place/ middle man and have the mopopoly (with restrictons/ fees.. ) ?" %}}
 
-1) Each copy of a movie is an actual APPLICATION. It's NOT an .mp4 file or whatever. It's an actual application so you're selling application from one person to another. Each application has a unique ID and when the author first creates those 1000 copies, all the IDs along with ownership are already recorded on the blockchain and stored on IPFS
+1) Each copy of a movie is an actual APPLICATION. It's NOT an .mp4 file or whatever. It's an actual application so you're selling application from one person to another. Each application has a unique ID and when the author first creates those 1000 copies, all the IDs along with ownership are already recorded on the blockchain and stored on Hive
 
-2) The user can't download the file. He has to buy it from someone else same as buying bitcoin but buying an application in this case. The content of that movie is already stored on IPFS
+2) The user can't download the file. He has to buy it from someone else same as buying bitcoin but buying an application in this case. The content of that movie is already stored on Hive
 
 3) Not possible. The application cannot check your DID unless it's connected to the internet as it needs to connect to the blockchain since that's where DID is stored
 
@@ -332,14 +274,12 @@ Elastos apps run inside elastos runtime environment so this means that data will
 
 {{% faqentry question="In order for a transation to be effective, user needs to download the whole app file. So what happens if the app is huge like 1GB? Does the seller need to wait for the user to finish his download to receive money? What happen if we lose our application movie: eg by deleting it from the computer to get more space?" %}}
 
-It's like downloading an app on your mobile phone right now. When you go to your app, is the data on facebook really stored on your own device? Nope. You just download the app and this app contains the code to check the ID and ownership of this app. The data is stored in the IPFS. If you lose your application, you just use your private key to access your app again. That is what your ownership is tied with. Just like restoring your online wallet.
+It's like downloading an app on your mobile phone right now. When you go to your app, is the data on facebook really stored on your own device? Nope. You just download the app and this app contains the code to check the ID and ownership of this app. The data is stored on Hive. If you lose your application, you just use your private key to access your app again. That is what your ownership is tied with. Just like restoring your online wallet.
 
 {{% /faqentry %}}
 
-{{% faqentry question="Selling ownership and downloading data will be a 2 step process like buying an app on appstore : first pay for the ownership and second download the dapp. So with IPFS and elastos is it possible to be run out of seeders?" %}}
+{{% faqentry question="Selling ownership and downloading data will be a 2 step process like buying an app on appstore : first pay for the ownership and second download the dapp. So with Hive and elastos is it possible to be run out of seeders?" %}}
 
-Theoretically yea, it's possible. But even that tv box is already in over 230,000 hands and all of them can be utilized to be part of the IPFS network. Imagine when IoeX starts selling their smart speakers. Or you can also run your own node and be part of the IPFS network in the future. I doubt we;ll ever run out of seeders at this rate.
+Theoretically yea, it's possible. But even that tv box is already in over 230,000 hands and all of them can be utilized to be part of the Hive network in the future. Imagine when Carrier starts getting integrated in not just TV boxes but also other smart devices all over the world and in other computing environments. The network effect will be compounded and there will be more than enough nodes to keep the network running.
 
 {{% /faqentry %}}
-
-{{< todo "@NiuJingyu BPI ioex is out of elastos. Need to rephrase this answer" >}}
