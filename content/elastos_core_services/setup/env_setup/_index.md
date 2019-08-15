@@ -9,33 +9,7 @@ alwaysopen = false
 
 {{< ownership "Kiran Pachhai" >}}
 
-{{< todo "@BPI check with bo cheng if the CLI is needed only for blockchain developers, or also for app developers" >}}
 
-## Install the Elastos CLI command line tool
-
-The {{< internallink "Elastos CLI" "elastos_blockchain/guides/elastos_cli.md" >}} is a supertool that will help you do several key operations on the Elastos environment. 
-
-You can simply install it with the following command:
-
-{{< tabs >}} 
-    {{% tab name="Mac OS" %}} 
-    brew install elastos-cli
-    {{% /tab %}} 
-    {{% tab name="Ubuntu" %}} 
-    yum install elastos-cli
-    {{% /tab %}} 
-    {{% tab name="Others" %}} 
-Even if it hasn't been packaged for your usual package manager, you can try to build the elastos-cli from source by reading its github repository [here](https://github.com/elastos/Elastos.ELA.Client).
-    {{% /tab %}} 
-{{< /tabs >}}
-
-{{< todo "@BoCheng When package managers are ready - Add tabs for every OS elastos-cli is available for" >}}
-
-Make sure everything was ok - type the following command in a shell:
-
-{{< highlight "shell" >}}
-$ elastos-cli info
-{{< /highlight >}}
 
 ## Testnet setup
 
