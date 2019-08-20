@@ -9,9 +9,7 @@ alwaysopen = false
 
 {{< ownership "BenjaminPiette NiuJingyu BoCheng" >}}
 
-{{< todo "@BPI @NiuJingyu @BoCheng Need to discuss how we reference the ETH documentation. Clone many things? Point to external links? Possibly the best way is to reference the ethereum documentation, and explain only what should be different from their steps." >}}
-
-{{< todo "@BPI @NiuJingyu @BoCheng Explain how to setup ethereum (or refer to their doc) and list prerequisites (tools to be installed, knowledge to have...)" >}}
+{{< todo "@BPI @BoCheng Many parts still unclear. Need to check the setup phase (local node used?), translate, write android/ios client source code, and make sure python is the most useful language for deployment (ethereum developers habits?)" >}}
 
 ## Connect the ELA mainchain with the ETH sidechain
 
