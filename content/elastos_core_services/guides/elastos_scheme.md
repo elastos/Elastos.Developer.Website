@@ -1,5 +1,5 @@
 +++
-title = "Elastos schemes"
+title = "Elastos scheme"
 date = 2019-05-24T21:15:40+02:00
 weight = 9
 chapter = false
@@ -7,7 +7,9 @@ pre = ""
 alwaysopen = false
 +++
 
-{{< ownership "SongShiJun" >}}
+{{< ownership "BenjaminPiette" >}}
+
+{{< todo "@BPI info about appid generation - refer to the appid setup page" >}}
 
 ## Introduction
 
