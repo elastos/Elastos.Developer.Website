@@ -7,7 +7,10 @@ pre = ""
 alwaysopen = false
 +++
 
-{{< ownership "BoCheng" >}}
+{{< ownership "BoCheng BenjaminPiette" >}}
+
+{{< todo "@BPI reference the ethereum guide to let developer do the required setup at first." >}}
+{{< todo "@BPI make sure all steps work flawlessly. For now if i type 'geth xxx' or 'curl xxxx' (for eth_getbalance()) both commands fail." >}}
 
 ## Introduction
 
