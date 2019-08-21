@@ -16,51 +16,35 @@ alwaysopen = false
 {{< todo "@BPI @NiuJingyu @BoCheng Is this really what is explained here?" >}}
 {{< todo "@BPI @NiuJingyu @BoCheng Introduction to explain why we want to do this" >}}
 
-{{< pleasetranslate >}}
-# 配置ETH侧链开发环境
+## Preparing development environment
 
-## 方式1，连接远程侧链节点：
+### Running a full node on the testnet
 
-### 服务器信息
-```
-Server IP: 52.205.30.16
-Port: 8545
-```
-### 使用网页钱包部署合约
-* 登录[myetherwallet](https://www.myetherwallet.com)钱包
-* 右上角网络点击change按钮
-* 点击添加自定义网络/节点
-* ETH Node Name随便填写，选择ETH，URL填写测试服务器地址 `http://52.205.30.16/`，port填写rpc端口: `8545`
-* 使用配置合约来部署合约，合约交互来调用合约
+#### Getting geth
 
+##### Building the source
 
-## 方式2，搭建本地节点运行环境
+Building geth requires both a Go (version 1.9 or later) and a C compiler. You can install them using your favourite package manager. Once the dependencies are installed, run
 
-* 本地搭建[ETH侧链节点](https://github.com/elastos/Elastos.ELA.SideChain.ETH)，使用dev分支编译，进入`build/bin`目录，使用命令连接testnet节点: 
+    make geth
 
-```
-./geth  --rpcaddr "127.0.0.1" --rpccorsdomain "*" --rpc --rpcapi "personal,db,eth,net,web3,txpool,miner" --testnetc` 
-```
+or, to build the full suite of utilities:
 
+    make all
 
-* 使用dev分支编译[ela-cli](https://github.com/elastos/Elastos.ELA.Client)，配置文件 `cli-config.json` 修改如下:
+##### Downloading the binary
+
+[Link](https://download.elastos.org/elastos-eth/)
+
+#### Running geth
 
 ```
-{
-  "LogToFile":false,
-  "Host": "127.0.0.1:10016",
-  "DepositAddress":"EEmfgnrDLQmFPBJiWvsyYGV2jzLQY58J6G"
-}
+./geth  --rpcaddr "127.0.0.1" --rpccorsdomain "*" --rpc --rpcapi "personal,db,eth,net,web3,txpool,miner" --testnet
 ```
 
+### Getting testnet coins
 
-### 将测试币ela充值到eth侧链
-* 创建充值交易: `./ela-cli wallet -t create --deposit eth_address(充值以太坊地址) --amount recharge_value(充值金额) --fee recharge_fee(充值消耗手续费)`
-* 签名交易: `./ela-cli wallet -t sign --file to_be_signed.txn -p yourpassword(密码)`
-* 发送交易: `./ela-cli wallet -t send --file ready_to_send.txn`
-
-
-
+{{< todo "@Bocheng Add the faucet's link of eth-sidechain" >}}
 
 
 {{< todo "@BPI Add link to the ETH sample when ready (see beijing 2019 hackathon)" >}}
@@ -69,34 +53,32 @@ Port: 8545
 
 ## Writing a ETH smart contract
 
-### 合约语言
+### Language for implementing smart contracts
 
-我们使用`solidity`开发ETH智能合约，以太坊侧链支持语言的版本不高于0.5.0.
+We use `solidity` to develop ETH smart contracts, and the version of the Ethereum sidechain support language is no higher than 0.5.0.
 
-更多信息:[solidity wiki](https://solidity.readthedocs.io/en/v0.4.5/)
+More information: [solidity wiki](https://solidity.readthedocs.io/en/v0.4.5/)
 
-### 环境
+### Environment
 
-1. python3
-2. web3.py
+- python3
+- Dependency package
+  1. web3.py
+  2. solc no higher than 0.5.0
 
     ```bash
     pip3 install web3
+    wget https://github.com/ethereum/solidity/releases/download/v0.4.26/solidity-ubuntu-trusty.zip
+    sudo unzip solidity-ubuntu-trusty.zip -d /usr/local/solidity
+    echo 'PATH="/usr/local/solidity:$PATH"' >> .profile
+    source .profile
     ```
 
-3. 安装solc
+### Example
 
-    ```bash
-    sudo add-apt-repository ppa:ethereum/ethereum
-    sudo apt-get update
-    sudo apt-get install solc
-    ```
+#### Contract content
 
-### 合约示例
-
-#### 合约内容
-
-创建合约Coin.sol, 内容如下:
+Create Coin.sol:
 
     pragma solidity ^0.4.22;
     contract Coin {
@@ -122,36 +104,38 @@ Port: 8545
       }
     }
 
-该合约是一个简化版的代币合约，主要方法：
+The contract is a simplified version of the token contract, the main method:
 
-* `mint(...)` 合约创建者给其他用户发代币。
+* `mint(...)` The contract creator sends token to other users.
 
-* `send(...)` 代币的用户也可以给之外的用户转移代币。
+* `send(...)` Token users transfer token to users outside.
 
-#### 编译合约
+#### Compiling smart contract
 
-执行solc， 编译命令。
+Use solc to compile smart contract:
 
     solc  --bin --abi -o output --optimize Coin.sol
 
-* `--o`: 输出目录`output`文件夹。
-* `--bin`: 编译输出合约的 `bytecode` 使用`hex`编码。
-* `--abi`: 编译输出合约的`abi`。
-* `--optimize`: 对`bytecode`进行优化。
+* `--o`: Creates the contract at the specified directory `output`.
+* `--bin`: Binary of the contracts in `hex`.
+* `--abi`: ABI specification of the contracts.
+* `--optimize`: Enable bytecode optimizer.
 
-编译后在`output`文件夹下会有两个文件：
+After compilation, there will be two files in the `output` folder:
 
-* `Coin.abi`: 合约的`abi`。
-* `Coin.bin`: 合约的`bytecode`。
+* `Coin.abi`: The contract's `abi`.
+* `Coin.bin`: The contract's `bytecode`.
 
-#### 账户准备
+#### Account Preparation
 
-部署合约的账户必须有足够ETH以支持部署合约，至少需要100000000000000Wei。
+The account for the deployment contract must have enough ETH to support the deployment contract, at least 100000000000000Wei.
 
-#### 发布合约
+#### Deploying contract
 
-在合约的同级目录下创建Python文件，deploy_contract.py，内容如下：
+Create a Python file in the same directory as the contract, deploy_contract.py, as follows:
 
+    #!/usr/bin/env python
+    # -*- coding: utf-8 -*-
     import binascii, time
     from web3 import Web3, HTTPProvider, Account
     
@@ -194,24 +178,24 @@ Port: 8545
         password = ""
         deploy_contract(keystore, password)
 
-执行该文件 deploy_contract.py
+Execute the file `deploy_contract.py`
 
     python3 deploy_contract.py
 
-输出结果：
+Result:
 
     We create contract. txHash: 0x512e04bcf4c8b09422c49a1b09b4682a639166745b9df4212c9f42cfc81e382e
     contractAddress 0x16BBc426C15F1f869F10701411939FebC5F76f6F
 
-获取合约地址
+Get contract address:
 
-`0x16BBc426C15F1f869F10701411939FebC5F76f6F`
+    0x16BBc426C15F1f869F10701411939FebC5F76f6F
 
-## 调用合约
+## Calling a smart contract
 
-调用合约方法`mint(...)`， 向随机账户发送10000个代币。
+Call the contract method `mint(...)` to send 10,000 token to the random account.
 
-在合约的同级目录下创建Python文件，call_contract.py，内容如下：
+Create a Python file in the same directory as the contract, `call_contract.py`, as follows:
 
     #!/usr/bin/env python
     # -*- coding: utf-8 -*-
@@ -273,23 +257,21 @@ Port: 8545
         password = ""
         call_mint(keystore, password)
 
-填入上步骤中获取的合约地址。
+Fill in the contract address obtained in the previous step.
 
-执行该文件 call_contract.py
+Execute the file `call_contract.py`
 
     python3 call_contract.py
 
-输出结果：
+Result:
 
     We call contract method. txHash: 0xa41c54b8c76757ae303d8847a3397e65d25f418a5084b7af5d7d74fe2987feaf
     0xc9449257fCA9c05ea647705351a8da1ccF0Bd746 10000
 
-结果显示我们向随机账户 `0xc9449257fCA9c05ea647705351a8da1ccF0Bd746` 发送了`10000`代币。
+The result shows that we sent the 10000 token to the random account `0xc9449257fCA9c05ea647705351a8da1ccF0Bd746`.
 
-## 其他方式部署合约
+## Other methods to deploy contracts
 
-* [使用Remix部署合约](https://remix-ide.readthedocs.io/en/latest/run.html)
+* [Remix](https://remix-ide.readthedocs.io/en/latest/run.html)
 
-* 使用Web3其他语言版本（js, java, swift）部署合约, 和使用python大同小异，就不再重复。
-
-{{< /pleasetranslate >}}
+* Deploying contracts in other language versions of Web3 (js, java, swift) is similar to using Python and will not be repeated.
