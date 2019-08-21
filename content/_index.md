@@ -63,3 +63,4 @@ Elastos is being actively developed. You may wonder what you can actually do yet
 | Module | Status |
 | ------ | ------ |
 | DMA | Alpha version available for a small set of developers. Demo apps Choosit and Uptick available. |
+| Hyperconnect IoT | Alpha version and tutorials available on the hyperconnect website. |
