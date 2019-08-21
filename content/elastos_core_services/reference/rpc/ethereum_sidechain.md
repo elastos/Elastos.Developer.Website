@@ -7,52 +7,24 @@ pre = ""
 alwaysopen = false
 +++
 
-{{< ownership "BoCheng BenjaminPiette" >}}
-
-{{< todo "@BPI reference the ethereum guide to let developer do the required setup at first." >}}
-{{< todo "@BPI make sure all steps work flawlessly. For now if i type 'geth xxx' or 'curl xxxx' (for eth_getbalance()) both commands fail." >}}
-
 ## Introduction
 
-Ethereum sidechain is an Elastos Sidechain based on Go Ethereum v1.8.17.
-
-The RPC API is conformity to [the Ethereum JSON RPC specs](https://github.com/ethereum/wiki/wiki/JSON-RPC)
-
-## JSON RPC API
-
-[JSON](http://json.org/) is a lightweight data-interchange format. It can represent numbers, strings, ordered sequences of values, and collections of name/value pairs.
-
-[JSON-RPC](http://www.jsonrpc.org/specification) is a stateless, light-weight remote procedure call (RPC) protocol. Primarily this specification defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses JSON ([RFC 4627](https://www.ietf.org/rfc/rfc4627.txt)) as data format.
-
-## JavaScript API
-
-To talk to an elastos-eth  node from inside a JavaScript application use the [web3.js](https://github.com/ethereum/web3.js) library, which gives a convenient interface for the RPC methods. See the [JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API) for more.
+The RPC API is conform to [the Ethereum JSON RPC specs](https://github.com/ethereum/wiki/wiki/JSON-RPC).
 
 ## JSON-RPC Endpoint
 
-Default JSON-RPC endpoints:[http://localhost:20636](http://localhost:20636)
+Default JSON-RPC endpoints for a locally running node (launched with develap):
 
-You can start the HTTP JSON-RPC with the --rpc flag
-
-    geth --rpc
-
-change the default port (20636) and listing address (localhost) with:
-
-    geth --rpc --rpcaddr <ip> --rpcport <portnumber>
-
-If accessing the RPC from a browser, CORS will need to be enabled with the appropriate domain set. Otherwise, JavaScript calls are limit by the same-origin policy and requests will fail:
-
-    geth --rpc --rpccorsdomain "http://localhost:3000"
-
-The JSON RPC can also be started from the [geth console](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console) using the admin.startRPC(addr, port) command.
+* Mainnet: [http://localhost:20636](http://localhost:20636)
+* Testnet: [http://localhost:21636](http://localhost:21636)
 
 ## JSON-RPC support
 
-The elastos-eth suport: JSON-RPC 2.0, Batch requests, HTTP, IPC, WS.
+The elastos-eth supports JSON-RPC 2.0, Batch requests, HTTP, IPC, WS.
 
-## HEX value encoding
+## About HEX value encoding
 
-At present there are two key datatypes that are passed over JSON: unformatted byte arrays and quantities. Both are passed with a hex encoding, however with different requirements to formatting:
+Currently there are two key datatypes that are passed over JSON: **unformatted byte arrays** and **quantities**. Both are passed with a hex encoding, however with different requirements to formatting:
 
 When encoding **QUANTITIES** (integers, numbers): encode as hex, prefix with "0x", the most compact representation (slight exception: zero should be represented as "0x0"). Examples:
 
@@ -62,7 +34,7 @@ When encoding **QUANTITIES** (integers, numbers): encode as hex, prefix with "0x
 * WRONG: 0x0400 (no leading zeroes allowed)
 * WRONG: ff (must be prefixed 0x)
 
-When encoding **QUNFORMATTED DATA** (byte arrays, account addresses, hashes, bytecode arrays): encode as hex, prefix with "0x", two hex digits per byte. Examples:
+When encoding **UNFORMATTED DATA** (byte arrays, account addresses, hashes, bytecode arrays): encode as hex, prefix with "0x", two hex digits per byte. Examples:
 
 * 0x41 (size 1, "A")
 * 0x004200 (size 3, "\0B\0")
@@ -72,37 +44,7 @@ When encoding **QUNFORMATTED DATA** (byte arrays, account addresses, hashes, byt
 
 ## Commonly used API
 
-### eth_getBalance
-
-Returns the balance of the account of given address.
-
-#### Parameters
-
-1. `DATA`, 20 Bytes - address to check for balance.
-2. `QUANTITY|TAG` - integer block number, or the string`"latest"`, `"earliest"` or `"pending"`, see the default block parameter
-
-#### Example Parameters
-
-    params: [
-        '0xc94770007dda54cF92009BFF0dE90c06F603a09f',
-        'latest'
-    ]
-
-#### Returns
-
-`QUANTITY` - integer of the current balance in wei.
-
-#### Example
-
-    // Request
-    curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0xc94770007dda54cF92009BFF0dE90c06F603a09f", "latest"],"id":1}'
-       
-    // Result
-    {
-      "id":1,
-      "jsonrpc": "2.0",
-      "result": "0x0234c8a3397aab58" // 158972490234375000
-    }
+The full Ethereum API reference can be found [here](https://github.com/ethereum/wiki/wiki/JSON-RPC). For a quick start, here are a few basic commands that can be used to make sure your Elastos ethereum sidechain runs well:
 
 ### eth_gasPrice
 
@@ -114,28 +56,59 @@ none
 
 #### Returns
 
-QUANTITY - integer of the current gas price in wei.
+`QUANTITY` - A hex representation of the current gas price in wei.
 
-#### Example
+#### Request example
 
-    // Request
-    curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
+    curl -X POST -H 'Content-Type: application/json' -H 'Accept:application/json' --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}' http://localhost:21636
 
-    // Result
+#### Response example 
+
     {
       "id":73,
       "jsonrpc": "2.0",
       "result": "0x09184e72a000" // 10000000000000
     }
 
+### eth_getBalance
+
+Returns the ETH balance for the given address
+
+#### Parameters
+
+1. `DATA`, 20 Bytes - address to check for balance.
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"` or `"pending"`, see the default block parameter
+
+#### Example Parameters
+
+    params: [
+        '0xc94770007dda54cF92009BFF0dE90c06F603a09f',
+        'latest'
+    ]
+
+#### Returns
+
+`QUANTITY` - Current balance in wei.
+
+#### Request example
+
+    curl -X POST -H 'Content-Type: application/json' -H 'Accept:application/json' --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0xc94770007dda54cF92009BFF0dE90c06F603a09f", "latest"],"id":1}' http://localhost:21636
+
+#### Response example
+       
+    {
+      "id":1,
+      "jsonrpc": "2.0",
+      "result": "0x0234c8a3397aab58" // 158972490234375000
+    }
+
 ### eth_getBlockByHash
 
-Returns information about a block by hash.
+Returns information about a block from its hash.
 
 #### Parameters
 
 1. `DATA`, 32 Bytes - Hash of a block.
-
 2. `Boolean` - If `true` it returns the full transaction objects, if `false` only the hashes of the transactions.
 
 #### Example Parameters
@@ -169,12 +142,12 @@ Returns information about a block by hash.
 * `transactions`: `Array` - Array of transaction objects, or 32 Bytes transaction hashes depending on the last given parameter.
 * `uncles`: `Array` - Array of uncle hashes.
 
-#### Example
+#### Request example
 
-    // Request
-    curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331", true],"id":1}'
+    curl -X POST -H 'Content-Type: application/json' -H 'Accept:application/json' --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331", true],"id":1}' http://localhost:21636
 
-    // Result
+#### Response example
+
     {
         "id":1,
         "jsonrpc":"2.0",
@@ -200,6 +173,20 @@ Returns information about a block by hash.
       }
     }
 
-## More RPC API
+## Deprecated
 
-[JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC)
+{{< todo "@BPI make sure this is useless after using develap, as everything is already started. Move to the guides section if this still can be useful, but this is advanced" >}}
+
+You can start the HTTP JSON-RPC with the --rpc flag
+
+    geth --rpc
+
+change the default port (20636) and listing address (localhost) with:
+
+    geth --rpc --rpcaddr <ip> --rpcport <portnumber>
+
+If accessing the RPC from a browser, CORS will need to be enabled with the appropriate domain set. Otherwise, JavaScript calls are limit by the same-origin policy and requests will fail:
+
+    geth --rpc --rpccorsdomain "http://localhost:3000"
+
+The JSON RPC can also be started from the [geth console](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console) using the admin.startRPC(addr, port) command.

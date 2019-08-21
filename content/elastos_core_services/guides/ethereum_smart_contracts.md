@@ -11,6 +11,11 @@ alwaysopen = false
 
 {{< todo "@BPI @BoCheng Many parts still unclear. Need to check the setup phase (local node used?), translate, write android/ios client source code, and make sure python is the most useful language for deployment (ethereum developers habits?)" >}}
 
+## JavaScript API
+
+To talk to an elastos-eth node from inside a JavaScript application use the [web3.js](https://github.com/ethereum/web3.js) library, which gives a convenient interface for the RPC methods. See the [JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API) for more.
+
+
 ## Connect the ELA mainchain with the ETH sidechain
 
 {{< todo "@BPI @NiuJingyu @BoCheng Is this really what is explained here?" >}}
