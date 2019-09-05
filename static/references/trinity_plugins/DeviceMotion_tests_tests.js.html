@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: DeviceMotion/tests/tests.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: DeviceMotion/tests/tests.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>﻿/*
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ *
+*/
+
+/* jshint jasmine: true */
+/* global Windows */
+
+exports.defineAutoTests = function () {
+    var isWindows = (cordova.platformId === "windows") || (cordova.platformId === "windows8"),
+     // Checking existence of accelerometer for windows platform
+     // Assumed that accelerometer always exists on other platforms. Extend
+     // condition to support accelerometer check on other platforms
+     isAccelExist = isWindows ? Windows.Devices.Sensors.Accelerometer.getDefault() !== null : true;
+
+  describe('Accelerometer (navigator.accelerometer)', function () {
+    var fail = function(done) {
+      expect(true).toBe(false);
+      done();
+    };
+
+    // This timeout is here to lessen the load on native accelerometer
+    // intensive use of which can lead to occasional test failures
+    afterEach(function(done) {
+      setTimeout(function() {
+        done();
+      }, 100);
+    });
+
+    it("accelerometer.spec.1 should exist", function () {
+      expect(navigator.accelerometer).toBeDefined();
+    });
+
+    describe("getCurrentAcceleration", function() {
+      it("accelerometer.spec.2 should exist", function() {
+        expect(typeof navigator.accelerometer.getCurrentAcceleration).toBeDefined();
+        expect(typeof navigator.accelerometer.getCurrentAcceleration == 'function').toBe(true);
+      });
+
+      it("accelerometer.spec.3 success callback should be called with an Acceleration object", function(done) {
+        // skip the test if Accelerometer doesn't exist on this device
+        if (!isAccelExist) {
+          pending();
+        }
+        var win = function(a) {
+          expect(a).toBeDefined();
+          expect(a.x).toBeDefined();
+          expect(typeof a.x == 'number').toBe(true);
+          expect(a.y).toBeDefined();
+          expect(typeof a.y == 'number').toBe(true);
+          expect(a.z).toBeDefined();
+          expect(typeof a.z == 'number').toBe(true);
+          expect(a.timestamp).toBeDefined();
+          expect(typeof a.timestamp).toBe('number');
+          done();
+        };
+
+        var onError = function(err){
+            console.log(err);
+            console.log("Skipping gyroscope tests, marking all as pending.");
+            isAccelExist = false;
+            expect(true).toBe(true);
+            done();
+         };
+
+        navigator.accelerometer.getCurrentAcceleration(win, onError);
+      });
+
+      it("accelerometer.spec.4 success callback Acceleration object should have (reasonable) values for x, y and z expressed in m/s^2", function(done) {
+        // skip the test if Accelerometer doesn't exist on this device
+        if (!isAccelExist) {
+          pending();
+        }
+        var reasonableThreshold = 15;
+        var win = function(a) {
+          expect(a.x).toBeLessThan(reasonableThreshold);
+          expect(a.x).toBeGreaterThan(reasonableThreshold * -1);
+          expect(a.y).toBeLessThan(reasonableThreshold);
+          expect(a.y).toBeGreaterThan(reasonableThreshold * -1);
+          expect(a.z).toBeLessThan(reasonableThreshold);
+          expect(a.z).toBeGreaterThan(reasonableThreshold * -1);
+          done();
+        };
+
+        navigator.accelerometer.getCurrentAcceleration(win, fail.bind(null,done));
+      });
+
+      it("accelerometer.spec.5 success callback Acceleration object should return a recent timestamp", function(done) {
+        // skip the test if Accelerometer doesn't exist on this device
+        if (!isAccelExist) {
+          pending();
+        }
+        var veryRecently = (new Date()).getTime();
+        // Need to check that dates returned are not vastly greater than a recent time stamp.
+        // In case the timestamps returned are ridiculously high
+        var reasonableTimeLimit = veryRecently + 5000; // 5 seconds from now
+        var win = function(a) {
+          expect(a.timestamp).toBeGreaterThan(veryRecently - 200); // this is flakey, relaxing a bit
+          expect(a.timestamp).toBeLessThan(reasonableTimeLimit);
+          done();
+        };
+
+        navigator.accelerometer.getCurrentAcceleration(win, fail.bind(null,done));
+      });
+    });
+
+    describe("watchAcceleration", function() {
+      var id;
+
+      afterEach(function(done) {
+          if (id) {
+            navigator.accelerometer.clearWatch(id);
+          }
+          // clearWatch implementation is async but doesn't accept a cllback
+          // so let's give it some time before starting next spec
+          setTimeout(done, 100);
+      });
+
+      it("accelerometer.spec.6 should exist", function() {
+          expect(navigator.accelerometer.watchAcceleration).toBeDefined();
+          expect(typeof navigator.accelerometer.watchAcceleration == 'function').toBe(true);
+      });
+
+      it("accelerometer.spec.7 success callback should be called with an Acceleration object", function(done) {
+        // skip the test if Accelerometer doesn't exist on this device
+        if (!isAccelExist) {
+          pending();
+        }
+        var win = function(a) {
+          expect(a).toBeDefined();
+          expect(a.x).toBeDefined();
+          expect(typeof a.x == 'number').toBe(true);
+          expect(a.y).toBeDefined();
+          expect(typeof a.y == 'number').toBe(true);
+          expect(a.z).toBeDefined();
+          expect(typeof a.z == 'number').toBe(true);
+          expect(a.timestamp).toBeDefined();
+          expect(typeof a.timestamp).toBe('number');
+          done();
+        };
+
+        id = navigator.accelerometer.watchAcceleration(win, fail.bind(null,done), {frequency:100});
+      });
+
+        it("accelerometer.spec.8 success callback Acceleration object should have (reasonable) values for x, y and z expressed in m/s^2", function(done) {
+          // skip the test if Accelerometer doesn't exist on this device
+          if (!isAccelExist) {
+            pending();
+          }
+          var reasonableThreshold = 15;
+          var win = function(a) {
+            expect(a.x).toBeLessThan(reasonableThreshold);
+            expect(a.x).toBeGreaterThan(reasonableThreshold * -1);
+            expect(a.y).toBeLessThan(reasonableThreshold);
+            expect(a.y).toBeGreaterThan(reasonableThreshold * -1);
+            expect(a.z).toBeLessThan(reasonableThreshold);
+            expect(a.z).toBeGreaterThan(reasonableThreshold * -1);
+            done();
+          };
+
+          id = navigator.accelerometer.watchAcceleration(win, fail.bind(null,done), {frequency:100});
+        });
+
+        it("accelerometer.spec.9 success callback Acceleration object should return a recent timestamp", function(done) {
+          // skip the test if Accelerometer doesn't exist on this device
+          if (!isAccelExist) {
+            pending();
+          }
+          var veryRecently = (new Date()).getTime();
+          // Need to check that dates returned are not vastly greater than a recent time stamp.
+          // In case the timestamps returned are ridiculously high
+          var reasonableTimeLimit = veryRecently + 5000; // 5 seconds from now
+          var win = function(a) {
+            expect(a.timestamp).toBeGreaterThan(veryRecently - 200); // this is flakey, relaxing a bit
+            expect(a.timestamp).toBeLessThan(reasonableTimeLimit);
+            done();
+          };
+
+          id = navigator.accelerometer.watchAcceleration(win, fail.bind(null,done), {frequency:100});
+        });
+
+        it("accelerometer.spec.12 success callback should be preserved and called several times", function (done) {
+            // skip the test if Accelerometer doesn't exist on this device
+            if (!isAccelExist) {
+              pending();
+            }
+            var callbacksCallCount = 0,
+                callbacksCallTestCount = 3;
+
+            var win = function (a) {
+                if (callbacksCallCount++ &lt; callbacksCallTestCount) return;
+                expect(typeof a).toBe('object');
+                done();
+            };
+
+            id = navigator.accelerometer.watchAcceleration(win, fail.bind(null, done), { frequency: 100 });
+        });
+    });
+
+    describe("clearWatch", function() {
+      it("accelerometer.spec.10 should exist", function() {
+          expect(navigator.accelerometer.clearWatch).toBeDefined();
+          expect(typeof navigator.accelerometer.clearWatch == 'function').toBe(true);
+      });
+
+      it("accelerometer.spec.11 should clear an existing watch", function(done) {
+          // skip the test if Accelerometer doesn't exist on this device
+          if (!isAccelExist) {
+              pending();
+          }
+          var id;
+
+          // expect win to get called exactly once
+          var win = function(a) {
+            // clear watch on first call
+            navigator.accelerometer.clearWatch(id);
+            // if win isn't called again in 201 ms we assume success
+            var tid = setTimeout(function() {
+              expect(true).toBe(true);
+              done();
+            }, 101);
+            // if win is called again, clear the timeout and fail the test
+            win = function() {
+              clearTimeout(tid);
+              fail(done);
+            };
+          };
+
+          // wrap the success call in a closure since the value of win changes between calls
+          id = navigator.accelerometer.watchAcceleration(function() { win(); }, fail.bind(null, done), {frequency:100});
+      });
+    });
+  });
+};
+
+/******************************************************************************/
+/******************************************************************************/
+/******************************************************************************/
+
+exports.defineManualTests = function (contentEl, createActionButton) {
+    function roundNumber(num) {
+        var dec = 3;
+        var result = Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
+        return result;
+    }
+
+    var watchAccelId = null;
+
+    /**
+     * Set accelerometer status
+     */
+    function setAccelStatus(status) {
+        document.getElementById('accel_status').innerHTML = status;
+    }
+
+    /**
+     * Stop watching the acceleration
+     */
+    function stopAccel() {
+        console.log("stopAccel()");
+        setAccelStatus("Stopped");
+        if (watchAccelId) {
+            navigator.accelerometer.clearWatch(watchAccelId);
+            watchAccelId = null;
+        }
+    }
+
+    /**
+     * Start watching acceleration
+     */
+    var watchAccel = function () {
+        console.log("watchAccel()");
+
+        // Success callback
+        var success = function (a) {
+            document.getElementById('x').innerHTML = roundNumber(a.x);
+            document.getElementById('y').innerHTML = roundNumber(a.y);
+            document.getElementById('z').innerHTML = roundNumber(a.z);
+            document.getElementById('t').innerHTML = a.timestamp;
+        };
+
+        // Fail callback
+        var fail = function (e) {
+            console.log("watchAccel fail callback with error code " + e);
+            stopAccel();
+            setAccelStatus(e);
+        };
+
+        // Update acceleration every 1 sec
+        var opt = {};
+        opt.frequency = 1000;
+        watchAccelId = navigator.accelerometer.watchAcceleration(success, fail, opt);
+
+        setAccelStatus("Running");
+    };
+
+    /**
+     * Get current acceleration
+     */
+    var getAccel = function () {
+        console.log("getAccel()");
+
+        // Stop accel if running
+        stopAccel();
+
+        // Success callback
+        var success = function (a) {
+            document.getElementById('x').innerHTML = roundNumber(a.x);
+            document.getElementById('y').innerHTML = roundNumber(a.y);
+            document.getElementById('z').innerHTML = roundNumber(a.z);
+            document.getElementById('t').innerHTML = a.timestamp;
+            console.log("getAccel success callback");
+        };
+
+        // Fail callback
+        var fail = function (e) {
+            console.log("getAccel fail callback with error code " + e);
+            setAccelStatus(e);
+        };
+
+        // Make call
+        var opt = {};
+        navigator.accelerometer.getCurrentAcceleration(success, fail, opt);
+    };
+
+    /******************************************************************************/
+
+    var accelerometer_tests = '&lt;div id="getAcceleration">&lt;/div>' +
+        'Expected result: Will update the status box with X, Y, and Z values when pressed. Status will read "Stopped"' +
+        '&lt;p/> &lt;div id="watchAcceleration">&lt;/div>' +
+        'Expected result: When pressed, will start a watch on the accelerometer and update X,Y,Z values when movement is sensed. Status will read "Running"' +
+        '&lt;p/> &lt;div id="clearAcceleration">&lt;/div>' +
+        'Expected result: Will clear the accelerometer watch, so X,Y,Z values will no longer be updated. Status will read "Stopped"';
+
+    contentEl.innerHTML = '&lt;div id="info">' +
+        'Status: &lt;span id="accel_status">Stopped&lt;/span>' +
+        '&lt;table width="100%">' +
+        '&lt;tr>&lt;td width="30%">X:&lt;/td>&lt;td id="x"> &lt;/td>&lt;/tr>' +
+        '&lt;tr>&lt;td width="30%">Y:&lt;/td>&lt;td id="y"> &lt;/td>&lt;/tr>' +
+        '&lt;tr>&lt;td width="30%">Z:&lt;/td>&lt;td id="z"> &lt;/td>&lt;/tr>' +
+        '&lt;tr>&lt;td width="30%">Timestamp:&lt;/td>&lt;td id="t"> &lt;/td>&lt;/tr>' +
+        '&lt;/table>&lt;/div>' +
+        accelerometer_tests;
+
+    createActionButton('Get Acceleration', function () {
+        getAccel();
+    }, 'getAcceleration');
+
+    createActionButton('Start Watch', function () {
+        watchAccel();
+    }, 'watchAcceleration');
+
+    createActionButton('Clear Watch', function () {
+        stopAccel();
+    }, 'clearAcceleration');
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-Camera.html">Camera</a></li><li><a href="module-camera_.html">camera</a></li><li><a href="module-CameraPopoverHandle.html">CameraPopoverHandle</a></li><li><a href="module-CameraPopoverOptions.html">CameraPopoverOptions</a></li><li><a href="module-carrierPlugin.html">carrierPlugin</a></li></ul><h3>Namespaces</h3><ul><li><a href="navigator.html">navigator</a></li></ul><h3>Classes</h3><ul><li><a href="AppManager.html">AppManager</a></li><li><a href="AppService.html">AppService</a></li><li><a href="argscheck.html">argscheck</a></li><li><a href="Carrier.html">Carrier</a></li><li><a href="Coordinates.html">Coordinates</a></li><li><a href="global.html#cordova">cordova</a></li><li><a href="Device.html">Device</a></li><li><a href="FileReader.html">FileReader</a></li><li><a href="FileUploadOptions.html">FileUploadOptions</a></li><li><a href="FileWriter.html">FileWriter</a></li><li><a href="Media.html">Media</a></li><li><a href="module.html#.exports">exports</a></li><li><a href="PluginDemo.html">PluginDemo</a></li><li><a href="PositionError.html">PositionError</a></li><li><a href="Session.html">Session</a></li><li><a href="Stream.html">Stream</a></li><li><a href="%257BDOMString%257D%2520name%2520the%2520unique%2520name%2520of%2520the%2520file%2520system%2520.html">{DOMString} name the unique name of the file system (readonly)
+{DirectoryEntry} root directory of the file system (readonly)</a></li></ul><h3>Global</h3><ul><li><a href="global.html#_capture">_capture</a></li><li><a href="global.html#CameraUI">CameraUI</a></li><li><a href="global.html#Capture">Capture</a></li><li><a href="global.html#CaptureAudioOptions">CaptureAudioOptions</a></li><li><a href="global.html#CaptureError">CaptureError</a></li><li><a href="global.html#CaptureImageOptions">CaptureImageOptions</a></li><li><a href="global.html#capturePhoto">capturePhoto</a></li><li><a href="global.html#captureVideo">captureVideo</a></li><li><a href="global.html#CaptureVideoOptions">CaptureVideoOptions</a></li><li><a href="global.html#cdvfileToAppData">cdvfileToAppData</a></li><li><a href="global.html#checkPatternReqs">checkPatternReqs</a></li><li><a href="global.html#ConfigurationData">ConfigurationData</a></li><li><a href="global.html#createNode">createNode</a></li><li><a href="global.html#dataURItoBlob">dataURItoBlob</a></li><li><a href="global.html#DirectoryEntry">DirectoryEntry</a></li><li><a href="global.html#DirectoryReader">DirectoryReader</a></li><li><a href="global.html#Entry">Entry</a></li><li><a href="global.html#File">File</a></li><li><a href="global.html#FileEntry">FileEntry</a></li><li><a href="global.html#FileError">FileError</a></li><li><a href="global.html#Flags">Flags</a></li><li><a href="global.html#fullPathToAppData">fullPathToAppData</a></li><li><a href="global.html#MediaFile">MediaFile</a></li><li><a href="global.html#MediaFileData">MediaFileData</a></li><li><a href="global.html#Metadata">Metadata</a></li><li><a href="global.html#parseUriToPathAndFilename">parseUriToPathAndFilename</a></li><li><a href="global.html#processUri">processUri</a></li><li><a href="global.html#readFailureCallback">readFailureCallback</a></li><li><a href="global.html#readPreferencesFromCfg">readPreferencesFromCfg</a></li><li><a href="global.html#readSuccessCallback">readSuccessCallback</a></li><li><a href="global.html#requestFileSystem">requestFileSystem</a></li><li><a href="global.html#resolveLocalFileSystemURL">resolveLocalFileSystemURL</a></li><li><a href="global.html#setTemporaryFsByDefault">setTemporaryFsByDefault</a></li><li><a href="global.html#showAndHide">showAndHide</a></li><li><a href="global.html#tryParsePatternValues">tryParsePatternValues</a></li><li><a href="global.html#vibratePattern">vibratePattern</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Thu Sep 05 2019 11:56:51 GMT+0800 (heure normale de la Chine)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

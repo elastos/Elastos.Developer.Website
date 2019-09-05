@@ -5,5 +5,5 @@ weight = 40
 chapter = false
 pre = ""
 alwaysopen = false
-apireferenceinturl = "/elastos_core_services/reference/trinity/plugins_api/"
+apireferenceinturl = "/elastos_core_services/reference/trinity/"
 +++

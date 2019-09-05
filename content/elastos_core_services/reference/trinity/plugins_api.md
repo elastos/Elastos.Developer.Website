@@ -5,6 +5,5 @@ weight = 40
 chapter = false
 pre = ""
 alwaysopen = false
+apireferenceexturl = "/references/trinity_plugins/"
 +++
-
-{{< ownership "TangZhiLong" >}}
