@@ -1,6 +1,6 @@
 +++
 title = "DApp distribution"
-weight = 10
+weight = 100
 chapter = false
 pre = ""
 alwaysopen = false

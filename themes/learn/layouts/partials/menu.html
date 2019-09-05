@@ -174,7 +174,11 @@
         {{if isset .Params "apireferenceexturl" }}
           <a href="{{ .Params.apireferenceexturl}}" target="_blank">
         {{ else }}
-          <a href="{{ .RelPermalink}}">
+          {{if isset .Params "apireferenceinturl" }}
+            <a href="{{ .Params.apireferenceinturl}}">
+          {{ else }}
+            <a href="{{ .RelPermalink}}">
+          {{ end }}
         {{ end }}
         {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
         {{ if $showvisitedlinks}}<i class="fas fa-check read-icon"></i>{{end}}

@@ -109,6 +109,12 @@
   </div>
 {{ end }}
 
+{{ if isset .Params "apireferenceinturl" }}
+  <div style="text-align:center">
+    <a href="{{ .Params.apireferenceinturl }}">Click here to open the API reference.</a>
+  </div>
+{{ end }}
+
         {{define "breadcrumb"}}
           {{$parent := .page.Parent }}
           {{ if $parent }}

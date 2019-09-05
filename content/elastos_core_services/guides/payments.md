@@ -13,7 +13,7 @@ alwaysopen = false
 
 {{< todo "@BPI @BenjaminPiette @NiuJingyu Explain how to make payments in an app, using authorization from a wallet like elephant. What is the flow/process?" >}}
 
-{{< todo "@BPI Migrate from https://github.com/elastos/Hackathon.2019.Beijing (使用ela进行支付) after July 19 (beijing hackathon) - see SJun" >}}
+{{< todo "Explain how to check for transaction confirmations after getting the initial wallet response, as payment confirmation happens a few seconds or minutes later" >}}
 
 ## Error management
 
