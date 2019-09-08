@@ -7,7 +7,7 @@ pre = ""
 alwaysopen = false
 +++
 
-Elastos implements the same merged mining specification as namecoin. Normally, the miner who could mining namecoin could easily mining ela. As a auxiliary chain, the chain id of ela is 1224.
+Elastos implements the same merged mining specification as namecoin. Normally, the miner who could mine namecoin could easily mine ela. As an auxiliary chain, the chain id of ela is 1224.
 
 The merged mining of ela node is mainly implemented through the following two interfaces:
 
