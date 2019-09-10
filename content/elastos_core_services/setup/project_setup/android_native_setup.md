@@ -7,9 +7,13 @@ pre = ""
 alwaysopen = false
 +++ 
 
-{{< ownership "TangZhiLong (for hive, carrier)" >}}
+## Gradle configuration
 
+Add the following lines to your app's gradle, according to modules you actually need:
 
-{{< todo "@TangZhiLong Android SDK requirements, gradle paths to be included, and specific configuration if needed" >}}
+dependencies {
+    implementation 'org.elastos:hive:0.5.0'
+    implementation 'org.elastos:carrier:5.4.0'
+}
 
-{{< todo "@TangZhiLong Explain how to import carrier, hive, did, etc, in gradle" >}}
+{{< todo "Add eth, neo, did, etc" >}}
