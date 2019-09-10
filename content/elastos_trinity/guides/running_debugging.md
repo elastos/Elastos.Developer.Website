@@ -31,3 +31,7 @@ $ trinity-cli run -p android
 * When you change your source code on your computer, your DApp on the device detects it and reload the app content.
 
 Note that as soon as your device stops being on the same network as your computer, or if the `trinity-cli run` command is stopped, your DApp in trinity will show a network error with an empty page. 
+
+## Debugging your application
+   
+Open the Chrome browser on your computer and visit `chrome://inspect` to inspect your DApp pages.

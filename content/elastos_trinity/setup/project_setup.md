@@ -44,7 +44,7 @@ You can build any kind of ionic-based application in Elastos, as the whole ionic
 
 - Trinity must be installed on your device
 - Connect your device to your computer using a USB cable.
-- Make sure adb is in your path.
+- Make sure android adb is in your path.
 
 Enter your app's folder in a terminal then run the following command:
 
@@ -60,44 +60,4 @@ After your app is launched inside trinity, you can directly edit your app conten
 
 ### Trinity DApps manifest
 
-A *manifest.json* file is created by default in your trinity DApp project. 
-
-It looks like the following sample. You can manually edit it whenever needed. 
-
-Trinity manifest format is fully described in the {{< internallink "trinity manifest guide" "elastos_trinity/guides/trinity_manifest.md" >}}.
-
-   ```json
-   {
-     "id": "com.mycompany.myapp",
-     "version": "0.0.1",
-     "name": "My App",
-     "short_name": "My App",
-     "description": "My Sample App",
-     "start_url": "http://192.168.0.2:8100",
-     "type":"url",
-     "icons": [
-       {
-         "src": "logo.png",
-         "sizes": "512x512",
-         "type": "image/png"
-       }
-     ],
-     "author": {
-       "name": "MyName",
-       "email": "myname@mycompany.com"
-     },
-     "default_locale": "en",
-     "urls": [
-       "http://192.168.0.2:8100/*"
-     ],
-     "background_color": "#4e8ef7",
-     "theme": {
-       "theme_display": "show",
-       "theme_color": "#4e8ef7"
-     }
-   }
-   ```
-
-### Debugging your application
-   
-Open the Chrome browser on your computer and visit `chrome://inspect` to inspect your DApp pages.
+A *manifest.json* file is created by default in your trinity DApp project. You can manually edit it whenever needed. The Trinity manifest format is fully described in the {{< internallink "trinity manifest guide" "elastos_trinity/guides/trinity_manifest.md" >}}.
