@@ -7,24 +7,35 @@ pre = ""
 alwaysopen = false
 +++
 
-{{< ownership "TangZhiLong" >}}
-
-{{< todo "@TangZhiLong" >}}
-
 ## About
 
-Short intro here.
+Elastos Carrier is a decentralized and encrypted peer-to-peer (P2P) communication framework that routes network traffic between Elastos native applications or DApps. It provides low level data transport capabilities, but also higher level features such as managing friends, chat sessions, file transfer, or audio and video streaming.
 
 ## Useful skills
 
-* Android programming
-* Design
-* Marketing
+* Programming: C++, Android Java, iOS Swift
+* Networking knowledge
+* Media streaming knowledge
 
-## Github location
+## Github locations
 
-[Github Repo name here](https://www.github.com/yourrepourl)
+[Native C++ SDK](https://github.com/elastos/Elastos.NET.Carrier.Native.SDK)
+
+[Android Java SDK](https://github.com/elastos/Elastos.NET.Carrier.Android.SDK)
+
+[iOS Swift SDK](https://github.com/elastos/Elastos.NET.Carrier.Swift.SDK)
+
+[NodeJS SDK](https://github.com/elastos/Elastos.NET.Carrier.Nodejs.SDK)
+
+[Non-Android Java SDK](https://github.com/elastos/Elastos.NET.Carrier.Java.SDK)
 
 ## How to contribute ?
 
-Explain here.
+You can:
+
+* Bring your ideas to improve carrier and define implementation milestones with the team.
+* Bring programming skills to make new features happen faster, or fix bugs you have found.
+
+How to start:
+
+* Use WeChat and add **@stiartsly (Tang Zhi Long - Carrier team leader)**. He will invite you to some carrier groups where you can know the **project status**, see **what the team is working on**, and see where you could help (**vacant tasks**).
