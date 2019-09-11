@@ -10,7 +10,7 @@ alwaysopen = false
 Here are a few things you can do to make sure develap and all of the Elastos services are running correctly.
 
 ## Connect to testnet
-```bash
+```
 ./develap blockchain run -e testnet -n mainchain,did,token,eth
 ```
 
