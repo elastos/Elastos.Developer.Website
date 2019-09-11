@@ -1,5 +1,5 @@
 +++
-title = "Elastos CLI"
+title = "ELA CLI"
 date = 2019-05-24T21:15:40+02:00
 weight = 8
 chapter = false
@@ -15,22 +15,24 @@ alwaysopen = false
 
 {{< todo "@BPI @NiuJingyu Explain a bit more to beginners. For example 'view public key': clarify what is that public key, when it is used, is that a test key or a permanent key, etc" >}}
 
+You can download ela-cli program from [https://download.elastos.org/elastos-ela/](https://download.elastos.org/elastos-ela/)
+
 The Elastos CLI provides several useful commands for development, deployment, identity management, etc. The main ones are listed in the table below.
 
 To get a more detailed list of commands and parameters:
 
 {{% highlight "shell" %}}
-$ elastos-cli help
+$ ./ela-cli help
 {{% /highlight %}}
 
 ## Most useful commands
 
 | Command                  | Description                                                          |
 | ------------------------ | -------------------------------------------------------------------- |
-| elastos-cli **info**     | Get information about current network, statistics, version...        |
-| elastos-cli **wallet**   | Show information about wallet, create wallet, build transaction, etc |
-| elastos-cli **mine**     | Toggle cpu mining or manual mining                                   |
-| elastos-cli **rollback** | Rollback blockchain data                                             |
+| ./ela-cli **info**     | Get information about current network, statistics, version...        |
+| ./ela-cli **wallet**   | Show information about wallet, create wallet, build transaction, etc |
+| ./ela-cli **mine**     | Toggle cpu mining or manual mining                                   |
+| ./ela-cli **rollback** | Rollback blockchain data                                             |
 
 ### Global parameters
 
@@ -43,7 +45,7 @@ The Elastos CLI will connect to the default rpcport[20336] of the local ela node
 | --rpcpassword | Specify the password of the BasicAuth. The default value is "".                       |
 
 {{% highlight "shell" %}}
-$ elastos-cli info getcurrent --rpcport YourRPCPort --rpcuser YourRPCUser --rpcpassword YourRPCPassword
+$ ./ela-cli info getcurrent --rpcport YourRPCPort --rpcuser YourRPCUser --rpcpassword YourRPCPassword
 {{% /highlight %}}
 
 ## Wallet
@@ -53,7 +55,7 @@ $ elastos-cli info getcurrent --rpcport YourRPCPort --rpcuser YourRPCUser --rpcp
 The create account command is used to create a standard account and store the private key encryption in the keystore file. Each wallet has a default account, which is generally the first account added. The default account cannot be deleted.
 
 {{% highlight "shell" %}}
-$ elastos-cli wallet create -p PASSWORD
+$ ./ela-cli wallet create -p PASSWORD
 {{% /highlight %}}
 
 Result:
@@ -70,7 +72,7 @@ ESVMKLVB1j1KQR8TYP7YbksHpNSHg5NZ8i 032d3d0e8125ac6215c237605486c9fbd4eb764f52f89
 Show the public keys stored in the keystore.dat file.
 
 {{% highlight "shell" %}}
-$ elastos-cli wallet account -p PASSWORD
+$ ./ela-cli wallet account -p PASSWORD
 {{% /highlight %}}
 
 Result:
@@ -87,7 +89,7 @@ ESVMKLVB1j1KQR8TYP7YbksHpNSHg5NZ8i 032d3d0e8125ac6215c237605486c9fbd4eb764f52f89
 The command below will check the balances of all the addresses in the keystore.dat file.
 
 {{% highlight "shell" %}}
-$ elastos-cli wallet balance
+$ ./ela-cli wallet balance
 {{% /highlight %}}
 
 Result:
@@ -106,7 +108,7 @@ INDEX                            ADDRESS BALANCE                           (LOCK
 Add a new address in the keystore.dat file.
 
 {{% highlight "shell" %}}
-$ elastos-cli wallet add -p PASSWORD
+$ ./ela-cli wallet add -p PASSWORD
 {{% /highlight %}}
 
 Result:
@@ -123,7 +125,7 @@ ET15giWpFNSYcTKVbj3s18TsR6i8MBnkvk 031c862055158e50dd6e2cf6bb33f869aaac42c5e6def
 Adding multi-signature account requires specifying the public key list `pks`, and a minimum number of signatures `m`.
 
 {{% highlight "shell" %}}
-$ elastos-cli wallet addmultisig -m 3 --pks 0325406f4abc3d41db929f26cf1a419393ed1fe5549ff18f6c579ff0c3cbb714c8,0353059bf157d3eaca184cc10a80f10baf10676c4a39695a9a092fa3c2934818bd,03fd77d569f766638677755e8a71c7c085c51b675fbf7459ca1094b29f62f0b27d,0353059bf157d3eaca184cc10a80f10baf10676c4a39695a9a092fa3c2934818bd -p PASSWORD
+$ ./ela-cli wallet addmultisig -m 3 --pks 0325406f4abc3d41db929f26cf1a419393ed1fe5549ff18f6c579ff0c3cbb714c8,0353059bf157d3eaca184cc10a80f10baf10676c4a39695a9a092fa3c2934818bd,03fd77d569f766638677755e8a71c7c085c51b675fbf7459ca1094b29f62f0b27d,0353059bf157d3eaca184cc10a80f10baf10676c4a39695a9a092fa3c2934818bd -p PASSWORD
 {{% /highlight %}}
 
 Result:
@@ -137,7 +139,7 @@ Result:
 Delete the specified address in the keystore.dat file. While the default account cannot be deleted.
 
 {{% highlight "shell" %}}
-$ elastos-cli wallet delete ET15giWpFNSYcTKVbj3s18TsR6i8MBnkvk
+$ ./ela-cli wallet delete ET15giWpFNSYcTKVbj3s18TsR6i8MBnkvk
 {{% /highlight %}}
 
 Result:
@@ -154,7 +156,7 @@ EJMzC16Eorq9CuFCGtyMrq4Jmgw9jYCHQR 034f3a7d2f33ac7f4e30876080d359ce5f314c9eabddb
 Delete the specified address in the keystore.dat file. While the default account cannot be deleted.
 
 {{% highlight "shell" %}}
-$ elastos-cli wallet delete ET15giWpFNSYcTKVbj3s18TsR6i8MBnkvk
+$ ./ela-cli wallet delete ET15giWpFNSYcTKVbj3s18TsR6i8MBnkvk
 {{% /highlight %}}
 
 Result:
@@ -171,7 +173,7 @@ EJMzC16Eorq9CuFCGtyMrq4Jmgw9jYCHQR 034f3a7d2f33ac7f4e30876080d359ce5f314c9eabddb
 Import an account by the private key.
 
 {{% highlight "shell" %}}
-elastos-cli wallet import b2fe3300e44b27b199d97af43ed3e82df4670db66727732ba8d9442ce680da35
+./ela-cli wallet import b2fe3300e44b27b199d97af43ed3e82df4670db66727732ba8d9442ce680da35
 {{% /highlight %}}
 
 Enter a password when prompted.
@@ -190,7 +192,7 @@ EQJP3XT7rshteqE1D3u9nBqXL7xQrfzVh1 03f69479d0f6aa11aae5fbe5e5bfca201d717d9fa97a4
 Generate a deposit address from a standard address:
 
 {{% highlight "shell" %}}
-elastos-cli wallet depositaddr EJMzC16Eorq9CuFCGtyMrq4Jmgw9jYCHQR
+./ela-cli wallet depositaddr EJMzC16Eorq9CuFCGtyMrq4Jmgw9jYCHQR
 {{% /highlight %}}
 
 Result:
@@ -204,7 +206,7 @@ DVgnDnVfPVuPa2y2E4JitaWjWgRGJDuyrD
 Generate a cross chain address from a side chain genesis block hash:
 
 {{% highlight "shell" %}}
-elastos-cli wallet crosschainaddr 56be936978c261b2e649d58dbfaf3f23d4a868274f5522cd2adb4308a955c4a3
+./ela-cli wallet crosschainaddr 56be936978c261b2e649d58dbfaf3f23d4a868274f5522cd2adb4308a955c4a3
 {{% /highlight %}}
 
 Result:
@@ -230,7 +232,7 @@ Build transaction command can build transaction raw data. Note that before sendi
 ##### Build standard signature transaction
 
 {{% highlight "shell" %}}
-elastos-cli wallet buildtx --to EJbTbWd8a9rdutUfvBxhcrvEeNy21tW1Ee --amount 0.1 --fee 0.01
+./ela-cli wallet buildtx --to EJbTbWd8a9rdutUfvBxhcrvEeNy21tW1Ee --amount 0.1 --fee 0.01
 {{% /highlight %}}
 
 Result:
@@ -247,7 +249,7 @@ The from address must exist in the keystore file.
 Command:
 
 {{% highlight "shell" %}}
-elastos-cli wallet buildtx --from 8PT1XBZboe17rq71Xq1CvMEs8HdKmMztcP --to EQJP3XT7rshteqE1D3u9nBqXL7xQrfzVh1 --amount 0.51 --fee 0.001
+./ela-cli wallet buildtx --from 8PT1XBZboe17rq71Xq1CvMEs8HdKmMztcP --to EQJP3XT7rshteqE1D3u9nBqXL7xQrfzVh1 --amount 0.51 --fee 0.001
 {{% /highlight %}}
 
 Result:
@@ -273,7 +275,7 @@ The first column is the recipient's address and the second column is the amount.
 Specify the addresses.csv file with the `—-tomany` parameter.
 
 {{% highlight "shell" %}}
-elastos-cli wallet buildtx --tomany addresses.csv --fee 0.001
+./ela-cli wallet buildtx --tomany addresses.csv --fee 0.001
 {{% /highlight %}}
 
 Result：
@@ -292,10 +294,10 @@ File:  to_be_signed.txn
 
 {{% highlight "shell" %}}
 NAME:
-   elastos-cli wallet buildtx activate - Build a tx to activate producer which have been inactivated
+   ./ela-cli wallet buildtx activate - Build a tx to activate producer which have been inactivated
 
 USAGE:
-   elastos-cli wallet buildtx activate [command options] [arguments...]
+   ./ela-cli wallet buildtx activate [command options] [arguments...]
 
 OPTIONS:
    --nodepublickey value       the node public key of an arbitrator which have been inactivated
@@ -308,7 +310,7 @@ The `nodepublickey` parameter is used to specify the node public key of an arbit
 The account associated with node publickey must exist in the specified keystore file.
 
 {{% highlight "shell" %}}
-elastos-cli wallet buildtx activate --nodepublickey 032895050b7de1a9cf43416e6e5310f8e909249dcd9c4166159b04a343f7f141b5
+./ela-cli wallet buildtx activate --nodepublickey 032895050b7de1a9cf43416e6e5310f8e909249dcd9c4166159b04a343f7f141b5
 {{% /highlight %}}
 
 You need to enter a password to sign the payload of the transaction.
@@ -324,10 +326,10 @@ File:  ready_to_send.txn
 
 {{% highlight "shell" %}}
 NAME:
-   elastos-cli wallet buildtx vote - Build a tx to vote for candidates using ELA
+   ./ela-cli wallet buildtx vote - Build a tx to vote for candidates using ELA
 
 USAGE:
-   elastos-cli wallet buildtx vote [command options] [arguments...]
+   ./ela-cli wallet buildtx vote [command options] [arguments...]
 
 OPTIONS:
    --for <file>                the <file> path that holds the list of candidates
@@ -358,7 +360,7 @@ For example: candidates.csv
 Vote 1 ELA for each of the above candidates.
 
 {{% highlight "shell" %}}
-elastos-cli wallet buildtx vote --for candidates.csv --amount 1 --fee 0.1
+./ela-cli wallet buildtx vote --for candidates.csv --amount 1 --fee 0.1
 {{% /highlight %}}
 
 Result:
@@ -385,7 +387,7 @@ The `file` parameter is used to specify the raw transaction file which to be sig
 ##### Standard Signature
 
 {{% highlight "shell" %}}
-elastos-cli wallet signtx -f to_be_signed.txn
+./ela-cli wallet signtx -f to_be_signed.txn
 {{% /highlight %}}
 
 Enter a password when prompted.
@@ -403,7 +405,7 @@ File:  ready_to_send.txn
 Attach the first signature:
 
 {{% highlight "shell" %}}
-elastos-cli wallet signtx -f to_be_signed.txn -w keystore1.dat
+./ela-cli wallet signtx -f to_be_signed.txn -w keystore1.dat
 {{% /highlight %}}
 
 Result:
@@ -417,7 +419,7 @@ File:  to_be_signed_1_of_3.txn
 Attach the second signature:
 
 {{% highlight "shell" %}}
-elastos-cli wallet signtx -f to_be_signed_1_of_3.txn -w keystore2.dat
+./ela-cli wallet signtx -f to_be_signed_1_of_3.txn -w keystore2.dat
 {{% /highlight %}}
 
 Result:
@@ -431,7 +433,7 @@ File:  to_be_signed_2_of_3.txn
 Attach the third signature:
 
 {{% highlight "shell" %}}
-elastos-cli wallet signtx -f to_be_signed_2_of_3.txn -w keystore3.dat
+./ela-cli wallet signtx -f to_be_signed_2_of_3.txn -w keystore3.dat
 {{% /highlight %}}
 
 Result:
@@ -445,7 +447,7 @@ File:  ready_to_send.txn
 #### Send transaction
 
 {{% highlight "shell" %}}
-elastos-cli wallet sendtx -f ready_to_send.txn
+./ela-cli wallet sendtx -f ready_to_send.txn
 {{% /highlight %}}
 
 Result:
@@ -459,7 +461,7 @@ Result:
 The showtx command parses the contents from the raw transaction. You can specify the raw transaction by `hex` or `file` parameters.
 
 {{% highlight "shell" %}}
-elastos-cli wallet showtx --hex 0902000100123132333835343835313135373533343433340139eaa4137a047cdaac7112fe04617902e3b17c1685029d259d93c77680c950f30100ffffffff02b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a380778e06000000000000000012e194f97570ada85ec5df31e7c192edf1e3fc199900b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a36ec1dc030000000000000000210d4109bf00e6d782db40ab183491c03cf4d6a37a0000000000014140433f2f2fa7390db75af3a3288943ce178f9373b2362a3b09530dd30fbb50fa5f007716bf07abd7ee0281d422f3615b474ed332ba63fe7209f611e547d68e4c0f2321034f3a7d2f33ac7f4e30876080d359ce5f314c9eabddbaaca637676377f655e16cac
+./ela-cli wallet showtx --hex 0902000100123132333835343835313135373533343433340139eaa4137a047cdaac7112fe04617902e3b17c1685029d259d93c77680c950f30100ffffffff02b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a380778e06000000000000000012e194f97570ada85ec5df31e7c192edf1e3fc199900b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a36ec1dc030000000000000000210d4109bf00e6d782db40ab183491c03cf4d6a37a0000000000014140433f2f2fa7390db75af3a3288943ce178f9373b2362a3b09530dd30fbb50fa5f007716bf07abd7ee0281d422f3615b474ed332ba63fe7209f611e547d68e4c0f2321034f3a7d2f33ac7f4e30876080d359ce5f314c9eabddbaaca637676377f655e16cac
 {{% /highlight %}}
 
 Result:
@@ -503,10 +505,10 @@ Transaction: {
 
 {{% highlight "shell" %}}
 NAME:
-   elastos-cli info - With elastos-cli info, you could look up node status, query blocks, transactions, etc.
+   ./ela-cli info - With ./ela-cli info, you could look up node status, query blocks, transactions, etc.
 
 USAGE:
-   elastos-cli info command [command options] [args]
+   ./ela-cli info command [command options] [args]
 
 COMMANDS:
      getconnectioncount  Show how many peers are connected
@@ -526,7 +528,7 @@ OPTIONS:
 ### Get Connections Count
 
 {{% highlight "shell" %}}
-elastos-cli info getconnectioncount
+./ela-cli info getconnectioncount
 {{% /highlight %}}
 
 Result:
@@ -538,7 +540,7 @@ Result:
 ### Get Neighbors Information
 
 {{% highlight "shell" %}}
-elastos-cli info getneighbors
+./ela-cli info getneighbors
 {{% /highlight %}}
 
 Result:
@@ -552,7 +554,7 @@ Result:
 ### Get Node State
 
 {{% highlight "shell" %}}
-elastos-cli info getnodestate
+./ela-cli info getnodestate
 {{% /highlight %}}
 
 Result:
@@ -581,7 +583,7 @@ Result:
 ### Get Current Height
 
 {{% highlight "shell" %}}
-elastos-cli info getcurrentheight
+./ela-cli info getcurrentheight
 {{% /highlight %}}
 
 Result:
@@ -593,7 +595,7 @@ Result:
 ### Get Best Block Hash
 
 {{% highlight "shell" %}}
-elastos-cli info getbestblockhash
+./ela-cli info getbestblockhash
 {{% /highlight %}}
 
 Result:
@@ -605,7 +607,7 @@ Result:
 ### Get Block Hash By Height
 
 {{% highlight "shell" %}}
-elastos-cli info getblockhash 100
+./ela-cli info getblockhash 100
 {{% /highlight %}}
 
 Result:
@@ -619,7 +621,7 @@ Result:
 Get block information by hash:
 
 {{% highlight "shell" %}}
-elastos-cli info getblock 1c1e1c22ce891184d390def30a9b8f15f355c05a7bd6e7e7912b571141e01415
+./ela-cli info getblock 1c1e1c22ce891184d390def30a9b8f15f355c05a7bd6e7e7912b571141e01415
 {{% /highlight %}}
 
 Result:
@@ -713,7 +715,7 @@ Result:
 Get block information by height:
 
 `{{% highlight "shell" %}}``
-elastos-cli info getblock 100
+./ela-cli info getblock 100
 {{% /highlight %}}
 
 Result:
@@ -807,7 +809,7 @@ Result:
 ### Get Raw Transaction
 
 {{% highlight "shell" %}}
-elastos-cli info getrawtransaction 17296308c322aee00274da494e0b9a08423b65d170bd2235c3b658f7030fd9b9
+./ela-cli info getrawtransaction 17296308c322aee00274da494e0b9a08423b65d170bd2235c3b658f7030fd9b9
 {{% /highlight %}}
 
 Result：
@@ -819,7 +821,7 @@ Result：
 ### Get Transaction Pool Information
 
 {{% highlight "shell" %}}
-elastos-cli info getrawmempool
+./ela-cli info getrawmempool
 {{% /highlight %}}
 
 Result:
@@ -911,7 +913,7 @@ Result:
 ### List Producer Information
 
 {{% highlight "shell" %}}
-elastos-cli info listproducers
+./ela-cli info listproducers
 {{% /highlight %}}
 
 Result：
@@ -959,13 +961,13 @@ Result：
 
 {{% highlight "shell" %}}
 NAME:
-   elastos-cli mine - Toggle cpu mining or manual mine
+   ./ela-cli mine - Toggle cpu mining or manual mine
 
 USAGE:
-   elastos-cli mine [command options] [args]
+   ./ela-cli mine [command options] [args]
 
 DESCRIPTION:
-   With elastos-cli mine, you can toggle cpu mining or discrete mining.
+   With ./ela-cli mine, you can toggle cpu mining or discrete mining.
 
 OPTIONS:
    --toggle value, -t value  use --toggle [start, stop] to toggle cpu mining
@@ -975,7 +977,7 @@ OPTIONS:
 ### Start CPU Mining
 
 {{% highlight "shell" %}}
-elastos-cli mine -t start
+./ela-cli mine -t start
 {{% /highlight %}}
 
 Result:
@@ -987,7 +989,7 @@ mining started
 ### Stop CPU Mining
 
 {{% highlight "shell" %}}
-elastos-cli mine -t stop
+./ela-cli mine -t stop
 {{% /highlight %}}
 
 Result:
@@ -1001,7 +1003,7 @@ mining stopped
 The `n` parameter is used to specify the number of blocks to want mine
 
 {{% highlight "shell" %}}
-elastos-cli mine -n 1
+./ela-cli mine -n 1
 {{% /highlight %}}
 
 Result:
@@ -1014,13 +1016,13 @@ Result:
 
 {{% highlight "shell" %}}
 NAME:
-   elastos-cli rollback - Rollback blockchain data
+   ./ela-cli rollback - Rollback blockchain data
 
 USAGE:
-   elastos-cli rollback [command options] [args]
+   ./ela-cli rollback [command options] [args]
 
 DESCRIPTION:
-   With elastos-cli rollback command, you could rollback blockchain data.
+   With ./ela-cli rollback command, you could rollback blockchain data.
 
 OPTIONS:
    --height value  the final height after rollback (default: 0)
@@ -1029,7 +1031,7 @@ OPTIONS:
 The height parameter is used to set the final height after rollback.
 
 {{% highlight "shell" %}}
-elastos-cli rollback --height 20
+./ela-cli rollback --height 20
 {{% /highlight %}}
 
 Result:
