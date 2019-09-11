@@ -11,9 +11,9 @@ alwaysopen = false
 
 Add the following lines to your app's gradle, according to modules you actually need:
 
-dependencies {
-    implementation 'org.elastos:hive:0.5.0'
-    implementation 'org.elastos:carrier:5.4.0'
-}
+    dependencies {
+        implementation 'org.elastos:hive:0.5.0'
+        implementation 'org.elastos:carrier:5.4.0'
+    }
 
 {{< todo "Add eth, neo, did, etc" >}}

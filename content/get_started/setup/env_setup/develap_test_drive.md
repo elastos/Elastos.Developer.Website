@@ -1,11 +1,13 @@
 +++
-title = "Test Drive"
+title = "Develap test drive"
 date = 2019-09-10T21:15:33+02:00
 weight = 20
 chapter = false
 pre = ""
 alwaysopen = false
 +++ 
+
+Here are a few things you can do to make sure develap and all of the Elastos services are running correctly.
 
 ## Connect to testnet
 ```bash

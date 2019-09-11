@@ -1,5 +1,5 @@
 +++
-title = "Setup Develap Tool"
+title = "Setup Develap"
 date = 2019-09-10T21:15:33+02:00
 weight = 10
 chapter = false
@@ -18,6 +18,9 @@ A tool called "Develap" is available that helps in setting up a local environmen
 - Start docker after installation
 
 ### Download develap tool
+
+{{< todo "Simplify this using package manager based distribution" >}}
+
 Download the latest release specific to your platform from [https://github.com/cyber-republic/develap/releases](https://github.com/cyber-republic/develap/releases). This guide will use linux_amd64 however, the process is the same for darwin_amd64 and windows_amd64. For more info about the code repository, please visit [https://github.com/cyber-republic/develap](https://github.com/cyber-republic/develap)
 
 ### Extract the zip file
