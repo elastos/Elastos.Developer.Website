@@ -1,6 +1,6 @@
 +++
 title = "Elastos Blockchain"
-weight = 10
+weight = 15
 chapter = true
 pre = ""
 alwaysopen = false

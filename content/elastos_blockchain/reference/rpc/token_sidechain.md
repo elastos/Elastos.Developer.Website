@@ -1,28 +1,11 @@
 +++
 title = "Token sidechain"
-date = 2019-05-24T21:15:40+02:00
-weight = 60
+date = 2019-09-10T01:15:40+02:00
+weight = 30
 chapter = false
 pre = ""
 alwaysopen = false
 +++
-
-{{< ownership "BoCheng" >}}
-
-{{< todo "@BPI fix english errors, check with bocheng if everything is up to date and related to the token sidechain" >}}
-
-Instructions
-===============
-
-This is the document of ela json rpc interfaces.
-it follows json-rpc 2.0 protocol but also keeps compatible with 1.0 version.
-That means both named params and positional params are acceptable.
-
-"id" is optional, which will be sent back in the result samely if you add it in a request.
-It is needed when you want to distinguish different requests.
-
-"jsonrpc" is optional. It tells which version this request uses.
-In version 2.0 it is required, while in version 1.0 it does not exist.
 
 #### getassetlist
 descritption: return the asset list of this token chain

@@ -1,7 +1,7 @@
 +++
 title = "Ethereum sidechain"
-date = 2019-05-24T21:15:40+02:00
-weight = 60
+date = 2019-09-10T01:15:40+02:00
+weight = 40
 chapter = false
 pre = ""
 alwaysopen = false
