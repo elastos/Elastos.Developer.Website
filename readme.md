@@ -175,6 +175,7 @@ Make sure to discuss major changes with the following persons first:
 
 | Topic | Contact |
 | ----- | ------- |
+| Overall content | Wechat: @BenPiette (Benjamin Piette) |
 | Blockchain | Wechat: @于舒楠 (Yu Shunan) |
 | Carrier | Wechat: @stiartsly (Tang Zhilong) |
 | Hive | Wechat: @stiartsly (Tang Zhilong) |

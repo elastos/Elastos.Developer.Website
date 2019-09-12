@@ -1,70 +1,139 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>JSDoc: Class: AppManager</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Elastos Browser (Trinity) Class: AppManager</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.paper.css">
+
 </head>
 
 <body>
 
-<div id="main">
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Elastos Browser (Trinity)</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="navigator.html">navigator</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-Camera.html">Camera</a></li><li><a href="module-camera_.html">camera</a></li><li><a href="module-CameraPopoverHandle.html">CameraPopoverHandle</a></li><li><a href="module-CameraPopoverOptions.html">CameraPopoverOptions</a></li><li><a href="module-carrierPlugin.html">carrierPlugin</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="AppManager.html">AppManager</a></li><li><a href="AppService.html">AppService</a></li><li><a href="argscheck.html">argscheck</a></li><li><a href="Carrier.html">Carrier</a></li><li><a href="Coordinates.html">Coordinates</a></li><li><a href="global.html#cordova">cordova</a></li><li><a href="Device.html">Device</a></li><li><a href="FileReader.html">FileReader</a></li><li><a href="FileUploadOptions.html">FileUploadOptions</a></li><li><a href="FileWriter.html">FileWriter</a></li><li><a href="Media.html">Media</a></li><li><a href="module.html#.exports">module.exports</a></li><li><a href="PluginDemo.html">PluginDemo</a></li><li><a href="PositionError.html">PositionError</a></li><li><a href="Session.html">Session</a></li><li><a href="Stream.html">Stream</a></li><li><a href="%257BDOMString%257D%2520name%2520the%2520unique%2520name%2520of%2520the%2520file%2520system%2520.html">{DOMString} name the unique name of the file system (readonly)
+{DirectoryEntry} root directory of the file system (readonly)</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#_capture">_capture</a></li><li><a href="global.html#CameraUI">CameraUI</a></li><li><a href="global.html#Capture">Capture</a></li><li><a href="global.html#CaptureAudioOptions">CaptureAudioOptions</a></li><li><a href="global.html#CaptureError">CaptureError</a></li><li><a href="global.html#CaptureImageOptions">CaptureImageOptions</a></li><li><a href="global.html#capturePhoto">capturePhoto</a></li><li><a href="global.html#captureVideo">captureVideo</a></li><li><a href="global.html#CaptureVideoOptions">CaptureVideoOptions</a></li><li><a href="global.html#cdvfileToAppData">cdvfileToAppData</a></li><li><a href="global.html#checkPatternReqs">checkPatternReqs</a></li><li><a href="global.html#ConfigurationData">ConfigurationData</a></li><li><a href="global.html#createNode">createNode</a></li><li><a href="global.html#dataURItoBlob">dataURItoBlob</a></li><li><a href="global.html#DirectoryEntry">DirectoryEntry</a></li><li><a href="global.html#DirectoryReader">DirectoryReader</a></li><li><a href="global.html#Entry">Entry</a></li><li><a href="global.html#File">File</a></li><li><a href="global.html#FileEntry">FileEntry</a></li><li><a href="global.html#FileError">FileError</a></li><li><a href="global.html#Flags">Flags</a></li><li><a href="global.html#fullPathToAppData">fullPathToAppData</a></li><li><a href="global.html#MediaFile">MediaFile</a></li><li><a href="global.html#MediaFileData">MediaFileData</a></li><li><a href="global.html#Metadata">Metadata</a></li><li><a href="global.html#parseUriToPathAndFilename">parseUriToPathAndFilename</a></li><li><a href="global.html#processUri">processUri</a></li><li><a href="global.html#readFailureCallback">readFailureCallback</a></li><li><a href="global.html#readPreferencesFromCfg">readPreferencesFromCfg</a></li><li><a href="global.html#readSuccessCallback">readSuccessCallback</a></li><li><a href="global.html#requestFileSystem">requestFileSystem</a></li><li><a href="global.html#resolveLocalFileSystemURL">resolveLocalFileSystemURL</a></li><li><a href="global.html#setTemporaryFsByDefault">setTemporaryFsByDefault</a></li><li><a href="global.html#showAndHide">showAndHide</a></li><li><a href="global.html#tryParsePatternValues">tryParsePatternValues</a></li><li><a href="global.html#vibratePattern">vibratePattern</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
 
-    <h1 class="page-title">Class: AppManager</h1>
-
-    
-
+</div>
+</div>
 
 
+<div class="container" id="toc-content">
+<div class="row">
 
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Class: AppManager</h1>
 <section>
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>AppManager<span class="signature">()</span><span class="type-signature"></span></h2>
+        <h2>
+        AppManager
+        </h2>
         
     
 </header>
+
 
 <article>
     <div class="container-overview">
     
         
+<hr>
+<dt>
+    <h4 class="name" id="AppManager"><span class="type-signature"></span>new AppManager()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>The class representing dapp manager for launcher.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="AppManager"><span class="type-signature"></span>new AppManager<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
     
-
-
-
-<div class="description">
-    The class representing dapp manager for launcher.
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -74,54 +143,52 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-96">line 96</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line96">line 96</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
     
     </div>
@@ -137,42 +204,45 @@
     
 
     
-
-    
         <h3 class="subsection-title">Members</h3>
 
-        
+        <dl>
             
-<h4 class="name" id="AuthorityStatus"><span class="type-signature"></span>AuthorityStatus<span class="type-signature"> :number</span></h4>
+<hr>
+<dt class="name" id="AuthorityStatus">
+    <h4 id="AuthorityStatus"><span class="type-signature"></span>AuthorityStatus<span class="type-signature"> :number</span></h4>
 
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Message type to send or receive.</p>
+    </div>
+    
 
-
-
-<div class="description">
-    Message type to send or receive.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
 <span class="param-type">number</span>
 
 
-        </li>
-    </ul>
 
+            </li>
+        </ul>
+    
 
-
-
+    
+<dl class="details">
+    
 
     <h5 class="subsection-title">Properties:</h5>
 
-    
+    <dl>
 
-<table class="props">
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -183,6 +253,8 @@
 
         
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -203,14 +275,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
 
-            <td class="description last">Not initialise</td>
+            <td class="description last"><p>Not initialise</p></td>
         </tr>
 
     
@@ -226,14 +305,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
 
-            <td class="description last">Ask for authority.</td>
+            <td class="description last"><p>Ask for authority.</p></td>
         </tr>
 
     
@@ -249,14 +335,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    2
+                
+                </td>
+            
 
-            <td class="description last">Allow the authority.</td>
+            <td class="description last"><p>Allow the authority.</p></td>
         </tr>
 
     
@@ -272,24 +365,35 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    3
+                
+                </td>
+            
 
-            <td class="description last">Deny the authority.</td>
+            <td class="description last"><p>Deny the authority.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -299,73 +403,78 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-125">line 125</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line125">line 125</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
-
-
-
+    
+</dd>
 
         
             
-<h4 class="name" id="MessageType"><span class="type-signature"></span>MessageType<span class="type-signature"> :number</span></h4>
+<hr>
+<dt class="name" id="MessageType">
+    <h4 id="MessageType"><span class="type-signature"></span>MessageType<span class="type-signature"> :number</span></h4>
 
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Message type to send or receive.</p>
+    </div>
+    
 
-
-
-<div class="description">
-    Message type to send or receive.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
 <span class="param-type">number</span>
 
 
-        </li>
-    </ul>
 
+            </li>
+        </ul>
+    
 
-
-
+    
+<dl class="details">
+    
 
     <h5 class="subsection-title">Properties:</h5>
 
-    
+    <dl>
 
-<table class="props">
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -376,6 +485,8 @@
 
         
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -396,14 +507,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
 
-            <td class="description last">The internal message</td>
+            <td class="description last"><p>The internal message</p></td>
         </tr>
 
     
@@ -419,14 +537,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    2
+                
+                </td>
+            
 
-            <td class="description last">The internal return message.</td>
+            <td class="description last"><p>The internal return message.</p></td>
         </tr>
 
     
@@ -442,14 +567,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    3
+                
+                </td>
+            
 
-            <td class="description last">The external launcher message</td>
+            <td class="description last"><p>The external launcher message</p></td>
         </tr>
 
     
@@ -465,14 +597,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    4
+                
+                </td>
+            
 
-            <td class="description last">The external install message</td>
+            <td class="description last"><p>The external install message</p></td>
         </tr>
 
     
@@ -488,24 +627,35 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    5
+                
+                </td>
+            
 
-            <td class="description last">The external return message.</td>
+            <td class="description last"><p>The external return message.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -515,76 +665,73 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-106">line 106</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line106">line 106</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
+</dd>
 
-
-
-
-        
+        </dl>
     
 
     
         <h3 class="subsection-title">Methods</h3>
 
-        
+        <dl>
             
+<hr>
+<dt>
+    <h4 class="name" id="alertPrompt"><span class="type-signature"></span>alertPrompt(title, message)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Display a alert dialog prompt.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="alertPrompt"><span class="type-signature"></span>alertPrompt<span class="signature">(title, message)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Display a alert dialog prompt.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -615,6 +762,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -622,7 +770,7 @@
 
             
 
-            <td class="description last">The dialog title.</td>
+            <td class="description last"><p>The dialog title.</p></td>
         </tr>
 
     
@@ -638,6 +786,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -645,19 +794,24 @@
 
             
 
-            <td class="description last">The dialog message.</td>
+            <td class="description last"><p>The dialog message.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -667,84 +821,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-350">line 350</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line350">line 350</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="askPrompt"><span class="type-signature"></span>askPrompt(title, message, onOK)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Display a ask dialog prompt.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="askPrompt"><span class="type-signature"></span>askPrompt<span class="signature">(title, message, onOK)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Display a ask dialog prompt.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -775,6 +924,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -782,7 +932,7 @@
 
             
 
-            <td class="description last">The dialog title.</td>
+            <td class="description last"><p>The dialog title.</p></td>
         </tr>
 
     
@@ -798,6 +948,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -805,7 +956,7 @@
 
             
 
-            <td class="description last">The dialog message.</td>
+            <td class="description last"><p>The dialog message.</p></td>
         </tr>
 
     
@@ -821,6 +972,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -828,19 +980,24 @@
 
             
 
-            <td class="description last">The function to call when click ok.</td>
+            <td class="description last"><p>The function to call when click ok.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -850,84 +1007,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-371">line 371</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line371">line 371</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="close"><span class="type-signature"></span>close(id, onSuccess [, onError])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Close a dapp by id.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="close"><span class="type-signature"></span>close<span class="signature">(id, onSuccess, onError<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Close a dapp by id.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -937,7 +1089,7 @@
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -960,6 +1112,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -975,7 +1128,7 @@
 
             
 
-            <td class="description last">The dapp id.</td>
+            <td class="description last"><p>The dapp id.</p></td>
         </tr>
 
     
@@ -991,6 +1144,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -1006,7 +1160,7 @@
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -1020,6 +1174,7 @@
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -1039,19 +1194,24 @@
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1061,84 +1221,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-265">line 265</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line265">line 265</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="getAppInfo"><span class="type-signature"></span>getAppInfo(id, onSuccess [, onError])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get a dapp info.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="getAppInfo"><span class="type-signature"></span>getAppInfo<span class="signature">(id, onSuccess, onError<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Get a dapp info.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1148,7 +1303,7 @@
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -1171,6 +1326,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -1186,7 +1342,7 @@
 
             
 
-            <td class="description last">The dapp id.</td>
+            <td class="description last"><p>The dapp id.</p></td>
         </tr>
 
     
@@ -1202,6 +1358,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -1217,7 +1374,7 @@
 
             
 
-            <td class="description last">The function to call when success, the param is a AppInfo.</td>
+            <td class="description last"><p>The function to call when success, the param is a AppInfo.</p></td>
         </tr>
 
     
@@ -1231,6 +1388,7 @@
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -1250,19 +1408,24 @@
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1272,84 +1435,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-209">line 209</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line209">line 209</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="getAppInfos"><span class="type-signature"></span>getAppInfos(onSuccess)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get a dapp info.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="getAppInfos"><span class="type-signature"></span>getAppInfos<span class="signature">(onSuccess)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Get a dapp info.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1380,6 +1538,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -1387,19 +1546,24 @@
 
             
 
-            <td class="description last">The function to call when success, the param is include 'infos' and 'list'.</td>
+            <td class="description last"><p>The function to call when success, the param is include 'infos' and 'list'.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1409,84 +1573,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-224">line 224</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line224">line 224</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="getAppList"><span class="type-signature"></span>getAppList(onSuccess)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get dapp list.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="getAppList"><span class="type-signature"></span>getAppList<span class="signature">(onSuccess)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Get dapp list.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1517,6 +1676,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -1524,19 +1684,24 @@
 
             
 
-            <td class="description last">The function to call when success,the param is a dapp id list.</td>
+            <td class="description last"><p>The function to call when success,the param is a dapp id list.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1546,84 +1711,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-305">line 305</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line305">line 305</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="getLastList"><span class="type-signature"></span>getLastList(onSuccess)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get last run list.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="getLastList"><span class="type-signature"></span>getLastList<span class="signature">(onSuccess)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Get last run list.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1654,6 +1814,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -1661,19 +1822,24 @@
 
             
 
-            <td class="description last">The function to call when success,the param is a dapp id list.</td>
+            <td class="description last"><p>The function to call when success,the param is a dapp id list.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1683,84 +1849,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-314">line 314</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line314">line 314</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="getLocale"><span class="type-signature"></span>getLocale(onSuccess)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get locale.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="getLocale"><span class="type-signature"></span>getLocale<span class="signature">(onSuccess)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Get locale.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1791,6 +1952,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -1798,19 +1960,24 @@
 
             
 
-            <td class="description last">The function to call.the param include 'defaultLang' and 'systemLang'.</td>
+            <td class="description last"><p>The function to call.the param include 'defaultLang' and 'systemLang'.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1820,84 +1987,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-158">line 158</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line158">line 158</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="getRunningList"><span class="type-signature"></span>getRunningList(onSuccess)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get running list.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="getRunningList"><span class="type-signature"></span>getRunningList<span class="signature">(onSuccess)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Get running list.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1928,6 +2090,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -1935,19 +2098,24 @@
 
             
 
-            <td class="description last">The function to call when success,the param is a dapp id list.</td>
+            <td class="description last"><p>The function to call when success,the param is a dapp id list.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1957,84 +2125,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-296">line 296</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line296">line 296</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="infoPrompt"><span class="type-signature"></span>infoPrompt(title, message)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Display a info dialog prompt.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="infoPrompt"><span class="type-signature"></span>infoPrompt<span class="signature">(title, message)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Display a info dialog prompt.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2065,6 +2228,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -2072,7 +2236,7 @@
 
             
 
-            <td class="description last">The dialog title.</td>
+            <td class="description last"><p>The dialog title.</p></td>
         </tr>
 
     
@@ -2088,6 +2252,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -2095,19 +2260,24 @@
 
             
 
-            <td class="description last">The dialog message.</td>
+            <td class="description last"><p>The dialog message.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2117,84 +2287,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-360">line 360</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line360">line 360</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="install"><span class="type-signature"></span>install(url, onSuccess [, onError])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Install a dapp by path.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="install"><span class="type-signature"></span>install<span class="signature">(url, onSuccess, onError<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Install a dapp by path.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2204,7 +2369,7 @@
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -2227,6 +2392,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -2242,7 +2408,7 @@
 
             
 
-            <td class="description last">The dapp install url.</td>
+            <td class="description last"><p>The dapp install url.</p></td>
         </tr>
 
     
@@ -2258,6 +2424,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -2273,7 +2440,7 @@
 
             
 
-            <td class="description last">The function to call when success.the param is a AppInfo.</td>
+            <td class="description last"><p>The function to call when success.the param is a AppInfo.</p></td>
         </tr>
 
     
@@ -2287,6 +2454,7 @@
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -2306,19 +2474,24 @@
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2328,84 +2501,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-180">line 180</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line180">line 180</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="launcher"><span class="type-signature"></span>launcher(onSuccess [, onError])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Start the launcher.If the launcher running, it will be swith to curent.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="launcher"><span class="type-signature"></span>launcher<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Start the launcher.If the launcher running, it will be swith to curent.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2415,7 +2583,7 @@
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -2438,6 +2606,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -2453,7 +2622,7 @@
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -2467,6 +2636,7 @@
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -2486,19 +2656,24 @@
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2508,84 +2683,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-254">line 254</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line254">line 254</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="sendMessage"><span class="type-signature"></span>sendMessage(id, type, msg, onSuccess [, onError])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Send a message by id.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="sendMessage"><span class="type-signature"></span>sendMessage<span class="signature">(id, type, msg, onSuccess, onError<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Send a message by id.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2595,7 +2765,7 @@
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -2618,6 +2788,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -2633,7 +2804,7 @@
 
             
 
-            <td class="description last">The dapp id.</td>
+            <td class="description last"><p>The dapp id.</p></td>
         </tr>
 
     
@@ -2649,6 +2820,7 @@
 <span class="param-type">MessageType</span>
 
 
+
             
             </td>
 
@@ -2664,7 +2836,7 @@
 
             
 
-            <td class="description last">The message type.</td>
+            <td class="description last"><p>The message type.</p></td>
         </tr>
 
     
@@ -2680,6 +2852,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -2695,7 +2868,7 @@
 
             
 
-            <td class="description last">The message content.</td>
+            <td class="description last"><p>The message content.</p></td>
         </tr>
 
     
@@ -2711,6 +2884,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -2726,7 +2900,7 @@
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -2740,6 +2914,7 @@
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -2759,19 +2934,24 @@
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2781,84 +2961,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-278">line 278</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line278">line 278</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="setCurrentLocate"><span class="type-signature"></span>setCurrentLocate(code, onSuccess [, onError])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Set current locale.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="setCurrentLocate"><span class="type-signature"></span>setCurrentLocate<span class="signature">(code, onSuccess, onError<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Set current locale.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2868,7 +3043,7 @@
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -2891,6 +3066,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -2906,7 +3082,7 @@
 
             
 
-            <td class="description last">The current locale code.</td>
+            <td class="description last"><p>The current locale code.</p></td>
         </tr>
 
     
@@ -2922,6 +3098,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -2937,7 +3114,7 @@
 
             
 
-            <td class="description last">The function to call when success.the param is a AppInfo.</td>
+            <td class="description last"><p>The function to call when success.the param is a AppInfo.</p></td>
         </tr>
 
     
@@ -2951,6 +3128,7 @@
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -2970,19 +3148,24 @@
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2992,84 +3175,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-169">line 169</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line169">line 169</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="setListener"><span class="type-signature"></span>setListener(callback)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Set listener for message callback.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="setListener"><span class="type-signature"></span>setListener<span class="signature">(callback)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Set listener for message callback.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -3100,6 +3278,7 @@
 <span class="param-type"><a href="global.html#onReceiveMessage">onReceiveMessage</a></span>
 
 
+
             
             </td>
 
@@ -3107,19 +3286,24 @@
 
             
 
-            <td class="description last">The function receive the message.</td>
+            <td class="description last"><p>The function receive the message.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -3129,84 +3313,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-287">line 287</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line287">line 287</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="setPluginAuthority"><span class="type-signature"></span>setPluginAuthority(id, plugin, authority, onSuccess [, onError])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Set a plugin authority. Only the launcher can set.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="setPluginAuthority"><span class="type-signature"></span>setPluginAuthority<span class="signature">(id, plugin, authority, onSuccess, onError<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Set a plugin authority. Only the launcher can set.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -3216,7 +3395,7 @@
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -3239,6 +3418,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -3254,7 +3434,7 @@
 
             
 
-            <td class="description last">The dapp id.</td>
+            <td class="description last"><p>The dapp id.</p></td>
         </tr>
 
     
@@ -3270,6 +3450,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -3285,7 +3466,7 @@
 
             
 
-            <td class="description last">The plugin id to set authorty.</td>
+            <td class="description last"><p>The plugin id to set authorty.</p></td>
         </tr>
 
     
@@ -3301,6 +3482,7 @@
 <span class="param-type">AuthorityStatus</span>
 
 
+
             
             </td>
 
@@ -3316,7 +3498,7 @@
 
             
 
-            <td class="description last">The authority to set.</td>
+            <td class="description last"><p>The authority to set.</p></td>
         </tr>
 
     
@@ -3332,6 +3514,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -3347,7 +3530,7 @@
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -3361,6 +3544,7 @@
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -3380,19 +3564,24 @@
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -3402,84 +3591,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-327">line 327</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line327">line 327</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="setUrlAuthority"><span class="type-signature"></span>setUrlAuthority(id, url, authority, onSuccess [, onError])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Set a url authority. Only the launcher can set.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="setUrlAuthority"><span class="type-signature"></span>setUrlAuthority<span class="signature">(id, url, authority, onSuccess, onError<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Set a url authority. Only the launcher can set.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -3489,7 +3673,7 @@
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -3512,6 +3696,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -3527,7 +3712,7 @@
 
             
 
-            <td class="description last">The dapp id.</td>
+            <td class="description last"><p>The dapp id.</p></td>
         </tr>
 
     
@@ -3543,6 +3728,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -3558,7 +3744,7 @@
 
             
 
-            <td class="description last">The url to set authority.</td>
+            <td class="description last"><p>The url to set authority.</p></td>
         </tr>
 
     
@@ -3574,6 +3760,7 @@
 <span class="param-type">AuthorityStatus</span>
 
 
+
             
             </td>
 
@@ -3589,7 +3776,7 @@
 
             
 
-            <td class="description last">The authority to set.</td>
+            <td class="description last"><p>The authority to set.</p></td>
         </tr>
 
     
@@ -3605,6 +3792,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -3620,7 +3808,7 @@
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -3634,6 +3822,7 @@
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -3653,19 +3842,24 @@
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -3675,84 +3869,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-340">line 340</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line340">line 340</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="start"><span class="type-signature"></span>start(id, onSuccess [, onError])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Start a dapp by id. If the dapp running, it will be swith to curent.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="start"><span class="type-signature"></span>start<span class="signature">(id, onSuccess, onError<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Start a dapp by id. If the dapp running, it will be swith to curent.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -3762,7 +3951,7 @@
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -3785,6 +3974,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -3800,7 +3990,7 @@
 
             
 
-            <td class="description last">The dapp id.</td>
+            <td class="description last"><p>The dapp id.</p></td>
         </tr>
 
     
@@ -3816,6 +4006,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -3831,7 +4022,7 @@
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -3845,6 +4036,7 @@
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -3864,19 +4056,24 @@
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -3886,84 +4083,79 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-244">line 244</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line244">line 244</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="unInstall"><span class="type-signature"></span>unInstall(id, onSuccess [, onError])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Uninstall a dapp by id.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="unInstall"><span class="type-signature"></span>unInstall<span class="signature">(id, onSuccess, onError<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Uninstall a dapp by id.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -3973,7 +4165,7 @@
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -3996,6 +4188,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -4011,7 +4204,7 @@
 
             
 
-            <td class="description last">The dapp id.</td>
+            <td class="description last"><p>The dapp id.</p></td>
         </tr>
 
     
@@ -4027,6 +4220,7 @@
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -4042,7 +4236,7 @@
 
             
 
-            <td class="description last">The function to call when success.the param is the id.</td>
+            <td class="description last"><p>The function to call when success.the param is the id.</p></td>
         </tr>
 
     
@@ -4056,6 +4250,7 @@
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -4075,19 +4270,24 @@
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -4097,56 +4297,54 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>,
+				 <a href="AppManager_www_AppManager.js.html#sunlight-1-line-197">line 197</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="AppManager_www_AppManager.js.html">AppManager/www/AppManager.js</a>, <a href="AppManager_www_AppManager.js.html#line197">line 197</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
+</dd>
 
-
-
-
-
-
-
-
-
-
-
-
-        
+        </dl>
     
 
     
@@ -4159,20 +4357,136 @@
 
 
 
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
 </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-Camera.html">Camera</a></li><li><a href="module-camera_.html">camera</a></li><li><a href="module-CameraPopoverHandle.html">CameraPopoverHandle</a></li><li><a href="module-CameraPopoverOptions.html">CameraPopoverOptions</a></li><li><a href="module-carrierPlugin.html">carrierPlugin</a></li></ul><h3>Namespaces</h3><ul><li><a href="navigator.html">navigator</a></li></ul><h3>Classes</h3><ul><li><a href="AppManager.html">AppManager</a></li><li><a href="AppService.html">AppService</a></li><li><a href="argscheck.html">argscheck</a></li><li><a href="Carrier.html">Carrier</a></li><li><a href="Coordinates.html">Coordinates</a></li><li><a href="global.html#cordova">cordova</a></li><li><a href="Device.html">Device</a></li><li><a href="FileReader.html">FileReader</a></li><li><a href="FileUploadOptions.html">FileUploadOptions</a></li><li><a href="FileWriter.html">FileWriter</a></li><li><a href="Media.html">Media</a></li><li><a href="module.html#.exports">exports</a></li><li><a href="PluginDemo.html">PluginDemo</a></li><li><a href="PositionError.html">PositionError</a></li><li><a href="Session.html">Session</a></li><li><a href="Stream.html">Stream</a></li><li><a href="%257BDOMString%257D%2520name%2520the%2520unique%2520name%2520of%2520the%2520file%2520system%2520.html">{DOMString} name the unique name of the file system (readonly)
-{DirectoryEntry} root directory of the file system (readonly)</a></li></ul><h3>Global</h3><ul><li><a href="global.html#_capture">_capture</a></li><li><a href="global.html#CameraUI">CameraUI</a></li><li><a href="global.html#Capture">Capture</a></li><li><a href="global.html#CaptureAudioOptions">CaptureAudioOptions</a></li><li><a href="global.html#CaptureError">CaptureError</a></li><li><a href="global.html#CaptureImageOptions">CaptureImageOptions</a></li><li><a href="global.html#capturePhoto">capturePhoto</a></li><li><a href="global.html#captureVideo">captureVideo</a></li><li><a href="global.html#CaptureVideoOptions">CaptureVideoOptions</a></li><li><a href="global.html#cdvfileToAppData">cdvfileToAppData</a></li><li><a href="global.html#checkPatternReqs">checkPatternReqs</a></li><li><a href="global.html#ConfigurationData">ConfigurationData</a></li><li><a href="global.html#createNode">createNode</a></li><li><a href="global.html#dataURItoBlob">dataURItoBlob</a></li><li><a href="global.html#DirectoryEntry">DirectoryEntry</a></li><li><a href="global.html#DirectoryReader">DirectoryReader</a></li><li><a href="global.html#Entry">Entry</a></li><li><a href="global.html#File">File</a></li><li><a href="global.html#FileEntry">FileEntry</a></li><li><a href="global.html#FileError">FileError</a></li><li><a href="global.html#Flags">Flags</a></li><li><a href="global.html#fullPathToAppData">fullPathToAppData</a></li><li><a href="global.html#MediaFile">MediaFile</a></li><li><a href="global.html#MediaFileData">MediaFileData</a></li><li><a href="global.html#Metadata">Metadata</a></li><li><a href="global.html#parseUriToPathAndFilename">parseUriToPathAndFilename</a></li><li><a href="global.html#processUri">processUri</a></li><li><a href="global.html#readFailureCallback">readFailureCallback</a></li><li><a href="global.html#readPreferencesFromCfg">readPreferencesFromCfg</a></li><li><a href="global.html#readSuccessCallback">readSuccessCallback</a></li><li><a href="global.html#requestFileSystem">requestFileSystem</a></li><li><a href="global.html#resolveLocalFileSystemURL">resolveLocalFileSystemURL</a></li><li><a href="global.html#setTemporaryFsByDefault">setTemporaryFsByDefault</a></li><li><a href="global.html#showAndHide">showAndHide</a></li><li><a href="global.html#tryParsePatternValues">tryParsePatternValues</a></li><li><a href="global.html#vibratePattern">vibratePattern</a></li></ul>
-</nav>
 
-<br class="clear">
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Thu Sep 05 2019 11:56:51 GMT+0800 (heure normale de la Chine)
+
+
+	<span class="copyright">
+	Elastos Foundation © 2017-2019
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
+	
+		on Thu Sep 12th 2019
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
 </footer>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
 </body>
 </html>

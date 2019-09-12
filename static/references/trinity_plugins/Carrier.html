@@ -1,70 +1,139 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>JSDoc: Class: Carrier</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Elastos Browser (Trinity) Class: Carrier</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.paper.css">
+
 </head>
 
 <body>
 
-<div id="main">
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Elastos Browser (Trinity)</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="navigator.html">navigator</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-Camera.html">Camera</a></li><li><a href="module-camera_.html">camera</a></li><li><a href="module-CameraPopoverHandle.html">CameraPopoverHandle</a></li><li><a href="module-CameraPopoverOptions.html">CameraPopoverOptions</a></li><li><a href="module-carrierPlugin.html">carrierPlugin</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="AppManager.html">AppManager</a></li><li><a href="AppService.html">AppService</a></li><li><a href="argscheck.html">argscheck</a></li><li><a href="Carrier.html">Carrier</a></li><li><a href="Coordinates.html">Coordinates</a></li><li><a href="global.html#cordova">cordova</a></li><li><a href="Device.html">Device</a></li><li><a href="FileReader.html">FileReader</a></li><li><a href="FileUploadOptions.html">FileUploadOptions</a></li><li><a href="FileWriter.html">FileWriter</a></li><li><a href="Media.html">Media</a></li><li><a href="module.html#.exports">module.exports</a></li><li><a href="PluginDemo.html">PluginDemo</a></li><li><a href="PositionError.html">PositionError</a></li><li><a href="Session.html">Session</a></li><li><a href="Stream.html">Stream</a></li><li><a href="%257BDOMString%257D%2520name%2520the%2520unique%2520name%2520of%2520the%2520file%2520system%2520.html">{DOMString} name the unique name of the file system (readonly)
+{DirectoryEntry} root directory of the file system (readonly)</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#_capture">_capture</a></li><li><a href="global.html#CameraUI">CameraUI</a></li><li><a href="global.html#Capture">Capture</a></li><li><a href="global.html#CaptureAudioOptions">CaptureAudioOptions</a></li><li><a href="global.html#CaptureError">CaptureError</a></li><li><a href="global.html#CaptureImageOptions">CaptureImageOptions</a></li><li><a href="global.html#capturePhoto">capturePhoto</a></li><li><a href="global.html#captureVideo">captureVideo</a></li><li><a href="global.html#CaptureVideoOptions">CaptureVideoOptions</a></li><li><a href="global.html#cdvfileToAppData">cdvfileToAppData</a></li><li><a href="global.html#checkPatternReqs">checkPatternReqs</a></li><li><a href="global.html#ConfigurationData">ConfigurationData</a></li><li><a href="global.html#createNode">createNode</a></li><li><a href="global.html#dataURItoBlob">dataURItoBlob</a></li><li><a href="global.html#DirectoryEntry">DirectoryEntry</a></li><li><a href="global.html#DirectoryReader">DirectoryReader</a></li><li><a href="global.html#Entry">Entry</a></li><li><a href="global.html#File">File</a></li><li><a href="global.html#FileEntry">FileEntry</a></li><li><a href="global.html#FileError">FileError</a></li><li><a href="global.html#Flags">Flags</a></li><li><a href="global.html#fullPathToAppData">fullPathToAppData</a></li><li><a href="global.html#MediaFile">MediaFile</a></li><li><a href="global.html#MediaFileData">MediaFileData</a></li><li><a href="global.html#Metadata">Metadata</a></li><li><a href="global.html#parseUriToPathAndFilename">parseUriToPathAndFilename</a></li><li><a href="global.html#processUri">processUri</a></li><li><a href="global.html#readFailureCallback">readFailureCallback</a></li><li><a href="global.html#readPreferencesFromCfg">readPreferencesFromCfg</a></li><li><a href="global.html#readSuccessCallback">readSuccessCallback</a></li><li><a href="global.html#requestFileSystem">requestFileSystem</a></li><li><a href="global.html#resolveLocalFileSystemURL">resolveLocalFileSystemURL</a></li><li><a href="global.html#setTemporaryFsByDefault">setTemporaryFsByDefault</a></li><li><a href="global.html#showAndHide">showAndHide</a></li><li><a href="global.html#tryParsePatternValues">tryParsePatternValues</a></li><li><a href="global.html#vibratePattern">vibratePattern</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
 
-    <h1 class="page-title">Class: Carrier</h1>
-
-    
-
+</div>
+</div>
 
 
+<div class="container" id="toc-content">
+<div class="row">
 
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Class: Carrier</h1>
 <section>
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Carrier<span class="signature">()</span><span class="type-signature"></span></h2>
+        <h2>
+        Carrier
+        </h2>
         
     
 </header>
+
 
 <article>
     <div class="container-overview">
     
         
+<hr>
+<dt>
+    <h4 class="name" id="Carrier"><span class="type-signature"></span>new Carrier()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>The class representing Carrier.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="Carrier"><span class="type-signature"></span>new Carrier<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
     
-
-
-
-<div class="description">
-    The class representing Carrier.
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -74,54 +143,52 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-619">line 619</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line619">line 619</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
     
     </div>
@@ -137,28 +204,30 @@
     
 
     
-
-    
         <h3 class="subsection-title">Members</h3>
 
-        
+        <dl>
             
-<h4 class="name" id="address"><span class="type-signature"></span>address<span class="type-signature"></span></h4>
+<hr>
+<dt class="name" id="address">
+    <h4 id="address"><span class="type-signature"></span>address<span class="type-signature"></span></h4>
 
+    
+</dt>
+<dd>
+    
 
+    
 
-
-
-
-
-
-
+    
+<dl class="details">
+    
 
     <h5 class="subsection-title">Properties:</h5>
 
-    
+    <dl>
 
-<table class="props">
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -189,6 +258,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -196,17 +266,21 @@
 
             
 
-            <td class="description last">Node address.</td>
+            <td class="description last"><p>Node address.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -216,59 +290,63 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-628">line 628</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line628">line 628</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
-
-
-
+    
+</dd>
 
         
             
-<h4 class="name" id="nodeId"><span class="type-signature"></span>nodeId<span class="type-signature"></span></h4>
+<hr>
+<dt class="name" id="nodeId">
+    <h4 id="nodeId"><span class="type-signature"></span>nodeId<span class="type-signature"></span></h4>
 
-
-
-
-
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
+    
+</dt>
+<dd>
+    
 
     
 
-<table class="props">
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -299,6 +377,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -306,17 +385,21 @@
 
             
 
-            <td class="description last">Node id.</td>
+            <td class="description last"><p>Node id.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -326,59 +409,63 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-624">line 624</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line624">line 624</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
-
-
-
+    
+</dd>
 
         
             
-<h4 class="name" id="nospam"><span class="type-signature"></span>nospam<span class="type-signature"></span></h4>
+<hr>
+<dt class="name" id="nospam">
+    <h4 id="nospam"><span class="type-signature"></span>nospam<span class="type-signature"></span></h4>
 
-
-
-
-
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
+    
+</dt>
+<dd>
+    
 
     
 
-<table class="props">
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -409,6 +496,7 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
@@ -416,17 +504,21 @@
 
             
 
-            <td class="description last">The nospam for Carrier address is used to eliminate spam friend.</td>
+            <td class="description last"><p>The nospam for Carrier address is used to eliminate spam friend.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -436,59 +528,63 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-780">line 780</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line780">line 780</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
-
-
-
+    
+</dd>
 
         
             
-<h4 class="name" id="presence"><span class="type-signature"></span>presence<span class="type-signature"></span></h4>
+<hr>
+<dt class="name" id="presence">
+    <h4 id="presence"><span class="type-signature"></span>presence<span class="type-signature"></span></h4>
 
-
-
-
-
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
+    
+</dt>
+<dd>
+    
 
     
 
-<table class="props">
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -519,6 +615,7 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
@@ -526,17 +623,21 @@
 
             
 
-            <td class="description last">Presence status.</td>
+            <td class="description last"><p>Presence status.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -546,59 +647,63 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-793">line 793</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line793">line 793</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
-
-
-
+    
+</dd>
 
         
             
-<h4 class="name" id="userId"><span class="type-signature"></span>userId<span class="type-signature"></span></h4>
+<hr>
+<dt class="name" id="userId">
+    <h4 id="userId"><span class="type-signature"></span>userId<span class="type-signature"></span></h4>
 
-
-
-
-
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
+    
+</dt>
+<dd>
+    
 
     
 
-<table class="props">
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -629,6 +734,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -636,17 +742,21 @@
 
             
 
-            <td class="description last">User id.</td>
+            <td class="description last"><p>User id.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -656,78 +766,74 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-626">line 626</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line626">line 626</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
+</dd>
 
-
-
-
-        
+        </dl>
     
 
     
         <h3 class="subsection-title">Methods</h3>
 
-        
+        <dl>
             
+<hr>
+<dt>
+    <h4 class="name" id="acceptFriend"><span class="type-signature"></span>acceptFriend(onSuccess [, onError], userId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Accept the friend request.</p>
+<p>This function is used to add a friend in response to a friend request.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="acceptFriend"><span class="type-signature"></span>acceptFriend<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, userId)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Accept the friend request.
-
-This function is used to add a friend in response to a friend request.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -737,7 +843,7 @@ This function is used to add a friend in response to a friend request.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -760,6 +866,7 @@ This function is used to add a friend in response to a friend request.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -775,7 +882,7 @@ This function is used to add a friend in response to a friend request.
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -789,6 +896,7 @@ This function is used to add a friend in response to a friend request.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -808,7 +916,7 @@ This function is used to add a friend in response to a friend request.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -824,6 +932,7 @@ This function is used to add a friend in response to a friend request.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -839,19 +948,24 @@ This function is used to add a friend in response to a friend request.
 
             
 
-            <td class="description last">The user id who want be friend with us.</td>
+            <td class="description last"><p>The user id who want be friend with us.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -861,87 +975,81 @@ This function is used to add a friend in response to a friend request.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1004">line 1004</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1004">line 1004</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="addFriend"><span class="type-signature"></span>addFriend(onSuccess [, onError], address, hello)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Add friend by sending a new friend request.</p>
+<p>This function will add a new friend with specific address, and then<br>
+send a friend request to the target node.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="addFriend"><span class="type-signature"></span>addFriend<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, address, hello)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Add friend by sending a new friend request.
-
-This function will add a new friend with specific address, and then
-send a friend request to the target node.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -951,7 +1059,7 @@ send a friend request to the target node.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -974,6 +1082,7 @@ send a friend request to the target node.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -989,7 +1098,7 @@ send a friend request to the target node.
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -1003,6 +1112,7 @@ send a friend request to the target node.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -1022,7 +1132,7 @@ send a friend request to the target node.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -1038,6 +1148,7 @@ send a friend request to the target node.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -1053,7 +1164,7 @@ send a friend request to the target node.
 
             
 
-            <td class="description last">the target user address of remote carrier node.</td>
+            <td class="description last"><p>the target user address of remote carrier node.</p></td>
         </tr>
 
     
@@ -1069,6 +1180,7 @@ send a friend request to the target node.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -1084,19 +1196,24 @@ send a friend request to the target node.
 
             
 
-            <td class="description last">PIN for target user, or any application defined content.</td>
+            <td class="description last"><p>PIN for target user, or any application defined content.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1106,85 +1223,80 @@ send a friend request to the target node.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-991">line 991</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line991">line 991</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="destroy"><span class="type-signature"></span>destroy(onSuccess [, onError])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Disconnect carrier node from carrier network, and destroy all associated resources to carreier node instance.<br>
+After calling the method, the carrier node instance becomes invalid.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="destroy"><span class="type-signature"></span>destroy<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Disconnect carrier node from carrier network, and destroy all associated resources to carreier node instance.
-After calling the method, the carrier node instance becomes invalid.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1194,7 +1306,7 @@ After calling the method, the carrier node instance becomes invalid.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -1217,6 +1329,7 @@ After calling the method, the carrier node instance becomes invalid.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -1232,7 +1345,7 @@ After calling the method, the carrier node instance becomes invalid.
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -1246,6 +1359,7 @@ After calling the method, the carrier node instance becomes invalid.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -1265,19 +1379,24 @@ After calling the method, the carrier node instance becomes invalid.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1287,84 +1406,79 @@ After calling the method, the carrier node instance becomes invalid.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1102">line 1102</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1102">line 1102</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="getFriend"><span class="type-signature"></span>getFriend(onSuccess [, onError], userId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get specified friend information.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="getFriend"><span class="type-signature"></span>getFriend<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, userId)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Get specified friend information.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1374,7 +1488,7 @@ After calling the method, the carrier node instance becomes invalid.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -1397,6 +1511,7 @@ After calling the method, the carrier node instance becomes invalid.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -1412,7 +1527,7 @@ After calling the method, the carrier node instance becomes invalid.
 
             
 
-            <td class="description last">The function to call when success, the param is a FriendInfo: The friend information.</td>
+            <td class="description last"><p>The function to call when success, the param is a FriendInfo: The friend information.</p></td>
         </tr>
 
     
@@ -1426,6 +1541,7 @@ After calling the method, the carrier node instance becomes invalid.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -1445,7 +1561,7 @@ After calling the method, the carrier node instance becomes invalid.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -1461,6 +1577,7 @@ After calling the method, the carrier node instance becomes invalid.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -1476,19 +1593,24 @@ After calling the method, the carrier node instance becomes invalid.
 
             
 
-            <td class="description last">The user identifier of friend</td>
+            <td class="description last"><p>The user identifier of friend</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1498,84 +1620,79 @@ After calling the method, the carrier node instance becomes invalid.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-950">line 950</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line950">line 950</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="getFriends"><span class="type-signature"></span>getFriends(onSuccess [, onError])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get friends list.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="getFriends"><span class="type-signature"></span>getFriends<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Get friends list.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1585,7 +1702,7 @@ After calling the method, the carrier node instance becomes invalid.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -1608,6 +1725,7 @@ After calling the method, the carrier node instance becomes invalid.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -1623,7 +1741,7 @@ After calling the method, the carrier node instance becomes invalid.
 
             
 
-            <td class="description last">The function to call when success, the param is a {friendId: info} Object: The list of friend information to current user.</td>
+            <td class="description last"><p>The function to call when success, the param is a {friendId: info} Object: The list of friend information to current user.</p></td>
         </tr>
 
     
@@ -1637,6 +1755,7 @@ After calling the method, the carrier node instance becomes invalid.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -1656,19 +1775,24 @@ After calling the method, the carrier node instance becomes invalid.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1678,84 +1802,79 @@ After calling the method, the carrier node instance becomes invalid.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-939">line 939</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line939">line 939</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="getSelfInfo"><span class="type-signature"></span>getSelfInfo(onSuccess [, onError])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get self user information.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="getSelfInfo"><span class="type-signature"></span>getSelfInfo<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Get self user information.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1765,7 +1884,7 @@ After calling the method, the carrier node instance becomes invalid.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -1788,6 +1907,7 @@ After calling the method, the carrier node instance becomes invalid.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -1803,7 +1923,7 @@ After calling the method, the carrier node instance becomes invalid.
 
             
 
-            <td class="description last">The function to call when success, the param is a UserInfo: the user information to the carrier node.</td>
+            <td class="description last"><p>The function to call when success, the param is a UserInfo: the user information to the carrier node.</p></td>
         </tr>
 
     
@@ -1817,6 +1937,7 @@ After calling the method, the carrier node instance becomes invalid.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -1836,19 +1957,24 @@ After calling the method, the carrier node instance becomes invalid.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1858,87 +1984,81 @@ After calling the method, the carrier node instance becomes invalid.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-852">line 852</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line852">line 852</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="inviteFriend"><span class="type-signature"></span>inviteFriend(onSuccess [, onError], to, data, handler)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Send invite request to a friend.</p>
+<p>Application can attach the application defined data with in the invite<br>
+request, and the data will send to target friend.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="inviteFriend"><span class="type-signature"></span>inviteFriend<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, to, data, handler)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Send invite request to a friend.
-
-Application can attach the application defined data with in the invite
-request, and the data will send to target friend.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1948,7 +2068,7 @@ request, and the data will send to target friend.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -1971,6 +2091,7 @@ request, and the data will send to target friend.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -1986,7 +2107,7 @@ request, and the data will send to target friend.
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -2000,6 +2121,7 @@ request, and the data will send to target friend.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -2019,7 +2141,7 @@ request, and the data will send to target friend.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -2035,6 +2157,7 @@ request, and the data will send to target friend.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -2050,7 +2173,7 @@ request, and the data will send to target friend.
 
             
 
-            <td class="description last">The target id</td>
+            <td class="description last"><p>The target id</p></td>
         </tr>
 
     
@@ -2066,6 +2189,7 @@ request, and the data will send to target friend.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -2081,7 +2205,7 @@ request, and the data will send to target friend.
 
             
 
-            <td class="description last">The application defined data send to target user</td>
+            <td class="description last"><p>The application defined data send to target user</p></td>
         </tr>
 
     
@@ -2097,6 +2221,7 @@ request, and the data will send to target friend.
 <span class="param-type"><a href="global.html#onFriendInviteResponse">onFriendInviteResponse</a></span>
 
 
+
             
             </td>
 
@@ -2112,19 +2237,24 @@ request, and the data will send to target friend.
 
             
 
-            <td class="description last">The handler to receive invite reponse</td>
+            <td class="description last"><p>The handler to receive invite reponse</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2134,84 +2264,79 @@ request, and the data will send to target friend.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1049">line 1049</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1049">line 1049</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="isFriend"><span class="type-signature"></span>isFriend(onSuccess [, onError], userId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Check if the user ID is friend.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="isFriend"><span class="type-signature"></span>isFriend<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, userId)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Check if the user ID is friend.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2221,7 +2346,7 @@ request, and the data will send to target friend.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -2244,6 +2369,7 @@ request, and the data will send to target friend.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -2259,7 +2385,7 @@ request, and the data will send to target friend.
 
             
 
-            <td class="description last">The function to call when success, the param is a Boolean: True if the user is a friend, or false if not.</td>
+            <td class="description last"><p>The function to call when success, the param is a Boolean: True if the user is a friend, or false if not.</p></td>
         </tr>
 
     
@@ -2273,6 +2399,7 @@ request, and the data will send to target friend.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -2292,7 +2419,7 @@ request, and the data will send to target friend.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -2308,6 +2435,7 @@ request, and the data will send to target friend.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -2323,19 +2451,24 @@ request, and the data will send to target friend.
 
             
 
-            <td class="description last">The userId to check.</td>
+            <td class="description last"><p>The userId to check.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2345,87 +2478,81 @@ request, and the data will send to target friend.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-976">line 976</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line976">line 976</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="isReady"><span class="type-signature"></span>isReady(onSuccess [, onError])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Check if carrier node instance is being ready.</p>
+<p>All carrier interactive APIs should be called only if carrier node instance<br>
+is being ready.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="isReady"><span class="type-signature"></span>isReady<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Check if carrier node instance is being ready.
-
-All carrier interactive APIs should be called only if carrier node instance
-is being ready.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2435,7 +2562,7 @@ is being ready.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -2458,6 +2585,7 @@ is being ready.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -2473,7 +2601,7 @@ is being ready.
 
             
 
-            <td class="description last">The function to call when success, the param is a Boolean: true if the carrier node instance is ready, or false if not.</td>
+            <td class="description last"><p>The function to call when success, the param is a Boolean: true if the carrier node instance is ready, or false if not.</p></td>
         </tr>
 
     
@@ -2487,6 +2615,7 @@ is being ready.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -2506,19 +2635,24 @@ is being ready.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2528,87 +2662,81 @@ is being ready.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-929">line 929</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line929">line 929</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="labelFriend"><span class="type-signature"></span>labelFriend(onSuccess [, onError], userId, label)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Set the label of the specified friend.</p>
+<p>The label of a friend is a private alias name for current user. It can be<br>
+seen by current user only, and has no impact to the target friend itself.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="labelFriend"><span class="type-signature"></span>labelFriend<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, userId, label)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Set the label of the specified friend.
-
-The label of a friend is a private alias name for current user. It can be
-seen by current user only, and has no impact to the target friend itself.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2618,7 +2746,7 @@ seen by current user only, and has no impact to the target friend itself.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -2641,6 +2769,7 @@ seen by current user only, and has no impact to the target friend itself.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -2656,7 +2785,7 @@ seen by current user only, and has no impact to the target friend itself.
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -2670,6 +2799,7 @@ seen by current user only, and has no impact to the target friend itself.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -2689,7 +2819,7 @@ seen by current user only, and has no impact to the target friend itself.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -2705,6 +2835,7 @@ seen by current user only, and has no impact to the target friend itself.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -2720,7 +2851,7 @@ seen by current user only, and has no impact to the target friend itself.
 
             
 
-            <td class="description last">The friend's user identifier</td>
+            <td class="description last"><p>The friend's user identifier</p></td>
         </tr>
 
     
@@ -2736,6 +2867,7 @@ seen by current user only, and has no impact to the target friend itself.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -2751,19 +2883,24 @@ seen by current user only, and has no impact to the target friend itself.
 
             
 
-            <td class="description last">The new label of specified friend</td>
+            <td class="description last"><p>The new label of specified friend</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2773,86 +2910,80 @@ seen by current user only, and has no impact to the target friend itself.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-965">line 965</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line965">line 965</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="newSession"><span class="type-signature"></span>newSession(onSuccess [, onError], to)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Create a new session to a friend.</p>
+<p>The session object represent a conversation handle to a friend.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="newSession"><span class="type-signature"></span>newSession<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, to)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Create a new session to a friend.
-
-The session object represent a conversation handle to a friend.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2862,7 +2993,7 @@ The session object represent a conversation handle to a friend.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -2885,6 +3016,7 @@ The session object represent a conversation handle to a friend.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -2900,7 +3032,7 @@ The session object represent a conversation handle to a friend.
 
             
 
-            <td class="description last">The function to call when success, the param is a Session Object: The new Session object</td>
+            <td class="description last"><p>The function to call when success, the param is a Session Object: The new Session object</p></td>
         </tr>
 
     
@@ -2914,6 +3046,7 @@ The session object represent a conversation handle to a friend.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -2933,7 +3066,7 @@ The session object represent a conversation handle to a friend.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -2947,6 +3080,7 @@ The session object represent a conversation handle to a friend.
             
                 
 <span class="param-type">string</span>
+
 
 
             
@@ -2964,19 +3098,24 @@ The session object represent a conversation handle to a friend.
 
             
 
-            <td class="description last">The target id(userid or userid@nodeid).</td>
+            <td class="description last"><p>The target id(userid or userid@nodeid).</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2986,84 +3125,79 @@ The session object represent a conversation handle to a friend.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1082">line 1082</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1082">line 1082</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="on"><span class="type-signature"></span>on(name, callback)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Add or remove Carrier callback.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="on"><span class="type-signature"></span>on<span class="signature">(name, callback)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Add or remove Carrier callback.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -3094,6 +3228,7 @@ The session object represent a conversation handle to a friend.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -3101,7 +3236,7 @@ The session object represent a conversation handle to a friend.
 
             
 
-            <td class="description last">The callback name.</td>
+            <td class="description last"><p>The callback name.</p></td>
         </tr>
 
     
@@ -3117,6 +3252,7 @@ The session object represent a conversation handle to a friend.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -3124,19 +3260,24 @@ The session object represent a conversation handle to a friend.
 
             
 
-            <td class="description last">The function to add or change callback function. If set to null, will remove callback.</td>
+            <td class="description last"><p>The function to add or change callback function. If set to null, will remove callback.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -3146,86 +3287,80 @@ The session object represent a conversation handle to a friend.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-811">line 811</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line811">line 811</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="removeFriend"><span class="type-signature"></span>removeFriend(onSuccess [, onError], userId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Remove a friend.</p>
+<p>This function will remove a friend on this carrier node.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="removeFriend"><span class="type-signature"></span>removeFriend<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, userId)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Remove a friend.
-
-This function will remove a friend on this carrier node.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -3235,7 +3370,7 @@ This function will remove a friend on this carrier node.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -3258,6 +3393,7 @@ This function will remove a friend on this carrier node.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -3273,7 +3409,7 @@ This function will remove a friend on this carrier node.
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -3287,6 +3423,7 @@ This function will remove a friend on this carrier node.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -3306,7 +3443,7 @@ This function will remove a friend on this carrier node.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -3322,6 +3459,7 @@ This function will remove a friend on this carrier node.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -3337,19 +3475,24 @@ This function will remove a friend on this carrier node.
 
             
 
-            <td class="description last">The target user id to remove friendship</td>
+            <td class="description last"><p>The target user id to remove friendship</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -3359,86 +3502,80 @@ This function will remove a friend on this carrier node.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1017">line 1017</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1017">line 1017</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="replyFriendInvite"><span class="type-signature"></span>replyFriendInvite(onSuccess [, onError], to, status, reason, data)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Reply the friend invite request.</p>
+<p>This function will send a invite response to friend.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="replyFriendInvite"><span class="type-signature"></span>replyFriendInvite<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, to, status, reason, data)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Reply the friend invite request.
-
-This function will send a invite response to friend.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -3448,7 +3585,7 @@ This function will send a invite response to friend.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -3471,6 +3608,7 @@ This function will send a invite response to friend.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -3486,7 +3624,7 @@ This function will send a invite response to friend.
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -3500,6 +3638,7 @@ This function will send a invite response to friend.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -3519,7 +3658,7 @@ This function will send a invite response to friend.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -3533,6 +3672,7 @@ This function will send a invite response to friend.
             
                 
 <span class="param-type">string</span>
+
 
 
             
@@ -3550,7 +3690,7 @@ This function will send a invite response to friend.
 
             
 
-            <td class="description last">The id who send invite request</td>
+            <td class="description last"><p>The id who send invite request</p></td>
         </tr>
 
     
@@ -3566,6 +3706,7 @@ This function will send a invite response to friend.
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
@@ -3581,7 +3722,7 @@ This function will send a invite response to friend.
 
             
 
-            <td class="description last">The status code of the response. 0 is success, otherwise is error</td>
+            <td class="description last"><p>The status code of the response. 0 is success, otherwise is error</p></td>
         </tr>
 
     
@@ -3597,6 +3738,7 @@ This function will send a invite response to friend.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -3612,7 +3754,7 @@ This function will send a invite response to friend.
 
             
 
-            <td class="description last">The error message if status is error, or null if success</td>
+            <td class="description last"><p>The error message if status is error, or null if success</p></td>
         </tr>
 
     
@@ -3628,6 +3770,7 @@ This function will send a invite response to friend.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -3643,19 +3786,24 @@ This function will send a invite response to friend.
 
             
 
-            <td class="description last">The application defined data send to target user. If the status is error, this will be ignored</td>
+            <td class="description last"><p>The application defined data send to target user. If the status is error, this will be ignored</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -3665,88 +3813,82 @@ This function will send a invite response to friend.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1069">line 1069</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1069">line 1069</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="sendFriendMessage"><span class="type-signature"></span>sendFriendMessage(onSuccess [, onError], to, message)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Send a message to a friend.</p>
+<p>The message length may not exceed MAX_APP_MESSAGE_LEN, and message itself<br>
+should be text-formatted. Larger messages must be split by application<br>
+and sent as separate messages. Other nodes can reassemble the fragments.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="sendFriendMessage"><span class="type-signature"></span>sendFriendMessage<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, to, message)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Send a message to a friend.
-
-The message length may not exceed MAX_APP_MESSAGE_LEN, and message itself
-should be text-formatted. Larger messages must be split by application
-and sent as separate messages. Other nodes can reassemble the fragments.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -3756,7 +3898,7 @@ and sent as separate messages. Other nodes can reassemble the fragments.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -3779,6 +3921,7 @@ and sent as separate messages. Other nodes can reassemble the fragments.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -3794,7 +3937,7 @@ and sent as separate messages. Other nodes can reassemble the fragments.
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -3808,6 +3951,7 @@ and sent as separate messages. Other nodes can reassemble the fragments.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -3827,7 +3971,7 @@ and sent as separate messages. Other nodes can reassemble the fragments.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -3843,6 +3987,7 @@ and sent as separate messages. Other nodes can reassemble the fragments.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -3858,7 +4003,7 @@ and sent as separate messages. Other nodes can reassemble the fragments.
 
             
 
-            <td class="description last">The target id</td>
+            <td class="description last"><p>The target id</p></td>
         </tr>
 
     
@@ -3874,6 +4019,7 @@ and sent as separate messages. Other nodes can reassemble the fragments.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -3889,19 +4035,24 @@ and sent as separate messages. Other nodes can reassemble the fragments.
 
             
 
-            <td class="description last">The message content defined by application</td>
+            <td class="description last"><p>The message content defined by application</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -3911,86 +4062,81 @@ and sent as separate messages. Other nodes can reassemble the fragments.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1033">line 1033</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1033">line 1033</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="setSelfInfo"><span class="type-signature"></span>setSelfInfo(onSuccess [, onError], userinfo)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Update self user information.<br>
+After self user information changed, carrier node will update this information<br>
+to carrier network, and thereupon network broadcasts the change to all friends.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="setSelfInfo"><span class="type-signature"></span>setSelfInfo<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, userinfo)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Update self user information.
-After self user information changed, carrier node will update this information
-to carrier network, and thereupon network broadcasts the change to all friends.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -4000,7 +4146,7 @@ to carrier network, and thereupon network broadcasts the change to all friends.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -4023,6 +4169,7 @@ to carrier network, and thereupon network broadcasts the change to all friends.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -4038,7 +4185,7 @@ to carrier network, and thereupon network broadcasts the change to all friends.
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -4052,6 +4199,7 @@ to carrier network, and thereupon network broadcasts the change to all friends.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -4071,7 +4219,7 @@ to carrier network, and thereupon network broadcasts the change to all friends.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -4087,6 +4235,7 @@ to carrier network, and thereupon network broadcasts the change to all friends.
 <span class="param-type"><a href="global.html#UserInfo">UserInfo</a></span>
 
 
+
             
             </td>
 
@@ -4102,19 +4251,24 @@ to carrier network, and thereupon network broadcasts the change to all friends.
 
             
 
-            <td class="description last">The user information to update for this carrier node.</td>
+            <td class="description last"><p>The user information to update for this carrier node.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -4124,85 +4278,80 @@ to carrier network, and thereupon network broadcasts the change to all friends.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-865">line 865</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line865">line 865</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="start"><span class="type-signature"></span>start(onSuccess [, onError], iterateInterval)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Start carrier node asynchronously to connect to carrier network. If the connection<br>
+to network is successful, carrier node starts working.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="start"><span class="type-signature"></span>start<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, iterateInterval)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Start carrier node asynchronously to connect to carrier network. If the connection
-to network is successful, carrier node starts working.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -4212,7 +4361,7 @@ to network is successful, carrier node starts working.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -4235,6 +4384,7 @@ to network is successful, carrier node starts working.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -4250,7 +4400,7 @@ to network is successful, carrier node starts working.
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -4264,6 +4414,7 @@ to network is successful, carrier node starts working.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -4283,7 +4434,7 @@ to network is successful, carrier node starts working.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -4297,6 +4448,7 @@ to network is successful, carrier node starts working.
             
                 
 <span class="param-type">number</span>
+
 
 
             
@@ -4314,19 +4466,24 @@ to network is successful, carrier node starts working.
 
             
 
-            <td class="description last">Internal loop interval, in milliseconds.</td>
+            <td class="description last"><p>Internal loop interval, in milliseconds.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -4336,56 +4493,54 @@ to network is successful, carrier node starts working.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-841">line 841</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line841">line 841</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
+</dd>
 
-
-
-
-
-
-
-
-
-
-
-
-        
+        </dl>
     
 
     
@@ -4398,20 +4553,136 @@ to network is successful, carrier node starts working.
 
 
 
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
 </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-Camera.html">Camera</a></li><li><a href="module-camera_.html">camera</a></li><li><a href="module-CameraPopoverHandle.html">CameraPopoverHandle</a></li><li><a href="module-CameraPopoverOptions.html">CameraPopoverOptions</a></li><li><a href="module-carrierPlugin.html">carrierPlugin</a></li></ul><h3>Namespaces</h3><ul><li><a href="navigator.html">navigator</a></li></ul><h3>Classes</h3><ul><li><a href="AppManager.html">AppManager</a></li><li><a href="AppService.html">AppService</a></li><li><a href="argscheck.html">argscheck</a></li><li><a href="Carrier.html">Carrier</a></li><li><a href="Coordinates.html">Coordinates</a></li><li><a href="global.html#cordova">cordova</a></li><li><a href="Device.html">Device</a></li><li><a href="FileReader.html">FileReader</a></li><li><a href="FileUploadOptions.html">FileUploadOptions</a></li><li><a href="FileWriter.html">FileWriter</a></li><li><a href="Media.html">Media</a></li><li><a href="module.html#.exports">exports</a></li><li><a href="PluginDemo.html">PluginDemo</a></li><li><a href="PositionError.html">PositionError</a></li><li><a href="Session.html">Session</a></li><li><a href="Stream.html">Stream</a></li><li><a href="%257BDOMString%257D%2520name%2520the%2520unique%2520name%2520of%2520the%2520file%2520system%2520.html">{DOMString} name the unique name of the file system (readonly)
-{DirectoryEntry} root directory of the file system (readonly)</a></li></ul><h3>Global</h3><ul><li><a href="global.html#_capture">_capture</a></li><li><a href="global.html#CameraUI">CameraUI</a></li><li><a href="global.html#Capture">Capture</a></li><li><a href="global.html#CaptureAudioOptions">CaptureAudioOptions</a></li><li><a href="global.html#CaptureError">CaptureError</a></li><li><a href="global.html#CaptureImageOptions">CaptureImageOptions</a></li><li><a href="global.html#capturePhoto">capturePhoto</a></li><li><a href="global.html#captureVideo">captureVideo</a></li><li><a href="global.html#CaptureVideoOptions">CaptureVideoOptions</a></li><li><a href="global.html#cdvfileToAppData">cdvfileToAppData</a></li><li><a href="global.html#checkPatternReqs">checkPatternReqs</a></li><li><a href="global.html#ConfigurationData">ConfigurationData</a></li><li><a href="global.html#createNode">createNode</a></li><li><a href="global.html#dataURItoBlob">dataURItoBlob</a></li><li><a href="global.html#DirectoryEntry">DirectoryEntry</a></li><li><a href="global.html#DirectoryReader">DirectoryReader</a></li><li><a href="global.html#Entry">Entry</a></li><li><a href="global.html#File">File</a></li><li><a href="global.html#FileEntry">FileEntry</a></li><li><a href="global.html#FileError">FileError</a></li><li><a href="global.html#Flags">Flags</a></li><li><a href="global.html#fullPathToAppData">fullPathToAppData</a></li><li><a href="global.html#MediaFile">MediaFile</a></li><li><a href="global.html#MediaFileData">MediaFileData</a></li><li><a href="global.html#Metadata">Metadata</a></li><li><a href="global.html#parseUriToPathAndFilename">parseUriToPathAndFilename</a></li><li><a href="global.html#processUri">processUri</a></li><li><a href="global.html#readFailureCallback">readFailureCallback</a></li><li><a href="global.html#readPreferencesFromCfg">readPreferencesFromCfg</a></li><li><a href="global.html#readSuccessCallback">readSuccessCallback</a></li><li><a href="global.html#requestFileSystem">requestFileSystem</a></li><li><a href="global.html#resolveLocalFileSystemURL">resolveLocalFileSystemURL</a></li><li><a href="global.html#setTemporaryFsByDefault">setTemporaryFsByDefault</a></li><li><a href="global.html#showAndHide">showAndHide</a></li><li><a href="global.html#tryParsePatternValues">tryParsePatternValues</a></li><li><a href="global.html#vibratePattern">vibratePattern</a></li></ul>
-</nav>
 
-<br class="clear">
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Thu Sep 05 2019 11:56:51 GMT+0800 (heure normale de la Chine)
+
+
+	<span class="copyright">
+	Elastos Foundation © 2017-2019
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
+	
+		on Thu Sep 12th 2019
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
 </footer>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
 </body>
 </html>

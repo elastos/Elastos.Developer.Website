@@ -1,41 +1,154 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>JSDoc: Module: carrierPlugin</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Elastos Browser (Trinity) Module: carrierPlugin</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.paper.css">
+
 </head>
 
 <body>
 
-<div id="main">
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Elastos Browser (Trinity)</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="navigator.html">navigator</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-Camera.html">Camera</a></li><li><a href="module-camera_.html">camera</a></li><li><a href="module-CameraPopoverHandle.html">CameraPopoverHandle</a></li><li><a href="module-CameraPopoverOptions.html">CameraPopoverOptions</a></li><li><a href="module-carrierPlugin.html">carrierPlugin</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="AppManager.html">AppManager</a></li><li><a href="AppService.html">AppService</a></li><li><a href="argscheck.html">argscheck</a></li><li><a href="Carrier.html">Carrier</a></li><li><a href="Coordinates.html">Coordinates</a></li><li><a href="global.html#cordova">cordova</a></li><li><a href="Device.html">Device</a></li><li><a href="FileReader.html">FileReader</a></li><li><a href="FileUploadOptions.html">FileUploadOptions</a></li><li><a href="FileWriter.html">FileWriter</a></li><li><a href="Media.html">Media</a></li><li><a href="module.html#.exports">module.exports</a></li><li><a href="PluginDemo.html">PluginDemo</a></li><li><a href="PositionError.html">PositionError</a></li><li><a href="Session.html">Session</a></li><li><a href="Stream.html">Stream</a></li><li><a href="%257BDOMString%257D%2520name%2520the%2520unique%2520name%2520of%2520the%2520file%2520system%2520.html">{DOMString} name the unique name of the file system (readonly)
+{DirectoryEntry} root directory of the file system (readonly)</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#_capture">_capture</a></li><li><a href="global.html#CameraUI">CameraUI</a></li><li><a href="global.html#Capture">Capture</a></li><li><a href="global.html#CaptureAudioOptions">CaptureAudioOptions</a></li><li><a href="global.html#CaptureError">CaptureError</a></li><li><a href="global.html#CaptureImageOptions">CaptureImageOptions</a></li><li><a href="global.html#capturePhoto">capturePhoto</a></li><li><a href="global.html#captureVideo">captureVideo</a></li><li><a href="global.html#CaptureVideoOptions">CaptureVideoOptions</a></li><li><a href="global.html#cdvfileToAppData">cdvfileToAppData</a></li><li><a href="global.html#checkPatternReqs">checkPatternReqs</a></li><li><a href="global.html#ConfigurationData">ConfigurationData</a></li><li><a href="global.html#createNode">createNode</a></li><li><a href="global.html#dataURItoBlob">dataURItoBlob</a></li><li><a href="global.html#DirectoryEntry">DirectoryEntry</a></li><li><a href="global.html#DirectoryReader">DirectoryReader</a></li><li><a href="global.html#Entry">Entry</a></li><li><a href="global.html#File">File</a></li><li><a href="global.html#FileEntry">FileEntry</a></li><li><a href="global.html#FileError">FileError</a></li><li><a href="global.html#Flags">Flags</a></li><li><a href="global.html#fullPathToAppData">fullPathToAppData</a></li><li><a href="global.html#MediaFile">MediaFile</a></li><li><a href="global.html#MediaFileData">MediaFileData</a></li><li><a href="global.html#Metadata">Metadata</a></li><li><a href="global.html#parseUriToPathAndFilename">parseUriToPathAndFilename</a></li><li><a href="global.html#processUri">processUri</a></li><li><a href="global.html#readFailureCallback">readFailureCallback</a></li><li><a href="global.html#readPreferencesFromCfg">readPreferencesFromCfg</a></li><li><a href="global.html#readSuccessCallback">readSuccessCallback</a></li><li><a href="global.html#requestFileSystem">requestFileSystem</a></li><li><a href="global.html#resolveLocalFileSystemURL">resolveLocalFileSystemURL</a></li><li><a href="global.html#setTemporaryFsByDefault">setTemporaryFsByDefault</a></li><li><a href="global.html#showAndHide">showAndHide</a></li><li><a href="global.html#tryParsePatternValues">tryParsePatternValues</a></li><li><a href="global.html#vibratePattern">vibratePattern</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
 
-    <h1 class="page-title">Module: carrierPlugin</h1>
-
-    
-
+</div>
+</div>
 
 
+<div class="container" id="toc-content">
+<div class="row">
 
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Module: carrierPlugin</h1>
 <section>
 
 <header>
     
-        
-    
 </header>
+
 
 <article>
     <div class="container-overview">
     
         
+
+        
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1110">line 1110</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
 
         
     
@@ -52,42 +165,45 @@
     
 
     
-
-    
         <h3 class="subsection-title">Members</h3>
 
-        
+        <dl>
             
-<h4 class="name" id="CandidateType"><span class="type-signature"></span>CandidateType<span class="type-signature"> :number</span></h4>
+<hr>
+<dt class="name" id="CandidateType">
+    <h4 id="CandidateType"><span class="type-signature"></span>CandidateType<span class="type-signature"> :number</span></h4>
 
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Carrier Stream's candidate type.</p>
+    </div>
+    
 
-
-
-<div class="description">
-    Carrier Stream's candidate type.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
 <span class="param-type">number</span>
 
 
-        </li>
-    </ul>
 
+            </li>
+        </ul>
+    
 
-
-
+    
+<dl class="details">
+    
 
     <h5 class="subsection-title">Properties:</h5>
 
-    
+    <dl>
 
-<table class="props">
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -98,6 +214,8 @@
 
         
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -118,14 +236,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
 
-            <td class="description last">Host candidate.</td>
+            <td class="description last"><p>Host candidate.</p></td>
         </tr>
 
     
@@ -141,14 +266,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
 
-            <td class="description last">Server reflexive, only valid to ICE transport.</td>
+            <td class="description last"><p>Server reflexive, only valid to ICE transport.</p></td>
         </tr>
 
     
@@ -164,14 +296,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    2
+                
+                </td>
+            
 
-            <td class="description last">Peer reflexive, only valid to ICE transport.</td>
+            <td class="description last"><p>Peer reflexive, only valid to ICE transport.</p></td>
         </tr>
 
     
@@ -187,24 +326,35 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    3
+                
+                </td>
+            
 
-            <td class="description last">Relayed Candidate, only valid to ICE tranport.</td>
+            <td class="description last"><p>Relayed Candidate, only valid to ICE tranport.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -214,73 +364,78 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1202">line 1202</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1202">line 1202</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
-
-
-
+    
+</dd>
 
         
             
-<h4 class="name" id="CloseReason"><span class="type-signature"></span>CloseReason<span class="type-signature"> :number</span></h4>
+<hr>
+<dt class="name" id="CloseReason">
+    <h4 id="CloseReason"><span class="type-signature"></span>CloseReason<span class="type-signature"> :number</span></h4>
 
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Multiplexing channel close reason mode.</p>
+    </div>
+    
 
-
-
-<div class="description">
-    Multiplexing channel close reason mode.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
 <span class="param-type">number</span>
 
 
-        </li>
-    </ul>
 
+            </li>
+        </ul>
+    
 
-
-
+    
+<dl class="details">
+    
 
     <h5 class="subsection-title">Properties:</h5>
 
-    
+    <dl>
 
-<table class="props">
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -291,6 +446,8 @@
 
         
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -311,14 +468,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
 
-            <td class="description last">Channel closed normaly.</td>
+            <td class="description last"><p>Channel closed normaly.</p></td>
         </tr>
 
     
@@ -334,14 +498,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
 
-            <td class="description last">Channel closed because of timeout.</td>
+            <td class="description last"><p>Channel closed because of timeout.</p></td>
         </tr>
 
     
@@ -357,24 +528,35 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    2
+                
+                </td>
+            
 
-            <td class="description last">Channel closed because error occured.</td>
+            <td class="description last"><p>Channel closed because error occured.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -384,73 +566,78 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1245">line 1245</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1245">line 1245</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
-
-
-
+    
+</dd>
 
         
             
-<h4 class="name" id="ConnectionStatus"><span class="type-signature"></span>ConnectionStatus<span class="type-signature"> :number</span></h4>
+<hr>
+<dt class="name" id="ConnectionStatus">
+    <h4 id="ConnectionStatus"><span class="type-signature"></span>ConnectionStatus<span class="type-signature"> :number</span></h4>
 
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Carrier node connection status to the carrier network.</p>
+    </div>
+    
 
-
-
-<div class="description">
-    Carrier node connection status to the carrier network.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
 <span class="param-type">number</span>
 
 
-        </li>
-    </ul>
 
+            </li>
+        </ul>
+    
 
-
-
+    
+<dl class="details">
+    
 
     <h5 class="subsection-title">Properties:</h5>
 
-    
+    <dl>
 
-<table class="props">
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -461,6 +648,8 @@
 
         
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -481,14 +670,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
 
-            <td class="description last">Carrier node connected to the carrier network.</td>
+            <td class="description last"><p>Carrier node connected to the carrier network.</p></td>
         </tr>
 
     
@@ -504,24 +700,35 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
 
-            <td class="description last">There is no connection to the carrier network.</td>
+            <td class="description last"><p>There is no connection to the carrier network.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -531,73 +738,78 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1130">line 1130</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1130">line 1130</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
-
-
-
+    
+</dd>
 
         
             
-<h4 class="name" id="NetworkTopology"><span class="type-signature"></span>NetworkTopology<span class="type-signature"> :number</span></h4>
+<hr>
+<dt class="name" id="NetworkTopology">
+    <h4 id="NetworkTopology"><span class="type-signature"></span>NetworkTopology<span class="type-signature"> :number</span></h4>
 
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Carrier network topology for session peers related to each other.</p>
+    </div>
+    
 
-
-
-<div class="description">
-    Carrier network topology for session peers related to each other.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
 <span class="param-type">number</span>
 
 
-        </li>
-    </ul>
 
+            </li>
+        </ul>
+    
 
-
-
+    
+<dl class="details">
+    
 
     <h5 class="subsection-title">Properties:</h5>
 
-    
+    <dl>
 
-<table class="props">
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -608,6 +820,8 @@
 
         
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -628,14 +842,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
 
-            <td class="description last">LAN network topology.</td>
+            <td class="description last"><p>LAN network topology.</p></td>
         </tr>
 
     
@@ -651,14 +872,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
 
-            <td class="description last">P2P network topology.</td>
+            <td class="description last"><p>P2P network topology.</p></td>
         </tr>
 
     
@@ -674,24 +902,35 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    2
+                
+                </td>
+            
 
-            <td class="description last">Relayed netowrk topology.</td>
+            <td class="description last"><p>Relayed netowrk topology.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -701,73 +940,78 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1219">line 1219</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1219">line 1219</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
-
-
-
+    
+</dd>
 
         
             
-<h4 class="name" id="PortForwardingProtocol"><span class="type-signature"></span>PortForwardingProtocol<span class="type-signature"> :number</span></h4>
+<hr>
+<dt class="name" id="PortForwardingProtocol">
+    <h4 id="PortForwardingProtocol"><span class="type-signature"></span>PortForwardingProtocol<span class="type-signature"> :number</span></h4>
 
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Port forwarding supported protocols.</p>
+    </div>
+    
 
-
-
-<div class="description">
-    Port forwarding supported protocols.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
 <span class="param-type">number</span>
 
 
-        </li>
-    </ul>
 
+            </li>
+        </ul>
+    
 
-
-
+    
+<dl class="details">
+    
 
     <h5 class="subsection-title">Properties:</h5>
 
-    
+    <dl>
 
-<table class="props">
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -778,6 +1022,8 @@
 
         
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -798,24 +1044,35 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
 
-            <td class="description last">TCP protocol.</td>
+            <td class="description last"><p>TCP protocol.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -825,73 +1082,78 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1234">line 1234</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1234">line 1234</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
-
-
-
+    
+</dd>
 
         
             
-<h4 class="name" id="PresenceStatus"><span class="type-signature"></span>PresenceStatus<span class="type-signature"> :number</span></h4>
+<hr>
+<dt class="name" id="PresenceStatus">
+    <h4 id="PresenceStatus"><span class="type-signature"></span>PresenceStatus<span class="type-signature"> :number</span></h4>
 
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Carrier node presence status.</p>
+    </div>
+    
 
-
-
-<div class="description">
-    Carrier node presence status.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
 <span class="param-type">number</span>
 
 
-        </li>
-    </ul>
 
+            </li>
+        </ul>
+    
 
-
-
+    
+<dl class="details">
+    
 
     <h5 class="subsection-title">Properties:</h5>
 
-    
+    <dl>
 
-<table class="props">
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -902,6 +1164,8 @@
 
         
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -922,14 +1186,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
 
-            <td class="description last">Carrier node is online and available.</td>
+            <td class="description last"><p>Carrier node is online and available.</p></td>
         </tr>
 
     
@@ -945,14 +1216,21 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
 
-            <td class="description last">Carrier node is being away.</td>
+            <td class="description last"><p>Carrier node is being away.</p></td>
         </tr>
 
     
@@ -968,24 +1246,35 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    2
+                
+                </td>
+            
 
-            <td class="description last">Carrier node is being busy.</td>
+            <td class="description last"><p>Carrier node is being busy.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -995,73 +1284,78 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1143">line 1143</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1143">line 1143</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
-
-
-
+    
+</dd>
 
         
             
-<h4 class="name" id="StreamMode"><span class="type-signature"></span>StreamMode<span class="type-signature"> :number</span></h4>
+<hr>
+<dt class="name" id="StreamMode">
+    <h4 id="StreamMode"><span class="type-signature"></span>StreamMode<span class="type-signature"> :number</span></h4>
 
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Carrier stream mode.</p>
+    </div>
+    
 
-
-
-<div class="description">
-    Carrier stream mode.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
 <span class="param-type">number</span>
 
 
-        </li>
-    </ul>
 
+            </li>
+        </ul>
+    
 
-
-
+    
+<dl class="details">
+    
 
     <h5 class="subsection-title">Properties:</h5>
 
-    
+    <dl>
 
-<table class="props">
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -1072,6 +1366,8 @@
 
         
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -1092,15 +1388,22 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
 
-            <td class="description last">Compress option, indicates data would be compressed before transmission.
-For now, just reserved this bit option for future implement.</td>
+            <td class="description last"><p>Compress option, indicates data would be compressed before transmission.<br>
+For now, just reserved this bit option for future implement.</p></td>
         </tr>
 
     
@@ -1116,15 +1419,22 @@ For now, just reserved this bit option for future implement.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    2
+                
+                </td>
+            
 
-            <td class="description last">Encrypt option, indicates data would be transmitted with plain mode.
-which means that transmitting data would be encrypted in default.</td>
+            <td class="description last"><p>Encrypt option, indicates data would be transmitted with plain mode.<br>
+which means that transmitting data would be encrypted in default.</p></td>
         </tr>
 
     
@@ -1140,17 +1450,24 @@ which means that transmitting data would be encrypted in default.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    4
+                
+                </td>
+            
 
-            <td class="description last">Relaible option, indicates data transmission would be reliable, and be
-guranteed to received by remote peer, which acts as TCP transmission
-protocol. Without this option bitwised, the transmission would be
-unreliable as UDP transmission protocol.</td>
+            <td class="description last"><p>Relaible option, indicates data transmission would be reliable, and be<br>
+guranteed to received by remote peer, which acts as TCP transmission<br>
+protocol. Without this option bitwised, the transmission would be<br>
+unreliable as UDP transmission protocol.</p></td>
         </tr>
 
     
@@ -1166,16 +1483,23 @@ unreliable as UDP transmission protocol.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    8
+                
+                </td>
+            
 
-            <td class="description last">Multiplexing option, indicates multiplexing would be activated on
-enstablished stream, and need to use multipexing APIs related with channel
-instread of APIs related strema to send/receive data.</td>
+            <td class="description last"><p>Multiplexing option, indicates multiplexing would be activated on<br>
+enstablished stream, and need to use multipexing APIs related with channel<br>
+instread of APIs related strema to send/receive data.</p></td>
         </tr>
 
     
@@ -1191,26 +1515,37 @@ instread of APIs related strema to send/receive data.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    16
+                
+                </td>
+            
 
-            <td class="description last">PortForwarding option, indicates port forwarding would be activated
-on established stream. This options should bitwise with 'Multiplexing'
-option.</td>
+            <td class="description last"><p>PortForwarding option, indicates port forwarding would be activated<br>
+on established stream. This options should bitwise with 'Multiplexing'<br>
+option.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -1220,73 +1555,78 @@ option.</td>
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1260">line 1260</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1260">line 1260</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
-
-
-
+    
+</dd>
 
         
             
-<h4 class="name" id="StreamState"><span class="type-signature"></span>StreamState<span class="type-signature"> :number</span></h4>
+<hr>
+<dt class="name" id="StreamState">
+    <h4 id="StreamState"><span class="type-signature"></span>StreamState<span class="type-signature"> :number</span></h4>
 
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Carrier stream state The stream state will be changed according to the phase of the stream.</p>
+    </div>
+    
 
-
-
-<div class="description">
-    Carrier stream state The stream state will be changed according to the phase of the stream.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
 <span class="param-type">number</span>
 
 
-        </li>
-    </ul>
 
+            </li>
+        </ul>
+    
 
-
-
+    
+<dl class="details">
+    
 
     <h5 class="subsection-title">Properties:</h5>
 
-    
+    <dl>
 
-<table class="props">
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -1297,6 +1637,8 @@ option.</td>
 
         
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -1317,14 +1659,21 @@ option.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
 
-            <td class="description last">Raw stream.</td>
+            <td class="description last"><p>Raw stream.</p></td>
         </tr>
 
     
@@ -1340,14 +1689,21 @@ option.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
 
-            <td class="description last">Initialized stream.</td>
+            <td class="description last"><p>Initialized stream.</p></td>
         </tr>
 
     
@@ -1363,14 +1719,21 @@ option.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    2
+                
+                </td>
+            
 
-            <td class="description last">The underlying transport is ready for the stream to start.</td>
+            <td class="description last"><p>The underlying transport is ready for the stream to start.</p></td>
         </tr>
 
     
@@ -1386,14 +1749,21 @@ option.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    3
+                
+                </td>
+            
 
-            <td class="description last">The stream is trying to connect the remote.</td>
+            <td class="description last"><p>The stream is trying to connect the remote.</p></td>
         </tr>
 
     
@@ -1409,14 +1779,21 @@ option.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    4
+                
+                </td>
+            
 
-            <td class="description last">The stream connected with remove peer.</td>
+            <td class="description last"><p>The stream connected with remove peer.</p></td>
         </tr>
 
     
@@ -1432,14 +1809,21 @@ option.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    5
+                
+                </td>
+            
 
-            <td class="description last">The stream is deactived.</td>
+            <td class="description last"><p>The stream is deactived.</p></td>
         </tr>
 
     
@@ -1455,14 +1839,21 @@ option.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    6
+                
+                </td>
+            
 
-            <td class="description last">The stream closed gracefully.</td>
+            <td class="description last"><p>The stream closed gracefully.</p></td>
         </tr>
 
     
@@ -1478,24 +1869,35 @@ option.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    7
+                
+                </td>
+            
 
-            <td class="description last">The stream is on error, cannot to continue.</td>
+            <td class="description last"><p>The stream is on error, cannot to continue.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -1505,73 +1907,78 @@ option.</td>
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1177">line 1177</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1177">line 1177</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
-
-
-
+    
+</dd>
 
         
             
-<h4 class="name" id="StreamType"><span class="type-signature"></span>StreamType<span class="type-signature"> :number</span></h4>
+<hr>
+<dt class="name" id="StreamType">
+    <h4 id="StreamType"><span class="type-signature"></span>StreamType<span class="type-signature"> :number</span></h4>
 
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Carrier stream type. Reference: https://tools.ietf.org/html/rfc4566#section-5.14 https://tools.ietf.org/html/rfc4566#section-8</p>
+    </div>
+    
 
-
-
-<div class="description">
-    Carrier stream type. Reference: https://tools.ietf.org/html/rfc4566#section-5.14 https://tools.ietf.org/html/rfc4566#section-8
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
 <span class="param-type">number</span>
 
 
-        </li>
-    </ul>
 
+            </li>
+        </ul>
+    
 
-
-
+    
+<dl class="details">
+    
 
     <h5 class="subsection-title">Properties:</h5>
 
-    
+    <dl>
 
-<table class="props">
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -1582,6 +1989,8 @@ option.</td>
 
         
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -1602,14 +2011,21 @@ option.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
 
-            <td class="description last">Audio stream.</td>
+            <td class="description last"><p>Audio stream.</p></td>
         </tr>
 
     
@@ -1625,14 +2041,21 @@ option.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
 
-            <td class="description last">Video stream.</td>
+            <td class="description last"><p>Video stream.</p></td>
         </tr>
 
     
@@ -1648,14 +2071,21 @@ option.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    2
+                
+                </td>
+            
 
-            <td class="description last">Text stream.</td>
+            <td class="description last"><p>Text stream.</p></td>
         </tr>
 
     
@@ -1671,14 +2101,21 @@ option.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    3
+                
+                </td>
+            
 
-            <td class="description last">Application stream.</td>
+            <td class="description last"><p>Application stream.</p></td>
         </tr>
 
     
@@ -1694,24 +2131,35 @@ option.</td>
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
             
 
             
+                <td class="default">
+                
+                    4
+                
+                </td>
+            
 
-            <td class="description last">Message stream.</td>
+            <td class="description last"><p>Message stream.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
+    
 
+	
 
+	
 
-<dl class="details">
+	
 
     
 
@@ -1721,77 +2169,74 @@ option.</td>
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1158">line 1158</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1158">line 1158</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
+</dd>
 
-
-
-
-        
+        </dl>
     
 
     
         <h3 class="subsection-title">Methods</h3>
 
-        
+        <dl>
             
+<hr>
+<dt>
+    <h4 class="name" id="createObject"><span class="type-signature"></span>createObject(onSuccess [, onError] [, options], callbacks)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Create a carrier object instance. After initializing the instance,<br>
+it's ready to start and therefore connect to carrier network.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="createObject"><span class="type-signature"></span>createObject<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, options<span class="signature-attributes">opt</span>, callbacks)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Create a carrier object instance. After initializing the instance,
-it's ready to start and therefore connect to carrier network.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1801,7 +2246,7 @@ it's ready to start and therefore connect to carrier network.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -1824,6 +2269,7 @@ it's ready to start and therefore connect to carrier network.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -1839,7 +2285,7 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The function to call when success.</td>
+            <td class="description last"><p>The function to call when success.</p></td>
         </tr>
 
     
@@ -1853,6 +2299,7 @@ it's ready to start and therefore connect to carrier network.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -1872,7 +2319,7 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -1888,6 +2335,7 @@ it's ready to start and therefore connect to carrier network.
 <span class="param-type"><a href="global.html#Options">Options</a></span>
 
 
+
             
             </td>
 
@@ -1905,7 +2353,7 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The options to set for creating carrier node. If set to null, will use default.</td>
+            <td class="description last"><p>The options to set for creating carrier node. If set to null, will use default.</p></td>
         </tr>
 
     
@@ -1921,6 +2369,7 @@ it's ready to start and therefore connect to carrier network.
 <span class="param-type"><a href="global.html#CarrierCallbacks">CarrierCallbacks</a></span>
 
 
+
             
             </td>
 
@@ -1936,19 +2385,24 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The callbacks for carrier node.</td>
+            <td class="description last"><p>The callbacks for carrier node.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1958,84 +2412,79 @@ it's ready to start and therefore connect to carrier network.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1456">line 1456</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1456">line 1456</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="getIdFromAddress"><span class="type-signature"></span>getIdFromAddress(onSuccess [, onError], address)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get carrier ID from carrier node address.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="getIdFromAddress"><span class="type-signature"></span>getIdFromAddress<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, address)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Get carrier ID from carrier node address.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2045,7 +2494,7 @@ it's ready to start and therefore connect to carrier network.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -2068,6 +2517,7 @@ it's ready to start and therefore connect to carrier network.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -2083,7 +2533,7 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The function to call when success, the param is a String: User id if address is valid, otherwise null.</td>
+            <td class="description last"><p>The function to call when success, the param is a String: User id if address is valid, otherwise null.</p></td>
         </tr>
 
     
@@ -2097,6 +2547,7 @@ it's ready to start and therefore connect to carrier network.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -2116,7 +2567,7 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -2132,6 +2583,7 @@ it's ready to start and therefore connect to carrier network.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -2147,19 +2599,24 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The carrier node address.</td>
+            <td class="description last"><p>The carrier node address.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2169,84 +2626,79 @@ it's ready to start and therefore connect to carrier network.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1443">line 1443</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1443">line 1443</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="getVersion"><span class="type-signature"></span>getVersion(onSuccess [, onError], onSuccess)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get current version of Carrier node.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="getVersion"><span class="type-signature"></span>getVersion<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, onSuccess)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Get current version of Carrier node.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2256,7 +2708,7 @@ it's ready to start and therefore connect to carrier network.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -2279,6 +2731,7 @@ it's ready to start and therefore connect to carrier network.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -2294,7 +2747,7 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The function to call when success, the param is a String: The version of carrier node.</td>
+            <td class="description last"><p>The function to call when success, the param is a String: The version of carrier node.</p></td>
         </tr>
 
     
@@ -2308,6 +2761,7 @@ it's ready to start and therefore connect to carrier network.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -2327,7 +2781,7 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -2343,6 +2797,7 @@ it's ready to start and therefore connect to carrier network.
 <span class="param-type">callback</span>
 
 
+
             
             </td>
 
@@ -2358,19 +2813,24 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The version of carrier node</td>
+            <td class="description last"><p>The version of carrier node</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2380,84 +2840,79 @@ it's ready to start and therefore connect to carrier network.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1402">line 1402</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1402">line 1402</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="isValidAddress"><span class="type-signature"></span>isValidAddress(onSuccess [, onError], address)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Check if the carrier node address is valid.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="isValidAddress"><span class="type-signature"></span>isValidAddress<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, address)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Check if the carrier node address is valid.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2467,7 +2922,7 @@ it's ready to start and therefore connect to carrier network.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -2490,6 +2945,7 @@ it's ready to start and therefore connect to carrier network.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -2505,7 +2961,7 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The function to call when success, the param is a Boolean: True if key is valid, otherwise false.</td>
+            <td class="description last"><p>The function to call when success, the param is a Boolean: True if key is valid, otherwise false.</p></td>
         </tr>
 
     
@@ -2519,6 +2975,7 @@ it's ready to start and therefore connect to carrier network.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -2538,7 +2995,7 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -2554,6 +3011,7 @@ it's ready to start and therefore connect to carrier network.
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -2569,19 +3027,24 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The carrier node address to be check.</td>
+            <td class="description last"><p>The carrier node address to be check.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2591,84 +3054,79 @@ it's ready to start and therefore connect to carrier network.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1428">line 1428</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1428">line 1428</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
+    
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="isValidId"><span class="type-signature"></span>isValidId(onSuccess [, onError], id)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Check if the ID is Carrier node id.</p>
+    </div>
+    
+
+    
 
     
 
     
-    <h4 class="name" id="isValidId"><span class="type-signature"></span>isValidId<span class="signature">(onSuccess, onError<span class="signature-attributes">opt</span>, id)</span><span class="type-signature"></span></h4>
     
+        <h5>Parameters:</h5>
+        
 
-    
-
-
-
-<div class="description">
-    Check if the ID is Carrier node id.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2678,7 +3136,7 @@ it's ready to start and therefore connect to carrier network.
         <th>Type</th>
 
         
-        <th>Attributes</th>
+        <th>Argument</th>
         
 
         
@@ -2701,6 +3159,7 @@ it's ready to start and therefore connect to carrier network.
 <span class="param-type">function</span>
 
 
+
             
             </td>
 
@@ -2716,7 +3175,7 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The function to call when success, the param is a Boolean: True if id is valid, otherwise false.</td>
+            <td class="description last"><p>The function to call when success, the param is a Boolean: True if id is valid, otherwise false.</p></td>
         </tr>
 
     
@@ -2730,6 +3189,7 @@ it's ready to start and therefore connect to carrier network.
             
                 
 <span class="param-type">function</span>
+
 
 
             
@@ -2749,7 +3209,7 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The function to call when error, the param is a String. Or set to null.</td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -2763,6 +3223,7 @@ it's ready to start and therefore connect to carrier network.
             
                 
 <span class="param-type">string</span>
+
 
 
             
@@ -2780,19 +3241,24 @@ it's ready to start and therefore connect to carrier network.
 
             
 
-            <td class="description last">The carrier node id to be check.</td>
+            <td class="description last"><p>The carrier node id to be check.</p></td>
         </tr>
 
     
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2802,56 +3268,54 @@ it's ready to start and therefore connect to carrier network.
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>,
+				 <a href="Carrier_www_carrier.js.html#sunlight-1-line-1413">line 1413</a>
+			</li>
+		</ul>
+	</dd>
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Carrier_www_carrier.js.html">Carrier/www/carrier.js</a>, <a href="Carrier_www_carrier.js.html#line1413">line 1413</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
+</dd>
 
-
-
-
-
-
-
-
-
-
-
-
-        
+        </dl>
     
 
     
@@ -2864,20 +3328,136 @@ it's ready to start and therefore connect to carrier network.
 
 
 
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
 </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-Camera.html">Camera</a></li><li><a href="module-camera_.html">camera</a></li><li><a href="module-CameraPopoverHandle.html">CameraPopoverHandle</a></li><li><a href="module-CameraPopoverOptions.html">CameraPopoverOptions</a></li><li><a href="module-carrierPlugin.html">carrierPlugin</a></li></ul><h3>Namespaces</h3><ul><li><a href="navigator.html">navigator</a></li></ul><h3>Classes</h3><ul><li><a href="AppManager.html">AppManager</a></li><li><a href="AppService.html">AppService</a></li><li><a href="argscheck.html">argscheck</a></li><li><a href="Carrier.html">Carrier</a></li><li><a href="Coordinates.html">Coordinates</a></li><li><a href="global.html#cordova">cordova</a></li><li><a href="Device.html">Device</a></li><li><a href="FileReader.html">FileReader</a></li><li><a href="FileUploadOptions.html">FileUploadOptions</a></li><li><a href="FileWriter.html">FileWriter</a></li><li><a href="Media.html">Media</a></li><li><a href="module.html#.exports">exports</a></li><li><a href="PluginDemo.html">PluginDemo</a></li><li><a href="PositionError.html">PositionError</a></li><li><a href="Session.html">Session</a></li><li><a href="Stream.html">Stream</a></li><li><a href="%257BDOMString%257D%2520name%2520the%2520unique%2520name%2520of%2520the%2520file%2520system%2520.html">{DOMString} name the unique name of the file system (readonly)
-{DirectoryEntry} root directory of the file system (readonly)</a></li></ul><h3>Global</h3><ul><li><a href="global.html#_capture">_capture</a></li><li><a href="global.html#CameraUI">CameraUI</a></li><li><a href="global.html#Capture">Capture</a></li><li><a href="global.html#CaptureAudioOptions">CaptureAudioOptions</a></li><li><a href="global.html#CaptureError">CaptureError</a></li><li><a href="global.html#CaptureImageOptions">CaptureImageOptions</a></li><li><a href="global.html#capturePhoto">capturePhoto</a></li><li><a href="global.html#captureVideo">captureVideo</a></li><li><a href="global.html#CaptureVideoOptions">CaptureVideoOptions</a></li><li><a href="global.html#cdvfileToAppData">cdvfileToAppData</a></li><li><a href="global.html#checkPatternReqs">checkPatternReqs</a></li><li><a href="global.html#ConfigurationData">ConfigurationData</a></li><li><a href="global.html#createNode">createNode</a></li><li><a href="global.html#dataURItoBlob">dataURItoBlob</a></li><li><a href="global.html#DirectoryEntry">DirectoryEntry</a></li><li><a href="global.html#DirectoryReader">DirectoryReader</a></li><li><a href="global.html#Entry">Entry</a></li><li><a href="global.html#File">File</a></li><li><a href="global.html#FileEntry">FileEntry</a></li><li><a href="global.html#FileError">FileError</a></li><li><a href="global.html#Flags">Flags</a></li><li><a href="global.html#fullPathToAppData">fullPathToAppData</a></li><li><a href="global.html#MediaFile">MediaFile</a></li><li><a href="global.html#MediaFileData">MediaFileData</a></li><li><a href="global.html#Metadata">Metadata</a></li><li><a href="global.html#parseUriToPathAndFilename">parseUriToPathAndFilename</a></li><li><a href="global.html#processUri">processUri</a></li><li><a href="global.html#readFailureCallback">readFailureCallback</a></li><li><a href="global.html#readPreferencesFromCfg">readPreferencesFromCfg</a></li><li><a href="global.html#readSuccessCallback">readSuccessCallback</a></li><li><a href="global.html#requestFileSystem">requestFileSystem</a></li><li><a href="global.html#resolveLocalFileSystemURL">resolveLocalFileSystemURL</a></li><li><a href="global.html#setTemporaryFsByDefault">setTemporaryFsByDefault</a></li><li><a href="global.html#showAndHide">showAndHide</a></li><li><a href="global.html#tryParsePatternValues">tryParsePatternValues</a></li><li><a href="global.html#vibratePattern">vibratePattern</a></li></ul>
-</nav>
 
-<br class="clear">
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Thu Sep 05 2019 11:56:51 GMT+0800 (heure normale de la Chine)
+
+
+	<span class="copyright">
+	Elastos Foundation © 2017-2019
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
+	
+		on Thu Sep 12th 2019
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
 </footer>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
 </body>
 </html>
