@@ -7,46 +7,52 @@ pre = ""
 alwaysopen = false
 +++
 
-{{< ownership "Benjamin Piette" >}}
-
-{{< todo "@BPI Check and remove deprecated" >}}
-{{< todo "@BPI Reorganize a bit if needed" >}}
-{{< todo "@BPI Add links to githubs" >}}
-{{< todo "@BPI Add short description for each project + short introduction for each section" >}}
-{{< todo "@BPI Cleanup the unknown section" >}}
-
 If you're willing to contribute as a community leader, designer, or by running a supernode, please join Elastos telegram groups to get in touch with the Elastos community.
+
+You can find more information about each repository going to [the root Elastos Github workspace](https://github.com/elastos) and searching the repository name.
 
 Regarding technical development, here is a how Elastos projects are organized on github:
 
 ### Blockchain
 
+> Main chain
+
 * Elastos.ELA
+
+> Side chains
+
 * Elastos.ELA.SideChain
-* Elastos.ELA.Client.SideChain
 * Elastos.ELA.SideChain.Token
 * Elastos.ELA.SideChain.ID
+* Elastos.ELA.SideChain.ETH
+
+> Dedicated nodes services
+
 * Elastos.ELA.Supernode
 * Elastos.ELA.Elephant.Node
-* Elastos.ELA.Utilities.Java
-* Elastos.ORG.BlockchainAgent
-* Elastos.ELA.Utility
-* Elastos.NET (?)
-* Elastos.RT (?)
 * Elastos.ELA.SPV.Node
+* Elastos.ORG.Wallet.Service
+* Elastos.ORG.SideChain.Service
+* Elastos.ORG.BlockchainAgent
+* Elastos.ORG.API.Misc
+
+> Utilities
+
+* Elastos.SDK.Keypair.Wrapper.Android
+* Elastos.SDK.Keypair.C
+* Elastos.SDK.Keypair.Java
+* Elastos.SDK.Keypair.Wrapper.iOS
+* Elastos.SDK.Keypair.Javascript
+* Elastos.ELA.Utilities.Java
+* Elastos.ELA.Utility
 
 ### Core modules
-
-> Elastos command line client
-
-* Elastos.ELA.Client
 
 > Elastos Carrier
 
 * Elastos.NET.Carrier.Native.SDK
 * Elastos.NET.Carrier.Bootstrap
 * Elastos.NET.Carrier.Swift.SDK
-* Elastos.NET.Carrier.Crawler
 * Elastos.NET.Carrier.Java.SDK
 * Elastos.NET.Carrier.Nodejs.SDK
 
@@ -68,10 +74,10 @@ Regarding technical development, here is a how Elastos projects are organized on
 
 > Elastos DID
 
+{{< todo "Update this part" >}}
+
 * Elastos.SDK.DIDClient.Java
-* Elastos.App.DIDPlugin (?)
 * Elastos.SDK.DIDIoTClient
-* Elastos.RT.SDK.DID.Checker.Android
 
 > Elastos Trinity
 
@@ -82,17 +88,22 @@ Regarding technical development, here is a how Elastos projects are organized on
 * Elastos.Trinity.Plugins.File
 * Elastos.Trinity.ToolChains
 * Elastos.Trinity.Plugins.* 
+* Elastos.Trinity.Plugins.IonicWebView
+
+> Voting 
+
+* Elastos.SDK.Vote.Client
+* Elastos.Service.DIDVote
+
+> Elastos command line client
+
+* Elastos.ELA.Client
 
 > Elastos DittoBox
 
 * Elastos.DittoBox.Server
 * Elastos.DittoBox.iOS
 * Elastos.DittoBox.Android
-
-> Voting 
-
-* Elastos.SDK.Vote.Client
-* Elastos.Service.DIDVote
 
 ### Wallets / Authorization
 
@@ -121,45 +132,29 @@ Regarding technical development, here is a how Elastos projects are organized on
 ### Documentation & Web tools 
 
 * Elastos.Developer.Website
-* Elastos.Developer.Doc (deprecated)
+
+### Web tools
+
 * Elastos.ORG.DID.Explorer.Web
 * Elastos.ORG.DID.Explorer
-* Elastos.ORG.Developer (deprecated?)
 * Elastos.Community
 * Elastos.Community.Global
 
 ### Samples / Demos / Alpha apps
 
+> Carrier
+
 * Elastos.NET.Carrier.Demo.FileTransfer.Android
 * Elastos.NET.Carrier.Demo.Remoter.iOS
-* Elastos.NET.Hive.Demo.Android.HyPort
-* Elastos.NET.Hive.Demo.FuseApp
-* Elastos.APP.Android.ShiJiuTV
-* Elastos.ORG.Lottery.Web
-* Elastos.Trinity.Alpha.DApp.Demo.End2End
-* Elastos.Trinity.Alpha.DApp.Demo.CarTest
-* Elastos.Trinity.Alpha.DApp.Demo.GuessNumber
-* Elastos.Trinity.Alpha.DApp.Demo.IM
-* Elastos.Trinity.Alpha.DApp.Demo.ToDo
-* Elastos.ORG.GamingRoom (?)
-* Elastos.App.Elapay
 * Elastos.NET.Carrier.Samples.Android
 
-### Unknown (todo)
+> Hive
 
-* Elastos.ORG.API.Misc
-* Elastos.SDK.CrossCompile.Config
-* Elastos.SDK.Keypair.Wrapper.Android
-* Elastos.SDK.Keypair.C
-* Elastos.SDK.Keypair.Java
-* Elastos.SDK.Keypair.Wrapper.iOS
-* Elastos.SDK.Keypair.Javascript
-* Elastos.ORG.Wallet.Service
-* Elastos.Trinity.Plugins.IonicWebView
-* Elastos.ORG.SideChain.Service
-* Elastos.ORG.BlessingStar
+* Elastos.NET.Hive.Demo.Android.HyPort
+* Elastos.NET.Hive.Demo.FuseApp
+
+### Side projects
+
 * WorldBankPOC
-* Elastos.OS (?)
-* Elastos.ORG.Lottery.Api (?)
-* Elastos.Hackathon.2018.Beijing
-* Elastos.OS.CM12_0-Android501
+* Elastos.NET.Carrier.Crawler
+* Elastos.APP.Android.ShiJiuTV

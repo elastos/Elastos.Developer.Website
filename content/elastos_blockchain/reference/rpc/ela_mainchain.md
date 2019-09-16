@@ -5,7 +5,22 @@ weight = 10
 chapter = false
 pre = ""
 alwaysopen = false
+internalnote = "DO NOT EDIT THE .MD FILE DIRECTLY, IT WILL BE OVERWRITTEN"
 +++
+
+
+Instructions
+===============
+
+this is the document of ela json rpc interfaces.
+it follows json-rpc 2.0 protocol but also keeps compatible with 1.0 version.
+That means both named params and positional params are acceptable.
+
+"id" is optional, which will be sent back in the result samely if you add it in a request.
+It is needed when you want to distinguish different requests.
+
+"jsonrpc" is optional. It tells which version this request uses.
+In version 2.0 it is required, while in version 1.0 it does not exist.
 
 #### getbestblockhash
 description: return the hash of the most recent block
@@ -1772,3 +1787,5 @@ result sample:
     ]
 }
 ```
+
+####
