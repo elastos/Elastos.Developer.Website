@@ -20,6 +20,19 @@ There are some specificities though, which are mostly:
 
 Here are a few easy steps to help you run your smart contract, or execute someone else's smart contract on the Elastos ETH sidechain.
 
+## Ethereum library setup
+
+{{< tabs >}} 
+    {{< tab name="Java" codelang="java" >}} 
+    {{< /tab >}} 
+    {{< tab name="Swift" codelang="swift" >}} 
+    {{< /tab >}} 
+    {{< tab name="Trinity" codelang="shell" >}} 
+# Install the standard web3js library provided by Ethereum. This is all we need.
+npm install --save web3
+    {{< /tab >}} 
+{{< /tabs >}}
+
 ## Connecting to the ETH node
 
 Your application must first connect to your Ethereum node (ex: on your local develap instance), 
