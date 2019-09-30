@@ -12,7 +12,7 @@ Trinity CLI provides an **easy way to run and debug** your DApp from your develo
 
 * Enter your DApp folder.
 * **Connect your device** to your computer.
-* Make sure your **phone and your computer are on the same network** (ex: same wifi, same sub-network).
+* Make sure your **phone and your computer are on the same network** (ex: same wifi, same sub-network, no VPN).
 * On Android, **enable developer mode** (from the settings - see android docs) and enable USB debugging.
 * Make sure the **native Trinity browser** is installed on your device.
 * Run the following command:

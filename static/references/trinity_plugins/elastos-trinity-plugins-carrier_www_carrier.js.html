@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Elastos Browser (Trinity) Source: elastos-trinity-plugins-carrier/www/carrier.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.paper.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Elastos Browser (Trinity)</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-Acceleration.html">Acceleration</a></li><li><a href="module-Accelerometer.html">Accelerometer</a></li><li><a href="module-AppManager.html">AppManager</a></li><li><a href="module-AppService.html">AppService</a></li><li><a href="module-Camera.html">Camera</a></li><li><a href="module-CameraConstants.html">CameraConstants</a></li><li><a href="module-CameraPopoverHandle.html">CameraPopoverHandle</a></li><li><a href="module-CameraPopoverOptions.html">CameraPopoverOptions</a></li><li><a href="module-Capture.html">Capture</a></li><li><a href="module-CarrierPlugin.html">CarrierPlugin</a></li><li><a href="module-carrierPlugin_.html">carrierPlugin</a></li><li><a href="module-Connection.html">Connection</a></li><li><a href="module-Flashlight.html">Flashlight</a></li><li><a href="module-Geolocation.html">Geolocation</a></li><li><a href="module-InAppBrowser.html">InAppBrowser</a></li><li><a href="module-Notification.html">Notification</a></li><li><a href="module-Position.html">Position</a></li><li><a href="module-ScreenOrientation.html">ScreenOrientation</a></li><li><a href="module-Splashscreen.html">Splashscreen</a></li><li><a href="module-StatusBar.html">StatusBar</a></li><li><a href="module-Vibration.html">Vibration</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Battery.html">Battery</a></li><li><a href="Clipboard.html">Clipboard</a></li><li><a href="Coordinates.html">Coordinates</a></li><li><a href="Device.html">Device</a></li><li><a href="FileReader.html">FileReader</a></li><li><a href="FileSystem.html">FileSystem</a></li><li><a href="FileUploadOptions.html">FileUploadOptions</a></li><li><a href="FileUploadResult.html">FileUploadResult</a></li><li><a href="FileWriter.html">FileWriter</a></li><li><a href="Media.html">Media</a></li><li><a href="module-AppManager-AppManager.html">AppManager~AppManager</a></li><li><a href="module-AppService-AppService.html">AppService~AppService</a></li><li><a href="module-CarrierPlugin-Carrier.html">CarrierPlugin~Carrier</a></li><li><a href="module-CarrierPlugin-Session.html">CarrierPlugin~Session</a></li><li><a href="module-CarrierPlugin-Stream.html">CarrierPlugin~Stream</a></li><li><a href="PositionError.html">PositionError</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#CaptureAudioOptions">CaptureAudioOptions</a></li><li><a href="global.html#CaptureError">CaptureError</a></li><li><a href="global.html#CaptureImageOptions">CaptureImageOptions</a></li><li><a href="global.html#CaptureVideoOptions">CaptureVideoOptions</a></li><li><a href="global.html#ConfigurationData">ConfigurationData</a></li><li><a href="global.html#cordova">cordova</a></li><li><a href="global.html#DirectoryEntry">DirectoryEntry</a></li><li><a href="global.html#DirectoryReader">DirectoryReader</a></li><li><a href="global.html#Entry">Entry</a></li><li><a href="global.html#File">File</a></li><li><a href="global.html#FileEntry">FileEntry</a></li><li><a href="global.html#FileError">FileError</a></li><li><a href="global.html#Flags">Flags</a></li><li><a href="global.html#MediaFile">MediaFile</a></li><li><a href="global.html#MediaFileData">MediaFileData</a></li><li><a href="global.html#Metadata">Metadata</a></li><li><a href="global.html#namedColors">namedColors</a></li><li><a href="global.html#readFailureCallback">readFailureCallback</a></li><li><a href="global.html#readSuccessCallback">readSuccessCallback</a></li><li><a href="global.html#resolveLocalFileSystemURL">resolveLocalFileSystemURL</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: elastos-trinity-plugins-carrier/www/carrier.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">/*
+    * Copyright (c) 2018 Elastos Foundation
+    *
+    * Permission is hereby granted, free of charge, to any person obtaining a copy
+    * of this software and associated documentation files (the "Software"), to deal
+    * in the Software without restriction, including without limitation the rights
+    * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    * copies of the Software, and to permit persons to whom the Software is
+    * furnished to do so, subject to the following conditions:
+    *
+    * The above copyright notice and this permission notice shall be included in all
+    * copies or substantial portions of the Software.
+    *
+    * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    * SOFTWARE.
+    */
+
+   var exec = require('cordova/exec');
+
+   const CARRIER_CB_NAMES = [
+       "onConnection",
+       "onReady",
+       "onSelfInfoChanged",
+       "onFriends",
+       "onFriendConnection",
+       "onFriendInfoChanged",
+       "onFriendPresence",
+       "onFriendRequest",
+       "onFriendAdded",
+       "onFriendRemoved",
+       "onFriendMessage",
+       "onFriendInviteRequest",
+       "onSessionRequest",
+   ];
+
+   const STREAM_CB_NAMES = [
+       "onStateChanged",
+       "onStreamData",
+       "onChannelOpen",
+       "onChannelOpened",
+       "onChannelClose",
+       "onChannelData",
+       "onChannelPending",
+       "onChannelResume",
+   ];
+
+   /**
+    * @module CarrierPlugin
+    */
+
+   /**
+    * The Carrier user information.
+    *
+    * @typedef BootstrapNode
+    * @type {Object}
+    * @property {string} ipv4 The server ipv4.
+    * @property {string} ipv6 The server ipv6.
+    * @property {string} port The server port.
+    * @property {string} publicKey The publicKey.
+    */
+
+   /**
+    * Options defines several settings that control the way the Carrier node connects to the carrier network.
+    * Default values are not defined for bootstraps options, so application should be set bootstrap nodes clearly.
+    *
+    * @typedef Options
+    * @type {Object}
+    * @property {Boolean} udpEnabled Set to use udp transport or not. Setting this value to false will force carrier node to TCP only,
+    *                                which will potentially slow down the message to run through.
+    * @property {string}  persistentLocation Set the persistent data location. The location must be set.
+    * @property {Array}  bootstraps BootstrapNode Array.
+    */
+
+   /**
+    * The Carrier user information.
+    *
+    * @typedef UserInfo
+    * @type {Object}
+    * @property {string} userId The user ID.
+    * @property {string} name The nickname.
+    * @property {string} description user's brief description.
+    * @property {Boolean} hasAvatar Has avatar or not.
+    * @property {string} gender The gender.
+    * @property {string} phone The phone number.
+    * @property {string} email The email address.
+    * @property {string} region The region.
+    */
+
+    /**
+    * The Carrier friend information.
+    *
+    * @typedef FriendInfo
+    * @type {Object}
+    * @property {UserInfo} userInfo The user info.
+    * @property {PresenceStatus} presence The presence status.
+    * @property {ConnectionStatus} connection The connection status.
+    * @property {string} label The friend's label name.
+    */
+
+    /**
+    * The netword address information.
+    *
+    * @typedef AddressInfo
+    * @type {Object}
+    * @property {CandidateType}    type             The address type.
+    * @property {string}           address          The address.
+    * @property {string}           port             The port.
+    * @property {string}           [relatedAddress] The related address status.
+    * @property {string}           [relatedPort]    The related port.
+    */
+
+    /**
+    * The netword transport information.
+    *
+    * @typedef TransportInfo
+    * @type {Object}
+    * @property {NetworkTopology}  topology    The network topology.
+    * @property {AddressInfo}      localAddr   The local address.
+    * @property {AddressInfo}      remoteAddr  The remote address.
+    */
+
+   /**
+    * The Carrier callbacks.
+    *
+    * @typedef CarrierCallbacks
+    * @type {Object}
+    * @property {onConnection}          onConnection           The callback function to process the self connection status.
+    * @property {onReady}               onReady                The callback function to process the ready notification.
+    * @property {onSelfInfoChanged}     onSelfInfoChanged      The callback function to process the self info changed event.
+    * @property {onFriends}             onFriends              The callback function to iterate the each friend item in friend list.
+    * @property {onFriendConnection}    onFriendConnection     The callback function to process the friend connections status changed event.
+    * @property {onFriendInfoChanged}   onFriendInfoChanged    The callback function to process the friend information changed event.
+    * @property {onFriendPresence}      onFriendPresence       The callback function to process the friend presence changed event.
+    * @property {onFriendRequest}       onFriendRequest        The callback function to process the friend request.
+    * @property {onFriendAdded}         onFriendAdded          The callback function to process the new friend added event.
+    * @property {onFriendRemoved}       onFriendRemoved        The callback function to process the friend removed event.
+    * @property {onFriendMessage}       onFriendMessage        The callback function to process the friend message.
+    * @property {onFriendInviteRequest} onFriendInviteRequest  The callback function to process the friend invite request.
+    * @property {onSessionRequest}      onSessionRequest       The callback function that handle session request.
+    */
+
+   /**
+    * The Stream callbacks.
+    *
+    * @typedef StreamCallbacks
+    * @type {Object}
+    * @property {onStateChanged}   onStateChanged      The callback function to report state of stream when it's state changes.
+    * @property {onStreamData}     onStreamData        The callback will be called when the stream receives incoming packet.
+    * @property {onChannelOpen}    onChannelOpen       The callback function to be called when new multiplexing channel opened.
+    * @property {onChannelOpened}  onChannelOpened     The callback function to be called when new multiplexing channel opened.
+    * @property {onChannelClose}   onChannelClose      The callback function to be called when channel close.
+    * @property {onChannelData}    onChannelData       The callback functiont to be called when channel received incoming data.
+    * @property {onChannelPending} onChannelPending    The callback function to be called when remote peer ask to pend data sending.
+    * @property {onChannelResume}  onChannelResume     The callback function to be called when remote peer ask to resume data sending.
+    */
+
+    /**
+    * The callback function to process the friend invite response.
+    *
+    * @callback onFriendInviteResponse
+    *
+    * @param {string}  from		The target user id who send friend invite response
+    * @param {number}  status		The status code of invite response. 0 is success, otherwise error
+    * @param {string}  reason		The error message if status is error, otherwise null
+    * @param {string}  data		The application defined data return by target user
+    */
+
+   /**
+    * The callback function to receive session request complete event.
+    *
+    * @callback onSessionRequestComplete
+    *
+    * @param {Session} session     The carrier session instance.
+    * @param {number}  status      The status code of the response. 0 is success, otherwise is error.
+    * @param {string}  reason      The error message if status is error, or nil if session request error happened.
+    * @param {string}  sdp         The remote users SDP. Reference: https://tools.ietf.org/html/rfc4566
+    */
+
+   /**
+    * The class representing Carrier stream.
+    * @class
+    */
+   function Stream() {
+       this.objId = null;
+       this.carrierPlugin = null;
+
+       /** @property {number}  id Stream ID. **/
+       this.id = null;
+       /** @property {Carrier} carrier Parent carrier object. **/
+       this.carrier = null;
+       /** @property {Session} session Parent session object. **/
+       this.session = null;
+
+       this.callbacks = {
+           /* Common callbacks */
+           /**
+            * The callback function to report state of stream when it's state changes.
+            *
+            * @callback onStateChanged
+            *
+            * @param {Stream}      stream      The carrier stream instance
+            * @param {StreamState} state       Stream state defined in StreamState
+            */
+           onStateChanged: null,
+
+           /* Stream layered data callbacks */
+           /**
+            * The callback will be called when the stream receives incoming packet.
+            * If the stream enabled multiplexing mode, application will not
+            * receive stream-layered data callback any more. All data will reported
+            * as multiplexing channel data.
+            *
+            * @callback onStreamData
+            *
+            * @param {Stream} stream      The carrier stream instance
+            * @param {base64} data        The received packet data.
+            */
+           onStreamData: null,
+
+           /* Channel callbacks */
+           /**
+            * The callback function to be called when new multiplexing channel request to open.
+            *
+            * @callback onChannelOpen
+            *
+            * @param
+            * @param {Stream} stream      The carrier stream instance
+            * @param {number} channel     The current channel ID.
+            * @param {string} cookie      Application defined string data send from remote peer.
+            *
+            */
+           onChannelOpen: null,
+
+           /**
+            * The callback function to be called when new multiplexing channel opened.
+            *
+            * @callback onChannelOpened
+            *
+            * @param {Stream} stream      The carrier stream instance
+            * @param {number} channel     The current channel ID.
+            */
+           onChannelOpened: null,
+
+           /**
+            * The callback function to be called when channel close.
+            *
+            * @callback onChannelClose
+            *
+            * @param {Stream} stream      The carrier stream instance
+            * @param {number} channel     The current channel ID.
+            * @param {string} reason      Channel close reason code, defined in CloseReason.
+            */
+           onChannelClose: null,
+
+           /**
+            * The callback functiont to be called when channel received incoming data.
+            *
+            * @callback onChannelData
+            *
+            * @param {Stream} stream      The carrier stream instance
+            * @param {number} channel     The current channel ID.
+            * @param {base64} data        The received packet data.
+            */
+           onChannelData: null,
+
+           /**
+            * The callback function to be called when remote peer ask to pend data sending.
+            *
+            * @callback onChannelPending
+            *
+            * @param {Stream} stream      The carrier stream instance
+            * @param {number} channel     The current channel ID.
+            */
+           onChannelPending: null,
+
+           /**
+            * The callback function to be called when remote peer ask to resume data sending.
+            *
+            * @callback onChannelResume
+            *
+            * @param {Stream} stream      The carrier stream instance
+            * @param {number} channel     The current channel ID.
+            */
+           onChannelResume: null,
+       }
+
+   }
+
+   Stream.prototype = {
+       constructor: Stream,
+
+       /**
+        * Add or remove Stream callback.
+        *
+        * @param {string}   name       The callback name.
+        * @param {Function} callback   The function to add or change callback function. If set to null, will remove callback.
+        */
+       on: function (name, callback) {
+           if (typeof callback != 'function') {
+               return false;
+           }
+           for (var i = 0; i &lt; STREAM_CB_NAMES.length; i++) {
+               if (name == STREAM_CB_NAMES[i]) {
+                   this.callbacks[name] = callback;
+                   return true;
+               }
+           }
+           return fasle;
+       },
+
+       process: function (onSuccess, onError, name, args) {
+           var me = this;
+           var _onSuccess = function (ret) {
+               ret.stream = me;
+               if (onSuccess) onSuccess(ret);
+           };
+           exec(_onSuccess, onError, 'CarrierPlugin', name, args);
+       },
+
+       /**
+        * Get tranport info of carrier stream.
+        * @param {Function} onSuccess  The function to call when success, the param is a TransportInfo object
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        */
+       getTransportInfo: function (onSuccess, onError) {
+           this.process(onSuccess, onError, "getTransportInfo", [this.objId]);
+       },
+
+       /**
+        * Send outgoing data to remote peer.
+        * If the stream is in multiplexing mode, application can not call this function.
+        *
+        * @param {Function} onSuccess  The function to call when success, the param is a Number: Bytes of data sent.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {base64}   data      The send data.
+        */
+       write: function (onSuccess, onError, data) {
+           this.process(onSuccess, onError, "streamWrite", [this.objId, data]);
+       },
+
+       /**
+        * Open a new channel on multiplexing stream.
+        * If the stream is in multiplexing mode, application can not call this function.
+        *
+        * @param {Function} onSuccess  The function to call when success, the param is a Number: New channel ID.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   cookie    The application defined data passed to remote peer
+        */
+       openChannel: function (onSuccess, onError, cookie) {
+           this.process(onSuccess, onError, "openChannel", [this.objId, cookie]);
+       },
+
+       /**
+        * Close a new channel on multiplexing stream.
+        * If the stream is in multiplexing mode, application can not call this function.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {number}   channel   The channel ID to close
+        */
+       closeChannel: function (onSuccess, onError, channel) {
+           this.process(onSuccess, onError, "closeChannel", [this.objId, channel]);
+       },
+
+       /**
+        * Send outgoing data to remote peer.
+        * If the stream is in multiplexing mode, application can not call this function.
+        *
+        * @param {Function} onSuccess  The function to call when success, the param is a Number: Bytes of data sent.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {number} channel     The current channel ID.
+        * @param {base64} data        The send data.
+        */
+       writeChannel: function (onSuccess, onError, channel, data) {
+           this.process(onSuccess, onError, "writeChannel", [this.objId, channel, data]);
+       },
+
+       /**
+        * Request remote peer to pend channel data sending.
+        * If the stream is in multiplexing mode, application can not call this function.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {number} channel     The current channel ID.
+        */
+       pendChannel: function (onSuccess, onError, channel) {
+           this.process(onSuccess, onError, "pendChannel", [this.objId, channel]);
+       },
+
+       /**
+        * Request remote peer to resume channel data sending.
+        * If the stream is in multiplexing mode, application can not call this function.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {number} channel     The current channel ID.
+        */
+       resumeChannel: function (onSuccess, onError, channel) {
+           this.process(onSuccess, onError, "resumeChannel", [this.objId, channel]);
+       },
+
+       /**
+        * Open a port forwarding to remote service over multiplexing.
+        * If the stream is in multiplexing mode, application can not call this function.
+        *
+        * @param {Function} onSuccess  The function to call when success, the param is a Number: Port forwarding ID.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   service   The remote service name
+        * @param {PortForwardingProtocol}  protocol    Port forwarding protocol
+        * @param {string}   host      Local host or ip to binding. If host is null, port forwarding will bind to localhost
+        * @param {number}   port      Local port to binding.
+        */
+       openPortForwarding: function (onSuccess, onError, service, protocol, host, port) {
+           this.process(onSuccess, onError, "openPortForwarding", [this.objId, service, protocol, host, port]);
+       },
+
+       /**
+        * Close a port forwarding.
+        * If the stream is in multiplexing mode, application can not call this function.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {number}   portForwarding  The portforwarding ID.
+        */
+       closePortForwarding: function (onSuccess, onError, portForwarding) {
+           this.process(onSuccess, onError, "closePortForwarding", [this.objId, portForwarding]);
+       },
+   }
+
+   /**
+    * The class representing Carrier Session.
+    * @class
+    */
+   function Session() {
+       this.objId = null;
+       this.carrierPlugin = null;
+       this.streams = [];
+
+       /** @property {string} peer The remote peer userid. **/
+       this.peer = null;
+       /** @property {Carrier} carrier Parent carrier object. */
+       this.carrier = null;
+   }
+
+   Session.prototype = {
+       constructor: Session,
+
+       process: function (onSuccess, onError, name, args) {
+           var me = this;
+           var _onSuccess = function (ret) {
+               ret.session = me;
+               if (onSuccess) onSuccess(ret);
+           };
+           exec(_onSuccess, onError, 'CarrierPlugin', name, args);
+       },
+
+       /**
+        * Close a session to friend. All resources include streams, channels, portforwardings
+        * associated with current session will be destroyed.
+        */
+       close: function (onSuccess, onError) {
+           this.process(onSuccess, onError, "sessionClose", [this.objId]);
+       },
+
+       // /**
+       //  * Get remote peer id.
+       //  *
+       //  * @param {Function} onSuccess  The function to call when success, the param is a String: The remote peer userid.
+       //  * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+       //  */
+       // getPeer: function (onSuccess, onError) {
+       //     this.process(onSuccess, onError, "getPeer", [this.objId]);
+       // },
+
+       /**
+        * Send session request to the friend.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {onSessionRequestComplete} handler A handler to the SessionRequestCompleteHandler to receive the session response
+        */
+       request: function (onSuccess, onError, handler) {
+           var handlerId = 0;
+           if (typeof handler == "function") {
+               handlerId = this.carrierPlugin.addSessionRequestCompleteCB(handler, this);
+           }
+           this.process(onSuccess, onError, "sessionRequest", [this.objId, handlerId]);
+       },
+
+       /**
+        * Reply the session request from friend.
+        *
+        * This function will send a session response to friend.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {number}   status     The status code of the response. 0 is success, otherwise is error
+        * @param {string}   reason     The error message if status is error, or null if success
+        */
+       replyRequest: function (onSuccess, onError, status, reason) {
+           this.process(onSuccess, onError, "sessionReplyRequest", [this.objId, status, reason]);
+       },
+
+       /**
+        * Begin to start a session.
+        *
+        * All streams in current session will try to connect with remote friend,
+        * The stream status will update to application by stream's StreamHandler.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   sdp        The remote user's SDP.  Reference: https://tools.ietf.org/html/rfc4566
+        */
+       start: function (onSuccess, onError, sdp) {
+           this.process(onSuccess, onError, "sessionStart", [this.objId, sdp]);
+       },
+
+       /**
+        * Add a new stream to session.
+        *
+        * Carrier stream supports several underlying transport mechanisms:
+        *
+        *   - Plain/encrypted UDP data gram protocol
+        *   - Plain/encrypted TCP like reliable stream protocol
+        *   - Multiplexing over UDP
+        *   - Multiplexing over TCP like reliable protocol
+        *
+        *  Application can use options to specify the new stream mode.
+        *  Multiplexing over UDP can not provide reliable transport.
+        *
+        * @param {Function} onSuccess  The function to call when success, the param is a Stream object: The new added carrier stream.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {StreamType} type     The stream type defined in StreamType
+        * @param {number}   options    The stream mode options. options are constructed by a bitwise-inclusive OR of flags
+        * @param {StreamCallbacks} callbacks The stream callbacks.
+        */
+       addStream: function (onSuccess, onError, type, options, callbacks) {
+           var stream = new Stream();
+           var me = this;
+           var _onSuccess = function (ret) {
+               stream.type = type;
+               stream.objId = ret.objId;
+               stream.id = ret.id;
+               stream.carrierPlugin = me.carrierPlugin;
+               stream.carrier = me.carrier;
+               stream.session = me.session;
+               me.streams[stream.id] = stream;
+               me.carrierPlugin.streams[stream.objId] = stream;
+               if (onSuccess) onSuccess(stream);
+           };
+
+           if (callbacks) {
+               for (var i = 0; i &lt; STREAM_CB_NAMES.length; i++) {
+                   var name = STREAM_CB_NAMES[i];
+                   stream.callbacks[name] = callbacks[name];
+               }
+           }
+           exec(_onSuccess, onError, 'CarrierPlugin', 'addStream', [this.objId, type, options]);
+       },
+
+       /**
+        * Remove a stream from session.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {stream}   stream     The Stream to be removed
+        */
+       removeStream: function (onSuccess, onError, stream) {
+           if (stream == this.streams[stream.id]) {
+               var me = this;
+               var _onSuccess = function (ret) {
+                   ret.session = me;
+                   me.streams[stream.id] = null;
+                   me.carrierPlugin.streams[stream.objId] = null;
+                   if (onSuccess) onSuccess(ret);
+               };
+               exec(_onSuccess, onError, 'CarrierPlugin', "removeStream", [this.objId, stream.objId]);
+           }
+           else {
+               error("This steam isn't belong the session!");
+           }
+       },
+
+       /**
+        * Add a new portforwarding service to session.
+        *
+        * The registered services can be used by remote peer in portforwarding request.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   service   The new service name, should be unique in session scope.
+        * @param {PortForwardingProtocol}  protocol    The protocol of the service.
+        * @param {string}   host      The host name or ip of the service.
+        * @param {number}   port      The port of the service.
+        */
+       addService: function (onSuccess, onError, service, protocol, host, port) {
+           this.process(onSuccess, onError, "addService", [this.objId, service, protocol, host, port]);
+       },
+
+       /**
+        * Remove a portforwarding server to session.
+        *
+        * This function has not effect on existing portforwarings.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   service    The service name.
+        */
+       removeService: function (onSuccess, onError, service) {
+           this.process(onSuccess, onError, "removeService", [this.objId, service]);
+       }
+   }
+
+   /**
+    * The class representing Carrier.
+    * @class
+    */
+   function Carrier() {
+       this.objId = null;
+       this.carrierPlugin = null;
+
+       /** @property {string} nodeId Node id. **/
+       this.nodeId = null;
+       /** @property {string} userId User id. **/
+       this.userId = null;
+       /** @property {string} address Node address. **/
+       this.address = null;
+
+       this._nospam = null;
+       this._presence = null;
+
+       this.callbacks = {
+           /**
+            * The callback function to process the self connection status.
+            *
+            *@callback onConnection
+            *
+            * @param {Carrier}	carrier		Carrier node instance
+            * @param {number}  status 		Current connection status. @see ConnectionStatus
+            */
+           onConnection: null,
+
+           /**
+            * The callback function to process the ready notification.
+            *
+            * Application should wait this callback invoked before calling any
+            * function to interact with friends.
+            *
+            * @callback onReady
+            *
+            * @param {Carrier}	carrier		Carrier node instance
+            */
+           onReady: null,
+
+           /**
+            * The callback function to process the self info changed event.
+            *
+            * @callback onSelfInfoChanged
+            *
+            * @param {Carrier}	 carrier	Carrier node instance
+            * @param {UserInfo} userInfo 	The updated user information
+            */
+           onSelfInfoChanged: null,
+
+           /**
+            * The callback function to iterate the each friend item in friend list.
+            *
+            * @callback onFriends
+            *
+            * @param {Carrier}	carrier		Carrier node instance
+            * @param {Array}   friends 	The friends list.
+            */
+           onFriends: null,
+
+           /**
+            * The callback function to process the friend connections status changed event.
+            *
+            * @callback onFriendConnection
+            *
+            * @param {Carrier}	carrier		Carrier node instance
+            * @param {string}  friendId 	The friend's user id.
+            * @param {number}  status	    The connection status of friend. @see ConnectionStatus
+            */
+           onFriendConnection: null,
+
+           /**
+            * The callback function to process the friend information changed event.
+            *
+            * @callback onFriendInfoChanged
+            *
+            * @param {Carrier}	carrier		Carrier node instance
+            * @param {string}  friendId   	The friend's user id
+            * @param {FriendInfo}  info	The update friend information
+            */
+           onFriendInfoChanged: null,
+
+           /**
+            * The callback function to process the friend presence changed event.
+            *
+            * @callback onFriendPresence
+            *
+            * @param {Carrier}	carrier		Carrier node instance
+            * @param {string}  friendId   	The friend's user id
+            * @param {number}  presence	The presence status of the friend
+            */
+           onFriendPresence: null,
+
+           /**
+            * The callback function to process the friend request.
+            *
+            * @callback onFriendRequest
+            *
+            * @param {Carrier}	 carrier	Carrier node instance
+            * @param {string}   userId    	The user id who want be friend with current user
+            * @param {UserInfo} info		The user information to `userId`
+            * @param {string}   hello      The PIN for target user, or any application defined content
+            */
+           onFriendRequest: null,
+
+           /**
+            * The callback function to process the new friend added event.
+            *
+            * @callback onFriendAdded
+            *
+            * @param {Carrier}	    carrier		Carrier node instance
+            * @param {FriendInfo}  friendInfo	The added friend's information
+            */
+           onFriendAdded: null,
+
+           /**
+            * The callback function to process the friend removed event.
+            *
+            * @callback onFriendRemoved
+            *
+            * @param {Carrier}	carrier		Carrier node instance
+            * @param {string}  friendId   	The friend's user id
+            */
+           onFriendRemoved: null,
+
+           /**
+            * The callback function to process the friend message.
+            *
+            * @callback onFriendMessage
+            *
+            * @param {Carrier}	carrier		Carrier node instance
+            * @param {string}  from     	The id from who send the message
+            * @param {string}  message   	The message content
+            */
+           onFriendMessage: null,
+
+           /**
+            * The callback function to process the friend invite request.
+            *
+            * @callback onFriendInviteRequest
+            *
+            * @param {Carrier}	carrier		Carrier node instance
+            * @param {string}  from       	The user id from who send the invite request
+            * @param {string}  data       	The application defined data sent from friend
+            */
+           onFriendInviteRequest: null,
+
+           /**
+            * The callback function that handle session request.
+            *
+            * @callback onSessionRequest
+            *
+            * @param {Carrier}	carrier		Carrier node instance
+            * @param {string}  from        The id who send the message
+            * @param {string}  sdp         The remote users SDP. Reference: https://tools.ietf.org/html/rfc4566
+            */
+           onSessionRequest: null,
+       }
+   }
+
+   Carrier.prototype = {
+       constructor: Carrier,
+
+       /** @property {number} nospam The nospam for Carrier address is used to eliminate spam friend. **/
+       set nospam(value) {
+           var me = this;
+           var success = function(ret) {
+               me._nospam = value;
+           };
+           this.process(success, null, "setNospam", [this.objId, value]);
+       },
+
+       get nospam() {
+           return this._nospam;
+       },
+
+       /** @property {number} presence Presence status. **/
+       set presence(value) {
+           var me = this;
+           var success = function(ret) {
+               me._presence = value;
+           };
+           this.process(success, null, "setPresence", [this.objId, value]);
+       },
+
+       get presence() {
+           return this._presence;
+       },
+
+       /**
+        * Add or remove Carrier callback.
+        *
+        * @param {string}   name       The callback name.
+        * @param {Function} callback   The function to add or change callback function. If set to null, will remove callback.
+        */
+       on: function (name, callback) {
+           if (typeof callback != 'function') {
+               return false;
+           }
+           for (var i = 0; i &lt; CARRIER_CB_NAMES.length; i++) {
+               if (name == CARRIER_CB_NAMES[i]) {
+                   this.callbacks[name] = callback;
+                   return true;
+               }
+           }
+           return fasle;
+       },
+
+       process: function (onSuccess, onError, name, args) {
+           var me = this;
+           var _onSuccess = function (ret) {
+               ret.carrier = me;
+               if (onSuccess) onSuccess(ret);
+           };
+           exec(_onSuccess, onError, 'CarrierPlugin', name, args);
+       },
+
+       /**
+        * Start carrier node asynchronously to connect to carrier network. If the connection
+        * to network is successful, carrier node starts working.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {number}   iterateInterval Internal loop interval, in milliseconds.
+        */
+       start: function (onSuccess, onError, iterateInterval) {
+           this.process(onSuccess, onError, "carrierStart", [this.objId, iterateInterval]);
+       },
+
+
+       /**
+        * Get self user information.
+        *
+        * @param {Function} onSuccess  The function to call when success, the param is a UserInfo: the user information to the carrier node.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        */
+       getSelfInfo: function (onSuccess, onError) {
+           this.process(onSuccess, onError, "getSelfInfo", [this.objId]);
+       },
+
+       /**
+        * Update self user information.
+        * After self user information changed, carrier node will update this information
+        * to carrier network, and thereupon network broadcasts the change to all friends.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {UserInfo} userinfo   The user information to update for this carrier node.
+        */
+       setSelfInfo: function (onSuccess, onError, name, value) {
+           this.process(onSuccess, onError, "setSelfInfo", [this.objId, name, value]);
+       },
+
+
+       // /**
+       //  * Get the nospam for Carrier address.
+       //  *
+       //  * Get the 4-byte nospam part of the Carrier address with host byte order
+       //  * expected. Nospam for Carrier address is used to eliminate spam friend
+       //  * request.
+       //  *
+       //  * @param {Function} onSuccess  The function to call when success, the param is a Number: nospam.
+       //  * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+       //  */
+       // getNospam: function (onSuccess, onError) {
+       //     this.process(onSuccess, onError, "getNospam", [this.objId]);
+       // },
+
+       // /**
+       //  * Update self nospam of address for this carrier node.
+       //  *
+       //  * Update the nospam of carrier node address with host byte order
+       //  * expected. Nospam for Carrier address is used to eliminate spam friend
+       //  * request.
+       //  *
+       //  * @param {Function} onSuccess  The function to call when success.
+       //  * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+       //  * @param {number}   nospam 	An integer value.
+       //  */
+       // setNospam: function (onSuccess, onError, nospam) {
+       //     this.process(onSuccess, onError, "setNospam", [this.objId, nospam]);
+       // },
+
+       // /**
+       //  * Get self presence status.
+       //  *
+       //  * @param {Function} onSuccess  The function to call when success, the param is a Number: presence status.
+       //  * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+       //  */
+       // getPresence: function (onSuccess, onError) {
+       //     this.process(onSuccess, onError, "getPresence", [this.objId]);
+       // },
+
+       // /**
+       //  * Update self presence status.
+       //  *
+       //  * @param {Function} onSuccess  The function to call when success.
+       //  * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+       //  * @param {number}   presence   the new presence status.
+       //  */
+       // setPresence: function (onSuccess, onError, presence) {
+       //     this.process(onSuccess, onError, "setPresence", [this.objId, presence]);
+       // },
+
+       /**
+        * Check if carrier node instance is being ready.
+        *
+        * All carrier interactive APIs should be called only if carrier node instance
+        * is being ready.
+        *
+        * @param {Function} onSuccess  The function to call when success, the param is a Boolean: true if the carrier node instance is ready, or false if not.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        */
+       isReady: function (onSuccess, onError) {
+           this.process(onSuccess, onError, "isReady", [this.objId]);
+       },
+
+       /**
+        * Get friends list.
+        *
+        * @param {Function} onSuccess  The function to call when success, the param is a {friendId: info} Object: The list of friend information to current user.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        */
+       getFriends: function (onSuccess, onError) {
+           this.process(onSuccess, onError, "getFriends", [this.objId]);
+       },
+
+       /**
+        * Get specified friend information.
+        *
+        * @param {Function} onSuccess  The function to call when success, the param is a FriendInfo: The friend information.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   userId		The user identifier of friend
+        */
+       getFriend: function (onSuccess, onError, userId) {
+           this.process(onSuccess, onError, "getFriend", [this.objId, userId]);
+       },
+
+       /**
+        * Set the label of the specified friend.
+        *
+        * The label of a friend is a private alias name for current user. It can be
+        * seen by current user only, and has no impact to the target friend itself.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   userId		The friend's user identifier
+        * @param {string}   label		The new label of specified friend
+        */
+       labelFriend: function (onSuccess, onError, userId, label) {
+           this.process(onSuccess, onError, "labelFriend", [this.objId, userId, label]);
+       },
+
+       /**
+        * Check if the user ID is friend.
+        *
+        * @param {Function} onSuccess  The function to call when success, the param is a Boolean: True if the user is a friend, or false if not.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   userId 	The userId to check.
+        */
+       isFriend: function (onSuccess, onError, userId, label) {
+           this.process(onSuccess, onError, "isFriend", [this.objId, userId]);
+       },
+
+       /**
+        * Add friend by sending a new friend request.
+        *
+        * This function will add a new friend with specific address, and then
+        * send a friend request to the target node.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   address 	the target user address of remote carrier node.
+        * @param {string}   hello 	 	PIN for target user, or any application defined content.
+        */
+       addFriend: function (onSuccess, onError, address, hello) {
+           this.process(onSuccess, onError, "addFriend", [this.objId, address, hello]);
+       },
+
+       /**
+        * Accept the friend request.
+        *
+        * This function is used to add a friend in response to a friend request.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   userId 	The user id who want be friend with us.
+        */
+       acceptFriend: function (onSuccess, onError, userId) {
+           this.process(onSuccess, onError, "acceptFriend", [this.objId, userId]);
+       },
+
+       /**
+        * Remove a friend.
+        *
+        * This function will remove a friend on this carrier node.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   userId	    The target user id to remove friendship
+        */
+       removeFriend: function (onSuccess, onError, userId) {
+           this.process(onSuccess, onError, "removeFriend", [this.objId, userId]);
+       },
+
+       /**
+        * Send a message to a friend.
+        *
+        * The message length may not exceed MAX_APP_MESSAGE_LEN, and message itself
+        * should be text-formatted. Larger messages must be split by application
+        * and sent as separate messages. Other nodes can reassemble the fragments.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   to 		The target id
+        * @param {string}   message	The message content defined by application
+        */
+       sendFriendMessage: function (onSuccess, onError, to, message) {
+           this.process(onSuccess, onError, "sendFriendMessage", [this.objId, to, message]);
+       },
+
+       /**
+        * Send invite request to a friend.
+        *
+        * Application can attach the application defined data with in the invite
+        * request, and the data will send to target friend.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   to			The target id
+        * @param {string}   data 		The application defined data send to target user
+        * @param {onFriendInviteResponse}   handler	The handler to receive invite reponse
+        */
+       inviteFriend: function (onSuccess, onError, to, data, handler) {
+           var handlerId = 0;
+           if (typeof handler == "function") {
+               handlerId = this.carrierPlugin.addFriendInviteResponseCB(handler, this);
+           }
+           this.process(onSuccess, onError, "inviteFriend", [this.objId, to, data, handlerId]);
+       },
+
+       /**
+        * Reply the friend invite request.
+        *
+        * This function will send a invite response to friend.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   to			The id who send invite request
+        * @param {number}   status		The status code of the response. 0 is success, otherwise is error
+        * @param {string}   reason		The error message if status is error, or null if success
+        * @param {string}   data		The application defined data send to target user. If the status is error, this will be ignored
+        */
+       replyFriendInvite: function (onSuccess, onError, to, status, reason, data) {
+           this.process(onSuccess, onError, "replyFriendInvite", [this.objId, to, status, reason, data]);
+       },
+
+       /**
+        * Create a new session to a friend.
+        *
+        * The session object represent a conversation handle to a friend.
+        *
+        * @param {Function} onSuccess  The function to call when success, the param is a Session Object: The new Session object
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   to         The target id(userid or userid@nodeid).
+        */
+       newSession: function (onSuccess, onError, to) {
+           var me = this;
+           var _onSuccess = function (ret) {
+               var session = new Session();
+               session.objId = ret.id;
+               session.peer = ret.peer;
+               session.carrier = me;
+               session.carrierPlugin = me.carrierPlugin;
+               if (onSuccess) onSuccess(session);
+           };
+           exec(_onSuccess, onError, 'CarrierPlugin', 'newSession', [this.objId, to]);
+       },
+
+       /**
+        * Disconnect carrier node from carrier network, and destroy all associated resources to carreier node instance.
+        * After calling the method, the carrier node instance becomes invalid.
+        *
+        * @param {Function} onSuccess  The function to call when success.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        */
+       destroy: function (onSuccess, onError) {
+           exec(onSuccess, onError, 'CarrierPlugin', 'destroy', [this.objId]);
+       }
+   }
+
+   /**
+   * @exports carrierPlugin
+   */
+   function CarrierPlugin() {
+       this.carriers = [];
+       this.streams = [];
+
+       this.FriendInviteEvent = [];
+       this.FriendInviteCount = 0;
+       this.SRCEvent = [];
+       this.SRCCount = 0;
+
+       const CARRIER = 1;
+       const SESSION = 2;
+       const STREAM = 3;
+       const FRIEND_INVITE = 4;
+
+       /**
+        * @description
+        * Carrier node connection status to the carrier network.
+        *
+        * @enum {number}
+        */
+       this.ConnectionStatus = {
+           /** Carrier node connected to the carrier network. */
+           CONNECTED: 0,
+           /** There is no connection to the carrier network. */
+           DISCONNECTED: 1
+       }
+
+       /**
+        * @description
+        * Carrier node presence status.
+        *
+        * @enum {number}
+        */
+       this.PresenceStatus = {
+           /** Carrier node is online and available. */
+           NONE: 0,
+           /** Carrier node is being away. */
+           AWAY: 1,
+           /** Carrier node is being busy. */
+           BUSY: 2
+       }
+
+       /**
+        * @description
+        * Carrier stream type. Reference: https://tools.ietf.org/html/rfc4566#section-5.14 https://tools.ietf.org/html/rfc4566#section-8
+        *
+        * @enum {number}
+        */
+       this.StreamType = {
+           /** Audio stream. */
+           AUDIO: 0,
+           /** Video stream. */
+           VIDEO: 1,
+           /** Text stream. */
+           TEXT: 2,
+           /** Application stream. */
+           APPLICATION: 3,
+           /** Message stream. */
+           MESSAGE: 4,
+       }
+
+       /**
+        * @description
+        * Carrier stream state The stream state will be changed according to the phase of the stream.
+        *
+        * @enum {number}
+        */
+       this.StreamState = {
+           /** Raw stream. */
+           RAW: 0,
+           /** Initialized stream. */
+           INITIALIZED: 1,
+           /** The underlying transport is ready for the stream to start. */
+           TRANSPORT_READY: 2,
+           /** The stream is trying to connect the remote. */
+           CONNECTING: 3,
+           /** The stream connected with remove peer. */
+           CONNECTED: 4,
+           /** The stream is deactived. */
+           DEACTIVATED: 5,
+           /** The stream closed gracefully. */
+           CLOSED: 6,
+           /** The stream is on error, cannot to continue. */
+           ERROR: 7,
+       }
+
+       /**
+        * @description
+        * Carrier Stream's candidate type.
+        *
+        * @enum {number}
+        */
+       this.CandidateType = {
+           /** Host candidate. */
+           HOST: 0,
+           /** Server reflexive, only valid to ICE transport. */
+           SERVE_RREFLEXIVE: 1,
+           /** Peer reflexive, only valid to ICE transport. */
+           PEER_REFLEXIVE: 2,
+           /** Relayed Candidate, only valid to ICE tranport. */
+           RELAYED: 3,
+       }
+
+       /**
+        * @description
+        * Carrier network topology for session peers related to each other.
+        *
+        * @enum {number}
+        */
+       this.NetworkTopology = {
+           /** LAN network topology. */
+           LAN: 0,
+           /** P2P network topology. */
+           P2P: 1,
+           /** Relayed netowrk topology. */
+           RELAYED: 2,
+       }
+
+       /**
+        * @description
+        * Port forwarding supported protocols.
+        *
+        * @enum {number}
+        */
+       this.PortForwardingProtocol = {
+           /** TCP protocol. */
+           TCP: 1,
+       }
+
+       /**
+        * @description
+        * Multiplexing channel close reason mode.
+        *
+        * @enum {number}
+        */
+       this.CloseReason = {
+           /** Channel closed normaly. */
+           NORMAL: 0,
+           /** Channel closed because of timeout. */
+           TIMEOUT: 1,
+           /** Channel closed because error occured. */
+           ERROR: 2,
+       }
+
+       /**
+        * @description
+        * Carrier stream mode.
+        *
+        * @enum {number}
+        */
+       this.StreamMode = {
+           /**
+            * Compress option, indicates data would be compressed before transmission.
+            * For now, just reserved this bit option for future implement.
+            */
+           COMPRESS: 1,
+           /**
+            * Encrypt option, indicates data would be transmitted with plain mode.
+            * which means that transmitting data would be encrypted in default.
+            */
+           PLAIN: 2,
+           /**
+            * Relaible option, indicates data transmission would be reliable, and be
+            * guranteed to received by remote peer, which acts as TCP transmission
+            * protocol. Without this option bitwised, the transmission would be
+            * unreliable as UDP transmission protocol.
+            */
+           RELIABLE: 4,
+           /**
+            * Multiplexing option, indicates multiplexing would be activated on
+            * enstablished stream, and need to use multipexing APIs related with channel
+            * instread of APIs related strema to send/receive data.
+            */
+           MULTIPLEXING: 8,
+           /**
+            * PortForwarding option, indicates port forwarding would be activated
+            * on established stream. This options should bitwise with 'Multiplexing'
+            * option.
+            */
+           PORT_FORWARDING: 16,
+       }
+
+       Object.freeze(CarrierPlugin.prototype);
+       Object.freeze(Carrier.prototype);
+       Object.freeze(Session.prototype);
+       Object.freeze(Stream.prototype);
+
+       Object.freeze(this.ConnectionStatus);
+       Object.freeze(this.PresenceStatus);
+       Object.freeze(this.StreamType);
+       Object.freeze(this.StreamState);
+       Object.freeze(this.CandidateType);
+       Object.freeze(this.NetworkTopology);
+       Object.freeze(this.PortForwardingProtocol);
+       Object.freeze(this.CloseReason);
+       Object.freeze(this.StreamMode);
+
+       exec(function () { }, null, 'CarrierPlugin', 'initVal', []);
+
+       var me = this;
+
+       this.onCarrierEvent = function (event) {
+           event.carrier = me.carriers[event.id];
+           if (event.carrier) {
+               //        event.id = null;
+               if (event.carrier.callbacks[event.name]) {
+                   event.carrier.callbacks[event.name](event);
+               }
+           }
+           else {
+               alert(event.name);
+           }
+       },
+
+       this.onStreamEvent = function (event) {
+           event.stream = me.streams[event.id];
+           event.id = null;
+           if (event.stream &amp;&amp; event.stream.callbacks[event.name]) {
+               event.stream.callbacks[event.name](event);
+           }
+       },
+
+       //FriendInviteResponseHandler
+       this.addFriendInviteResponseCB = function (callback, carrier) {
+           me.FriendInviteCount++;
+           me.FriendInviteEvent[me.FriendInviteCount] = new Object;
+           me.FriendInviteEvent[me.FriendInviteCount].callback = callback;
+           me.FriendInviteEvent[me.FriendInviteCount].carrier = carrier
+           return me.FriendInviteCount;
+       },
+
+       this.onFriendInviteResponse = function (event) {
+           var id = event.id;
+           event.id = null;
+           if (me.FriendInviteEvent[id].callback) {
+               event.carrier = me.FriendInviteEvent[id].carrier;
+               me.FriendInviteEvent[id].callback(event);
+           }
+       };
+
+       //SessionRequestCompleteHandler
+       this.addSessionRequestCompleteCB = function (callback, session) {
+           me.SRCCount++;
+           me.SRCEvent[me.SRCCount] = new Object;
+           me.SRCEvent[me.SRCCount].callback = callback;
+           me.SRCEvent[me.SRCCount].session = session
+           return me.SRCCount;
+       };
+
+       this.onSessionRequestComplete = function (event) {
+           var id = event.id;
+           event.id = null;
+           if (me.SRCEvent[id].callback) {
+               event.session = me.SRCEvent[id].session;
+               me.SRCEvent[id].callback(event);
+           }
+       };
+
+       this.setListener(CARRIER, this.onCarrierEvent);
+       this.setListener(STREAM, this.onStreamEvent);
+       this.setListener(FRIEND_INVITE, this.onFriendInviteResponse);
+       this.setListener(SESSION, this.onSessionRequestComplete);
+   }
+
+   CarrierPlugin.prototype = {
+       constructor: CarrierPlugin,
+
+       options: {
+           udpEnabled: true,
+           persistentLocation: ".data"
+       },
+
+       setListener: function (type, eventCallback) {
+           exec(eventCallback, null, 'CarrierPlugin', 'setListener', [type]);
+       },
+
+       /**
+        * Get current version of Carrier node.
+        *
+        * @param {Function} onSuccess  The function to call when success, the param is a String: The version of carrier node.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {callback} onSuccess  The version of carrier node
+        */
+       getVersion: function (onSuccess, onError) {
+           exec(onSuccess, onError, 'CarrierPlugin', 'getVersion', []);
+       },
+
+       /**
+        * Check if the ID is Carrier node id.
+        *
+        * @param {Function} onSuccess  The function to call when success, the param is a Boolean: True if id is valid, otherwise false.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   id		   The carrier node id to be check.
+        */
+       isValidId: function (onSuccess, onError, id) {
+           var _onSuccess = function (ret) {
+               if (onSuccess) onSuccess(ret == "true" ? true : false);
+           };
+
+           exec(_onSuccess, onError, 'CarrierPlugin', 'isValidAddress', [id]);
+       },
+
+       /**
+        * Check if the carrier node address is valid.
+        *
+        * @param {Function} onSuccess  The function to call when success, the param is a Boolean: True if key is valid, otherwise false.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   address    The carrier node address to be check.
+        */
+       isValidAddress: function (onSuccess, onError, address) {
+           var _onSuccess = function (ret) {
+               if (onSuccess) onSuccess(ret == "true" ? true : false);
+           };
+
+           exec(_onSuccess, onError, 'CarrierPlugin', 'isValidAddress', [address]);
+       },
+
+       /**
+        * Get carrier ID from carrier node address.
+        *
+        * @param {Function} onSuccess  The function to call when success, the param is a String: User id if address is valid, otherwise null.
+        * @param {Function} [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {string}   address    The carrier node address.
+        */
+       getIdFromAddress: function (onSuccess, onError, address) {
+           exec(onSuccess, onError, 'CarrierPlugin', 'getIdFromAddress', [address]);
+       },
+
+       /**
+        * Create a carrier object instance. After initializing the instance,
+        * it's ready to start and therefore connect to carrier network.
+        *
+        * @param {Function}  onSuccess  The function to call when success.
+        * @param {Function}  [onError]  The function to call when error, the param is a String. Or set to null.
+        * @param {Options}   [options]	 The options to set for creating carrier node. If set to null, will use default.
+        * @param {CarrierCallbacks} callbacks The callbacks for carrier node.
+        */
+       createObject: function (onSuccess, onError, options, callbacks) {
+           var carrier = new Carrier();
+           var me = this;
+           var _onSuccess = function (ret) {
+               carrier.objId = ret.id;
+               carrier.nodeId = ret.nodeId;
+               carrier.userId = ret.userId;
+               carrier.address = ret.address;
+               carrier._nospam = ret.nospam;
+               carrier._presence = ret.presence;
+               carrier.carrierPlugin = me;
+               me.carriers[carrier.objId] = carrier;
+               if (onSuccess) onSuccess(carrier);
+           };
+           if (typeof (options) == "undefined" || options == null) {
+               options = this.options;
+           }
+
+           if (typeof (callbacks) != "undefined" &amp;&amp; callbacks != null) {
+               for (var i = 0; i &lt; CARRIER_CB_NAMES.length; i++) {
+                   var name = CARRIER_CB_NAMES[i];
+                   carrier.callbacks[name] = callbacks[name];
+               }
+           }
+
+           var configString = JSON.stringify(options);
+           exec(_onSuccess, onError, 'CarrierPlugin', 'createObject', ["im", configString]);
+       },
+
+   }
+
+   CarrierPlugin.prototype.test = function (onSuccess, onError, buf) {
+       //    var data = base64.fromArrayBuffer(buf);
+       exec(onSuccess, onError, 'CarrierPlugin', 'test', [buf]);
+   };
+
+
+   module.exports = new CarrierPlugin();
+</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">
+	Elastos Foundation © 2017-2019
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
+	
+		on Thu Sep 26th 2019
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

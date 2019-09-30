@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Elastos Browser (Trinity) Source: cordova-plugin-dialogs/www/notification.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.paper.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Elastos Browser (Trinity)</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-Acceleration.html">Acceleration</a></li><li><a href="module-Accelerometer.html">Accelerometer</a></li><li><a href="module-AppManager.html">AppManager</a></li><li><a href="module-AppService.html">AppService</a></li><li><a href="module-Camera.html">Camera</a></li><li><a href="module-CameraConstants.html">CameraConstants</a></li><li><a href="module-CameraPopoverHandle.html">CameraPopoverHandle</a></li><li><a href="module-CameraPopoverOptions.html">CameraPopoverOptions</a></li><li><a href="module-Capture.html">Capture</a></li><li><a href="module-CarrierPlugin.html">CarrierPlugin</a></li><li><a href="module-carrierPlugin_.html">carrierPlugin</a></li><li><a href="module-Connection.html">Connection</a></li><li><a href="module-Flashlight.html">Flashlight</a></li><li><a href="module-Geolocation.html">Geolocation</a></li><li><a href="module-InAppBrowser.html">InAppBrowser</a></li><li><a href="module-Notification.html">Notification</a></li><li><a href="module-Position.html">Position</a></li><li><a href="module-ScreenOrientation.html">ScreenOrientation</a></li><li><a href="module-Splashscreen.html">Splashscreen</a></li><li><a href="module-StatusBar.html">StatusBar</a></li><li><a href="module-Vibration.html">Vibration</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Battery.html">Battery</a></li><li><a href="Clipboard.html">Clipboard</a></li><li><a href="Coordinates.html">Coordinates</a></li><li><a href="Device.html">Device</a></li><li><a href="FileReader.html">FileReader</a></li><li><a href="FileSystem.html">FileSystem</a></li><li><a href="FileUploadOptions.html">FileUploadOptions</a></li><li><a href="FileUploadResult.html">FileUploadResult</a></li><li><a href="FileWriter.html">FileWriter</a></li><li><a href="Media.html">Media</a></li><li><a href="module-AppManager-AppManager.html">AppManager~AppManager</a></li><li><a href="module-AppService-AppService.html">AppService~AppService</a></li><li><a href="module-CarrierPlugin-Carrier.html">CarrierPlugin~Carrier</a></li><li><a href="module-CarrierPlugin-Session.html">CarrierPlugin~Session</a></li><li><a href="module-CarrierPlugin-Stream.html">CarrierPlugin~Stream</a></li><li><a href="PositionError.html">PositionError</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#CaptureAudioOptions">CaptureAudioOptions</a></li><li><a href="global.html#CaptureError">CaptureError</a></li><li><a href="global.html#CaptureImageOptions">CaptureImageOptions</a></li><li><a href="global.html#CaptureVideoOptions">CaptureVideoOptions</a></li><li><a href="global.html#ConfigurationData">ConfigurationData</a></li><li><a href="global.html#cordova">cordova</a></li><li><a href="global.html#DirectoryEntry">DirectoryEntry</a></li><li><a href="global.html#DirectoryReader">DirectoryReader</a></li><li><a href="global.html#Entry">Entry</a></li><li><a href="global.html#File">File</a></li><li><a href="global.html#FileEntry">FileEntry</a></li><li><a href="global.html#FileError">FileError</a></li><li><a href="global.html#Flags">Flags</a></li><li><a href="global.html#MediaFile">MediaFile</a></li><li><a href="global.html#MediaFileData">MediaFileData</a></li><li><a href="global.html#Metadata">Metadata</a></li><li><a href="global.html#namedColors">namedColors</a></li><li><a href="global.html#readFailureCallback">readFailureCallback</a></li><li><a href="global.html#readSuccessCallback">readSuccessCallback</a></li><li><a href="global.html#resolveLocalFileSystemURL">resolveLocalFileSystemURL</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: cordova-plugin-dialogs/www/notification.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">/*
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ *
+*/
+
+var exec = require('cordova/exec');
+var platform = require('cordova/platform');
+
+/**
+ * Provides access to notifications on the device.
+ */
+
+/**
+* @exports Notification
+*/
+module.exports = {
+
+    /**
+     * Open a native alert dialog, with a customizable title and button text.
+     *
+     * @param {String} message              Message to print in the body of the alert
+     * @param {Function} completeCallback   The callback that is called when user clicks on a button.
+     * @param {String} title                Title of the alert dialog (default: Alert)
+     * @param {String} buttonLabel          Label of the close button (default: OK)
+     */
+    alert: function (message, completeCallback, title, buttonLabel) {
+        var _message = (typeof message === 'string' ? message : JSON.stringify(message));
+        var _title = (typeof title === 'string' ? title : 'Alert');
+        var _buttonLabel = (buttonLabel &amp;&amp; typeof buttonLabel === 'string' ? buttonLabel : 'OK');
+        exec(completeCallback, null, 'Notification', 'alert', [_message, _title, _buttonLabel]);
+    },
+
+    /**
+     * Open a native confirm dialog, with a customizable title and button text.
+     * The result that the user selects is returned to the result callback.
+     *
+     * @param {String} message              Message to print in the body of the alert
+     * @param {Function} resultCallback     The callback that is called when user clicks on a button.
+     * @param {String} title                Title of the alert dialog (default: Confirm)
+     * @param {Array} buttonLabels          Array of the labels of the buttons (default: ['OK', 'Cancel'])
+     */
+    confirm: function (message, resultCallback, title, buttonLabels) {
+        var _message = (typeof message === 'string' ? message : JSON.stringify(message));
+        var _title = (typeof title === 'string' ? title : 'Confirm');
+        var _buttonLabels = (buttonLabels || ['OK', 'Cancel']);
+
+        // Strings are deprecated!
+        if (typeof _buttonLabels === 'string') {
+            console.log('Notification.confirm(string, function, string, string) is deprecated.  Use Notification.confirm(string, function, string, array).');
+        }
+
+        _buttonLabels = convertButtonLabels(_buttonLabels);
+
+        exec(resultCallback, null, 'Notification', 'confirm', [_message, _title, _buttonLabels]);
+    },
+
+    /**
+     * Open a native prompt dialog, with a customizable title and button text.
+     * The following results are returned to the result callback:
+     *  buttonIndex     Index number of the button selected.
+     *  input1          The text entered in the prompt dialog box.
+     *
+     * @param {String} message              Dialog message to display (default: "Prompt message")
+     * @param {Function} resultCallback     The callback that is called when user clicks on a button.
+     * @param {String} title                Title of the dialog (default: "Prompt")
+     * @param {Array} buttonLabels          Array of strings for the button labels (default: ["OK","Cancel"])
+     * @param {String} defaultText          Textbox input value (default: empty string)
+     */
+    prompt: function (message, resultCallback, title, buttonLabels, defaultText) {
+        var _message = (typeof message === 'string' ? message : JSON.stringify(message));
+        var _title = (typeof title === 'string' ? title : 'Prompt');
+        var _buttonLabels = (buttonLabels || ['OK', 'Cancel']);
+
+        // Strings are deprecated!
+        if (typeof _buttonLabels === 'string') {
+            console.log('Notification.prompt(string, function, string, string) is deprecated.  Use Notification.confirm(string, function, string, array).');
+        }
+
+        _buttonLabels = convertButtonLabels(_buttonLabels);
+
+        var _defaultText = (defaultText || '');
+        exec(resultCallback, null, 'Notification', 'prompt', [_message, _title, _buttonLabels, _defaultText]);
+    },
+
+    /**
+     * Causes the device to beep.
+     * On Android, the default notification ringtone is played "count" times.
+     *
+     * @param {Integer} count       The number of beeps.
+     */
+    beep: function (count) {
+        var defaultedCount = count || 1;
+        exec(null, null, 'Notification', 'beep', [ defaultedCount ]);
+    }
+};
+
+function convertButtonLabels (buttonLabels) {
+
+    // Some platforms take an array of button label names.
+    // Other platforms take a comma separated list.
+    // For compatibility, we convert to the desired type based on the platform.
+    if (platform.id === 'amazon-fireos' || platform.id === 'android' || platform.id === 'ios' ||
+        platform.id === 'windowsphone' || platform.id === 'firefoxos' || platform.id === 'ubuntu' ||
+        platform.id === 'windows8' || platform.id === 'windows') {
+
+        if (typeof buttonLabels === 'string') {
+            buttonLabels = buttonLabels.split(','); // not crazy about changing the var type here
+        }
+    } else {
+        if (Array.isArray(buttonLabels)) {
+            var buttonLabelArray = buttonLabels;
+            buttonLabels = buttonLabelArray.toString();
+        }
+    }
+
+    return buttonLabels;
+}
+</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">
+	Elastos Foundation © 2017-2019
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
+	
+		on Thu Sep 26th 2019
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

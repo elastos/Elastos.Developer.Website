@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Elastos Browser (Trinity) Source: cordova-plugin-device/www/device.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.paper.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Elastos Browser (Trinity)</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-Acceleration.html">Acceleration</a></li><li><a href="module-Accelerometer.html">Accelerometer</a></li><li><a href="module-AppManager.html">AppManager</a></li><li><a href="module-AppService.html">AppService</a></li><li><a href="module-Camera.html">Camera</a></li><li><a href="module-CameraConstants.html">CameraConstants</a></li><li><a href="module-CameraPopoverHandle.html">CameraPopoverHandle</a></li><li><a href="module-CameraPopoverOptions.html">CameraPopoverOptions</a></li><li><a href="module-Capture.html">Capture</a></li><li><a href="module-CarrierPlugin.html">CarrierPlugin</a></li><li><a href="module-carrierPlugin_.html">carrierPlugin</a></li><li><a href="module-Connection.html">Connection</a></li><li><a href="module-Flashlight.html">Flashlight</a></li><li><a href="module-Geolocation.html">Geolocation</a></li><li><a href="module-InAppBrowser.html">InAppBrowser</a></li><li><a href="module-Notification.html">Notification</a></li><li><a href="module-Position.html">Position</a></li><li><a href="module-ScreenOrientation.html">ScreenOrientation</a></li><li><a href="module-Splashscreen.html">Splashscreen</a></li><li><a href="module-StatusBar.html">StatusBar</a></li><li><a href="module-Vibration.html">Vibration</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Battery.html">Battery</a></li><li><a href="Clipboard.html">Clipboard</a></li><li><a href="Coordinates.html">Coordinates</a></li><li><a href="Device.html">Device</a></li><li><a href="FileReader.html">FileReader</a></li><li><a href="FileSystem.html">FileSystem</a></li><li><a href="FileUploadOptions.html">FileUploadOptions</a></li><li><a href="FileUploadResult.html">FileUploadResult</a></li><li><a href="FileWriter.html">FileWriter</a></li><li><a href="Media.html">Media</a></li><li><a href="module-AppManager-AppManager.html">AppManager~AppManager</a></li><li><a href="module-AppService-AppService.html">AppService~AppService</a></li><li><a href="module-CarrierPlugin-Carrier.html">CarrierPlugin~Carrier</a></li><li><a href="module-CarrierPlugin-Session.html">CarrierPlugin~Session</a></li><li><a href="module-CarrierPlugin-Stream.html">CarrierPlugin~Stream</a></li><li><a href="PositionError.html">PositionError</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#CaptureAudioOptions">CaptureAudioOptions</a></li><li><a href="global.html#CaptureError">CaptureError</a></li><li><a href="global.html#CaptureImageOptions">CaptureImageOptions</a></li><li><a href="global.html#CaptureVideoOptions">CaptureVideoOptions</a></li><li><a href="global.html#ConfigurationData">ConfigurationData</a></li><li><a href="global.html#cordova">cordova</a></li><li><a href="global.html#DirectoryEntry">DirectoryEntry</a></li><li><a href="global.html#DirectoryReader">DirectoryReader</a></li><li><a href="global.html#Entry">Entry</a></li><li><a href="global.html#File">File</a></li><li><a href="global.html#FileEntry">FileEntry</a></li><li><a href="global.html#FileError">FileError</a></li><li><a href="global.html#Flags">Flags</a></li><li><a href="global.html#MediaFile">MediaFile</a></li><li><a href="global.html#MediaFileData">MediaFileData</a></li><li><a href="global.html#Metadata">Metadata</a></li><li><a href="global.html#namedColors">namedColors</a></li><li><a href="global.html#readFailureCallback">readFailureCallback</a></li><li><a href="global.html#readSuccessCallback">readSuccessCallback</a></li><li><a href="global.html#resolveLocalFileSystemURL">resolveLocalFileSystemURL</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: cordova-plugin-device/www/device.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">/*
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ *
+*/
+
+var argscheck = require('cordova/argscheck');
+var channel = require('cordova/channel');
+var utils = require('cordova/utils');
+var exec = require('cordova/exec');
+var cordova = require('cordova');
+
+channel.createSticky('onCordovaInfoReady');
+// Tell cordova channel to wait on the CordovaInfoReady event
+channel.waitForInitialization('onCordovaInfoReady');
+
+/**
+ * This represents the mobile device, and provides properties for inspecting the model, version, UUID of the
+ * phone, etc.
+ * @constructor
+ * @property {boolean} cordova    - Get the version of Cordova running on the device.
+ * @property {string}  model      - The device.model returns the name of the device's model or product.
+ * @property {string}  platform   - Get the device's operating system name.
+ * @property {string} uuid       - Get the device's Universally Unique Identifier.
+ * @property {string} version    - Get the operating system version.
+ * @property {string} manufacturer - Get the device's manufacturer.
+ * @property {boolean} isVirtual - whether the device is running on a simulator.
+ * @property {string} serial     - Get the device hardware serial number.
+ */
+function Device () {
+    this.available = false;
+    this.platform = null;
+    this.version = null;
+    this.uuid = null;
+    this.cordova = null;
+    this.model = null;
+    this.manufacturer = null;
+    this.isVirtual = null;
+    this.serial = null;
+
+    var me = this;
+
+    channel.onCordovaReady.subscribe(function () {
+        me.getInfo(function (info) {
+            // ignoring info.cordova returning from native, we should use value from cordova.version defined in cordova.js
+            // TODO: CB-5105 native implementations should not return info.cordova
+            var buildLabel = cordova.version;
+            me.available = true;
+            me.platform = info.platform;
+            me.version = info.version;
+            me.uuid = info.uuid;
+            me.cordova = buildLabel;
+            me.model = info.model;
+            me.isVirtual = info.isVirtual;
+            me.manufacturer = info.manufacturer || 'unknown';
+            me.serial = info.serial || 'unknown';
+            channel.onCordovaInfoReady.fire();
+        }, function (e) {
+            me.available = false;
+            utils.alert('[ERROR] Error initializing Cordova: ' + e);
+        });
+    });
+}
+
+/**
+ * Get device info
+ *
+ * @param {Function} successCallback The function to call when the heading data is available
+ * @param {Function} errorCallback The function to call when there is an error getting the heading data. (OPTIONAL)
+ */
+Device.prototype.getInfo = function (successCallback, errorCallback) {
+    argscheck.checkArgs('fF', 'Device.getInfo', arguments);
+    exec(successCallback, errorCallback, 'Device', 'getDeviceInfo', []);
+};
+
+module.exports = new Device();
+</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">
+	Elastos Foundation © 2017-2019
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
+	
+		on Thu Sep 26th 2019
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>
