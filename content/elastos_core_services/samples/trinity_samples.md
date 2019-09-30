@@ -13,3 +13,7 @@ A default trinity app example, based on ionic's tab sample app. Also contains a 
 ### [Trinity wallet DApp] (https://github.com/elastos/Elastos.Trinity.DApps.Wallet)
 
 Default trinity wallet DApp that you can use as an example to start building your own wallet.
+
+### [Ethereum contracts in Trinity] (https://github.com/elastos/Elastos.Trinity.DApps.Demo.ETHSidechain)
+
+Deploy and run Ethereum sidechain smart contracts for Trinity.
