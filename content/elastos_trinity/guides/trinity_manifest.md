@@ -12,12 +12,13 @@ alwaysopen = false
 {
     "id": "com.mycompany.myapp", // Permanent app identifier. If you change it, your app will be considered as a new app.
     "version": "0.0.1", // Version displayed to end users.
-    "versionCode": 1, // Internal version number. Used to compare versions (newer, older). Increase it every time you publish a new version.
+    "version_code": 1, // Internal version number. Used to compare versions (newer, older). Increase it every time you publish a new version.
     "name": "My App",   // Your application name (app store)
     "short_name": "My App", // Your application name (home screen)
     "description": "My Sample App", // Application description (app store, settings)
     "start_url": "index.html", // Location of your starting ionic html file. Usually index.html but can be a local URL in case of remote debugging
     "type":"file",  // local "file", or remote "url"
+    "category":"finance", // Application category in the app store such as entertainment, games, health, productivity...
     "icons": [ // Array of icons (home screen). Use different size variants if needed, but 512 x 512 is the recommended default choice.
     {
         "src": "logo.png",
