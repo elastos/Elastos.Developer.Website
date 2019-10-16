@@ -48,6 +48,15 @@ ManagerHandler mSessionManagerHandler = new ManagerHandler() {
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+declare let carrierPlugin: any;
+
+let callbacks = {
+    onSessionRequest: session_request_callback,
+}
+
+function session_request_callback(event) {
+    // do something
+}
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -63,6 +72,28 @@ Manager manager = Manager.getInstance();
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+declare let carrierPlugin: any;
+let carrierInst;
+let sessionInst;
+
+function carrierSuccess(ret) {
+    carrierInst = ret;
+}
+
+function carrierError(ret) {
+    // do something
+}
+
+function sessionSuccess(ret) {
+    sessionInst = ret;
+}
+
+function sessionError(ret) {
+    // do something
+}
+
+carrierPlugin.createObject(carrierSuccess, carrierError, null, callbacks);
+carrierInst.newSession(sessionSuccess, sessionError, peerId);
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -101,6 +132,48 @@ AbstractStreamHandler streamHandler = new AbstractStreamHandler {
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+let stream_callbacks = {
+    onStateChanged: state_changed_callback,
+    onStreamData: stream_data_callback,
+    onChannelOpen: channel_open_callback,
+    onChannelOpened: channel_opened_callback,
+    onChannelClose: channel_close_callback,
+    onChannelData: channel_data_callback,
+    onChannelPending: channel_pending_callback,
+    onChannelResume: channel_resume_callback,
+}
+
+function state_changed_callback(event) {
+    // do something
+}
+
+function stream_data_callback(event) {
+    // do something
+}
+
+function channel_open_callback(event) {
+    // do something
+}
+
+function channel_opened_callback(event) {
+    // do something
+}
+
+function channel_close_callback(event) {
+    // do something
+}
+
+function channel_data_callback(event) {
+    // do something
+}
+
+function channel_pending_callback(event) {
+    // do something
+}
+
+function channel_resume_callback(event) {
+    // do something
+}
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -117,6 +190,19 @@ SessionRequestCompleteHandler sessionHandler = new SessionRequestCompleteHandler
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+function session_request_complete_callback(event) {
+    // do something
+}
+
+function success(ret) {
+    // do something
+}
+
+function error(ret) {
+    // do something
+}
+
+sessionInst.request(success, error, session_request_complete_callback);
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -138,6 +224,27 @@ Stream mySecondStream = session.addStream(StreamType.Text, Stream.PROPERTY_RELIA
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+let sessionInst;
+let stream;
+
+function success(ret) {
+    sessionInst = ret;
+}
+
+function error(ret) {
+    // do something
+}
+
+function streamSuccess(ret) {
+    stream = ret;
+}
+
+function streamError(ret) {
+    // do something
+}
+
+carrierInst.newSession(success, error, peerId);
+sessionInst.addStream(streamSuccess, streamError, TEXT, PLAIN, stream_callbacks);
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -155,6 +262,7 @@ session.request(sessionHandler);
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+sessionInst.request(success, error, session_request_complete_callback);
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -170,6 +278,27 @@ Stream stream = session.addStream(StreamType.Application, 0, streamHandler);
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+let sessionInst;
+let stream;
+
+function success(ret) {
+    sessionInst = ret;
+}
+
+function error(ret) {
+    // do something
+}
+
+function streamSuccess(ret) {
+    stream = ret;
+}
+
+function streamError(ret) {
+    // do something
+}
+
+carrierInst.newSession(success, error, peerId);
+sessionInst.addStream(streamSuccess, streamError, TEXT, PLAIN, stream_callbacks);
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -183,6 +312,24 @@ session.start(sdp); // sdp is provided in onSessionRequest()
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+function replySuccess(ret) {
+    // do something
+}
+
+function replyError(ret) {
+    // do something
+}
+
+function startSuccess(ret) {
+    // do something
+}
+
+function startError(ret) {
+    // do something
+}
+
+sessionInst.replyRequest(replySuccess, replyError, 0, "success");
+sessionInst.start(startSuccess, startError, sdp);
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -203,6 +350,7 @@ session.start(sdp); // sdp is provided in onCompletion()
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+sessionInst.start(startSuccess, startError, sdp);
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -217,6 +365,17 @@ int sentSize = stream.writeData(data);
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+function writeSuccess(ret) {
+    // do something
+}
+
+function writeError(ret) {
+    // do something
+}
+
+stream.write(writeSuccess, writeError, data);
+or
+stream.write(writeSuccess, writeError, channel, data);
     {{< /tab >}} 
 {{< /tabs >}}
 
