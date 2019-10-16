@@ -78,6 +78,21 @@ public class DefaultCarrierOptions extends Carrier.Options {
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+declare let carrierPlugin: any;
+
+let callbacks = {};
+
+let carrierInst;
+
+function success(ret) {
+    carrierInst = ret;
+}
+
+function error(ret) {
+    // do something
+}
+
+carrierPlugin.createObject(success, error, null, callbacks);
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -142,6 +157,114 @@ public class DefaultCarrierHandler extends AbstractCarrierHandler {
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+declare let carrierPlugin: any;
+
+let callbacks = {
+    onConnection: connection_callback,
+    onReady: ready_callback,
+    onSelfInfoChanged: self_info_callback,
+    onFriends: friends_list_callback,
+    onFriendConnection: friend_connection_callback,
+    onFriendInfoChanged: friend_info_callback,
+    onFriendPresence: friend_presence_callback,
+    onFriendRequest: friend_request_callback,
+    onFriendAdded: friend_added_callback,
+    onFriendRemoved: friend_removed_callback,
+    onFriendMessage: message_callback,
+    onFriendInviteRequest: invite_request_callback,
+    onSessionRequest: session_request_callback,
+}
+
+function connection_callback(event) {
+    switch (event.status) {
+        case carrierPlugin.ConnectionStatus.CONNECTED:
+            // do something
+            break;
+
+        case carrierPlugin.ConnectionStatus.DISCONNECTED:
+            // do something
+            break;
+
+        default:
+            // do something
+    }
+}
+
+function ready_callback(event) {
+    // do something
+}
+
+function self_info_callback(event) {
+    // do something
+}
+
+function friends_list_callback(event) {
+    // do something
+}
+
+function friend_connection_callback(event) {
+    switch (event.status) {
+        case carrierPlugin.ConnectionStatus.CONNECTED:
+            // do something
+            break;
+
+        case carrierPlugin.ConnectionStatus.DISCONNECTED:
+            // do something
+            break;
+
+        default:
+            // do something
+    }
+}
+
+function friend_info_callback(event) {
+    // do something
+}
+
+function friend_presence_callback(event) {
+    if (event.presence >= carrierPlugin.PresenceStatus.NONE &&
+        event.presence <= carrierPlugin.PresenceStatus.BUSY) {
+        // do something
+    } else {
+        // do something
+    }
+}
+
+function friend_request_callback(event) {
+    // do something
+}
+
+function friend_added_callback(event) {
+    // do something
+}
+
+function friend_removed_callback(event) {
+    // do something
+}
+
+function message_callback(event) {
+    // do something
+}
+
+function invite_request_callback(event) {
+    // do something
+}
+
+function session_request_callback(event) {
+    // do something
+}
+
+let carrierInst;
+
+function success(ret) {
+    carrierInst = ret;
+}
+
+function error(ret) {
+    // do something
+}
+
+carrierPlugin.createObject(success, error, null, callbacks);
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -165,6 +288,7 @@ carrier.start(500); // Start carrier. Wait 500 milliseconds between each check o
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+carrierInst.start(null, null, 500);
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -179,6 +303,7 @@ String myPeerAddress = Carrier.getInstance().getAddress()
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+carrierInst.address;
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -197,6 +322,7 @@ Carrier.getInstance().addFriend(peerAddr, CARRIER_HELLO_AUTH);
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+carrierInst.addFriend(success, error, peerAddress, hello);
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -223,6 +349,7 @@ Carrier.getInstance().acceptFriend(userId);
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+carrierInst.acceptFriend(success, error, userId);
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -244,6 +371,22 @@ public void onFriendConnection(Carrier carrier, String userId, ConnectionStatus 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+declare let carrierPlugin: any;
+
+function friend_connection_callback(event) {
+    switch (event.status) {
+        case carrierPlugin.ConnectionStatus.CONNECTED:
+            // do something
+            break;
+
+        case carrierPlugin.ConnectionStatus.DISCONNECTED:
+            // do something
+            break;
+
+        default:
+            // do something
+    }
+}
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -258,6 +401,7 @@ Carrier.getInstance().sendFriendMessage(userId, message);
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+carrierInst.sendFriendMessage(success, error, userId, message);
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -274,6 +418,9 @@ public void onFriendMessage(Carrier carrier, String userId, String message) {
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+function message_callback(event) {
+    // do something
+}
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -287,5 +434,6 @@ carrier.kill();
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
     {{< tab name="Trinity" codelang="js" >}} 
+carrierInst.destroy(null, null);
     {{< /tab >}} 
 {{< /tabs >}}
