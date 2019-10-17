@@ -35,21 +35,3 @@ Here is a typical http GET call from an ionic app:
             });
         }
     }
-
-### The ionic auto-reload issue
-
-Trinity CLI **run** command actually calls **ionic run** with **auto-reload** feature enabled. This is a great feature as it allows you to get the DApp automatically refreshed every time you save a file in your development editor.
-
-Nevertheless, this ionic auto-reload feature uses a local HTTP proxy server behind the hood, and this leads to getting external HTTP API calls rejected because of CORS access origin verification.
-
-The solution is to configure a proxy in your DApp. Edit **ionic.config.json** as following:
-
-    "proxies": [{
-        "path": "/yourapi",
-        "proxyUrl": "https://api.yourdomain.com"
-    }]
-
-Then in your app, edit your http calls like this:
-
-    this.http.get('/yourapi/your_method').subscribe((response) => {
-    });
