@@ -25,7 +25,7 @@ You need a few things installed on your computer for the CLI to run well:
 ### Installation
 
 {{< highlight "shell" >}}
-$ npm install -g @elastosfoundation/trinity-cli
+$ sudo npm install -g @elastosfoundation/trinity-cli --unsafe-perm
 {{< /highlight >}}
 
 ### Getting help
