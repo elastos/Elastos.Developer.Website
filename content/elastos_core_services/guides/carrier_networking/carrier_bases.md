@@ -7,7 +7,7 @@ pre = ""
 alwaysopen = false
 +++
 
-{{< todo "@BPI @TangZhiLongFind the equivalent codes for swift and trinity" >}}
+{{< todo "@BPI @TangZhiLong Find the equivalent codes for swift" >}}
 
 ## Introduction
 
@@ -105,17 +105,10 @@ A handler object will be provided to carrier, and several callbacks will be trig
 public class DefaultCarrierHandler extends AbstractCarrierHandler {
     @Override
     public void onConnection(Carrier carrier, ConnectionStatus status) {
-        Logger.info("Carrier connection status: " + status);
+        Logger.getGlobal().info("Carrier connection status: " + status);
 
         if(status == ConnectionStatus.Connected) {
-            String msg = "Friend List:";
-            List<FriendInfo> friendList = CarrierHelper.getFriendList();
-            if(friendList != null) {
-                for(FriendInfo info: friendList) {
-                    msg += "\n  " + info.getUserId();
-                }
-            }
-            Logger.info(msg);
+            // Do something
         }
     }
 
@@ -124,33 +117,33 @@ public class DefaultCarrierHandler extends AbstractCarrierHandler {
                                 String userId, 
                                 UserInfo info, 
                                 String hello) {
-        Logger.info("Carrier received friend request. Peer UserId: " + userId);
-        CarrierHelper.acceptFriend(userId, hello);
+        Logger.getGlobal().info("Carrier received friend request. Peer UserId: " + userId);
+        carrier.acceptFriend(userId);
     }
 
     @Override
     public void onFriendAdded(Carrier carrier, FriendInfo info) {
-        Logger.info("Carrier friend added. Peer UserId: " + info.getUserId());
+        Logger.getGlobal().info("Carrier friend added. Peer UserId: " + info.getUserId());
     }
 
     @Override
     public void onFriendConnection(Carrier carrier, 
                                    String friendId, 
                                    ConnectionStatus status) {
-        Logger.info("Carrier friend connect. peer UserId: " + friendId);
-        Logger.info("Friend status:" + status);
+        Logger.getGlobal().info("Carrier friend connect. peer UserId: " + friendId);
+        Logger.getGlobal().info("Friend status:" + status);
 
         if(status == ConnectionStatus.Connected) {
-            CarrierHelper.setPeerUserId(friendId);
+            // Do something
         } else {
-            CarrierHelper.setPeerUserId(null);
+            // Do something
         }
     }
 
     @Override
     public void onFriendMessage(Carrier carrier, String from, byte[] message) {
-        Logger.info("Message from userId: " + from);
-        Logger.info("Message: " + new String(message));
+        Logger.getGlobal().info("Message from userId: " + from);
+        Logger.getGlobal().info("Message: " + new String(message));
     }
 }
   {{< /tab >}} 
@@ -340,7 +333,7 @@ When a peer receives an invitation in onFriendRequest(), he can accept it like t
                                 UserInfo info, 
                                 String hello) {
 if (hello.equals(YOUR_UNIQUE_KEY_FOR_YOUR_APP) == false) {
-    Logger.error("Ignore to accept friend, not expected.");
+    Logger.getGlobal().geterror("Ignore to accept friend, not expected.");
     return;
 }
                                 }
