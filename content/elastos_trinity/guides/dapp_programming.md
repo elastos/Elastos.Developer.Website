@@ -32,9 +32,9 @@ Native ionic/cordova plugins are embedded in the Trinity native application, not
 As a consequence, plugins are currently declared and used in a blind way. As there is no compilation this works perfectly, but result can only be seen while running the DApp in Trinity:
 
     // Declaration
-    declare let appServices: any; // No information about appServices type here.
+    declare let appManager: any; // No information about appServices type here.
 
     // Method call
-    appServices.close(); // No code completion in your editor. If you type a wrong method name you will notice it only at runtime.
+    appManager.close(); // No code completion in your editor. If you type a wrong method name you will notice it only at runtime.
 
 Please refer to the {{< internallink "trinity plugins API reference" "/elastos_core_services/reference/trinity/plugins_api.md" >}} page to know more about plugins usage.

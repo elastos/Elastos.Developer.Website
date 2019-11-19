@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Elastos Browser (Trinity) Class: FileReader</title>
+	<title>Elastos Browser (Trinity) Class: Group</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -79,13 +79,15 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: FileReader</h1>
+	<h1 class="page-title">Class: Group</h1>
 <section>
 
 <header>
     
         <h2>
-        FileReader
+            <span class="ancestors"><a href="module-CarrierPlugin.html">CarrierPlugin</a>~</span>
+        
+        Group
         </h2>
         
     
@@ -98,7 +100,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="FileReader"><span class="type-signature"></span>new FileReader()</h4>
+    <h4 class="name" id="Group"><span class="type-signature"></span>new Group()</h4>
     
     
 </dt>
@@ -106,10 +108,7 @@
 
     
     <div class="description">
-        <p>This class reads the mobile device file system.</p>
-<p>For Android:<br>
-The root directory is the root of the file system.<br>
-To read from the SD card, the file name is &quot;sdcard/my_file.txt&quot;</p>
+        <p>The class representing Group.</p>
     </div>
     
 
@@ -155,8 +154,8 @@ To read from the SD card, the file name is &quot;sdcard/my_file.txt&quot;</p>
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="cordova-plugin-file_www_FileReader.js.html">cordova-plugin-file/www/FileReader.js</a>,
-				 <a href="cordova-plugin-file_www_FileReader.js.html#sunlight-1-line-37">line 37</a>
+				<a href="elastos-trinity-plugins-carrier_www_carrier.js.html">elastos-trinity-plugins-carrier/www/carrier.js</a>,
+				 <a href="elastos-trinity-plugins-carrier_www_carrier.js.html#sunlight-1-line-1222">line 1222</a>
 			</li>
 		</ul>
 	</dd>
@@ -198,83 +197,6 @@ To read from the SD card, the file name is &quot;sdcard/my_file.txt&quot;</p>
 
     
 
-    
-        <h3 class="subsection-title">Members</h3>
-
-        <dl>
-            
-<hr>
-<dt class="name" id=".READ_CHUNK_SIZE">
-    <h4 id=".READ_CHUNK_SIZE"><span class="type-signature">&lt;static> </span>READ_CHUNK_SIZE<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Defines the maximum size to read at a time via the native API. The default value is a compromise between<br>
-minimizing the overhead of many exec() calls while still reporting progress frequently enough for large files.<br>
-(Note attempts to allocate more than a few MB of contiguous memory on the native side are likely to cause<br>
-OOM exceptions, while the JS engine seems to have fewer problems managing large strings or ArrayBuffers.)</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="cordova-plugin-file_www_FileReader.js.html">cordova-plugin-file/www/FileReader.js</a>,
-				 <a href="cordova-plugin-file_www_FileReader.js.html#sunlight-1-line-52">line 52</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        </dl>
     
 
     
@@ -284,7 +206,7 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
             
 <hr>
 <dt>
-    <h4 class="name" id="abort"><span class="type-signature"></span>abort()</h4>
+    <h4 class="name" id="getPeer"><span class="type-signature"></span>getPeer(onSuccess [, onError], peerId)</h4>
     
     
 </dt>
@@ -292,95 +214,7 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 
     
     <div class="description">
-        <p>Abort reading file.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="cordova-plugin-file_www_FileReader.js.html">cordova-plugin-file/www/FileReader.js</a>,
-				 <a href="cordova-plugin-file_www_FileReader.js.html#sunlight-1-line-193">line 193</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="readAsArrayBuffer"><span class="type-signature"></span>readAsArrayBuffer(file)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Read file and return data as a binary data.</p>
+        <p>Get a peer from Group request.</p>
     </div>
     
 
@@ -403,6 +237,8 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
         
 
@@ -415,13 +251,13 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 
         <tr>
             
-                <td class="name"><code>file</code></td>
+                <td class="name"><code>onSuccess</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#File">File</a></span>
+<span class="param-type">function</span>
 
 
 
@@ -429,10 +265,86 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>File object containing file properties</p></td>
+            <td class="description last"><p>The function to call when success.The param is a json String ,<br>
+a peer information ,<br>
+like this{&quot;peerName&quot;:&quot;PEER_NAME&quot;,&quot;peerUserId&quot;:&quot;PEER_ID&quot;}.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onError</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>peerId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The peer's id</p></td>
         </tr>
 
     
@@ -476,8 +388,8 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="cordova-plugin-file_www_FileReader.js.html">cordova-plugin-file/www/FileReader.js</a>,
-				 <a href="cordova-plugin-file_www_FileReader.js.html#sunlight-1-line-285">line 285</a>
+				<a href="elastos-trinity-plugins-carrier_www_carrier.js.html">elastos-trinity-plugins-carrier/www/carrier.js</a>,
+				 <a href="elastos-trinity-plugins-carrier_www_carrier.js.html#sunlight-1-line-1358">line 1358</a>
 			</li>
 		</ul>
 	</dd>
@@ -510,7 +422,7 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
             
 <hr>
 <dt>
-    <h4 class="name" id="readAsBinaryString"><span class="type-signature"></span>readAsBinaryString(file)</h4>
+    <h4 class="name" id="getPeers"><span class="type-signature"></span>getPeers(onSuccess [, onError])</h4>
     
     
 </dt>
@@ -518,7 +430,7 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 
     
     <div class="description">
-        <p>Read file and return data as a binary data.</p>
+        <p>Get peers from Group request.</p>
     </div>
     
 
@@ -541,6 +453,8 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
         
 
@@ -553,13 +467,13 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 
         <tr>
             
-                <td class="name"><code>file</code></td>
+                <td class="name"><code>onSuccess</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#File">File</a></span>
+<span class="param-type">function</span>
 
 
 
@@ -567,10 +481,54 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>File object containing file properties</p></td>
+            <td class="description last"><p>The function to call when success.The param is a json String ,<br>
+group peers information ,<br>
+like this {&quot;PEER_ID&quot;:{&quot;peerName&quot;:&quot;PEER_NAME&quot;,&quot;peerUserId&quot;:&quot;PEER_ID&quot;}}.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onError</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -614,8 +572,8 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="cordova-plugin-file_www_FileReader.js.html">cordova-plugin-file/www/FileReader.js</a>,
-				 <a href="cordova-plugin-file_www_FileReader.js.html#sunlight-1-line-266">line 266</a>
+				<a href="elastos-trinity-plugins-carrier_www_carrier.js.html">elastos-trinity-plugins-carrier/www/carrier.js</a>,
+				 <a href="elastos-trinity-plugins-carrier_www_carrier.js.html#sunlight-1-line-1341">line 1341</a>
 			</li>
 		</ul>
 	</dd>
@@ -648,7 +606,7 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
             
 <hr>
 <dt>
-    <h4 class="name" id="readAsDataURL"><span class="type-signature"></span>readAsDataURL(file)</h4>
+    <h4 class="name" id="getTitle"><span class="type-signature"></span>getTitle(onSuccess [, onError])</h4>
     
     
 </dt>
@@ -656,9 +614,7 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 
     
     <div class="description">
-        <p>Read file and return data as a base64 encoded data url.<br>
-A data url is of the form:<br>
-data:[<mediatype>][;base64],<data></p>
+        <p>Get group title request.</p>
     </div>
     
 
@@ -681,6 +637,8 @@ data:[<mediatype>][;base64],<data></p>
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
         
 
@@ -693,13 +651,13 @@ data:[<mediatype>][;base64],<data></p>
 
         <tr>
             
-                <td class="name"><code>file</code></td>
+                <td class="name"><code>onSuccess</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#File">File</a></span>
+<span class="param-type">function</span>
 
 
 
@@ -707,10 +665,53 @@ data:[<mediatype>][;base64],<data></p>
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>File object containing file properties</p></td>
+            <td class="description last"><p>The function to call when success.The param is a String ,<br>
+group title information</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onError</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
         </tr>
 
     
@@ -754,8 +755,8 @@ data:[<mediatype>][;base64],<data></p>
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="cordova-plugin-file_www_FileReader.js.html">cordova-plugin-file/www/FileReader.js</a>,
-				 <a href="cordova-plugin-file_www_FileReader.js.html#sunlight-1-line-245">line 245</a>
+				<a href="elastos-trinity-plugins-carrier_www_carrier.js.html">elastos-trinity-plugins-carrier/www/carrier.js</a>,
+				 <a href="elastos-trinity-plugins-carrier_www_carrier.js.html#sunlight-1-line-1309">line 1309</a>
 			</li>
 		</ul>
 	</dd>
@@ -788,7 +789,7 @@ data:[<mediatype>][;base64],<data></p>
             
 <hr>
 <dt>
-    <h4 class="name" id="readAsText"><span class="type-signature"></span>readAsText(file, encoding)</h4>
+    <h4 class="name" id="invite"><span class="type-signature"></span>invite(onSuccess [, onError], friendId)</h4>
     
     
 </dt>
@@ -796,7 +797,7 @@ data:[<mediatype>][;base64],<data></p>
 
     
     <div class="description">
-        <p>Read text file.</p>
+        <p>Invite a friend into group request.</p>
     </div>
     
 
@@ -819,6 +820,8 @@ data:[<mediatype>][;base64],<data></p>
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
         
 
@@ -831,13 +834,13 @@ data:[<mediatype>][;base64],<data></p>
 
         <tr>
             
-                <td class="name"><code>file</code></td>
+                <td class="name"><code>onSuccess</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#File">File</a></span>
+<span class="param-type">function</span>
 
 
 
@@ -845,28 +848,84 @@ data:[<mediatype>][;base64],<data></p>
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>File object containing file properties</p></td>
+            <td class="description last"><p>The function to call when success.The param is a String &quot;Success!&quot;,</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>encoding</code></td>
+                <td class="name"><code>onError</code></td>
             
 
             <td class="type">
             
+                
+<span class="param-type">function</span>
+
+
+
+            
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>[Optional] (see http://www.iana.org/assignments/character-sets)</p></td>
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>friendId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The friend's id</p></td>
         </tr>
 
     
@@ -910,8 +969,437 @@ data:[<mediatype>][;base64],<data></p>
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="cordova-plugin-file_www_FileReader.js.html">cordova-plugin-file/www/FileReader.js</a>,
-				 <a href="cordova-plugin-file_www_FileReader.js.html#sunlight-1-line-221">line 221</a>
+				<a href="elastos-trinity-plugins-carrier_www_carrier.js.html">elastos-trinity-plugins-carrier/www/carrier.js</a>,
+				 <a href="elastos-trinity-plugins-carrier_www_carrier.js.html#sunlight-1-line-1287">line 1287</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="sendMessage"><span class="type-signature"></span>sendMessage(onSuccess [, onError], message)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Send a message to a group request.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The function to call when success.The param is a String &quot;Success!&quot;,</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onError</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The message content defined by application</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="elastos-trinity-plugins-carrier_www_carrier.js.html">elastos-trinity-plugins-carrier/www/carrier.js</a>,
+				 <a href="elastos-trinity-plugins-carrier_www_carrier.js.html#sunlight-1-line-1298">line 1298</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setTitle"><span class="type-signature"></span>setTitle(onSuccess [, onError], groupTitle)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Modify group title request.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The function to call when success.The param is a json String ,<br>
+group title information,</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onError</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The function to call when error, the param is a String. Or set to null.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>groupTitle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>New group's title</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="elastos-trinity-plugins-carrier_www_carrier.js.html">elastos-trinity-plugins-carrier/www/carrier.js</a>,
+				 <a href="elastos-trinity-plugins-carrier_www_carrier.js.html#sunlight-1-line-1325">line 1325</a>
 			</li>
 		</ul>
 	</dd>

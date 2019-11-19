@@ -22,11 +22,11 @@ In addition, Trinity has a few custom scheme commands, specific to Trinity itsel
 
 ### Sending intents
 
-Sending intents is done through the AppService plugin. Here is an example:
+Sending intents is done through the AppManager plugin. Here is an example:
 
-    declare let appService: any;
+    declare let appManager: any;
 
-    appService.sendUrlIntent("elastos://schemecommand/JWT", ()=>{
+    appManager.sendUrlIntent("elastos://schemecommand/JWT", function() {
         // Intent was handled by another app
     }, (err)=>{
         // Something wrong happened
@@ -34,7 +34,7 @@ Sending intents is done through the AppService plugin. Here is an example:
 
     // or
 
-    appService.sendIntent("action", {mydata: datavalue}, ()=>{
+    appManager.sendIntent("action", {mydata: datavalue}, function() {
         // Intent was handled by another app
     }, (err)=>{
         // Something wrong happened
@@ -53,7 +53,7 @@ Your DApp must declare which intents it can handle in its manifest.json:
 
 Then in your app code, register an intent listener to know when an intent is received:
 
-    appService.setIntentListener((intent)=>{
+    appManager.setIntentListener(function(intent){
         // intent.action, intent.params, intent.fromId
 
         switch (ret.action) {

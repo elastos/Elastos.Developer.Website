@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Elastos Browser (Trinity) Source: elastos-trinity-plugins-hive/www/hive.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.paper.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Elastos Browser (Trinity)</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-Acceleration.html">Acceleration</a></li><li><a href="module-Accelerometer.html">Accelerometer</a></li><li><a href="module-Camera.html">Camera</a></li><li><a href="module-CameraConstants.html">CameraConstants</a></li><li><a href="module-CameraPopoverHandle.html">CameraPopoverHandle</a></li><li><a href="module-CameraPopoverOptions.html">CameraPopoverOptions</a></li><li><a href="module-Capture.html">Capture</a></li><li><a href="module-CarrierPlugin.html">CarrierPlugin</a></li><li><a href="module-carrierPlugin_.html">carrierPlugin</a></li><li><a href="module-Connection.html">Connection</a></li><li><a href="module-Flashlight.html">Flashlight</a></li><li><a href="module-Geolocation.html">Geolocation</a></li><li><a href="module-InAppBrowser.html">InAppBrowser</a></li><li><a href="module-Notification.html">Notification</a></li><li><a href="module-Position.html">Position</a></li><li><a href="module-ScreenOrientation.html">ScreenOrientation</a></li><li><a href="module-Splashscreen.html">Splashscreen</a></li><li><a href="module-StatusBar.html">StatusBar</a></li><li><a href="module-Vibration.html">Vibration</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="AppManager.html">AppManager</a></li><li><a href="Battery.html">Battery</a></li><li><a href="Client.html">Client</a></li><li><a href="Clipboard.html">Clipboard</a></li><li><a href="Coordinates.html">Coordinates</a></li><li><a href="Device.html">Device</a></li><li><a href="Directory.html">Directory</a></li><li><a href="Drive.html">Drive</a></li><li><a href="global.html#File">File</a></li><li><a href="FileReader.html">FileReader</a></li><li><a href="FileSystem.html">FileSystem</a></li><li><a href="FileUploadOptions.html">FileUploadOptions</a></li><li><a href="FileUploadResult.html">FileUploadResult</a></li><li><a href="FileWriter.html">FileWriter</a></li><li><a href="Media.html">Media</a></li><li><a href="module-CarrierPlugin-Carrier.html">CarrierPlugin~Carrier</a></li><li><a href="module-CarrierPlugin-Group.html">CarrierPlugin~Group</a></li><li><a href="module-CarrierPlugin-Session.html">CarrierPlugin~Session</a></li><li><a href="module-CarrierPlugin-Stream.html">CarrierPlugin~Stream</a></li><li><a href="PositionError.html">PositionError</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#CaptureAudioOptions">CaptureAudioOptions</a></li><li><a href="global.html#CaptureError">CaptureError</a></li><li><a href="global.html#CaptureImageOptions">CaptureImageOptions</a></li><li><a href="global.html#CaptureVideoOptions">CaptureVideoOptions</a></li><li><a href="global.html#ConfigurationData">ConfigurationData</a></li><li><a href="global.html#cordova">cordova</a></li><li><a href="global.html#DirectoryEntry">DirectoryEntry</a></li><li><a href="global.html#DirectoryReader">DirectoryReader</a></li><li><a href="global.html#Entry">Entry</a></li><li><a href="global.html#FileEntry">FileEntry</a></li><li><a href="global.html#FileError">FileError</a></li><li><a href="global.html#Flags">Flags</a></li><li><a href="global.html#MediaFile">MediaFile</a></li><li><a href="global.html#MediaFileData">MediaFileData</a></li><li><a href="global.html#Metadata">Metadata</a></li><li><a href="global.html#namedColors">namedColors</a></li><li><a href="global.html#readFailureCallback">readFailureCallback</a></li><li><a href="global.html#readSuccessCallback">readSuccessCallback</a></li><li><a href="global.html#resolveLocalFileSystemURL">resolveLocalFileSystemURL</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: elastos-trinity-plugins-hive/www/hive.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">/*
+ * Copyright (c) 2019 Elastos Foundation
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+var exec = require('cordova/exec');
+
+/**
+ * The class representing File.
+ * @class
+ */
+function File() {
+    this.objId  = null;
+    this.plugin = null;
+    this.clazz  = 4;
+}
+
+File.prototype = {
+    constructor: File,
+
+    /**
+     * Get the information(ID, name size, type) of the file got last time.
+     * @param {Function} onSuccess  The function to call on success.
+     * @param {Function} onError    The function to call on error.
+     * @return
+     * onSuccess will be called on success, otherwise onError will be called.
+     */
+    getLastInfo: function(onSuccess, onError) {
+        exec(onSuccess, onError, 'HivePlugin', 'getLastInfo', [this.clazz, this.objId]);
+    },
+
+    /**
+     * Get the information(ID, name, size, type) of the file from the server.
+     * @return
+     * A promise object that contains the information(ID, name, size, type) of the file
+     * will be returned on success, otherwise a promise object that contains error
+     * information will be returned.
+     */
+    getInfo: function()  {
+        return this.plugin.getPromise(this, 'getInfo', []);
+    },
+
+    /**
+     * Move to a new path.
+     * @param {string} destPath     The new path.
+     * @return
+     * A promise object that contains success information will be returned on success,
+     * otherwise a promise object that contains error information will be returned.
+     */
+    moveTo: function(destPath) {
+        return this.plugin.getPromise(this, 'moveTo', [destPath]);
+    },
+
+    /**
+     * Copy to a new path.
+     * @param {string} newPath      The new path.
+     * @return
+     * A promise object that contains success information will be returned on success,
+     * otherwise a promise object that contains error information will be returned.
+     */
+    copyTo: function(newPath) {
+        return this.plugin.getPromise(this, 'copyTo', [newPath]);
+    },
+
+    /**
+     * Delete.
+     * @return
+     * A promise object that contains success information will be returned on success,
+     * otherwise a promise object that contains error information will be returned.
+     */
+    deleteItem: function() {
+        return this.plugin.getPromise(this, 'deleteItem', []);
+    },
+
+    /**
+     * Read data of a specified length sequentially.
+     * @param {number} length      The length of data to write.
+     * @return
+     * A promise object that contains success information will be returned on success,
+     * otherwise a promise object that contains error information will be returned.
+     */
+    readData: function(length) {
+        return this.plugin.getPromise(this, 'readData', [length]);
+    },
+
+    /**
+     * Write local change on File.
+     * @param {string} data      The data to write.
+     * @return
+     * A promise object that contains success information will be returned on success,
+     * otherwise a promise object that contains error information will be returned.
+     */
+    writeData: function(data) {
+        return this.plugin.getPromise(this, 'writeData', [data]);
+    },
+
+    /**
+     * Commit local change on File to backend.
+     * @return
+     * A promise object that contains success information will be returned on success,
+     * otherwise a promise object that contains error information will be returned.
+     */
+    commit: function() {
+        return this.plugin.getPromise(this, 'commitData', []);
+    },
+
+    /**
+     * Discard local change on File.
+     * @param {Function} onSuccess  The function to call on success.
+     * @return
+     * onSuccess will be called on success.
+     */
+    discard: function(onSuccess) {
+        exec(onSuccess, null, 'HivePlugin', 'discardData', [this.clazz, this.objId]);
+    },
+}
+
+/**
+ * The class representing Directory.
+ * @class
+ */
+function Directory() {
+    this.objId  = null;
+    this.plugin = null;
+    this.clazz  = 3;
+}
+
+Directory.prototype = {
+    constructor: Directory,
+
+    /**
+     * Get the information(ID, name, childCount) of the directory got last time.
+     * @param {Function} onSuccess  The function to call on success.
+     * @param {Function} onError    The function to call on error.
+     * @return
+     * onSuccess will be called on success, otherwise onError will be called.
+     */
+    getLastInfo: function(onSuccess, onError) {
+        exec(onSuccess, onError, 'HivePlugin', 'getLastInfo', [this.clazz, this.objId]);
+    },
+
+    /**
+     * Get the information(ID, name, childCount) of the directory from the server.
+     * @return
+     * A promise object that contains the information(ID, name, childCount) of the file
+     * will be returned on success, otherwise a promise object that contains error
+     * information will be returned.
+     */
+    getInfo: function() {
+        return this.plugin.getPromise(this, 'getInfo', []);
+    },
+
+    /**
+     * Create directory with name.
+     * @param {string} name      The directory name.
+     * @return
+     * A directory will be returned on success, otherwise a promise object that contains
+     * error information will be returned.
+     */
+    createDirectory: function(name) {
+        var plugin = this.plugin;
+        return this.plugin.getPromise(this, 'createDir', [name]).then(
+            function(ret) {
+                var directory = new Directory();
+                directory.objId = ret.id;
+                directory.plugin  = plugin;
+                return directory;
+            }
+        );
+    },
+
+    /**
+     * Get the directory with a specified name.
+     * @param {string} name      The directory name.
+     * @return
+     * A directory will be returned on success, otherwise a promise object that contains
+     * error information will be returned.
+     */
+    getDirectory: function(name) {
+        var plugin = this.plugin;
+        return this.plugin.getPromise(this, 'getDir', [name]).then(
+            function(ret) {
+                var directory = new Directory();
+                directory.objId = ret.id;
+                directory.plugin  = plugin;
+                return directory;
+            }
+        );
+    },
+
+    /**
+     * Create file with name.
+     * @param {string} name      The file name.
+     * @return
+     * A file will be returned on success, otherwise a promise object that contains
+     * error information will be returned.
+     */
+    createFile: function(name) {
+        var plugin = this.plugin;
+        return this.plugin.getPromise(this, 'createFile', [name]).then(
+            function(ret) {
+                var file = new File();
+                file.objId = ret.id;
+                file.plugin = plugin;
+                return file;
+            }
+        );
+    },
+
+    /**
+     * Get the File with a specified name.
+     * @param {string} name      The file name.
+     * @return
+     * A file will be returned on success, otherwise a promise object that contains
+     * error information will be returned.
+     */
+    getFile: function(name) {
+        var plugin = this.plugin;
+        return this.plugin.getPromise(this, 'getFile', [name]).then(
+            function(ret) {
+                var file = new File();
+                file.objId = ret.id;
+                file.plugin = plugin;
+                return file;
+            }
+        );
+    },
+
+    /**
+     * Get children for current directory.
+     * @return
+     * The children for current directory will be returned on success, otherwise
+     * a promise object that contains error information will be returned.
+     */
+    getChildren: function() {
+        return this.plugin.getPromise(this, 'getChildren', []).then(
+            function(ret) {
+                return ret.items;
+            }
+        );
+    },
+
+    /**
+     * Move to a new path.
+     * @param {string} destPath     The destination path.
+     * @return
+     * A promise object that contains success information will be returned on success,
+     * otherwise a promise object that contains error information will be returned.
+     */
+    moveTo: function(destPath) {
+        return this.plugin.getPromise(this, 'moveTo', [destPath]);
+    },
+
+    /**
+     * Copy to a new path.
+     * @param {string} newPath      The new path.
+     * @return
+     * A promise object that contains success information will be returned on success,
+     * otherwise a promise object that contains error information will be returned.
+     */
+    copyTo: function(newPath) {
+        return this.plugin.getPromise(this, 'copyTo', [newPath]);
+    },
+
+    /**
+     * Delete.
+     * @return
+     * A promise object that contains success information will be returned on success,
+     * otherwise a promise object that contains error information will be returned.
+     */
+    deleteItem: function() {
+        return this.plugin.getPromise(this, 'deleteItem', []);
+    },
+}
+
+/**
+ * The class representing Drive.
+ * @class
+ */
+function Drive() {
+    this.objId  = null;
+    this.plugin = null;
+    this.clazz  = 2;
+}
+
+Drive.prototype = {
+    constructor: Drive,
+
+    /**
+     * Get the information(ID) of the drive got last time.
+     * @param {Function} onSuccess  The function to call on success.
+     * @param {Function} onError    The function to call on error.
+     * @return
+     * onSuccess will be called on success, otherwise onError will be called.
+     */
+    getLastInfo: function(onSuccess, onError) {
+        exec(onSuccess, onError, 'HivePlugin', 'getLastInfo', [this.clazz, this.objId]);
+    },
+
+    /**
+     * Get the information(ID) of the drive from the server.
+     * @return
+     * A promise object that contains the information(ID) of the file
+     * will be returned on success, otherwise a promise that contains error information
+     * will be returned.
+     */
+    getInfo: function() {
+        return this.plugin.getPromise(this, 'getInfo', []);
+    },
+
+    /**
+     * Get the root directory.
+     * @return
+     * A directory will be returned on success, otherwise a promise that contains
+     * error information will be returned.
+     */
+    rootDirctory: function() {
+        var plugin = this.plugin;
+        return this.plugin.getPromise(this, 'rootDir', []).then(
+            function(ret) {
+                var directory = new Directory();
+                directory.objId = ret.id;
+                directory.plugin  = plugin;
+                return directory;
+            }
+        );
+    },
+
+    /**
+     * Create directory with path.
+     * @param {string} path      The directory path.
+     * @return
+     * A directory will be returned on success, otherwise a promise that contains
+     * error information will be returned.
+     */
+    createDirectory: function(path) {
+        var plugin = this.plugin;
+        return this.plugin.getPromise(this, 'createDir', [path]).then(
+            function(ret) {
+                var directory = new Directory();
+                directory.objId = ret.id;
+                directory.plugin  = plugin;
+                return directory;
+            }
+        );
+    },
+
+    /**
+     * Get the directory with a specified path.
+     * @param {string} path      The directory path.
+     * @return
+     * A directory will be returned on success, otherwise a promise that contains
+     * error information will be returned.
+     */
+    getDirectory: function(path) {
+        var plugin = this.plugin;
+        return this.plugin.getPromise(this, 'getDir', [path]).then(
+            function(ret) {
+                var directory = new Directory();
+                directory.objId = ret.id;
+                directory.plugin  = plugin;
+                return directory;
+            }
+        );
+    },
+
+    /**
+     * Create file with path.
+     * @param {string} path      The file path.
+     * @return
+     * A file will be returned on success, otherwise a promise that contains
+     * error information will be returned.
+     */
+    createFile: function(path) {
+        var plugin = this.plugin;
+        return this.plugin.getPromise(this, 'createFile', [path]).then(
+            function(ret) {
+                var file = new File();
+                file.objId = ret.id;
+                file.plugin = plugin;
+                return file;
+            }
+        );
+    },
+
+    /**
+     * Get the File with a specified path.
+     * @param {string} path      The file path.
+     * @return
+     * A file will be returned on success, otherwise a promise that contains
+     * error information will be returned.
+     */
+    getFile: function(path) {
+        var plugin = this.plugin;
+        return this.plugin.getPromise(this, 'getFile', [path]).then(
+            function(ret) {
+                var file = new File();
+                file.objId = ret.id;
+                file.plugin = plugin;
+                return file;
+            }
+        );
+    },
+
+    /**
+     * Get the information(ID, name, size, type) of the drive with a specified path.
+     * @param {string} path      The drive path.
+     * @return
+     * A promise object that contains success information will be returned on success,
+     * otherwise a promise that contains error information will be returned.
+     */
+    getItemInfo: function(path) {
+        return this.plugin.getPromise(this, 'getItemInfo', [path]);
+    },
+}
+
+/**
+ * The class representing Client.
+ * @class
+ */
+function Client() {
+    this.objId  = null;
+    this.plugin = null;
+    this.clazz  = 1;
+}
+
+Client.prototype = {
+    constructor: Client,
+
+    /**
+     * Associate a user with the Client.
+     * @param {Function} onSuccess  The function to call on success.
+     * @param {Function} onError    The function to call on error.
+     * @param {Function} handler    The function to call.
+     * @return
+     * onSuccess will be called on success, otherwise onError will be called.
+     */
+    login: function(onSuccess, onError, handler) {
+        var handlerId = this.plugin.addLoginRequestCb(handler);
+        exec(onSuccess, onError, 'HivePlugin', 'login', [this.clazz, this.objId, handlerId]);
+    },
+
+    /**
+     * Dissociate the user from the Client.
+     * @param {Function} onSuccess  The function to call on success.
+     * @param {Function} onError    The function to call on error.
+     * @return
+     * onSuccess will be called on success, otherwise onError will be called.
+     */
+    logout: function(onSuccess, onError) {
+        exec(onSuccess, onError, 'HivePlugin', 'logout', [this.clazz, this.objId]);
+    },
+
+    /**
+     * Get the last associated user's information with client information.
+     * @param {Function} onSuccess  The function to call on success.
+     * @param {Function} onError    The function to call on error.
+     * @return
+     * onSuccess will be called on success, otherwise onError will be called.
+     */
+    getLastInfo: function(onSuccess, onError) {
+        exec(onSuccess, onError, 'HivePlugin', 'getLastInfo', [this.clazz, this.objId]);
+    },
+
+    /**
+     * Get associated user's information with client information.
+     * @return
+     * A promise object that contains success information will be returned on success,
+     * otherwise a promise object that contains error information will be returned.
+     */
+    getInfo: function() {
+        return this.plugin.getPromise(this, 'getInfo', []);
+    },
+
+    /**
+     * Get the current backend's Drive instance associated with the client's drive.
+     * @return
+     * A drive will be returned on success, otherwise a promise object that contains
+     * error information will be returned.
+     */
+    getDefDrive: function() {
+        var plugin = this.plugin;
+        return this.plugin.getPromise(this, 'getDefDrive', []).then(
+            function (ret) {
+                var drive = new Drive();
+                drive.objId = ret.id;
+                drive.plugin = plugin;
+                return drive;
+            }
+        );
+    },
+}
+
+function HivePlugin() {
+    this.clients = [];
+
+    this.resultIndex = 0;
+    this.resultEvent = [];
+    this.loginCount  = 0;
+    this.loginRequest = [];
+
+    this.driveType = {
+        NATIVE: 1,
+        ONEDRIVE: 2,
+        IPFS: 3,
+    };
+
+    const LISTENER_LOGIN  = 1;
+    const LISTENER_RESULT = 2;
+
+    Object.freeze(HivePlugin.prototype);
+    Object.freeze(Client.prototype);
+    Object.freeze(Drive.prototype);
+    Object.freeze(Directory.prototype);
+    Object.freeze(File.prototype);
+
+    Object.freeze(this.driveType);
+
+    exec(function () {}, null, 'HivePlugin', 'initVal', []);
+
+    var me = this;
+
+    this.addLoginRequestCb = function(callback) {
+        var eventcb = new Object();
+        eventcb.callback = callback;
+
+        me.loginevent = eventcb;
+        return 0;
+    },
+
+    this.onLoginRequest = function(event) {
+        var id = event.id;
+        if (id == 0) {
+            me.loginevent.callback(event.url);
+        }
+    },
+
+    this.addResultEventCb = function(callback, object) {
+        var eventcb = new Object;
+        eventcb.callback = callback;
+        eventcb.object = object;
+
+        me.resultIndex++;
+        me.resultEvent[me.resultIndex] = eventcb;
+        return me.resultIndex;
+    },
+
+    this.onResultEvent = function(event) {
+        var id = event.hid;
+        event.hid = null;
+
+        if (me.resultEvent[id].callback)  {
+            me.resultEvent[id].callback(event);
+        }
+    },
+
+    this.getPromise = function(object, method, args) {
+        return new Promise(function(resolve, reject) {
+            var onResult = function(ret) {
+                if (null == ret.error)
+                    resolve(ret);
+                else
+                    reject(ret.error);
+            };
+
+            var _args = [
+                object.clazz,
+                object.objId,
+                me.addResultEventCb(onResult, object),
+            ];
+
+            exec(null, null, 'HivePlugin', method, _args.concat(args));
+        });
+    },
+
+    this.setListener(LISTENER_LOGIN,  this.onLoginRequest);
+    this.setListener(LISTENER_RESULT, this.onResultEvent);
+}
+
+HivePlugin.prototype = {
+    constructor: HivePlugin,
+
+    getVersion: function(onSuccess, onError) {
+        exec(onSuccess, onError, 'HivePlugin', 'getVersion', [])
+    },
+
+    setListener: function (type, eventCallback) {
+        exec(eventCallback, null, 'HivePlugin', 'setListener', [type]);
+    },
+
+    createClient: function(onSuccess, onError, options) {
+        var client = new Client();
+        var me = this;
+
+        var _onSuccess = function(ret) {
+            client.objId = ret.id;
+            client.plugin = me;
+            me.clients[client.objId] = client;
+            if (onSuccess)
+                onSuccess(client);
+        }
+
+        if (typeof (options) == "undefined" || options == null ||
+            typeof (options.driveType) != "string") {
+            if (onError) {
+                onError("invalid options");
+            }
+            return;
+        }
+
+        var configStr = JSON.stringify(options);
+        exec(_onSuccess, onError, 'HivePlugin', 'createClient', ["im", configStr]);
+    },
+}
+
+module.exports = new HivePlugin();
+</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">
+	Elastos Foundation © 2017-2019
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
+	
+		on Mon Nov 18th 2019
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Elastos Browser (Trinity) Class: FileReader</title>
+	<title>Elastos Browser (Trinity) Class: Drive</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -79,13 +79,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: FileReader</h1>
+	<h1 class="page-title">Class: Drive</h1>
 <section>
 
 <header>
     
         <h2>
-        FileReader
+        Drive
         </h2>
         
     
@@ -98,7 +98,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="FileReader"><span class="type-signature"></span>new FileReader()</h4>
+    <h4 class="name" id="Drive"><span class="type-signature"></span>new Drive()</h4>
     
     
 </dt>
@@ -106,10 +106,7 @@
 
     
     <div class="description">
-        <p>This class reads the mobile device file system.</p>
-<p>For Android:<br>
-The root directory is the root of the file system.<br>
-To read from the SD card, the file name is &quot;sdcard/my_file.txt&quot;</p>
+        <p>The class representing Drive.</p>
     </div>
     
 
@@ -155,8 +152,8 @@ To read from the SD card, the file name is &quot;sdcard/my_file.txt&quot;</p>
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="cordova-plugin-file_www_FileReader.js.html">cordova-plugin-file/www/FileReader.js</a>,
-				 <a href="cordova-plugin-file_www_FileReader.js.html#sunlight-1-line-37">line 37</a>
+				<a href="elastos-trinity-plugins-hive_www_hive.js.html">elastos-trinity-plugins-hive/www/hive.js</a>,
+				 <a href="elastos-trinity-plugins-hive_www_hive.js.html#sunlight-1-line-297">line 297</a>
 			</li>
 		</ul>
 	</dd>
@@ -198,83 +195,6 @@ To read from the SD card, the file name is &quot;sdcard/my_file.txt&quot;</p>
 
     
 
-    
-        <h3 class="subsection-title">Members</h3>
-
-        <dl>
-            
-<hr>
-<dt class="name" id=".READ_CHUNK_SIZE">
-    <h4 id=".READ_CHUNK_SIZE"><span class="type-signature">&lt;static> </span>READ_CHUNK_SIZE<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Defines the maximum size to read at a time via the native API. The default value is a compromise between<br>
-minimizing the overhead of many exec() calls while still reporting progress frequently enough for large files.<br>
-(Note attempts to allocate more than a few MB of contiguous memory on the native side are likely to cause<br>
-OOM exceptions, while the JS engine seems to have fewer problems managing large strings or ArrayBuffers.)</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="cordova-plugin-file_www_FileReader.js.html">cordova-plugin-file/www/FileReader.js</a>,
-				 <a href="cordova-plugin-file_www_FileReader.js.html#sunlight-1-line-52">line 52</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        </dl>
     
 
     
@@ -284,7 +204,7 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
             
 <hr>
 <dt>
-    <h4 class="name" id="abort"><span class="type-signature"></span>abort()</h4>
+    <h4 class="name" id="createDirectory"><span class="type-signature"></span>createDirectory(path)</h4>
     
     
 </dt>
@@ -292,95 +212,7 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 
     
     <div class="description">
-        <p>Abort reading file.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="cordova-plugin-file_www_FileReader.js.html">cordova-plugin-file/www/FileReader.js</a>,
-				 <a href="cordova-plugin-file_www_FileReader.js.html#sunlight-1-line-193">line 193</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="readAsArrayBuffer"><span class="type-signature"></span>readAsArrayBuffer(file)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Read file and return data as a binary data.</p>
+        <p>Create directory with path.</p>
     </div>
     
 
@@ -415,13 +247,13 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 
         <tr>
             
-                <td class="name"><code>file</code></td>
+                <td class="name"><code>path</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#File">File</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -432,7 +264,7 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 
             
 
-            <td class="description last"><p>File object containing file properties</p></td>
+            <td class="description last"><p>The directory path.</p></td>
         </tr>
 
     
@@ -476,8 +308,8 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="cordova-plugin-file_www_FileReader.js.html">cordova-plugin-file/www/FileReader.js</a>,
-				 <a href="cordova-plugin-file_www_FileReader.js.html#sunlight-1-line-285">line 285</a>
+				<a href="elastos-trinity-plugins-hive_www_hive.js.html">elastos-trinity-plugins-hive/www/hive.js</a>,
+				 <a href="elastos-trinity-plugins-hive_www_hive.js.html#sunlight-1-line-353">line 353</a>
 			</li>
 		</ul>
 	</dd>
@@ -502,6 +334,18 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
     
 
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A directory will be returned on success, otherwise a promise that contains<br>
+error information will be returned.</p>
+</div>
+
+
+
+
+        
 
     
 </dd>
@@ -510,7 +354,7 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
             
 <hr>
 <dt>
-    <h4 class="name" id="readAsBinaryString"><span class="type-signature"></span>readAsBinaryString(file)</h4>
+    <h4 class="name" id="createFile"><span class="type-signature"></span>createFile(path)</h4>
     
     
 </dt>
@@ -518,7 +362,7 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 
     
     <div class="description">
-        <p>Read file and return data as a binary data.</p>
+        <p>Create file with path.</p>
     </div>
     
 
@@ -553,13 +397,13 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 
         <tr>
             
-                <td class="name"><code>file</code></td>
+                <td class="name"><code>path</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#File">File</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -570,7 +414,7 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 
             
 
-            <td class="description last"><p>File object containing file properties</p></td>
+            <td class="description last"><p>The file path.</p></td>
         </tr>
 
     
@@ -614,8 +458,8 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="cordova-plugin-file_www_FileReader.js.html">cordova-plugin-file/www/FileReader.js</a>,
-				 <a href="cordova-plugin-file_www_FileReader.js.html#sunlight-1-line-266">line 266</a>
+				<a href="elastos-trinity-plugins-hive_www_hive.js.html">elastos-trinity-plugins-hive/www/hive.js</a>,
+				 <a href="elastos-trinity-plugins-hive_www_hive.js.html#sunlight-1-line-391">line 391</a>
 			</li>
 		</ul>
 	</dd>
@@ -640,6 +484,18 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
     
 
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A file will be returned on success, otherwise a promise that contains<br>
+error information will be returned.</p>
+</div>
+
+
+
+
+        
 
     
 </dd>
@@ -648,7 +504,7 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
             
 <hr>
 <dt>
-    <h4 class="name" id="readAsDataURL"><span class="type-signature"></span>readAsDataURL(file)</h4>
+    <h4 class="name" id="getDirectory"><span class="type-signature"></span>getDirectory(path)</h4>
     
     
 </dt>
@@ -656,9 +512,7 @@ OOM exceptions, while the JS engine seems to have fewer problems managing large 
 
     
     <div class="description">
-        <p>Read file and return data as a base64 encoded data url.<br>
-A data url is of the form:<br>
-data:[<mediatype>][;base64],<data></p>
+        <p>Get the directory with a specified path.</p>
     </div>
     
 
@@ -693,13 +547,13 @@ data:[<mediatype>][;base64],<data></p>
 
         <tr>
             
-                <td class="name"><code>file</code></td>
+                <td class="name"><code>path</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#File">File</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -710,7 +564,7 @@ data:[<mediatype>][;base64],<data></p>
 
             
 
-            <td class="description last"><p>File object containing file properties</p></td>
+            <td class="description last"><p>The directory path.</p></td>
         </tr>
 
     
@@ -754,8 +608,8 @@ data:[<mediatype>][;base64],<data></p>
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="cordova-plugin-file_www_FileReader.js.html">cordova-plugin-file/www/FileReader.js</a>,
-				 <a href="cordova-plugin-file_www_FileReader.js.html#sunlight-1-line-245">line 245</a>
+				<a href="elastos-trinity-plugins-hive_www_hive.js.html">elastos-trinity-plugins-hive/www/hive.js</a>,
+				 <a href="elastos-trinity-plugins-hive_www_hive.js.html#sunlight-1-line-372">line 372</a>
 			</li>
 		</ul>
 	</dd>
@@ -780,6 +634,18 @@ data:[<mediatype>][;base64],<data></p>
     
 
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A directory will be returned on success, otherwise a promise that contains<br>
+error information will be returned.</p>
+</div>
+
+
+
+
+        
 
     
 </dd>
@@ -788,7 +654,7 @@ data:[<mediatype>][;base64],<data></p>
             
 <hr>
 <dt>
-    <h4 class="name" id="readAsText"><span class="type-signature"></span>readAsText(file, encoding)</h4>
+    <h4 class="name" id="getFile"><span class="type-signature"></span>getFile(path)</h4>
     
     
 </dt>
@@ -796,7 +662,7 @@ data:[<mediatype>][;base64],<data></p>
 
     
     <div class="description">
-        <p>Read text file.</p>
+        <p>Get the File with a specified path.</p>
     </div>
     
 
@@ -831,13 +697,13 @@ data:[<mediatype>][;base64],<data></p>
 
         <tr>
             
-                <td class="name"><code>file</code></td>
+                <td class="name"><code>path</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#File">File</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -848,25 +714,7 @@ data:[<mediatype>][;base64],<data></p>
 
             
 
-            <td class="description last"><p>File object containing file properties</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>encoding</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>[Optional] (see http://www.iana.org/assignments/character-sets)</p></td>
+            <td class="description last"><p>The file path.</p></td>
         </tr>
 
     
@@ -910,8 +758,8 @@ data:[<mediatype>][;base64],<data></p>
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="cordova-plugin-file_www_FileReader.js.html">cordova-plugin-file/www/FileReader.js</a>,
-				 <a href="cordova-plugin-file_www_FileReader.js.html#sunlight-1-line-221">line 221</a>
+				<a href="elastos-trinity-plugins-hive_www_hive.js.html">elastos-trinity-plugins-hive/www/hive.js</a>,
+				 <a href="elastos-trinity-plugins-hive_www_hive.js.html#sunlight-1-line-410">line 410</a>
 			</li>
 		</ul>
 	</dd>
@@ -936,6 +784,542 @@ data:[<mediatype>][;base64],<data></p>
     
 
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A file will be returned on success, otherwise a promise that contains<br>
+error information will be returned.</p>
+</div>
+
+
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getInfo"><span class="type-signature"></span>getInfo()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get the information(ID) of the drive from the server.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="elastos-trinity-plugins-hive_www_hive.js.html">elastos-trinity-plugins-hive/www/hive.js</a>,
+				 <a href="elastos-trinity-plugins-hive_www_hive.js.html#sunlight-1-line-324">line 324</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise object that contains the information(ID) of the file<br>
+will be returned on success, otherwise a promise that contains error information<br>
+will be returned.</p>
+</div>
+
+
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getItemInfo"><span class="type-signature"></span>getItemInfo(path)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get the information(ID, name, size, type) of the drive with a specified path.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The drive path.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="elastos-trinity-plugins-hive_www_hive.js.html">elastos-trinity-plugins-hive/www/hive.js</a>,
+				 <a href="elastos-trinity-plugins-hive_www_hive.js.html#sunlight-1-line-429">line 429</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise object that contains success information will be returned on success,<br>
+otherwise a promise that contains error information will be returned.</p>
+</div>
+
+
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getLastInfo"><span class="type-signature"></span>getLastInfo(onSuccess, onError)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get the information(ID) of the drive got last time.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>onSuccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The function to call on success.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onError</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The function to call on error.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="elastos-trinity-plugins-hive_www_hive.js.html">elastos-trinity-plugins-hive/www/hive.js</a>,
+				 <a href="elastos-trinity-plugins-hive_www_hive.js.html#sunlight-1-line-313">line 313</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>onSuccess will be called on success, otherwise onError will be called.</p>
+</div>
+
+
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="rootDirctory"><span class="type-signature"></span>rootDirctory()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get the root directory.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="elastos-trinity-plugins-hive_www_hive.js.html">elastos-trinity-plugins-hive/www/hive.js</a>,
+				 <a href="elastos-trinity-plugins-hive_www_hive.js.html#sunlight-1-line-334">line 334</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A directory will be returned on success, otherwise a promise that contains<br>
+error information will be returned.</p>
+</div>
+
+
+
+
+        
 
     
 </dd>

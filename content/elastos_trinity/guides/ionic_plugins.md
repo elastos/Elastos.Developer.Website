@@ -1,6 +1,6 @@
 +++
 title = "Ionic plugins"
-weight = 20
+weight = 28
 chapter = false
 pre = ""
 alwaysopen = false

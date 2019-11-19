@@ -38,6 +38,11 @@ alwaysopen = false
     "theme": {
         "theme_display": "show",
         "theme_color": "#4e8ef7"
-    }
+    },
+    "intent_filters": [ // List of intent actions this app is listening to. The app is started when receiving such intent.
+        {
+            "action": "connectapplicationprofile"
+        }
+    ]
    }
 ```
