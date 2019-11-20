@@ -38,6 +38,25 @@ $ trinity-cli manifest
 For more detail about Ionic, please visit [here](https://ionicframework.com/docs/).
 You can build any kind of ionic-based application in Elastos, as the whole ionic framework is available. In addition, Elastos plugins are available too, such as carrier, hive, or access to payments and digital identities (DID).
 
+### Trinity plugins Typescript typings
+
+In case the default DApp you've created does not include typescript types for Trinity plugins, you may have to add them by yourself:
+
+```bash
+$ npm i @elastosfoundation/trinity-types
+```
+
+Then in your application, you can use it this way:
+
+    import { AppManager } from '@elastosfoundation/trinity-types';
+
+    // Global variable
+    declare let appManager: AppManager;
+
+    // In a method
+    appManager.sendIntent(...);
+
+
 ### Running your DApp on Android
 
 **Checklist:**
