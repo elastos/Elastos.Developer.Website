@@ -16,6 +16,13 @@ But the initiating DApp doesn't really know which DApp will realize this operati
 
 See {{< internallink "Interapp communication" "/elastos_trinity/guides/interapp_communication.md" >}}.
 
+## What can you do with those intents?
+
+You can either:
+
+* **Send intents** to request other DApps to do something (ex: pay, if you want to let your users purchase something)
+* Or **handle intents** (using intent filters in your manifest) to handle actions requested by other DApps (ex: handle "handlescannedcontent_did" if you want to do something when a end user scans a QR code in Trinity).
+
 ## Supported intents in Trinity
 
 ### Standard Elastos scheme intents
