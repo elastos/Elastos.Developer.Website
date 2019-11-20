@@ -53,6 +53,8 @@ In order for adb, the android communication tool, to work through WSL, you will 
 wsl.exe
 ```
 
+Note that when using WSL, Ubuntu can access your windows files from **/mnt/c/**.
+
 * Setup your ubuntu environment:
 
 ```
