@@ -40,3 +40,5 @@ See {{< internallink "Elastos scheme" "/elastos_core_services/guides/elastos_sch
 | /a/[appid] | Open a given DApp if installed, or open the DApp page on a DApp store to install it first. |
 | registerapplicationprofile | Register user as using a given DApp, on his DID profile. |
 | connectapplicationprofile | Launch the given DApp with the purpose of connecting to a given friend in that app, using his DID. |
+| handlescannedcontent | Notify that a QR code has been scanned and that its content can be handled |
+| handlescannedcontent_did | Notify that a QR code has been scanned and that its content, which is a elastos DID, can be handled |
