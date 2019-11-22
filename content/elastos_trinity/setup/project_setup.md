@@ -46,16 +46,28 @@ In case the default DApp you've created does not include typescript types for Tr
 $ npm i @elastosfoundation/trinity-types
 ```
 
-Then in your application, you can use it this way:
+Make sure your tsconfig.json contains the following parts:
 
-    import { AppManager } from '@elastosfoundation/trinity-types';
+    "compilerOptions": {
+        ...
+        "typeRoots": [
+            "node_modules/@types",
+            "node_modules/@elastosfoundation"
+        ],
+        "types": [
+            "node",
+            "trinity-types"
+        ],
+        ...
+    }
+
+Then in your application, you can use it this way:
 
     // Global variable
     declare let appManager: AppManager;
 
     // In a method
     appManager.sendIntent(...);
-
 
 ### Running your DApp on Android
 

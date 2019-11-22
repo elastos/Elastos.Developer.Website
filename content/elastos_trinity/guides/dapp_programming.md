@@ -27,14 +27,12 @@ Please refer to [Ionic documentation](https://ionicframework.com/docs) to start 
 
 ## Accessing plugin APIs
 
-Native ionic/cordova plugins are embedded in the Trinity native application, not in every DApp. Currently, we do not provide any SDK that developers can use while writing their DApps, for example to get code completion. We will release such SDK in the future to assist developers.
-
-As a consequence, plugins are currently declared and used in a blind way. As there is no compilation this works perfectly, but result can only be seen while running the DApp in Trinity:
+Native ionic/cordova plugins are embedded in the Trinity native application, not in every DApp. But we provide a set of typescript interfaces that can be imported through the npm module **@elastosfoundation/trinity-types**.
 
     // Declaration
-    declare let appManager: any; // No information about appServices type here.
+    declare let appManager: AppManager;
 
     // Method call
-    appManager.close(); // No code completion in your editor. If you type a wrong method name you will notice it only at runtime.
+    appManager.close();
 
 Please refer to the {{< internallink "trinity plugins API reference" "/elastos_core_services/reference/trinity/plugins_api.md" >}} page to know more about plugins usage.
