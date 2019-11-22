@@ -22,7 +22,7 @@ Just arrived? Not sure what Elastos is yet? Make sure to read {{< internallink "
 ## Start with Elastos
 
 * App developer
-    * {{< internallink "Setup Elastos core services" "elastos_core_services/setup/_index.md" >}} first (you **don't** need to read the Elastos blockchain section yet if you're new to Elastos), then try a few {{< internallink "samples" "elastos_core_services/samples/_index.md">}} and start reading our {{< internallink "core services guides" "elastos_core_services/guides/_index.md" >}}.
+    * {{< internallink "Setup Elastos core services" "get_started/setup/setup_intro.md" >}} first (you **don't** need to read the Elastos blockchain section yet if you're new to Elastos), then try a few {{< internallink "samples" "elastos_core_services/samples/_index.md">}} and start reading our {{< internallink "core services guides" "elastos_core_services/guides/_index.md" >}}.
 * Miner
     * {{< internallink "Mine ELA" "elastos_blockchain/connect_to_elastos/mine_and_secure/merged_mining.md" >}}
     * {{< internallink "Run your own supernode" "elastos_blockchain/connect_to_elastos/mine_and_secure/supernode.md" >}}
