@@ -19,3 +19,16 @@ When you write a Trinity DApp, you can then access a **limited set of plugins** 
 ## Application compilation
 
 An other consequence of dealing only with javascript code in trinity is that **writing and releasing DApps don't require any compilation**, contrary to real ionic applications. You simply write your HTML/Javascript code, and send it to the trinity native app who will handle your DApp (using trinity-cli during development, or through the DApp store for distribution).
+
+## Plugins usage
+
+Here is how to declare the existing global plugin instances from your DApps and start using them right away:
+
+| Plugin | Usage |
+| ------ | ----- |
+| AppManager | ```declare let appManager: AppManagerPlugin.AppManager;``` |
+| Carrier | ```declare let carrierManager: CarrierPlugin.CarrierManager;``` |
+| Hive | ```declare let hiveManager: HivePlugin.HiveManager;``` |
+| Wallet | ```declare let walletManager: WalletPlugin.WalletManager;``` |
+| DID | ```declare let didManager: DIDPlugin.DIDManager;``` |
+| Standard cordova plugins | View examples in plugins API reference. |

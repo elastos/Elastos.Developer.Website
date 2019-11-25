@@ -64,7 +64,7 @@ Make sure your tsconfig.json contains the following parts:
 Then in your application, you can use it this way:
 
     // Global variable
-    declare let appManager: AppManager;
+    declare let appManager: AppManagerPlugin.AppManager;
 
     // In a method
     appManager.sendIntent(...);
