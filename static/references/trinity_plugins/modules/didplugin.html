@@ -64,6 +64,21 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>This is about DID which is a new type of identifier to provide verifiable,
+							decentralized digital identity.
+							<br><br>
+							Please use &#39;DIDPlugin&#39; as the plugin name in the manifest.json if you want to use
+							this facility.
+							<br><br>
+							Usage:
+							<br>
+						declare let didManager: DIDPlugin.DIDManager;</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -72,7 +87,7 @@
 							<h3>Enumerations</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/didplugin.didstorefilter.html" class="tsd-kind-icon">DIDStore<wbr>Filter</a></li>
-								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/didplugin.mnemonic.html" class="tsd-kind-icon">Mnemonic</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/didplugin.mnemoniclanguage.html" class="tsd-kind-icon">Mnemonic<wbr>Language</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
@@ -84,8 +99,109 @@
 								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/didplugin.didstore.html" class="tsd-kind-icon">DIDStore</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/didplugin.publickey.html" class="tsd-kind-icon">Public<wbr>Key</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/didplugin.verifiablecredential.html" class="tsd-kind-icon">Verifiable<wbr>Credential</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/didplugin.verifiablecredentialbuilder.html" class="tsd-kind-icon">Verifiable<wbr>Credential<wbr>Builder</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/didplugin.verifiablepresentation.html" class="tsd-kind-icon">Verifiable<wbr>Presentation</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/didplugin.verifiablepresentationbuilder.html" class="tsd-kind-icon">Verifiable<wbr>Presentation<wbr>Builder</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="didplugin.html#credentialid" class="tsd-kind-icon">CredentialID</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="didplugin.html#didstring" class="tsd-kind-icon">DIDString</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="didplugin.html#didurl" class="tsd-kind-icon">DIDURL</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="didplugin.html#oncreateidtransaction" class="tsd-kind-icon">On<wbr>Create<wbr>IdTransaction</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="credentialid" class="tsd-anchor"></a>
+					<h3>CredentialID</h3>
+					<div class="tsd-signature tsd-kind-icon">CredentialID<span class="tsd-signature-symbol">:</span> <a href="didplugin.html#didurl" class="tsd-signature-type">DIDURL</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A CredentialID can have the form of either a full DIDURL, or just the short form.
+							Ex: &quot;did:elastos:abcdef#twitter&quot; or &quot;#twitter&quot;</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="didstring" class="tsd-anchor"></a>
+					<h3>DIDString</h3>
+					<div class="tsd-signature tsd-kind-icon">DIDString<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This is the most usual format when talking about DIDs.
+							Format: did:elastos:abcdef</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="didurl" class="tsd-anchor"></a>
+					<h3>DIDURL</h3>
+					<div class="tsd-signature tsd-kind-icon">DIDURL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A DIDURL is a DIDString with an additional fragment part.
+							Ex: did:elastos:abcdef#my-special-use or #my-special-use</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="oncreateidtransaction" class="tsd-anchor"></a>
+					<h3>On<wbr>Create<wbr>IdTransaction</h3>
+					<div class="tsd-signature tsd-kind-icon">On<wbr>Create<wbr>IdTransaction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The callback function to receive the payload of createIdTransaction.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>callback</dt>
+							<dd><p>OnCreateIdTransaction</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>The payload of the IdTransaction.</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>The memo of the IdTransaction.</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">String</span>, memo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>payload: <span class="tsd-signature-type">String</span></h5>
+											</li>
+											<li>
+												<h5>memo: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</div>
 				</section>
 			</section>
@@ -101,6 +217,24 @@
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="carrierplugin.html">Carrier<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="cordovabatterystatusplugin.html">Cordova<wbr>Battery<wbr>Status<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="cordovacameraplugin.html">Cordova<wbr>Camera<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="cordovadevicemotionplugin.html">Cordova<wbr>Device<wbr>Motion<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="cordovadeviceplugin.html">Cordova<wbr>Device<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="cordovamediacaptureplugin.html">Cordova<wbr>Media<wbr>Capture<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="cordovanetworkinfoplugin.html">Cordova<wbr>Network<wbr>Info<wbr>Plugin</a>
 					</li>
 					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="didplugin.html">DIDPlugin</a>
@@ -119,7 +253,7 @@
 						<a href="../enums/didplugin.didstorefilter.html" class="tsd-kind-icon">DIDStore<wbr>Filter</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../enums/didplugin.mnemonic.html" class="tsd-kind-icon">Mnemonic</a>
+						<a href="../enums/didplugin.mnemoniclanguage.html" class="tsd-kind-icon">Mnemonic<wbr>Language</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../interfaces/didplugin.did.html" class="tsd-kind-icon">DID</a>
@@ -138,6 +272,27 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../interfaces/didplugin.verifiablecredential.html" class="tsd-kind-icon">Verifiable<wbr>Credential</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../interfaces/didplugin.verifiablecredentialbuilder.html" class="tsd-kind-icon">Verifiable<wbr>Credential<wbr>Builder</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../interfaces/didplugin.verifiablepresentation.html" class="tsd-kind-icon">Verifiable<wbr>Presentation</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../interfaces/didplugin.verifiablepresentationbuilder.html" class="tsd-kind-icon">Verifiable<wbr>Presentation<wbr>Builder</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="didplugin.html#credentialid" class="tsd-kind-icon">CredentialID</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="didplugin.html#didstring" class="tsd-kind-icon">DIDString</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="didplugin.html#didurl" class="tsd-kind-icon">DIDURL</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="didplugin.html#oncreateidtransaction" class="tsd-kind-icon">On<wbr>Create<wbr>IdTransaction</a>
 					</li>
 				</ul>
 			</nav>

@@ -64,6 +64,20 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>This is about AppManager which makes it possible to send intents, messages, etc. between DApps.
+							<br><br>
+							There is no need to use &#39;AppManagerPlugin&#39; as the plugin name in the manifest.json if you want to use
+							this facility, because it&#39;s available by default.
+							<br><br>
+							Usage:
+							<br>
+						declare let appManager: AppManagerPlugin.AppManager;</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -85,7 +99,11 @@
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#appinfo" class="tsd-kind-icon">App<wbr>Info</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#framework" class="tsd-kind-icon">Framework</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#icon" class="tsd-kind-icon">Icon</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#intentoptions" class="tsd-kind-icon">Intent<wbr>Options</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#locale" class="tsd-kind-icon">Locale</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#platform" class="tsd-kind-icon">Platform</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#pluginauthority" class="tsd-kind-icon">Plugin<wbr>Authority</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#receivedintent" class="tsd-kind-icon">Received<wbr>Intent</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#receivedmessage" class="tsd-kind-icon">Received<wbr>Message</a></li>
@@ -102,88 +120,11 @@
 					<h3>App<wbr>Info</h3>
 					<div class="tsd-signature tsd-kind-icon">App<wbr>Info<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/elastos/Elastos.Trinity.ToolChains/blob/9545321/typings/dist/appmanager.d.ts#L114">Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.Trinity/ToolChains/typings/dist/appmanager.d.ts:114</a></li>
-						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The App information.</p>
 						</div>
-						<dl class="tsd-comment-tags">
-							<dt>typedef</dt>
-							<dd><p>AppInfo</p>
-							</dd>
-							<dt>type</dt>
-							<dd><p>{Object}</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app id.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app version.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app name.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app shortName.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app description.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app startUrl.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app icons.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app authorName.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app authorEmail.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app defaultLocale.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app category.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app keyWords.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app PluginAuthority list.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app UrlAuthoritylist.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app backgroundColor.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app theme display.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app theme color.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app theme font name.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app theme font color.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app intall time.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app builtIn.</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The app data path.</p>
-							</dd>
-						</dl>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -261,6 +202,14 @@
 								</div>
 							</li>
 							<li class="tsd-parameter">
+								<h5>frameworks<span class="tsd-signature-symbol">: </span><a href="appmanagerplugin.html#framework" class="tsd-signature-type">Framework</a><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The app frameworks.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
 								<h5>icons<span class="tsd-signature-symbol">: </span><a href="appmanagerplugin.html#icon" class="tsd-signature-type">Icon</a><span class="tsd-signature-symbol">[]</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
@@ -293,6 +242,14 @@
 								</div>
 							</li>
 							<li class="tsd-parameter">
+								<h5>locales<span class="tsd-signature-symbol">: </span><a href="appmanagerplugin.html#locale" class="tsd-signature-type">Locale</a><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The app locales.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
 								<h5>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
@@ -301,10 +258,26 @@
 								</div>
 							</li>
 							<li class="tsd-parameter">
+								<h5>platforms<span class="tsd-signature-symbol">: </span><a href="appmanagerplugin.html#platform" class="tsd-signature-type">Platform</a><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The app platforms.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
 								<h5>plugins<span class="tsd-signature-symbol">: </span><a href="appmanagerplugin.html#pluginauthority" class="tsd-signature-type">PluginAuthority</a><span class="tsd-signature-symbol">[]</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
 										<p>The app PluginAuthority list.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>remote<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Boolean</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The app is remote？.</p>
 									</div>
 								</div>
 							</li>
@@ -376,35 +349,48 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="framework" class="tsd-anchor"></a>
+					<h3>Framework</h3>
+					<div class="tsd-signature tsd-kind-icon">Framework<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The framework.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The Framework name.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>version<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The Framework version.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 					<a name="icon" class="tsd-anchor"></a>
 					<h3>Icon</h3>
 					<div class="tsd-signature tsd-kind-icon">Icon<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/elastos/Elastos.Trinity.ToolChains/blob/9545321/typings/dist/appmanager.d.ts#L11">Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.Trinity/ToolChains/typings/dist/appmanager.d.ts:11</a></li>
-						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The icons info.</p>
 						</div>
-						<dl class="tsd-comment-tags">
-							<dt>typedef</dt>
-							<dd><p>Icon</p>
-							</dd>
-							<dt>type</dt>
-							<dd><p>{Object}</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{string}           src         The icon src.</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{string}           sizes       The icon sizes.</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{string}           type        The icon type.</p>
-							</dd>
-						</dl>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -437,32 +423,130 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="intentoptions" class="tsd-anchor"></a>
+					<h3>Intent<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">Intent<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Options passed to sendIntent().</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> app<wbr>Id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The target app package id, in case the intent should be sent to a specific app instead of being brodcast.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="locale" class="tsd-anchor"></a>
+					<h3>Locale</h3>
+					<div class="tsd-signature tsd-kind-icon">Locale<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The locale.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>author<wbr>Name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The language authorName.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>description<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The language description.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>language<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The language.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The language name.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>short<wbr>Name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The language shortName.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="platform" class="tsd-anchor"></a>
+					<h3>Platform</h3>
+					<div class="tsd-signature tsd-kind-icon">Platform<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The platform.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The Platform name.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>version<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The Platform version.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 					<a name="pluginauthority" class="tsd-anchor"></a>
 					<h3>Plugin<wbr>Authority</h3>
 					<div class="tsd-signature tsd-kind-icon">Plugin<wbr>Authority<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/elastos/Elastos.Trinity.ToolChains/blob/9545321/typings/dist/appmanager.d.ts#L64">Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.Trinity/ToolChains/typings/dist/appmanager.d.ts:64</a></li>
-						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The plugin authority status.</p>
 						</div>
-						<dl class="tsd-comment-tags">
-							<dt>typedef</dt>
-							<dd><p>PluginAuthority</p>
-							</dd>
-							<dt>type</dt>
-							<dd><p>{Object}</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{string}           plugin      The plugin name.</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{AuthorityStatus}  authority   The authority status.</p>
-							</dd>
-						</dl>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -491,25 +575,11 @@
 					<h3>Received<wbr>Intent</h3>
 					<div class="tsd-signature tsd-kind-icon">Received<wbr>Intent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/elastos/Elastos.Trinity.ToolChains/blob/9545321/typings/dist/appmanager.d.ts#L186">Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.Trinity/ToolChains/typings/dist/appmanager.d.ts:186</a></li>
-						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Object received when receiving an intent.</p>
 						</div>
-						<dl class="tsd-comment-tags">
-							<dt>param</dt>
-							<dd><p>The intent action</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The intent params</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The intent from</p>
-							</dd>
-						</dl>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -518,7 +588,7 @@
 								<h5>action<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
-										<p>The intent action</p>
+										<p>The action requested from the receiving application.</p>
 									</div>
 								</div>
 							</li>
@@ -526,7 +596,15 @@
 								<h5>from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
-										<p>The intent from</p>
+										<p>Application package id of the calling application.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>intent<wbr>Id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Unique intent ID that has to be sent back when sending the intent response.</p>
 									</div>
 								</div>
 							</li>
@@ -534,7 +612,7 @@
 								<h5>params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
-										<p>The intent params</p>
+										<p>Custom intent parameters provided by the calling application.</p>
 									</div>
 								</div>
 							</li>
@@ -546,25 +624,11 @@
 					<h3>Received<wbr>Message</h3>
 					<div class="tsd-signature tsd-kind-icon">Received<wbr>Message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/elastos/Elastos.Trinity.ToolChains/blob/9545321/typings/dist/appmanager.d.ts#L170">Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.Trinity/ToolChains/typings/dist/appmanager.d.ts:170</a></li>
-						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Object received when receiving a message.</p>
 						</div>
-						<dl class="tsd-comment-tags">
-							<dt>param</dt>
-							<dd><p>The message receive</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The message type</p>
-							</dd>
-							<dt>param</dt>
-							<dd><p>The message from</p>
-							</dd>
-						</dl>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -601,28 +665,11 @@
 					<h3>Url<wbr>Authority</h3>
 					<div class="tsd-signature tsd-kind-icon">Url<wbr>Authority<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/elastos/Elastos.Trinity.ToolChains/blob/9545321/typings/dist/appmanager.d.ts#L79">Users/bpiette/Documents/Perso/Dev/elastos/Githubs/Elastos.Trinity/ToolChains/typings/dist/appmanager.d.ts:79</a></li>
-						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The access url authority status.</p>
 						</div>
-						<dl class="tsd-comment-tags">
-							<dt>typedef</dt>
-							<dd><p>UrlAuthority</p>
-							</dd>
-							<dt>type</dt>
-							<dd><p>{Object}</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{string}           url         The url access.</p>
-							</dd>
-							<dt>property</dt>
-							<dd><p>{AuthorityStatus}  authority   The authority status.</p>
-							</dd>
-						</dl>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -661,6 +708,24 @@
 						<a href="carrierplugin.html">Carrier<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="cordovabatterystatusplugin.html">Cordova<wbr>Battery<wbr>Status<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="cordovacameraplugin.html">Cordova<wbr>Camera<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="cordovadevicemotionplugin.html">Cordova<wbr>Device<wbr>Motion<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="cordovadeviceplugin.html">Cordova<wbr>Device<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="cordovamediacaptureplugin.html">Cordova<wbr>Media<wbr>Capture<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="cordovanetworkinfoplugin.html">Cordova<wbr>Network<wbr>Info<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="didplugin.html">DIDPlugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
@@ -686,7 +751,19 @@
 						<a href="appmanagerplugin.html#appinfo" class="tsd-kind-icon">App<wbr>Info</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="appmanagerplugin.html#framework" class="tsd-kind-icon">Framework</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="appmanagerplugin.html#icon" class="tsd-kind-icon">Icon</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="appmanagerplugin.html#intentoptions" class="tsd-kind-icon">Intent<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="appmanagerplugin.html#locale" class="tsd-kind-icon">Locale</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="appmanagerplugin.html#platform" class="tsd-kind-icon">Platform</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="appmanagerplugin.html#pluginauthority" class="tsd-kind-icon">Plugin<wbr>Authority</a>
