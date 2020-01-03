@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CordovaDeviceMotionPlugin | Trinity Plugins API Reference</title>
+	<title>CordovaFilePlugin | Trinity Plugins API Reference</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="cordovadevicemotionplugin.html">CordovaDeviceMotionPlugin</a>
+					<a href="cordovafileplugin.html">CordovaFilePlugin</a>
 				</li>
 			</ul>
-			<h1>Module CordovaDeviceMotionPlugin</h1>
+			<h1>Module CordovaFilePlugin</h1>
 		</div>
 	</div>
 </header>
@@ -67,16 +67,14 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>This plugin provides access to the device&#39;s accelerometer. The accelerometer is a motion sensor
-							that detects the change (delta) in movement relative to the current device orientation,
-							in three dimensions along the x, y, and z axis.
+						<p>This plugin provides file and directory operations.
 							<br><br>
-							Please use &#39;Accelerometer&#39; as the plugin name in the manifest.json if you want to use
+							Please use &#39;File&#39; as the plugin name in the manifest.json if you want to use
 							this facility.
 							<br><br>
 							Usage:
 							<br>
-						navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);</p>
+						declare let window: any;</p>
 					</div>
 				</div>
 			</section>
@@ -85,14 +83,123 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Interfaces</h3>
+							<h3>Enumerations</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/cordovadevicemotionplugin.acceleration.html" class="tsd-kind-icon">Acceleration</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/cordovadevicemotionplugin.accelerometer.html" class="tsd-kind-icon">Accelerometer</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/cordovadevicemotionplugin.accelerometeroptions.html" class="tsd-kind-icon">Accelerometer<wbr>Options</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/cordovadevicemotionplugin.watchhandle.html" class="tsd-kind-icon">Watch<wbr>Handle</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/cordovafileplugin.localfilesystem.html" class="tsd-kind-icon">Local<wbr>File<wbr>System</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/cordovafileplugin.directoryentry.html" class="tsd-kind-icon">Directory<wbr>Entry</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/cordovafileplugin.directoryreader.html" class="tsd-kind-icon">Directory<wbr>Reader</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/cordovafileplugin.entry.html" class="tsd-kind-icon">Entry</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/cordovafileplugin.fileentry.html" class="tsd-kind-icon">File<wbr>Entry</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/cordovafileplugin.fileerror.html" class="tsd-kind-icon">File<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/cordovafileplugin.filesaver.html" class="tsd-kind-icon">File<wbr>Saver</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/cordovafileplugin.filesystem.html" class="tsd-kind-icon">File<wbr>System</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/cordovafileplugin.filewriter.html" class="tsd-kind-icon">File<wbr>Writer</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/cordovafileplugin.flags.html" class="tsd-kind-icon">Flags</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/cordovafileplugin.metadata.html" class="tsd-kind-icon">Metadata</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="cordovafileplugin.html#fileerror-1" class="tsd-kind-icon">File<wbr>Error</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="cordovafileplugin.html#filewriter-1" class="tsd-kind-icon">File<wbr>Writer</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+					<a name="fileerror-1" class="tsd-anchor"></a>
+					<h3>File<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">File<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>constructor<span class="tsd-signature-symbol">: </span>function</h5>
+								<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-type-literal tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon">new __type<span class="tsd-signature-symbol">(</span>code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/cordovafileplugin.fileerror.html" class="tsd-signature-type">FileError</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<aside class="tsd-sources">
+										</aside>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>code: <span class="tsd-signature-type">number</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="../interfaces/cordovafileplugin.fileerror.html" class="tsd-signature-type">FileError</a></h4>
+									</li>
+							</ul>        </li>
+							<li class="tsd-parameter">
+								<h5>ABORT_<wbr>ERR<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>ENCODING_<wbr>ERR<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>INVALID_<wbr>MODIFICATION_<wbr>ERR<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>INVALID_<wbr>STATE_<wbr>ERR<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>NOT_<wbr>FOUND_<wbr>ERR<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>NOT_<wbr>READABLE_<wbr>ERR<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>NO_<wbr>MODIFICATION_<wbr>ALLOWED_<wbr>ERR<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>PATH_<wbr>EXISTS_<wbr>ERR<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>QUOTA_<wbr>EXCEEDED_<wbr>ERR<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>SECURITY_<wbr>ERR<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>SYNTAX_<wbr>ERR<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>TYPE_<wbr>MISMATCH_<wbr>ERR<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+					<a name="filewriter-1" class="tsd-anchor"></a>
+					<h3>File<wbr>Writer</h3>
+					<div class="tsd-signature tsd-kind-icon">File<wbr>Writer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>DONE<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>INIT<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>WRITING<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
 					</div>
 				</section>
 			</section>
@@ -115,13 +222,13 @@
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="cordovacameraplugin.html">Cordova<wbr>Camera<wbr>Plugin</a>
 					</li>
-					<li class="current tsd-kind-module tsd-is-not-exported">
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="cordovadevicemotionplugin.html">Cordova<wbr>Device<wbr>Motion<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="cordovadeviceplugin.html">Cordova<wbr>Device<wbr>Plugin</a>
 					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
+					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="cordovafileplugin.html">Cordova<wbr>File<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
@@ -143,17 +250,44 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/cordovadevicemotionplugin.acceleration.html" class="tsd-kind-icon">Acceleration</a>
+					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../enums/cordovafileplugin.localfilesystem.html" class="tsd-kind-icon">Local<wbr>File<wbr>System</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/cordovadevicemotionplugin.accelerometer.html" class="tsd-kind-icon">Accelerometer</a>
+						<a href="../interfaces/cordovafileplugin.directoryentry.html" class="tsd-kind-icon">Directory<wbr>Entry</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/cordovadevicemotionplugin.accelerometeroptions.html" class="tsd-kind-icon">Accelerometer<wbr>Options</a>
+						<a href="../interfaces/cordovafileplugin.directoryreader.html" class="tsd-kind-icon">Directory<wbr>Reader</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/cordovadevicemotionplugin.watchhandle.html" class="tsd-kind-icon">Watch<wbr>Handle</a>
+						<a href="../interfaces/cordovafileplugin.entry.html" class="tsd-kind-icon">Entry</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../interfaces/cordovafileplugin.fileentry.html" class="tsd-kind-icon">File<wbr>Entry</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../interfaces/cordovafileplugin.fileerror.html" class="tsd-kind-icon">File<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../interfaces/cordovafileplugin.filesaver.html" class="tsd-kind-icon">File<wbr>Saver</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../interfaces/cordovafileplugin.filesystem.html" class="tsd-kind-icon">File<wbr>System</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../interfaces/cordovafileplugin.filewriter.html" class="tsd-kind-icon">File<wbr>Writer</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../interfaces/cordovafileplugin.flags.html" class="tsd-kind-icon">Flags</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../interfaces/cordovafileplugin.metadata.html" class="tsd-kind-icon">Metadata</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+						<a href="cordovafileplugin.html#fileerror-1" class="tsd-kind-icon">File<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+						<a href="cordovafileplugin.html#filewriter-1" class="tsd-kind-icon">File<wbr>Writer</a>
 					</li>
 				</ul>
 			</nav>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IPFSClientCreationOptions | Trinity Plugins API Reference</title>
+	<title>DirectoryReader | Trinity Plugins API Reference</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,29 +54,37 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/hiveplugin.html">HivePlugin</a>
+					<a href="../modules/cordovafileplugin.html">CordovaFilePlugin</a>
 				</li>
 				<li>
-					<a href="hiveplugin.ipfsclientcreationoptions.html">IPFSClientCreationOptions</a>
+					<a href="cordovafileplugin.directoryreader.html">DirectoryReader</a>
 				</li>
 			</ul>
-			<h1>Interface IPFSClientCreationOptions</h1>
+			<h1>Interface DirectoryReader</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>This interface lets a user list files and directories in a directory. If there are
+							no additions to or deletions from a directory between the first and last call to
+							readEntries, and no errors occur, then:
+							A series of calls to readEntries must return each entry in the directory exactly once.
+							Once all entries have been returned, the next call to readEntries must produce an empty array.
+							If not all entries have been returned, the array produced by readEntries must not be empty.
+						The entries produced by readEntries must not include the directory itself [&quot;.&quot;] or its parent [&quot;..&quot;].</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="../classes/hiveplugin.clientcreationoptions.html" class="tsd-signature-type">ClientCreationOptions</a>
-						<ul class="tsd-hierarchy">
-							<li>
-								<span class="target">IPFSClientCreationOptions</span>
-							</li>
-						</ul>
+						<span class="target">DirectoryReader</span>
 					</li>
 				</ul>
 			</section>
@@ -84,48 +92,89 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-inherited tsd-is-not-exported">
-							<h3>Constructors</h3>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="hiveplugin.ipfsclientcreationoptions.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-inherited tsd-is-not-exported">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="hiveplugin.ipfsclientcreationoptions.html#drivetype" class="tsd-kind-icon">drive<wbr>Type</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="cordovafileplugin.directoryreader.html#readentries" class="tsd-kind-icon">read<wbr>Entries</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited tsd-is-not-exported">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="constructor" class="tsd-anchor"></a>
-					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">new IPFSClient<wbr>Creation<wbr>Options<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hiveplugin.ipfsclientcreationoptions.html" class="tsd-signature-type">IPFSClientCreationOptions</a></li>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="readentries" class="tsd-anchor"></a>
+					<h3>read<wbr>Entries</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">read<wbr>Entries<span class="tsd-signature-symbol">(</span>successCallback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, errorCallback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="../classes/hiveplugin.clientcreationoptions.html">ClientCreationOptions</a>.<a href="../classes/hiveplugin.clientcreationoptions.html#constructor">constructor</a></p>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="hiveplugin.ipfsclientcreationoptions.html" class="tsd-signature-type">IPFSClientCreationOptions</a></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Read the next block of entries from this directory.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>successCallback: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Called once per successful call to readEntries to deliver the next
+											previously-unreported set of Entries in the associated Directory.
+											If all Entries have already been returned from previous invocations
+										of readEntries, successCallback must be called with a zero-length array as an argument.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>entries<span class="tsd-signature-symbol">: </span><a href="cordovafileplugin.entry.html" class="tsd-signature-type">Entry</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>entries: <a href="cordovafileplugin.entry.html" class="tsd-signature-type">Entry</a><span class="tsd-signature-symbol">[]</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> errorCallback: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A callback indicating that there was an error reading from the Directory.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><a href="cordovafileplugin.fileerror.html" class="tsd-signature-type">FileError</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>error: <a href="cordovafileplugin.fileerror.html" class="tsd-signature-type">FileError</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited tsd-is-not-exported">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="drivetype" class="tsd-anchor"></a>
-					<h3>drive<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">drive<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/hiveplugin.drivetype.html" class="tsd-signature-type">DriveType</a></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="../classes/hiveplugin.clientcreationoptions.html">ClientCreationOptions</a>.<a href="../classes/hiveplugin.clientcreationoptions.html#drivetype">driveType</a></p>
-					</aside>
 				</section>
 			</section>
 		</div>
@@ -153,7 +202,7 @@
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/cordovadeviceplugin.html">Cordova<wbr>Device<wbr>Plugin</a>
 					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
+					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/cordovafileplugin.html">Cordova<wbr>File<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
@@ -165,7 +214,7 @@
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/didplugin.html">DIDPlugin</a>
 					</li>
-					<li class="current tsd-kind-module tsd-is-not-exported">
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/hiveplugin.html">Hive<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
@@ -176,49 +225,52 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../enums/hiveplugin.drivetype.html" class="tsd-kind-icon">Drive<wbr>Type</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../classes/hiveplugin.clientcreationoptions.html" class="tsd-kind-icon">Client<wbr>Creation<wbr>Options</a>
+						<a href="../enums/cordovafileplugin.localfilesystem.html" class="tsd-kind-icon">Local<wbr>File<wbr>System</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="hiveplugin.client.html" class="tsd-kind-icon">Client</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="hiveplugin.directory.html" class="tsd-kind-icon">Directory</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="hiveplugin.drive.html" class="tsd-kind-icon">Drive</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="hiveplugin.file.html" class="tsd-kind-icon">File</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="hiveplugin.hivemanager.html" class="tsd-kind-icon">Hive<wbr>Manager</a>
+						<a href="cordovafileplugin.directoryentry.html" class="tsd-kind-icon">Directory<wbr>Entry</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="hiveplugin.ipfsclientcreationoptions.html" class="tsd-kind-icon">IPFSClient<wbr>Creation<wbr>Options</a>
+						<a href="cordovafileplugin.directoryreader.html" class="tsd-kind-icon">Directory<wbr>Reader</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="hiveplugin.ipfsclientcreationoptions.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="hiveplugin.ipfsclientcreationoptions.html#drivetype" class="tsd-kind-icon">drive<wbr>Type</a>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="cordovafileplugin.directoryreader.html#readentries" class="tsd-kind-icon">read<wbr>Entries</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="hiveplugin.onedriveclientcreationoptions.html" class="tsd-kind-icon">One<wbr>Drive<wbr>Client<wbr>Creation<wbr>Options</a>
+						<a href="cordovafileplugin.entry.html" class="tsd-kind-icon">Entry</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/hiveplugin.html#int" class="tsd-kind-icon">Int</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="cordovafileplugin.fileentry.html" class="tsd-kind-icon">File<wbr>Entry</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
-						<a href="../modules/hiveplugin.html#opaque" class="tsd-kind-icon">Opaque</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="cordovafileplugin.fileerror.html" class="tsd-kind-icon">File<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="cordovafileplugin.filesaver.html" class="tsd-kind-icon">File<wbr>Saver</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="cordovafileplugin.filesystem.html" class="tsd-kind-icon">File<wbr>System</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="cordovafileplugin.filewriter.html" class="tsd-kind-icon">File<wbr>Writer</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="cordovafileplugin.flags.html" class="tsd-kind-icon">Flags</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="cordovafileplugin.metadata.html" class="tsd-kind-icon">Metadata</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/cordovafileplugin.html#fileerror-1" class="tsd-kind-icon">File<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/cordovafileplugin.html#filewriter-1" class="tsd-kind-icon">File<wbr>Writer</a>
 					</li>
 				</ul>
 			</nav>
