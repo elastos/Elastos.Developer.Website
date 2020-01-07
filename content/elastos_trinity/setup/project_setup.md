@@ -31,6 +31,7 @@ Enter your ionic app's folder then run the following command:
 
 ```bash
 $ trinity-cli manifest
+$ npm i --save @elastosfoundation/trinity-types
 ```
 
 ### Learning Ionic
