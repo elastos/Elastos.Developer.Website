@@ -8,46 +8,33 @@ alwaysopen = false
 +++ 
 
 {{% faqentry question="Is there an internet browser for Elastos?" %}}
-Yes, it is called Trinity interally however, the actual browser app will be called "Elastos" whenever it goes into production and is available on app stores.
+Yes, it is called Trinity internally however, the actual browser app is called elastOS. It is not used to browse regular "internet" website as one may think, but it's used to browse Elastos dApps.
 {{% /faqentry %}}
 
 {{% faqentry question="What is Trinity ?" %}}
-Trinity is a web browser for Elastos and a window into the Elastos Runtime environment. It is based on the chromium engine that is integrated with the Elastos Framework. {{< internallink "More info here." "discover_elastos/core_modules/trinity.md" >}}
+Trinity is the historical project name for elastOS, the Elastos browser. It is based on the chromium engine that is integrated with the Elastos Framework. {{< internallink "More info here." "discover_elastos/core_modules/trinity.md" >}}
 {{% /faqentry %}}
 
 {{% faqentry question="How will Trinity DApps work on my device? Are there any pre-requisites?" %}}
-Elastos DApps will work in a similar way as the apps that are already running on your device (Android, iOS, Windows, Linux, etc) with the only difference being that they will not have direct access to the internet and their authenticity will first have to be verified and validated on the Elastos blockchain. In the future, you will be able to download the Elastos application in your Apple or Google store or download it directly from the internet on any device. Once you open the Elastos app, you will find a list of DApps that you will be able to download, manage and use.
+Elastos dApps work in a similar way as the apps that are already running on your device (Android, iOS, Windows, Linux, etc) except that these dApps run inside another app, the elastOS browser. In order to run elastOS dApps, you may need to have a ELA wallet and a DID, but this is not always mandatory.
 {{% /faqentry %}}
 
 {{% faqentry question="The definition of Runtime is confusing to me. I have heard this layer described as a Sandbox, Trinity, Elastos Runtime, Elastos Browser, a Client tier, Virtual Machine, Runtime environment.  In layman's terms, is it accurate to say, “The runtime is a code execution engine designed to securely execute DApps on any computer?“" %}}
-Yes, you could say that. Also, only the APIs that are exposed through Trinity can be executed from the applications hence it’s a virtual machine. Apps have no access to the network sockets at all.
-{{% /faqentry %}}
-
-{{% faqentry question="Does Trinity run inside of a Virtual Machine or is Trinity THE virtual machine?" %}}
-Trinity is based on chromium open source project. V8 engine can run any C++ function calls hence this is used as the core SDK implementations are in C++ for elastos. You can think of Trinity as a regular app that acts LIKE the virtual machine (more specifically a native - C virtual machine) because you can only use the APIs that are exposed to this customized browser. So, in short, Trinity is an app + virtual machine all in one.
+Yes, you could say that. Also, only the APIs that are exposed through Trinity can be executed from the applications hence it’s a virtual machine. Apps have no access to the network sockets at all. Runtime is one part of the elastOS browser, the part that controls what dApps can do or not inside elastOS.
 {{% /faqentry %}}
 
 {{% faqentry question="Let’s say I want to develop an application that helps users pick stocks. My app will need to fetch data from exchanges by using APIs provided by the exchanges. Given that Elastos prohibits internet access to my app, how will I get data into my app from remote servers using those API's without using the old transport protocols like https?" %}}
-The elastos browser would have to expose the APIs for these exchanges first via a plugin. Apps written for Trinity browser are based on Ionic framework so any cordova plugins that are available for Trinity browser, developers can access them. 
+Eventhough elastOS blocks HTTP calls by default, your dApp can still request access to some external websites. It's up to end user to accept this or not. 
 {{% /faqentry %}}
 
-{{% faqentry question="Could I install the Elastos operating system on my computer or my smartphone?" %}}
-There is no such thing as Elastos operating system. Elastos has three components: Blockchain, Carrier and Hive. Each of these 3 components are different networks built for different use cases. Trinity Browser exposes all three of these networks via different APIs that developers can access using the plugins available. As such, if you want the complete Elastos package, you will need to download Elastos Browser app that will be able to be installed on devices. Elastos Browser is currently in beta.
+{{% faqentry question="What purpose does elastOS serve?" %}}
+The elastOS browser provides a sandboxed environment. Because all dApps have to go through the elastOS runtime and plugins to access external features, elastOS can control everything needed to deliver a secure environment: block network calls when necessary or filter storage and plugins access.
 {{% /faqentry %}}
 
-{{% faqentry question="What is the name of the virtual machine?" %}}
-Elastos Runtime. Runtime is part of Elastos Browser(Trinity).
-{{% /faqentry %}}
+{{% faqentry question="What will internet sites on elastOS look like?" %}}
+There are no internet sites on elastOS. Rather, there are only DApps. These DApps are what you're already familiar with. They are just regular applications that are available on your smart phones. The elastOS browser lets developers build dApps that can easily interact with the whole Elastos ecosystem including the ELA mainchain, DID sidechain, Ethereum sidechain, Token sidechain, Carrier, Hive, and more. 
 
-{{% faqentry question="What purpose does the virtual machine, Elastos Runtime, serve?" %}}
-The Runtime provides exactly the same services as the OS. It is a sandbox environment.
-
-{{% faqentry question="When will I be able to install the Elastos Browser on my smartphone?" %}}
-Version 1.0 is scheduled for end of 2019 or early 2020. Elastos Browser is already available for download in its beta version from the github repository at [https://github.com/elastos/Elastos.Trinity](https://github.com/elastos/Elastos.Trinity)
-{{% /faqentry %}}
-
-{{% faqentry question="What will internet sites on Elastos look like?" %}}
-There are no internet sites on Elastos Browser. Rather, there are only DApps. These DApps are what you're already familiar with. They are just regular applications that are available on your smart phones. Elastos Browser lets developers build DApps interacting with Elastos Blockchain, Elastos Carrier and Elastos Hive all in one. These DApps have no IP addresses like the traditional internet sites do and are also deployed on sidechains of Elastos Blockchain so they cannot be shut down as there are no centralized parties controlling any of the DApps.
+These dApps have no IP addresses like the traditional internet sites do and will also be deployed on sidechains so they won't be stoppable as there are no centralized parties controlling any of the dApps.
 {{% /faqentry %}}
 
 {{% faqentry question="What will the multimedia files look like in Elastos?" %}}
