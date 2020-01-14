@@ -25,7 +25,7 @@ Note that this centralized process will change in the future and will be replace
 Publishin your DApp requires to sign it using an Elastos DID. The Trinity CLI lets you create a DID this way:
 
 ```bash
-$ trinity-cli createdid
+$ trinity-cli did create
 ```
 
 Save your **DID string** and **mnemonics** in a safe place. You will need to use them to publish your DApp, now but also every time you want to publish an updated version.
@@ -38,6 +38,12 @@ You finally have to **wait a few minutes for the transaction to be validated by 
 
 Make sure to not store the created DID storage folder (in your current folder) to your GIT repository.
 
+**In case you cannot totally finalize the DID publication** on chain, you can still retry to publish your created DID later using the following command: 
+
+```bash
+$ trinity-cli did publish
+```
+
 ## Publishing your app
 
 * Make sure your application is **stable** and provides a **good quality** for end users.
@@ -46,7 +52,7 @@ Make sure to not store the created DID storage folder (in your current folder) t
 * Run the following command:
 
 ```bash
-$ trinity-cli publish --did did:elastos:yourdid
+$ trinity-cli publish --did did:elastos:yourdid --news "What's new information"
 ```
 
 * If this is your first publication, you'll have to wait for the Elastos team to review your publication before being able to view your DApp in the DApp store.

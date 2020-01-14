@@ -1,5 +1,5 @@
 +++
-title = "Trinity manifest"
+title = "The manifest file"
 weight = 10
 chapter = false
 pre = ""

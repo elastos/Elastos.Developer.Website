@@ -30,7 +30,7 @@ Please refer to [Ionic documentation](https://ionicframework.com/docs) to start 
 Native ionic/cordova plugins are embedded in the Trinity native application, not in every DApp. But we provide a set of typescript interfaces that can be imported through the npm module **@elastosfoundation/trinity-types**.
 
     // Declaration
-    declare let appManager: AppManager;
+    declare let appManager: AppManagerPlugin.AppManager;
 
     // Method call
     appManager.close();

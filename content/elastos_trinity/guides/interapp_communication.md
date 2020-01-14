@@ -24,19 +24,19 @@ In addition, Trinity has a few custom scheme commands, specific to Trinity itsel
 
 Sending intents is done through the AppManager plugin. Here is an example:
 
-    declare let appManager: any;
+    declare let appManager: AppManagerPlugin.AppManager;
 
-    appManager.sendUrlIntent("elastos://schemecommand/JWT", function() {
-        // Intent was handled by another app
-    }, (err)=>{
+    appManager.sendUrlIntent("elastos://schemecommand/JWT", (response: any) => {
+        // Intent was handled by another app and response data is returned
+    }, (err) => {
         // Something wrong happened
     })
 
     // or
 
-    appManager.sendIntent("action", {mydata: datavalue}, function() {
-        // Intent was handled by another app
-    }, (err)=>{
+    appManager.sendIntent("action", {mydata: datavalue}, null, (response: any) => {
+        // Intent was handled by another app and response data is returned
+    }, (err) => {
         // Something wrong happened
     })
 
@@ -60,4 +60,12 @@ Then in your app code, register an intent listener to know when an intent is rec
             case "pay":
                 // Do something
         }
+    });
+
+In order to do the proper UI routing when your app starts, you can also use the following method to know if your app was started by clicking on its main icon, or by and intent request:
+
+    appManager.hasPendingIntent((hasPendingIntent)=>{
+        // Route your app to the right screen here: home screen, or intent screen.
+    }, (err:any)=>{
+        // Error case.
     });
