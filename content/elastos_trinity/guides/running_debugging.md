@@ -35,3 +35,32 @@ Note that as soon as your device stops being on the same network as your compute
 ## Debugging your application
    
 Open the Chrome browser on your computer and visit `chrome://inspect` to inspect your DApp pages.
+
+## Debugging user issues remotely
+
+After your dApp is published, some users may face issuesn including fatal exceptions, that you haven't seen during development and tests.
+
+We recommend integrating a tool like **sentry.io** to your dApp in order to get exception reports remotely and therefore being able to debug most of end users issues.
+
+### Sentry Installation
+
+* Follow the steps at https://docs.sentry.io/error-reporting/quickstart/?platform=browsernpm.
+* This includes creating a Sentry account, getting a Sentry id for your app, and adding Sentry.init() and the custom Sentry error handle to your app.module.ts file.
+
+### Elastos foundation dApps sample
+
+For our built-in apps at the Elastos foundation, we use the following error handler, that you can use as a reference if needed:
+
+    @Injectable()
+    export class SentryErrorHandler implements ErrorHandler {
+        constructor() {}
+
+        handleError(error) {
+            console.error("Globally catched exception:", error);
+
+            // Only send reports to sentry if we are not debugging.
+            if (document.URL.includes('localhost')) {
+                Sentry.captureException(error.originalError || error);
+            }
+        }
+    }
