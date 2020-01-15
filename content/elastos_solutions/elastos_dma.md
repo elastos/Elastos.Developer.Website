@@ -1,6 +1,6 @@
 +++
 title = "Elastos DMA"
-weight = 10
+weight = 20
 chapter = false
 pre = ""
 alwaysopen = false
