@@ -1,0 +1,644 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Elastos Carrier error number &mdash; Elastos Carrier API References 5.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Elastos Carrier API References 5.0 documentation" href="index.html"/>
+        <link rel="prev" title="Elastos Carrier session APIs" href="carrier-session-api.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Elastos Carrier API References
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                5.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="carrier-intro.html">Elastos Carrier Client SDK introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="carrier-api.html">Elastos Carrier core APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="carrier-session-api.html">Elastos Carrier session APIs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Elastos Carrier error number</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#error-number-format">Error number format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#format-details">Format details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#error-codes">Error codes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-invalid-args">ELAERR_INVALID_ARGS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-out-of-memory">ELAERR_OUT_OF_MEMORY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-buffer-too-small">ELAERR_BUFFER_TOO_SMALL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-bad-persistent-data">ELAERR_BAD_PERSISTENT_DATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-invalid-persistence-file">ELAERR_INVALID_PERSISTENCE_FILE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-invalid-control-packet">ELAERR_INVALID_CONTROL_PACKET</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-invalid-credential">ELAERR_INVALID_CREDENTIAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-already-run">ELAERR_ALREADY_RUN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-not-ready">ELAERR_NOT_READY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-not-exist">ELAERR_NOT_EXIST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-already-exist">ELAERR_ALREADY_EXIST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-no-matched-request">ELAERR_NO_MATCHED_REQUEST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-invalid-userid">ELAERR_INVALID_USERID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-invalid-nodeid">ELAERR_INVALID_NODEID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-wrong-state">ELAERR_WRONG_STATE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-busy">ELAERR_BUSY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-language-binding">ELAERR_LANGUAGE_BINDING</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-encrypt">ELAERR_ENCRYPT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-sdp-too-long">ELAERR_SDP_TOO_LONG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-invalid-sdp">ELAERR_INVALID_SDP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-not-implemented">ELAERR_NOT_IMPLEMENTED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-limit-exceeded">ELAERR_LIMIT_EXCEEDED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-port-alloc">ELAERR_PORT_ALLOC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-bad-proxy-type">ELAERR_BAD_PROXY_TYPE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-bad-proxy-host">ELAERR_BAD_PROXY_HOST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-bad-proxy-port">ELAERR_BAD_PROXY_PORT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-proxy-not-available">ELAERR_PROXY_NOT_AVAILABLE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-encrypted-persistent-data">ELAERR_ENCRYPTED_PERSISTENT_DATA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-bad-bootstrap-host">ELAERR_BAD_BOOTSTRAP_HOST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-bad-bootstrap-port">ELAERR_BAD_BOOTSTRAP_PORT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-too-long">ELAERR_TOO_LONG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-add-self">ELAERR_ADD_SELF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-bad-address">ELAERR_BAD_ADDRESS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-friend-offline">ELAERR_FRIEND_OFFLINE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaerr-unknown">ELAERR_UNKNOWN</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Elastos Carrier API References</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Elastos Carrier error number</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="elastos-carrier-error-number">
+<h1>Elastos Carrier error number<a class="headerlink" href="#elastos-carrier-error-number" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="error-number-format">
+<h2>Error number format<a class="headerlink" href="#error-number-format" title="Permalink to this headline">¶</a></h2>
+<p>The Carrier error numbering space is extensible. The numbering space has the following internal structure.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="38%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">0</th>
+<th class="head">1 ~ 7</th>
+<th class="head">8 ~ 31</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Severity</td>
+<td>Facility</td>
+<td>Code</td>
+</tr>
+</tbody>
+</table>
+<p>An error number value has 32 bits divided into three fields: a severity code, a facility code, and an error code. The severity code indicates whether the return value represents information, warning, or error. The facility code identifies the area of the system responsible for the error. The error code is a unique number that is assigned to represent the exception.</p>
+<div class="section" id="format-details">
+<h3>Format details<a class="headerlink" href="#format-details" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Severity - indicates a error<ul>
+<li>1 - Failure</li>
+</ul>
+</li>
+<li>Facility - indicates the Carrier module that is responsible for the error. Available facility codes are shown below:<ul>
+<li>1 - General</li>
+<li>2 - System</li>
+<li>3 - HTTP</li>
+<li>4 - Reserved/not used</li>
+<li>5 - ICE</li>
+<li>6 - DHT</li>
+</ul>
+</li>
+<li>Code - is the facility’s error code</li>
+</ul>
+</div>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>0x86000021</p>
+<ul class="simple">
+<li>0x8 - Error</li>
+<li>0x6 - DHT</li>
+<li>0x21 - The error number(ELAERR_BAD_BOOTSTRAP_PORT)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="error-codes">
+<h2>Error codes<a class="headerlink" href="#error-codes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="elaerr-invalid-args">
+<h3>ELAERR_INVALID_ARGS<a class="headerlink" href="#elaerr-invalid-args" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_INVALID_ARGS">
+<span class="target" id="ela__carrier_8h_1a8417e32e03a0c91e51c2ccc9c038b4b0"></span><code class="descname">ELAERR_INVALID_ARGS</code> 0x01<a class="headerlink" href="#c.ELAERR_INVALID_ARGS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Argument(s) is(are) invalid. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-out-of-memory">
+<h3>ELAERR_OUT_OF_MEMORY<a class="headerlink" href="#elaerr-out-of-memory" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_OUT_OF_MEMORY">
+<span class="target" id="ela__carrier_8h_1a21313f1841c52138bc0318b9934b2d9b"></span><code class="descname">ELAERR_OUT_OF_MEMORY</code> 0x02<a class="headerlink" href="#c.ELAERR_OUT_OF_MEMORY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs out of memory. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-buffer-too-small">
+<h3>ELAERR_BUFFER_TOO_SMALL<a class="headerlink" href="#elaerr-buffer-too-small" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_BUFFER_TOO_SMALL">
+<span class="target" id="ela__carrier_8h_1aa864c9b7ffbb0bc107c3bf1027600764"></span><code class="descname">ELAERR_BUFFER_TOO_SMALL</code> 0x03<a class="headerlink" href="#c.ELAERR_BUFFER_TOO_SMALL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Buffer size is too small. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-bad-persistent-data">
+<h3>ELAERR_BAD_PERSISTENT_DATA<a class="headerlink" href="#elaerr-bad-persistent-data" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_BAD_PERSISTENT_DATA">
+<span class="target" id="ela__carrier_8h_1ae403ca79b32388804502a26dd06850d1"></span><code class="descname">ELAERR_BAD_PERSISTENT_DATA</code> 0x04<a class="headerlink" href="#c.ELAERR_BAD_PERSISTENT_DATA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Persistent data is corrupted. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-invalid-persistence-file">
+<h3>ELAERR_INVALID_PERSISTENCE_FILE<a class="headerlink" href="#elaerr-invalid-persistence-file" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_INVALID_PERSISTENCE_FILE">
+<span class="target" id="ela__carrier_8h_1a91afce43a0613b735572fe28c2c578d1"></span><code class="descname">ELAERR_INVALID_PERSISTENCE_FILE</code> 0x05<a class="headerlink" href="#c.ELAERR_INVALID_PERSISTENCE_FILE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Persistent file is invalid. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-invalid-control-packet">
+<h3>ELAERR_INVALID_CONTROL_PACKET<a class="headerlink" href="#elaerr-invalid-control-packet" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_INVALID_CONTROL_PACKET">
+<span class="target" id="ela__carrier_8h_1a2a549927b6311f99d5d19cd44e5a626a"></span><code class="descname">ELAERR_INVALID_CONTROL_PACKET</code> 0x06<a class="headerlink" href="#c.ELAERR_INVALID_CONTROL_PACKET" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control packet is invalid. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-invalid-credential">
+<h3>ELAERR_INVALID_CREDENTIAL<a class="headerlink" href="#elaerr-invalid-credential" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_INVALID_CREDENTIAL">
+<span class="target" id="ela__carrier_8h_1a8687f752e5662a30f763becaa1396ece"></span><code class="descname">ELAERR_INVALID_CREDENTIAL</code> 0x07<a class="headerlink" href="#c.ELAERR_INVALID_CREDENTIAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Credential is invalid. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-already-run">
+<h3>ELAERR_ALREADY_RUN<a class="headerlink" href="#elaerr-already-run" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_ALREADY_RUN">
+<span class="target" id="ela__carrier_8h_1a6a722f6fcaa6b1d0b202779df92354b9"></span><code class="descname">ELAERR_ALREADY_RUN</code> 0x08<a class="headerlink" href="#c.ELAERR_ALREADY_RUN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carrier ran already. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-not-ready">
+<h3>ELAERR_NOT_READY<a class="headerlink" href="#elaerr-not-ready" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_NOT_READY">
+<span class="target" id="ela__carrier_8h_1a073d856b57a61bef7a1b03ec181a8da8"></span><code class="descname">ELAERR_NOT_READY</code> 0x09<a class="headerlink" href="#c.ELAERR_NOT_READY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carrier not ready. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-not-exist">
+<h3>ELAERR_NOT_EXIST<a class="headerlink" href="#elaerr-not-exist" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_NOT_EXIST">
+<span class="target" id="ela__carrier_8h_1ae465ce4cfb27db38ddfbc5d6b815e122"></span><code class="descname">ELAERR_NOT_EXIST</code> 0x0A<a class="headerlink" href="#c.ELAERR_NOT_EXIST" title="Permalink to this definition">¶</a></dt>
+<dd><p>The requested entity does not exist. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-already-exist">
+<h3>ELAERR_ALREADY_EXIST<a class="headerlink" href="#elaerr-already-exist" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_ALREADY_EXIST">
+<span class="target" id="ela__carrier_8h_1aef05dc24c493092d2d8c7b9395c94fad"></span><code class="descname">ELAERR_ALREADY_EXIST</code> 0x0B<a class="headerlink" href="#c.ELAERR_ALREADY_EXIST" title="Permalink to this definition">¶</a></dt>
+<dd><p>The entity exists already. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-no-matched-request">
+<h3>ELAERR_NO_MATCHED_REQUEST<a class="headerlink" href="#elaerr-no-matched-request" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_NO_MATCHED_REQUEST">
+<span class="target" id="ela__carrier_8h_1a62fc487ea0c0523ccaff3ae54cdef8ce"></span><code class="descname">ELAERR_NO_MATCHED_REQUEST</code> 0x0C<a class="headerlink" href="#c.ELAERR_NO_MATCHED_REQUEST" title="Permalink to this definition">¶</a></dt>
+<dd><p>There are no matched requests. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-invalid-userid">
+<h3>ELAERR_INVALID_USERID<a class="headerlink" href="#elaerr-invalid-userid" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_INVALID_USERID">
+<span class="target" id="ela__carrier_8h_1a82ad01735717a291f88049c1bf00412d"></span><code class="descname">ELAERR_INVALID_USERID</code> 0x0D<a class="headerlink" href="#c.ELAERR_INVALID_USERID" title="Permalink to this definition">¶</a></dt>
+<dd><p>User ID is invalid. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-invalid-nodeid">
+<h3>ELAERR_INVALID_NODEID<a class="headerlink" href="#elaerr-invalid-nodeid" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_INVALID_NODEID">
+<span class="target" id="ela__carrier_8h_1a52dd958f526831616a98a9b82496324a"></span><code class="descname">ELAERR_INVALID_NODEID</code> 0x0E<a class="headerlink" href="#c.ELAERR_INVALID_NODEID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Node ID is invalid. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-wrong-state">
+<h3>ELAERR_WRONG_STATE<a class="headerlink" href="#elaerr-wrong-state" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_WRONG_STATE">
+<span class="target" id="ela__carrier_8h_1a62520e9ea2b10cbb92cc4ef7dcfaf959"></span><code class="descname">ELAERR_WRONG_STATE</code> 0x0F<a class="headerlink" href="#c.ELAERR_WRONG_STATE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Failed because wrong state. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-busy">
+<h3>ELAERR_BUSY<a class="headerlink" href="#elaerr-busy" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_BUSY">
+<span class="target" id="ela__carrier_8h_1a7b3ceb6acebefb7cc8a2fe6313058973"></span><code class="descname">ELAERR_BUSY</code> 0x10<a class="headerlink" href="#c.ELAERR_BUSY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stream busy. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-language-binding">
+<h3>ELAERR_LANGUAGE_BINDING<a class="headerlink" href="#elaerr-language-binding" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_LANGUAGE_BINDING">
+<span class="target" id="ela__carrier_8h_1a9228bf72568db7a05cc5c266603a32ab"></span><code class="descname">ELAERR_LANGUAGE_BINDING</code> 0x11<a class="headerlink" href="#c.ELAERR_LANGUAGE_BINDING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Language binding error. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-encrypt">
+<h3>ELAERR_ENCRYPT<a class="headerlink" href="#elaerr-encrypt" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_ENCRYPT">
+<span class="target" id="ela__carrier_8h_1a902247190b4a8ecc687c9cafbb8b6378"></span><code class="descname">ELAERR_ENCRYPT</code> 0x12<a class="headerlink" href="#c.ELAERR_ENCRYPT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encryption failed. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-sdp-too-long">
+<h3>ELAERR_SDP_TOO_LONG<a class="headerlink" href="#elaerr-sdp-too-long" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_SDP_TOO_LONG">
+<span class="target" id="ela__carrier_8h_1a30e8206d3ef85e2c296021e4789feaea"></span><code class="descname">ELAERR_SDP_TOO_LONG</code> 0x13<a class="headerlink" href="#c.ELAERR_SDP_TOO_LONG" title="Permalink to this definition">¶</a></dt>
+<dd><p>The content size of SDP is too long. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-invalid-sdp">
+<h3>ELAERR_INVALID_SDP<a class="headerlink" href="#elaerr-invalid-sdp" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_INVALID_SDP">
+<span class="target" id="ela__carrier_8h_1add9389911246f595a59f3de52664f5a6"></span><code class="descname">ELAERR_INVALID_SDP</code> 0x14<a class="headerlink" href="#c.ELAERR_INVALID_SDP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bad SDP information format. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-not-implemented">
+<h3>ELAERR_NOT_IMPLEMENTED<a class="headerlink" href="#elaerr-not-implemented" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_NOT_IMPLEMENTED">
+<span class="target" id="ela__carrier_8h_1a3570ae492f3b11753f659c0798c88b5d"></span><code class="descname">ELAERR_NOT_IMPLEMENTED</code> 0x15<a class="headerlink" href="#c.ELAERR_NOT_IMPLEMENTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Not implemented yet. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-limit-exceeded">
+<h3>ELAERR_LIMIT_EXCEEDED<a class="headerlink" href="#elaerr-limit-exceeded" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_LIMIT_EXCEEDED">
+<span class="target" id="ela__carrier_8h_1a66591b24ade5c2c1b817508b22e1f0a8"></span><code class="descname">ELAERR_LIMIT_EXCEEDED</code> 0x16<a class="headerlink" href="#c.ELAERR_LIMIT_EXCEEDED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Limits are exceeded. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-port-alloc">
+<h3>ELAERR_PORT_ALLOC<a class="headerlink" href="#elaerr-port-alloc" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_PORT_ALLOC">
+<span class="target" id="ela__carrier_8h_1a5eca8694fc70ce0a2858a3b9ef144d0b"></span><code class="descname">ELAERR_PORT_ALLOC</code> 0x17<a class="headerlink" href="#c.ELAERR_PORT_ALLOC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allocate port unsuccessfully. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-bad-proxy-type">
+<h3>ELAERR_BAD_PROXY_TYPE<a class="headerlink" href="#elaerr-bad-proxy-type" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_BAD_PROXY_TYPE">
+<span class="target" id="ela__carrier_8h_1ac9c0510daa8fada52a34c40bc89a445b"></span><code class="descname">ELAERR_BAD_PROXY_TYPE</code> 0x18<a class="headerlink" href="#c.ELAERR_BAD_PROXY_TYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invalid proxy type. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-bad-proxy-host">
+<h3>ELAERR_BAD_PROXY_HOST<a class="headerlink" href="#elaerr-bad-proxy-host" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_BAD_PROXY_HOST">
+<span class="target" id="ela__carrier_8h_1a254c8cc4202970ddd70f0ad9ca472d9d"></span><code class="descname">ELAERR_BAD_PROXY_HOST</code> 0x19<a class="headerlink" href="#c.ELAERR_BAD_PROXY_HOST" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invalid proxy host. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-bad-proxy-port">
+<h3>ELAERR_BAD_PROXY_PORT<a class="headerlink" href="#elaerr-bad-proxy-port" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_BAD_PROXY_PORT">
+<span class="target" id="ela__carrier_8h_1a0bd2b7897f6c5591e6e9dbbfe8d1e2b0"></span><code class="descname">ELAERR_BAD_PROXY_PORT</code> 0x1A<a class="headerlink" href="#c.ELAERR_BAD_PROXY_PORT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invalid proxy port. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-proxy-not-available">
+<h3>ELAERR_PROXY_NOT_AVAILABLE<a class="headerlink" href="#elaerr-proxy-not-available" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_PROXY_NOT_AVAILABLE">
+<span class="target" id="ela__carrier_8h_1a39ff96f840ba99da79d5eb41e51e1eab"></span><code class="descname">ELAERR_PROXY_NOT_AVAILABLE</code> 0x1B<a class="headerlink" href="#c.ELAERR_PROXY_NOT_AVAILABLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Proxy is not available. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-encrypted-persistent-data">
+<h3>ELAERR_ENCRYPTED_PERSISTENT_DATA<a class="headerlink" href="#elaerr-encrypted-persistent-data" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_ENCRYPTED_PERSISTENT_DATA">
+<span class="target" id="ela__carrier_8h_1a707c528118abef05be9e91a0b54337ff"></span><code class="descname">ELAERR_ENCRYPTED_PERSISTENT_DATA</code> 0x1C<a class="headerlink" href="#c.ELAERR_ENCRYPTED_PERSISTENT_DATA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Persistent data is encrypted, load failed. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-bad-bootstrap-host">
+<h3>ELAERR_BAD_BOOTSTRAP_HOST<a class="headerlink" href="#elaerr-bad-bootstrap-host" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_BAD_BOOTSTRAP_HOST">
+<span class="target" id="ela__carrier_8h_1ade7780440855640a6bc7d82651f4a3d0"></span><code class="descname">ELAERR_BAD_BOOTSTRAP_HOST</code> 0x1D<a class="headerlink" href="#c.ELAERR_BAD_BOOTSTRAP_HOST" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invalid bootstrap host. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-bad-bootstrap-port">
+<h3>ELAERR_BAD_BOOTSTRAP_PORT<a class="headerlink" href="#elaerr-bad-bootstrap-port" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_BAD_BOOTSTRAP_PORT">
+<span class="target" id="ela__carrier_8h_1aaef89890c37f8e9d9e3c245c795269e7"></span><code class="descname">ELAERR_BAD_BOOTSTRAP_PORT</code> 0x1E<a class="headerlink" href="#c.ELAERR_BAD_BOOTSTRAP_PORT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invalid bootstrap port. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-too-long">
+<h3>ELAERR_TOO_LONG<a class="headerlink" href="#elaerr-too-long" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_TOO_LONG">
+<span class="target" id="ela__carrier_8h_1aa49180ad01770bfd002f8b03d201f50c"></span><code class="descname">ELAERR_TOO_LONG</code> 0x1F<a class="headerlink" href="#c.ELAERR_TOO_LONG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data is too long. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-add-self">
+<h3>ELAERR_ADD_SELF<a class="headerlink" href="#elaerr-add-self" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_ADD_SELF">
+<span class="target" id="ela__carrier_8h_1a31add47eeb570c33c11d74fd43bbcbe6"></span><code class="descname">ELAERR_ADD_SELF</code> 0x20<a class="headerlink" href="#c.ELAERR_ADD_SELF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Could not friend yourself. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-bad-address">
+<h3>ELAERR_BAD_ADDRESS<a class="headerlink" href="#elaerr-bad-address" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_BAD_ADDRESS">
+<span class="target" id="ela__carrier_8h_1a1c0e9d689ae8b8312ef632178329de3f"></span><code class="descname">ELAERR_BAD_ADDRESS</code> 0x21<a class="headerlink" href="#c.ELAERR_BAD_ADDRESS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invalid address. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-friend-offline">
+<h3>ELAERR_FRIEND_OFFLINE<a class="headerlink" href="#elaerr-friend-offline" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_FRIEND_OFFLINE">
+<span class="target" id="ela__carrier_8h_1a58e70410388381b881103a6d26db2832"></span><code class="descname">ELAERR_FRIEND_OFFLINE</code> 0x22<a class="headerlink" href="#c.ELAERR_FRIEND_OFFLINE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Friend is offline. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="elaerr-unknown">
+<h3>ELAERR_UNKNOWN<a class="headerlink" href="#elaerr-unknown" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELAERR_UNKNOWN">
+<span class="target" id="ela__carrier_8h_1ac815cdc597edbcff5b42fb530d0d452a"></span><code class="descname">ELAERR_UNKNOWN</code> 0xFF<a class="headerlink" href="#c.ELAERR_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unknown error. </p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="carrier-session-api.html" class="btn btn-neutral" title="Elastos Carrier session APIs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, elastos.org.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'5.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

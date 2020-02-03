@@ -1,0 +1,1623 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Elastos Carrier core APIs &mdash; Elastos Carrier API References 5.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Elastos Carrier API References 5.0 documentation" href="index.html"/>
+        <link rel="next" title="Elastos Carrier session APIs" href="carrier-session-api.html"/>
+        <link rel="prev" title="Elastos Carrier Client SDK introduction" href="carrier-intro.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Elastos Carrier API References
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                5.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="carrier-intro.html">Elastos Carrier Client SDK introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Elastos Carrier core APIs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#constants">Constants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ela-max-address-len">ELA_MAX_ADDRESS_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ela-max-id-len">ELA_MAX_ID_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ela-max-user-name-len">ELA_MAX_USER_NAME_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ela-max-user-description-len">ELA_MAX_USER_DESCRIPTION_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ela-max-phone-len">ELA_MAX_PHONE_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ela-max-email-len">ELA_MAX_EMAIL_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ela-max-region-len">ELA_MAX_REGION_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ela-max-gender-len">ELA_MAX_GENDER_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ela-max-node-name-len">ELA_MAX_NODE_NAME_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ela-max-node-description-len">ELA_MAX_NODE_DESCRIPTION_LEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ela-max-app-message-len">ELA_MAX_APP_MESSAGE_LEN</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-types">Data types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bootstrap">Bootstrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaoptions">ElaOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaconnectionstatus">ElaConnectionStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elapresencestatus">ElaPresenceStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaloglevel">ElaLogLevel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elauserinfo">ElaUserInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elafriendinfo">ElaFriendInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elacallbacks">ElaCallbacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elafriendsiteratecallback">ElaFriendsIterateCallback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elafriendinviteresponsecallback">ElaFriendInviteResponseCallback</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#carrier-instance">Carrier instance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ela-new">ela_new</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-run">ela_run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-kill">ela_kill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-is-ready">ela_is_ready</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#node-information">Node Information</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ela-get-address">ela_get_address</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-get-nodeid">ela_get_nodeid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-get-userid">ela_get_userid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-get-id-by-address">ela_get_id_by_address</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-set-self-nospam">ela_set_self_nospam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-get-self-nospam">ela_get_self_nospam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-set-self-info">ela_set_self_info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-get-self-info">ela_get_self_info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-set-self-presence">ela_set_self_presence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-get-self-presence">ela_get_self_presence</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#friend-interaction">Friend &amp; interaction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ela-get-friends">ela_get_friends</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-get-friend-info">ela_get_friend_info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-set-friend-label">ela_set_friend_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-is-friend">ela_is_friend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-add-friend">ela_add_friend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-accept-friend">ela_accept_friend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-remove-friend">ela_remove_friend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-send-friend-message">ela_send_friend_message</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-invite-friend">ela_invite_friend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-reply-friend-invite">ela_reply_friend_invite</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#utility-functions">Utility functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ela-get-version">ela_get_version</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-address-is-valid">ela_address_is_valid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-id-is-valid">ela_id_is_valid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-get-error">ela_get_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-clear-error">ela_clear_error</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="carrier-session-api.html">Elastos Carrier session APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="carrier-error-number.html">Elastos Carrier error number</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Elastos Carrier API References</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Elastos Carrier core APIs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="elastos-carrier-core-apis">
+<h1>Elastos Carrier core APIs<a class="headerlink" href="#elastos-carrier-core-apis" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ela-max-address-len">
+<h3>ELA_MAX_ADDRESS_LEN<a class="headerlink" href="#ela-max-address-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELA_MAX_ADDRESS_LEN">
+<span class="target" id="ela__carrier_8h_1a30d691ddba4da48be8a317341a0e6d44"></span><code class="descname">ELA_MAX_ADDRESS_LEN</code> 52<a class="headerlink" href="#c.ELA_MAX_ADDRESS_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carrier User address max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-max-id-len">
+<h3>ELA_MAX_ID_LEN<a class="headerlink" href="#ela-max-id-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELA_MAX_ID_LEN">
+<span class="target" id="ela__carrier_8h_1a6dc00e1b62bb272b48384cbdceb8c716"></span><code class="descname">ELA_MAX_ID_LEN</code> 45<a class="headerlink" href="#c.ELA_MAX_ID_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carrier Node/User ID max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-max-user-name-len">
+<h3>ELA_MAX_USER_NAME_LEN<a class="headerlink" href="#ela-max-user-name-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELA_MAX_USER_NAME_LEN">
+<span class="target" id="ela__carrier_8h_1ae364399db077467ea37450d9f04869b6"></span><code class="descname">ELA_MAX_USER_NAME_LEN</code> 63<a class="headerlink" href="#c.ELA_MAX_USER_NAME_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carrier user name max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-max-user-description-len">
+<h3>ELA_MAX_USER_DESCRIPTION_LEN<a class="headerlink" href="#ela-max-user-description-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELA_MAX_USER_DESCRIPTION_LEN">
+<span class="target" id="ela__carrier_8h_1aabdc47472a0ca3c9458ef1a7822fde29"></span><code class="descname">ELA_MAX_USER_DESCRIPTION_LEN</code> 127<a class="headerlink" href="#c.ELA_MAX_USER_DESCRIPTION_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carrier user description max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-max-phone-len">
+<h3>ELA_MAX_PHONE_LEN<a class="headerlink" href="#ela-max-phone-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELA_MAX_PHONE_LEN">
+<span class="target" id="ela__carrier_8h_1a41642637fbcc6c2c186b2e845443c5fe"></span><code class="descname">ELA_MAX_PHONE_LEN</code> 31<a class="headerlink" href="#c.ELA_MAX_PHONE_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carrier user phone number max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-max-email-len">
+<h3>ELA_MAX_EMAIL_LEN<a class="headerlink" href="#ela-max-email-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELA_MAX_EMAIL_LEN">
+<span class="target" id="ela__carrier_8h_1a1af2dfe31d0592cbf38b828575de801e"></span><code class="descname">ELA_MAX_EMAIL_LEN</code> 127<a class="headerlink" href="#c.ELA_MAX_EMAIL_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carrier user email address max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-max-region-len">
+<h3>ELA_MAX_REGION_LEN<a class="headerlink" href="#ela-max-region-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELA_MAX_REGION_LEN">
+<span class="target" id="ela__carrier_8h_1a4ee718b3c061768125a34f12af2a2f50"></span><code class="descname">ELA_MAX_REGION_LEN</code> 127<a class="headerlink" href="#c.ELA_MAX_REGION_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carrier user region max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-max-gender-len">
+<h3>ELA_MAX_GENDER_LEN<a class="headerlink" href="#ela-max-gender-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELA_MAX_GENDER_LEN">
+<span class="target" id="ela__carrier_8h_1ab0862ebc6773a641a124be03426b36cc"></span><code class="descname">ELA_MAX_GENDER_LEN</code> 31<a class="headerlink" href="#c.ELA_MAX_GENDER_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carrier user gender max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-max-node-name-len">
+<h3>ELA_MAX_NODE_NAME_LEN<a class="headerlink" href="#ela-max-node-name-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELA_MAX_NODE_NAME_LEN">
+<span class="target" id="ela__carrier_8h_1a54d36290b66599143cd39cd9cf876898"></span><code class="descname">ELA_MAX_NODE_NAME_LEN</code> 63<a class="headerlink" href="#c.ELA_MAX_NODE_NAME_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carrier node name max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-max-node-description-len">
+<h3>ELA_MAX_NODE_DESCRIPTION_LEN<a class="headerlink" href="#ela-max-node-description-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELA_MAX_NODE_DESCRIPTION_LEN">
+<span class="target" id="ela__carrier_8h_1a2a740c078a44ed321ae57ad06713b72f"></span><code class="descname">ELA_MAX_NODE_DESCRIPTION_LEN</code> 127<a class="headerlink" href="#c.ELA_MAX_NODE_DESCRIPTION_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carrier node description max length. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-max-app-message-len">
+<h3>ELA_MAX_APP_MESSAGE_LEN<a class="headerlink" href="#ela-max-app-message-len" title="Permalink to this headline">¶</a></h3>
+<dl class="macro">
+<dt id="c.ELA_MAX_APP_MESSAGE_LEN">
+<span class="target" id="ela__carrier_8h_1ae777eaea0b10691b3c7ec7ac8d45f881"></span><code class="descname">ELA_MAX_APP_MESSAGE_LEN</code> 1024<a class="headerlink" href="#c.ELA_MAX_APP_MESSAGE_LEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carrier App message max length. </p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="data-types">
+<h2>Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bootstrap">
+<h3>Bootstrap<a class="headerlink" href="#bootstrap" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv313BootstrapNode">
+<span id="_CPPv213BootstrapNode"></span><span id="BootstrapNode"></span><span class="target" id="struct_bootstrap_node"></span><em class="property">struct </em><code class="descname">BootstrapNode</code><a class="headerlink" href="#_CPPv313BootstrapNode" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Bootstrap defines a couple of perperities to provide for Carrier nodes to connect with. </p>
+<p>The bootstrap nodes help Carrier nodes be connected to the others with more higher possibilities. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv3N13BootstrapNode4ipv4E">
+<span id="_CPPv2N13BootstrapNode4ipv4E"></span><span id="BootstrapNode::ipv4__cCP"></span><span class="target" id="struct_bootstrap_node_1af4a9cdf4487630ca563dccfe2dfb1150"></span><em class="property">const</em> char *<code class="descname">ipv4</code><a class="headerlink" href="#_CPPv3N13BootstrapNode4ipv4E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The ip address supported with ipv4 protocol. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N13BootstrapNode4ipv6E">
+<span id="_CPPv2N13BootstrapNode4ipv6E"></span><span id="BootstrapNode::ipv6__cCP"></span><span class="target" id="struct_bootstrap_node_1a47c9ffbe13dc5b5f8d6caaf24b8d5226"></span><em class="property">const</em> char *<code class="descname">ipv6</code><a class="headerlink" href="#_CPPv3N13BootstrapNode4ipv6E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The ip address supported with ipv6 protocol. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N13BootstrapNode4portE">
+<span id="_CPPv2N13BootstrapNode4portE"></span><span id="BootstrapNode::port__cCP"></span><span class="target" id="struct_bootstrap_node_1a8e7654be13a9e9644fbd227450df4b09"></span><em class="property">const</em> char *<code class="descname">port</code><a class="headerlink" href="#_CPPv3N13BootstrapNode4portE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The ip port. </p>
+<p>The default value is 33445. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N13BootstrapNode10public_keyE">
+<span id="_CPPv2N13BootstrapNode10public_keyE"></span><span id="BootstrapNode::public_key__cCP"></span><span class="target" id="struct_bootstrap_node_1a81bc11367db00ab434f59a5f6e480367"></span><em class="property">const</em> char *<code class="descname">public_key</code><a class="headerlink" href="#_CPPv3N13BootstrapNode10public_keyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The unique public key to provide for Carrier nodes, terminated by null-string. </p>
+<p>The length of public key is about 45 bytes. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="elaoptions">
+<h3>ElaOptions<a class="headerlink" href="#elaoptions" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv310ElaOptions">
+<span id="_CPPv210ElaOptions"></span><span id="ElaOptions"></span><span class="target" id="struct_ela_options"></span><em class="property">struct </em><code class="descname">ElaOptions</code><a class="headerlink" href="#_CPPv310ElaOptions" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#struct_ela_options"><span class="std std-ref">ElaOptions</span></a> defines several settings that control the way the Carrier node connects to others. </p>
+<p><dl class="docutils">
+<dt><strong>Remark</strong></dt>
+<dd>Default values are not defined for persistent_location of Carrier- Options, so application should be set persistent_location clearly. If the <a class="reference internal" href="#struct_ela_options"><span class="std std-ref">ElaOptions</span></a> structure is defined as a static variable, initialization (in compliant compilers) sets all values to 0 (NULL for pointers). </dd>
+</dl>
+</p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv3N10ElaOptions19persistent_locationE">
+<span id="_CPPv2N10ElaOptions19persistent_locationE"></span><span id="ElaOptions::persistent_location__cCP"></span><span class="target" id="struct_ela_options_1af4b0f9879a6cbedd4120febb1c9b2651"></span><em class="property">const</em> char *<code class="descname">persistent_location</code><a class="headerlink" href="#_CPPv3N10ElaOptions19persistent_locationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The application defined persistent data location. </p>
+<p>The location must be set. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10ElaOptions11udp_enabledE">
+<span id="_CPPv2N10ElaOptions11udp_enabledE"></span><span id="ElaOptions::udp_enabled__b"></span><span class="target" id="struct_ela_options_1aca9375bb76d7bc75f549e50c7530dc2b"></span>bool <code class="descname">udp_enabled</code><a class="headerlink" href="#_CPPv3N10ElaOptions11udp_enabledE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The option to decide to use udp transport or not. </p>
+<p>Setting this option to false will force Carrier node to use TCP only, which will potentially slow down the message to run through. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10ElaOptions9log_levelE">
+<span id="_CPPv2N10ElaOptions9log_levelE"></span><span id="ElaOptions::log_level__ElaLogLevel"></span><span class="target" id="struct_ela_options_1a2e2d9326430c4fb14b9a581986f8b5e5"></span><a class="reference internal" href="#_CPPv311ElaLogLevel" title="ElaLogLevel">ElaLogLevel</a> <code class="descname">log_level</code><a class="headerlink" href="#_CPPv3N10ElaOptions9log_levelE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the log level for Carrier logging output. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10ElaOptions8log_fileE">
+<span id="_CPPv2N10ElaOptions8log_fileE"></span><span id="ElaOptions::log_file__cP"></span><span class="target" id="struct_ela_options_1af6dc5bd91174a2a03bc129e92e6202df"></span>char *<code class="descname">log_file</code><a class="headerlink" href="#_CPPv3N10ElaOptions8log_fileE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set all logging messages from Carrier output to logfile. </p>
+<p>Default is NULL, all the logging message will output to stdout. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10ElaOptions11log_printerE">
+<span id="_CPPv2N10ElaOptions11log_printerE"></span><span class="target" id="struct_ela_options_1a139e978f4428e1415c6ba7aca744a72b"></span>void (*<code class="descname">log_printer</code>)<span class="sig-paren">(</span><em class="property">const</em> char *format, va_list args<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10ElaOptions11log_printerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set a customized log printer, all logging messages from Carrier will also output to this printer. </p>
+<p>Default is NULL. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10ElaOptions15bootstraps_sizeE">
+<span id="_CPPv2N10ElaOptions15bootstraps_sizeE"></span><span id="ElaOptions::bootstraps_size__s"></span><span class="target" id="struct_ela_options_1ae1623166c8504977fbb0ca3c1b954495"></span>size_t <code class="descname">bootstraps_size</code><a class="headerlink" href="#_CPPv3N10ElaOptions15bootstraps_sizeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The total number of bootstrap nodes to connect. </p>
+<p>There must have at least one bootstrap node for the very first time to create carrier instance. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10ElaOptions10bootstrapsE">
+<span id="_CPPv2N10ElaOptions10bootstrapsE"></span><span id="ElaOptions::bootstraps__BootstrapNodeP"></span><span class="target" id="struct_ela_options_1ac461ec0b4268c2b9d664a6f5102398ec"></span><a class="reference internal" href="#_CPPv313BootstrapNode" title="BootstrapNode">BootstrapNode</a> *<code class="descname">bootstraps</code><a class="headerlink" href="#_CPPv3N10ElaOptions10bootstrapsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The array of DHT bootstrap nodes. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10ElaOptions20hive_bootstraps_sizeE">
+<span id="_CPPv2N10ElaOptions20hive_bootstraps_sizeE"></span><span id="ElaOptions::hive_bootstraps_size__s"></span><span class="target" id="struct_ela_options_1a097e3858fd2fd3fcba54ee5274dd71a3"></span>size_t <code class="descname">hive_bootstraps_size</code><a class="headerlink" href="#_CPPv3N10ElaOptions20hive_bootstraps_sizeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The total number of Hive bootstrap nodes to connect. </p>
+<p>There must have at least one bootstrap node for the very first time to create carrier instance. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10ElaOptions15hive_bootstrapsE">
+<span id="_CPPv2N10ElaOptions15hive_bootstrapsE"></span><span id="ElaOptions::hive_bootstraps__HiveBootstrapNodeP"></span><span class="target" id="struct_ela_options_1a812ad5a227a908b7b1526db7feb33dc3"></span>HiveBootstrapNode *<code class="descname">hive_bootstraps</code><a class="headerlink" href="#_CPPv3N10ElaOptions15hive_bootstrapsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The array of Hive bootstrap nodes. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="elaconnectionstatus">
+<h3>ElaConnectionStatus<a class="headerlink" href="#elaconnectionstatus" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv319ElaConnectionStatus">
+<span id="_CPPv219ElaConnectionStatus"></span><span id="ElaConnectionStatus"></span><span class="target" id="ela__carrier_8h_1a9f42c35a0d0a1f96c5a183f8a63595cc"></span><em class="property">enum </em><code class="descname">ElaConnectionStatus</code><a class="headerlink" href="#_CPPv319ElaConnectionStatus" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Carrier node connection status to Carrier network. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv329ElaConnectionStatus_Connected">
+<span id="_CPPv229ElaConnectionStatus_Connected"></span><span class="target" id="ela__carrier_8h_1a9f42c35a0d0a1f96c5a183f8a63595cca95823e58bf301e575e693fe9fdf3f94e"></span><code class="descname">ElaConnectionStatus_Connected</code><a class="headerlink" href="#_CPPv329ElaConnectionStatus_Connected" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Carrier node connected to Carrier network. </p>
+<p>Indicate the Carrier node is online. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv332ElaConnectionStatus_Disconnected">
+<span id="_CPPv232ElaConnectionStatus_Disconnected"></span><span class="target" id="ela__carrier_8h_1a9f42c35a0d0a1f96c5a183f8a63595cca4945ebbe2a2a937b3ac7e8d430129223"></span><code class="descname">ElaConnectionStatus_Disconnected</code><a class="headerlink" href="#_CPPv332ElaConnectionStatus_Disconnected" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>There is no connection to Carrier network. </p>
+<p>Indicate the Carrier node is offline. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="elapresencestatus">
+<h3>ElaPresenceStatus<a class="headerlink" href="#elapresencestatus" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv317ElaPresenceStatus">
+<span id="_CPPv217ElaPresenceStatus"></span><span id="ElaPresenceStatus"></span><span class="target" id="ela__carrier_8h_1a35a45fd5442b436b17e9aa05b0cbe719"></span><em class="property">enum </em><code class="descname">ElaPresenceStatus</code><a class="headerlink" href="#_CPPv317ElaPresenceStatus" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Carrier node presence status to Carrier network. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv322ElaPresenceStatus_None">
+<span id="_CPPv222ElaPresenceStatus_None"></span><span class="target" id="ela__carrier_8h_1a35a45fd5442b436b17e9aa05b0cbe719a57b95e289137798b72dc7df21e756f6c"></span><code class="descname">ElaPresenceStatus_None</code><a class="headerlink" href="#_CPPv322ElaPresenceStatus_None" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Carrier node is online and available. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv322ElaPresenceStatus_Away">
+<span id="_CPPv222ElaPresenceStatus_Away"></span><span class="target" id="ela__carrier_8h_1a35a45fd5442b436b17e9aa05b0cbe719ac77774a8cf4805285c8b0f6e95785741"></span><code class="descname">ElaPresenceStatus_Away</code><a class="headerlink" href="#_CPPv322ElaPresenceStatus_Away" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Carrier node is being away. </p>
+<p>Carrier node can set this value with an user defined inactivity time. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv322ElaPresenceStatus_Busy">
+<span id="_CPPv222ElaPresenceStatus_Busy"></span><span class="target" id="ela__carrier_8h_1a35a45fd5442b436b17e9aa05b0cbe719a64b923347381d5520f3a780e378d7d00"></span><code class="descname">ElaPresenceStatus_Busy</code><a class="headerlink" href="#_CPPv322ElaPresenceStatus_Busy" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Carrier node is being busy. </p>
+<p>Carrier node can set this value to tell friends that it can not currently wish to commincate. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="elaloglevel">
+<h3>ElaLogLevel<a class="headerlink" href="#elaloglevel" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv311ElaLogLevel">
+<span id="_CPPv211ElaLogLevel"></span><span id="ElaLogLevel"></span><span class="target" id="ela__carrier_8h_1a4fbef6bea7b800657c1ea4d56be02c61"></span><em class="property">enum </em><code class="descname">ElaLogLevel</code><a class="headerlink" href="#_CPPv311ElaLogLevel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Carrier log level to control or filter log output. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv316ElaLogLevel_None">
+<span id="_CPPv216ElaLogLevel_None"></span><span class="target" id="ela__carrier_8h_1a4fbef6bea7b800657c1ea4d56be02c61a800b49e6551a34d6c0da51dcd1ca1b3c"></span><code class="descname">ElaLogLevel_None</code> = 0<a class="headerlink" href="#_CPPv316ElaLogLevel_None" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Log level None Indicate disable log output. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv317ElaLogLevel_Fatal">
+<span id="_CPPv217ElaLogLevel_Fatal"></span><span class="target" id="ela__carrier_8h_1a4fbef6bea7b800657c1ea4d56be02c61a0875fc122998d076f09f9a390dac6d7e"></span><code class="descname">ElaLogLevel_Fatal</code> = 1<a class="headerlink" href="#_CPPv317ElaLogLevel_Fatal" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Log level fatal. </p>
+<p>Indicate output log with level ‘Fatal’ only. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv317ElaLogLevel_Error">
+<span id="_CPPv217ElaLogLevel_Error"></span><span class="target" id="ela__carrier_8h_1a4fbef6bea7b800657c1ea4d56be02c61ac22515b5fec96b82bc3afba6ae5955da"></span><code class="descname">ElaLogLevel_Error</code> = 2<a class="headerlink" href="#_CPPv317ElaLogLevel_Error" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Log level error. </p>
+<p>Indicate output log above ‘Error’ level. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv319ElaLogLevel_Warning">
+<span id="_CPPv219ElaLogLevel_Warning"></span><span class="target" id="ela__carrier_8h_1a4fbef6bea7b800657c1ea4d56be02c61af09f1f33585da241bbf37de4aa4329df"></span><code class="descname">ElaLogLevel_Warning</code> = 3<a class="headerlink" href="#_CPPv319ElaLogLevel_Warning" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Log level warning. </p>
+<p>Indicate output log above ‘Warning’ level. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv316ElaLogLevel_Info">
+<span id="_CPPv216ElaLogLevel_Info"></span><span class="target" id="ela__carrier_8h_1a4fbef6bea7b800657c1ea4d56be02c61a51ddf055c898234e9fc7103c82cd5310"></span><code class="descname">ElaLogLevel_Info</code> = 4<a class="headerlink" href="#_CPPv316ElaLogLevel_Info" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Log level info. </p>
+<p>Indicate output log above ‘Info’ level. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv317ElaLogLevel_Debug">
+<span id="_CPPv217ElaLogLevel_Debug"></span><span class="target" id="ela__carrier_8h_1a4fbef6bea7b800657c1ea4d56be02c61a498fe3976df73458127b99b60f9ed599"></span><code class="descname">ElaLogLevel_Debug</code> = 5<a class="headerlink" href="#_CPPv317ElaLogLevel_Debug" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv317ElaLogLevel_Trace">
+<span id="_CPPv217ElaLogLevel_Trace"></span><span class="target" id="ela__carrier_8h_1a4fbef6bea7b800657c1ea4d56be02c61aaa0ee7be1a52ac81394348ce4bae5a0d"></span><code class="descname">ElaLogLevel_Trace</code> = 6<a class="headerlink" href="#_CPPv317ElaLogLevel_Trace" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv319ElaLogLevel_Verbose">
+<span id="_CPPv219ElaLogLevel_Verbose"></span><span class="target" id="ela__carrier_8h_1a4fbef6bea7b800657c1ea4d56be02c61ab437ce2751cef3e5a0dc29e707a06f55"></span><code class="descname">ElaLogLevel_Verbose</code> = 7<a class="headerlink" href="#_CPPv319ElaLogLevel_Verbose" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="elauserinfo">
+<h3>ElaUserInfo<a class="headerlink" href="#elauserinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv311ElaUserInfo">
+<span id="_CPPv211ElaUserInfo"></span><span id="ElaUserInfo"></span><span class="target" id="struct_ela_user_info"></span><em class="property">struct </em><code class="descname">ElaUserInfo</code><a class="headerlink" href="#_CPPv311ElaUserInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A structure representing the Carrier user information. </p>
+<p>In Carrier SDK, self and all friends are carrier user, and have same user attributes. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv3N11ElaUserInfo6useridE">
+<span id="_CPPv2N11ElaUserInfo6useridE"></span><span id="ElaUserInfo::userid__cA"></span><span class="target" id="struct_ela_user_info_1a45e200e25f09da6d8b0e7524be94ec15"></span>char <code class="descname">userid</code>[<code class="descname">ELA_MAX_ID_LEN</code> + 1]<a class="headerlink" href="#_CPPv3N11ElaUserInfo6useridE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>User ID. </p>
+<p>Read only to application. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N11ElaUserInfo4nameE">
+<span id="_CPPv2N11ElaUserInfo4nameE"></span><span id="ElaUserInfo::name__cA"></span><span class="target" id="struct_ela_user_info_1a48fc17b321de3bdbae342b8fb673736d"></span>char <code class="descname">name</code>[<code class="descname">ELA_MAX_USER_NAME_LEN</code> + 1]<a class="headerlink" href="#_CPPv3N11ElaUserInfo4nameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Nickname, also known as display name. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N11ElaUserInfo11descriptionE">
+<span id="_CPPv2N11ElaUserInfo11descriptionE"></span><span id="ElaUserInfo::description__cA"></span><span class="target" id="struct_ela_user_info_1a0b57feee5dd7b7a689efa1d7ad6f9fff"></span>char <code class="descname">description</code>[<code class="descname">ELA_MAX_USER_DESCRIPTION_LEN</code> + 1]<a class="headerlink" href="#_CPPv3N11ElaUserInfo11descriptionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>User’s description, also known as what’s up. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N11ElaUserInfo10has_avatarE">
+<span id="_CPPv2N11ElaUserInfo10has_avatarE"></span><span id="ElaUserInfo::has_avatar__i"></span><span class="target" id="struct_ela_user_info_1afec47890e6ce8133d63c65a103c0ed91"></span>int <code class="descname">has_avatar</code><a class="headerlink" href="#_CPPv3N11ElaUserInfo10has_avatarE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>If user has an avatar. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N11ElaUserInfo6genderE">
+<span id="_CPPv2N11ElaUserInfo6genderE"></span><span id="ElaUserInfo::gender__cA"></span><span class="target" id="struct_ela_user_info_1a8088de3a6ac45e870db83686b4896950"></span>char <code class="descname">gender</code>[<code class="descname">ELA_MAX_GENDER_LEN</code> + 1]<a class="headerlink" href="#_CPPv3N11ElaUserInfo6genderE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>User’s gender. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N11ElaUserInfo5phoneE">
+<span id="_CPPv2N11ElaUserInfo5phoneE"></span><span id="ElaUserInfo::phone__cA"></span><span class="target" id="struct_ela_user_info_1a18e59bc92ee70a01000a77c5ee62c7b5"></span>char <code class="descname">phone</code>[<code class="descname">ELA_MAX_PHONE_LEN</code> + 1]<a class="headerlink" href="#_CPPv3N11ElaUserInfo5phoneE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>User’s phone number. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N11ElaUserInfo5emailE">
+<span id="_CPPv2N11ElaUserInfo5emailE"></span><span id="ElaUserInfo::email__cA"></span><span class="target" id="struct_ela_user_info_1a375b0298684fee10a40d388191c28b03"></span>char <code class="descname">email</code>[<code class="descname">ELA_MAX_EMAIL_LEN</code> + 1]<a class="headerlink" href="#_CPPv3N11ElaUserInfo5emailE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>User’s email address. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N11ElaUserInfo6regionE">
+<span id="_CPPv2N11ElaUserInfo6regionE"></span><span id="ElaUserInfo::region__cA"></span><span class="target" id="struct_ela_user_info_1a52dd6d8f3fa7ffe9e4bdbce24dabec35"></span>char <code class="descname">region</code>[<code class="descname">ELA_MAX_REGION_LEN</code> + 1]<a class="headerlink" href="#_CPPv3N11ElaUserInfo6regionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>User’s region information. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="elafriendinfo">
+<h3>ElaFriendInfo<a class="headerlink" href="#elafriendinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv313ElaFriendInfo">
+<span id="_CPPv213ElaFriendInfo"></span><span id="ElaFriendInfo"></span><span class="target" id="struct_ela_friend_info"></span><em class="property">struct </em><code class="descname">ElaFriendInfo</code><a class="headerlink" href="#_CPPv313ElaFriendInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A structure representing the Carrier friend information. </p>
+<p>Include the basic user information and the extra friend information. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv3N13ElaFriendInfo9user_infoE">
+<span id="_CPPv2N13ElaFriendInfo9user_infoE"></span><span id="ElaFriendInfo::user_info__ElaUserInfo"></span><span class="target" id="struct_ela_friend_info_1aba60ca5b3e3a2b422cb7c54bf9947a5e"></span><a class="reference internal" href="#_CPPv311ElaUserInfo" title="ElaUserInfo">ElaUserInfo</a> <code class="descname">user_info</code><a class="headerlink" href="#_CPPv3N13ElaFriendInfo9user_infoE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Friend’s user information. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N13ElaFriendInfo5labelE">
+<span id="_CPPv2N13ElaFriendInfo5labelE"></span><span id="ElaFriendInfo::label__cA"></span><span class="target" id="struct_ela_friend_info_1a1d68a029db884b68beefcf78a5c39b3b"></span>char <code class="descname">label</code>[<code class="descname">ELA_MAX_USER_NAME_LEN</code> + 1]<a class="headerlink" href="#_CPPv3N13ElaFriendInfo5labelE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Your label for the friend. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N13ElaFriendInfo6statusE">
+<span id="_CPPv2N13ElaFriendInfo6statusE"></span><span id="ElaFriendInfo::status__ElaConnectionStatus"></span><span class="target" id="struct_ela_friend_info_1a630846731fa9a36d1f0888996c831ccb"></span><a class="reference internal" href="#_CPPv319ElaConnectionStatus" title="ElaConnectionStatus">ElaConnectionStatus</a> <code class="descname">status</code><a class="headerlink" href="#_CPPv3N13ElaFriendInfo6statusE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Friend’s connection status. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N13ElaFriendInfo8presenceE">
+<span id="_CPPv2N13ElaFriendInfo8presenceE"></span><span id="ElaFriendInfo::presence__ElaPresenceStatus"></span><span class="target" id="struct_ela_friend_info_1a8a30d75d1bad5d8e4b47cdb210825413"></span><a class="reference internal" href="#_CPPv317ElaPresenceStatus" title="ElaPresenceStatus">ElaPresenceStatus</a> <code class="descname">presence</code><a class="headerlink" href="#_CPPv3N13ElaFriendInfo8presenceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Friend’s presence status. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="elacallbacks">
+<h3>ElaCallbacks<a class="headerlink" href="#elacallbacks" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv312ElaCallbacks">
+<span id="_CPPv212ElaCallbacks"></span><span id="ElaCallbacks"></span><span class="target" id="struct_ela_callbacks"></span><em class="property">struct </em><code class="descname">ElaCallbacks</code><a class="headerlink" href="#_CPPv312ElaCallbacks" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Carrier callbacks, include all global callbacks for Carrier. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv3N12ElaCallbacks4idleE">
+<span id="_CPPv2N12ElaCallbacks4idleE"></span><span class="target" id="struct_ela_callbacks_1a108a48c09ee5d6f13412d5db9fbbc5b1"></span>void (*<code class="descname">idle</code>)<span class="sig-paren">(</span>ElaCarrier *carrier, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N12ElaCallbacks4idleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that perform idle work. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N12ElaCallbacks17connection_statusE">
+<span id="_CPPv2N12ElaCallbacks17connection_statusE"></span><span class="target" id="struct_ela_callbacks_1a32b4093dd16606dd1dba224e8f92231a"></span>void (*<code class="descname">connection_status</code>)<span class="sig-paren">(</span>ElaCarrier *carrier, <a class="reference internal" href="#_CPPv319ElaConnectionStatus" title="ElaConnectionStatus">ElaConnectionStatus</a> status, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N12ElaCallbacks17connection_statusE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that process the self connection status. </p>
+<p><dl class="docutils">
+<dt><strong>See</strong></dt>
+<dd>ElaConnectionStatus. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">status</span></code>: [in] Current connection status. </li>
+</ul>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N12ElaCallbacks5readyE">
+<span id="_CPPv2N12ElaCallbacks5readyE"></span><span class="target" id="struct_ela_callbacks_1a7fe7dd52d83d31dee81fb6efd0aa7f67"></span>void (*<code class="descname">ready</code>)<span class="sig-paren">(</span>ElaCarrier *carrier, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N12ElaCallbacks5readyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that process the ready notification. </p>
+<p>Notice: application should wait this callback invoked before calling any carrier function to interact with friends.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N12ElaCallbacks9self_infoE">
+<span id="_CPPv2N12ElaCallbacks9self_infoE"></span><span class="target" id="struct_ela_callbacks_1a780f5072c08b8cbe226d289e1fe6f4b1"></span>void (*<code class="descname">self_info</code>)<span class="sig-paren">(</span>ElaCarrier *carrier, <em class="property">const</em> <a class="reference internal" href="#_CPPv311ElaUserInfo" title="ElaUserInfo">ElaUserInfo</a> *info, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N12ElaCallbacks9self_infoE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that process the self info change event. </p>
+<p>This callback is reserved for future compatibility.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">info</span></code>: [in] The <a class="reference internal" href="#struct_ela_user_info"><span class="std std-ref">ElaUserInfo</span></a> pointer to the new user info. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N12ElaCallbacks11friend_listE">
+<span id="_CPPv2N12ElaCallbacks11friend_listE"></span><span class="target" id="struct_ela_callbacks_1a631573817578c9fe4d43acba821d1064"></span>bool (*<code class="descname">friend_list</code>)<span class="sig-paren">(</span>ElaCarrier *carrier, <em class="property">const</em> <a class="reference internal" href="#_CPPv313ElaFriendInfo" title="ElaFriendInfo">ElaFriendInfo</a> *info, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N12ElaCallbacks11friend_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that iterate the each friends list item. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Return true to continue iterate next friend user info, false to stop iterate. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">info</span></code>: [in] A pointer to <a class="reference internal" href="#struct_ela_friend_info"><span class="std std-ref">ElaFriendInfo</span></a> structure that representing a friend(NULL indicates iteration finished). </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N12ElaCallbacks17friend_connectionE">
+<span id="_CPPv2N12ElaCallbacks17friend_connectionE"></span><span class="target" id="struct_ela_callbacks_1a482aab48d1e3a465492cdeac2e07ecb9"></span>void (*<code class="descname">friend_connection</code>)<span class="sig-paren">(</span>ElaCarrier *carrier, <em class="property">const</em> char *friendid, <a class="reference internal" href="#_CPPv319ElaConnectionStatus" title="ElaConnectionStatus">ElaConnectionStatus</a> status, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N12ElaCallbacks17friend_connectionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that process the friend connection change event. </p>
+<p><dl class="docutils">
+<dt><strong>See</strong></dt>
+<dd>ElaConnectionStatus </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">friendid</span></code>: [in] The friend’s user id. </li>
+<li><code class="docutils literal notranslate"><span class="pre">status</span></code>: [in] Connection status. </li>
+</ul>
+</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N12ElaCallbacks11friend_infoE">
+<span id="_CPPv2N12ElaCallbacks11friend_infoE"></span><span class="target" id="struct_ela_callbacks_1a2e27c93a1bdf444a9303ea5fa85bc81d"></span>void (*<code class="descname">friend_info</code>)<span class="sig-paren">(</span>ElaCarrier *carrier, <em class="property">const</em> char *friendid, <em class="property">const</em> <a class="reference internal" href="#_CPPv313ElaFriendInfo" title="ElaFriendInfo">ElaFriendInfo</a> *info, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N12ElaCallbacks11friend_infoE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that process the friend information change event. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">friendid</span></code>: [in] The friend’s user id. </li>
+<li><code class="docutils literal notranslate"><span class="pre">info</span></code>: [in] The <a class="reference internal" href="#struct_ela_friend_info"><span class="std std-ref">ElaFriendInfo</span></a> pointer to the new friend info. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N12ElaCallbacks15friend_presenceE">
+<span id="_CPPv2N12ElaCallbacks15friend_presenceE"></span><span class="target" id="struct_ela_callbacks_1a820774ab6ec82b86bd786b602738f7c6"></span>void (*<code class="descname">friend_presence</code>)<span class="sig-paren">(</span>ElaCarrier *carrier, <em class="property">const</em> char *friendid, <a class="reference internal" href="#_CPPv317ElaPresenceStatus" title="ElaPresenceStatus">ElaPresenceStatus</a> presence, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N12ElaCallbacks15friend_presenceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that process the friend presence change event. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">friendid</span></code>: [in] The friend’s user id. </li>
+<li><code class="docutils literal notranslate"><span class="pre">presence</span></code>: [in] The presence status of the friend. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N12ElaCallbacks14friend_requestE">
+<span id="_CPPv2N12ElaCallbacks14friend_requestE"></span><span class="target" id="struct_ela_callbacks_1a9fbcb29667f1c7d0b980255391bfb332"></span>void (*<code class="descname">friend_request</code>)<span class="sig-paren">(</span>ElaCarrier *carrier, <em class="property">const</em> char *userid, <em class="property">const</em> <a class="reference internal" href="#_CPPv311ElaUserInfo" title="ElaUserInfo">ElaUserInfo</a> *info, <em class="property">const</em> char *hello, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N12ElaCallbacks14friend_requestE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that process the friend request. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">userid</span></code>: [in] The user id who wants friend with us. </li>
+<li><code class="docutils literal notranslate"><span class="pre">info</span></code>: [in] The basic user info who wants to be friend. </li>
+<li><code class="docutils literal notranslate"><span class="pre">hello</span></code>: [in] PIN for target user, or any application defined content. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N12ElaCallbacks12friend_addedE">
+<span id="_CPPv2N12ElaCallbacks12friend_addedE"></span><span class="target" id="struct_ela_callbacks_1a6a76a411b8ebd5f5cace89bfa65fe451"></span>void (*<code class="descname">friend_added</code>)<span class="sig-paren">(</span>ElaCarrier *carrier, <em class="property">const</em> <a class="reference internal" href="#_CPPv313ElaFriendInfo" title="ElaFriendInfo">ElaFriendInfo</a> *info, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N12ElaCallbacks12friend_addedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that process the new friend added event. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">info</span></code>: [in] The firend’s information. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N12ElaCallbacks14friend_removedE">
+<span id="_CPPv2N12ElaCallbacks14friend_removedE"></span><span class="target" id="struct_ela_callbacks_1abd0e7403fb531c89f468322bdbecc31d"></span>void (*<code class="descname">friend_removed</code>)<span class="sig-paren">(</span>ElaCarrier *carrier, <em class="property">const</em> char *friendid, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N12ElaCallbacks14friend_removedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that process the friend removed event. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">friendid</span></code>: [in] The friend’s user id. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N12ElaCallbacks14friend_messageE">
+<span id="_CPPv2N12ElaCallbacks14friend_messageE"></span><span class="target" id="struct_ela_callbacks_1abf48ffd1915061d34cf247df0e11d7f8"></span>void (*<code class="descname">friend_message</code>)<span class="sig-paren">(</span>ElaCarrier *carrier, <em class="property">const</em> char *from, <em class="property">const</em> void *msg, size_t len, bool offline, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N12ElaCallbacks14friend_messageE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that process the friend messages. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">from</span></code>: [in] The user id from who send the message. </li>
+<li><code class="docutils literal notranslate"><span class="pre">msg</span></code>: [in] The message content. </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The message length in bytes. </li>
+<li><code class="docutils literal notranslate"><span class="pre">offline</span></code>: [in] The value tells whether this message is received as offline message or online message. The value of true means this message is received as offline message, otherwise as online message. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N12ElaCallbacks13friend_inviteE">
+<span id="_CPPv2N12ElaCallbacks13friend_inviteE"></span><span class="target" id="struct_ela_callbacks_1a621ab125ea94db5319f44bb200859ddd"></span>void (*<code class="descname">friend_invite</code>)<span class="sig-paren">(</span>ElaCarrier *carrier, <em class="property">const</em> char *from, <em class="property">const</em> char *bundle, <em class="property">const</em> void *data, size_t len, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N12ElaCallbacks13friend_inviteE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that process the friend invite request. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">from</span></code>: [in] The user id from who send the invite request. </li>
+<li><code class="docutils literal notranslate"><span class="pre">bundle</span></code>: [in] The bundle attached to this invite request. </li>
+<li><code class="docutils literal notranslate"><span class="pre">data</span></code>: [in] The application defined data send from friend. </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The data length in bytes. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N12ElaCallbacks12group_inviteE">
+<span id="_CPPv2N12ElaCallbacks12group_inviteE"></span><span class="target" id="struct_ela_callbacks_1a27c613078968a53802fef8129c6270ed"></span>void (*<code class="descname">group_invite</code>)<span class="sig-paren">(</span>ElaCarrier *w, <em class="property">const</em> char *from, <em class="property">const</em> void *cookie, size_t len, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N12ElaCallbacks12group_inviteE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that process the group invite request. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">from</span></code>: [in] The user id from who send the invite request. </li>
+<li><code class="docutils literal notranslate"><span class="pre">cookie</span></code>: [in] The application defined cookie send from friend. </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The data length in bytes. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N12ElaCallbacks15group_callbacksE">
+<span id="_CPPv2N12ElaCallbacks15group_callbacksE"></span><span id="ElaCallbacks::group_callbacks__ElaGroupCallbacks"></span><span class="target" id="struct_ela_callbacks_1a3aaf9ed91758f2291ee747ce2e127023"></span>ElaGroupCallbacks <code class="descname">group_callbacks</code><a class="headerlink" href="#_CPPv3N12ElaCallbacks15group_callbacksE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Group related callbacks. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="elafriendsiteratecallback">
+<h3>ElaFriendsIterateCallback<a class="headerlink" href="#elafriendsiteratecallback" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv325ElaFriendsIterateCallback">
+<span id="_CPPv225ElaFriendsIterateCallback"></span><span id="ElaFriendsIterateCallback"></span><span class="target" id="ela__carrier_8h_1a57fdbe4b1c9a04922916ab85bb9f09ee"></span><em class="property">typedef </em>bool <code class="descname">ElaFriendsIterateCallback</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv313ElaFriendInfo" title="ElaFriendInfo">ElaFriendInfo</a> *<em>info</em>, void *<em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv325ElaFriendsIterateCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that iterate the each friends list item. </p>
+<p>ElaFriendsIterateCallback is the callback function type.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Return true to continue iterate next friend user info, false to stop iterate. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">info</span></code>: [in] A pointer to <a class="reference internal" href="#struct_ela_friend_info"><span class="std std-ref">ElaFriendInfo</span></a> structure that representing a friend(NULL indicates iteration finished). </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="elafriendinviteresponsecallback">
+<h3>ElaFriendInviteResponseCallback<a class="headerlink" href="#elafriendinviteresponsecallback" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv331ElaFriendInviteResponseCallback">
+<span id="_CPPv231ElaFriendInviteResponseCallback"></span><span id="ElaFriendInviteResponseCallback"></span><span class="target" id="ela__carrier_8h_1afcf45a398851afba368de763673cf9b1"></span><em class="property">typedef </em>void <code class="descname">ElaFriendInviteResponseCallback</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <em class="property">const</em> char *<em>from</em>, <em class="property">const</em> char *<em>bundle</em>, int <em>status</em>, <em class="property">const</em> char *<em>reason</em>, <em class="property">const</em> void *<em>data</em>, size_t <em>len</em>, void *<em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv331ElaFriendInviteResponseCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that process the friend invite response. </p>
+<p>CarrierFriendInviteResponseCallback is the callback function type.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">from</span></code>: [in] The target user id. </li>
+<li><code class="docutils literal notranslate"><span class="pre">bundle</span></code>: [in] The bundle attached to this invite reply. </li>
+<li><code class="docutils literal notranslate"><span class="pre">status</span></code>: [in] The status code of the response. 0 is success, otherwise is error. </li>
+<li><code class="docutils literal notranslate"><span class="pre">reason</span></code>: [in] The error message if status is error, or NULL </li>
+<li><code class="docutils literal notranslate"><span class="pre">data</span></code>: [in] The application defined data return by target user. </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The data length in bytes. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="carrier-instance">
+<h3>Carrier instance<a class="headerlink" href="#carrier-instance" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ela-new">
+<h4>ela_new<a class="headerlink" href="#ela-new" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv37ela_newPK10ElaOptionsP12ElaCallbacksPv">
+<span id="_CPPv27ela_newPK10ElaOptionsP12ElaCallbacksPv"></span><span id="ela_new__ElaOptionsCP.ElaCallbacksP.voidP"></span><span class="target" id="ela__carrier_8h_1aed2a6c3733b737f89f20505d49383426"></span>ElaCarrier *<code class="descname">ela_new</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv310ElaOptions" title="ElaOptions">ElaOptions</a> *<em>options</em>, <a class="reference internal" href="#_CPPv312ElaCallbacks" title="ElaCallbacks">ElaCallbacks</a> *<em>callbacks</em>, void *<em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv37ela_newPK10ElaOptionsP12ElaCallbacksPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a new Carrier node instance. </p>
+<p>after creating the instance, it’s ready for connection to Carrier network.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return the pointer of Carrier node instance. Otherwise, return NULL, and a specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">options</span></code>: [in] A pointer to a valid <a class="reference internal" href="#struct_ela_options"><span class="std std-ref">ElaOptions</span></a> structure. </li>
+<li><code class="docutils literal notranslate"><span class="pre">callbacks</span></code>: [in] The Application defined callback functions. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-run">
+<h4>ela_run<a class="headerlink" href="#ela-run" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv37ela_runP10ElaCarrieri">
+<span id="_CPPv27ela_runP10ElaCarrieri"></span><span id="ela_run__ElaCarrierP.i"></span><span class="target" id="ela__carrier_8h_1a635df1fde423e76930251cf340264963"></span>int <code class="descname">ela_run</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, int <em>interval</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv37ela_runP10ElaCarrieri" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Attempts to connect the node to Carrier network. </p>
+<p>If the node successfully connects to Carrier network, then it starts the node’s main event loop. The connect options was specified by previously create options. <dl class="docutils">
+<dt><strong>See</strong></dt>
+<dd>ela_new().</dd>
+<dt><strong>Return</strong></dt>
+<dd>0 if the client successfully connected to Carrier network and start the event loop. Otherwise, return -1, and a specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle identifying the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">interval</span></code>: [in] Internal loop interval, in milliseconds.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-kill">
+<h4>ela_kill<a class="headerlink" href="#ela-kill" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv38ela_killP10ElaCarrier">
+<span id="_CPPv28ela_killP10ElaCarrier"></span><span id="ela_kill__ElaCarrierP"></span><span class="target" id="ela__carrier_8h_1aa4adf481aa2cedd10995b9a1da5b1d06"></span>void <code class="descname">ela_kill</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv38ela_killP10ElaCarrier" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Disconnect from Carrier network, and destroy all associated resources with the Carrier node instance. </p>
+<p>After calling the function, the Carrier pointer becomes invalid. No other functions can be called.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle identifying the Carrier node instance to kill. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-is-ready">
+<h4>ela_is_ready<a class="headerlink" href="#ela-is-ready" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv312ela_is_readyP10ElaCarrier">
+<span id="_CPPv212ela_is_readyP10ElaCarrier"></span><span id="ela_is_ready__ElaCarrierP"></span><span class="target" id="ela__carrier_8h_1a8a1cfc300d079404f403523c64e3e700"></span>bool <code class="descname">ela_is_ready</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv312ela_is_readyP10ElaCarrier" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if Carrier node instance is being ready. </p>
+<p>All carrier interactive APIs should be called only if carrier instance is being ready.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true if the carrier node instance is ready, or false if not. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="node-information">
+<h3>Node Information<a class="headerlink" href="#node-information" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ela-get-address">
+<h4>ela_get_address<a class="headerlink" href="#ela-get-address" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv315ela_get_addressP10ElaCarrierPc6size_t">
+<span id="_CPPv215ela_get_addressP10ElaCarrierPc6size_t"></span><span id="ela_get_address__ElaCarrierP.cP.s"></span><span class="target" id="ela__carrier_8h_1ad6de8d00ac97496ac3f9748f498f3318"></span>char *<code class="descname">ela_get_address</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, char *<em>address</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv315ela_get_addressP10ElaCarrierPc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get user address associated with the Carrier node. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The address string pointer, or NULL if buffer is too small. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">address</span></code>: [out] The buffer that will receive the address. The buffer size should at least (ELA_MAX_ADDRESS_LEN + 1) bytes. </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The buffer size of address.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-get-nodeid">
+<h4>ela_get_nodeid<a class="headerlink" href="#ela-get-nodeid" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv314ela_get_nodeidP10ElaCarrierPc6size_t">
+<span id="_CPPv214ela_get_nodeidP10ElaCarrierPc6size_t"></span><span id="ela_get_nodeid__ElaCarrierP.cP.s"></span><span class="target" id="ela__carrier_8h_1a8bb41e1449e33c2fd5fc8804561286b6"></span>char *<code class="descname">ela_get_nodeid</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, char *<em>nodeid</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv314ela_get_nodeidP10ElaCarrierPc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get node identifier associated with this Carrier node. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The nodeId string pointer, or NULL if buffer is too small. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">nodeid</span></code>: [out] The buffer that will receive the identifier. The buffer size should at least (ELA_MAX_ID_LEN + 1) bytes. </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The buffer size of nodeid.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-get-userid">
+<h4>ela_get_userid<a class="headerlink" href="#ela-get-userid" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv314ela_get_useridP10ElaCarrierPc6size_t">
+<span id="_CPPv214ela_get_useridP10ElaCarrierPc6size_t"></span><span id="ela_get_userid__ElaCarrierP.cP.s"></span><span class="target" id="ela__carrier_8h_1acdb2e179304db0806ea8144194304348"></span>char *<code class="descname">ela_get_userid</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, char *<em>userid</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv314ela_get_useridP10ElaCarrierPc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get user identifier associated with this Carrier node. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The userId string pointer, or NULL if buffer is too small. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">userid</span></code>: [out] The buffer that will receive the identifier. The buffer size should at least (ELA_MAX_ID_LEN + 1) bytes. </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The buffer size of userid.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-get-id-by-address">
+<h4>ela_get_id_by_address<a class="headerlink" href="#ela-get-id-by-address" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv321ela_get_id_by_addressPKcPc6size_t">
+<span id="_CPPv221ela_get_id_by_addressPKcPc6size_t"></span><span id="ela_get_id_by_address__cCP.cP.s"></span><span class="target" id="ela__carrier_8h_1a995d3ebadb898c266f58254af071ab12"></span>char *<code class="descname">ela_get_id_by_address</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>address</em>, char *<em>userid</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv321ela_get_id_by_addressPKcPc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Extract carrier userid (or nodeid) from the carrier address. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return the pointer of extraced userid. Otherwise, return NULL, and a specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">address</span></code>: [in] the carrier address to be check. </li>
+<li><code class="docutils literal notranslate"><span class="pre">userid</span></code>: [in] the buffer to save the extracted userid. </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] the length of buffer.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-set-self-nospam">
+<h4>ela_set_self_nospam<a class="headerlink" href="#ela-set-self-nospam" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv319ela_set_self_nospamP10ElaCarrier8uint32_t">
+<span id="_CPPv219ela_set_self_nospamP10ElaCarrier8uint32_t"></span><span id="ela_set_self_nospam__ElaCarrierP.uint32_t"></span><span class="target" id="ela__carrier_8h_1a0737515d593e95f7d08557f1737b2ebf"></span>int <code class="descname">ela_set_self_nospam</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, uint32_t <em>nospam</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv319ela_set_self_nospamP10ElaCarrier8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="ela-get-self-nospam">
+<h4>ela_get_self_nospam<a class="headerlink" href="#ela-get-self-nospam" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv319ela_get_self_nospamP10ElaCarrierP8uint32_t">
+<span id="_CPPv219ela_get_self_nospamP10ElaCarrierP8uint32_t"></span><span id="ela_get_self_nospam__ElaCarrierP.uint32_tP"></span><span class="target" id="ela__carrier_8h_1a8ed7086bf941c3349a1a81ee79c0ba5c"></span>int <code class="descname">ela_get_self_nospam</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, uint32_t *<em>nospam</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv319ela_get_self_nospamP10ElaCarrierP8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="ela-set-self-info">
+<h4>ela_set_self_info<a class="headerlink" href="#ela-set-self-info" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv317ela_set_self_infoP10ElaCarrierPK11ElaUserInfo">
+<span id="_CPPv217ela_set_self_infoP10ElaCarrierPK11ElaUserInfo"></span><span id="ela_set_self_info__ElaCarrierP.ElaUserInfoCP"></span><span class="target" id="ela__carrier_8h_1a136b624184ca5876527b73be356dee5c"></span>int <code class="descname">ela_set_self_info</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv311ElaUserInfo" title="ElaUserInfo">ElaUserInfo</a> *<em>info</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv317ela_set_self_infoP10ElaCarrierPK11ElaUserInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Update self information. </p>
+<p>As self information changed, Carrier node would update itself information to Carrier network, which would forward the change to all friends. nodes.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">info</span></code>: [in] The <a class="reference internal" href="#struct_ela_user_info"><span class="std std-ref">ElaUserInfo</span></a> pointer to the updated user info.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-get-self-info">
+<h4>ela_get_self_info<a class="headerlink" href="#ela-get-self-info" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv317ela_get_self_infoP10ElaCarrierP11ElaUserInfo">
+<span id="_CPPv217ela_get_self_infoP10ElaCarrierP11ElaUserInfo"></span><span id="ela_get_self_info__ElaCarrierP.ElaUserInfoP"></span><span class="target" id="ela__carrier_8h_1a60b192047901e5ea4a8734cda762d35e"></span>int <code class="descname">ela_get_self_info</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <a class="reference internal" href="#_CPPv311ElaUserInfo" title="ElaUserInfo">ElaUserInfo</a> *<em>info</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv317ela_get_self_infoP10ElaCarrierP11ElaUserInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get self information. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">info</span></code>: [in] The <a class="reference internal" href="#struct_ela_user_info"><span class="std std-ref">ElaUserInfo</span></a> pointer to receive user info.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-set-self-presence">
+<h4>ela_set_self_presence<a class="headerlink" href="#ela-set-self-presence" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv321ela_set_self_presenceP10ElaCarrier17ElaPresenceStatus">
+<span id="_CPPv221ela_set_self_presenceP10ElaCarrier17ElaPresenceStatus"></span><span id="ela_set_self_presence__ElaCarrierP.ElaPresenceStatus"></span><span class="target" id="ela__carrier_8h_1a18850fd98c36cd5368a0c7457ec8ef80"></span>int <code class="descname">ela_set_self_presence</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <a class="reference internal" href="#_CPPv317ElaPresenceStatus" title="ElaPresenceStatus">ElaPresenceStatus</a> <em>presence</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv321ela_set_self_presenceP10ElaCarrier17ElaPresenceStatus" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set self presence status. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">presence</span></code>: [in] the new presence status.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-get-self-presence">
+<h4>ela_get_self_presence<a class="headerlink" href="#ela-get-self-presence" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv321ela_get_self_presenceP10ElaCarrierP17ElaPresenceStatus">
+<span id="_CPPv221ela_get_self_presenceP10ElaCarrierP17ElaPresenceStatus"></span><span id="ela_get_self_presence__ElaCarrierP.ElaPresenceStatusP"></span><span class="target" id="ela__carrier_8h_1a2eb75eb52fd357eeed4806f0142b2b30"></span>int <code class="descname">ela_get_self_presence</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <a class="reference internal" href="#_CPPv317ElaPresenceStatus" title="ElaPresenceStatus">ElaPresenceStatus</a> *<em>presence</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv321ela_get_self_presenceP10ElaCarrierP17ElaPresenceStatus" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get self presence status. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">presence</span></code>: [in] A pointer to receive presence status value.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="friend-interaction">
+<h3>Friend &amp; interaction<a class="headerlink" href="#friend-interaction" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ela-get-friends">
+<h4>ela_get_friends<a class="headerlink" href="#ela-get-friends" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv315ela_get_friendsP10ElaCarrierP25ElaFriendsIterateCallbackPv">
+<span id="_CPPv215ela_get_friendsP10ElaCarrierP25ElaFriendsIterateCallbackPv"></span><span id="ela_get_friends__ElaCarrierP.ElaFriendsIterateCallbackP.voidP"></span><span class="target" id="ela__carrier_8h_1a1b2320b5c847adb887c334600d0acc4d"></span>int <code class="descname">ela_get_friends</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <a class="reference internal" href="#_CPPv325ElaFriendsIterateCallback" title="ElaFriendsIterateCallback">ElaFriendsIterateCallback</a> *<em>callback</em>, void *<em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv315ela_get_friendsP10ElaCarrierP25ElaFriendsIterateCallbackPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get friends list. </p>
+<p>For each friend will call the application defined iterate callback.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] a handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">callback</span></code>: [in] a pointer to ElaFriendsIterateCallback function. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] the application defined context data.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-get-friend-info">
+<h4>ela_get_friend_info<a class="headerlink" href="#ela-get-friend-info" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv319ela_get_friend_infoP10ElaCarrierPKcP13ElaFriendInfo">
+<span id="_CPPv219ela_get_friend_infoP10ElaCarrierPKcP13ElaFriendInfo"></span><span id="ela_get_friend_info__ElaCarrierP.cCP.ElaFriendInfoP"></span><span class="target" id="ela__carrier_8h_1ab6bb799772bb51bb6f3b4c9cded96552"></span>int <code class="descname">ela_get_friend_info</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <em class="property">const</em> char *<em>friendid</em>, <a class="reference internal" href="#_CPPv313ElaFriendInfo" title="ElaFriendInfo">ElaFriendInfo</a> *<em>info</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv319ela_get_friend_infoP10ElaCarrierPKcP13ElaFriendInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get friend information. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">friendid</span></code>: [in] The friend’s user id. </li>
+<li><code class="docutils literal notranslate"><span class="pre">info</span></code>: [in] The <a class="reference internal" href="#struct_ela_friend_info"><span class="std std-ref">ElaFriendInfo</span></a> pointer to receive the friend information.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-set-friend-label">
+<h4>ela_set_friend_label<a class="headerlink" href="#ela-set-friend-label" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv320ela_set_friend_labelP10ElaCarrierPKcPKc">
+<span id="_CPPv220ela_set_friend_labelP10ElaCarrierPKcPKc"></span><span id="ela_set_friend_label__ElaCarrierP.cCP.cCP"></span><span class="target" id="ela__carrier_8h_1ad9c95d7f71b87c01468b6fd0d8aec60c"></span>int <code class="descname">ela_set_friend_label</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <em class="property">const</em> char *<em>friendid</em>, <em class="property">const</em> char *<em>label</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv320ela_set_friend_labelP10ElaCarrierPKcPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the label of the specified friend. </p>
+<p>If the value length is 0 or value is NULL, the attribute will be cleared.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error().</dd>
+<dt><strong>Remark</strong></dt>
+<dd>The label of a friend is a private alias named by yourself. It can be seen by yourself only, and has no impact to the target friend. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">friendid</span></code>: [in] The friend’s user id. </li>
+<li><code class="docutils literal notranslate"><span class="pre">label</span></code>: [in] the new label of the specified friend.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-is-friend">
+<h4>ela_is_friend<a class="headerlink" href="#ela-is-friend" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv313ela_is_friendP10ElaCarrierPKc">
+<span id="_CPPv213ela_is_friendP10ElaCarrierPKc"></span><span id="ela_is_friend__ElaCarrierP.cCP"></span><span class="target" id="ela__carrier_8h_1a4cdfea016f74fee7d52207c1f7af3cb8"></span>bool <code class="descname">ela_is_friend</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <em class="property">const</em> char *<em>userid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv313ela_is_friendP10ElaCarrierPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if the user ID is friend. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true if the user id is friend, or false if not; </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">userid</span></code>: [in] The userid to check.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-add-friend">
+<h4>ela_add_friend<a class="headerlink" href="#ela-add-friend" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv314ela_add_friendP10ElaCarrierPKcPKc">
+<span id="_CPPv214ela_add_friendP10ElaCarrierPKcPKc"></span><span id="ela_add_friend__ElaCarrierP.cCP.cCP"></span><span class="target" id="ela__carrier_8h_1a222331bc70aaad84f64b12be98fd16fd"></span>int <code class="descname">ela_add_friend</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <em class="property">const</em> char *<em>address</em>, <em class="property">const</em> char *<em>hello</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv314ela_add_friendP10ElaCarrierPKcPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Attempt to add friend by sending a new friend request. </p>
+<p>This function will add a new friend with specific address, and then send a friend request to the target node.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if adding friend is successful. Otherwise, return -1, and a specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">address</span></code>: [in] The target user address. </li>
+<li><code class="docutils literal notranslate"><span class="pre">hello</span></code>: [in] PIN for target user, or any application defined content.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-accept-friend">
+<h4>ela_accept_friend<a class="headerlink" href="#ela-accept-friend" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv317ela_accept_friendP10ElaCarrierPKc">
+<span id="_CPPv217ela_accept_friendP10ElaCarrierPKc"></span><span id="ela_accept_friend__ElaCarrierP.cCP"></span><span class="target" id="ela__carrier_8h_1a93a2087813b9437b0f455becf1c45300"></span>int <code class="descname">ela_accept_friend</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <em class="property">const</em> char *<em>userid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv317ela_accept_friendP10ElaCarrierPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Accept the friend request. </p>
+<p>This function is used to add a friend in response to a friend request.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if adding friend successfully. Otherwise, return -1, and a specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">userid</span></code>: [in] The user id to who wants to be friend with us.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-remove-friend">
+<h4>ela_remove_friend<a class="headerlink" href="#ela-remove-friend" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv317ela_remove_friendP10ElaCarrierPKc">
+<span id="_CPPv217ela_remove_friendP10ElaCarrierPKc"></span><span id="ela_remove_friend__ElaCarrierP.cCP"></span><span class="target" id="ela__carrier_8h_1aa321287317f210ccffef4e51634df862"></span>int <code class="descname">ela_remove_friend</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <em class="property">const</em> char *<em>userid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv317ela_remove_friendP10ElaCarrierPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Remove a friend. </p>
+<p>This function will send a remove friend indicator to Carrier network.</p>
+<p>If all correct, Carrier network will clean the friend relationship, and send friend removed message to both.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if the indicator successfully sent. Otherwise, return -1, and a specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">userid</span></code>: [in] The target user id.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-send-friend-message">
+<h4>ela_send_friend_message<a class="headerlink" href="#ela-send-friend-message" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv323ela_send_friend_messageP10ElaCarrierPKcPKv6size_tPb">
+<span id="_CPPv223ela_send_friend_messageP10ElaCarrierPKcPKv6size_tPb"></span><span id="ela_send_friend_message__ElaCarrierP.cCP.voidCP.s.bP"></span><span class="target" id="ela__carrier_8h_1aada9734e0a388561c0e616d4cf1cf4a8"></span>int <code class="descname">ela_send_friend_message</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <em class="property">const</em> char *<em>to</em>, <em class="property">const</em> void *<em>msg</em>, size_t <em>len</em>, bool *<em>offline</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv323ela_send_friend_messageP10ElaCarrierPKcPKv6size_tPb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Send a message to a friend. </p>
+<p>The message length may not exceed ELA_MAX_APP_MESSAGE_LEN. Larger messages must be split by application and sent as separate fragments. Other carrier nodes can reassemble the fragments.</p>
+<p>Message may not be empty or NULL. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if the text message successfully sent. Otherwise, return -1, and a specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">to</span></code>: [in] The target userid. </li>
+<li><code class="docutils literal notranslate"><span class="pre">msg</span></code>: [in] The message content defined by application. </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The message length in bytes. </li>
+<li><code class="docutils literal notranslate"><span class="pre">offline</span></code>: [out] The pointer to store the value that the message was sent as offline message or online message. The value of true means the message was sent as offline message, otherwise, the message was sent as online message. This pointer also can be set as NULL.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-invite-friend">
+<h4>ela_invite_friend<a class="headerlink" href="#ela-invite-friend" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv317ela_invite_friendP10ElaCarrierPKcPKcPKv6size_tP31ElaFriendInviteResponseCallbackPv">
+<span id="_CPPv217ela_invite_friendP10ElaCarrierPKcPKcPKv6size_tP31ElaFriendInviteResponseCallbackPv"></span><span id="ela_invite_friend__ElaCarrierP.cCP.cCP.voidCP.s.ElaFriendInviteResponseCallbackP.voidP"></span><span class="target" id="ela__carrier_8h_1a6feca2fe1ae4bd9ca9cc2cba9617f914"></span>int <code class="descname">ela_invite_friend</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <em class="property">const</em> char *<em>to</em>, <em class="property">const</em> char *<em>bundle</em>, <em class="property">const</em> void *<em>data</em>, size_t <em>len</em>, <a class="reference internal" href="#_CPPv331ElaFriendInviteResponseCallback" title="ElaFriendInviteResponseCallback">ElaFriendInviteResponseCallback</a> *<em>callback</em>, void *<em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv317ela_invite_friendP10ElaCarrierPKcPKcPKv6size_tP31ElaFriendInviteResponseCallbackPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Send invite request to a friend. </p>
+<p>Application can attach the application defined data within the invite request, and the data will send to target friend.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if the invite request successfully send to the friend. Otherwise, return -1, and a specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">to</span></code>: [in] The target userid. </li>
+<li><code class="docutils literal notranslate"><span class="pre">bundle</span></code>: [in] The bundle attached to this invitation. </li>
+<li><code class="docutils literal notranslate"><span class="pre">data</span></code>: [in] The application defined data send to target user. </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The data length in bytes. </li>
+<li><code class="docutils literal notranslate"><span class="pre">callback</span></code>: [in] A pointer to ElaFriendInviteResponseCallback function to receive the invite response. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-reply-friend-invite">
+<h4>ela_reply_friend_invite<a class="headerlink" href="#ela-reply-friend-invite" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv323ela_reply_friend_inviteP10ElaCarrierPKcPKciPKcPKv6size_t">
+<span id="_CPPv223ela_reply_friend_inviteP10ElaCarrierPKcPKciPKcPKv6size_t"></span><span id="ela_reply_friend_invite__ElaCarrierP.cCP.cCP.i.cCP.voidCP.s"></span><span class="target" id="ela__carrier_8h_1ab032ca71fd9d3db23b4ed6e2b2a5c7fa"></span>int <code class="descname">ela_reply_friend_invite</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <em class="property">const</em> char *<em>to</em>, <em class="property">const</em> char *<em>bundle</em>, int <em>status</em>, <em class="property">const</em> char *<em>reason</em>, <em class="property">const</em> void *<em>data</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv323ela_reply_friend_inviteP10ElaCarrierPKcPKciPKcPKv6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reply the friend invite request. </p>
+<p>This function will send a invite response to friend.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if the invite response successfully send to the friend. Otherwise, return -1, and a specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">to</span></code>: [in] The userid who send invite request. </li>
+<li><code class="docutils literal notranslate"><span class="pre">bundle</span></code>: [in] The bundle attached to this invitation reply. </li>
+<li><code class="docutils literal notranslate"><span class="pre">status</span></code>: [in] The status code of the response. 0 is success, otherwise is error. </li>
+<li><code class="docutils literal notranslate"><span class="pre">reason</span></code>: [in] The error message if status is error, or NULL if success. </li>
+<li><code class="docutils literal notranslate"><span class="pre">data</span></code>: [in] The application defined data send to target user. If the status is error, this will be ignored. </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The data length in bytes. If the status is error, this will be ignored.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="utility-functions">
+<h3>Utility functions<a class="headerlink" href="#utility-functions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ela-get-version">
+<h4>ela_get_version<a class="headerlink" href="#ela-get-version" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv315ela_get_versionv">
+<span id="_CPPv215ela_get_versionv"></span><span id="ela_get_version__void"></span><span class="target" id="ela__carrier_8h_1a25d69a3cf05cc0864c12815c41523c3c"></span><em class="property">const</em> char *<code class="descname">ela_get_version</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv315ela_get_versionv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the current version of Carrier node. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-address-is-valid">
+<h4>ela_address_is_valid<a class="headerlink" href="#ela-address-is-valid" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv320ela_address_is_validPKc">
+<span id="_CPPv220ela_address_is_validPKc"></span><span id="ela_address_is_valid__cCP"></span><span class="target" id="ela__carrier_8h_1afb6c2ef14281a26ff9fa51ad66df1be1"></span>bool <code class="descname">ela_address_is_valid</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv320ela_address_is_validPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if the carrier address is valid. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true if address is valid, or false if address is not valid. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">address</span></code>: [in] the carrier address to be check.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-id-is-valid">
+<h4>ela_id_is_valid<a class="headerlink" href="#ela-id-is-valid" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv315ela_id_is_validPKc">
+<span id="_CPPv215ela_id_is_validPKc"></span><span id="ela_id_is_valid__cCP"></span><span class="target" id="ela__carrier_8h_1ab1e95f87d1125c3e959a0d57598fcc0d"></span>bool <code class="descname">ela_id_is_valid</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv315ela_id_is_validPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if the carrier ID is valid. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true if id is valid, or false if id is not valid. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">id</span></code>: [in] the carrier id to be check.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-get-error">
+<h4>ela_get_error<a class="headerlink" href="#ela-get-error" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv313ela_get_errorv">
+<span id="_CPPv213ela_get_errorv"></span><span id="ela_get_error__void"></span><span class="target" id="ela__carrier_8h_1aa408af4bdc07a67fe0be07bb4c946a0c"></span>int <code class="descname">ela_get_error</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv313ela_get_errorv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="ela-clear-error">
+<h4>ela_clear_error<a class="headerlink" href="#ela-clear-error" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv315ela_clear_errorv">
+<span id="_CPPv215ela_clear_errorv"></span><span id="ela_clear_error__void"></span><span class="target" id="ela__carrier_8h_1ad5a722e7e5f345d3e1fb5b21d19c5e99"></span>void <code class="descname">ela_clear_error</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv315ela_clear_errorv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Clear the last-error code of a Carrier instance. </p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="carrier-session-api.html" class="btn btn-neutral float-right" title="Elastos Carrier session APIs" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="carrier-intro.html" class="btn btn-neutral" title="Elastos Carrier Client SDK introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, elastos.org.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'5.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

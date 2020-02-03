@@ -1,0 +1,1343 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Elastos Carrier session APIs &mdash; Elastos Carrier API References 5.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Elastos Carrier API References 5.0 documentation" href="index.html"/>
+        <link rel="next" title="Elastos Carrier error number" href="carrier-error-number.html"/>
+        <link rel="prev" title="Elastos Carrier core APIs" href="carrier-api.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Elastos Carrier API References
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                5.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="carrier-intro.html">Elastos Carrier Client SDK introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="carrier-api.html">Elastos Carrier core APIs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Elastos Carrier session APIs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-types">Data types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#elastreamtype">ElaStreamType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elastreamstate">ElaStreamState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elacandidatetype">ElaCandidateType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elanetworktopology">ElaNetworkTopology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaaddressinfo">ElaAddressInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elatransportinfo">ElaTransportInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#portforwardingprotocol">PortForwardingProtocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#closereason">CloseReason</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elastreamcallbacks">ElaStreamCallbacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elasessionrequestcallback">ElaSessionRequestCallback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elasessionrequestcompletecallback">ElaSessionRequestCompleteCallback</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#global-session-functions">Global session functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ela-session-init">ela_session_init</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-session-cleanup">ela_session_cleanup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#session-instance-functions">Session instance functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ela-session-new">ela_session_new</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-session-close">ela_session_close</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-session-get-peer">ela_session_get_peer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-session-set-userdata">ela_session_set_userdata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-session-get-userdata">ela_session_get_userdata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-session-request">ela_session_request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-session-reply-request">ela_session_reply_request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-session-start">ela_session_start</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#stream-functions">Stream functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ela-session-add-stream">ela_session_add_stream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-session-remove-stream">ela_session_remove_stream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-stream-get-type">ela_stream_get_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-stream-get-state">ela_stream_get_state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-stream-get-transport-info">ela_stream_get_transport_info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-stream-write">ela_stream_write</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-stream-open-channel">ela_stream_open_channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-stream-close-channel">ela_stream_close_channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-stream-write-channel">ela_stream_write_channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-stream-pend-channel">ela_stream_pend_channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-stream-resume-channel">ela_stream_resume_channel</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#portforwarding-functions">PortForwarding functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ela-session-add-service">ela_session_add_service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-session-remove-service">ela_session_remove_service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-stream-open-port-forwarding">ela_stream_open_port_forwarding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ela-stream-close-port-forwarding">ela_stream_close_port_forwarding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="carrier-error-number.html">Elastos Carrier error number</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Elastos Carrier API References</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Elastos Carrier session APIs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="elastos-carrier-session-apis">
+<h1>Elastos Carrier session APIs<a class="headerlink" href="#elastos-carrier-session-apis" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="data-types">
+<h2>Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="elastreamtype">
+<h3>ElaStreamType<a class="headerlink" href="#elastreamtype" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv313ElaStreamType">
+<span id="_CPPv213ElaStreamType"></span><span id="ElaStreamType"></span><span class="target" id="ela__session_8h_1a44c1fe677d0e31759da1cac46e4e2fc1"></span><em class="property">enum </em><code class="descname">ElaStreamType</code><a class="headerlink" href="#_CPPv313ElaStreamType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Carrier stream types definition. </p>
+<p>Reference: <a class="reference external" href="https://tools.ietf.org/html/rfc4566#section-5.14">https://tools.ietf.org/html/rfc4566#section-5.14</a> <a class="reference external" href="https://tools.ietf.org/html/rfc4566#section-8">https://tools.ietf.org/html/rfc4566#section-8</a> </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv319ElaStreamType_audio">
+<span id="_CPPv219ElaStreamType_audio"></span><span class="target" id="ela__session_8h_1a44c1fe677d0e31759da1cac46e4e2fc1ad3ea56ccddb490703d1391b2533e0372"></span><code class="descname">ElaStreamType_audio</code> = 0<a class="headerlink" href="#_CPPv319ElaStreamType_audio" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Audio stream. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv319ElaStreamType_video">
+<span id="_CPPv219ElaStreamType_video"></span><span class="target" id="ela__session_8h_1a44c1fe677d0e31759da1cac46e4e2fc1a52ce666e4a7f44c6e58d85a44e68730b"></span><code class="descname">ElaStreamType_video</code><a class="headerlink" href="#_CPPv319ElaStreamType_video" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Video stream. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv318ElaStreamType_text">
+<span id="_CPPv218ElaStreamType_text"></span><span class="target" id="ela__session_8h_1a44c1fe677d0e31759da1cac46e4e2fc1a060f6ff9282f9e3e9b95ddae14204894"></span><code class="descname">ElaStreamType_text</code><a class="headerlink" href="#_CPPv318ElaStreamType_text" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Text stream. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv325ElaStreamType_application">
+<span id="_CPPv225ElaStreamType_application"></span><span class="target" id="ela__session_8h_1a44c1fe677d0e31759da1cac46e4e2fc1ab5520e90fbafe12be26adaf1e76127bc"></span><code class="descname">ElaStreamType_application</code><a class="headerlink" href="#_CPPv325ElaStreamType_application" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Application stream. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv321ElaStreamType_message">
+<span id="_CPPv221ElaStreamType_message"></span><span class="target" id="ela__session_8h_1a44c1fe677d0e31759da1cac46e4e2fc1a2f3e8704e300420df70a1255207eb8ad"></span><code class="descname">ElaStreamType_message</code><a class="headerlink" href="#_CPPv321ElaStreamType_message" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Message stream. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="elastreamstate">
+<h3>ElaStreamState<a class="headerlink" href="#elastreamstate" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv314ElaStreamState">
+<span id="_CPPv214ElaStreamState"></span><span id="ElaStreamState"></span><span class="target" id="ela__session_8h_1af29247cdcd24607b186d11e7f5220c34"></span><em class="property">enum </em><code class="descname">ElaStreamState</code><a class="headerlink" href="#_CPPv314ElaStreamState" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Carrier stream state. </p>
+<p>The stream status will be changed according to the phase of the stream. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv326ElaStreamState_initialized">
+<span id="_CPPv226ElaStreamState_initialized"></span><span class="target" id="ela__session_8h_1af29247cdcd24607b186d11e7f5220c34a9fc4b6b5f488b8802a6bef79eeb9deca"></span><code class="descname">ElaStreamState_initialized</code> = 1<a class="headerlink" href="#_CPPv326ElaStreamState_initialized" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initialized stream. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv330ElaStreamState_transport_ready">
+<span id="_CPPv230ElaStreamState_transport_ready"></span><span class="target" id="ela__session_8h_1af29247cdcd24607b186d11e7f5220c34a74acfd88e6ea836c2e55bd8cc1d761ff"></span><code class="descname">ElaStreamState_transport_ready</code><a class="headerlink" href="#_CPPv330ElaStreamState_transport_ready" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The underlying transport is ready for the stream. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv325ElaStreamState_connecting">
+<span id="_CPPv225ElaStreamState_connecting"></span><span class="target" id="ela__session_8h_1af29247cdcd24607b186d11e7f5220c34a9373953c48111c9559a87517bf1be7e8"></span><code class="descname">ElaStreamState_connecting</code><a class="headerlink" href="#_CPPv325ElaStreamState_connecting" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The stream is trying to connecting the remote. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv324ElaStreamState_connected">
+<span id="_CPPv224ElaStreamState_connected"></span><span class="target" id="ela__session_8h_1af29247cdcd24607b186d11e7f5220c34aca42d77d6581b3a1e30afc7dad6e64cd"></span><code class="descname">ElaStreamState_connected</code><a class="headerlink" href="#_CPPv324ElaStreamState_connected" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The stream connected with remote. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv326ElaStreamState_deactivated">
+<span id="_CPPv226ElaStreamState_deactivated"></span><span class="target" id="ela__session_8h_1af29247cdcd24607b186d11e7f5220c34afb5574a1d7696eb00f539543e0dac5ae"></span><code class="descname">ElaStreamState_deactivated</code><a class="headerlink" href="#_CPPv326ElaStreamState_deactivated" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The stream is deactivated. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv321ElaStreamState_closed">
+<span id="_CPPv221ElaStreamState_closed"></span><span class="target" id="ela__session_8h_1af29247cdcd24607b186d11e7f5220c34aeefe20648920f0400f8d6aca138af154"></span><code class="descname">ElaStreamState_closed</code><a class="headerlink" href="#_CPPv321ElaStreamState_closed" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The stream closed normally. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv321ElaStreamState_failed">
+<span id="_CPPv221ElaStreamState_failed"></span><span class="target" id="ela__session_8h_1af29247cdcd24607b186d11e7f5220c34a9030033e4574738adf416a0f4d972d26"></span><code class="descname">ElaStreamState_failed</code><a class="headerlink" href="#_CPPv321ElaStreamState_failed" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The stream is failed, cannot to continue. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="elacandidatetype">
+<h3>ElaCandidateType<a class="headerlink" href="#elacandidatetype" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv316ElaCandidateType">
+<span id="_CPPv216ElaCandidateType"></span><span id="ElaCandidateType"></span><span class="target" id="ela__session_8h_1a43a6a74f9e6c9e109f5b890f93d74637"></span><em class="property">enum </em><code class="descname">ElaCandidateType</code><a class="headerlink" href="#_CPPv316ElaCandidateType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Stream address type. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv321ElaCandidateType_Host">
+<span id="_CPPv221ElaCandidateType_Host"></span><span class="target" id="ela__session_8h_1a43a6a74f9e6c9e109f5b890f93d74637ad67d3a86e4e4852925e1e8c030162fde"></span><code class="descname">ElaCandidateType_Host</code><a class="headerlink" href="#_CPPv321ElaCandidateType_Host" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The address is host local address. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv332ElaCandidateType_ServerReflexive">
+<span id="_CPPv232ElaCandidateType_ServerReflexive"></span><span class="target" id="ela__session_8h_1a43a6a74f9e6c9e109f5b890f93d74637af616fc1de0073ea4f40ac21628139546"></span><code class="descname">ElaCandidateType_ServerReflexive</code><a class="headerlink" href="#_CPPv332ElaCandidateType_ServerReflexive" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The address is server reflexive address. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv330ElaCandidateType_PeerReflexive">
+<span id="_CPPv230ElaCandidateType_PeerReflexive"></span><span class="target" id="ela__session_8h_1a43a6a74f9e6c9e109f5b890f93d74637a61d7256cc1edc17db46b94bf05cc511f"></span><code class="descname">ElaCandidateType_PeerReflexive</code><a class="headerlink" href="#_CPPv330ElaCandidateType_PeerReflexive" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The address is peer reflexive address. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv324ElaCandidateType_Relayed">
+<span id="_CPPv224ElaCandidateType_Relayed"></span><span class="target" id="ela__session_8h_1a43a6a74f9e6c9e109f5b890f93d74637ab666efed7016218a6d8f5941db577a0f"></span><code class="descname">ElaCandidateType_Relayed</code><a class="headerlink" href="#_CPPv324ElaCandidateType_Relayed" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The address is relayed address. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="elanetworktopology">
+<h3>ElaNetworkTopology<a class="headerlink" href="#elanetworktopology" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv318ElaNetworkTopology">
+<span id="_CPPv218ElaNetworkTopology"></span><span id="ElaNetworkTopology"></span><span class="target" id="ela__session_8h_1a0fc11e5ccc3542e08d9f2ba3508c6482"></span><em class="property">enum </em><code class="descname">ElaNetworkTopology</code><a class="headerlink" href="#_CPPv318ElaNetworkTopology" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Peers network topology type. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv322ElaNetworkTopology_LAN">
+<span id="_CPPv222ElaNetworkTopology_LAN"></span><span class="target" id="ela__session_8h_1a0fc11e5ccc3542e08d9f2ba3508c6482ad66ae5a0ae38fb8620c61c3a139ceb0e"></span><code class="descname">ElaNetworkTopology_LAN</code><a class="headerlink" href="#_CPPv322ElaNetworkTopology_LAN" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The stream peers is in LAN, using direct connection. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv322ElaNetworkTopology_P2P">
+<span id="_CPPv222ElaNetworkTopology_P2P"></span><span class="target" id="ela__session_8h_1a0fc11e5ccc3542e08d9f2ba3508c6482ab9b0783787297fa216e982f26f5434e6"></span><code class="descname">ElaNetworkTopology_P2P</code><a class="headerlink" href="#_CPPv322ElaNetworkTopology_P2P" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The stream peers behind NAT, using P2P direct connection. </p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv326ElaNetworkTopology_RELAYED">
+<span id="_CPPv226ElaNetworkTopology_RELAYED"></span><span class="target" id="ela__session_8h_1a0fc11e5ccc3542e08d9f2ba3508c6482a0e77991ec4129c62ed5330d6fbfc1ba2"></span><code class="descname">ElaNetworkTopology_RELAYED</code><a class="headerlink" href="#_CPPv326ElaNetworkTopology_RELAYED" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The stream peers behind NAT, using relayed connection. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="elaaddressinfo">
+<h3>ElaAddressInfo<a class="headerlink" href="#elaaddressinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv314ElaAddressInfo">
+<span id="_CPPv214ElaAddressInfo"></span><span id="ElaAddressInfo"></span><span class="target" id="struct_ela_address_info"></span><em class="property">struct </em><code class="descname">ElaAddressInfo</code><a class="headerlink" href="#_CPPv314ElaAddressInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Carrier stream address information. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv3N14ElaAddressInfo4typeE">
+<span id="_CPPv2N14ElaAddressInfo4typeE"></span><span id="ElaAddressInfo::type__ElaCandidateType"></span><span class="target" id="struct_ela_address_info_1ada05c83f5fc6f42adfdf14bc12243f72"></span><a class="reference internal" href="#_CPPv316ElaCandidateType" title="ElaCandidateType">ElaCandidateType</a> <code class="descname">type</code><a class="headerlink" href="#_CPPv3N14ElaAddressInfo4typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The candidate address type. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N14ElaAddressInfo4addrE">
+<span id="_CPPv2N14ElaAddressInfo4addrE"></span><span id="ElaAddressInfo::addr__cA"></span><span class="target" id="struct_ela_address_info_1a9121d023dba1c312c96545007d50672d"></span>char <code class="descname">addr</code>[<code class="descname">ELA_MAX_IP_STRING_LEN</code> + 1]<a class="headerlink" href="#_CPPv3N14ElaAddressInfo4addrE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The IP/host of the address. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N14ElaAddressInfo4portE">
+<span id="_CPPv2N14ElaAddressInfo4portE"></span><span id="ElaAddressInfo::port__i"></span><span class="target" id="struct_ela_address_info_1a3bd5c7680e0f9bfe1319ae4821d7ca7a"></span>int <code class="descname">port</code><a class="headerlink" href="#_CPPv3N14ElaAddressInfo4portE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The port of the address. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N14ElaAddressInfo12related_addrE">
+<span id="_CPPv2N14ElaAddressInfo12related_addrE"></span><span id="ElaAddressInfo::related_addr__cA"></span><span class="target" id="struct_ela_address_info_1a26320d69a267febcfde1db45deaffc59"></span>char <code class="descname">related_addr</code>[<code class="descname">ELA_MAX_IP_STRING_LEN</code> + 1]<a class="headerlink" href="#_CPPv3N14ElaAddressInfo12related_addrE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The IP/host of the related address. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N14ElaAddressInfo12related_portE">
+<span id="_CPPv2N14ElaAddressInfo12related_portE"></span><span id="ElaAddressInfo::related_port__i"></span><span class="target" id="struct_ela_address_info_1a28d3af501fe1d90227ebcbbb742eb4cb"></span>int <code class="descname">related_port</code><a class="headerlink" href="#_CPPv3N14ElaAddressInfo12related_portE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The port of the related address. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="elatransportinfo">
+<h3>ElaTransportInfo<a class="headerlink" href="#elatransportinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv316ElaTransportInfo">
+<span id="_CPPv216ElaTransportInfo"></span><span id="ElaTransportInfo"></span><span class="target" id="struct_ela_transport_info"></span><em class="property">struct </em><code class="descname">ElaTransportInfo</code><a class="headerlink" href="#_CPPv316ElaTransportInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Carrier stream transport information. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv3N16ElaTransportInfo8topologyE">
+<span id="_CPPv2N16ElaTransportInfo8topologyE"></span><span id="ElaTransportInfo::topology__ElaNetworkTopology"></span><span class="target" id="struct_ela_transport_info_1a1f86c2c3edc4f6da950a191b1559e7f6"></span><a class="reference internal" href="#_CPPv318ElaNetworkTopology" title="ElaNetworkTopology">ElaNetworkTopology</a> <code class="descname">topology</code><a class="headerlink" href="#_CPPv3N16ElaTransportInfo8topologyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The network topology type: LAN, P2P or relayed. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N16ElaTransportInfo5localE">
+<span id="_CPPv2N16ElaTransportInfo5localE"></span><span id="ElaTransportInfo::local__ElaAddressInfo"></span><span class="target" id="struct_ela_transport_info_1a2b7249d6b3b71c297ba35a0e62df9b41"></span><a class="reference internal" href="#_CPPv314ElaAddressInfo" title="ElaAddressInfo">ElaAddressInfo</a> <code class="descname">local</code><a class="headerlink" href="#_CPPv3N16ElaTransportInfo5localE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The local address information. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N16ElaTransportInfo6remoteE">
+<span id="_CPPv2N16ElaTransportInfo6remoteE"></span><span id="ElaTransportInfo::remote__ElaAddressInfo"></span><span class="target" id="struct_ela_transport_info_1acd88a98ee7ea8fe0baa4a1e76ca7901f"></span><a class="reference internal" href="#_CPPv314ElaAddressInfo" title="ElaAddressInfo">ElaAddressInfo</a> <code class="descname">remote</code><a class="headerlink" href="#_CPPv3N16ElaTransportInfo6remoteE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The remote address information. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="portforwardingprotocol">
+<h3>PortForwardingProtocol<a class="headerlink" href="#portforwardingprotocol" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv322PortForwardingProtocol">
+<span id="_CPPv222PortForwardingProtocol"></span><span id="PortForwardingProtocol"></span><span class="target" id="ela__session_8h_1af1d6b6501b42429c2dc77625d124e660"></span><em class="property">enum </em><code class="descname">PortForwardingProtocol</code><a class="headerlink" href="#_CPPv322PortForwardingProtocol" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Portforwarding supported protocols. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv326PortForwardingProtocol_TCP">
+<span id="_CPPv226PortForwardingProtocol_TCP"></span><span class="target" id="ela__session_8h_1af1d6b6501b42429c2dc77625d124e660a93fbf0348cbb66acb202b0f918f67027"></span><code class="descname">PortForwardingProtocol_TCP</code> = 1<a class="headerlink" href="#_CPPv326PortForwardingProtocol_TCP" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>TCP protocol. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="closereason">
+<h3>CloseReason<a class="headerlink" href="#closereason" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv311CloseReason">
+<span id="_CPPv211CloseReason"></span><span id="CloseReason"></span><span class="target" id="ela__session_8h_1a2af9150cca99c965611884e1a48ff18d"></span><em class="property">enum </em><code class="descname">CloseReason</code><a class="headerlink" href="#_CPPv311CloseReason" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Multiplexing channel close reason code. </p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv318CloseReason_Normal">
+<span id="_CPPv218CloseReason_Normal"></span><span class="target" id="ela__session_8h_1a2af9150cca99c965611884e1a48ff18daec7ae6ac5b28031144c48fd98d648fdd"></span><code class="descname">CloseReason_Normal</code> = 0<a class="headerlink" href="#_CPPv318CloseReason_Normal" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv319CloseReason_Timeout">
+<span id="_CPPv219CloseReason_Timeout"></span><span class="target" id="ela__session_8h_1a2af9150cca99c965611884e1a48ff18da9c0092bb7ea768084accf5eab788758c"></span><code class="descname">CloseReason_Timeout</code> = 1<a class="headerlink" href="#_CPPv319CloseReason_Timeout" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv317CloseReason_Error">
+<span id="_CPPv217CloseReason_Error"></span><span class="target" id="ela__session_8h_1a2af9150cca99c965611884e1a48ff18da79e3416261426d63c5eb34a2e6aad630"></span><code class="descname">CloseReason_Error</code> = 2<a class="headerlink" href="#_CPPv317CloseReason_Error" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="elastreamcallbacks">
+<h3>ElaStreamCallbacks<a class="headerlink" href="#elastreamcallbacks" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv318ElaStreamCallbacks">
+<span id="_CPPv218ElaStreamCallbacks"></span><span id="ElaStreamCallbacks"></span><span class="target" id="struct_ela_stream_callbacks"></span><em class="property">struct </em><code class="descname">ElaStreamCallbacks</code><a class="headerlink" href="#_CPPv318ElaStreamCallbacks" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Carrier stream callbacks. </p>
+<p>Include stream status callback, stream data callback, and multiplexing callbacks. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv3N18ElaStreamCallbacks13state_changedE">
+<span id="_CPPv2N18ElaStreamCallbacks13state_changedE"></span><span class="target" id="struct_ela_stream_callbacks_1ab5dd3527e3072d8db02c8fcb29896e4c"></span>void (*<code class="descname">state_changed</code>)<span class="sig-paren">(</span>ElaSession *session, int stream, <a class="reference internal" href="#_CPPv314ElaStreamState" title="ElaStreamState">ElaStreamState</a> state, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N18ElaStreamCallbacks13state_changedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback to report status of various stream operations. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">state</span></code>: [in] Stream state defined in ElaStreamState. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N18ElaStreamCallbacks11stream_dataE">
+<span id="_CPPv2N18ElaStreamCallbacks11stream_dataE"></span><span class="target" id="struct_ela_stream_callbacks_1acc93fdbd62294276e9c0f3ac1ef29e2d"></span>void (*<code class="descname">stream_data</code>)<span class="sig-paren">(</span>ElaSession *session, int stream, <em class="property">const</em> void *data, size_t len, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N18ElaStreamCallbacks11stream_dataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback will be called when the stream receives incoming packet. </p>
+<p>If the stream enabled multiplexing mode, application will not receive stream_data callback any more. All data will reported as multiplexing channel data.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">data</span></code>: [in] The received packet data. </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The received data length. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N18ElaStreamCallbacks12channel_openE">
+<span id="_CPPv2N18ElaStreamCallbacks12channel_openE"></span><span class="target" id="struct_ela_stream_callbacks_1aaf9b310e2e6e08b43c92c9f15036210f"></span>bool (*<code class="descname">channel_open</code>)<span class="sig-paren">(</span>ElaSession *session, int stream, int channel, <em class="property">const</em> char *cookie, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N18ElaStreamCallbacks12channel_openE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback will be called when new multiplexing channel request to open. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>True on success, or false if an error occurred. The channel will continue to open only this callback return true, otherwise the channel will be closed. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">channel</span></code>: [in] The current channel ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">cookie</span></code>: [in] Application defined string data receive from peer. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N18ElaStreamCallbacks14channel_openedE">
+<span id="_CPPv2N18ElaStreamCallbacks14channel_openedE"></span><span class="target" id="struct_ela_stream_callbacks_1a457b2f434bd8638a3880e2d167b7230e"></span>void (*<code class="descname">channel_opened</code>)<span class="sig-paren">(</span>ElaSession *session, int stream, int channel, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N18ElaStreamCallbacks14channel_openedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback will be called when new multiplexing channel opened. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">channel</span></code>: [in] The current channel ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N18ElaStreamCallbacks13channel_closeE">
+<span id="_CPPv2N18ElaStreamCallbacks13channel_closeE"></span><span class="target" id="struct_ela_stream_callbacks_1a95519e97c1345cdb1cfc2dc5979797d3"></span>void (*<code class="descname">channel_close</code>)<span class="sig-paren">(</span>ElaSession *session, int stream, int channel, <a class="reference internal" href="#_CPPv311CloseReason" title="CloseReason">CloseReason</a> reason, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N18ElaStreamCallbacks13channel_closeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback will be called when channel close. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">channel</span></code>: [in] The current channel ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">reason</span></code>: [in] Channel close reason code, defined in CloseReason. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N18ElaStreamCallbacks12channel_dataE">
+<span id="_CPPv2N18ElaStreamCallbacks12channel_dataE"></span><span class="target" id="struct_ela_stream_callbacks_1a147758e0215dc77126d1e6f27b68284e"></span>bool (*<code class="descname">channel_data</code>)<span class="sig-paren">(</span>ElaSession *session, int stream, int channel, <em class="property">const</em> void *data, size_t len, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N18ElaStreamCallbacks12channel_dataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback will be called when channel received incoming data. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>True on success, or false if an error occurred. If this callback return false, the channel will be closed with CloseReason_Error. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">channel</span></code>: [in] The current channel ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">data</span></code>: [in] The received data(NULL if  is zero). </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The received data length. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N18ElaStreamCallbacks15channel_pendingE">
+<span id="_CPPv2N18ElaStreamCallbacks15channel_pendingE"></span><span class="target" id="struct_ela_stream_callbacks_1a0b5132d044b5a434482d2f247d5038ea"></span>void (*<code class="descname">channel_pending</code>)<span class="sig-paren">(</span>ElaSession *session, int stream, int channel, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N18ElaStreamCallbacks15channel_pendingE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback will be called when remote peer ask to pend data sending. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">channel</span></code>: [in] The current channel ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N18ElaStreamCallbacks14channel_resumeE">
+<span id="_CPPv2N18ElaStreamCallbacks14channel_resumeE"></span><span class="target" id="struct_ela_stream_callbacks_1a7084466e1442fa72ba46e7bafed406f8"></span>void (*<code class="descname">channel_resume</code>)<span class="sig-paren">(</span>ElaSession *session, int stream, int channel, void *context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N18ElaStreamCallbacks14channel_resumeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback will be called when remote peer ask to resume data sending. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">channel</span></code>: [in] The current channel ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="elasessionrequestcallback">
+<h3>ElaSessionRequestCallback<a class="headerlink" href="#elasessionrequestcallback" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv325ElaSessionRequestCallback">
+<span id="_CPPv225ElaSessionRequestCallback"></span><span id="ElaSessionRequestCallback"></span><span class="target" id="ela__session_8h_1a566592005469ac045d9d307459df916b"></span><em class="property">typedef </em>void <code class="descname">ElaSessionRequestCallback</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <em class="property">const</em> char *<em>from</em>, <em class="property">const</em> char *<em>bundle</em>, <em class="property">const</em> char *<em>sdp</em>, size_t <em>len</em>, void *<em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv325ElaSessionRequestCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Make initialization on Android platform. </p>
+<p><p>An application-defined function that handle session requests.</p>
+<dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true if initialization succeeded, or false if not.</dd>
+</dl>
+</p>
+<p>ElaSessionRequestCallback is the callback function type.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the ElaCarrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">from</span></code>: [in] The id from who send the message. </li>
+<li><code class="docutils literal notranslate"><span class="pre">bundle</span></code>: [in] The bundle of this session. </li>
+<li><code class="docutils literal notranslate"><span class="pre">sdp</span></code>: [in] The remote users SDP. End the null terminal. Reference: <a class="reference external" href="https://tools.ietf.org/html/rfc4566">https://tools.ietf.org/html/rfc4566</a> </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The length of the SDP. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="elasessionrequestcompletecallback">
+<h3>ElaSessionRequestCompleteCallback<a class="headerlink" href="#elasessionrequestcompletecallback" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv333ElaSessionRequestCompleteCallback">
+<span id="_CPPv233ElaSessionRequestCompleteCallback"></span><span id="ElaSessionRequestCompleteCallback"></span><span class="target" id="ela__session_8h_1a1eed5af889cf418e5f0b30c1b09f3220"></span><em class="property">typedef </em>void <code class="descname">ElaSessionRequestCompleteCallback</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, <em class="property">const</em> char *<em>bundle</em>, int <em>status</em>, <em class="property">const</em> char *<em>reason</em>, <em class="property">const</em> char *<em>sdp</em>, size_t <em>len</em>, void *<em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv333ElaSessionRequestCompleteCallback" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An application-defined function that receive session request complete event. </p>
+<p>ElaSessionRequestCompleteCallback is the callback function type.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] A handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">bundle</span></code>: [in] The bundle of this session. </li>
+<li><code class="docutils literal notranslate"><span class="pre">status</span></code>: [in] The status code of the response. 0 is success, otherwise is error. </li>
+<li><code class="docutils literal notranslate"><span class="pre">reason</span></code>: [in] The error message if status is error, or NULL </li>
+<li><code class="docutils literal notranslate"><span class="pre">sdp</span></code>: [in] The remote users SDP. End the null terminal. Reference: <a class="reference external" href="https://tools.ietf.org/html/rfc4566">https://tools.ietf.org/html/rfc4566</a> </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The length of the SDP. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="global-session-functions">
+<h3>Global session functions<a class="headerlink" href="#global-session-functions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ela-session-init">
+<h4>ela_session_init<a class="headerlink" href="#ela-session-init" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv316ela_session_initP10ElaCarrier">
+<span id="_CPPv216ela_session_initP10ElaCarrier"></span><span id="ela_session_init__ElaCarrierP"></span><span class="target" id="ela__session_8h_1a0616ba7c851713ee2dd7f5162246c2d6"></span>int <code class="descname">ela_session_init</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv316ela_session_initP10ElaCarrier" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initialize carrier session extension. </p>
+<p>The application must initialize the session extension before calling any session API.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the Carrier node instance.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-session-cleanup">
+<h4>ela_session_cleanup<a class="headerlink" href="#ela-session-cleanup" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv319ela_session_cleanupP10ElaCarrier">
+<span id="_CPPv219ela_session_cleanupP10ElaCarrier"></span><span id="ela_session_cleanup__ElaCarrierP"></span><span class="target" id="ela__session_8h_1a95d15725798176814e34fddc65eb9a8c"></span>void <code class="descname">ela_session_cleanup</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv319ela_session_cleanupP10ElaCarrier" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Clean up Carrier session extension. </p>
+<p>The application should call ela_session_cleanup before quit, to clean up the resources associated with the extension.</p>
+<p>If the extension is not initialized, this function has no effect.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the carrier node instance. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="session-instance-functions">
+<h3>Session instance functions<a class="headerlink" href="#session-instance-functions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ela-session-new">
+<h4>ela_session_new<a class="headerlink" href="#ela-session-new" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv315ela_session_newP10ElaCarrierPKc">
+<span id="_CPPv215ela_session_newP10ElaCarrierPKc"></span><span id="ela_session_new__ElaCarrierP.cCP"></span><span class="target" id="ela__session_8h_1ab8612ec5e451d477a4294e805aa5e275"></span>ElaSession *<code class="descname">ela_session_new</code><span class="sig-paren">(</span>ElaCarrier *<em>carrier</em>, <em class="property">const</em> char *<em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv315ela_session_newP10ElaCarrierPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a new session to a friend. </p>
+<p>The session object represent a conversation handle to a friend.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>If no error occurs, return the pointer of ElaSession object. Otherwise, return NULL, and a specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">carrier</span></code>: [in] A handle to the carrier node instance. </li>
+<li><code class="docutils literal notranslate"><span class="pre">address</span></code>: [in] The target address.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-session-close">
+<h4>ela_session_close<a class="headerlink" href="#ela-session-close" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv317ela_session_closeP10ElaSession">
+<span id="_CPPv217ela_session_closeP10ElaSession"></span><span id="ela_session_close__ElaSessionP"></span><span class="target" id="ela__session_8h_1a1fc8b8b1bd4add32ad04b9a3a81d490b"></span>void <code class="descname">ela_session_close</code><span class="sig-paren">(</span>ElaSession *<em>session</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv317ela_session_closeP10ElaSession" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Close a session to friend. </p>
+<p>All resources include streams, multiplexers associated with current session will be destroyed.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] A handle to the carrier session. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-session-get-peer">
+<h4>ela_session_get_peer<a class="headerlink" href="#ela-session-get-peer" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv320ela_session_get_peerP10ElaSessionPc6size_t">
+<span id="_CPPv220ela_session_get_peerP10ElaSessionPc6size_t"></span><span id="ela_session_get_peer__ElaSessionP.cP.s"></span><span class="target" id="ela__session_8h_1a09636eaf01b9d71692b0cddb65d8da5c"></span>char *<code class="descname">ela_session_get_peer</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, char *<em>address</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv320ela_session_get_peerP10ElaSessionPc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the remote peer’s address of the session. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The remote peer string address, or NULL if buffer is too small. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] A handle to the carrier session. </li>
+<li><code class="docutils literal notranslate"><span class="pre">address</span></code>: [out] The buffer that will receive the peer address. The buffer size should at least (2 * ELA_MAX_ID_LEN + 1) bytes. </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The buffer size of appid.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-session-set-userdata">
+<h4>ela_session_set_userdata<a class="headerlink" href="#ela-session-set-userdata" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv324ela_session_set_userdataP10ElaSessionPv">
+<span id="_CPPv224ela_session_set_userdataP10ElaSessionPv"></span><span id="ela_session_set_userdata__ElaSessionP.voidP"></span><span class="target" id="ela__session_8h_1a5248ec50425f85d8a228ae088cf99145"></span>void <code class="descname">ela_session_set_userdata</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, void *<em>userdata</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv324ela_session_set_userdataP10ElaSessionPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the arbitary user data to be associated with the session. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] A handle to the carrier session. </li>
+<li><code class="docutils literal notranslate"><span class="pre">userdata</span></code>: [in] Arbitary user data to be associated with this session. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-session-get-userdata">
+<h4>ela_session_get_userdata<a class="headerlink" href="#ela-session-get-userdata" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv324ela_session_get_userdataP10ElaSession">
+<span id="_CPPv224ela_session_get_userdataP10ElaSession"></span><span id="ela_session_get_userdata__ElaSessionP"></span><span class="target" id="ela__session_8h_1a1e3abb1adcf85038e23429e1fddadf08"></span>void *<code class="descname">ela_session_get_userdata</code><span class="sig-paren">(</span>ElaSession *<em>session</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv324ela_session_get_userdataP10ElaSession" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the user data associated with the session. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The user data associated with session. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] A handle to the carrier session.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-session-request">
+<h4>ela_session_request<a class="headerlink" href="#ela-session-request" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv319ela_session_requestP10ElaSessionPKcP33ElaSessionRequestCompleteCallbackPv">
+<span id="_CPPv219ela_session_requestP10ElaSessionPKcP33ElaSessionRequestCompleteCallbackPv"></span><span id="ela_session_request__ElaSessionP.cCP.ElaSessionRequestCompleteCallbackP.voidP"></span><span class="target" id="ela__session_8h_1a9d26ddc7148a85110ca7678c8f277066"></span>int <code class="descname">ela_session_request</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, <em class="property">const</em> char *<em>bundle</em>, <a class="reference internal" href="#_CPPv333ElaSessionRequestCompleteCallback" title="ElaSessionRequestCompleteCallback">ElaSessionRequestCompleteCallback</a> *<em>callback</em>, void *<em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv319ela_session_requestP10ElaSessionPKcP33ElaSessionRequestCompleteCallbackPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Send session request to the friend. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if the session request successfully send to the friend. Otherwise, return -1, and a specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] A handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">bundle</span></code>: [in] The bundle of this session. </li>
+<li><code class="docutils literal notranslate"><span class="pre">callback</span></code>: [in] A pointer to ElaSessionRequestCompleteCallback function to receive the session response. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-session-reply-request">
+<h4>ela_session_reply_request<a class="headerlink" href="#ela-session-reply-request" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv325ela_session_reply_requestP10ElaSessionPKciPKc">
+<span id="_CPPv225ela_session_reply_requestP10ElaSessionPKciPKc"></span><span id="ela_session_reply_request__ElaSessionP.cCP.i.cCP"></span><span class="target" id="ela__session_8h_1af95acbce1478ce65ec55c1c504ebc552"></span>int <code class="descname">ela_session_reply_request</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, <em class="property">const</em> char *<em>bundle</em>, int <em>status</em>, <em class="property">const</em> char *<em>reason</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv325ela_session_reply_requestP10ElaSessionPKciPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reply the session request from friend. </p>
+<p>This function will send a session response to friend.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if the session response successfully send to the friend. Otherwise, return -1, and a specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] A handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">bundle</span></code>: [in] The bundle of this session. </li>
+<li><code class="docutils literal notranslate"><span class="pre">status</span></code>: [in] The status code of the response. 0 is success, otherwise is error. </li>
+<li><code class="docutils literal notranslate"><span class="pre">reason</span></code>: [in] The error message if status is error, or NULL if success.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-session-start">
+<h4>ela_session_start<a class="headerlink" href="#ela-session-start" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv317ela_session_startP10ElaSessionPKc6size_t">
+<span id="_CPPv217ela_session_startP10ElaSessionPKc6size_t"></span><span id="ela_session_start__ElaSessionP.cCP.s"></span><span class="target" id="ela__session_8h_1a7a6cf64293d8a40b4345934fe85edf30"></span>int <code class="descname">ela_session_start</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, <em class="property">const</em> char *<em>sdp</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv317ela_session_startP10ElaSessionPKc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Begin to start a session. </p>
+<p>All streams in current session will try to connect with remote friend, the stream status will update to application by stream’s callbacks.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] A handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">sdp</span></code>: [in] The remote users SDP. End the null terminal. Reference: <a class="reference external" href="https://tools.ietf.org/html/rfc4566">https://tools.ietf.org/html/rfc4566</a> </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The length of the SDP.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="stream-functions">
+<h3>Stream functions<a class="headerlink" href="#stream-functions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ela-session-add-stream">
+<h4>ela_session_add_stream<a class="headerlink" href="#ela-session-add-stream" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv322ela_session_add_streamP10ElaSession13ElaStreamTypeiP18ElaStreamCallbacksPv">
+<span id="_CPPv222ela_session_add_streamP10ElaSession13ElaStreamTypeiP18ElaStreamCallbacksPv"></span><span id="ela_session_add_stream__ElaSessionP.ElaStreamType.i.ElaStreamCallbacksP.voidP"></span><span class="target" id="ela__session_8h_1ab32a6e8c84f563cec395b4c613ee36e3"></span>int <code class="descname">ela_session_add_stream</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, <a class="reference internal" href="#_CPPv313ElaStreamType" title="ElaStreamType">ElaStreamType</a> <em>type</em>, int <em>options</em>, <a class="reference internal" href="#_CPPv318ElaStreamCallbacks" title="ElaStreamCallbacks">ElaStreamCallbacks</a> *<em>callbacks</em>, void *<em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv322ela_session_add_streamP10ElaSession13ElaStreamTypeiP18ElaStreamCallbacksPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add a new stream to session. </p>
+<p>Carrier stream supports several underlying transport mechanisms:</p>
+<p><ul class="simple">
+<li>Plain/encrypted UDP data gram protocol</li>
+<li>Plain/encrypted TCP like reliable stream protocol</li>
+<li>Multiplexing over UDP</li>
+<li>Multiplexing over TCP like reliable protocol</li>
+</ul>
+</p>
+<p>Application can use options to specify the new stream mode. Data transferred on stream is defaultly encrypted. Multiplexing over UDP can not provide reliable transport.</p>
+<p><ul class="simple">
+<li>ELA_STREAM_PLAIN Plain mode.</li>
+<li>ELA_STREAM_RELIABLE Reliable mode.</li>
+<li>ELA_STREAM_MULTIPLEXING Multiplexing mode.</li>
+<li>ELA_STREAM_PORT_FORWARDING Support portforwarding over multiplexing.</li>
+</ul>
+<dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">type</span></code>: [in] The stream type defined in ElaStreamType. </li>
+<li><code class="docutils literal notranslate"><span class="pre">options</span></code>: [in] The stream mode options. options are constructed by a bitwise-inclusive OR of flags from the following list:</li>
+</ul>
+</dd>
+</dl>
+</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Return stream id on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">callbacks</span></code>: [in] The Application defined callback functions in <a class="reference internal" href="#struct_ela_stream_callbacks"><span class="std std-ref">ElaStreamCallbacks</span></a>. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: [in] The application defined context data.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-session-remove-stream">
+<h4>ela_session_remove_stream<a class="headerlink" href="#ela-session-remove-stream" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv325ela_session_remove_streamP10ElaSessioni">
+<span id="_CPPv225ela_session_remove_streamP10ElaSessioni"></span><span id="ela_session_remove_stream__ElaSessionP.i"></span><span class="target" id="ela__session_8h_1a9233c9ff8f4bb36ac3ccbe2640b69518"></span>int <code class="descname">ela_session_remove_stream</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, int <em>stream</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv325ela_session_remove_streamP10ElaSessioni" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Remove a stream from session. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream id to be removed.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-stream-get-type">
+<h4>ela_stream_get_type<a class="headerlink" href="#ela-stream-get-type" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv319ela_stream_get_typeP10ElaSessioniP13ElaStreamType">
+<span id="_CPPv219ela_stream_get_typeP10ElaSessioniP13ElaStreamType"></span><span id="ela_stream_get_type__ElaSessionP.i.ElaStreamTypeP"></span><span class="target" id="ela__session_8h_1abbe977d19ce37c0ca52a010e5bd4f1f1"></span>int <code class="descname">ela_stream_get_type</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, int <em>stream</em>, <a class="reference internal" href="#_CPPv313ElaStreamType" title="ElaStreamType">ElaStreamType</a> *<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv319ela_stream_get_typeP10ElaSessioniP13ElaStreamType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the carrier stream type. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">type</span></code>: [out] The stream type defined in ElaStreamType.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-stream-get-state">
+<h4>ela_stream_get_state<a class="headerlink" href="#ela-stream-get-state" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv320ela_stream_get_stateP10ElaSessioniP14ElaStreamState">
+<span id="_CPPv220ela_stream_get_stateP10ElaSessioniP14ElaStreamState"></span><span id="ela_stream_get_state__ElaSessionP.i.ElaStreamStateP"></span><span class="target" id="ela__session_8h_1a4d7d4fa233de8f3c1160e491a28c748b"></span>int <code class="descname">ela_stream_get_state</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, int <em>stream</em>, <a class="reference internal" href="#_CPPv314ElaStreamState" title="ElaStreamState">ElaStreamState</a> *<em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv320ela_stream_get_stateP10ElaSessioniP14ElaStreamState" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the carrier stream current state. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">state</span></code>: [out] The stream state defined in ElaStreamState.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-stream-get-transport-info">
+<h4>ela_stream_get_transport_info<a class="headerlink" href="#ela-stream-get-transport-info" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv329ela_stream_get_transport_infoP10ElaSessioniP16ElaTransportInfo">
+<span id="_CPPv229ela_stream_get_transport_infoP10ElaSessioniP16ElaTransportInfo"></span><span id="ela_stream_get_transport_info__ElaSessionP.i.ElaTransportInfoP"></span><span class="target" id="ela__session_8h_1ac8b801f5d41c5d973bade31891ab6810"></span>int <code class="descname">ela_stream_get_transport_info</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, int <em>stream</em>, <a class="reference internal" href="#_CPPv316ElaTransportInfo" title="ElaTransportInfo">ElaTransportInfo</a> *<em>info</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv329ela_stream_get_transport_infoP10ElaSessioniP16ElaTransportInfo" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the carrier stream transport information. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">info</span></code>: [out] The stream transport information defined in <a class="reference internal" href="#struct_ela_transport_info"><span class="std std-ref">ElaTransportInfo</span></a>.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-stream-write">
+<h4>ela_stream_write<a class="headerlink" href="#ela-stream-write" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv316ela_stream_writeP10ElaSessioniPKv6size_t">
+<span id="_CPPv216ela_stream_writeP10ElaSessioniPKv6size_t"></span><span id="ela_stream_write__ElaSessionP.i.voidCP.s"></span><span class="target" id="ela__session_8h_1a314d34ce42f9dcfe9df1d1c2822e9047"></span>ssize_t <code class="descname">ela_stream_write</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, int <em>stream</em>, <em class="property">const</em> void *<em>data</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv316ela_stream_writeP10ElaSessioniPKv6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Send outgoing data to remote peer. </p>
+<p>If the stream is in multiplexing mode, application can not call this function to send data. If this function is called on multiplexing mode stream, it will return error.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Sent bytes on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">data</span></code>: [in] The outgoing data. </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The outgoing data length.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-stream-open-channel">
+<h4>ela_stream_open_channel<a class="headerlink" href="#ela-stream-open-channel" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv323ela_stream_open_channelP10ElaSessioniPKc">
+<span id="_CPPv223ela_stream_open_channelP10ElaSessioniPKc"></span><span id="ela_stream_open_channel__ElaSessionP.i.cCP"></span><span class="target" id="ela__session_8h_1ab614a1299737e351d733ebeef5c1a34e"></span>int <code class="descname">ela_stream_open_channel</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, int <em>stream</em>, <em class="property">const</em> char *<em>cookie</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv323ela_stream_open_channelP10ElaSessioniPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Open a new channel on multiplexing stream. </p>
+<p>If the stream is not multiplexing this function will fail.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>New channel ID on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">cookie</span></code>: [in] Application defined data pass to remote peer.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-stream-close-channel">
+<h4>ela_stream_close_channel<a class="headerlink" href="#ela-stream-close-channel" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv324ela_stream_close_channelP10ElaSessionii">
+<span id="_CPPv224ela_stream_close_channelP10ElaSessionii"></span><span id="ela_stream_close_channel__ElaSessionP.i.i"></span><span class="target" id="ela__session_8h_1a3ac96e5f59e6aa29acd8913aa03f4f38"></span>int <code class="descname">ela_stream_close_channel</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, int <em>stream</em>, int <em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv324ela_stream_close_channelP10ElaSessionii" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Close a new channel on multiplexing stream. </p>
+<p>If the stream is not multiplexing this function will fail.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">channel</span></code>: [in] The channel ID.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-stream-write-channel">
+<h4>ela_stream_write_channel<a class="headerlink" href="#ela-stream-write-channel" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv324ela_stream_write_channelP10ElaSessioniiPKv6size_t">
+<span id="_CPPv224ela_stream_write_channelP10ElaSessioniiPKv6size_t"></span><span id="ela_stream_write_channel__ElaSessionP.i.i.voidCP.s"></span><span class="target" id="ela__session_8h_1ac164ad8a560783331e00089826c9f82b"></span>ssize_t <code class="descname">ela_stream_write_channel</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, int <em>stream</em>, int <em>channel</em>, <em class="property">const</em> void *<em>data</em>, size_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv324ela_stream_write_channelP10ElaSessioniiPKv6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Send outgoing data to remote peer. </p>
+<p>If the stream is not multiplexing this function will fail.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Sent bytes on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">channel</span></code>: [in] The channel ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">data</span></code>: [in] The outgoing data(MUST be NULL if  is zero). </li>
+<li><code class="docutils literal notranslate"><span class="pre">len</span></code>: [in] The outgoing data length(COULD be zero, the receiver will get <a class="reference internal" href="#struct_ela_stream_callbacks_1a147758e0215dc77126d1e6f27b68284e"><span class="std std-ref">ElaStreamCallbacks::channel_data</span></a> callback with argument  being zero).</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-stream-pend-channel">
+<h4>ela_stream_pend_channel<a class="headerlink" href="#ela-stream-pend-channel" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv323ela_stream_pend_channelP10ElaSessionii">
+<span id="_CPPv223ela_stream_pend_channelP10ElaSessionii"></span><span id="ela_stream_pend_channel__ElaSessionP.i.i"></span><span class="target" id="ela__session_8h_1a93ae8de85e98f2500da0d5e7ec4b0b05"></span>int <code class="descname">ela_stream_pend_channel</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, int <em>stream</em>, int <em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv323ela_stream_pend_channelP10ElaSessionii" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Request remote peer to pend channel data sending. </p>
+<p>If the stream is not multiplexing this function will fail.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">channel</span></code>: [in] The channel ID.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-stream-resume-channel">
+<h4>ela_stream_resume_channel<a class="headerlink" href="#ela-stream-resume-channel" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv325ela_stream_resume_channelP10ElaSessionii">
+<span id="_CPPv225ela_stream_resume_channelP10ElaSessionii"></span><span id="ela_stream_resume_channel__ElaSessionP.i.i"></span><span class="target" id="ela__session_8h_1aaaa3614bdfce48ece538b6d46094211d"></span>int <code class="descname">ela_stream_resume_channel</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, int <em>stream</em>, int <em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv325ela_stream_resume_channelP10ElaSessionii" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Request remote peer to resume channel data sending. </p>
+<p>If the stream is not multiplexing this function will fail.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">channel</span></code>: [in] The channel ID.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="portforwarding-functions">
+<h3>PortForwarding functions<a class="headerlink" href="#portforwarding-functions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ela-session-add-service">
+<h4>ela_session_add_service<a class="headerlink" href="#ela-session-add-service" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv323ela_session_add_serviceP10ElaSessionPKc22PortForwardingProtocolPKcPKc">
+<span id="_CPPv223ela_session_add_serviceP10ElaSessionPKc22PortForwardingProtocolPKcPKc"></span><span id="ela_session_add_service__ElaSessionP.cCP.PortForwardingProtocol.cCP.cCP"></span><span class="target" id="ela__session_8h_1ab93998ed3265bdea55483fce290a9f7a"></span>int <code class="descname">ela_session_add_service</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, <em class="property">const</em> char *<em>service</em>, <a class="reference internal" href="#_CPPv322PortForwardingProtocol" title="PortForwardingProtocol">PortForwardingProtocol</a> <em>protocol</em>, <em class="property">const</em> char *<em>host</em>, <em class="property">const</em> char *<em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv323ela_session_add_serviceP10ElaSessionPKc22PortForwardingProtocolPKcPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add a new portforwarding service to session. </p>
+<p>The registered services can be used by remote peer in portforwarding request.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">service</span></code>: [in] The new service name, should be unique in session scope. </li>
+<li><code class="docutils literal notranslate"><span class="pre">protocol</span></code>: [in] The protocol of the service. </li>
+<li><code class="docutils literal notranslate"><span class="pre">host</span></code>: [in] The host name or ip of the service. </li>
+<li><code class="docutils literal notranslate"><span class="pre">port</span></code>: [in] The port of the service.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-session-remove-service">
+<h4>ela_session_remove_service<a class="headerlink" href="#ela-session-remove-service" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv326ela_session_remove_serviceP10ElaSessionPKc">
+<span id="_CPPv226ela_session_remove_serviceP10ElaSessionPKc"></span><span id="ela_session_remove_service__ElaSessionP.cCP"></span><span class="target" id="ela__session_8h_1a42e312b143848e3e5812927ab4d8f1c3"></span>void <code class="descname">ela_session_remove_service</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, <em class="property">const</em> char *<em>service</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv326ela_session_remove_serviceP10ElaSessionPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Remove a portforwarding service to session. </p>
+<p>This function has not effect on existing portforwarings.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">service</span></code>: [in] The service name. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-stream-open-port-forwarding">
+<h4>ela_stream_open_port_forwarding<a class="headerlink" href="#ela-stream-open-port-forwarding" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv331ela_stream_open_port_forwardingP10ElaSessioniPKc22PortForwardingProtocolPKcPKc">
+<span id="_CPPv231ela_stream_open_port_forwardingP10ElaSessioniPKc22PortForwardingProtocolPKcPKc"></span><span id="ela_stream_open_port_forwarding__ElaSessionP.i.cCP.PortForwardingProtocol.cCP.cCP"></span><span class="target" id="ela__session_8h_1adbc4ab61eb4d1ae71807d29336316afb"></span>int <code class="descname">ela_stream_open_port_forwarding</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, int <em>stream</em>, <em class="property">const</em> char *<em>service</em>, <a class="reference internal" href="#_CPPv322PortForwardingProtocol" title="PortForwardingProtocol">PortForwardingProtocol</a> <em>protocol</em>, <em class="property">const</em> char *<em>host</em>, <em class="property">const</em> char *<em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv331ela_stream_open_port_forwardingP10ElaSessioniPKc22PortForwardingProtocolPKcPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Open a portforwarding to remote service over multiplexing. </p>
+<p>If the stream is not multiplexing this function will fail.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Portforwarding ID on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">service</span></code>: [in] The remote service name. </li>
+<li><code class="docutils literal notranslate"><span class="pre">protocol</span></code>: [in] Portforwarding protocol. </li>
+<li><code class="docutils literal notranslate"><span class="pre">host</span></code>: [in] Local host or ip to binding. If host is NULL, portforwarding will bind to 127.0.0.1. </li>
+<li><code class="docutils literal notranslate"><span class="pre">port</span></code>: [in] Local port to binding, can not be NULL.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ela-stream-close-port-forwarding">
+<h4>ela_stream_close_port_forwarding<a class="headerlink" href="#ela-stream-close-port-forwarding" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="_CPPv332ela_stream_close_port_forwardingP10ElaSessionii">
+<span id="_CPPv232ela_stream_close_port_forwardingP10ElaSessionii"></span><span id="ela_stream_close_port_forwarding__ElaSessionP.i.i"></span><span class="target" id="ela__session_8h_1aeced335cd389ae1319a1f81696a87566"></span>int <code class="descname">ela_stream_close_port_forwarding</code><span class="sig-paren">(</span>ElaSession *<em>session</em>, int <em>stream</em>, int <em>portforwarding</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv332ela_stream_close_port_forwardingP10ElaSessionii" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Close a portforwarding to remote service over multiplexing. </p>
+<p>If the stream is not multiplexing this function will fail.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 on success, or -1 if an error occurred. The specific error code can be retrieved by calling ela_get_error(). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">session</span></code>: [in] The handle to the ElaSession. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: [in] The stream ID. </li>
+<li><code class="docutils literal notranslate"><span class="pre">portforwarding</span></code>: [in] The portforwarding ID.</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="carrier-error-number.html" class="btn btn-neutral float-right" title="Elastos Carrier error number" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="carrier-api.html" class="btn btn-neutral" title="Elastos Carrier core APIs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, elastos.org.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'5.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

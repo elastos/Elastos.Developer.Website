@@ -63,16 +63,11 @@ None
 
 **Raw Http GET request**
 
-    http://scheme.elastos.org/a?id=org.company.app | 
-
-
-**Http GET with JWT**
-
-    http://scheme.elastos.org/JWT_CONTAINING_REQUEST_FIELDS_AND_MORE
+    http://scheme.elastos.org/app?id=org.company.app | 
 
 **Trinity**
 
-    appManager.sendIntent("a", {
+    appManager.sendIntent("app", {
         id: "org.company.app"
     }, ...)
 
