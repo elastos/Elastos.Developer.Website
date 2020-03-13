@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>StreamMode | Trinity Plugins API Reference</title>
+	<title>TitleBarForegroundMode | Trinity Plugins API Reference</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,13 +54,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/carrierplugin.html">CarrierPlugin</a>
+					<a href="../modules/titlebarplugin.html">TitleBarPlugin</a>
 				</li>
 				<li>
-					<a href="carrierplugin.streammode.html">StreamMode</a>
+					<a href="titlebarplugin.titlebarforegroundmode.html">TitleBarForegroundMode</a>
 				</li>
 			</ul>
-			<h1>Enumeration StreamMode</h1>
+			<h1>Enumeration TitleBarForegroundMode</h1>
 		</div>
 	</div>
 </header>
@@ -69,14 +69,9 @@
 		<div class="col-8 col-content">
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
-					<dl class="tsd-comment-tags">
-						<dt>description</dt>
-						<dd><p>Carrier stream mode.</p>
-						</dd>
-						<dt>enum</dt>
-						<dd><p>{number}</p>
-						</dd>
-					</dl>
+					<div class="lead">
+						<p>Color mode for all icons and texts on the title bar.</p>
+					</div>
 				</div>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -86,11 +81,8 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="carrierplugin.streammode.html#compress" class="tsd-kind-icon">COMPRESS</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="carrierplugin.streammode.html#multiplexing" class="tsd-kind-icon">MULTIPLEXING</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="carrierplugin.streammode.html#plain" class="tsd-kind-icon">PLAIN</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="carrierplugin.streammode.html#port_forwarding" class="tsd-kind-icon">PORT_<wbr>FORWARDING</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="carrierplugin.streammode.html#reliable" class="tsd-kind-icon">RELIABLE</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="titlebarplugin.titlebarforegroundmode.html#dark" class="tsd-kind-icon">DARK</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="titlebarplugin.titlebarforegroundmode.html#light" class="tsd-kind-icon">LIGHT</a></li>
 							</ul>
 						</section>
 					</div>
@@ -99,71 +91,26 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Enumeration members</h2>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a name="compress" class="tsd-anchor"></a>
-					<h3>COMPRESS</h3>
-					<div class="tsd-signature tsd-kind-icon">COMPRESS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;1</span></div>
+					<a name="dark" class="tsd-anchor"></a>
+					<h3>DARK</h3>
+					<div class="tsd-signature tsd-kind-icon">DARK<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;1</span></div>
 					<aside class="tsd-sources">
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Compress option, indicates data would be compressed before transmission.
-							For now, just reserved this bit option for future implement.</p>
+							<p>Title bar title and icons use a dark (dark gray) color. Use this on a light background color.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a name="multiplexing" class="tsd-anchor"></a>
-					<h3>MULTIPLEXING</h3>
-					<div class="tsd-signature tsd-kind-icon">MULTIPLEXING<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;8</span></div>
+					<a name="light" class="tsd-anchor"></a>
+					<h3>LIGHT</h3>
+					<div class="tsd-signature tsd-kind-icon">LIGHT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;0</span></div>
 					<aside class="tsd-sources">
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Multiplexing option, indicates multiplexing would be activated on
-								enstablished stream, and need to use multipexing APIs related with channel
-							instread of APIs related strema to send/receive data.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a name="plain" class="tsd-anchor"></a>
-					<h3>PLAIN</h3>
-					<div class="tsd-signature tsd-kind-icon">PLAIN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;2</span></div>
-					<aside class="tsd-sources">
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Encrypt option, indicates data would be transmitted with plain mode.
-							which means that transmitting data would be encrypted in default.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a name="port_forwarding" class="tsd-anchor"></a>
-					<h3>PORT_<wbr>FORWARDING</h3>
-					<div class="tsd-signature tsd-kind-icon">PORT_<wbr>FORWARDING<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;16</span></div>
-					<aside class="tsd-sources">
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>PortForwarding option, indicates port forwarding would be activated
-								on established stream. This options should bitwise with &#39;Multiplexing&#39;
-							option.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a name="reliable" class="tsd-anchor"></a>
-					<h3>RELIABLE</h3>
-					<div class="tsd-signature tsd-kind-icon">RELIABLE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;4</span></div>
-					<aside class="tsd-sources">
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Relaible option, indicates data transmission would be reliable, and be
-								guranteed to received by remote peer, which acts as TCP transmission
-								protocol. Without this option bitwised, the transmission would be
-							unreliable as UDP transmission protocol.</p>
+							<p>Title bar title and icons use a light (white) color. Use this on a dark background color.</p>
 						</div>
 					</div>
 				</section>
@@ -178,7 +125,7 @@
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/appmanagerplugin.html">App<wbr>Manager<wbr>Plugin</a>
 					</li>
-					<li class="current tsd-kind-module tsd-is-not-exported">
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/carrierplugin.html">Carrier<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
@@ -211,7 +158,7 @@
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/hiveplugin.html">Hive<wbr>Plugin</a>
 					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
+					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/titlebarplugin.html">Title<wbr>Bar<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
@@ -222,118 +169,34 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
-						<a href="carrierplugin.candidatetype.html" class="tsd-kind-icon">Candidate<wbr>Type</a>
+						<a href="titlebarplugin.titlebaractivitytype.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Activity<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
-						<a href="carrierplugin.closereason.html" class="tsd-kind-icon">Close<wbr>Reason</a>
-					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
-						<a href="carrierplugin.connectionstatus.html" class="tsd-kind-icon">Connection<wbr>Status</a>
-					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
-						<a href="carrierplugin.filetransferstate.html" class="tsd-kind-icon">File<wbr>Transfer<wbr>State</a>
-					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
-						<a href="carrierplugin.networktopology.html" class="tsd-kind-icon">Network<wbr>Topology</a>
-					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
-						<a href="carrierplugin.portforwardingprotocol.html" class="tsd-kind-icon">Port<wbr>Forwarding<wbr>Protocol</a>
-					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
-						<a href="carrierplugin.presencestatus.html" class="tsd-kind-icon">Presence<wbr>Status</a>
+						<a href="titlebarplugin.titlebarbehavior.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Behavior</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
-						<a href="carrierplugin.streammode.html" class="tsd-kind-icon">Stream<wbr>Mode</a>
+						<a href="titlebarplugin.titlebarforegroundmode.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Foreground<wbr>Mode</a>
 						<ul>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-								<a href="carrierplugin.streammode.html#compress" class="tsd-kind-icon">COMPRESS</a>
+								<a href="titlebarplugin.titlebarforegroundmode.html#dark" class="tsd-kind-icon">DARK</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-								<a href="carrierplugin.streammode.html#multiplexing" class="tsd-kind-icon">MULTIPLEXING</a>
-							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-								<a href="carrierplugin.streammode.html#plain" class="tsd-kind-icon">PLAIN</a>
-							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-								<a href="carrierplugin.streammode.html#port_forwarding" class="tsd-kind-icon">PORT_<wbr>FORWARDING</a>
-							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-								<a href="carrierplugin.streammode.html#reliable" class="tsd-kind-icon">RELIABLE</a>
+								<a href="titlebarplugin.titlebarforegroundmode.html#light" class="tsd-kind-icon">LIGHT</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
-						<a href="carrierplugin.streamstate.html" class="tsd-kind-icon">Stream<wbr>State</a>
-					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
-						<a href="carrierplugin.streamtype.html" class="tsd-kind-icon">Stream<wbr>Type</a>
+						<a href="titlebarplugin.titlebarnavigationmode.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Navigation<wbr>Mode</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/carrierplugin.carrier.html" class="tsd-kind-icon">Carrier</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/carrierplugin.carriermanager.html" class="tsd-kind-icon">Carrier<wbr>Manager</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/carrierplugin.filetransfer.html" class="tsd-kind-icon">File<wbr>Transfer</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/carrierplugin.group.html" class="tsd-kind-icon">Group</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/carrierplugin.session.html" class="tsd-kind-icon">Session</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/carrierplugin.stream.html" class="tsd-kind-icon">Stream</a>
+						<a href="../interfaces/titlebarplugin.titlebarmanager.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html#addressinfo" class="tsd-kind-icon">Address<wbr>Info</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html#bootstrapnode" class="tsd-kind-icon">Bootstrap<wbr>Node</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html#carriercallbacks" class="tsd-kind-icon">Carrier<wbr>Callbacks</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html#filetransfercallbacks" class="tsd-kind-icon">File<wbr>Transfer<wbr>Callbacks</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html#filetransferinfo" class="tsd-kind-icon">File<wbr>Transfer<wbr>Info</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html#friendinfo" class="tsd-kind-icon">Friend<wbr>Info</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html#groupcallbacks" class="tsd-kind-icon">Group<wbr>Callbacks</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html#int" class="tsd-kind-icon">Int</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html#onfriendinviteresponse" class="tsd-kind-icon">On<wbr>Friend<wbr>Invite<wbr>Response</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html#onsessionrequestcomplete" class="tsd-kind-icon">On<wbr>Session<wbr>Request<wbr>Complete</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html#opaque" class="tsd-kind-icon">Opaque</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html#options" class="tsd-kind-icon">Options</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html#streamcallbacks" class="tsd-kind-icon">Stream<wbr>Callbacks</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html#transportinfo" class="tsd-kind-icon">Transport<wbr>Info</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html#userinfo-1" class="tsd-kind-icon">User<wbr>Info</a>
+						<a href="../modules/titlebarplugin.html#titlebarmenuitem" class="tsd-kind-icon">Title<wbr>Bar<wbr>Menu<wbr>Item</a>
 					</li>
 				</ul>
 			</nav>

@@ -82,6 +82,7 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.didstore.html#changepassword" class="tsd-kind-icon">change<wbr>Password</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.didstore.html#containsprivateidentity" class="tsd-kind-icon">contains<wbr>Private<wbr>Identity</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.didstore.html#deletedid" class="tsd-kind-icon">delete<wbr>Did</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.didstore.html#exportmnemonic" class="tsd-kind-icon">export<wbr>Mnemonic</a></li>
@@ -91,6 +92,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.didstore.html#loaddiddocument" class="tsd-kind-icon">load<wbr>Did<wbr>Document</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.didstore.html#newdid" class="tsd-kind-icon">new<wbr>Did</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.didstore.html#setresolverurl" class="tsd-kind-icon">set<wbr>Resolver<wbr>Url</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.didstore.html#settransactionresult" class="tsd-kind-icon">set<wbr>Transaction<wbr>Result</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.didstore.html#storediddocument" class="tsd-kind-icon">store<wbr>Did<wbr>Document</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.didstore.html#synchronize" class="tsd-kind-icon">synchronize</a></li>
 							</ul>
@@ -100,6 +102,76 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="changepassword" class="tsd-anchor"></a>
+					<h3>change<wbr>Password</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">change<wbr>Password<span class="tsd-signature-symbol">(</span>oldPassword<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, newPassword<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, onSuccess<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, onError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Change the didstore password</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>oldPassword: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The old password.</p>
+									</div>
+								</li>
+								<li>
+									<h5>newPassword: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The new password.</p>
+									</div>
+								</li>
+								<li>
+									<h5>onSuccess: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onError: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>err: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="containsprivateidentity" class="tsd-anchor"></a>
 					<h3>contains<wbr>Private<wbr>Identity</h3>
@@ -605,6 +677,62 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="settransactionresult" class="tsd-anchor"></a>
+					<h3>set<wbr>Transaction<wbr>Result</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Transaction<wbr>Result<span class="tsd-signature-symbol">(</span>txID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, onSuccess<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span>, onError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>txID: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onSuccess: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onError: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>err: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="storediddocument" class="tsd-anchor"></a>
 					<h3>store<wbr>Did<wbr>Document</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
@@ -776,7 +904,13 @@
 						<a href="../modules/didplugin.html">DIDPlugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/fingerprintplugin.html">Fingerprint<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/hiveplugin.html">Hive<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/titlebarplugin.html">Title<wbr>Bar<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/walletplugin.html">Wallet<wbr>Plugin</a>
@@ -806,6 +940,9 @@
 						<a href="didplugin.didstore.html" class="tsd-kind-icon">DIDStore</a>
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="didplugin.didstore.html#changepassword" class="tsd-kind-icon">change<wbr>Password</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="didplugin.didstore.html#containsprivateidentity" class="tsd-kind-icon">contains<wbr>Private<wbr>Identity</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
@@ -833,6 +970,9 @@
 								<a href="didplugin.didstore.html#setresolverurl" class="tsd-kind-icon">set<wbr>Resolver<wbr>Url</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="didplugin.didstore.html#settransactionresult" class="tsd-kind-icon">set<wbr>Transaction<wbr>Result</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="didplugin.didstore.html#storediddocument" class="tsd-kind-icon">store<wbr>Did<wbr>Document</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
@@ -856,6 +996,9 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="didplugin.verifiablepresentationbuilder.html" class="tsd-kind-icon">Verifiable<wbr>Presentation<wbr>Builder</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/didplugin.html#base58publickey" class="tsd-kind-icon">Base58<wbr>Public<wbr>Key</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../modules/didplugin.html#credentialid" class="tsd-kind-icon">CredentialID</a>

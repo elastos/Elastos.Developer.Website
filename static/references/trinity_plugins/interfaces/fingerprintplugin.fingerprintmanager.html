@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ImageOptions | Trinity Plugins API Reference</title>
+	<title>FingerprintManager | Trinity Plugins API Reference</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,31 +54,24 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/cordovamediacaptureplugin.html">CordovaMediaCapturePlugin</a>
+					<a href="../modules/fingerprintplugin.html">FingerprintPlugin</a>
 				</li>
 				<li>
-					<a href="cordovamediacaptureplugin.imageoptions.html">ImageOptions</a>
+					<a href="fingerprintplugin.fingerprintmanager.html">FingerprintManager</a>
 				</li>
 			</ul>
-			<h1>Interface ImageOptions</h1>
+			<h1>Interface FingerprintManager</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Encapsulates image capture configuration options.</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ImageOptions</span>
+						<span class="target">FingerprintManager</span>
 					</li>
 				</ul>
 			</section>
@@ -87,28 +80,121 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Properties</h3>
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="cordovamediacaptureplugin.imageoptions.html#limit" class="tsd-kind-icon">limit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="fingerprintplugin.fingerprintmanager.html#authenticate" class="tsd-kind-icon">authenticate</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="fingerprintplugin.fingerprintmanager.html#authenticateandgetpassword" class="tsd-kind-icon">authenticate<wbr>And<wbr>Get<wbr>Password</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="fingerprintplugin.fingerprintmanager.html#authenticateandsavepassword" class="tsd-kind-icon">authenticate<wbr>And<wbr>Save<wbr>Password</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="fingerprintplugin.fingerprintmanager.html#isbiometricauthenticationmethodavailable" class="tsd-kind-icon">is<wbr>Biometric<wbr>Authentication<wbr>Method<wbr>Available</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="limit" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> limit</h3>
-					<div class="tsd-signature tsd-kind-icon">limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The maximum number of images the user can capture in a single capture operation.
-							The value must be greater than or equal to 1 (defaults to 1).</p>
-						</div>
-					</div>
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="authenticate" class="tsd-anchor"></a>
+					<h3>authenticate</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">authenticate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Simple authentication. If the user is able to authenticate using a biometric sensor,
+									the promise is resolved. Otherwise, the promise is rejected.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="authenticateandgetpassword" class="tsd-anchor"></a>
+					<h3>authenticate<wbr>And<wbr>Get<wbr>Password</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">authenticate<wbr>And<wbr>Get<wbr>Password<span class="tsd-signature-symbol">(</span>passwordKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Authenticates user, then returns a previously saved clear text password.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>passwordKey: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>User-defined string used to allow multiple passwords to be stored within the same application.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Clear text password, if any.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="authenticateandsavepassword" class="tsd-anchor"></a>
+					<h3>authenticate<wbr>And<wbr>Save<wbr>Password</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">authenticate<wbr>And<wbr>Save<wbr>Password<span class="tsd-signature-symbol">(</span>passwordKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Authenticates user, then securely stores the given password on the device.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>passwordKey: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>User-defined string used to allow multiple passwords to be stored within the same application.</p>
+									</div>
+								</li>
+								<li>
+									<h5>password: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Clear text password that will be encrypted with biometric-protected encoding keys. The stored password can later be retrieve by calling authenticateAndGetPassword().</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="isbiometricauthenticationmethodavailable" class="tsd-anchor"></a>
+					<h3>is<wbr>Biometric<wbr>Authentication<wbr>Method<wbr>Available</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Biometric<wbr>Authentication<wbr>Method<wbr>Available<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Tells if a biometric authentication (one or many) is available and enabled on the device.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>True if a biometric authentication method is available, false otherwise.</p>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -139,7 +225,7 @@
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/cordovafileplugin.html">Cordova<wbr>File<wbr>Plugin</a>
 					</li>
-					<li class="current tsd-kind-module tsd-is-not-exported">
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/cordovamediacaptureplugin.html">Cordova<wbr>Media<wbr>Capture<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
@@ -148,7 +234,7 @@
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/didplugin.html">DIDPlugin</a>
 					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
+					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/fingerprintplugin.html">Fingerprint<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
@@ -164,45 +250,30 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="cordovamediacaptureplugin.audiooptions.html" class="tsd-kind-icon">Audio<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="cordovamediacaptureplugin.capture.html" class="tsd-kind-icon">Capture</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="cordovamediacaptureplugin.captureerror.html" class="tsd-kind-icon">Capture<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="cordovamediacaptureplugin.configurationdata.html" class="tsd-kind-icon">Configuration<wbr>Data</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="cordovamediacaptureplugin.device.html" class="tsd-kind-icon">Device</a>
+					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../enums/fingerprintplugin.pluginerror.html" class="tsd-kind-icon">Plugin<wbr>Error</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="cordovamediacaptureplugin.imageoptions.html" class="tsd-kind-icon">Image<wbr>Options</a>
+						<a href="fingerprintplugin.fingerprintmanager.html" class="tsd-kind-icon">Fingerprint<wbr>Manager</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="cordovamediacaptureplugin.imageoptions.html#limit" class="tsd-kind-icon">limit</a>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="fingerprintplugin.fingerprintmanager.html#authenticate" class="tsd-kind-icon">authenticate</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="fingerprintplugin.fingerprintmanager.html#authenticateandgetpassword" class="tsd-kind-icon">authenticate<wbr>And<wbr>Get<wbr>Password</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="fingerprintplugin.fingerprintmanager.html#authenticateandsavepassword" class="tsd-kind-icon">authenticate<wbr>And<wbr>Save<wbr>Password</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="fingerprintplugin.fingerprintmanager.html#isbiometricauthenticationmethodavailable" class="tsd-kind-icon">is<wbr>Biometric<wbr>Authentication<wbr>Method<wbr>Available</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="cordovamediacaptureplugin.mediafile.html" class="tsd-kind-icon">Media<wbr>File</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="cordovamediacaptureplugin.mediafiledata.html" class="tsd-kind-icon">Media<wbr>File<wbr>Data</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="cordovamediacaptureplugin.videooptions.html" class="tsd-kind-icon">Video<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/cordovamediacaptureplugin.html#captureerror-1" class="tsd-kind-icon">Capture<wbr>Error</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
