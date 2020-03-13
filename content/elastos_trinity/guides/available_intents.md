@@ -43,6 +43,11 @@ See {{< internallink "Elastos scheme" "/elastos_core_services/guides/elastos_sch
 
 ### Specific Trinity intents
 
+{{< todo "addfriend" >}}
+{{< todo "pickfriend" >}}
+{{< todo "elawalletmnemonicaccess" >}}
+{{< todo "scanqrcode" >}}
+
 #### Open an application
 
 ##### Description
