@@ -11,15 +11,19 @@ Trinity CLI provides an **easy way to run and debug** your DApp from your develo
 ## Sending your app to your device
 
 * Enter your DApp folder.
-* **Connect your device** to your computer.
 * Make sure your **phone and your computer are on the same network** (ex: same wifi, same sub-network, no VPN).
-* On Android, **enable developer mode** (from the settings - see android docs) and enable USB debugging.
+* Android specific:
+
+    * **Enable developer mode** (from the settings - see android docs) and enable USB debugging.
+    * **Connect your device** to your computer.
+
 * Make sure the **native Trinity browser** is installed on your device.
+* Inside Trinity, go to the settings app and **enable developer mode**.
 * Run the following command:
 
 ```bash
 # To deploy and run on android - check the CLI help for other options.
-$ trinity-cli run -p android
+$ trinity-cli run -p android|ios
 ```
 
 **What happens in background**:
@@ -33,12 +37,20 @@ $ trinity-cli run -p android
 Note that as soon as your device stops being on the same network as your computer, or if the `trinity-cli run` command is stopped, your DApp in trinity will show a network error with an empty page. 
 
 ## Debugging your application
-   
+
+**On Android**:
+
 Open the Chrome browser on your computer and visit `chrome://inspect` to inspect your DApp pages.
+
+**On iOS**:
+
+Open safari, **development** menu, find your device, and select then dApp in the list. Sometimes all dApps will look like "localhost". In this case, while your dApp is running, move the mouse over each "localhost" entry and check when some blue overlay shows on your device. That will be the right item.
+
+Safari doesn't show logs history if you start the debug panel after starting your dApp. You can choose to restart your app manually using **ctrl+r** or **cmd+r** in the debugguer, to get all startup logs.
 
 ## Debugging user issues remotely
 
-After your dApp is published, some users may face issuesn including fatal exceptions, that you haven't seen during development and tests.
+After your dApp is published, some users may face issues, including fatal exceptions, that you haven't seen during development and tests.
 
 We recommend integrating a tool like **sentry.io** to your dApp in order to get exception reports remotely and therefore being able to debug most of end users issues.
 
