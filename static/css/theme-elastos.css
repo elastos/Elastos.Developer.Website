@@ -295,6 +295,15 @@ h3 {
 	font-size:14px;
 }
 
+.module-status .root-table {
+	border: none;
+}
+
+.module-status .root-td {
+	border: none;
+	padding: 0;
+}
+
 .module-status .group {
 	margin-bottom:10px;
 }

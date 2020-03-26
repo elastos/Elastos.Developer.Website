@@ -8,12 +8,12 @@
    {{ partial "module_status.html" . }}
 {{ end }} 
 
-<h2>Trinity</h2>
-{{ range $.Site.Data.modules_status.trinity }}
+<h2>Native apps</h2>
+{{ range $.Site.Data.modules_status.nativeapps }}
    {{ partial "module_status.html" . }}
 {{ end }} 
 
-<h2>Elaphant</h2>
-{{ range $.Site.Data.modules_status.elaphant }}
+<h2>Services</h2>
+{{ range $.Site.Data.modules_status.services }}
    {{ partial "module_status.html" . }}
 {{ end }} 

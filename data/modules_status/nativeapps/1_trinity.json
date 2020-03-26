@@ -4,7 +4,14 @@
     "notes":"iOS release dates are currently undetermined, this is best effort until Apple accepts elastOS on their app store. iOS and Android releases will usually be deployed in similar time ranges with identical content.",
     "releases":{
         "current":[
-            {"platform":"android", "version":"1.0.1", "date":"2020.02.12", "quality": "Developers beta"}
+            {
+                "platform":"android", "version":"1.0.1", "date":"2020.02.12", "quality": "Developers beta", "newfeatures":[
+                    "Full redesign",
+                    "DID dApp, DPoS voting dApp, dApp store dApp",
+                    "Inter-app communication mechanisms",
+                    "Latest Wallet, DID and Carrier plugins"
+                ]
+            }
         ],
         "next":[
             {

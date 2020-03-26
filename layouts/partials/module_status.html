@@ -2,9 +2,9 @@
 
 <div class="module-status">
     <a>{{ .name }}</a>
-    <table>
+    <table class="root-table">
         <tr>
-            <td>
+            <td class="root-td">
                 {{ if .notes }}
                     <div class="group">
                         <div class="title">Notes</div>
@@ -21,6 +21,7 @@
                             <th>Version</th>	
                             <th>Release date</th>	
                             <th>Quality</th>
+                            <th>New features</th>
                         </tr>
                         {{ range .releases.current }}
                             <tr>
@@ -30,6 +31,13 @@
                                 <td>{{ .version }}</td>
                                 <td>{{ .date }}</td>
                                 <td>{{ .quality }}</td>
+                                <td>
+                                    <ul>
+                                        {{ range .newfeatures }}
+                                            <li>{{ . }}</li>
+                                        {{ end }}
+                                    </ul>
+                                </td>
                             </tr>
                         {{ end }}
                     </table>
@@ -43,7 +51,7 @@
                             {{ end }}
                             <th>Release date</th>	
                             <th>Quality</th>
-                            <th>Content</th>
+                            <th>Expected content</th>
                         </tr>
                         {{ range .releases.next }}
                             <tr>
