@@ -12,3 +12,8 @@
 {{ range $.Site.Data.modules_status.trinity }}
    {{ partial "module_status.html" . }}
 {{ end }} 
+
+<h2>Elaphant</h2>
+{{ range $.Site.Data.modules_status.elaphant }}
+   {{ partial "module_status.html" . }}
+{{ end }} 
