@@ -1,10 +1,11 @@
 +++
-title = "Elastos wallet scheme"
+title = "(DELETE ME)"
 date = 2019-05-24T21:15:46+02:00
 weight = 50
 chapter = false
 pre = ""
 alwaysopen = false
+draft = true
 +++
 
 ## Introduction

@@ -1,0 +1,14 @@
+<h2>Blockchains</h2>
+{{ range $.Site.Data.modules_status.blockchains }}
+   {{ partial "module_status.html" . }}
+{{ end }} 
+
+<h2>SDKs</h2>
+{{ range $.Site.Data.modules_status.sdks }}
+   {{ partial "module_status.html" . }}
+{{ end }} 
+
+<h2>Trinity</h2>
+{{ range $.Site.Data.modules_status.trinity }}
+   {{ partial "module_status.html" . }}
+{{ end }} 

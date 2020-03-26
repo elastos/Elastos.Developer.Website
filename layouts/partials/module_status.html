@@ -1,0 +1,79 @@
+{{ $usePlatforms := .useplatforms }}
+
+<div class="module-status">
+    <a>{{ .name }}</a>
+    <table>
+        <tr>
+            <td>
+                {{ if .notes }}
+                    <div class="group">
+                        <div class="title">Notes</div>
+                        {{ .notes }}
+                    </div>
+                {{ end }}
+                <div class="group">
+                    <div class="title">Delivered releases</div>
+                    <table>
+                        <tr>
+                            {{ if $usePlatforms }}
+                                <th>Platform</th>
+                            {{ end }}
+                            <th>Version</th>	
+                            <th>Release date</th>	
+                            <th>Quality</th>
+                        </tr>
+                        {{ range .releases.current }}
+                            <tr>
+                                {{ if $usePlatforms }}
+                                    <td>{{ .platform }}</td>
+                                {{ end }}
+                                <td>{{ .version }}</td>
+                                <td>{{ .date }}</td>
+                                <td>{{ .quality }}</td>
+                            </tr>
+                        {{ end }}
+                    </table>
+                </div>
+                <div class="group">
+                    <div class="title">Incoming releases</div>
+                    <table>
+                        <tr>
+                            {{ if $usePlatforms }}
+                                <th>Platform</th>
+                            {{ end }}
+                            <th>Release date</th>	
+                            <th>Quality</th>
+                            <th>Content</th>
+                        </tr>
+                        {{ range .releases.next }}
+                            <tr>
+                                {{ if $usePlatforms }}
+                                    <td>{{ .platform }}</td>
+                                {{ end }}
+                                <td>{{ .date }}</td>	
+                                <td>{{ .quality }}</td>
+                                <td> 
+                                    <ul>
+                                        {{ range .content }}
+                                            <li>{{ . }}</li>
+                                        {{ end }}
+                                    </ul>
+                                </td>
+                            </tr>
+                        {{ end }}
+                    </table>
+                </div>
+                {{ if .otherfeatures }}
+                <div class="group">
+                    <div class="title">Other on going features</div>
+                    <ul>
+                        {{ range .otherfeatures }}
+                            <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                </div>
+                {{ end }}
+            </td>
+        </tr>
+    </table>
+</div>

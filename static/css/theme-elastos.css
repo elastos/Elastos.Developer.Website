@@ -289,3 +289,24 @@ h3 {
 	vertical-align: top;
 	font-size:1rem;
 }
+
+.module-status {
+	margin-bottom:20px;
+	font-size:14px;
+}
+
+.module-status .group {
+	margin-bottom:10px;
+}
+
+.module-status .group .title {
+	font-size:12px;
+	margin-top:20px;
+	text-transform: uppercase;
+	color:#999;
+}
+
+.module-status ul {
+	margin-top:0;
+	margin-bottom:0;
+}

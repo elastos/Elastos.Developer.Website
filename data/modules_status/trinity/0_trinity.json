@@ -1,0 +1,59 @@
+{
+    "name":"elastOS browser",
+    "useplatforms": true,
+    "notes":"iOS release dates are currently undetermined, this is best effort until Apple accepts elastOS on their app store. iOS and Android releases will usually be deployed in similar time ranges with identical content.",
+    "releases":{
+        "current":[
+            {"platform":"android", "version":"1.0.1", "date":"2020.02.12", "quality": "Developers beta"}
+        ],
+        "next":[
+            {
+                "platform":"ios", "date":"Undetermined", "quality": "Developers alpha", "content":[
+                    "Initial iOS release",
+                    "elastOS as a browser",
+                    "New launcher app design"
+                ]
+            },
+            {
+                "platform":"android", "date":"2020.04", "quality": "Developers beta", "content":[
+                    "Trying to synchronize with the initial iOS release",
+                    "elastOS as a browser",
+                    "New launcher app design",
+                    "Customizable networks",
+                    "Friends connectivity improvements"
+                ]
+            },
+            {
+                "platform":"android", "date":"2020.05", "quality": "Developers beta", "content":[
+                    "Background services",
+                    "Local notifications",
+                    "Improved initial on boarding",
+                    "Easy DID publication"
+                ]
+            },
+            {
+                "platform":"android", "date":"2020.06", "quality": "Developers beta", "content":[
+                    "Remote notifications",
+                    "Silent intents / Pre-authorizations",
+                    "Ethereum support in wallet",
+                    "Decentralized dApps publications",
+                    "CR council and CR proposal dApps"
+                ]
+            },
+            {
+                "platform":"android", "date":"2020.07", "quality": "Developers beta", "content":[
+                    "Widgets"
+                ]
+            },
+            {
+                "platform":"desktop", "date":"2020.06", "quality": "Project start", "content":[
+                    "Attempt to setup a team to build elastOS for desktop (computers)"
+                ]
+            }
+        ]
+    },
+    "otherfeatures":[
+        "dApps maintenance / fixes",
+        "Community dApps support"
+    ]
+}

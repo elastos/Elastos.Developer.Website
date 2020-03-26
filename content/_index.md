@@ -33,34 +33,3 @@ More advanced Elastos developers may want to directly talk to the Elastos mainch
 
 ## Contribute
 So you love Elastos and would like to bring your best skills to make it even better? Here is how to {{< internallink "contribute to the platform" "contribute/_index.md" >}}  with hundreds of other great developers.
-
-## Modules status
-
-Elastos is being actively developed. You may wonder what you can actually do yet with each module. Here is a brief list (not exhaustive):
-
-(**Updated**: 2019-08-15)
-
-### Blockchains
-
-| Module | Status |
-| ------ | ------ |
-| ELA mainchain | Fully operational. Used directly by wallet apps or low level projects, but not by application developers. |
-| DID sidechain | Rework in progress to match W3C specifications on DID and verifiable credentials. |
-| Ethereum sidechain | Available on testnet/mainnet, but can only be used by a small list of early testers (ex: DMA). RPC API only for now, not helper library. |
-| Token sidechain | Almost ready on testnet and mainnet. RPC API available. |
-
-### Core services
-
-| Module | Status |
-| ------ | ------ |
-| Hive | Available for C++, android, ios, trinity. Ability to write and read files on both IPFS and Onedrive. Developments on going. |
-| Carrier | Available and rather stable for C++, android, ios, trinity. |
-| Elastos scheme | Not available yet. The Elephant wallet currently provides a scheme that can temporarily be used for tests, but this is not the final scheme. |
-| Trinity | DApps can run in sandboxed processes. Deployment and debug tools under construction. Android and iOS. Not published on app stores yet. Hive and carrier plugins available. |
-
-### Solutions
-
-| Module | Status |
-| ------ | ------ |
-| DMA | Alpha version available for a small set of developers. Demo apps Choosit and Uptick available. |
-| Hyperconnect IoT | Alpha version and tutorials available on the hyperconnect website. |
