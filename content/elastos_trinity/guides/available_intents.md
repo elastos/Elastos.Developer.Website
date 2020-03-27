@@ -43,11 +43,6 @@ See {{< internallink "Elastos scheme" "/elastos_core_services/guides/elastos_sch
 
 ### Specific Trinity intents
 
-{{< todo "addfriend" >}}
-{{< todo "pickfriend" >}}
-{{< todo "elawalletmnemonicaccess" >}}
-{{< todo "scanqrcode" >}}
-
 #### Open an application
 
 ##### Description
@@ -193,7 +188,6 @@ Received by the **appManager.setIntentListener()** callback.
 
 
 
-
 #### Handle scanned content (DID format)
 
 ##### Description
@@ -221,14 +215,6 @@ None
 
 ##### Request example
 
-**Raw Http GET request**
-
-    http://scheme.elastos.org/a?id=org.company.app
-
-**Http GET with JWT**
-
-    http://scheme.elastos.org/JWT_CONTAINING_REQUEST_FIELDS_AND_MORE
-
 **Trinity**
 
     appManager.sendIntent("scanqrcode", {}, ...)
@@ -240,3 +226,132 @@ Received by the **appManager.sendIntent()** onSuccess callback.
     {
         data: "ABCDEF"
     }
+
+
+
+#### Share content
+
+##### Description
+
+Shares some content either inside another Trinity dApp, or thr ough the native OS share feature.Shared content includes a title and a (optional) url.
+
+It's up to the receiving app to share the content in a suitable way. A chat application would show a new clickable message to a user, and when clicked, the "url" is activated. The built-in friends app would instead let the user pick a friend and send a remote notification to that friend with the embedded shared content.
+
+##### Request parameters
+
+| Parameter | Description | Format |
+| ----- | ----- | ----- |
+| title | Title describing the share action. Visible by everyone | string |
+| url | Action url related to this shared content. For example, a link to open the target app in Trinity. Usually, this should be a elastos scheme link such as https://scheme.elastos.org/* | string |
+
+##### Response parameters
+
+None
+
+##### Request example
+
+**Trinity**
+
+    appManager.sendIntent("share", {
+        title: "Add me as a friend in elastOS",
+        url: "https://scheme.elastos.org/addfriend?did=did:elastos:abcdef"
+    }, ...)
+
+##### Response example
+
+None
+
+
+
+#### Add friend
+
+##### Description
+
+Allows the user to add a given friend (by DID) to his friends list. 
+
+For example, the built-in friends app simply saved the target DID as a friends in the friends list, in order to be able to reach that friend later.
+
+Adding a friend is not directly reciprocal, friends are not notified that a user is adding them. It's up to the handling application to notify the friend if relevant.
+
+##### Request parameters
+
+| Parameter | Description | Format |
+| ----- | ----- | ----- |
+| did | DID of the friend to be added | string |
+
+##### Response parameters
+
+None
+
+##### Request example
+
+**Trinity**
+
+    appManager.sendIntent("addfriend", {
+        did: "did:elastos:abcdef"
+    }, ...)
+
+##### Response example
+
+None
+
+
+
+
+#### Pick a friend
+
+##### Description
+
+Allows an application to pick a friend from another application. This works between any apps, but the most standard use case is for an application to pick a friend from the global built-in friends app that contains lots of contacts.
+
+Pick friend requests can be filtered to look for a specific credential type.
+
+##### Request parameters
+
+| Parameter | Description | Format |
+| ----- | ----- | ----- |
+| singleSelection | Pick only one friend at a time if true, or multiple ones at the same time if false. Default: true | boolean |
+| filter | An optional "Filter" object | Filter |
+
+<b>Filter object</b>:
+
+| Parameter | Description | Format |
+| ----- | ----- | ----- |
+| credentialType | An optional string to pick only friends that have a specific credential type in their public DID document | string |
+
+##### Response parameters
+
+| Parameter | Description | Format |
+| ----- | ----- | ----- |
+| friends | A list of selected friends | Array<Friend> |
+
+<b>Friend object</b>:
+
+| Parameter | Description | Format |
+| ----- | ----- | ----- |
+| did | DID string of the friend (ex: "did:elastos:abc"). Mandatory. | DID string |
+| document | Full DID document of the friend. Optional | DID Document |
+
+##### Request example
+
+**Trinity**
+
+    appManager.sendIntent("pickfriend", {
+        singleSelection: true,
+        filter: {
+            credentialType: "ApplicationProfileCredential"
+        }
+    }, ...)
+
+##### Response example
+
+	{
+	    friends: [
+	        {
+	            did: "did:elastos:abcdef"
+	        },
+	        {
+	            did: "did:elastos:123456"
+	        }
+	    ]
+	}
