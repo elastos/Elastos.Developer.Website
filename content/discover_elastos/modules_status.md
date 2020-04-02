@@ -9,7 +9,7 @@ alwaysopen = false
 
 Elastos is being actively developed. Here is the product status in details:
 
-(**Updated**: 2020-03-26)
+(**Updated**: 2020-04-01)
 
 {{< modules_status >}}
  
