@@ -1,5 +1,6 @@
 {
     "name":"Hive SDK",
+    "lastupdated":"2020.04.02",
     "useplatforms": true,
     "releases":{
         "current":[

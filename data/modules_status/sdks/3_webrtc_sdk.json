@@ -1,5 +1,6 @@
 {
     "name":"WebRTC SDK",
+    "lastupdated":"2020.04.02",
     "useplatforms": true,
     "releases":{
         "next":[

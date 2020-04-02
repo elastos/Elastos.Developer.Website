@@ -1,5 +1,6 @@
 {
     "name":"ELA Wallet",
+    "lastupdated":"2020.04.01",
     "useplatforms": true,
     "releases":{
         "current":[

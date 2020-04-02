@@ -1,5 +1,6 @@
 {
     "name":"elastOS browser",
+    "lastupdated":"2020.04.02",
     "useplatforms": true,
     "notes":"iOS release dates are currently undetermined, this is best effort until Apple accepts elastOS on their app store. iOS and Android releases will usually be deployed in similar time ranges with identical content.",
     "releases":{
@@ -35,7 +36,8 @@
                     "Background services",
                     "Local notifications",
                     "Improved initial on boarding",
-                    "Easy DID publication"
+                    "Easy DID publication",
+                    "DID sessions"
                 ]
             },
             {
