@@ -1,0 +1,14 @@
+{
+    "name":"WebRTC SDK",
+    "useplatforms": true,
+    "releases":{
+        "next":[
+            {
+                "platform":"Java/Android", "version":"1.0", "date":"2020.04.29", "quality": "Alpha", "content":[
+                    "Basic Audio/View streaming between carier nodes",
+                    "Call auio/video communication with peer to peer mode"
+                ]
+            }
+        ]
+    }
+}

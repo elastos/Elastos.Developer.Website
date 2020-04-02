@@ -11,6 +11,7 @@
                         {{ .notes }}
                     </div>
                 {{ end }}
+                {{ if .releases.current }}
                 <div class="group">
                     <div class="title">Delivered releases</div>
                     <table>
@@ -42,6 +43,7 @@
                         {{ end }}
                     </table>
                 </div>
+                {{ end }}
                 <div class="group">
                     <div class="title">Incoming releases</div>
                     <table>

@@ -1,9 +1,34 @@
 {
     "name":"DID SDK",
+    "useplatforms": true,
     "releases":{
         "current":[
+            {
+                "platform":"Java/Android (Java VM)", "version":"1.0", "date":"2019.12.30", "quality": "Alpha", "newfeatures":[
+                    "W3C DID compatible implementation and APIs",
+                    "W3C verifiable credential/presentation compatible implmentation and APIs.",
+                    "Support to publish elastos DID to Elastos DID sidechain",
+                    "Support resolve elastos DID from Elastos DID sidechain or from local cache."
+                ]
+            }
         ],
         "next":[
+            {
+                "platform":"C/Native (MacOS/Linux)", "version":"1.0", "date":"Undetermined", "quality": "Alpha", "content":[
+                    "W3C DID compatible implementation and APIs",
+                    "W3C verifiable credential/presentation compatible implmentation and APIs.",
+                    "Support to publish elastos DID to Elastos DID sidechain",
+                    "Support resolve elastos DID from Elastos DID sidechain or from local cache."
+                ]
+            },
+            {
+                "platform":"Swift/iOS", "version":"1.0", "date":"2020.04.15", "quality": "Developer Beta", "content":[
+                    "W3C DID compatible implementation and APIs",
+                    "W3C verifiable credential/presentation compatible implementation and APIs.",
+                    "Support to publish elastos DID to Elastos DID sidechain",
+                    "Support resolve elastos DID from Elastos DID sidechain or from local cache."
+                ]
+            }
         ]
     }
 }

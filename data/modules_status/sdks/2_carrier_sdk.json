@@ -1,9 +1,45 @@
 {
     "name":"Carrier SDK",
+    "useplatforms": true,
     "releases":{
         "current":[
+            {
+                "platform":"C/Native (MacOS/Linux/Windows)", "version":"5.5", "date":"2020.03.23", "quality": "Production", "newfeatures":[
+                    "Bugfix for persistent decentralized group",
+                    "Multiple instance creation (This feature is from Trinity, not recommend native App to create multiple instances)"
+                ]
+            },
+            {
+                "platform":"C/Native (MacOS/Linux/Windows)", "version":"5.4", "date":"2019.08.20", "quality": "Production", "newfeatures":[
+                    "User can know that the messages sent/received to/from friends are online or offline messages",
+                    "Persistent decentralized group"
+                ]
+            },
+            {
+                "platform":"Java/Android", "version":"5.4", "date":"2019.09.20", "quality": "Production", "newfeatures":[
+                    "User can know that the messages sent/received to/from friends are online or offline messages",
+                    "Persistent decentralized group"
+                ]
+            }
         ],
         "next":[
+            {
+                "platform":"Java/Android", "version":"5.5", "date":"Ready to release", "quality": "Production", "content":[
+                    "Bugfix for persistent decentralized group",
+                    "Multiple instance creation (This feature is from Trinity, not recommend native App to create multiple instances)"
+                ]
+            },
+            {
+                "platform":"Swift(Objective-C)/iOS", "version":"5.5", "date":"Ready to release", "quality": "Production", "content":[
+                    "Bugfix for persistent decentralized group",
+                    "Multiple instance creation (This feature is from Trinity, not recommend native App to create multiple instances)"
+                ]
+            },
+            {
+                "platform":"C/Native (MacOS/Linux), Android, iOS", "version":"5.6", "date":"Undetermined", "quality": "Developer Beta", "content":[
+                    "Internal Refinement for management for group/friends."
+                ]
+            }
         ]
     }
 }

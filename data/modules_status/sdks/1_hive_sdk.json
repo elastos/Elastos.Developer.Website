@@ -1,9 +1,67 @@
 {
     "name":"Hive SDK",
+    "useplatforms": true,
     "releases":{
         "current":[
+            {
+                "platform":"C/Native (Macos/Linux/Windows)", "version":"1.0", "date":"2020.03.25", "quality": "Developers beta", "newfeatures":[
+                    "Get/upload a single file from/onto oneDrive platform and IPFS",
+                    "Get/upload a buffer (or string) from/onto oneDrive platform and IPFS",
+                    "Key-Value access/store from/onto oneDrive platform",
+                    "Support for application to create an isolated application folder on oneDrive"
+                ]
+            },
+            {
+                "platform":"C/Native (Macos/Linux/Windows)", "version":"0.5 (Technical Preview Version)", "date":"2019.8.16", "quality": "Alpha", "newfeatures":[
+                    "Access/write files from/onto remote cloud storage",
+                    "Can delete files on remote cloud storages",
+                    "Get file informations (created date/updated date, size, etc) from remote cloud storage",
+                    "Access/create/delete folders onto remote cloud storage",
+                    "The supported cloud storage platform are oneDrive and IPFS"
+                ]
+            },
+            {
+                "platform":"Java/Android (Java VM)", "version":"0.5 (Technical Preview Version)", "date":"2019.8.8", "quality": "Alpha", "newfeatures":[
+                    "Access/write files from/onto remote cloud storage",
+                    "Can delete files on remote cloud storages",
+                    "Get file informations (created date/updated date, size, etc) from remote cloud storage",
+                    "Access/create/delete folders onto remote cloud storage",
+                    "The supported cloud storage platform are oneDrive and IPFS"
+                ]
+            },
+            {
+                "platform":"Swift/iOS", "version":"0.5 (Technical Preview Version)", "date":"2019.8.16", "quality": "Alpha", "newfeatures":[
+                    "Access/write files from/onto remote cloud storage",
+                    "Can delete files on remote cloud storages",
+                    "Get file informations (created date/updated date, size, etc) from remote cloud storage",
+                    "Access/create/delete folders onto remote cloud storage",
+                    "The supported cloud storage platform are oneDrive and IPFS"
+                ]
+            }
         ],
         "next":[
+            {
+                "platform":"Java/Android (Java VM)", "version":"1.0", "date":"Ready to release", "quality": "Developers beta", "content":[
+                    "Get/upload a single file from/onto oneDrive platform and IPFS",
+                    "Get/upload a buffer (or string) from/onto oneDrive platform and IPFS",
+                    "Key-Value access/store from/onto oneDrive platform",
+                    "Support for application to create an isolated application folder on oneDrive"
+                ]
+            },
+            {
+                "platform":"Swift/iOS", "version":"1.0", "date":"Ready to release", "quality": "Developers beta", "content":[
+                    "Get/upload a single file from/onto oneDrive platform and IPFS",
+                    "Get/upload a buffer (or string) from/onto oneDrive platform and IPFS",
+                    "Key-Value access/store from/onto oneDrive platform",
+                    "Support for application to create an isolated application folder on oneDrive"
+                ]
+            },
+            {
+                "platform":"C/Native (MacOS/Linux) Android/iOS", "version":"1.1", "date":"Undetermined", "quality": "Developers beta", "content":[
+                    "Encrypt/Decrypt vault data",
+                    "Add dropbox. Into supported remote storage platforms"
+                ]
+            }
         ]
     }
 }
