@@ -1,7 +1,7 @@
 {{ $usePlatforms := .useplatforms }}
 
 <div class="module-status">
-    <a>{{ .name }}</a> {{ if .lastupdated }}(last updated: <b>{{ .lastupdated }}</b>){{ end }}
+    <span class="module-title">{{ .name }}</span> {{ if .lastupdated }}(last updated: <b>{{ .lastupdated }}</b>){{ end }}
     <table class="root-table">
         <tr>
             <td class="root-td">

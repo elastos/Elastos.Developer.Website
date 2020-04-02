@@ -295,6 +295,12 @@ h3 {
 	font-size:14px;
 }
 
+.module-status .module-title {
+	font-size: 20px;
+	color: #01B4EF;
+	font-weight:700;
+}
+
 .module-status .root-table {
 	border: none;
 }
