@@ -1,9 +1,43 @@
 {
     "name":"NucleusConsole.com",
+    "lastupdated":"2020.04.02",
+    "useplatforms": true,
+    "notes":"The console will effectively lower the barrier to entry for new developers entering the blockchain space as it will allow them to easily experiment with Elastos services directly on the browser before deciding to develop their decentralized applications.",
     "releases":{
         "current":[
+            {
+                "platform":"browser", "version":"2.0.0", "date":"2020.04.02", "quality": "Developers beta", "newfeatures":[
+                    "Supports login with both elastOS and Elaphant app",
+                    "UI for interacting with various services available on Elastos Smartweb Server",
+                    "Added a way to track previously visited pages within the console",
+                    "Implemented Golang playground where users can write and execute code interacting with Elastos Smartweb Service directly on the browser",
+                    "Added a simple blockchain browser for mainchain, DID sidechain and token sidechain",
+                    "Added dApp store dashboard for elastOS",
+                    "Improved designs across all the pages"
+                ]
+            }
         ],
         "next":[
+            {
+                "platform":"browser", "date":"2020.05", "quality": "Developers beta", "content":[
+                    "Expand blockchain browser for Elastos mainchain, DID sidechain, Token Sidechain and support both GMUnet and Mainnet",
+                    "Integrate Ethereum sidechain browser and add support both GMUnet and Mainnet"
+                ]
+            },
+            {
+                "platform":"browser", "date":"2020.06", "quality": "Developers beta", "content":[
+                    "Integrate an android emulator directly on the console",
+                    "Add a page to show various dApp templates for elastOS",
+                    "Integrate a tool to build and package dApp for elastOS that utilizes GMUnet",
+                    "Integrate a tool to publish and deploy dApp for elastOS that utilizes GMUnet",
+                    "Run a dApp on elastOS directly on the embedded android emulator"                   
+                ]
+            }
         ]
-    }
+    },
+    "otherfeatures":[
+        "Browser bug fixes",
+        "Redesign pages",
+        "Update to use latest python client library"
+    ]
 }

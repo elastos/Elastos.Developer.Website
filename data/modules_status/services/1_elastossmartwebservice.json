@@ -1,0 +1,45 @@
+{
+    "name":"Elastos Smartweb Service",
+    "lastupdated":"2020.04.02",
+    "useplatforms": true,
+    "notes":"There are two components to this: gRPC server that interacts with Elastos infrastructure and gRPC clients in various programming languages so services can be accessed from any platform.",
+    "releases":{
+        "current":[
+            {
+                "platform":"windows/mac/linux", "version":"2.0.0", "date":"2020.04.02", "quality": "Developers beta", "newfeatures":[
+                    "gRPC server written in Python that interacts with GMUnet",
+                    "gRPC client libraries available in Python and Golang that interacts with gRPC server",
+                    "Added JWT support when the client interacts with the server",
+                    "Added different services that interacts with Elastos mainchain, DID sidechain, Token sidechain, ETH sidechain and Hive"
+                ]
+            }
+        ],
+        "next":[
+            {
+                "platform":"windows/mac/linux", "date":"2020.04", "quality": "Developers beta", "content":[
+                    "Upgrade GMUnet with the latest changes for Elastos mainchain, DID sidechain, Token sidechain, ETH sidechain and Hive",
+                    "Add support for mainnet in addition to GMUnet",
+                    "Add a service to interact with various RPC services for ETH sidechain that will be useful in building an ETH blockchain browser"
+                ]
+            },
+            {
+                "platform":"windows/mac/linux", "date":"2020.05", "quality": "Developers beta", "content":[
+                    "Update the DID related services to use latest DID SDK that conforms to W3C specification",
+                    "Add a service to build and package dApp for elastOS that utilizes GMUnet",
+                    "Add a service to publish and deploy dApp for elastOS that utilizes GMUnet"
+                ]
+            },
+            {
+                "platform":"windows/mac/linux", "date":"2020.06", "quality": "Developers beta", "content":[
+                    "Develop Node.js client library in addition to Python and Golang",                 
+                    "Integrate additional services to Elastos Smartweb Services and implement them into client libraries in Python, Golang and Node.js"
+                ]
+            }
+        ]
+    },
+    "otherfeatures":[
+        "Bug fixes",
+        "Add new services",
+        "Update various client libraries(Python, Golang, Node.js)"
+    ]
+}
