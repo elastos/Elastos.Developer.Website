@@ -8,17 +8,17 @@ alwaysopen = false
 
 {{< todo "Need to refine all of this - more details and examples (JWT encoding/decoding) when more mature" >}}
 
-## Trinity intents
+## elastOS intents
 
-Similarly to Android that provides a great architecture, Trinity has a **intent** mechanism that allows DApps to communicate with each other. Intents are needed for various kind of actions, such as requesting user to make a purchase, sign with his email address, handle a scanned QR code, rating a DApp through the DApp store app, and much more.
+Similarly to Android that provides a great architecture, elastOS has a **intent** mechanism that allows DApps to communicate with each other. Intents are needed for various kind of actions, such as requesting user to make a purchase, sign with his email address, handle a scanned QR code, rating a DApp through the DApp store app, and much more.
 
-### Trinity intents and Elastos scheme
+### elastOS intents and Elastos scheme
 
 {{< todo "Link to the elastos scheme API reference" >}}
 
-Trinity conforms to the Elastos scheme. Most standard commands are handled by built-in DApps. For example, the /pay command will be handled by the wallet DApp to start a payment, or /credaccess will be handled by the DID DApps to request user to share credentials with the requesting DApp.
+elastOS conforms to the Elastos scheme. Most standard commands are handled by built-in DApps. For example, the /pay command will be handled by the wallet DApp to start a payment, or /credaccess will be handled by the DID DApps to request user to share credentials with the requesting DApp.
 
-In addition, Trinity has a few custom scheme commands, specific to Trinity itself, such as opening DApp details pages in the DApp store in order to rate it.
+In addition, elastOS has a few custom scheme commands, specific to elastOS itself, such as opening DApp details pages in the DApp store in order to rate it.
 
 ### Sending intents
 

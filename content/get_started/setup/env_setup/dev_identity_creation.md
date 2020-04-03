@@ -8,4 +8,4 @@ alwaysopen = false
 draft = true
 +++ 
 
-{{< todo "This is for later, for example to be able to build a developer identity to sign trinity apps." >}}
+{{< todo "This is for later, for example to be able to build a developer identity to sign elastOS apps." >}}

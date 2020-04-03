@@ -7,7 +7,7 @@ pre = ""
 alwaysopen = false
 +++
 
-{{< todo "Trinity sample code" >}}
+{{< todo "elastOS sample code" >}}
 {{< todo "More information about global storage strategy: settings, local information, personal cloud..." >}}
 
 ## Hive storage
@@ -120,7 +120,7 @@ self.hiveClient?.defaultDriveHandle()
     }.catch{ error in
     }
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -246,7 +246,7 @@ self.hiveClient?.defaultDriveHandle()
     }.catch{ error in
     }
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
     {{< /tab >}} 
 {{< /tabs >}}
 

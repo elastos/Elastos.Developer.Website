@@ -77,7 +77,7 @@ public class DefaultCarrierOptions extends Carrier.Options {
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 declare let carrierPlugin: any;
 
 let callbacks = {};
@@ -149,7 +149,7 @@ public class DefaultCarrierHandler extends AbstractCarrierHandler {
   {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 declare let carrierPlugin: any;
 
 let callbacks = {
@@ -280,7 +280,7 @@ carrier.start(500); // Start carrier. Wait 500 milliseconds between each check o
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 carrierInst.start(null, null, 500);
     {{< /tab >}} 
 {{< /tabs >}}
@@ -295,7 +295,7 @@ String myPeerAddress = Carrier.getInstance().getAddress()
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 carrierInst.address;
     {{< /tab >}} 
 {{< /tabs >}}
@@ -314,7 +314,7 @@ Carrier.getInstance().addFriend(peerAddr, CARRIER_HELLO_AUTH);
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 carrierInst.addFriend(success, error, peerAddress, hello);
     {{< /tab >}} 
 {{< /tabs >}}
@@ -341,7 +341,7 @@ Carrier.getInstance().acceptFriend(userId);
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 carrierInst.acceptFriend(success, error, userId);
     {{< /tab >}} 
 {{< /tabs >}}
@@ -363,7 +363,7 @@ public void onFriendConnection(Carrier carrier, String userId, ConnectionStatus 
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 declare let carrierPlugin: any;
 
 function friend_connection_callback(event) {
@@ -393,7 +393,7 @@ Carrier.getInstance().sendFriendMessage(userId, message);
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 carrierInst.sendFriendMessage(success, error, userId, message);
     {{< /tab >}} 
 {{< /tabs >}}
@@ -410,7 +410,7 @@ public void onFriendMessage(Carrier carrier, String userId, String message) {
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 function message_callback(event) {
     // do something
 }
@@ -426,7 +426,7 @@ carrier.kill();
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 carrierInst.destroy(null, null);
     {{< /tab >}} 
 {{< /tabs >}}

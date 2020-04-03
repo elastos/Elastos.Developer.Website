@@ -27,7 +27,7 @@ Here are a few easy steps to help you run your smart contract, or execute someon
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="shell" >}} 
+    {{< tab name="elastOS" codelang="shell" >}} 
 # Install the standard web3js library provided by Ethereum. This is all we need.
 npm install --save web3
     {{< /tab >}} 
@@ -42,7 +42,7 @@ Your application must first connect to your Ethereum node (ex: on your local dev
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 import Web3 from 'web3';
 
 // Open a connection to the node that provides RPC APIs access to the ETH sidechain
@@ -63,7 +63,7 @@ You first have to copy this JSON file to your client application project in orde
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 let myContractJson: any = null;
 let myContract: Web3.eth.Contract = null;
 let contractAddress = "0xAfbE12D1405E624B181AED0195F5d95F99E1b0DF"
@@ -86,7 +86,7 @@ To call a read-only method, not much has to be provided:
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 myContract.methods.MY_READ_ONLY_METHOD().call({}).then((res) => {
     console.log(res)
 }).catch((e, r) => {
@@ -108,7 +108,7 @@ As Elastos wallet apps are not ready to execute ETH transactions yet, this sampl
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
  // Estimate gas cost, so we can use this estimation as max gas amount.
 let method = mContract.methods.MY_WRITE_METHOD(10, otherParams...)
 let gas = await method.estimateGas({

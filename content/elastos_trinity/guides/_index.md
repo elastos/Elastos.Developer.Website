@@ -8,4 +8,4 @@ alwaysopen = false
 
 ### Elastos documentation
 
-# Trinity guides
+# elastOS guides

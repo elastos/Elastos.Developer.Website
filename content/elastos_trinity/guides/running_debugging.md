@@ -17,8 +17,8 @@ Trinity CLI provides an **easy way to run and debug** your DApp from your develo
     * **Enable developer mode** (from the settings - see android docs) and enable USB debugging.
     * **Connect your device** to your computer.
 
-* Make sure the **native Trinity browser** is installed on your device.
-* Inside Trinity, go to the settings app and **enable developer mode**.
+* Make sure the **native elastOS browser** is installed on your device.
+* Inside elastOS, go to the settings app and **enable developer mode**.
 * Run the following command:
 
 ```bash
@@ -28,13 +28,13 @@ $ trinity-cli run -p android|ios
 
 **What happens in background**:
 
-* Your app's manifest is slightly edited to **use your computer's local content remotely**, so that every time you will save one of your app's files the app will automatically reload inside Trinity.
+* Your app's manifest is slightly edited to **use your computer's local content remotely**, so that every time you will save one of your app's files the app will automatically reload inside elastOS.
 * Your app is packaged as a EPK file and signed using a debug signature.
-* Your app is sent to the device, and the native trinity browser catches it then installs it.
+* Your app is sent to the device, and the native elastOS browser catches it then installs it.
 * `ionic serve` is called to start a simple server that the DApp will contact to get your DApp files.
 * When you change your source code on your computer, your DApp on the device detects it and reload the app content.
 
-Note that as soon as your device stops being on the same network as your computer, or if the `trinity-cli run` command is stopped, your DApp in trinity will show a network error with an empty page. 
+Note that as soon as your device stops being on the same network as your computer, or if the `trinity-cli run` command is stopped, your DApp in elastOS will show a network error with an empty page. 
 
 ## Debugging your application
 

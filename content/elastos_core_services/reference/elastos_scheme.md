@@ -12,7 +12,7 @@ draft = true
 
 The Elastos scheme is the way for dApps to request operations to be completed by another Elastos application, on behalf of the user. For example, if your dApp wishes to request a payment from a user, it will call the payment scheme, which will open the installed wallet app, which will proceed to the payment (because it's the only one to know private user information), and send the payment confirmation to your app.
 
-Schemes and parameters are the sames for all programming environments (Trinity, native apps ...). Nevertheless, the way to call them and get response changes. Please refer to the {{< internallink "elastos scheme guide" "elastos_core_services/guides/elastos_schemes.md" >}} for more information about your platform.
+Schemes and parameters are the sames for all programming environments (elastOS, native apps ...). Nevertheless, the way to call them and get response changes. Please refer to the {{< internallink "elastos scheme guide" "elastos_core_services/guides/elastos_schemes.md" >}} for more information about your platform.
 
 ## Deployment Method
 
@@ -1519,7 +1519,7 @@ Used to record a user vote to the mainchain.
 
 Theoretically implemented by the wallet management app (SPV Wallet App).
 
-In Trinity, the whole voting process is managed by a separate DApp, not by the wallet. But the final transaction that contains votes has to be written on the mainchain, using user’s ELA keys, so this has to be handled by the wallet application.
+In elastOS, the whole voting process is managed by a separate DApp, not by the wallet. But the final transaction that contains votes has to be written on the mainchain, using user’s ELA keys, so this has to be handled by the wallet application.
 
 
 ## Request parameters

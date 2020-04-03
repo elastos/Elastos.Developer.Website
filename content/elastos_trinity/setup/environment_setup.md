@@ -9,7 +9,7 @@ alwaysopen = false
 
 ## Trinity CLI
 
-Trinity CLI is a command line tool that helps you manage your trinity applications, including creating a new application, running during development, and publishing.
+Trinity CLI is a command line tool that helps you manage your elastOS applications, including creating a new application, running during development, and publishing.
 
 ### Dependencies
 
@@ -20,7 +20,7 @@ You need a few things installed on your computer for the CLI to run well:
 - Android adb (to test on Android devices)
 - Ionic
 - Node v10 or v12
-- Trinity app (APK) installed on android (to be able to deploy development EPKs)
+- elastOS app (APK) installed on android (to be able to deploy development EPKs)
 
 ### Installation
 
@@ -99,4 +99,4 @@ You can now go on with installing Trinity CLI.
 
 ### Next steps
 
-You can now create a first trinity DApp, and run it on your device. Check the {{< internallink "trinity project setup page" "elastos_trinity/setup/project_setup.md" >}}
+You can now create a first elastOS DApp, and run it on your device. Check the {{< internallink "trinity project setup page" "elastos_trinity/setup/project_setup.md" >}}

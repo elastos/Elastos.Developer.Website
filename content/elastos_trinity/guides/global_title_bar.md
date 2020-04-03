@@ -8,7 +8,7 @@ alwaysopen = false
 
 ## Introduction
 
-In order to provide a more homogenous browser-like experience to end users, Trinity encapsulates all dApps with a global title bar.
+In order to provide a more homogenous browser-like experience to end users, elastOS encapsulates all dApps with a global title bar.
 
 ### Title bar features
 

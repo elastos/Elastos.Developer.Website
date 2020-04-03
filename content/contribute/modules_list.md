@@ -79,7 +79,7 @@ Regarding technical development, here is a how Elastos projects are organized on
 * Elastos.SDK.DIDClient.Java
 * Elastos.SDK.DIDIoTClient
 
-> Elastos Trinity
+> elastOS (Trinity)
 
 * Elastos.Trinity
 * Elastos.Trinity.Alpha
@@ -120,7 +120,7 @@ Regarding technical development, here is a how Elastos projects are organized on
 * Elastos.App.Wallet.Desktop
 * Elastos.ORG.Wallet.Lib.Android
 
-### Trinity DApps
+### elastOS (Trinity) DApps
 
 * Elastos.Trinity.DApps.Wallet
 * Elastos.Trinity.DApps.Launcher

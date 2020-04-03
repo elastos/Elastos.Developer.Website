@@ -7,7 +7,7 @@ pre = ""
 alwaysopen = false
 +++
 
-{{< todo "@BPI @TangZhiLong Find the equivalent codes for swift and trinity" >}}
+{{< todo "@BPI @TangZhiLong Find the equivalent codes for swift and elastOS" >}}
 
 ## Introduction
 
@@ -47,7 +47,7 @@ ManagerHandler mSessionManagerHandler = new ManagerHandler() {
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 declare let carrierPlugin: any;
 
 let callbacks = {
@@ -71,7 +71,7 @@ Manager manager = Manager.getInstance();
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 declare let carrierPlugin: any;
 let carrierInst;
 let sessionInst;
@@ -131,7 +131,7 @@ AbstractStreamHandler streamHandler = new AbstractStreamHandler {
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 let stream_callbacks = {
     onStateChanged: state_changed_callback,
     onStreamData: stream_data_callback,
@@ -189,7 +189,7 @@ SessionRequestCompleteHandler sessionHandler = new SessionRequestCompleteHandler
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 function session_request_complete_callback(event) {
     // do something
 }
@@ -223,7 +223,7 @@ Stream mySecondStream = session.addStream(StreamType.Text, Stream.PROPERTY_RELIA
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 let sessionInst;
 let stream;
 
@@ -261,7 +261,7 @@ session.request(sessionHandler);
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 sessionInst.request(success, error, session_request_complete_callback);
     {{< /tab >}} 
 {{< /tabs >}}
@@ -277,7 +277,7 @@ Stream stream = session.addStream(StreamType.Application, 0, streamHandler);
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 let sessionInst;
 let stream;
 
@@ -311,7 +311,7 @@ session.start(sdp); // sdp is provided in onSessionRequest()
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 function replySuccess(ret) {
     // do something
 }
@@ -349,7 +349,7 @@ session.start(sdp); // sdp is provided in onCompletion()
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 sessionInst.start(startSuccess, startError, sdp);
     {{< /tab >}} 
 {{< /tabs >}}
@@ -364,7 +364,7 @@ int sentSize = stream.writeData(data);
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
 function writeSuccess(ret) {
     // do something
 }

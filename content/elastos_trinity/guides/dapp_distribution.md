@@ -12,17 +12,17 @@ This publication process uses the temporary centralized DApp store server. This 
 
 ## Introduction
 
-A **Trinity DApp store server** is available to host your DApps and make them downloadable through the store DApp by all Trinity users. 
+A **elastOS DApp store server** is available to host your dApps and make them downloadable through the store DApp by all elastOS users. 
 
 ## Validation
 
-The first time a DApp is published, or randomly after that, there is a manual review process from the Elastos team members, so your DApp won't appear in the store DApp right after publishing it. Application updates are faster.
+The first time a dApp is published, or randomly after that, there is a manual review process from the Elastos team members, so your DApp won't appear in the store dApp right after publishing it. Application updates are faster.
 
 Note that this centralized process will change in the future and will be replaced with a decentralized community-based model.
 
 ## Creating an application DID
 
-Publishin your DApp requires to sign it using an Elastos DID. The Trinity CLI lets you create a DID this way:
+Publishing your dApp requires to sign it using an Elastos DID. The Trinity CLI lets you create a DID this way:
 
 ```bash
 $ trinity-cli did create
@@ -30,7 +30,7 @@ $ trinity-cli did create
 
 Save your **DID string** and **mnemonics** in a safe place. You will need to use them to publish your DApp, now but also every time you want to publish an updated version.
 
-Your signature needs to be uploaded on the DID sidechain. You have to user the Trinity mobile application itself to scan the QR code provided during the DID creation, and **pay a very low transaction fee to publish your DID on chain**.
+Your signature needs to be uploaded on the DID sidechain. You have to user the elastOS mobile application itself to scan the QR code provided during the DID creation, and **pay a very low transaction fee to publish your DID on chain**.
 
 At first, your wallet app may have all ELA stored on the ELA mainchain, but nothing on the DID sidechain. You need to use the wallet DApp to **transfer some amount to the DID sidechain** (only the first time). A very small amount such as 0.1 ELA or less is enough to write several DID transactions.
 

@@ -83,7 +83,7 @@ except (ConnectionError, Timeout, TooManyRedirects) as e:
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -156,7 +156,7 @@ except (ConnectionError, Timeout, TooManyRedirects) as e:
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -229,7 +229,7 @@ except (ConnectionError, Timeout, TooManyRedirects) as e:
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
     {{< /tab >}} 
 {{< /tabs >}}
 
@@ -302,6 +302,6 @@ except (ConnectionError, Timeout, TooManyRedirects) as e:
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
     {{< /tab >}} 
-    {{< tab name="Trinity" codelang="js" >}} 
+    {{< tab name="elastOS" codelang="js" >}} 
     {{< /tab >}} 
 {{< /tabs >}}

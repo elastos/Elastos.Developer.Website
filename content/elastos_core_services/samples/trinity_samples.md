@@ -1,19 +1,19 @@
 +++
-title = "Trinity samples"
+title = "elastOS samples"
 weight = 40
 chapter = false
 pre = ""
 alwaysopen = false
 +++
 
-### [Empty Trinity sample](https://github.com/elastos/Elastos.Trinity.DApps.Samples)
+### [Empty elastOS sample](https://github.com/elastos/Elastos.Trinity.DApps.Samples)
 
-A default trinity app example, based on ionic's tab sample app. Also contains a default trinity manifest file for a quickstart.
+A default elastOS app example, based on ionic's tab sample app. Also contains a default elastOS manifest file for a quickstart.
 
-### [Trinity wallet DApp] (https://github.com/elastos/Elastos.Trinity.DApps.Wallet)
+### [elastOS wallet DApp] (https://github.com/elastos/Elastos.Trinity.DApps.Wallet)
 
-Default trinity wallet DApp that you can use as an example to start building your own wallet.
+Default elastOS wallet DApp that you can use as an example to start building your own wallet.
 
-### [Ethereum contracts in Trinity] (https://github.com/elastos/Elastos.Trinity.DApps.Demo.ETHSidechain)
+### [Ethereum contracts in elastOS] (https://github.com/elastos/Elastos.Trinity.DApps.Demo.ETHSidechain)
 
-Deploy and run Ethereum sidechain smart contracts for Trinity.
+Deploy and run Ethereum sidechain smart contracts for elastOS.

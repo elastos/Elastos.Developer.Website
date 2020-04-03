@@ -9,7 +9,7 @@ alwaysopen = false
 
 ## Introduction
 
-Some of the Elastos services or API will require your app to be registered. This is the case for example for Trinity or to call Elastos scheme commands.
+Some of the Elastos services or API will require your app to be registered. This is the case for example for elastOS or to call Elastos scheme commands.
 
 ## Generating an app ID
 

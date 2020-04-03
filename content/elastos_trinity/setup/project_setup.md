@@ -9,7 +9,7 @@ alwaysopen = false
 
 ## Environment setup
 
-Make sure to first {{< internallink "setup your computer for trinity" "elastos_trinity/setup/environment_setup.md" >}}.
+Make sure to first {{< internallink "setup your computer for elastOS" "elastos_trinity/setup/environment_setup.md" >}}.
 
 ## Creating a new app
 
@@ -21,11 +21,11 @@ $ trinity-cli new
 
 Provide a few information such as your app name, package name, author information, and a new folder will be created with your DApp.
 
-The created application uses the ionic framework. It simply embeds an additional *manifest.json* file to be considered as a trinity application.
+The created application uses the ionic framework. It simply embeds an additional *manifest.json* file to be considered as a elastOS application.
 
-## Converting an existing ionic app to a trinity DApp
+## Converting an existing ionic app to a elastOS DApp
 
-In case you already have a ionic application, and would like to run it inside trinity, you have to generate a trinity manifest to make it become compatible. 
+In case you already have a ionic application, and would like to run it inside elastOS, you have to generate a elastOS manifest to make it become compatible. 
 
 Enter your ionic app's folder then run the following command:
 
@@ -39,9 +39,9 @@ $ npm i --save @elastosfoundation/trinity-types
 For more detail about Ionic, please visit [here](https://ionicframework.com/docs/).
 You can build any kind of ionic-based application in Elastos, as the whole ionic framework is available. In addition, Elastos plugins are available too, such as carrier, hive, or access to payments and digital identities (DID).
 
-### Trinity plugins Typescript typings
+### elastOS plugins Typescript typings
 
-In case the default DApp you've created does not include typescript types for Trinity plugins, you may have to add them by yourself:
+In case the default DApp you've created does not include typescript types for elastOS plugins, you may have to add them by yourself:
 
 ```bash
 $ npm i @elastosfoundation/trinity-types
@@ -74,7 +74,7 @@ Then in your application, you can use it this way:
 
 **Checklist:**
 
-- Trinity must be installed on your device
+- elastOS must be installed on your device
 - Connect your device to your computer using a USB cable.
 - Make sure android adb is in your path.
 
@@ -84,12 +84,12 @@ Enter your app's folder in a terminal then run the following command:
 $ trinity-cli run -p android
 ```
 
-That will package your application as a EPK file, send it to your device, install it inside Trinity, and run it.
+That will package your application as a EPK file, send it to your device, install it inside elastOS, and run it.
 
 ### Developping your DApp
 
-After your app is launched inside trinity, you can directly edit your app content from its src/ folder. Changes will automatically reload in trinity.
+After your app is launched inside elastOS, you can directly edit your app content from its src/ folder. Changes will automatically reload in elastOS.
 
-### Trinity DApps manifest
+### elastOS DApps manifest
 
-A *manifest.json* file is created by default in your trinity DApp project. You can manually edit it whenever needed. The Trinity manifest format is fully described in the {{< internallink "trinity manifest guide" "elastos_trinity/guides/trinity_manifest.md" >}}.
+A *manifest.json* file is created by default in your elastOS DApp project. You can manually edit it whenever needed. The elastOS manifest format is fully described in the {{< internallink "elastOS manifest guide" "elastos_trinity/guides/trinity_manifest.md" >}}.

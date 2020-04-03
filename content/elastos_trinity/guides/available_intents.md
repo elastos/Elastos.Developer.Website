@@ -10,7 +10,7 @@ alwaysopen = false
 
 They are a way to **let DApps communicate with each other** without really knowing each other. For example, a DApp can send a "pay" intent request, that follows the elastos scheme standardized definition, and another DApp can catch this intent to handle the payment. 
 
-But the initiating DApp doesn't really know which DApp will realize this operation. As a consequence, several applications being able to handle the pay intent (wallet DApps in our case) could exist in Trinity, and the user could choose which of them he wants to use to proceed to the payment.
+But the initiating DApp doesn't really know which DApp will realize this operation. As a consequence, several applications being able to handle the pay intent (wallet DApps in our case) could exist in elastOS, and the user could choose which of them he wants to use to proceed to the payment.
 
 ## How to send intents?
 
@@ -21,9 +21,9 @@ See {{< internallink "Interapp communication" "/elastos_trinity/guides/interapp_
 You can either:
 
 * **Send intents** to request other DApps to do something (ex: pay, if you want to let your users purchase something)
-* Or **handle intents** (using intent filters in your manifest) to handle actions requested by other DApps (ex: handle "handlescannedcontent_did" if you want to do something when a end user scans a QR code in Trinity).
+* Or **handle intents** (using intent filters in your manifest) to handle actions requested by other DApps (ex: handle "handlescannedcontent_did" if you want to do something when a end user scans a QR code in elastOS).
 
-## Supported intents in Trinity
+## Supported intents in elastOS
 
 ### Standard Elastos scheme intents
 
@@ -41,7 +41,7 @@ See {{< internallink "Elastos scheme" "/elastos_core_services/guides/elastos_sch
 | appdetails | Display a specific DApp details page on a DApp store. |
 | sign | Sign some binary content using a DID signature. |
 
-### Specific Trinity intents
+### Specific elastOS intents
 
 #### Open an application
 
@@ -65,7 +65,7 @@ None
 
     http://scheme.elastos.org/app?id=org.company.app | 
 
-**Trinity**
+**elastOS**
 
     appManager.sendIntent("app", {
         id: "org.company.app"
@@ -98,7 +98,7 @@ None
 
 ##### Request example
 
-**Trinity**
+**elastOS**
 
     appManager.sendIntent("registerapplicationprofile", {
         identifier: "did-demo-app-profile",
@@ -122,7 +122,7 @@ Opens a target app using a **ApplicationProfileCredential** information register
 
 When opening, the app receives the original fields registered by **registerapplicationprofile** (ex: "diddemoid").
 
-Usually, as a dApp developer you don't need to emit this intent. Instead, you will most likely listen to this intent emitted by the trinity runtime.
+Usually, as a dApp developer you don't need to emit this intent. Instead, you will most likely listen to this intent emitted by the elastOS runtime.
 
 ##### Request parameters
 
@@ -134,7 +134,7 @@ None
 
 ##### Request example
 
-**Trinity**
+**elastOS**
 
     appManager.sendIntent("connectapplicationprofile", {
         identifier: "did-demo-app-profile",
@@ -174,7 +174,7 @@ None
 
 ##### Request example
 
-**Trinity**
+**elastOS**
 
     appManager.sendIntent("handlescannedcontent", {data: "ABCDEF"}, ...)
 
@@ -215,7 +215,7 @@ None
 
 ##### Request example
 
-**Trinity**
+**elastOS**
 
     appManager.sendIntent("scanqrcode", {}, ...)
 
@@ -233,7 +233,7 @@ Received by the **appManager.sendIntent()** onSuccess callback.
 
 ##### Description
 
-Shares some content either inside another Trinity dApp, or thr ough the native OS share feature.Shared content includes a title and a (optional) url.
+Shares some content either inside another elastOS dApp, or thr ough the native OS share feature.Shared content includes a title and a (optional) url.
 
 It's up to the receiving app to share the content in a suitable way. A chat application would show a new clickable message to a user, and when clicked, the "url" is activated. The built-in friends app would instead let the user pick a friend and send a remote notification to that friend with the embedded shared content.
 
@@ -242,7 +242,7 @@ It's up to the receiving app to share the content in a suitable way. A chat appl
 | Parameter | Description | Format |
 | ----- | ----- | ----- |
 | title | Title describing the share action. Visible by everyone | string |
-| url | Action url related to this shared content. For example, a link to open the target app in Trinity. Usually, this should be a elastos scheme link such as https://scheme.elastos.org/* | string |
+| url | Action url related to this shared content. For example, a link to open the target app in elastOS. Usually, this should be a elastos scheme link such as https://scheme.elastos.org/* | string |
 
 ##### Response parameters
 
@@ -250,7 +250,7 @@ None
 
 ##### Request example
 
-**Trinity**
+**elastOS**
 
     appManager.sendIntent("share", {
         title: "Add me as a friend in elastOS",
@@ -285,7 +285,7 @@ None
 
 ##### Request example
 
-**Trinity**
+**elastOS**
 
     appManager.sendIntent("addfriend", {
         did: "did:elastos:abcdef"
@@ -334,7 +334,7 @@ Pick friend requests can be filtered to look for a specific credential type.
 
 ##### Request example
 
-**Trinity**
+**elastOS**
 
     appManager.sendIntent("pickfriend", {
         singleSelection: true,

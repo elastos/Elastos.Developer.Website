@@ -13,4 +13,4 @@ Pick your target:
 
 * {{< internallink "Android native application" "android_native_setup.md" >}}
 * {{< internallink "iOS native application" "ios_native_setup.md" >}}
-* {{< internallink "Trinity application" "elastos_trinity/setup/environment_setup.md" >}}
+* {{< internallink "elastOS application" "elastos_trinity/setup/environment_setup.md" >}}

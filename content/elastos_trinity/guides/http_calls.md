@@ -1,5 +1,5 @@
 +++
-title = "HTTP calls in Trinity"
+title = "HTTP calls in elastOS"
 weight = 20
 chapter = false
 pre = ""
@@ -8,7 +8,7 @@ alwaysopen = false
 
 ## Allowing some HTTP calls in your DApp
 
-HTTP calls are forbidden by default in Trinity applications. But some specific domains can be added to your DApp manifest to allow you calling HTTP APIs from your app.
+HTTP calls are forbidden by default in elastOS applications. But some specific domains can be added to your DApp manifest to allow you calling HTTP APIs from your app.
 
 ### Manifest change
 

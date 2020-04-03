@@ -75,11 +75,11 @@ Some of the Onchain team members worked on both ontology and elastos early on to
 {{% /faqentry %}}
 
 {{% faqentry question="Does Elastos compete with Windows, iOS and Android?" %}}
-No. Elastos will exist as an application (virtual machine) on smartphones and personal computers. You can utilize the new internet at the same time as your classic environment. You would just be doing this via your Elastos Browser(codename: Trinity) so Elastos Browser including all the apps built using Elastos still run on top of Windows, iOS and Android.
+No. Elastos will exist as an application (virtual machine) on smartphones and personal computers. You can utilize the new internet at the same time as your classic environment. You would just be doing this via your elastOS Browser(codename: Trinity) so Elastos Browser including all the apps built using Elastos still run on top of Windows, iOS and Android.
 {{% /faqentry %}}
 
 {{% faqentry question="What are the different parts of Elastos?" %}}
-* An internet browser: Elastos Browser(codename: Trinity)
+* An internet browser: elastOS Browser(codename: Trinity)
 * A virtual machine: Elastos Runtime
 * A network: Elastos Carrier
 * A blockchain: ELA and its sidechains
@@ -216,7 +216,7 @@ You can apply today by [visiting this site](https://www.cyberrepublic.org/) and 
 
 {{% faqentry question="Does Elastos use any 3rd party code snippets, libraries, or source code?" %}}
 
-Depends on the project. Trinity browser is based on chromium. Carrier uses lots of 3rd party libraries. Elastos mainchain is based on PoW and DPoS but merged mined so it borrows a lot of ideas from namecoin (that is also merged mined with bitcoin). The elastos runtime however is unique to elastos and is home grown
+Depends on the project. elastOS browser is based on chromium. Carrier uses lots of 3rd party libraries. Elastos mainchain is based on PoW and DPoS but merged mined so it borrows a lot of ideas from namecoin (that is also merged mined with bitcoin). The elastos runtime however is unique to elastos and is home grown
 
 {{% /faqentry %}}
 
@@ -226,7 +226,7 @@ The core internal team and then 3rd party for audits
 
 {{% faqentry question="How is code updated if bugs are found in release version?" %}}
 
-Elastos Carrier serves as a way to automatically provide update services remotely in a decentralized manner. Eg. IoeX. Most of the calls being made from elastos apps are RPC calls so usually, if a bug is found within the blockchain code or carrier code, this can be automatically updated and pushed out similar to how bitcoin code is updated. If there’s a bug in trinity browser itself(the runtime code), then a new version of the app needs to be pushed out via app store
+Elastos Carrier serves as a way to automatically provide update services remotely in a decentralized manner. Eg. IoeX. Most of the calls being made from elastos apps are RPC calls so usually, if a bug is found within the blockchain code or carrier code, this can be automatically updated and pushed out similar to how bitcoin code is updated. If there’s a bug in elastOS browser itself(the runtime code), then a new version of the app needs to be pushed out via app store
 
 {{% /faqentry %}}
 
