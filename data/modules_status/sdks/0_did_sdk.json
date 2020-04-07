@@ -5,7 +5,7 @@
     "releases":{
         "current":[
             {
-                "platform":"Java/Android (Java VM)", "version":"1.0", "date":"2019.12.30", "quality": "Alpha", "newfeatures":[
+                "platform":"Java/Android (Java VM)", "version":"1.0", "date":"2019.12.30", "quality": "Production", "newfeatures":[
                     "W3C DID compatible implementation and APIs",
                     "W3C verifiable credential/presentation compatible implmentation and APIs.",
                     "Support to publish elastos DID to Elastos DID sidechain",
