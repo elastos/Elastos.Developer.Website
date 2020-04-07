@@ -2,8 +2,24 @@
     "name":"ETH sidechain",
     "releases":{
         "current":[
+            {
+                "version":"0.0.2", "date":"2019.11.01", "quality": "Production", "newfeatures":[
+                    "Support Solidity v0.4.25 and below",
+                    "Update SPV module dependency to version with 6-confirmed perception.",
+                    "Fix bootnode IP",
+                    "Update ELA dependency to a more stable version"
+                ]
+            }
         ],
         "next":[
+            {
+                "date":"2020.08", "quality": "Production", "content":[
+                    "DPOS Consensus",
+                    "Based on ETH v1.9.7",
+                    "Support Solidity v0.5.x and below"
+                    
+                ]
+            }
         ]
     }
 }

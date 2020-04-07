@@ -1,11 +1,10 @@
 {
     "name":"ELA Wallet",
-    "lastupdated":"2020.04.01",
     "useplatforms": true,
     "releases":{
         "current":[
             {
-                "platform":"android", "version":"1.4.2", "date":"2020.03.31", "quality": "release", "newfeatures":[
+                "platform":"android", "version":"1.4.2", "date":"2020.03.31", "quality": "Production", "newfeatures":[
                     "Adds the function of creating DID, which supports adding personal credentials.",
                     "Candidates for CR members can issue relevant election related information through their personal credentials.",
                     "Supports the binding of Elastos DID and CR website account and login to CR account by scanning QR code.",
@@ -14,7 +13,7 @@
                 ]
             },
             {
-                "platform":"iOS", "version":"1.4.1", "date":"2020.01.16", "quality": "release", "newfeatures":[
+                "platform":"iOS", "version":"1.4.1", "date":"2020.01.16", "quality": "Production", "newfeatures":[
                     "Fixed all known issues.",
                     "Added CR Council election feature.",
                     "Optimized the DID Sidechain synchronization.",
@@ -24,7 +23,7 @@
         ],
         "next":[
             {
-                "platform":"iOS", "date":"2020.04", "quality": "release", "content":[
+                "platform":"iOS", "date":"2020.04", "quality": "Production", "content":[
                     "Adds the function of creating DID, which supports adding personal credentials.",
                     "Candidates for CR members can issue relevant election related information through their personal credentials.",
                     "Supports the binding of Elastos DID and CR website account and login to CR account by scanning QR code.",
@@ -33,13 +32,13 @@
                 ]
             },
             {
-                "platform":"android", "date":"2020.04", "quality": "release", "content":[
+                "platform":"android", "date":"2020.04", "quality": "Production", "content":[
                     "Support CR Committee.",
                     "Support CR proposal."
                 ]
             },
             {
-                "platform":"iOS", "date":"2020.05", "quality": "release", "content":[
+                "platform":"iOS", "date":"2020.05", "quality": "Production", "content":[
                     "Support CR Committee.",
                     "Support CR proposal."
                 ]
