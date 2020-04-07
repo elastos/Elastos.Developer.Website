@@ -6,7 +6,19 @@
                 "version":"0.4.2", "date":"2020.03.05", "quality": "Production", "newfeatures":[
                     "Support registering CR by CID and DID"
                 ]
-            },
+            }
+        ],
+        "next":[
+            {
+                "date":"2020.04", "quality": "Production", "content":[
+                    "CR Committee",
+                    "CR proposal",
+                    "Impeach CR committee",
+                    "Migrate leveldb business to ffldb"
+                ]
+            }
+        ],
+        "previous":[
             {
                 "version":"0.4.1", "date":"2020.01.09", "quality": "Production", "newfeatures":[
                     "Display as address when acquiring output payload information of CR",
@@ -18,16 +30,6 @@
                 "version":"0.4.0", "date":"2019.12.11", "quality": "Production", "newfeatures":[
                     "Support CR related transactions, inclouding register,update, unregister and return transcations.",
                     "Optimize processing of blocks and transactions"
-                ]
-            }
-        ],
-        "next":[
-            {
-                "date":"2020.04", "quality": "Production", "content":[
-                    "CR Committee",
-                    "CR proposal",
-                    "Impeach CR committee",
-                    "Migrate leveldb business to ffldb"
                 ]
             }
         ]

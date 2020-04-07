@@ -13,7 +13,7 @@
                 {{ end }}
                 {{ if .releases.current }}
                 <div class="group">
-                    <div class="title">Delivered releases</div>
+                    <div class="title">Delivered / Current releases</div>
                     <table>
                         <tr>
                             {{ if $usePlatforms }}
@@ -73,6 +73,39 @@
                         {{ end }}
                     </table>
                 </div>
+                {{ if .releases.previous }}
+                <div class="group">
+                    <div class="title">Previous releases</div>
+                    <table>
+                        <tr>
+                            {{ if $usePlatforms }}
+                                <th>Platform</th>
+                            {{ end }}
+                            <th>Version</th>	
+                            <th>Release date</th>	
+                            <th>Quality</th>
+                            <th>New features</th>
+                        </tr>
+                        {{ range .releases.previous }}
+                            <tr>
+                                {{ if $usePlatforms }}
+                                    <td>{{ .platform }}</td>
+                                {{ end }}
+                                <td>{{ .version }}</td>
+                                <td>{{ .date }}</td>
+                                <td>{{ .quality }}</td>
+                                <td>
+                                    <ul>
+                                        {{ range .newfeatures }}
+                                            <li>{{ . }}</li>
+                                        {{ end }}
+                                    </ul>
+                                </td>
+                            </tr>
+                        {{ end }}
+                    </table>
+                </div>
+                {{ end }}
                 {{ if .otherfeatures }}
                 <div class="group">
                     <div class="title">Other on going features</div>
