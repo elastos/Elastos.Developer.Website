@@ -3,6 +3,14 @@
     "lastupdated":"2020.04.02",
     "useplatforms": true,
     "notes":"iOS release dates are currently undetermined, this is best effort until Apple accepts elastOS on their app store. iOS and Android releases will usually be deployed in similar time ranges with identical content.",
+    "links":[
+        {
+            "title": "Google Play (Android) download", "url":"https://play.google.com/store/apps/details?id=org.elastos.trinity.runtime"
+        },
+        {
+            "title": "Direct APK download (Android)", "url":"https://download.elastos.org/app/trinity/trinity.apk"
+        }
+    ],
     "releases":{
         "current":[
             {

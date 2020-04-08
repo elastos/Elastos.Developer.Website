@@ -11,6 +11,19 @@
                         {{ .notes }}
                     </div>
                 {{ end }}
+                {{ if .links }}
+                    <div class="group">
+                        <div class="title">Links</div>
+                        <table>
+                            {{ range .links }}
+                            <tr>
+                                <td>{{ .title }}</td>
+                                <td><a href="{{.url}}" target="_blank">{{ .url }}</a></td>
+                            </tr>
+                            {{ end }}
+                        </table>
+                    </div>
+                {{ end }}
                 {{ if .releases.current }}
                 <div class="group">
                     <div class="title">Delivered / Current releases</div>
