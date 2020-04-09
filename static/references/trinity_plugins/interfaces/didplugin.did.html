@@ -493,7 +493,7 @@
 					<a name="issuecredential" class="tsd-anchor"></a>
 					<h3>issue<wbr>Credential</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">issue<wbr>Credential<span class="tsd-signature-symbol">(</span>subjectDID<span class="tsd-signature-symbol">: </span><a href="../modules/didplugin.html#didstring" class="tsd-signature-type">DIDString</a>, credentialId<span class="tsd-signature-symbol">: </span><a href="../modules/didplugin.html#credentialid" class="tsd-signature-type">CredentialID</a>, types<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, expirationDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span>, properties<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, passphrase<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, onSuccess<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, onError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">issue<wbr>Credential<span class="tsd-signature-symbol">(</span>subjectDID<span class="tsd-signature-symbol">: </span><a href="../modules/didplugin.html#didstring" class="tsd-signature-type">DIDString</a>, credentialId<span class="tsd-signature-symbol">: </span><a href="../modules/didplugin.html#credentialid" class="tsd-signature-type">CredentialID</a>, types<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, validityDays<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Number</span>, properties<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, passphrase<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, onSuccess<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, onError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -527,9 +527,9 @@
 									</div>
 								</li>
 								<li>
-									<h5>expirationDate: <span class="tsd-signature-type">Date</span></h5>
+									<h5>validityDays: <span class="tsd-signature-type">Number</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Date at which the credential will become invalid.</p>
+										<p>Number of Days at which the credential will become invalid, the max validity days is 5 years.</p>
 									</div>
 								</li>
 								<li>
@@ -868,6 +868,12 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="didplugin.publickey.html" class="tsd-kind-icon">Public<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="didplugin.service.html" class="tsd-kind-icon">Service</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="didplugin.servicebuilder.html" class="tsd-kind-icon">Service<wbr>Builder</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="didplugin.verifiablecredential.html" class="tsd-kind-icon">Verifiable<wbr>Credential</a>

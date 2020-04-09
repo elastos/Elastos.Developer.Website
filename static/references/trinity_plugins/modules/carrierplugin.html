@@ -243,628 +243,13 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 					<a name="carriercallbacks" class="tsd-anchor"></a>
 					<h3>Carrier<wbr>Callbacks</h3>
-					<div class="tsd-signature tsd-kind-icon">Carrier<wbr>Callbacks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<div class="tsd-signature tsd-kind-icon">Carrier<wbr>Callbacks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> &amp; </span><a href="carrierplugin.html#groupcallbacks" class="tsd-signature-type">GroupCallbacks</a></div>
 					<aside class="tsd-sources">
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Carrier callbacks.</p>
 						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter">
-								<h5>on<wbr>Connect<wbr>Request<span class="tsd-signature-symbol">: </span>function</h5>
-								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Connect<wbr>Request<span class="tsd-signature-symbol">(</span>carrier<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a>, from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fileInfo<span class="tsd-signature-symbol">: </span><a href="carrierplugin.html#filetransferinfo" class="tsd-signature-type">FileTransferInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<aside class="tsd-sources">
-										</aside>
-										<div class="tsd-comment tsd-typography">
-											<div class="lead">
-												<p>A callback function that handle file transfer connect request.</p>
-											</div>
-											<dl class="tsd-comment-tags">
-												<dt>callback</dt>
-												<dd><p>onConnectRequest</p>
-												</dd>
-											</dl>
-										</div>
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>carrier: <a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Carrier node instance</p>
-												</div>
-											</li>
-											<li>
-												<h5>from: <span class="tsd-signature-type">string</span></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The ID of who sends the request</p>
-												</div>
-											</li>
-											<li>
-												<h5>fileInfo: <a href="carrierplugin.html#filetransferinfo" class="tsd-signature-type">FileTransferInfo</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Information of the file which the requester wants to send</p>
-												</div>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-							</ul>        </li>
-							<li class="tsd-parameter">
-								<h5>on<wbr>Connection<span class="tsd-signature-symbol">: </span>function</h5>
-								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Connection<span class="tsd-signature-symbol">(</span>carrier<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a>, status<span class="tsd-signature-symbol">: </span><a href="../enums/carrierplugin.connectionstatus.html" class="tsd-signature-type">ConnectionStatus</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<aside class="tsd-sources">
-										</aside>
-										<div class="tsd-comment tsd-typography">
-											<div class="lead">
-												<p>The callback function to process the self connection status.</p>
-											</div>
-											<dl class="tsd-comment-tags">
-												<dt>callback</dt>
-												<dd><p>onConnection</p>
-												</dd>
-											</dl>
-										</div>
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>carrier: <a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Carrier node instance</p>
-												</div>
-											</li>
-											<li>
-												<h5>status: <a href="../enums/carrierplugin.connectionstatus.html" class="tsd-signature-type">ConnectionStatus</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Current connection status. @see ConnectionStatus</p>
-												</div>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-							</ul>        </li>
-							<li class="tsd-parameter">
-								<h5>on<wbr>Friend<wbr>Added<span class="tsd-signature-symbol">: </span>function</h5>
-								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Friend<wbr>Added<span class="tsd-signature-symbol">(</span>carrier<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a>, friendInfo<span class="tsd-signature-symbol">: </span><a href="carrierplugin.html#friendinfo" class="tsd-signature-type">FriendInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<aside class="tsd-sources">
-										</aside>
-										<div class="tsd-comment tsd-typography">
-											<div class="lead">
-												<p>The callback function to process the new friend added event.</p>
-											</div>
-											<dl class="tsd-comment-tags">
-												<dt>callback</dt>
-												<dd><p>onFriendAdded</p>
-												</dd>
-											</dl>
-										</div>
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>carrier: <a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Carrier node instance</p>
-												</div>
-											</li>
-											<li>
-												<h5>friendInfo: <a href="carrierplugin.html#friendinfo" class="tsd-signature-type">FriendInfo</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The added friend&#39;s information</p>
-												</div>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-							</ul>        </li>
-							<li class="tsd-parameter">
-								<h5>on<wbr>Friend<wbr>Connection<span class="tsd-signature-symbol">: </span>function</h5>
-								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Friend<wbr>Connection<span class="tsd-signature-symbol">(</span>carrier<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a>, friendId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, status<span class="tsd-signature-symbol">: </span><a href="../enums/carrierplugin.connectionstatus.html" class="tsd-signature-type">ConnectionStatus</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<aside class="tsd-sources">
-										</aside>
-										<div class="tsd-comment tsd-typography">
-											<div class="lead">
-												<p>The callback function to process the friend connections status changed event.</p>
-											</div>
-											<dl class="tsd-comment-tags">
-												<dt>callback</dt>
-												<dd><p>onFriendConnection</p>
-												</dd>
-											</dl>
-										</div>
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>carrier: <a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Carrier node instance</p>
-												</div>
-											</li>
-											<li>
-												<h5>friendId: <span class="tsd-signature-type">string</span></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The friend&#39;s user ID.</p>
-												</div>
-											</li>
-											<li>
-												<h5>status: <a href="../enums/carrierplugin.connectionstatus.html" class="tsd-signature-type">ConnectionStatus</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The connection status of friend. @see ConnectionStatus</p>
-												</div>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-							</ul>        </li>
-							<li class="tsd-parameter">
-								<h5>on<wbr>Friend<wbr>Info<wbr>Changed<span class="tsd-signature-symbol">: </span>function</h5>
-								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Friend<wbr>Info<wbr>Changed<span class="tsd-signature-symbol">(</span>carrier<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a>, friendId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, info<span class="tsd-signature-symbol">: </span><a href="carrierplugin.html#friendinfo" class="tsd-signature-type">FriendInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<aside class="tsd-sources">
-										</aside>
-										<div class="tsd-comment tsd-typography">
-											<div class="lead">
-												<p>The callback function to process the friend information changed event.</p>
-											</div>
-											<dl class="tsd-comment-tags">
-												<dt>callback</dt>
-												<dd><p>onFriendInfoChanged</p>
-												</dd>
-											</dl>
-										</div>
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>carrier: <a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Carrier node instance</p>
-												</div>
-											</li>
-											<li>
-												<h5>friendId: <span class="tsd-signature-type">string</span></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The friend&#39;s user ID</p>
-												</div>
-											</li>
-											<li>
-												<h5>info: <a href="carrierplugin.html#friendinfo" class="tsd-signature-type">FriendInfo</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The updated friend information</p>
-												</div>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-							</ul>        </li>
-							<li class="tsd-parameter">
-								<h5>on<wbr>Friend<wbr>Invite<wbr>Request<span class="tsd-signature-symbol">: </span>function</h5>
-								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Friend<wbr>Invite<wbr>Request<span class="tsd-signature-symbol">(</span>carrier<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a>, from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<aside class="tsd-sources">
-										</aside>
-										<div class="tsd-comment tsd-typography">
-											<div class="lead">
-												<p>The callback function to process the friend invite request.</p>
-											</div>
-											<dl class="tsd-comment-tags">
-												<dt>callback</dt>
-												<dd><p>onFriendInviteRequest</p>
-												</dd>
-											</dl>
-										</div>
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>carrier: <a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Carrier node instance</p>
-												</div>
-											</li>
-											<li>
-												<h5>from: <span class="tsd-signature-type">string</span></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The user ID of who sends the invite request</p>
-												</div>
-											</li>
-											<li>
-												<h5>data: <span class="tsd-signature-type">string</span></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The application defined data sent by friend</p>
-												</div>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-							</ul>        </li>
-							<li class="tsd-parameter">
-								<h5>on<wbr>Friend<wbr>Message<span class="tsd-signature-symbol">: </span>function</h5>
-								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Friend<wbr>Message<span class="tsd-signature-symbol">(</span>carrier<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a>, from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, messate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, isOffline<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<aside class="tsd-sources">
-										</aside>
-										<div class="tsd-comment tsd-typography">
-											<div class="lead">
-												<p>The callback function to process the friend message.</p>
-											</div>
-											<dl class="tsd-comment-tags">
-												<dt>callback</dt>
-												<dd><p>onFriendMessage</p>
-												</dd>
-											</dl>
-										</div>
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>carrier: <a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Carrier node instance</p>
-												</div>
-											</li>
-											<li>
-												<h5>from: <span class="tsd-signature-type">string</span></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The ID of who sends the message</p>
-												</div>
-											</li>
-											<li>
-												<h5>messate: <span class="tsd-signature-type">string</span></h5>
-											</li>
-											<li>
-												<h5>isOffline: <span class="tsd-signature-type">Boolean</span></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Whether this message was sent as online message or
-														offline message. The value of true means the message was sent as
-													online message, otherwise as offline message.</p>
-												</div>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-							</ul>        </li>
-							<li class="tsd-parameter">
-								<h5>on<wbr>Friend<wbr>Presence<span class="tsd-signature-symbol">: </span>function</h5>
-								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Friend<wbr>Presence<span class="tsd-signature-symbol">(</span>carrier<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a>, friendId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, presence<span class="tsd-signature-symbol">: </span><a href="../enums/carrierplugin.presencestatus.html" class="tsd-signature-type">PresenceStatus</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<aside class="tsd-sources">
-										</aside>
-										<div class="tsd-comment tsd-typography">
-											<div class="lead">
-												<p>The callback function to process the friend presence changed event.</p>
-											</div>
-											<dl class="tsd-comment-tags">
-												<dt>callback</dt>
-												<dd><p>onFriendPresence</p>
-												</dd>
-											</dl>
-										</div>
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>carrier: <a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Carrier node instance</p>
-												</div>
-											</li>
-											<li>
-												<h5>friendId: <span class="tsd-signature-type">string</span></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The friend&#39;s user ID</p>
-												</div>
-											</li>
-											<li>
-												<h5>presence: <a href="../enums/carrierplugin.presencestatus.html" class="tsd-signature-type">PresenceStatus</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The presence status of the friend</p>
-												</div>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-							</ul>        </li>
-							<li class="tsd-parameter">
-								<h5>on<wbr>Friend<wbr>Removed<span class="tsd-signature-symbol">: </span>function</h5>
-								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Friend<wbr>Removed<span class="tsd-signature-symbol">(</span>carrier<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a>, friendId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<aside class="tsd-sources">
-										</aside>
-										<div class="tsd-comment tsd-typography">
-											<div class="lead">
-												<p>The callback function to process the friend removed event.</p>
-											</div>
-											<dl class="tsd-comment-tags">
-												<dt>callback</dt>
-												<dd><p>onFriendRemoved</p>
-												</dd>
-											</dl>
-										</div>
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>carrier: <a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Carrier node instance</p>
-												</div>
-											</li>
-											<li>
-												<h5>friendId: <span class="tsd-signature-type">string</span></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The friend&#39;s user ID</p>
-												</div>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-							</ul>        </li>
-							<li class="tsd-parameter">
-								<h5>on<wbr>Friend<wbr>Request<span class="tsd-signature-symbol">: </span>function</h5>
-								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Friend<wbr>Request<span class="tsd-signature-symbol">(</span>carrier<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a>, userId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, info<span class="tsd-signature-symbol">: </span><a href="carrierplugin.html#userinfo-1" class="tsd-signature-type">UserInfo</a>, hello<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<aside class="tsd-sources">
-										</aside>
-										<div class="tsd-comment tsd-typography">
-											<div class="lead">
-												<p>The callback function to process the friend request.</p>
-											</div>
-											<dl class="tsd-comment-tags">
-												<dt>callback</dt>
-												<dd><p>onFriendRequest</p>
-												</dd>
-											</dl>
-										</div>
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>carrier: <a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Carrier node instance</p>
-												</div>
-											</li>
-											<li>
-												<h5>userId: <span class="tsd-signature-type">string</span></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The user ID of who wants to be friend with current user</p>
-												</div>
-											</li>
-											<li>
-												<h5>info: <a href="carrierplugin.html#userinfo-1" class="tsd-signature-type">UserInfo</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The user information to <code>userId</code></p>
-												</div>
-											</li>
-											<li>
-												<h5>hello: <span class="tsd-signature-type">string</span></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The PIN for target user, or any application defined content</p>
-												</div>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-							</ul>        </li>
-							<li class="tsd-parameter">
-								<h5>on<wbr>Friends<span class="tsd-signature-symbol">: </span>function</h5>
-								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Friends<span class="tsd-signature-symbol">(</span>carrier<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a>, friends<span class="tsd-signature-symbol">: </span><a href="carrierplugin.html#friendinfo" class="tsd-signature-type">FriendInfo</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<aside class="tsd-sources">
-										</aside>
-										<div class="tsd-comment tsd-typography">
-											<div class="lead">
-												<p>The callback function to iterate the each friend item in friend list.</p>
-											</div>
-											<dl class="tsd-comment-tags">
-												<dt>callback</dt>
-												<dd><p>onFriends</p>
-												</dd>
-											</dl>
-										</div>
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>carrier: <a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Carrier node instance</p>
-												</div>
-											</li>
-											<li>
-												<h5>friends: <a href="carrierplugin.html#friendinfo" class="tsd-signature-type">FriendInfo</a><span class="tsd-signature-symbol">[]</span></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The friends list.</p>
-												</div>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-							</ul>        </li>
-							<li class="tsd-parameter">
-								<h5>on<wbr>Group<wbr>Invite<span class="tsd-signature-symbol">: </span>function</h5>
-								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Group<wbr>Invite<span class="tsd-signature-symbol">(</span>carrier<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a>, cookieCode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<aside class="tsd-sources">
-										</aside>
-										<div class="tsd-comment tsd-typography">
-											<div class="lead">
-												<p>The callback function that handle group invite.</p>
-											</div>
-											<dl class="tsd-comment-tags">
-												<dt>callback</dt>
-												<dd><p>onGroupInvite</p>
-												</dd>
-											</dl>
-										</div>
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>carrier: <a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Carrier node instance</p>
-												</div>
-											</li>
-											<li>
-												<h5>cookieCode: <span class="tsd-signature-type">string</span></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>cookie code used to join group.</p>
-												</div>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-							</ul>        </li>
-							<li class="tsd-parameter">
-								<h5>on<wbr>Ready<span class="tsd-signature-symbol">: </span>function</h5>
-								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Ready<span class="tsd-signature-symbol">(</span>carrier<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<aside class="tsd-sources">
-										</aside>
-										<div class="tsd-comment tsd-typography">
-											<div class="lead">
-												<p>The callback function to process the ready notification.
-													Application should wait this callback invoked before calling any
-												function to interact with friends.</p>
-											</div>
-											<dl class="tsd-comment-tags">
-												<dt>callback</dt>
-												<dd><p>onReady</p>
-												</dd>
-											</dl>
-										</div>
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>carrier: <a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Carrier node instance</p>
-												</div>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-							</ul>        </li>
-							<li class="tsd-parameter">
-								<h5>on<wbr>Self<wbr>Info<wbr>Changed<span class="tsd-signature-symbol">: </span>function</h5>
-								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Self<wbr>Info<wbr>Changed<span class="tsd-signature-symbol">(</span>carrier<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a>, userInfo<span class="tsd-signature-symbol">: </span><a href="carrierplugin.html#userinfo-1" class="tsd-signature-type">UserInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<aside class="tsd-sources">
-										</aside>
-										<div class="tsd-comment tsd-typography">
-											<div class="lead">
-												<p>The callback function to process the self info changed event.</p>
-											</div>
-											<dl class="tsd-comment-tags">
-												<dt>callback</dt>
-												<dd><p>onSelfInfoChanged</p>
-												</dd>
-											</dl>
-										</div>
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>carrier: <a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Carrier node instance</p>
-												</div>
-											</li>
-											<li>
-												<h5>userInfo: <a href="carrierplugin.html#userinfo-1" class="tsd-signature-type">UserInfo</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The updated user information</p>
-												</div>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-							</ul>        </li>
-							<li class="tsd-parameter">
-								<h5>on<wbr>Session<wbr>Request<span class="tsd-signature-symbol">: </span>function</h5>
-								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Session<wbr>Request<span class="tsd-signature-symbol">(</span>carrier<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a>, from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, sdp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<aside class="tsd-sources">
-										</aside>
-										<div class="tsd-comment tsd-typography">
-											<div class="lead">
-												<p>The callback function that handle session request.</p>
-											</div>
-											<dl class="tsd-comment-tags">
-												<dt>callback</dt>
-												<dd><p>onSessionRequest</p>
-												</dd>
-											</dl>
-										</div>
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>carrier: <a href="../interfaces/carrierplugin.carrier.html" class="tsd-signature-type">Carrier</a></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>Carrier node instance</p>
-												</div>
-											</li>
-											<li>
-												<h5>from: <span class="tsd-signature-type">string</span></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The ID of who sends the message</p>
-												</div>
-											</li>
-											<li>
-												<h5>sdp: <span class="tsd-signature-type">string</span></h5>
-												<div class="tsd-comment tsd-typography">
-													<p>The remote users SDP. Reference: <a href="https://tools.ietf.org/html/rfc4566">https://tools.ietf.org/html/rfc4566</a></p>
-												</div>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-							</ul>        </li>
-						</ul>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
@@ -1317,7 +702,7 @@
 							<li class="tsd-parameter">
 								<h5>on<wbr>Group<wbr>Connected<span class="tsd-signature-symbol">: </span>function</h5>
 								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Group<wbr>Connected<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+									<li class="tsd-signature tsd-kind-icon">on<wbr>Group<wbr>Connected<span class="tsd-signature-symbol">(</span>group<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.group.html" class="tsd-signature-type">Group</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -1333,13 +718,22 @@
 												</dd>
 											</dl>
 										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>group: <a href="../interfaces/carrierplugin.group.html" class="tsd-signature-type">Group</a></h5>
+												<div class="tsd-comment tsd-typography">
+													<p>The group instance .</p>
+												</div>
+											</li>
+										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 									</li>
 							</ul>        </li>
 							<li class="tsd-parameter">
 								<h5>on<wbr>Group<wbr>Message<span class="tsd-signature-symbol">: </span>function</h5>
 								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Group<wbr>Message<span class="tsd-signature-symbol">(</span>from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+									<li class="tsd-signature tsd-kind-icon">on<wbr>Group<wbr>Message<span class="tsd-signature-symbol">(</span>group<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.group.html" class="tsd-signature-type">Group</a>, from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -1357,6 +751,12 @@
 										</div>
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
+											<li>
+												<h5>group: <a href="../interfaces/carrierplugin.group.html" class="tsd-signature-type">Group</a></h5>
+												<div class="tsd-comment tsd-typography">
+													<p>The group instance .</p>
+												</div>
+											</li>
 											<li>
 												<h5>from: <span class="tsd-signature-type">string</span></h5>
 												<div class="tsd-comment tsd-typography">
@@ -1376,7 +776,7 @@
 							<li class="tsd-parameter">
 								<h5>on<wbr>Group<wbr>Title<span class="tsd-signature-symbol">: </span>function</h5>
 								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Group<wbr>Title<span class="tsd-signature-symbol">(</span>from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, title<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+									<li class="tsd-signature tsd-kind-icon">on<wbr>Group<wbr>Title<span class="tsd-signature-symbol">(</span>group<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.group.html" class="tsd-signature-type">Group</a>, from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, title<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -1394,6 +794,12 @@
 										</div>
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
+											<li>
+												<h5>group: <a href="../interfaces/carrierplugin.group.html" class="tsd-signature-type">Group</a></h5>
+												<div class="tsd-comment tsd-typography">
+													<p>The group instance .</p>
+												</div>
+											</li>
 											<li>
 												<h5>from: <span class="tsd-signature-type">string</span></h5>
 												<div class="tsd-comment tsd-typography">
@@ -1413,7 +819,7 @@
 							<li class="tsd-parameter">
 								<h5>on<wbr>Peer<wbr>List<wbr>Changed<span class="tsd-signature-symbol">: </span>function</h5>
 								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Peer<wbr>List<wbr>Changed<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+									<li class="tsd-signature tsd-kind-icon">on<wbr>Peer<wbr>List<wbr>Changed<span class="tsd-signature-symbol">(</span>group<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.group.html" class="tsd-signature-type">Group</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -1429,13 +835,22 @@
 												</dd>
 											</dl>
 										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>group: <a href="../interfaces/carrierplugin.group.html" class="tsd-signature-type">Group</a></h5>
+												<div class="tsd-comment tsd-typography">
+													<p>The group instance .</p>
+												</div>
+											</li>
+										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 									</li>
 							</ul>        </li>
 							<li class="tsd-parameter">
 								<h5>on<wbr>Peer<wbr>Name<span class="tsd-signature-symbol">: </span>function</h5>
 								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Peer<wbr>Name<span class="tsd-signature-symbol">(</span>peerId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, peerName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+									<li class="tsd-signature tsd-kind-icon">on<wbr>Peer<wbr>Name<span class="tsd-signature-symbol">(</span>group<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.group.html" class="tsd-signature-type">Group</a>, peerId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, peerName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -1453,6 +868,12 @@
 										</div>
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
+											<li>
+												<h5>group: <a href="../interfaces/carrierplugin.group.html" class="tsd-signature-type">Group</a></h5>
+												<div class="tsd-comment tsd-typography">
+													<p>The group instance .</p>
+												</div>
+											</li>
 											<li>
 												<h5>peerId: <span class="tsd-signature-type">string</span></h5>
 												<div class="tsd-comment tsd-typography">

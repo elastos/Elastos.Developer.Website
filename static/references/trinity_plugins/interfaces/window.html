@@ -64,6 +64,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Global object StatusBar.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -80,6 +87,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="window.html#persistent" class="tsd-kind-icon">PERSISTENT</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="window.html#statusbar" class="tsd-kind-icon">Status<wbr>Bar</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="window.html#temporary" class="tsd-kind-icon">TEMPORARY</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="window.html#onbatterycritical" class="tsd-kind-icon">onbatterycritical</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="window.html#onbatterylow" class="tsd-kind-icon">onbatterylow</a></li>
@@ -105,6 +113,13 @@
 					<a name="persistent" class="tsd-anchor"></a>
 					<h3>PERSISTENT</h3>
 					<div class="tsd-signature tsd-kind-icon">PERSISTENT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="statusbar" class="tsd-anchor"></a>
+					<h3>Status<wbr>Bar</h3>
+					<div class="tsd-signature tsd-kind-icon">Status<wbr>Bar<span class="tsd-signature-symbol">:</span> <a href="statusbar.html" class="tsd-signature-type">StatusBar</a></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
@@ -207,6 +222,7 @@
 					<h3>add<wbr>Event<wbr>Listener</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 						<li class="tsd-signature tsd-kind-icon">add<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../modules/cordovabatterystatusplugin.html#batteryevent" class="tsd-signature-type">batteryEvent</a>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, useCapture<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"statusTap"</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, useCapture<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -259,6 +275,41 @@
 									<div class="tsd-comment tsd-typography">
 										<p>A Boolean indicating whether events of this type will be dispatched to the registered listener before being dispatched to any EventTarget beneath it in the DOM tree.</p>
 									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">"statusTap"</span></h5>
+								</li>
+								<li>
+									<h5>listener: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>ev<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>ev: <span class="tsd-signature-type">Event</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> useCapture: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -578,6 +629,9 @@
 					<li class=" tsd-kind-interface tsd-is-not-exported">
 						<a href="notificationpromptresult.html" class="tsd-kind-icon">Notification<wbr>Prompt<wbr>Result</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-is-not-exported">
+						<a href="statusbar.html" class="tsd-kind-icon">Status<wbr>Bar</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-is-not-exported">
@@ -585,6 +639,9 @@
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="window.html#persistent" class="tsd-kind-icon">PERSISTENT</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="window.html#statusbar" class="tsd-kind-icon">Status<wbr>Bar</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="window.html#temporary" class="tsd-kind-icon">TEMPORARY</a>
@@ -619,6 +676,9 @@
 				<ul class="after-current">
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="../globals.html#media" class="tsd-kind-icon">Media</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="../globals.html#statusbar" class="tsd-kind-icon">Status<wbr>Bar</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="../globals.html#device" class="tsd-kind-icon">device</a>

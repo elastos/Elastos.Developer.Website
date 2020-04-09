@@ -83,6 +83,7 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#addcredential" class="tsd-kind-icon">add<wbr>Credential</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#addservice" class="tsd-kind-icon">add<wbr>Service</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#deletecredential" class="tsd-kind-icon">delete<wbr>Credential</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#findcredentials" class="tsd-kind-icon">find<wbr>Credentials</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#getcreated" class="tsd-kind-icon">get<wbr>Created</a></li>
@@ -92,9 +93,13 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#getpublickey" class="tsd-kind-icon">get<wbr>Public<wbr>Key</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#getpublickeycount" class="tsd-kind-icon">get<wbr>Public<wbr>Key<wbr>Count</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#getpublickeys" class="tsd-kind-icon">get<wbr>Public<wbr>Keys</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#getservice" class="tsd-kind-icon">get<wbr>Service</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#getservices" class="tsd-kind-icon">get<wbr>Services</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#getservicescount" class="tsd-kind-icon">get<wbr>Services<wbr>Count</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#getsubject" class="tsd-kind-icon">get<wbr>Subject</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#getupdated" class="tsd-kind-icon">get<wbr>Updated</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#publish" class="tsd-kind-icon">publish</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#removeservice" class="tsd-kind-icon">remove<wbr>Service</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#setsubject" class="tsd-kind-icon">set<wbr>Subject</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#sign" class="tsd-kind-icon">sign</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.diddocument.html#verify" class="tsd-kind-icon">verify</a></li>
@@ -119,6 +124,73 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>credential: <a href="didplugin.verifiablecredential.html" class="tsd-signature-type">VerifiableCredential</a></h5>
+								</li>
+								<li>
+									<h5>storePass: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onSuccess: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onError: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>err: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="addservice" class="tsd-anchor"></a>
+					<h3>add<wbr>Service</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Service<span class="tsd-signature-symbol">(</span>service<span class="tsd-signature-symbol">: </span><a href="didplugin.service.html" class="tsd-signature-type">Service</a>, storePass<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, onSuccess<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span>, onError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a new service to this DID document.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>service: <a href="didplugin.service.html" class="tsd-signature-type">Service</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The service to be added. Usually, create one with ServiceBuilder.createService().</p>
+									</div>
 								</li>
 								<li>
 									<h5>storePass: <span class="tsd-signature-type">string</span></h5>
@@ -369,7 +441,7 @@
 					<a name="getpublickey" class="tsd-anchor"></a>
 					<h3>get<wbr>Public<wbr>Key</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Public<wbr>Key<span class="tsd-signature-symbol">(</span>didString<span class="tsd-signature-symbol">: </span><a href="../modules/didplugin.html#didurl" class="tsd-signature-type">DIDURL</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="didplugin.publickey.html" class="tsd-signature-type">PublicKey</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Public<wbr>Key<span class="tsd-signature-symbol">(</span>didUrl<span class="tsd-signature-symbol">: </span><a href="../modules/didplugin.html#didurl" class="tsd-signature-type">DIDURL</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="didplugin.publickey.html" class="tsd-signature-type">PublicKey</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -378,7 +450,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>didString: <a href="../modules/didplugin.html#didurl" class="tsd-signature-type">DIDURL</a></h5>
+									<h5>didUrl: <a href="../modules/didplugin.html#didurl" class="tsd-signature-type">DIDURL</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="didplugin.publickey.html" class="tsd-signature-type">PublicKey</a></h4>
@@ -410,6 +482,72 @@
 							<aside class="tsd-sources">
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="didplugin.publickey.html" class="tsd-signature-type">PublicKey</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="getservice" class="tsd-anchor"></a>
+					<h3>get<wbr>Service</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Service<span class="tsd-signature-symbol">(</span>didUrl<span class="tsd-signature-symbol">: </span><a href="../modules/didplugin.html#didurl" class="tsd-signature-type">DIDURL</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="didplugin.service.html" class="tsd-signature-type">Service</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a service, if existing, from its DID string.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>didUrl: <a href="../modules/didplugin.html#didurl" class="tsd-signature-type">DIDURL</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="didplugin.service.html" class="tsd-signature-type">Service</a></h4>
+							<p>The searched service if any, null otherwise.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="getservices" class="tsd-anchor"></a>
+					<h3>get<wbr>Services</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Services<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="didplugin.service.html" class="tsd-signature-type">Service</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns all services currently registered in this DID document.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="didplugin.service.html" class="tsd-signature-type">Service</a><span class="tsd-signature-symbol">[]</span></h4>
+							<p>All services.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="getservicescount" class="tsd-anchor"></a>
+					<h3>get<wbr>Services<wbr>Count</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Services<wbr>Count<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the number of currently registered services in this DID document.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Number</span></h4>
+							<p>The number of services.</p>
 						</li>
 					</ul>
 				</section>
@@ -455,6 +593,73 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>storepass: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onSuccess: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onError: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>err: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="removeservice" class="tsd-anchor"></a>
+					<h3>remove<wbr>Service</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Service<span class="tsd-signature-symbol">(</span>didURL<span class="tsd-signature-symbol">: </span><a href="../modules/didplugin.html#didurl" class="tsd-signature-type">DIDURL</a>, storePass<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, onSuccess<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span>, onError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes a given service from the DID document.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>didURL: <a href="../modules/didplugin.html#didurl" class="tsd-signature-type">DIDURL</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>DID url identifier of the service to be removed.</p>
+									</div>
+								</li>
+								<li>
+									<h5>storePass: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onSuccess: <span class="tsd-signature-type">function</span></h5>
@@ -719,6 +924,9 @@
 								<a href="didplugin.diddocument.html#addcredential" class="tsd-kind-icon">add<wbr>Credential</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="didplugin.diddocument.html#addservice" class="tsd-kind-icon">add<wbr>Service</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="didplugin.diddocument.html#deletecredential" class="tsd-kind-icon">delete<wbr>Credential</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
@@ -746,6 +954,15 @@
 								<a href="didplugin.diddocument.html#getpublickeys" class="tsd-kind-icon">get<wbr>Public<wbr>Keys</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="didplugin.diddocument.html#getservice" class="tsd-kind-icon">get<wbr>Service</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="didplugin.diddocument.html#getservices" class="tsd-kind-icon">get<wbr>Services</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="didplugin.diddocument.html#getservicescount" class="tsd-kind-icon">get<wbr>Services<wbr>Count</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="didplugin.diddocument.html#getsubject" class="tsd-kind-icon">get<wbr>Subject</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
@@ -753,6 +970,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="didplugin.diddocument.html#publish" class="tsd-kind-icon">publish</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="didplugin.diddocument.html#removeservice" class="tsd-kind-icon">remove<wbr>Service</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="didplugin.diddocument.html#setsubject" class="tsd-kind-icon">set<wbr>Subject</a>
@@ -775,6 +995,12 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="didplugin.publickey.html" class="tsd-kind-icon">Public<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="didplugin.service.html" class="tsd-kind-icon">Service</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="didplugin.servicebuilder.html" class="tsd-kind-icon">Service<wbr>Builder</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="didplugin.verifiablecredential.html" class="tsd-kind-icon">Verifiable<wbr>Credential</a>

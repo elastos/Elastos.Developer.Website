@@ -74,7 +74,16 @@
 							<br><br>
 							Usage:
 							<br>
-						navigator.camera.getPicture(success, error);</p>
+							navigator.camera.getPicture((data)=&gt;{<br>
+							this.zone.run(()=&gt;{<br>
+							let base64Img = &quot;data:image/png;base64,&quot; + data<br>
+							})<br>
+							}, (err)=&gt;{<br>
+							console.log(err);<br>
+							}, {<br>
+							destinationType: CordovaCameraPlugin.Camera.DestinationType.DATA_URL,<br>
+							sourceType: CordovaCameraPlugin.Camera.PictureSourceType.PHOTOLIBRARY<br>
+						});<br></p>
 					</div>
 				</div>
 			</section>

@@ -773,7 +773,7 @@
 								<li>
 									<h5>onSuccess: <span class="tsd-signature-type">function</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Callback returning the related value.</p>
+										<p>Callback returning the  {key: theKeyValue, value: theRelatedValue}.</p>
 									</div>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-siganture">
@@ -966,7 +966,7 @@
 								<li>
 									<h5>onSuccess: <span class="tsd-signature-type">function</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Callback returning the related value.</p>
+										<p>Callback returning the {key: theKeyValue, value: theRelatedValue}.</p>
 									</div>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-siganture">
@@ -2062,7 +2062,7 @@
 								<p>After setting a system preference, the runtime broadcasts a message to all running apps.
 									The message&#39;s format is:
 									type = MessageType.IN_REFRESH
-								message = {action: &#39;preferenceChanged&#39;, &#39;key&#39;: theNewValue}</p>
+								message = {action: &#39;preferenceChanged&#39;, data: {key: theKeyValue, value: theNewValue}}.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
