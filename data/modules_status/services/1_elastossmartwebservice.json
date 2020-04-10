@@ -1,8 +1,25 @@
 {
     "name":"Elastos Smartweb Service",
-    "lastupdated":"2020.04.02",
+    "lastupdated":"2020.04.09",
     "useplatforms": true,
     "notes":"There are two components to this: gRPC server that interacts with Elastos infrastructure and gRPC clients in various programming languages so services can be accessed from any platform.",
+    "links":[
+        {
+            "title": "Elastos Smartweb Service(gRPC Server)", "url": "https://github.com/cyber-republic/elastos-smartweb-service"
+        },
+        {
+            "title": "Elastos Adenine(gRPC Python Client)", "url": "https://github.com/cyber-republic/python-grpc-adenine"
+        },
+        {
+            "title": "Elastos Adenine(gRPC Go Client)", "url": "https://github.com/cyber-republic/go-grpc-adenine"
+        },
+        {
+            "title": "Elastos Private Net", "url": "https://github.com/cyber-republic/elastos-privnet"
+        },
+        {
+            "title": "Elastos Go Playground(Run any Go Code directly on the browser)", "url": "https://github.com/cyber-republic/go-playground"
+        }
+    ],
     "releases":{
         "current":[
             {

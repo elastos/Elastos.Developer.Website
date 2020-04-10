@@ -1,6 +1,15 @@
 {
     "name":"ELA Wallet",
+    "lastupdated":"2020.04.09",
     "useplatforms": true,
+    "links":[
+        {
+            "title": "ELA Wallet(Android) Github", "url": "https://github.com/elastos/Elastos.App.UnionSquare.Android"
+        },
+        {
+            "title": "ELA Wallet(iOS) Github", "url": "https://github.com/elastos/Elastos.App.UnionSquare.iOS"
+        }
+    ],
     "releases":{
         "current":[
             {

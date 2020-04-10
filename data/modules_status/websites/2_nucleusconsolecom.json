@@ -1,8 +1,16 @@
 {
     "name":"NucleusConsole.com",
-    "lastupdated":"2020.04.02",
+    "lastupdated":"2020.04.09",
     "useplatforms": true,
     "notes":"The console will effectively lower the barrier to entry for new developers entering the blockchain space as it will allow them to easily experiment with Elastos services directly on the browser before deciding to develop their decentralized applications.",
+    "links":[
+        {
+            "title": "Nucleus Console Github", "url": "https://github.com/cyber-republic/elastos-nucleus"
+        },
+        {
+            "title": "Nucleus Console Website", "url": "https://nucleusconsole.com/"
+        }
+    ],
     "releases":{
         "current":[
             {

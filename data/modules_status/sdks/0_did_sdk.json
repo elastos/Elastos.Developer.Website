@@ -1,7 +1,18 @@
 {
     "name":"DID SDK",
-    "lastupdated":"2020.04.02",
+    "lastupdated":"2020.04.09",
     "useplatforms": true,
+    "links":[
+        {
+            "title": "Android SDK Github", "url": "https://github.com/elastos/Elastos.DID.Java.SDK"
+        },
+        {
+            "title": "iOS SDK Github", "url": "https://github.com/elastos/Elastos.DID.Swift.SDK"
+        },
+        {
+            "title": "elastOS(Trinity) Plugin Github", "url": "https://github.com/elastos/Elastos.Trinity.Plugins.DID"
+        }
+    ],
     "releases":{
         "current":[
             {

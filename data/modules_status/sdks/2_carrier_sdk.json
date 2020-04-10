@@ -1,7 +1,21 @@
 {
     "name":"Carrier SDK",
-    "lastupdated":"2020.04.02",
-    "useplatforms": true,
+    "lastupdated":"2020.04.09",
+    "useplatforms": true, 
+    "links":[
+        {
+            "title": "Native SDK Github", "url": "https://github.com/elastos/Elastos.NET.Carrier.Native.SDK"
+        },
+        {
+            "title": "Android SDK Github", "url": "https://github.com/elastos/Elastos.NET.Carrier.Android.SDK"
+        },
+        {
+            "title": "iOS SDK Github", "url": "https://github.com/elastos/Elastos.NET.Carrier.Swift.SDK"
+        },
+        {
+            "title": "elastOS(Trinity) Plugin Github", "url": "https://github.com/elastos/Elastos.Trinity.Plugins.Carrier"
+        }
+    ],
     "releases":{
         "current":[
             {

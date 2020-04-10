@@ -1,5 +1,11 @@
 {
     "name":"ETH sidechain",
+    "lastupdated":"2020.04.09",
+    "links":[
+        {
+            "title": "Node Github", "url": "https://github.com/elastos/Elastos.ELA.SideChain.ETH"
+        }
+    ],
     "releases":{
         "current":[
             {
