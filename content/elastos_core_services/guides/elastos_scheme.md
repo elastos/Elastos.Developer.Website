@@ -7,17 +7,13 @@ pre = ""
 alwaysopen = false
 +++
 
-{{< ownership "BenjaminPiette" >}}
-
-{{< todo "@BPI info about appid generation - refer to the appid setup page" >}}
-
 ## Introduction
 
 The Elastos wallet scheme is the way for DApps to request operations to be completed by an Elastos wallet, on behalf of the user. For example, if your DApp wishes to request a payment from a user, it will call the payment scheme, which will open the installed wallet app, which will proceed to the payment (because it's the only one to know private user information), and send the payment confirmation to your app.
 
 Schemes and parameters are the same for all programming environments. Nevertheless, the way to call them and get response changes. 
 
-The full reference is available {{< internallink "here" "elastos_core_services/reference/wallet_scheme.md" >}}.
+The full reference is available {{< internallink "here" "elastos_core_services/reference/elastos_scheme.md" >}}.
 
 ## Pick a wallet app that implements schemes
 
@@ -25,7 +21,7 @@ Currently, only the Elephant wallet implements the Elastos scheme and provides f
 
 ## Call a scheme
 
-{{< todo "@BPI @SongSJun" >}}
+{{< todo "@BPI" >}}
 
 {{< tabs >}} 
     {{< tab name="Kotlin" codelang="kotlin" >}} 
@@ -34,11 +30,14 @@ Explain how to use an intent to launch the scheme url
     {{< tab name="Swift" codelang="swift" >}} 
 Explain how to launch an url
     {{< /tab>}}
+    {{< tab name="elastOS" codelang="swift" >}} 
+Explain how to launch an intent
+    {{< /tab>}}
 {{< /tabs >}}
 
 ## Handle response
 
-{{< todo "@BPI @SongSJun" >}}
+{{< todo "@BPI" >}}
 
 {{< tabs >}} 
     {{< tab name="Kotlin" codelang="kotlin" >}} 
@@ -46,5 +45,8 @@ Explain how to receive response after coming back to the app
     {{< /tab >}} 
     {{< tab name="Swift" codelang="swift" >}} 
 Explain how to receive response after coming back to the app
+    {{< /tab>}}
+    {{< tab name="elastOS" codelang="swift" >}} 
+Explain how to launch an intent
     {{< /tab>}}
 {{< /tabs >}}
