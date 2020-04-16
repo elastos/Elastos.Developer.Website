@@ -51,15 +51,20 @@ Example of a raw request:
 
 Raw requests can be used only for commands with flat parameters list (ex: pay), but they won't work for commands that require sub-object in parameters (ex: credaccess claims object).
 
-### Commands list
+## Commands list
 
 | Command | Link | Description |
 | --- | --- | --- |
-| Access credentials | [ The **credaccess** command](#credaccess-command) | Request access to user credentials |
-| Issue credentials | [ The **credissue** command](#credissue-command) | Request from a credential issuer to prompt user to attach this credential to his DID |
-| Access wallet info | [ The **walletaccess** command](#walletaccess-command) | Access wallet information such as ELA address, ELA amount |
+| Access credentials | [ The **credaccess** command](#access-credentials-command) | Request access to user credentials |
+| Issue credentials | [ The **credissue** command](#issue-credential-command) | Request from a credential issuer to prompt user to attach this credential to his DID |
+| Access wallet info | [ The **walletaccess** command](#access-wallet-info-command) | Access wallet information such as ELA address, ELA amount |
 | Pay | [ The **pay** command](#pay-command) | Send secure ELA payments, with blockchain confirmations |
-| Sign data | [ The **sign** command](#sign-command) | Sign any kind of data on behalf of a user in order to prove that this data belongs to him |
+| Ethereum transaction | [ The **esctransaction** command ](#esc-transaction-command) | Publish an ethereum transaction on the ethereum side chain |
+| DID transaction | [ The **didtransaction** command ](#did-transaction-command) | Publish a DID transaction on the DID sidechain |
+| DPoS vote transaction | [ The **dposvotetransaction** command ](#dpos-vote-transaction-command) | Publish a DPoS vote transaction on the ELA mainchain |
+| Register as CR member | [ The **crmemberregister** command ](#register-as-a-cr-member-command) | Registers a new CR member candidate on the ELA mainchain |
+| Vote for CR members | [ The **crmembervote** command ](#vote-for-cr-members-command) | Vote for CR members |
+| Sign data | [ The **sign** command](#sign-data-command) | Sign any kind of data on behalf of a user in order to prove that this data belongs to him |
 
 ## Transport
 
@@ -1148,7 +1153,7 @@ JWT Payload:
 
 ## Register as a CR member Command
 
-{{< todo "To be finalized - incomplete" >}}
+Registers a CR council member candidate so that other persons can vote for her/him.
 
 ### Endpoint
 
