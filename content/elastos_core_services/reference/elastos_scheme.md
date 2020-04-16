@@ -822,7 +822,7 @@ JWT Payload:
   "exp": 1566382213,
   "redirecturl": "myapp://elastosschemeresponse",
   "amount": 20.50,
-  "receiver": EfPaLGVqoBTCRtioLN5CFbExBVu7NsgFpX
+  "receiver": "EfPaLGVqoBTCRtioLN5CFbExBVu7NsgFpX"
 }
 {{% /highlight %}}
 
