@@ -16,6 +16,13 @@
         ],
         "next":[
             {
+                "date":"2020.04", "quality": "Production", "content":[
+                    "Optimize SPV synchronization speed",
+                    "Add check to the \"expires\" field of DID transaction",
+                    "Fix the bug about the time format in \"resolveDID\""
+                ]
+            },
+            {
                 "date":"2020.08", "quality": "Production", "content":[
                     "Deactivate DID",
                     "DID Spec v0.3"
