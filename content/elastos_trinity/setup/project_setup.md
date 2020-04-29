@@ -86,7 +86,7 @@ $ trinity-cli run -p android
 
 That will package your application as a EPK file, send it to your device, install it inside elastOS, and run it.
 
-### Developping your DApp
+### Developing your DApp
 
 After your app is launched inside elastOS, you can directly edit your app content from its src/ folder. Changes will automatically reload in elastOS.
 
