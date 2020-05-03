@@ -9,10 +9,19 @@
 
 h2 {
 	font-size: 2rem;
+	font-weight: 300;
 }
 
 h3 {
 	font-size: 1.8rem;
+	font-weight: 300;
+	color: #20a8d8;
+}
+
+h5 {
+	font-size: 1.2rem;
+	color: #20a8d8;
+	font-weight: 300;
 }
 
 .ela-folder:before {
@@ -25,6 +34,10 @@ h3 {
     content: "\f15b";
     width:20px;
     display:inline-block
+}
+
+ol > li {
+	margin-bottom: 24px;
 }
 
 .tab-button{
@@ -54,7 +67,7 @@ h3 {
 .tab-content .tab-pane pre {
 	margin:0
 }
-/* Treatment of copy buttons inside a tab module */ 
+/* Treatment of copy buttons inside a tab module */
 /*.tab-content .copy, .tab-content .copied{
 	display: none;
 }
@@ -210,7 +223,7 @@ h3 {
     text-align: center;
     color: #FFF;
 	font-weight: bold;
-	
+
 }
 
 .apititle:hover {
@@ -219,7 +232,7 @@ h3 {
 }
 
 .apidescription {
-	margin-top:20px;	
+	margin-top:20px;
 	font-size: 20px
 }
 
@@ -324,4 +337,45 @@ h3 {
 .module-status ul {
 	margin-top:0;
 	margin-bottom:0;
+}
+
+.hero .hero-item {
+	font-size: 15px;
+	font-family: "Roboto", sans-serif;
+	line-height: 1em;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	text-rendering: optimizeLegibility;
+	outline: none;
+	box-sizing: inherit;
+	color: #242A31;
+	border: 1px solid #E6ECF1;
+	position: relative;
+	grid-area: next;
+	align-self: stretch;
+	box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+	align-items: center;
+	justify-self: stretch;
+	border-radius: 3px;
+	flex-direction: row;
+	text-decoration: none;
+	background-color: #FFFFFF;
+	-webkit-box-align: center;
+	page-break-inside: avoid;
+	-webkit-box-orient: horizontal;
+	-webkit-transition: border 250ms ease;
+	-webkit-box-direction: normal;
+
+	margin: 0 24px;
+	padding: 24px 12px;
+
+	cursor: pointer;
+
+	line-height: 1.4;
+}
+
+.hero .hero-item:hover {
+	transition-property: border-color;
+	transition-duration: 0.5s;
+	border-color: rgb(33, 49, 61);
 }

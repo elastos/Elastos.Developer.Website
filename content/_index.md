@@ -7,29 +7,48 @@ pre = ""
 alwaysopen = false
 +++
 
-# Elastos documentation
 
-{{< youtube vaJ5Pguxd4M  >}}
+{{< figure src="/Elastos_Logo_Stacked_RGB.png" height="200" >}}
 
-Welcome! You are probably here because you heard about Elastos and want to know what this is about, or you already know Elastos and you're looking for more advanced answers or APIs.
+{{< hero >}}
+    {{< heroitem title="Build" link="/build" >}}
+        Get Started Building on <b>elastOS</b> or learn how to integrate any dApp with Elastos services.
+    {{< /heroitem >}}
+    
+    {{< heroitem title="Learn" link="/learn" >}}
+        Discover how Elastos works and learn about all the various components that make up the Elastos ecosystem.
+    {{< /heroitem >}}   
+    
+    {{< heroitem title="Discover" link="/discover" >}}
+        Find tutorials, demos and dApps already built on Elastos.
+    {{< /heroitem >}}
+{{< /hero >}}
 
-Here is where you can start:
+{{< spacer 2 >}}
 
-## Discover
+## Welcome to our Developer Documentation
 
-Just arrived? Not sure what Elastos is yet? Make sure to read {{< internallink "what is Elastos?" "discover_elastos/what_is_elastos/_index.md" >}} to get some background.
+This is our comprehensive developer website where you'll find everything on Elastos that a developer needs. 
 
-## Start with Elastos
+There's a lot here and we highly suggest you visit on our Telegram developer channel or if you have general questions 
+join our community chat channel.
 
-* App developer
-    * {{< internallink "Setup Elastos core services" "get_started/setup/setup_intro.md" >}} first (you **don't** need to read the Elastos blockchain section yet if you're new to Elastos), then try a few {{< internallink "samples" "elastos_core_services/samples/_index.md">}} and start reading our {{< internallink "core services guides" "elastos_core_services/guides/_index.md" >}}.
-* Miner
-    * {{< internallink "Mine ELA" "elastos_blockchain/connect_to_elastos/mine_and_secure/merged_mining.md" >}}
-    * {{< internallink "Run your own supernode" "elastos_blockchain/connect_to_elastos/mine_and_secure/supernode.md" >}}
-* Crypto exchange
-    * {{< internallink "Connect to the ELA main chain" "elastos_blockchain/connect_to_elastos/exchanges/_index.md" >}}
+{{< spacer 1 >}}
 
-More advanced Elastos developers may want to directly talk to the Elastos mainchain and sidechains through RPC calls. The {{< internallink "Elastos blockchain section" "/elastos_blockchain/_index.md">}} is a good starting point.
+{{< hero >}}
+    {{< heroitem title="Join the Developer Chat" link="https://t.me/elastosdev" linkBlank="true" >}}
+        Ask developer questions and get support - <a target="_blank" href="https://t.me/elastosdev">https://t.me/elastosdev</a>
+    {{< /heroitem >}}
+    
+    {{< heroitem title="Join the Community Chat" link="https://t.me/elastosgroup" linkBlank="true" >}}
+        Ask general questions and learn about Elastos - <a target="_blank" href="https://t.me/elastosgroup">https://t.me/elastosgroup</a>
+    {{< /heroitem >}}
+{{< /hero >}}
+
+{{< spacer 2 >}}
+
 
 ## Contribute
-So you love Elastos and would like to bring your best skills to make it even better? Here is how to {{< internallink "contribute to the platform" "contribute/_index.md" >}}  with hundreds of other great developers.
+
+So you love Elastos and would like to bring your best skills to make it even better? Here is 
+how to {{< internallink "contribute to the platform" "resources/contribute/_index.md" >}} with hundreds of other great developers.

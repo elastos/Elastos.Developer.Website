@@ -95,3 +95,11 @@ Here is some automatically higlighted code:
 ### Picture
 
 {{< figure src="/demo_picture.png" >}}
+
+## Table
+
+
+Name    | Age
+-------:|:----:
+Bob     | 27
+Alice   | 23

@@ -1,0 +1,30 @@
+{{ if .Params.linkBlank }}
+  <div class="col hero-item" onclick="javascript:window.open('{{ .Get "link" }}')">
+{{ else }}
+  <div class="col hero-item" onclick="javascript:window.location.href='{{ .Get "link" }}'">
+{{ end }}
+  {{if .Params.rightArrow }}
+  <svg
+      preserveAspectRatio="xMidYMid meet"
+      height="3em"
+      width="3em"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke="#20a8d8"
+      style="margin-top: 4px; float: right;"
+  >
+    <g>
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </g>
+  </svg>
+  {{end}}
+  <h3 style="margin-top: 0;">{{ .Get "title" }}</h3>
+  <p>
+    {{ .Inner }}
+  </p>
+</div>

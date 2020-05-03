@@ -186,16 +186,16 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
         display: inline;
     }
 }
+
 #sidebar {
-    /*background-color: #322A38;*/
-    background-color:#f4fcff;
-    position: fixed;
-    top: 0;
-    width: 350px;
-    bottom: 0;
-    left: 0;
-    font-weight: 400;
-    font-size: 15px;
+  background-color: #f4fcff;
+  position: fixed;
+  top: 0;
+  width: 350px;
+  bottom: 0;
+  right: 70%;
+  font-weight: 400;
+  font-size: 15px;
 }
 #sidebar a {
     /*color: #ccc;*/
@@ -284,7 +284,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 #sidebar ul.topics > li > a {
     line-height: 2rem;
     font-size: 1.1rem;
-    font-weight: bold;
+    font-weight: 300;
 }
 #sidebar ul.topics > li > a b {
     opacity: 0.5;
@@ -343,8 +343,10 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 #body {
     position: relative;
-    margin-left: 350px;
+    margin-left: 30%;
     min-height: 100%;
+    max-width: 1120px;
+    background-color: #fff;
 }
 #body img, #body .video-container {
     margin: 3rem auto;
@@ -433,6 +435,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     right: 0;
 }
 #body-inner {
+    text-align: left;
     margin-bottom: 5rem;
 }
 #chapter {

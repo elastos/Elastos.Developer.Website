@@ -1,5 +1,5 @@
 <nav id="sidebar" class="{{if $.Site.Params.showVisitedLinks }}showVisitedLinks{{end}}">
-  
+
   <div style="z-index: 999999999;background:rgba(255,0,0,0.6);color:white;font-weight:bold;text-align:center">
     <i class="fas fa-exclamation-triangle"></i> Site under construction <i class="fas fa-exclamation-triangle"></i>
   </div>
@@ -24,8 +24,8 @@
           {{ $homePage := (.Site.GetPage "/_index.md") }}
           {{ template "section-tree-nav" dict "sect" $homePage "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
         {{ end }}
-         
-        {{if eq .Site.Params.ordersectionsby "title"}}  
+
+        {{if eq .Site.Params.ordersectionsby "title"}}
           {{range .Site.Home.Sections.ByTitle}}
             {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
           {{end}}
@@ -33,7 +33,7 @@
           {{range .Site.Home.Sections.ByWeight}}
             {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
           {{end}}
-        {{end}} 
+        {{end}}
     </ul>
 
     <div class="menubuttons">
@@ -51,7 +51,7 @@
         <h3>{{ if not $disableShortcutsTitle}}{{ T "Shortcuts-Title"}}{{ end }}</h3>
         <ul>
           {{ range sort . "Weight"}}
-              <li> 
+              <li>
                   {{.Pre}}<a class="padding" href="{{.URL | absLangURL }}" target="_blank">{{safeHTML .Name}}</a>{{.Post}}
               </li>
           {{end}}
@@ -97,7 +97,7 @@
         </a>
         </li>
       {{end}}
-      
+
       {{ if $showvisitedlinks}}
         <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> {{T "Clear-History"}}</a></li>
       {{ end }}
@@ -119,7 +119,7 @@
     {{safeHTML .Params.head}}
     {{ $isParent := or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
     {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
-    <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item 
+    <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item
         {{if $isParent }}parent{{end}}
         {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}
         ">
@@ -149,24 +149,24 @@
             {{ $currentNode.Scratch.Set "pages" (.Pages | union .Sections) }}
           {{end}}
           {{ $pages := ($currentNode.Scratch.Get "pages") }}
-          
-        {{if eq .Site.Params.ordersectionsby "title"}}  
+
+        {{if eq .Site.Params.ordersectionsby "title"}}
           {{ range $pages.ByTitle }}
-            {{ if and .Params.hidden (not $.showhidden) }} 
+            {{ if and .Params.hidden (not $.showhidden) }}
             {{else}}
               {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
             {{end}}
           {{ end }}
         {{else}}
           {{ range $pages.ByWeight }}
-            {{ if and .Params.hidden (not $.showhidden) }} 
+            {{ if and .Params.hidden (not $.showhidden) }}
             {{else}}
               {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
             {{end}}
           {{ end }}
         {{end}}
         </ul>
-      {{ end }}        
+      {{ end }}
     </li>
   {{else}}
     {{ if not .Params.Hidden }}
