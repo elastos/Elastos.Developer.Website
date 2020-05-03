@@ -12,7 +12,9 @@ alwaysopen = false
 
 {{< hero >}}
     {{< heroitem title="Build" link="/build" >}}
-        Get Started Building on <b>elastOS</b> or learn how to integrate any dApp with Elastos services.
+        Get Started Building on our flagship app <b>elastOS</b> or learn how to integrate any dApp with Elastos services.
+        <br/><br/>
+        Download it <a target="_blank" href="https://elastos.academy/elastosbrowser">HERE</a>.
     {{< /heroitem >}}
     
     {{< heroitem title="Learn" link="/learn" >}}
@@ -20,7 +22,13 @@ alwaysopen = false
     {{< /heroitem >}}   
     
     {{< heroitem title="Discover" link="/discover" >}}
-        Find tutorials, demos and dApps already built on Elastos.
+        Find tutorials, demos and dApps already built on Elastos.<br/>
+        <br/>
+        Learn about 
+        <a target="_blank" href="https://www.nucleusconsole.com">Nucleus Console</a>, 
+        <a target="_blank" href="http://elastosdma.org">Elastos DMA</a>, 
+        <a target="_blank" href="https://elajs.com">elajs.com</a>, 
+        our partners and other tools we have.
     {{< /heroitem >}}
 {{< /hero >}}
 
@@ -52,3 +60,5 @@ join our community chat channel.
 
 So you love Elastos and would like to bring your best skills to make it even better? Here is 
 how to {{< internallink "contribute to the platform" "resources/contribute/_index.md" >}} with hundreds of other great developers.
+
+{{< spacer 8 >}}

@@ -3,6 +3,11 @@
     width: 70%
 }
 
+body[data-url="/build/elastos/"] h1 {
+	text-transform: none;
+	font-family: "Noto Sans", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+
 #body a.highlight {
 	line-height: 1.5 !important;
 }
@@ -367,11 +372,19 @@ ol > li {
 	-webkit-box-direction: normal;
 
 	margin: 0 24px;
-	padding: 24px 12px;
+	padding: 24px 12px 12px;
 
 	cursor: pointer;
 
 	line-height: 1.4;
+}
+
+.hero .hero-item.no-pad {
+	padding: 0;
+}
+
+.hero .hero-item.no-pad figure {
+	margin: 0;
 }
 
 .hero .hero-item:hover {

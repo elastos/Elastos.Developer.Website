@@ -3553,7 +3553,7 @@ tbody.collapse.in {
     float: left; } }
 
 .navbar-collapse {
-  max-height: 350px;
+  max-height: 300px;
   overflow-x: visible;
   padding-right: 15px;
   padding-left: 15px;
@@ -5829,7 +5829,7 @@ Copyright (c) 2012 Dan Eden*/
 }
 
 /* -------------------------------
- Custom CSS for DocStrap 
+ Custom CSS for DocStrap
  --------------------------------- */
 
 .method-doc-label {
