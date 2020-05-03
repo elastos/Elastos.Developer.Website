@@ -15,5 +15,30 @@ Similar to the Operating System on a mobile device, users need a trustworthy loc
 
 For example, the mainchain employs a hybrid consensus of AuxPoW + DPoS where the blocks are packaged by merged miners while they're signed and verified by DPoS supernodes. The DID sidechain and the token sidechain employ PoW consensus while Ethereum sidechain employs DPoS consensus thereby leading to faster block time for itself. In other words, **each sidechain is independent of other sidechains** and can function independently while its **security is guaranteed by the merged miners** while transferring assets from one sidechain to another or from sidechain to mainchain or from mainchain to sidechain. In this way, the security is guaranteed by merged miners, scalibility is guaranteed by sidechains structure while the decentralization is guaranteed by the way the blockchain works. 
 
-Read more:
-{{< children >}}
+{{< spacer 1 >}}
+
+{{< hero >}}
+    {{< heroitem link="/learn/blockchain/consensus" rightArrow="true" >}}
+        <h5>Elastos Mainchain - Consensus Mechanism</h5>
+    {{< /heroitem >}}
+{{< /hero >}}
+
+{{< spacer 2 >}}
+
+#### Or Jump To:
+
+{{< spacer 1 >}}
+
+{{< hero >}}
+    {{< heroitem title="Sidechains" link="/learn/blockchain/sidechains" >}}
+        
+    {{< /heroitem >}}
+    
+    {{< heroitem title="Tokenomics of ELA" link="/learn/blockchain/tokenonmics" >}}
+        
+    {{< /heroitem >}}
+    
+    {{< heroitem title="Mainnet, Testnet" link="/learn/blockchain/testnet_mainnet" >}}
+        
+    {{< /heroitem >}}   
+{{< /hero >}}

@@ -40,3 +40,14 @@ Remember that if you would like to deploy your app on mainnet, it means one of t
 - Wallet Service
 - Sidechain Service(includes DID, token, ethereum, etc)
 - MISC API Service
+
+{{< spacer 1 >}}
+
+{{< hero >}}
+    {{< heroitem link="/learn/blockchain/tokenomics" leftArrow="true" >}}
+        <h5 style="text-align: right;">Tokenomics of ELA</h5>
+    {{< /heroitem >}}
+    {{< heroitem link="/learn" rightArrow="true" >}}
+        <h5>Back to Index</h5>
+    {{< /heroitem >}}
+{{< /hero >}}

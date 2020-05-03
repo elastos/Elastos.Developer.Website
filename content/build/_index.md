@@ -12,15 +12,15 @@ alwaysopen = true
 {{< spacer 1 >}}
 
 {{< hero >}}
-    {{< heroitem title="elastOS" link="/build" >}}
+    {{< heroitem title="elastOS" link="/build/elastos" >}}
         Create dApps as elastOS capsules in our mobile app, access our rich library of plugins and growing user base.
     {{< /heroitem >}}
     
-    {{< heroitem title="Native dApps" link="/learn" >}}
+    {{< heroitem title="Native dApps" link="/build/dapps" >}}
         Build any dApp using our EVM-compatible sidechain and optional P2P Carrier Network or Hive Storage Layer.
     {{< /heroitem >}}   
     
-    {{< heroitem title="Services & SDKs" link="/discover" >}}
+    {{< heroitem title="Services & SDKs" link="/build/services" >}}
         Use our decentralized services and SDKs to create revolutionary products for "The Modern Internet".
     {{< /heroitem >}}
 {{< /hero >}}
@@ -37,9 +37,13 @@ to make developing easier, not to mention the secure runtime environment that El
 {{< spacer 1 >}}
 
 {{< hero >}}
-    {{< heroitem link="https://elastos.academy/elastosbrowser" rightArrow="true" linkBlank="true" >}}
-        <h5>Learn About and Download the elastOS App here</h5>
+    {{< heroitem link="https://elastos.academy/elastosbrowser" linkBlank="true" >}}
+        <h5>Download the elastOS App Here or find it on the Play Store</h5>
     {{< /heroitem >}}
+    {{< heroitem link="/build/elastos/" rightArrow="true">}}
+        <h5>Get Started Building on elastOS</h5>
+    {{< /heroitem >}}
+    
 {{< /hero >}}
 
 {{< spacer 8 >}}

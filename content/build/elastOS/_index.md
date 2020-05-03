@@ -28,6 +28,8 @@ alwaysopen = false
 elastOS runs dApps called **"Capsules"** which are built on Ionic. It's easy to package your dApp into a capsule 
 using our handy **trinity-cli** tool.  
 
+{{< spacer 1 >}}
+
 {{< hero >}}
     {{< heroitem link="/build/elastos/basics" rightArrow="true" >}}
         <h5>To Get Started, Read the Basics Here First</h5>

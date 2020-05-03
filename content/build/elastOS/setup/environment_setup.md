@@ -93,10 +93,10 @@ adb --version
     * Then on linux: adb devices
     * You should be able to see your device ID in the list
 
-**During the next steps, always install and run trinity-cli from WSL.**
+{{< spacer 2 >}}
 
-You can now go on with installing Trinity CLI.
-
-### Next steps
-
-You can now create a first elastOS DApp, and run it on your device. Check the {{< internallink "trinity project setup page" "elastos_trinity/setup/project_setup.md" >}}
+{{< hero >}}
+    {{< heroitem link="/build/elastos/setup/project_setup" rightArrow="true" >}}
+        <h5>You can now create a elastOS DApp, next we'll setup your first project</h5>
+    {{< /heroitem >}}
+{{< /hero >}}

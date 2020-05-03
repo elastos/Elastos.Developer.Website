@@ -1,5 +1,5 @@
 +++
-title = "Consensus mechanism"
+title = "Consensus Mechanism"
 weight = 10
 chapter = false
 pre = ""
@@ -43,3 +43,14 @@ The DPoS consensus for the Elastos blockchain works differently than a typical D
 4. How do normal nodes know which arbitrator is on-duty? There is a sequence of on-duty arbitrators that advances every 72 minutes. This is determined by the public keys of each arbitrator. Every proposal is proposed by a different on-duty arbitrator because arbitrators rotate after each block. Each round consists of 36 blocks, each of which lasts roughly 72 minutes. Therefore, the arbitrator that will be on-duty is determined beforehand. An election occurs every 72 minutes and determines the order of the on-duty arbitrators. There is a list of arbitrators and their respective votes that is cached in every PoW node which is accessible to anyone. From this resource, it is quite easy to check which arbitrator is going to be on-duty at any point in time.
 {{< figure src="../consensus_images/how_arbitrators_work_4.png" >}}
 5. Every arbitrator can vote or withdraw its vote at anytime. At the beginning of the nth round, the votes will be collected for n+1, n+2 round so the sequence of on-duty arbitrators is known by nodes beforehand.
+
+{{< spacer 1 >}}
+
+{{< hero >}}
+    {{< heroitem link="/learn/blockchain" leftArrow="true" >}}
+        <h5 style="text-align: right;">Elastos Blockchain</h5>
+    {{< /heroitem >}}
+    {{< heroitem link="/learn/blockchain/sidechains" rightArrow="true" >}}
+        <h5>Sidechains</h5>
+    {{< /heroitem >}}
+{{< /hero >}}

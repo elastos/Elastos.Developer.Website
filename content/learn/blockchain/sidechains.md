@@ -48,3 +48,14 @@ Sidechains aside, there are other elements of the Elastos infrastructure which s
 For autonomous trust, authentication, and smart contract execution, payments processing, and achieving consensus, blockchain and sidechains are utilized. Whereas for daily communications relaying data from one point to another and storing data, other components of Elastos such as Carrier and Hive are utilized. In effect, there are multiple types of peer-to-peer networks that are drawn on to facilitate various processes in the Elastos ecosystem. In that way, Elastos’ truest identity is a massive network of distributed computers working synergistically to solve the core problems of the traditional internet infrastructure.
 
 {{< figure src="../sidechains_images/elastos_three_networks.png" >}}
+
+{{< spacer 1 >}}
+
+{{< hero >}}
+    {{< heroitem link="/learn/blockchain/consensus" leftArrow="true" >}}
+        <h5 style="text-align: right;">Consensus Mechanism</h5>
+    {{< /heroitem >}}
+    {{< heroitem link="/learn/blockchain/tokenomics" rightArrow="true" >}}
+        <h5>Tokenomics of ELA</h5>
+    {{< /heroitem >}}
+{{< /hero >}}

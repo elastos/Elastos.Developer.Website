@@ -39,4 +39,17 @@ Another way to look at the elastos platform is to imagine it being a self sustai
 
 ### Any existing smart contract VM may be ported to Elastos
 
+
 Elastos provides a platform for any kind of DApps to be built that can run directly on the device instead of running on top of the blockchain itself like most DApps today. This creates an incentive to port existing VMs(eg. NEO, Ethereum, etc) from other blockchains to be run on top of elastos, thereby leading to the true interoperability between all the different kinds of blockchains all running under the same umbrella that provides solutions to three of the most common problems faced today by most blockchains and DApps — scalability, security and decentralization, all without sacrificing anything in the process.
+
+
+{{< spacer 1 >}}
+
+{{< hero >}}
+    {{< heroitem link="/learn/blockchain/sidechains" leftArrow="true" >}}
+        <h5 style="text-align: right;">Sidechains</h5>
+    {{< /heroitem >}}
+    {{< heroitem link="/learn/blockchain/testnet_mainnet" rightArrow="true" >}}
+        <h5>Testnet, Mainnet</h5>
+    {{< /heroitem >}}
+{{< /hero >}}
