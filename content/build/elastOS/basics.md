@@ -17,8 +17,13 @@ alwaysopen = false
     - camera
     - fingerprint reader
     - QR scanner
+    - storage and other common Cordova plugins
     
 - elastOS provides a set of custom plugins to access the Elastos ecosystem
+
+    - Hive Storage
+    - DID Sidechain
+    - ETH Sidechain - **Coming Soon**
 
 {{< spacer 2 >}}
 
