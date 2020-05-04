@@ -14,11 +14,11 @@ The modular architecture provides a solid base for any industry vertical in the 
 
 {{< hero >}}
     {{< heroitem link="https://hyperconnect.io" linkBlank="true" >}}
-        <h4>Main Website - <a target="_blank" href="https://hyperconnect.io">https://hyperconnect.io</a></h4>
+        <h4>Main Website - <a href="#">https://hyperconnect.io</a></h4>
     {{< /heroitem >}}
     
     {{< heroitem link="https://t.me/elastosgroup" linkBlank="true" >}}
-        <h4>Documentation - <a target="_blank" href="https://docs.hyperconnect.io">https://docs.hyperconnect.io</a></h4>
+        <h4>Documentation - <a href="#">https://docs.hyperconnect.io</a></h4>
     {{< /heroitem >}}
 {{< /hero >}}
 

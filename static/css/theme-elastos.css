@@ -376,9 +376,11 @@ blockquote > p {
 }
 
 .hero .hero-item {
+	margin: 12px 0;
+}
+
+.hero .hero-item.shadow > .col-inner {
 	font-size: 15px;
-	font-family: "Roboto", sans-serif;
-	line-height: 1em;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
 	text-rendering: optimizeLegibility;
@@ -402,8 +404,8 @@ blockquote > p {
 	-webkit-transition: border 250ms ease;
 	-webkit-box-direction: normal;
 
-	margin: 0 24px;
-	padding: 24px 12px 12px;
+	height: 100%;
+	padding: 18px 12px;
 
 	cursor: pointer;
 

@@ -20,13 +20,13 @@ alwaysopen = false
 {{< spacer 2 >}}
 
 {{< hero >}}
-    {{< heroitem link="#" nopad="true">}}
+    {{< heroitem link="#" nopad="true" noshadow="true">}}
         {{< figure src="/build/elastos/WechatIMG94.jpeg" width="200" >}}
     {{< /heroitem >}}
-    {{< heroitem link="#" nopad="true">}}
+    {{< heroitem link="#" nopad="true" noshadow="true">}}
         {{< figure src="/build/elastos/WechatIMG95.jpeg" width="200" >}}
     {{< /heroitem >}}
-    {{< heroitem link="#" nopad="true">}}
+    {{< heroitem link="#" nopad="true" noshadow="true">}}
         {{< figure src="/build/elastos/WechatIMG96.jpeg" width="200" >}}
     {{< /heroitem >}}
 {{< /hero >}}
