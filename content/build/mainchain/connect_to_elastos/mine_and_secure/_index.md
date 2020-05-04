@@ -7,4 +7,4 @@ pre = ""
 alwaysopen = false
 +++
 
-{{< redirect href="/build/services/mainchain/connect_to_elastos/mine_and_secure/merged_mining" >}}
+{{< redirect href="/build/mainchain/connect_to_elastos/mine_and_secure/merged_mining" >}}

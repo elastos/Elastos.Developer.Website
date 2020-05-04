@@ -11,45 +11,44 @@ alwaysopen = false
 
 ## 1. Hosted Public Services or SDKs to Build On
 
+## 2. Nodes You Should Deploy Yourself for Less Common Use Cases
+
 To ease development for common use cases, we host an Elastos ETH Sidechain node and provide SDKs for the Elastos Hive
 storage service and Elastos Carrier P2P communication layer.
 
 {{< spacer 1 >}}
 
 {{< hero >}}
-    {{< heroitem title="ETH Sidechain" link="/build/services/eth_sidechain" >}}
+    {{< heroitem title="ETH Sidechain" link="https://elaeth.io" linkBlank="true" >}}
         Connect your <b>web3</b> to our hosted RPC ports just like you would to Ethereum.<br/><br/>More info at <a target="_blank" href="https://elaeth.io">elaeth.io</a> or click <a>HERE</a>. 
     {{< /heroitem >}}
     
-    {{< heroitem title="Hive Storage" link="/build/services/" >}}
+    {{< heroitem title="Hive Storage" link="https://github.com/elastos?q=hive" linkBlank="true" >}}
         Use our IPFS and extendable decentralized storage layer for your dApps by integrating our SDKs in either
         Java, Swift or C++.
     {{< /heroitem >}}   
     
-    {{< heroitem title="Carrier Network" link="/discover" >}}
+    {{< heroitem title="Carrier Network" link="https://github.com/elastos?q=carrier" linkBlank="true" >}}
         Build secure dApps with our P2P network and E2E encryption. Our Carrier network allows you to proxy data to ensure it 
         reaches your recipient reliably.
     {{< /heroitem >}}
 {{< /hero >}}
 
-{{< spacer 1 >}}
-
-## 2. Nodes You Should Deploy Yourself for Less Common Use Cases
-
-{{< spacer 1 >}}
+{{< spacer 2 >}}
 
 {{< hero >}}
-    {{< heroitem title="ELA Mainchain" link="/build/services/hive" >}}
+    {{< heroitem title="ELA Mainchain" link="/build/mainchain" >}}
         Run an instance of the Elastos (ELA) Mainchain to access its RPC interface or use our CLI tool to
         manage a wallet or connect to the blockchain directly.
     {{< /heroitem >}}
     
-    {{< heroitem title="DID Sidechain" link="/build/services/" >}}
-        We recommend building on our elastOS app which has DID plugins, but  
+    {{< heroitem title="DID Sidechain" link="https://github.com/elastos/Elastos.DID.Java.SDK" linkBlank="true" >}}
+        We recommend building on our elastOS app which has DID plugins, but you can also deploy a DID node yourself.
     {{< /heroitem >}}   
     
-    {{< heroitem title="Services" link="/discover" >}}
-        Use our decentralized services to create revolutionary products for "The Modern Internet".
+    {{< heroitem title="Wallet Service" link="https://github.com/elastos/Elastos.ORG.Wallet.Service" >}}
+        This repo provide simple HTTP Restful API for developers to interact with elastos blockchain. 
+        You may need to construct your own local node to use some of these API.
     {{< /heroitem >}}
 {{< /hero >}}
 

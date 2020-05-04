@@ -2,7 +2,7 @@
 
 +++
 title = "ELA Mainchain"
-weight = 10
+weight = 15
 chapter = false
 pre = ""
 alwaysopen = false
@@ -21,15 +21,15 @@ alwaysopen = false
 {{< spacer 2 >}}
 
 {{< hero >}}
-    {{< heroitem title="Guides" link="/build/services/mainchain/guides" >}}
+    {{< heroitem title="Guides" link="/build/mainchain/guides" >}}
         Learn how to use the ELA CLI to interact with a local ELA node
     {{< /heroitem >}}
     
-    {{< heroitem title="Reference" link="/build/services/mainchain/reference" >}}
+    {{< heroitem title="Reference" link="/build/mainchain/reference" >}}
         Helpful API Documentation
     {{< /heroitem >}}   
     
-    {{< heroitem title="Connect to Elastos" link="/build/services/mainchain/connect_to_elastos" >}}
+    {{< heroitem title="Connect to Elastos" link="/build/mainchain/connect_to_elastos" >}}
         Run your own local ELA node or connect your crypto exchange to Elastos
     {{< /heroitem >}}
 {{< /hero >}}

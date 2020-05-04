@@ -8,4 +8,4 @@ alwaysopen = false
 draft = false
 +++
 
-{{< redirect href="/build/services/mainchain/guides/ela_cli" >}}
+{{< redirect href="/build/mainchain/guides/ela_cli" >}}

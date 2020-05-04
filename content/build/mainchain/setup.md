@@ -18,7 +18,7 @@ alwaysopen = false
 
 ## Using the ELA CLI
 
-The {{< internallink "ELA CLI" "/build/services/mainchain/guides/ela_cli.md" >}} is a command line interface that helps you talk to a ELA (mainchain) node.
+The {{< internallink "ELA CLI" "/build/mainchain/guides/ela_cli.md" >}} is a command line interface that helps you talk to a ELA (mainchain) node.
 
 This tool is built at the same time as the ELA node (make command). You can find more details at our Github repo [https://github.com/elastos/Elastos.ELA.Client](https://github.com/elastos/Elastos.ELA.Client).
 
