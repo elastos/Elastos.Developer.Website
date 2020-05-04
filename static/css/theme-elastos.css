@@ -64,6 +64,10 @@ ol > li {
 	margin-bottom: 24px;
 }
 
+#sidebar ul.topics > li > a {
+	color: #292929;
+}
+
 blockquote {
 	background-color: #f4fcff;
 }

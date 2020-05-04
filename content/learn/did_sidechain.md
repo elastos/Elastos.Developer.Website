@@ -46,7 +46,7 @@ Elastos DID is generated, verified and deposited based on Elastos DID SideChain.
 By issuing Universal IDs (UIDs) to everyone on the internet, a blockchain automates trust. In a blockchain-based 
 system of exchange, transactions occur only between individuals, thereby dissolving central authorities and intermediaries.
 
-### Tamper-Proof, Interoperable Identification for Everyone
+#### Tamper-Proof, Interoperable Identification for Everyone
 
 Today’s internet is dominated by large companies that make you log in with their in-house logins to access your data. 
 An open source Universal ID (UID) system like Elastos DID allows you to trust code not corporations controlling your data.
@@ -56,7 +56,7 @@ An open source Universal ID (UID) system like Elastos DID allows you to trust co
 On Elastos the DID Sidechain employs a PoW consensus and is merged-mined with ELA allowing it to leverage the same 
 security and hashpower provided to the Elastos Mainchain by the Bitcoin network.
 
-### Live Since July 2018
+#### Live Since July 2018
 
 Officially going live in July 2018, the DID Sidechain was the first sidechain to launch on Elastos. It plays a vital 
 role in enabling enterprises and digital platforms to issue universal DIDs to individuals, applications, and devices on the internet.
@@ -70,3 +70,23 @@ role in enabling enterprises and digital platforms to issue universal DIDs to in
 {{< /hero >}}
 
 {{< spacer 8 >}}
+
+<!--
+## Or Explore More About Decentralized Identities:
+
+{{< spacer 1 >}}
+
+{{< hero >}}
+    {{< heroitem title="Sidechains" link="/learn/blockchain/sidechains" >}}
+        
+    {{< /heroitem >}}
+    
+    {{< heroitem title="Tokenomics of ELA" link="/learn/blockchain/tokenonmics" >}}
+        
+    {{< /heroitem >}}
+    
+    {{< heroitem title="Mainnet, Testnet" link="/learn/blockchain/testnet_mainnet" >}}
+        
+    {{< /heroitem >}}   
+{{< /hero >}}
+-->

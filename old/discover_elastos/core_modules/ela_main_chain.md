@@ -11,7 +11,7 @@ The Elastos Blockchain is composed of main chain and sidechain structure. As suc
 
 Because of this, the main chain acts as the mediator that is responsible for the main currency used in the entire Elastos ecosystem. As such, the security of the sidechains is also tied to how secure the Elastos main chain is. Elastos main chain is merged mined with BTC which means it has an enormous hash rate to secure the network and this same hashpower can be thought of as securing all the sidechains as well because of this very reason. In this way, the entire Elastos Ecosystem is secured by the hashpower of BTC. The trust is recursively passed on from the main chain to all of the sidechains. So, even if main chain has a block time of 2 minutes, a sidechain such as ETH sidechain can have a block time of 5-15 seconds and still be secured by the hashpower of BTC.
 
-### Utilities of main chain
+### Utilities of the Mainchain
 1. ELA on the main chain is used for peer to peer payments from one person to another
 2. ELA is used to pay for any transaction fees incured during the peer to peer payments
 3. ELA is used to register for a supernode that takes part in the DPoS consensus of the Elastos Blockchain
