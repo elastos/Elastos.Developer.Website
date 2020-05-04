@@ -17,7 +17,7 @@ platform that acts as a proof of ownership of digital identity.
 ### Decentralized IDs (DIDs)
 
 The DID (Decentralized Identifier) Sidechain issues completely decentralized IDs to users, apps, and devices that are 
-not controlled by any individual or third party. DID is an autonomous and secure identification system.
+not controlled by any individual or third party. DIND is an autonomous and secure identification system.
 
 {{< spacer 1 >}}
 
@@ -28,6 +28,18 @@ not controlled by any individual or third party. DID is an autonomous and secure
 {{< /hero >}}
 
 {{< spacer 2 >}}
+
+### Overview
+
+DID (Decentralized Identifier) ​​refers to a digital identity that can be issued by the user and independently proves ownership.
+
+In the technical implementation of the traditional Internet, it is usually necessary to issue a digital identity by the center. This will avoid naming conflicts; authentication can also be done. Then through this center, the identity verification between strangers is complete.
+
+Inspired by Bitcoin's decentralized wallet, we can use the wallet address as the user's ID and perform the verification by the public key corresponding to the address. Third parties are no longer required to identify themselves for strangers. This provides a digital identity solution for the independent and autonomous operation of the Internet.
+
+Based on the above, Elastos implements Elastos DID SideChain, which provides a decentralized digital identity solution for the Internet world. Everyone can have their own DID for free. By having a DID, everyone can take ownership of their data in the Internet world; everyone can assert their own digital assets; everyone can communicate securely based on trusted identity.
+
+Elastos DID is generated, verified and deposited based on Elastos DID SideChain. 
 
 ### Bring Data Ownership Back to its Owners
 

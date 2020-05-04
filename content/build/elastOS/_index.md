@@ -9,11 +9,19 @@ alwaysopen = false
 
 ### elastOS is a mobile application that runs Ionic-based dApps and has an integrated suite of plugins to access decentralized services
 
+{{< spacer 1 >}}
+
+{{< rawhtml >}}
+    <a target="_blank" href="https://github.com/elastos/Elastos.Trinity" style="color: #333; font-size: 26px;">
+        <i class="fab fa-github"></i> https://github.com/elastos/Elastos.Trinity
+    </a>
+{{< /rawhtml >}}
+
 {{< spacer 2 >}}
 
 {{< hero >}}
     {{< heroitem link="#" nopad="true">}}
-        {{< figure src="/build/elastos/WechatIMG94.jpg" width="200" >}}
+        {{< figure src="/build/elastos/WechatIMG94.jpeg" width="200" >}}
     {{< /heroitem >}}
     {{< heroitem link="#" nopad="true">}}
         {{< figure src="/build/elastos/WechatIMG95.jpeg" width="200" >}}
@@ -22,6 +30,14 @@ alwaysopen = false
         {{< figure src="/build/elastos/WechatIMG96.jpeg" width="200" >}}
     {{< /heroitem >}}
 {{< /hero >}}
+
+## Download elastOS - v1.1.0
+
+Read the latest release notes: {{< externallink title="https://github.com/elastos/Elastos.Trinity/wiki/Release-1.1.0">}}https://github.com/elastos/Elastos.Trinity/wiki/Release-1.1.0{{< /externallink >}} 
+
+- Android - Play Store - {{< externallink title="https://play.google.com/store/apps/details?id=org.elastos.trinity.runtime">}}https://play.google.com/store/apps/details?id=org.elastos.trinity.runtime{{< /externallink >}}
+
+- iPhone - App Store - _Coming Soon_, join our Testflight Demo in our Telegram channel: {{< externallink title="https://t.me/elastosbrowser" >}}https://t.me/elastosbrowser{{< /externallink >}}
 
 ## How Does It Work?
 

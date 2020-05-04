@@ -472,7 +472,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 body {
     font-family: "Noto Sans", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-    font-weight: 300;
+    font-weight: 200;
     line-height: 1.6;
     font-size: 18px !important;
 }

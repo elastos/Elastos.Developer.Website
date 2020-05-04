@@ -8,7 +8,7 @@ alwaysopen = false
 +++
 
 
-{{< figure src="/Elastos_Logo_Stacked_RGB.png" height="200" >}}
+{{< figure src="/images/elastos_merge_2.png" height="300" >}}
 
 {{< hero >}}
     {{< heroitem title="Build" link="/build" >}}
@@ -53,8 +53,15 @@ join our community chat channel.
     {{< /heroitem >}}
 {{< /hero >}}
 
-{{< spacer 2 >}}
+{{< spacer 1 >}}
 
+## Visit our Github
+
+We have over 140 repositories and all our code is open-source, including our blockchain!
+
+{{< externallink title="https://github.com/elastos">}}https://github.com/elastos{{< /externallink >}}
+
+{{< spacer 1 >}}
 
 ## Contribute
 

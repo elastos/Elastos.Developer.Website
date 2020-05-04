@@ -1,8 +1,8 @@
 +++
-title = "Modules list"
+title = "Modules List"
 date = 2019-05-24T21:15:52+02:00
 weight = 40
-chapter = true
+chapter = false
 pre = ""
 alwaysopen = false
 +++
@@ -11,7 +11,17 @@ If you're willing to contribute as a community leader, designer, or by running a
 
 You can find more information about each repository going to [the root Elastos Github workspace](https://github.com/elastos) and searching the repository name.
 
-Regarding technical development, here is a how Elastos projects are organized on github:
+{{< spacer 1 >}}
+
+{{< hero >}}
+    {{< heroitem link="/build/elastos/basics" rightArrow="true" >}}
+        <h5><i class="fab fa-github"></i> Elastos Github</h5>
+    {{< /heroitem >}}
+{{< /hero >}}
+
+{{< spacer 1 >}}
+
+##### Regarding technical development, here is a how Elastos' projects are organized on Github:
 
 ### Blockchain
 

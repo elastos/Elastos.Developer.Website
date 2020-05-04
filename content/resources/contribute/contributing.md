@@ -1,5 +1,5 @@
 +++
-title = "Contributing"
+title = "How to Contribute"
 date = 2019-05-24T21:15:52+02:00
 weight = 10
 chapter = false
@@ -7,7 +7,7 @@ pre = ""
 alwaysopen = false
 +++
 
-🎉 First off, thanks for taking the time to contribute! 🎉
+### 🎉 First off, thanks for taking the time to contribute! 🎉
 
 Contributions are welcome and are greatly appreciated! **Every little bit helps**, and credit will always be given. 
 
@@ -15,7 +15,7 @@ The following is set of guidelines for contributing to all [Elastos repositories
 
 ## How Can I Contribute?
 
-You can contribute in many ways! See how {{< internallink "here" "/contribute/contribution_guides/_index.md" >}}.
+You can contribute in many ways! See how {{< internallink "here" "/resources/contribute/contribution_guides/_index.md" >}}.
 
 ## How to get in touch / get answers?
  

@@ -1,4 +1,18 @@
 
+@font-face {
+	font-family: 'Noto Sans';
+	font-style: normal;
+	font-weight: 200;
+	src: url("./NotoSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Noto Sans';
+	font-style: italic;
+	font-weight: 200;
+	src: url("./NotoSans-LightItalic.ttf") format("truetype");
+}
+
 #logo img {
     width: 70%
 }
@@ -23,6 +37,11 @@ h3 {
 	color: #20a8d8;
 }
 
+h4 {
+	font-size: 1.4rem;
+	font-weight: 300;
+}
+
 h5 {
 	font-size: 1.2rem;
 	color: #20a8d8;
@@ -43,6 +62,14 @@ h5 {
 
 ol > li {
 	margin-bottom: 24px;
+}
+
+blockquote {
+	background-color: #f4fcff;
+}
+
+blockquote > p {
+	color: #222;
 }
 
 .tab-button{

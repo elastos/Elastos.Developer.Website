@@ -63,6 +63,11 @@ languageName = "English"
 
 # Add a [[menu.shortcuts]] entry for each extra shortcut we want in the menu
 [[languages.en.menu.shortcuts]]
+name = "<i class='fab fa-github menu-shortcut-icon'></i>Elastos Github"
+url = "https://github.com/elastos"
+weight = 10
+
+[[languages.en.menu.shortcuts]]
 name = "<i class='fas fa-coins menu-shortcut-icon'></i>Blockchain Explorer"
 url = "https://blockchain.elastos.org/"
 weight = 10
@@ -78,13 +83,13 @@ url = "https://explorer.elaphant.app/"
 weight = 25
 
 [[languages.en.menu.shortcuts]]
-name = "<i class='fas fa-user menu-shortcut-icon'></i>ETH Sidechain Explorer"
+name = "<i class='fab fa-ethereum menu-shortcut-icon'></i>ETH Sidechain Explorer"
 url = "https://explorer.elaeth.io/"
 weight = 30
 
 [[languages.en.menu.shortcuts]]
-name = "<i class='fas fa-user menu-shortcut-icon'></i>ETH Sidechain Resources (Faucet/RPC Ports)"
-url = "https://faucet.elaeth.io/"
+name = "<i class='fab fa-ethereum menu-shortcut-icon'></i>ETH Sidechain Resources (Faucet/RPC Ports)"
+url = "https://elaeth.io/"
 weight = 35
 
 

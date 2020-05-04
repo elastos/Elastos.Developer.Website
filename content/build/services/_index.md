@@ -14,6 +14,8 @@ alwaysopen = false
 To ease development for common use cases, we host an Elastos ETH Sidechain node and provide SDKs for the Elastos Hive
 storage service and Elastos Carrier P2P communication layer.
 
+{{< spacer 1 >}}
+
 {{< hero >}}
     {{< heroitem title="ETH Sidechain" link="/build/services/eth_sidechain" >}}
         Connect your <b>web3</b> to our hosted RPC ports just like you would to Ethereum.<br/><br/>More info at <a target="_blank" href="https://elaeth.io">elaeth.io</a> or click <a>HERE</a>. 
@@ -30,8 +32,11 @@ storage service and Elastos Carrier P2P communication layer.
     {{< /heroitem >}}
 {{< /hero >}}
 
+{{< spacer 1 >}}
+
 ## 2. Nodes You Should Deploy Yourself for Less Common Use Cases
 
+{{< spacer 1 >}}
 
 {{< hero >}}
     {{< heroitem title="ELA Mainchain" link="/build/services/hive" >}}
@@ -47,3 +52,5 @@ storage service and Elastos Carrier P2P communication layer.
         Use our decentralized services to create revolutionary products for "The Modern Internet".
     {{< /heroitem >}}
 {{< /hero >}}
+
+{{< spacer 8 >}}
