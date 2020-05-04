@@ -78,6 +78,15 @@ Additionally, if there is an existing smart contract dApp that currently runs on
 <br/>
 <br/>
 
+{{< hero >}}
+    {{< heroitem link="/learn/eth_sidechain" rightArrow="true" >}}
+        <h5>Learn More about the Elastos ETH Sidechain</h5>
+    {{< /heroitem >}}
+{{< /hero >}}
+
+{{< spacer 3 >}}
+
+
 ## 4) elastOS 
 
 ##### Elastos has also built the ElastOS application, a mobile application designed for all traditional mobile devices that gives developers a standard platform for developing dApps.
@@ -95,6 +104,14 @@ The challenge faced by all budding projects trying to find their way in the nasc
 <br/>
 <br/>
 
+{{< hero >}}
+    {{< heroitem link="/build/elastos" rightArrow="true" >}}
+        <h5>Start Building on elastOS now</h5>
+    {{< /heroitem >}}
+{{< /hero >}}
+
+{{< spacer 3 >}}
+
 ## 5) DID Sidechain
 
 ##### As a member of the Decentralized Identity Foundation (DIF), Elastos maintains a dedicated blockchain to support a W3C-compliant DID implementation.
@@ -106,6 +123,14 @@ Recognizing the importance of self-sovereign identities and the global movement 
 <br/>
 <br/>
 
+{{< hero >}}
+    {{< heroitem link="/learn/did_sidechain" rightArrow="true" >}}
+        <h5>Learn More about the Elastos DID Sidechain</h5>
+    {{< /heroitem >}}
+{{< /hero >}}
+
+{{< spacer 3 >}}
+
 ## 6) Elastos Hive
 
 ##### A flexible, decentralized storage solution.
@@ -115,3 +140,13 @@ Data storage is a ubiquitous requirement of virtually every application, and, hi
 Elastos Hive can be better likened to an interface than an actual storage service in that it allows developers to choose from numerous storage services which contain IPFS (Interplanetary File System) and Microsoft Onedrive, among others. The idea behind Hive is to provide developers with the choice of which storage service to use so they do not become dependent on a singular storage solution. Developers can decide to connect their apps to IPFS, Onedrive, or any other storage services supported by Hive in the future.
 
 Furthermore, whereas Hive is used directly by developers, Hive++, which is an upgraded and advanced version of Hive, allows users to directly select a storage service from any application. Instead of developers choosing a solution for the users, users can decide to choose the solution for themselves, where they can decide to use their own personal computer as their cloud drive or use other community-run nodes known as Vaults  for their storage solution. Most importantly, Hive++ brings the capability of DID to the storage layer, where control and accessibility to shared data is decided by the users themselves. In other words, users can store data on Vaults and control who can view their data and who cannot. Such a revolutionary mechanism establishes a new standard of self-ownership that is presently unrivaled across the blockchain space.
+
+{{< spacer 2 >}}
+
+{{< hero >}}
+    {{< heroitem link="/learn/hive" rightArrow="true" >}}
+        <h5>Learn More about the Elastos Hive Storage Layer</h5>
+    {{< /heroitem >}}
+{{< /hero >}}
+
+{{< spacer 3 >}}

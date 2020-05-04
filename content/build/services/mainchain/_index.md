@@ -19,3 +19,7 @@ alwaysopen = false
 {{< /rawhtml >}}
 
 {{< spacer 2 >}}
+
+{{< quote author="ClarenceL">}}
+<h3>Coming Soon</h3>
+{{< /quote >}}

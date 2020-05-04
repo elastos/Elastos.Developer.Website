@@ -8,6 +8,7 @@ _By default paths and names are referenced to old content in the `old` folder_
 
 - We should not use the developer website to "sell" Elastos, if they are on the site already willing to learn, build or contribute we should focus on giving them the answers they are looking for. Other avenues can do the selling; therefore I have removed very content-heavy pages such as Elastos vs Competitors, Use-Cases, etc.
 
+- No blank pages! Use `{{> redirect href="[URL]" <}}` to redirect blank pages to the first sub-page or use the hero boxes to create links for all the sub-pages. **Blank pages are an extra click and very jarring!**
 
 #### Discover -> Learn
 
