@@ -14,7 +14,7 @@ But the initiating DApp doesn't really know which DApp will realize this operati
 
 ## How to send intents?
 
-See {{< internallink "Interapp communication" "/elastos_trinity/guides/interapp_communication.md" >}}.
+See {{< internallink "Interapp communication" "/build/elastos/guides/interapp_communication.md" >}}.
 
 ## What can you do with those intents?
 
@@ -27,7 +27,7 @@ You can either:
 
 ### Standard Elastos scheme intents
 
-See {{< internallink "Elastos scheme" "/elastos_core_services/guides/elastos_scheme.md" >}} for more details about the following standard intents.
+See {{< internallink "Elastos scheme" "/build/elastos/guides/elastos_scheme.md" >}} for more details about the following standard intents.
 
 | Intent action | Description |
 | ------------- | ----------- |

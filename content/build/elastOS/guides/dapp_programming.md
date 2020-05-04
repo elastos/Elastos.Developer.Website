@@ -1,5 +1,5 @@
 +++
-title = "DApp programming quickstart"
+title = "dApp Programming Quickstart"
 weight = 20
 chapter = false
 pre = ""
@@ -35,4 +35,13 @@ Native ionic/cordova plugins are embedded in the elastOS native application, not
     // Method call
     appManager.close();
 
-Please refer to the {{< internallink "elastOS plugins API reference" "/elastos_core_services/reference/trinity/plugins_api.md" >}} page to know more about plugins usage.
+Please refer to the {{< internallink "elastOS plugins API reference" "/build/elastos/api" >}} page to know more about plugins usage.
+
+
+{{< spacer 1 >}}
+
+{{< hero >}}
+    {{< heroitem link="/build/elastos/guides/http_calls" rightArrow="true" >}}
+        <h5>HTTP Calls in elastOS</h5>
+    {{< /heroitem >}}
+{{< /hero >}}

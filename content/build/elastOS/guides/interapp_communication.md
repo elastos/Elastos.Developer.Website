@@ -69,3 +69,11 @@ In order to do the proper UI routing when your app starts, you can also use the 
     }, (err:any)=>{
         // Error case.
     });
+    
+{{< spacer 1 >}}
+
+{{< hero >}}
+    {{< heroitem link="/build/elastos/guides/available_intents" rightArrow="true" >}}
+        <h5>Supported Intents</h5>
+    {{< /heroitem >}}
+{{< /hero >}}

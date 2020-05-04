@@ -1,5 +1,5 @@
 +++
-title = "iOS native samples"
+title = "iOS"
 weight = 20
 chapter = false
 pre = ""

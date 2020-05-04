@@ -1,5 +1,5 @@
 +++
-title = "Android native samples"
+title = "Android"
 weight = 10
 chapter = false
 pre = ""

@@ -1,5 +1,5 @@
 +++
-title = "HTTP calls in elastOS"
+title = "HTTP Calls in elastOS"
 weight = 20
 chapter = false
 pre = ""
@@ -35,3 +35,11 @@ Here is a typical http GET call from an ionic app:
             });
         }
     }
+
+{{< spacer 1 >}}
+
+{{< hero >}}
+    {{< heroitem link="/build/elastos/guides/interapp_communication" rightArrow="true" >}}
+        <h5>Inter-app Communication</h5>
+    {{< /heroitem >}}
+{{< /hero >}}

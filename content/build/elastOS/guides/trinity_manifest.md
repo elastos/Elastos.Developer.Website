@@ -1,5 +1,5 @@
 +++
-title = "The manifest file"
+title = "The Manifest File"
 weight = 10
 chapter = false
 pre = ""
@@ -46,3 +46,11 @@ alwaysopen = false
     ]
    }
 ```
+
+{{< spacer 1 >}}
+
+{{< hero >}}
+    {{< heroitem link="/build/elastos/guides/dapp_programming" rightArrow="true" >}}
+        <h5>dApp Programming Quickstart</h5>
+    {{< /heroitem >}}
+{{< /hero >}}

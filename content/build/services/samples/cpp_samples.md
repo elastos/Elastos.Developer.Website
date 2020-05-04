@@ -1,5 +1,5 @@
 +++
-title = "C / C++ samples"
+title = "C / C++"
 weight = 5
 chapter = false
 pre = ""

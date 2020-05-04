@@ -15,3 +15,11 @@ This browser can run DApps independently and securely, and provides access to al
 ## DApps inside elastOS
 
 Similarly to android and ios home screens, elastOS provides a way to browse installed DApps, find and install new DApps, uninstall them. DApps also have several ways to interact with each other while keeping their content secure. All together, this creates a great user experience from inside the elastOS browser.
+
+{{< spacer 1 >}}
+
+{{< hero >}}
+    {{< heroitem link="/build/elastos/guides/trinity_manifest" rightArrow="true" >}}
+        <h5>The Manifest File</h5>
+    {{< /heroitem >}}
+{{< /hero >}}
