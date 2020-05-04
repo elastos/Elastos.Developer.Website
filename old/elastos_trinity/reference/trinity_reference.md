@@ -5,5 +5,13 @@ weight = 40
 chapter = false
 pre = ""
 alwaysopen = false
-apireferenceinturl = "/elastos_core_services/reference/trinity/"
 +++
+
+
+{{< spacer 1 >}}
+
+{{< hero >}}
+    {{< heroitem link="https://developer.elastos.org/references/trinity_plugins/index.html" linkBlank="true" rightArrow="true" >}}
+        <h5>Click Here to Access the Trinity Plugins API</h5>
+    {{< /heroitem >}}
+{{< /hero >}}
