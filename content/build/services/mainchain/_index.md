@@ -20,6 +20,18 @@ alwaysopen = false
 
 {{< spacer 2 >}}
 
-{{< quote author="ClarenceL">}}
-<h3>Coming Soon</h3>
-{{< /quote >}}
+{{< hero >}}
+    {{< heroitem title="Guides" link="/build/services/mainchain/guides" >}}
+        Learn how to use the ELA CLI to interact with a local ELA node
+    {{< /heroitem >}}
+    
+    {{< heroitem title="Reference" link="/build/services/mainchain/reference" >}}
+        Helpful API Documentation
+    {{< /heroitem >}}   
+    
+    {{< heroitem title="Connect to Elastos" link="/build/services/mainchain/connect_to_elastos" >}}
+        Run your own local ELA node or connect your crypto exchange to Elastos
+    {{< /heroitem >}}
+{{< /hero >}}
+
+{{< spacer 8 >}}

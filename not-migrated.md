@@ -32,6 +32,14 @@ _By default paths and names are referenced to old content in the `old` folder_
 - [ ] Hive - same as above, more or less a wall of text
 - [x] elastOS - kept this, but it could be much more concise
 
+#### Get Started
+
+Fully removed, we should not confuse developers and expect them to 
+
+#### Elastos Blockchain
+
+- [ ] FAQ - removed, no content
+
 #### Contributing
 
 - [x] Contributing - `contribute/contributing` - renamed to "How to Contribute"

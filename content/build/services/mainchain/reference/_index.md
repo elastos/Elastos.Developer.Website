@@ -16,6 +16,6 @@ alwaysopen = false
     {{< /heroitem >}}
 
     {{< heroitem title="REST API" link="/build/services/mainchain/reference/rpc" >}}
-            
+        There is also an RPC port you can use instead here.
     {{< /heroitem >}}
 {{< /hero >}}

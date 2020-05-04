@@ -7,6 +7,14 @@ pre = ""
 alwaysopen = false
 +++
 
+## Building the ELA Node
+
+{{< hero >}}
+    {{< heroitem link="https://github.com/elastos/elastos.ELA" linkBlank="true" rightArrow="true">}}
+        Our Elastos (ELA) Node is open-source on Github, you can build and deploy it yourself and 
+        directly connect it to our vast Elastos blockchain network.
+    {{< /heroitem >}}
+{{< /hero >}}
 
 ## Using the ELA CLI
 
