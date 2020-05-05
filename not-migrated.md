@@ -4,6 +4,16 @@
 
 _By default paths and names are referenced to old content in the `old` folder_
 
+### User Personas
+
+Roughly I am dividing users into 5 categories:
+
+1. Build - people with a project in mind, "know Elastos basically" and want to get building 
+2. Learn - people who want to know how Elastos works
+3. Discover - people looking to "explore" the ecosystem and see what we have
+4. Resources - someone who is "already developing" and needs to look up an API method, etc
+5. FAQ - for people with questions, everything else (I broke from consistency here and put roadmap here instead of resources because I wanted it to be more prominent)
+
 ### A few notes
 
 - We should not use the developer website to "sell" Elastos, if they are on the site already willing to learn, build or contribute we should focus on giving them the answers they are looking for. Other avenues can do the selling; therefore I have removed very content-heavy pages such as Elastos vs Competitors, Use-Cases, etc.
@@ -34,7 +44,7 @@ _By default paths and names are referenced to old content in the `old` folder_
 
 #### Get Started
 
-Fully removed, we should not confuse developers and expect them to 
+Fully removed, we should not confuse developers and expect them to run or interact with a local Elastos blockchain
 
 #### Elastos Blockchain
 
