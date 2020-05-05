@@ -27,9 +27,9 @@ alwaysopen = false
         Find tutorials, demos and dApps already built on Elastos.<br/>
         <br/>
         Learn about 
-        <a target="_blank" href="https://www.nucleusconsole.com">Nucleus Console</a>, 
-        <a target="_blank" href="http://elastosdma.org">Elastos DMA</a>, 
-        <a target="_blank" href="https://elajs.com">elajs.com</a>, 
+        <a target="_blank" href="https://www.nucleusconsole.com" onclick="event.stopPropagation();">Nucleus Console</a>, 
+        <a target="_blank" href="http://elastosdma.org" onclick="event.stopPropagation();">Elastos DMA</a>, 
+        <a target="_blank" href="https://elajs.com" onclick="event.stopPropagation();">elajs.com</a>, 
         our partners and other tools we have.
     {{< /heroitem >}}
 {{< /hero >}}
@@ -47,11 +47,11 @@ join our community chat channel.
 
 {{< hero >}}
     {{< heroitem title="Join the Developer Chat" link="https://t.me/elastosdev" linkBlank="true" >}}
-        Ask developer questions and get support - <a target="_blank" href="https://t.me/elastosdev">https://t.me/elastosdev</a>
+        Ask developer questions and get support - <a target="_blank" href="https://t.me/elastosdev" onclick="event.stopPropagation();">https://t.me/elastosdev</a>
     {{< /heroitem >}}
     
     {{< heroitem title="Join the Community Chat" link="https://t.me/elastosgroup" linkBlank="true" >}}
-        Ask general questions and learn about Elastos - <a target="_blank" href="https://t.me/elastosgroup">https://t.me/elastosgroup</a>
+        Ask general questions and learn about Elastos - <a target="_blank" href="https://t.me/elastosgroup" onclick="event.stopPropagation();">https://t.me/elastosgroup</a>
     {{< /heroitem >}}
 {{< /hero >}}
 
