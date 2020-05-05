@@ -13,24 +13,19 @@ Try our sample apps before coding to get familiar with Elastos.
 {{< spacer 1 >}}
 
 {{< hero >}}
-    {{< heroitem link="/build/services/samples/cpp_samples" rightArrow="true" >}}
+    {{< heroitem link="/build/services/samples/cpp_samples" rightArrow="true" colspan="6" >}}
         <h5>C / C++ Samples</h5> 
     {{< /heroitem >}}
     
-    {{< heroitem link="/build/services/samples/cpp_samples" rightArrow="true" >}}
+    {{< heroitem link="/build/services/samples/cpp_samples" rightArrow="true" colspan="6" >}}
         <h5>Android Samples</h5> 
     {{< /heroitem >}}   
   
-{{< /hero >}}
-
-{{< spacer 2 >}}
-
-{{< hero >}}
-    {{< heroitem link="/build/services/samples/cpp_samples" rightArrow="true" >}}
+    {{< heroitem link="/build/services/samples/cpp_samples" rightArrow="true" colspan="6" >}}
         <h5>iOS Samples</h5> 
     {{< /heroitem >}}
         
-    {{< heroitem link="/build/services/samples/cpp_samples" rightArrow="true" >}}
+    {{< heroitem link="/build/services/samples/cpp_samples" rightArrow="true" colspan="6" >}}
         <h5>elastOS Samples</h5> 
     {{< /heroitem >}}  
 {{< /hero >}}

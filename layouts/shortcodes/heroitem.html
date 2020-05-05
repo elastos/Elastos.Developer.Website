@@ -1,8 +1,41 @@
-{{ if and (.Params.linkBlank) (.Params.link)}}
-  <div class="col hero-item {{ if not .Params.noshadow }}shadow{{end}} {{ if .Params.nopad }}no-pad{{end}}" onclick="javascript:window.open('{{ .Get "link" }}')">
-{{ else if .Params.link }}
-  <div class="col hero-item {{ if not .Params.noshadow }}shadow{{end}} {{ if .Params.nopad }}no-pad{{end}}" onclick="javascript:window.location.href='{{ .Get "link" }}'">
+
+{{ $scratch := newScratch }}
+
+{{ $scratch.Set "css" "hero-item" }}
+
+{{ if not .Params.noshadow }}
+  {{ $scratch.Add "css" " shadow" }}
 {{ end }}
+
+{{ if .Params.nopad }}
+  {{ $scratch.Add "css" " no-pad" }}
+{{ end }}
+
+{{/* We're using lg breakpoint 1024px, however the menu hides at 768px */}}
+{{ if .Params.colspan }}
+  {{ if eq .Params.colspan "3" }}
+    {{ $scratch.Add "css" " col-lg-3" }}
+  {{ end }}
+  {{ if eq .Params.colspan "4" }}
+    {{ $scratch.Add "css" " col-lg-4" }}
+  {{ end }}
+  {{ if eq .Params.colspan "6" }}
+    {{ $scratch.Add "css" " col-lg-6" }}
+  {{ end }}
+{{ else }}
+  {{ $scratch.Add "css" " col" }}
+{{ end }}
+
+{{ if .Params.link }}
+  {{ if .Params.linkBlank }}
+    <div class='{{ $scratch.Get "css" }}' onclick="javascript:window.open('{{ .Get "link" }}')">
+  {{ else }}
+    <div class='{{ $scratch.Get "css" }}' onclick="javascript:window.location.href='{{ .Get "link" }}'">
+  {{ end }}
+{{ else }}
+  <div class='{{ $scratch.Get "css" }}'>
+{{ end }}
+
   <div class="col-inner">
     {{if .Params.rightArrow }}
       <svg

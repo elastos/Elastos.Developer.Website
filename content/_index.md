@@ -8,20 +8,22 @@ alwaysopen = false
 +++
 
 
-{{< figure src="/images/elastos_merge_2.png" height="300" >}}
+{{< rawhtml >}}
+<img src="/images/elastos_merge_2.png" style="max-height: 300px;"/>
+{{< /rawhtml >}}
 
 {{< hero >}}
-    {{< heroitem title="Build" link="/build" >}}
+    {{< heroitem title="Build" link="/build" colspan="4">}}
         Get Started Building on our flagship app <b>elastOS</b> or learn how to integrate any dApp with Elastos services.
         <br/><br/>
         Download it <a target="_blank" href="https://elastos.academy/elastosbrowser">HERE</a>.
     {{< /heroitem >}}
     
-    {{< heroitem title="Learn" link="/learn" >}}
+    {{< heroitem title="Learn" link="/learn" colspan="4">}}
         Discover how Elastos works and learn about all the various components that make up the Elastos ecosystem.
     {{< /heroitem >}}   
     
-    {{< heroitem title="Discover" link="/discover" >}}
+    {{< heroitem title="Discover" link="/discover" colspan="4">}}
         Find tutorials, demos and dApps already built on Elastos.<br/>
         <br/>
         Learn about 

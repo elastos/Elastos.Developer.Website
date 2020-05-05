@@ -19,6 +19,8 @@ alwaysopen = false
 
 {{< spacer 2 >}}
 
+{{< comment >}} Should show a carousel for mobile {{< /comment >}}
+
 {{< hero >}}
     {{< heroitem link="#" nopad="true" noshadow="true">}}
         {{< figure src="/build/elastos/WechatIMG94.jpeg" width="200" >}}

@@ -9,16 +9,16 @@ alwaysopen = false
 +++
 
 {{< hero >}}
-    {{< heroitem title="elajs" link="/discover/tools/elajs" >}}
+    {{< heroitem title="elajs" link="/discover/tools/elajs" colspan="4" >}}
         A decentralized storage and Javascript SDK to get started on Elastos.
     {{< /heroitem >}}
     
-    {{< heroitem title="elaeth.io" link="https://elaeth.io" >}}
+    {{< heroitem title="elaeth.io" link="https://elaeth.io" colspan="4" >}}
         A set of familar Ethereum tools, RPC ports, wallets, faucets and explorers for all your Elastos ETH Sidechain
         development needs.
     {{< /heroitem >}}   
     
-    {{< heroitem title="DID Explorer" link="https://idchain.elastos.org" >}}
+    {{< heroitem title="DID Explorer" link="https://idchain.elastos.org" colspan="4" >}}
         The official DID Sidechain Explorer
     {{< /heroitem >}}
 {{< /hero >}}
@@ -32,7 +32,7 @@ alwaysopen = false
         <b>Not fully W3C DID Compliant. </b>
         <br/>
         <br/>
-        -- By Elaphant.app Team
+        -- By <a href="https://elaphant.app" target="_blank" onclick="event.stopPropagation();">Elaphant.app Team</a>
     {{< /heroitem >}}
 {{< /hero >}}
 

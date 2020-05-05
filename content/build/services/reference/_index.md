@@ -9,27 +9,23 @@ alwaysopen = false
 
 
 {{< hero >}}
-    {{< heroitem link="/build/services/reference/android_kotlin" >}}
+    {{< heroitem link="/build/services/reference/android_kotlin" colspan="4" >}}
         <h5>Android Kotlin</h5> 
     {{< /heroitem >}}
     
-    {{< heroitem link="/build/services/reference/android_kotlin" >}}
+    {{< heroitem link="/build/services/reference/android_kotlin" colspan="4" >}}
         <h5>iOS Swift</h5> 
     {{< /heroitem >}}   
     
-    {{< heroitem link="/build/services/reference/android_kotlin" >}}
+    {{< heroitem link="/build/services/reference/android_kotlin" colspan="4" >}}
         <h5>elastOS</h5> 
     {{< /heroitem >}}
-{{< /hero >}}
-
-{{< spacer 2 >}}
-
-{{< hero >}}
-    {{< heroitem link="/build/services/reference/android_kotlin" >}}
+    
+    {{< heroitem link="/build/services/reference/android_kotlin" colspan="4" >}}
         <h5>C++</h5> 
     {{< /heroitem >}}
     
-    {{< heroitem link="/build/services/reference/android_kotlin" >}}
+    {{< heroitem link="/build/services/reference/android_kotlin" colspan="4" >}}
         <h5>Elastos Scheme</h5> 
     {{< /heroitem >}}   
 {{< /hero >}}
