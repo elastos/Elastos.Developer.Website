@@ -1,6 +1,6 @@
 {
     "name":"ELA Wallet",
-    "lastupdated":"2020.04.09",
+    "lastupdated":"2020.05.06",
     "useplatforms": true,
     "links":[
         {
@@ -13,39 +13,23 @@
     "releases":{
         "current":[
             {
-                "platform":"android", "version":"1.4.2", "date":"2020.03.31", "quality": "Production", "newfeatures":[
+                "platform":"iOS", "version":"1.4.2", "date":"2020.05.01", "quality": "Production", "newfeatures":[
                     "Adds the function of creating DID, which supports adding personal credentials.",
                     "Candidates for CR members can issue relevant election related information through their personal credentials.",
                     "Supports the binding of Elastos DID and CR website account and login to CR account by scanning QR code.",
-                    "Optimizes wallet start-up speed",
-                    "Adds \"node connection setting\" function."
+                    "Optimize wallet start-up speed.",
+                    "Adds \"node connection setting\" function.",
+                    "Optimize IDChain synchronization speed."
                 ]
             },
             {
-                "platform":"iOS", "version":"1.4.1", "date":"2020.01.16", "quality": "Production", "newfeatures":[
-                    "Fixed all known issues.",
-                    "Added CR Council election feature.",
-                    "Optimized the DID Sidechain synchronization.",
-                    "Revised the transaction confirmation status."
+                "platform":"android", "version":"1.4.2.1", "date":"2020.04.28", "quality": "Production", "newfeatures":[
+                    "Optimize the synchronization speed of ID-Sidechain.",
+                    "Fix the bug that the CR candidate deposit cannot be returned in some cases."
                 ]
             }
         ],
         "next":[
-            {
-                "platform":"android", "date":"2020.04", "quality": "Production", "content":[
-                    "Optimize IDChain synchronization speed"
-                ]
-            },
-            {
-                "platform":"iOS", "date":"2020.04", "quality": "Production", "content":[
-                    "Adds the function of creating DID, which supports adding personal credentials.",
-                    "Candidates for CR members can issue relevant election related information through their personal credentials.",
-                    "Supports the binding of Elastos DID and CR website account and login to CR account by scanning QR code.",
-                    "Optimize wallet start-up speed",
-                    "Adds \"node connection setting\" function.",
-                    "Optimize IDChain synchronization speed"
-                ]
-            },
             {
                 "platform":"android", "date":"2020.05", "quality": "Production", "content":[
                     "Support CR Committee.",
@@ -56,6 +40,25 @@
                 "platform":"iOS", "date":"2020.05", "quality": "Production", "content":[
                     "Support CR Committee.",
                     "Support CR proposal."
+                ]
+            }
+        ],
+        "previous":[
+            {
+                "platform":"android", "version":"1.4.2", "date":"2020.03.31", "quality": "Production", "newfeatures":[
+                    "Adds the function of creating DID, which supports adding personal credentials.",
+                    "Candidates for CR members can issue relevant election related information through their personal credentials.",
+                    "Supports the binding of Elastos DID and CR website account and login to CR account by scanning QR code.",
+                    "Optimizes wallet start-up speed.",
+                    "Adds \"node connection setting\" function."
+                ]
+            },
+            {
+                "platform":"iOS", "version":"1.4.1", "date":"2020.01.16", "quality": "Production", "newfeatures":[
+                    "Fixed all known issues.",
+                    "Added CR Council election feature.",
+                    "Optimized the DID Sidechain synchronization.",
+                    "Revised the transaction confirmation status."
                 ]
             }
         ]
