@@ -1,7 +1,7 @@
 
 +++
 title = "Learn"
-weight = 20
+weight = 30
 chapter = false
 pre = ""
 alwaysopen = false

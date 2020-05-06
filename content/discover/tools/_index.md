@@ -10,7 +10,7 @@ alwaysopen = false
 
 {{< hero >}}
     {{< heroitem title="elajs" link="/discover/tools/elajs" linkBlank="true" colspan="4" >}}
-        A decentralized storage and Javascript SDK to get started on Elastos.
+        A pre-built decentralized storage smart contract and Javascript SDK to get started on Elastos.
     {{< /heroitem >}}
     
     {{< heroitem title="elaeth.io" link="https://elaeth.io" linkBlank="true" colspan="4" >}}
@@ -29,7 +29,7 @@ alwaysopen = false
     
     {{< heroitem title="DID Explorer" link="https://explorer.elaphant.app/" linkBlank="true" rightArrow="true" >}}
         A sophisticated identity explorer for the Elastos DID Sidechain. 
-        <b>Not fully W3C DID Compliant. </b>
+        <i>Not fully W3C DID Compliant. </i>
         <br/>
         <br/>
         -- By <a href="https://elaphant.app" target="_blank" onclick="event.stopPropagation();">Elaphant.app Team</a>
@@ -39,5 +39,5 @@ alwaysopen = false
 {{< spacer 2 >}}
 
 {{< quote author="Elastos">}}
-<h3>More Coming Soon</h3>
+    <h3>More Coming Soon</h3>
 {{< /quote >}}

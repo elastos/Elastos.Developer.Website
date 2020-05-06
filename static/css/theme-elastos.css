@@ -17,7 +17,8 @@
     width: 70%
 }
 
-body[data-url="/build/elastos/"] h1 {
+body[data-url="/build/elastos/"] h1,
+body[data-url="/resources/apis/elastos/"] h1 {
 	text-transform: none;
 	font-family: "Noto Sans", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
 }
@@ -424,4 +425,14 @@ blockquote > p {
 	transition-property: border-color;
 	transition-duration: 0.5s;
 	border-color: rgb(33, 49, 61);
+}
+
+.hero .hero-item ul {
+	margin: 12px 0;
+}
+
+@media only all and (max-width: 768px) {
+	.hero .hero-item .hero-arrow {
+		display: none;
+	}
 }

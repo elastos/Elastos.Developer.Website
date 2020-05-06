@@ -6,6 +6,10 @@ pre = ""
 alwaysopen = false
 +++
 
+{{< youtube vaJ5Pguxd4M >}}
+
+{{< spacer 2 >}}
+
 You heard about Elastos, but maybe you wonder why you should use it, and not one of the other hundreds of blockchain platforms? We're going to try to convince you here. Keep reading!
 
 ### The Trilemma Problem
@@ -28,4 +32,14 @@ Elastos technology can be used in numerous ways.
 2. Build new Apps: Elastos has 3 main components: blockchain, carrier and hive. Each one of these components have respective SDKs for android and iOS which means you can build new apps using any of these SDks targetted for mobile platforms. This is a partly centralized app because you would still have to deploy your own server that connects to the blockchain or hive network. While the integrity of the data and the transactions made in the app are completely trustable because you can verify everything using blockchain technology, the actual running of the nodes that the app connects to means that ISPs could theoretically block this app, hence it would be a partially centralized app. This is the way most apps based on other blockchain platforms work today.
 3. Build revolutionary decentralized apps: Using elastOS Browser(Trinity), developers can develop completely decentralized applications using Ionic framework(a Javascript framework). Functionalities from blockchain and hive are exposed via plugins which the apps can interact with to perform their functions. Also, the apps and users using the apps made for elastOS Browser are completely isolated in that they are not able to talk to the outside world unless they're whitelisted in the Browser itself. In other words, apps will have to resort to talking to the outside world using Carrier which sits on top of the existing internet but with more security and no vulnerabilities that the current internet includes. This is the best way to developer decentralized applications on Elastos.
 
-{{< children >}}
+## Read More:
+
+{{< hero >}}
+    {{< heroitem link="/learn/vision/why_choose_elastos/business_cases">}}
+        <h5>Business Use-Cases</h5>
+    {{< /heroitem >}}
+    
+    {{< heroitem link="/learn/vision/why_choose_elastos/centralized_decentralized">}}
+        <h5>Centralized vs Decentralized</h5>
+    {{< /heroitem >}}
+{{< /hero >}}
