@@ -26,6 +26,20 @@ to each other in a secure decentralized manner.
                 <b>Swift</b> - <a style="font-weight: 300;" href="https://github.com/elastos/Elastos.NET.Carrier.Swift.SDK" target="_blank">https://github.com/elastos/Elastos.NET.Carrier.Swift.SDK</a>
             </li>
         </ul>
+        
+        {{< spacer 1 >}}
+        
+        <h4>Check out our usage guides or demos:</h4> 
+        
+        {{< hero >}}
+            {{< heroitem link="/services/carrier/guides" >}}
+                <h5>Usage Guides</h5>
+            {{< /heroitem >}}
+            
+            {{< heroitem link="/services/carrier/demos" >}}
+                <h5>Carrier Demos</h5>
+            {{< /heroitem >}}
+        {{< /hero >}}
     {{< /heroitem >}}
 {{< /hero >}}
 
@@ -40,3 +54,5 @@ to each other in a secure decentralized manner.
         </a>
     {{< /heroitem >}}
 {{< /hero >}}
+
+{{< spacer 8 >}}

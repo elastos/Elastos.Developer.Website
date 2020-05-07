@@ -50,9 +50,41 @@ Fully removed, we should not confuse developers and expect them to run or intera
 
 - [ ] FAQ - removed, no content
 
+#### Elastos Core Services / Samples & Demos
+
+- [x] C / C++ Samples - ALL CARRIER RELATED - migrated to new `/services/carrier/demos`
+- [x] Android Samples - ALL CARRIER RELATED - migrated to new `/services/carrier/demos`
+- [x] iOS Samples - ALL CARRIER RELATED - migrated to new `/services/carrier/demos`
+- [x] elastOS Samples - - migrated to new `/build/elastOS/demos`
+
+
 #### Elastos Core Services / Guides
 
+- [ ] Guides overview - can be improved
 - [ ] Elastos scheme - REMOVED, this seems like an intro to the elastOS scheme? Examples are not done and it says it only works with the Elaphant wallet?
+- [ ] Digital identities - REMOVED, not done, this is only TODOs
+- [ ] Payments - REMOVED, not done, this is only TODOs
+- [x] Data storage - migrated to new `/services/hive/guide`
+- [x] Carrier networking - migrated to new `/services/carrier/guides`
+- [x] Ethereum Smart Contracts - migrated to new `/services/eth_sidechain/guides` - but it's a bit out of date
+- [ ] Token sidechain - REMOVED, no longer in development
+
+#### Elastos Core Services / Reference
+
+- [x] Android Kotlin / Carrier API - migrated to `/resources/APIs/Elastos Carrier`
+- [x] Android Kotlin / Hive API - migrated to `/resources/APIs/Elastos Hive`
+- [x] iOS Swift / Carrier API - migrated to `/resources/APIs/Elastos Carrier`
+- [x] iOS Swift / Hive API - migrated to `/resources/APIs/Elastos Hive`
+- [x] elastOS / elastOS Plugins API - migrated to `/resources/APIs/elastOS`
+- [x] C++ / Carrier API - migrated to `/resources/APIs/Elastos Carrier`
+- [x] C++ / Hive API - migrated to `/resources/APIs/Elastos Hive`
+- [x] C++ / ELA Mainchain REST API - migrated to `/resources/APIs/Blockchains`
+- [x] C++ / ELA Mainchain RPC API - migrated to `/resources/APIs/Blockchains`
+- [x] SPV Wallet API - migrated to `/resources/APIs/Blockchains/SPV Wallet API`
+- [x] Elastos scheme - migrated to `/build/elastos/elastos_scheme/`
+
+#### Elastos Core Services / Reference
+Migrated to FAQ & Roadmap Main Section / FAQs
 
 #### Contributing
 

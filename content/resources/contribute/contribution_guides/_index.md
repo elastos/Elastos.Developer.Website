@@ -24,7 +24,7 @@ Here's a few options on how to get started, remember to join our Telegram Develo
         <h5>Learn About Our Various Modules You Can Help With</h5>
     {{< /heroitem >}}
     
-    {{< heroitem link="/faq_roadmap/modules_status" rightArrow="true">}}
+    {{< heroitem link="/resources/contribute/contribution_guides/code_contribution" rightArrow="true">}}
         <h5>Get Started With Our Contribution Guide</h5>
     {{< /heroitem >}}
 {{< /hero >}}
@@ -36,11 +36,11 @@ Here's a few options on how to get started, remember to join our Telegram Develo
 {{< spacer 1 >}}
 
 {{< hero >}}
-    {{< heroitem link="/resources/contribute/contribution_guides/bug_report" >}}
+    {{< heroitem link="/resources/contribute/contribution_guides/suggestions" >}}
         <h5>Send Your Suggestions</h5>
     {{< /heroitem >}}
     
-    {{< heroitem link="/resources/contribute/modules_list" rightArrow="true">}}
+    {{< heroitem link="/resources/contribute/contribution_guides/elip" rightArrow="true">}}
         <h5>Create a Formal Elastos Improvement Proposal (ELIP)</h5>
     {{< /heroitem >}}
     
