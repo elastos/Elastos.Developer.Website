@@ -1,5 +1,5 @@
 +++
-title = "Tutorial - Your First Capsule"
+title = "Guides"
 weight = 20
 chapter = false
 pre = ""
