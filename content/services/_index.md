@@ -4,7 +4,7 @@ title = "Elastos Core Services"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = true
+alwaysopen = false
 +++
 
 {{< figure src="/services/elastOS_icons_row.png" >}}
