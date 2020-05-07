@@ -11,7 +11,7 @@ alwaysopen = false
 
 The Elastos scheme is the way for dApps to request operations to be completed by another Elastos application, on behalf of the user. For example, if your dApp wishes to request a payment from a user, it will call the payment scheme, which will open the installed wallet app, which will proceed to the payment (because it's the only one to know private user information), and send the payment confirmation to your app.
 
-Schemes and parameters are the sames for all programming environments (elastOS, native apps ...). Nevertheless, the way to call them and get response changes. Please refer to the {{< internallink "elastos scheme guide" "/build/services/reference/elastos_scheme.md" >}} for more information about your platform.
+Schemes and parameters are the sames for all programming environments (elastOS, native apps ...). Nevertheless, the way to call them and get response changes.
 
 ## Deployment Method
 
