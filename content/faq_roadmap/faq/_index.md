@@ -14,6 +14,10 @@ alwaysopen = false
         <h5>General</h5> 
     {{< /heroitem >}}
     
+    {{< heroitem link="/faq_roadmap/faq/faq_blockchain" colspan="4" >}}
+        <h5>Blockchain</h5> 
+    {{< /heroitem >}}
+    
     {{< heroitem link="/faq_roadmap/faq/faq_wallets" colspan="4" >}}
         <h5>Wallets</h5> 
     {{< /heroitem >}}   
@@ -38,7 +42,9 @@ alwaysopen = false
         <h5>Financials</h5> 
     {{< /heroitem >}}
     
-    
+    {{< heroitem link="/faq_roadmap/faq/faq_mining" colspan="4" >}}
+        <h5>Mining</h5> 
+    {{< /heroitem >}}
     
 {{< /hero >}}
 
