@@ -50,6 +50,10 @@ Fully removed, we should not confuse developers and expect them to run or intera
 
 - [ ] FAQ - removed, no content
 
+#### Elastos Core Services / Guides
+
+- [ ] Elastos scheme - REMOVED, this seems like an intro to the elastOS scheme? Examples are not done and it says it only works with the Elaphant wallet?
+
 #### Contributing
 
 - [x] Contributing - `contribute/contributing` - renamed to "How to Contribute"

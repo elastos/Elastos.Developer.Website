@@ -11,6 +11,8 @@ alwaysopen = true
 
 Elastos provides a set of **decentralized services** which can be integrated into any dApp or project 
 
+You can find a full list of our repos here: {{< externallink title="https://github.com/elastos/Elastos" >}}https://github.com/elastos/Elastos{{< /externallink >}}
+
 ### What type of service are you looking for?
 
 {{< hero >}}

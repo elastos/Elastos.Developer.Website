@@ -6,9 +6,11 @@ pre = ""
 alwaysopen = false
 +++
 
-## Manifest Format
+## Manifest Format 
 
-```json
+JSON:
+
+```js
 {
     "id": "com.mycompany.myapp", // Permanent app identifier. If you change it, your app will be considered as a new app.
     "version": "0.0.1", // Version displayed to end users.
@@ -44,7 +46,7 @@ alwaysopen = false
             "action": "connectapplicationprofile"
         }
     ]
-   }
+}
 ```
 
 {{< spacer 1 >}}

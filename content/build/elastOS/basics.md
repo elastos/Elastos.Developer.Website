@@ -12,6 +12,8 @@ alwaysopen = false
 
 - elastOS capsules must be written in {{< externallink title="Ionic 4.0 using React or Angular" >}}https://ionicframework.com{{< /externallink >}}
 
+- by default external requests are blocked, you must whitelist URLs in the `manifest.json` and even then users will be prompted to approve the connection through a native pop-up
+
 - your capsule can access a **suite of plugins** to use native features such as the:
     
     - camera

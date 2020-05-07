@@ -97,4 +97,12 @@ After your app is launched inside elastOS, you can directly edit your app conten
 
 ### elastOS DApps manifest
 
-A *manifest.json* file is created by default in your elastOS DApp project. You can manually edit it whenever needed. The elastOS manifest format is fully described in the {{< internallink "elastOS manifest guide" "elastos_trinity/guides/trinity_manifest.md" >}}.
+A *manifest.json* file is created by default in your elastOS DApp project. You can manually edit it whenever needed. The elastOS manifest format is fully described in the {{< internallink "elastOS manifest guide" "/build/elastos/guides/trinity_manifest.md" >}}.
+
+{{< spacer 2 >}}
+
+{{< hero >}}
+    {{< heroitem link="/build/elastos/guides/trinity_ecosystem/" rightArrow="true" >}}
+        <h5>First Capsule Tutorial</h5>
+    {{< /heroitem >}}
+{{< /hero >}}

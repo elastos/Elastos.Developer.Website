@@ -34,15 +34,15 @@ The Elastos Ecosystem in a basic sense is made up of (3) blockchains, a storage 
         Use our decentralized services and SDKs to create revolutionary products for "The Modern Internet".
     {{< /heroitem >}}
 
-    {{< heroitem title="elastOS App" link="/learn/eth_sidechain" colspan="4" >}}
+    {{< heroitem title="elastOS App" link="/build/elastos" colspan="4" >}}
         Use our decentralized services and SDKs to create revolutionary products for "The Modern Internet".
     {{< /heroitem >}}
     
-    {{< heroitem title="Elastos Hive" link="/learn/blockchain" colspan="4" >}}
+    {{< heroitem title="Elastos Hive" link="/learn/hive" colspan="4" >}}
         Our decentralized storage solution built on IPFS but compatible with personal storage and other solutions.
     {{< /heroitem >}}
     
-    {{< heroitem title="Elastos Carrier" link="/learn/did_sidechain" colspan="4" >}}
+    {{< heroitem title="Elastos Carrier" link="/learn/carrier" colspan="4" >}}
         Build any dApp using our EVM-compatible sidechain and optional P2P Carrier Network or Hive Storage Layer.
     {{< /heroitem >}}   
 {{< /hero >}}

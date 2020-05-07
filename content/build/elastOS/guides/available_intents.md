@@ -27,7 +27,7 @@ You can either:
 
 ### Standard Elastos scheme intents
 
-See {{< internallink "Elastos scheme" "/build/elastos/guides/elastos_scheme.md" >}} for more details about the following standard intents.
+See {{< internallink "Elastos scheme" "/build/elastos/elastos_scheme.md" >}} for more details about the following standard intents.
 
 | Intent action | Description |
 | ------------- | ----------- |
