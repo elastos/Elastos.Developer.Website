@@ -70,4 +70,12 @@ We have over 140 repositories and all our code is open-source, including our blo
 So you love Elastos and would like to bring your best skills to make it even better? Here is 
 how to {{< internallink "contribute to the platform" "resources/contribute/_index.md" >}} with hundreds of other great developers.
 
+{{< spacer 2 >}}
+
+## Watch Our Intro Video
+
+For a quick introduction into what we're about, watch our video:
+
+{{< youtube vaJ5Pguxd4M >}}
+
 {{< spacer 8 >}}
