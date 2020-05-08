@@ -9,26 +9,26 @@ alwaysopen = false
 
 ### elastOS is a mobile application that runs Ionic-based dApps and has an integrated suite of plugins to access decentralized services
 
-{{< spacer 1 >}}
-
 {{< rawhtml >}}
-    <a target="_blank" href="https://github.com/elastos/Elastos.Trinity" style="color: #333; font-size: 26px;">
-        <i class="fab fa-github"></i> https://github.com/elastos/Elastos.Trinity
-    </a>
+    <h3>
+        <a target="_blank" href="https://github.com/elastos/Elastos.Trinity" style="color: #333;">
+            <i class="fab fa-github"></i> https://github.com/elastos/Elastos.Trinity
+        </a>
+    </h3>
 {{< /rawhtml >}}
 
-{{< spacer 2 >}}
+{{< spacer 1 >}}
 
 {{< comment >}} Should show a carousel for mobile {{< /comment >}}
 
 {{< hero >}}
-    {{< heroitem link="#" nopad="true" noshadow="true">}}
+    {{< heroitem link="#" nopad="true" noshadow="true" colspan="4">}}
         {{< figure src="/build/elastos/WechatIMG94.jpeg" width="200" >}}
     {{< /heroitem >}}
-    {{< heroitem link="#" nopad="true" noshadow="true">}}
+    {{< heroitem link="#" nopad="true" noshadow="true" colspan="4">}}
         {{< figure src="/build/elastos/WechatIMG95.jpeg" width="200" >}}
     {{< /heroitem >}}
-    {{< heroitem link="#" nopad="true" noshadow="true">}}
+    {{< heroitem link="#" nopad="true" noshadow="true" colspan="4">}}
         {{< figure src="/build/elastos/WechatIMG96.jpeg" width="200" >}}
     {{< /heroitem >}}
 {{< /hero >}}

@@ -28,6 +28,12 @@ Provide a few information such as your app name, package name, author informatio
 
 The created application uses the ionic framework. It simply embeds an additional *manifest.json* file to be considered as a elastOS application.
 
+### App Templates
+
+We offer a few app templates, for example on **Angular** there is a full demo template
+
+{{< figure src="/build/elastos/setup/demo-template.png" >}} 
+
 ## Converting an existing ionic app to a elastOS dApp
 
 In case you already have a ionic application, and would like to run it inside elastOS, you have to generate a elastOS manifest to make it become compatible. 
@@ -41,7 +47,8 @@ $ npm i --save @elastosfoundation/trinity-types
 
 ### Learning Ionic
 
-For more detail about Ionic, please visit [here](https://ionicframework.com/docs/).
+For more detail about Ionic, please visit {{< externallink title="https://ionicframework.com/docs" >}}https://ionicframework.com/docs{{< /externallink >}}.
+
 You can build any kind of ionic-based application in Elastos, as the whole ionic framework is available. In addition, Elastos plugins are available too, such as carrier, hive, or access to payments and digital identities (DID).
 
 ### elastOS plugins Typescript typings

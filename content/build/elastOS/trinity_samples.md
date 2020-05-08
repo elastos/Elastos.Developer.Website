@@ -6,7 +6,30 @@ pre = ""
 alwaysopen = false
 +++
 
-#### Try Out elastOS With These Demos:
+## The Best Place to Start is with Our Angular Demo
+
+{{< rawhtml >}}
+    <img src="/build/elastos/setup/demo-template.png" style="max-height: 200px;"/>
+{{< /rawhtml >}}
+
+### This will initialize an elastOS capsule with your basic features:
+
+{{< hero >}}
+    {{< heroitem link="#" nopad="true" noshadow="true" colspan="3" >}}
+        {{< figure src="/build/elastOS/demos_imgs/angular-demo-1.jpeg" width="200" >}}
+    {{< /heroitem >}}
+    {{< heroitem link="#" nopad="true" noshadow="true" colspan="3" >}}
+        {{< figure src="/build/elastOS/demos_imgs/angular-demo-2.jpeg" width="200" >}}
+    {{< /heroitem >}}
+    {{< heroitem link="#" nopad="true" noshadow="true" colspan="3" >}}
+        {{< figure src="/build/elastOS/demos_imgs/angular-demo-3.jpeg" width="200" >}}
+    {{< /heroitem >}}
+    {{< heroitem link="#" nopad="true" noshadow="true" colspan="3" >}}
+        {{< figure src="/build/elastOS/demos_imgs/angular-demo-4.jpeg" width="200" >}}
+    {{< /heroitem >}}
+{{< /hero >}}
+
+#### Or Try Out elastOS With These Demos:
 
 {{< hero >}}
     {{< heroitem title="Empty elastOS Sample" link="https://github.com/elastos/Elastos.Trinity.DApps.Samples" linkBlank="true" >}}

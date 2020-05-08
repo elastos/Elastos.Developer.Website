@@ -477,4 +477,22 @@ blockquote > p {
 	.hero .hero-item .hero-arrow {
 		display: none;
 	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.3rem;
+	}
+
+	h4 {
+		font-size: 1.2rem;
+	}
+
+	h5 {
+		font-size: 1.2rem;
+	}
 }
+
+
