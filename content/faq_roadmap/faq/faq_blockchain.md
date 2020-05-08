@@ -16,7 +16,7 @@ It is a decentralized ledger. A way to make sure that every content stored remai
 {{% /faqentry %}}
 
 {{% faqentry question="How do you run an application efficiently on a ledger? " %}}
-It is not possible. All those so called DApp platforms therefore rely on off chain solutions which is just a fancy word for the internet. Everything that doesn‘t run directly on the blockchain is not secure and not decentralized. That is where Elastos is different.
+It is not possible. All those so called dApp platforms therefore rely on off chain solutions which is just a fancy word for the internet. Everything that doesn‘t run directly on the blockchain is not secure and not decentralized. That is where Elastos is different.
 {{% /faqentry %}}
 
 {{% faqentry question="Does Elastos run on the Blockchain?" %}}
@@ -36,7 +36,7 @@ Yes, Elastos is merge mined with Bitcoin. Meaning it is as decentralized as Bitc
 {{% /faqentry %}}
 
 {{% faqentry question="What is a sidechain?" %}}
-It is an independent blockchain that can only function in the Elastos environment. Unlike projects with congested blockchains, DApps on Elastos use sidechains to fulfill their needs and approach almost infinite scalability. Sidechains can have their own token, smart contracts and be integrated in Elastos. Think of sidechains as extensions to the Elastos main chain but they have their own consensus, their own logic and they each serve different purpose however the main chain and all the sidechains use the same base currency ELA to fuel the entire ecosystem.
+It is an independent blockchain that can only function in the Elastos environment. Unlike projects with congested blockchains, dApps on Elastos use sidechains to fulfill their needs and approach almost infinite scalability. Sidechains can have their own token, smart contracts and be integrated in Elastos. Think of sidechains as extensions to the Elastos main chain but they have their own consensus, their own logic and they each serve different purpose however the main chain and all the sidechains use the same base currency ELA to fuel the entire ecosystem.
 {{% /faqentry %}}
 
 {{% faqentry question="Yes but what is the sidechain on?" %}}
@@ -73,7 +73,7 @@ No but some sidechains can be used to generate a fungible token such as ERC20 to
 
 {{% faqentry question="Can an existing project running on for example Ethereum or NEO achieve superior performance by default by running on top of Elastos or can something like this only be the case if the Ethereum or NEO network is experiencing bandwidth issues?" %}}
 
-That’s a tough question to answer because it depends. NEO or Eth DApps are not completely decentralized so a lot of data these apps host are still saved in some centralized servers. Only the critical component and smart contracts are stored on Blockchain. So a centralized solution or part centralized-decentralized solution is always faster or at least easier to get it up and running fast. You can decide to switch to elastos hybrid app as well where you have part centralized-decentralized solution and this speed would be comparable or faster sometimes. For 100% elastos dapps running inside elastOS Browser(Trinity), these are completely decentralized. These will be slow at first but obviously they can be customized so they’re fast as well. It’s just that decentralized solution is going to be slower in general.
+That’s a tough question to answer because it depends. NEO or Eth dApps are not completely decentralized so a lot of data these apps host are still saved in some centralized servers. Only the critical component and smart contracts are stored on Blockchain. So a centralized solution or part centralized-decentralized solution is always faster or at least easier to get it up and running fast. You can decide to switch to elastos hybrid app as well where you have part centralized-decentralized solution and this speed would be comparable or faster sometimes. For 100% elastos dapps running inside elastOS Browser(Trinity), these are completely decentralized. These will be slow at first but obviously they can be customized so they’re fast as well. It’s just that decentralized solution is going to be slower in general.
 
 {{% /faqentry %}}
 
@@ -85,7 +85,7 @@ They would all have to go through elastos main chain. These sidechains wouldn’
 
 {{% faqentry question="Let's say a friendchain and sidechain run side by side, are they then able to guarantee more uptime and general robustness or would they experience more downtime in case one of them runs into issues of any kind? Can the friendchain or sidechain affect the robustness of its counterpart in any way is what I am wondering?" %}}
 
-There is little to no reason why a sidechain and a friendchain would need to interact so much with each other. In fact, it should be the other way around where the idea of a sidechain is so that the request doesn’t need to go outside of elastos ecosystem so everything is easy to implement and also faster and more robust. DApps should be able to just work fine by just interacting with the sidechains on elastos. When you port ethereum to elastos, it means this would be a sidechain and elastos apps can directly have ethereum smart contracts via the sidechain. Sidechains always live within the elastos ecosystem. Friendchains on the other hand are other public Blockchains which live outside the elastos ecosystem. So ethereum public chain will always be a friendchain. A ported ethereum will be called an Ethereum sidechain. That’s the basic idea of sidechains and friendchains
+There is little to no reason why a sidechain and a friendchain would need to interact so much with each other. In fact, it should be the other way around where the idea of a sidechain is so that the request doesn’t need to go outside of elastos ecosystem so everything is easy to implement and also faster and more robust. dApps should be able to just work fine by just interacting with the sidechains on elastos. When you port ethereum to elastos, it means this would be a sidechain and elastos apps can directly have ethereum smart contracts via the sidechain. Sidechains always live within the elastos ecosystem. Friendchains on the other hand are other public Blockchains which live outside the elastos ecosystem. So ethereum public chain will always be a friendchain. A ported ethereum will be called an Ethereum sidechain. That’s the basic idea of sidechains and friendchains
 
 {{% /faqentry %}}
 

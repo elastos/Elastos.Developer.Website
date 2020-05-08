@@ -1,5 +1,5 @@
 +++
-title = "Guides"
+title = "How To Guides"
 weight = 20
 chapter = false
 pre = ""

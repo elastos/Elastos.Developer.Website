@@ -17,9 +17,9 @@ All are welcome to contribute code and documentation to HIVE. More dapps integra
 
 The core code of Hive is maintained by StorSwift (storswift.com). StorSwift is a technology-driven distributed storage company with cutting edge technology advantages in artificial intelligence storage and decentralized storage. Focusing on the development of distributed storage systems, the company has deep technical experience in related fields and has experience in large-scale data storage operation and maintenance.
 
-Based on decentralized storage technology such as IPFS, StorSwift provides complete distributed storage products and solutions, providing users with low-cost, high-performance, high-availability, secure, reliable, fast and convenient access for massive data access, with leading product and technology advantages and operational experience in the blockchain storage DApp field.
+Based on decentralized storage technology such as IPFS, StorSwift provides complete distributed storage products and solutions, providing users with low-cost, high-performance, high-availability, secure, reliable, fast and convenient access for massive data access, with leading product and technology advantages and operational experience in the blockchain storage dApp field.
 
-### DApp Implementation using Hive
+### dApp Implementation using Hive
 If you want to achieve true decentralization with more security, you need to use Hive. For example, for a decentralized chat application, the underlying storage can dock AWS, or dock their self-built cloud. The performance will be fine, but there is a flaw if that application is decentralized but the data is saved using the some centralised way. If you want to ensure the privacy of your data while improving its physical reliability (with data distribution across regions), you need to use Hive. If you want to perform data authentication and other operations, Hive is also necessary. Hive ensures that you really are the owner of your own data.
 
 ### Features

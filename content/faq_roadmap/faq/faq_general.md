@@ -28,7 +28,7 @@ EOS is called a blockchain operation system, but its development period and open
 {{< /faqentry >}}
 
 {{< faqentry question="What is the biggest challenge for Elastos?" >}}
-To make sure users can accept blockchain and understand the value of DApps, marketing development could be the biggest challenge.
+To make sure users can accept blockchain and understand the value of dApps, marketing development could be the biggest challenge.
 {{< /faqentry >}}
 
 {{< faqentry question="How are the work tasks allocated between Elastos teams in Beijing and Shanghai?" >}}
@@ -108,11 +108,11 @@ No. These blockchains and their applications are in theory all accessible from E
 {{< /faqentry >}}
 
 {{< faqentry question="What is the difference between Elastos and EOS?" >}}
-EOS profiles itself as a blockchain operating system but its development time and its open-source code are way shorter than those of Elastos, which already exists for 18 years. EOS gives you a software development kit (SDK) to interact with the blockchain and uses different methodologies while Elastos is both an SDK and a runtime environment (virtual machine) that allows the DApps to function with an extra layer of security. EOS is also completely reliant on its mainchain so no matter how optimized it is, its capacity is limited. Elastos can scale infinitely with its mainchain and flexible sidechain solution. On top of that, Elastos Runtime is trust zone that uses blockchain as a way to ensure this trust.
+EOS profiles itself as a blockchain operating system but its development time and its open-source code are way shorter than those of Elastos, which already exists for 18 years. EOS gives you a software development kit (SDK) to interact with the blockchain and uses different methodologies while Elastos is both an SDK and a runtime environment (virtual machine) that allows the dApps to function with an extra layer of security. EOS is also completely reliant on its mainchain so no matter how optimized it is, its capacity is limited. Elastos can scale infinitely with its mainchain and flexible sidechain solution. On top of that, Elastos Runtime is trust zone that uses blockchain as a way to ensure this trust.
 {{< /faqentry >}}
 
 {{< faqentry question="What are the similarities and differences between Elastos and Ethereum?" >}}
-Ethereum has only one mainchain that is being pushed to its extreme limits in computing and scalability. Elastos proposes a mainchain and sidechains structure where the mainchain is solely responsible for ID verification and payments while the sidechains execute smart contracts to supports different applications and services. Ethereum has redundancy and network congestion problems.  The fact that all the data and code is placed on the mainchain causes a lot of data to be redundant in the primary storage. On Elastos the applications run in the Elastos Runtime. This method is more secure. All the data has to pass through trusted and verifiable channels. Elastos Runtime can come in multiple forms such as an independent OS, a virtual machine or a software development kit (SDK) that allows the integration of applications from other operating systems. On Ethereum, after the acquisition of the data, the DApps are executed on a user interface that can cause a risk  of exposing the data. Elastos is secured up until the hearth of your device. Because the DApps are not allowed to connect to the internet directly they are not subject to DDOS attacks.
+Ethereum has only one mainchain that is being pushed to its extreme limits in computing and scalability. Elastos proposes a mainchain and sidechains structure where the mainchain is solely responsible for ID verification and payments while the sidechains execute smart contracts to supports different applications and services. Ethereum has redundancy and network congestion problems.  The fact that all the data and code is placed on the mainchain causes a lot of data to be redundant in the primary storage. On Elastos the applications run in the Elastos Runtime. This method is more secure. All the data has to pass through trusted and verifiable channels. Elastos Runtime can come in multiple forms such as an independent OS, a virtual machine or a software development kit (SDK) that allows the integration of applications from other operating systems. On Ethereum, after the acquisition of the data, the dApps are executed on a user interface that can cause a risk  of exposing the data. Elastos is secured up until the hearth of your device. Because the dApps are not allowed to connect to the internet directly they are not subject to DDOS attacks.
 {{< /faqentry >}}
 
 
@@ -176,7 +176,7 @@ By visiting the [Cyber Republic](https://www.cyberrepublic.org/)
 {{< /faqentry >}}
 
 {{< faqentry question="What will be the biggest challenge for Elastos?" >}}
-This will not only be a challenge for Elastos but one for the whole ecosystem. To convince new users to accept blockchain and understand the benefits of DApps. As a community driven open-source project, the marketing towards developers will be crucial for the future of Elastos. We survive because of the community, we take care of the community, we listen to the community and even more so we work together as a community to build this ecosystem as best as we can.
+This will not only be a challenge for Elastos but one for the whole ecosystem. To convince new users to accept blockchain and understand the benefits of dApps. As a community driven open-source project, the marketing towards developers will be crucial for the future of Elastos. We survive because of the community, we take care of the community, we listen to the community and even more so we work together as a community to build this ecosystem as best as we can.
 {{< /faqentry >}}
 
 {{< faqentry question="What are the future use cases of Elastos?" >}}
@@ -209,7 +209,7 @@ The Beijing team is mostly responsible for the general operations and managing t
 {{< /faqentry >}}
 
 {{< faqentry question="What is the most important in the communication and marketing of Elastos these days?" >}}
-We are looking for passionate and talented people who are interested in this innovative, first of its kind project. Elastos expands its community and is looking for community managers, partnership managers, marketeers, ambassadors, technical writers, writers, bloggers, video content creators, DApp developers, core-developers, technical support engineers and more.
+We are looking for passionate and talented people who are interested in this innovative, first of its kind project. Elastos expands its community and is looking for community managers, partnership managers, marketeers, ambassadors, technical writers, writers, bloggers, video content creators, dApp developers, core-developers, technical support engineers and more.
 
 You can apply today by [visiting this site](https://www.cyberrepublic.org/) and join the Cyber Republic!
 {{< /faqentry >}}

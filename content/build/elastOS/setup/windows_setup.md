@@ -73,6 +73,6 @@ adb --version
 
 {{< hero >}}
     {{< heroitem link="/build/elastos/setup/project_setup" rightArrow="true" >}}
-        <h5>You can now create a elastOS DApp, next we'll setup your first project</h5>
+        <h5>You can now create a elastOS dApp, next we'll setup your first project</h5>
     {{< /heroitem >}}
 {{< /hero >}}

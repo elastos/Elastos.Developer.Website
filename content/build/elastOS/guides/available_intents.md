@@ -1,5 +1,5 @@
 +++
-title = "Supported intents"
+title = "Supported Intents"
 weight = 25
 chapter = false
 pre = ""
@@ -8,9 +8,9 @@ alwaysopen = false
 
 ## What are intents?
 
-They are a way to **let DApps communicate with each other** without really knowing each other. For example, a DApp can send a "pay" intent request, that follows the elastos scheme standardized definition, and another DApp can catch this intent to handle the payment. 
+They are a way to **let dApps communicate with each other** without really knowing each other. For example, a dApp can send a "pay" intent request, that follows the elastos scheme standardized definition, and another dApp can catch this intent to handle the payment. 
 
-But the initiating DApp doesn't really know which DApp will realize this operation. As a consequence, several applications being able to handle the pay intent (wallet DApps in our case) could exist in elastOS, and the user could choose which of them he wants to use to proceed to the payment.
+But the initiating dApp doesn't really know which dApp will realize this operation. As a consequence, several applications being able to handle the pay intent (wallet dApps in our case) could exist in elastOS, and the user could choose which of them he wants to use to proceed to the payment.
 
 ## How to send intents?
 
@@ -20,8 +20,8 @@ See {{< internallink "Interapp communication" "/build/elastos/guides/interapp_co
 
 You can either:
 
-* **Send intents** to request other DApps to do something (ex: pay, if you want to let your users purchase something)
-* Or **handle intents** (using intent filters in your manifest) to handle actions requested by other DApps (ex: handle "handlescannedcontent_did" if you want to do something when a end user scans a QR code in elastOS).
+* **Send intents** to request other dApps to do something (ex: pay, if you want to let your users purchase something)
+* Or **handle intents** (using intent filters in your manifest) to handle actions requested by other dApps (ex: handle "handlescannedcontent_did" if you want to do something when a end user scans a QR code in elastOS).
 
 ## Supported intents in elastOS
 
@@ -37,8 +37,8 @@ See {{< internallink "Elastos scheme" "/build/elastos/elastos_scheme.md" >}} for
 | dposvotetransaction | Record a vote for a list of supernodes on the ELA mainchain. |
 | credaccess | Get user information (name, email, ...) from his DID profile. |
 | walletaccess | Get information about user's wallet (Ex: ELA address). |
-| appinstall | Request system to install a DApp using an EPK file. |
-| appdetails | Display a specific DApp details page on a DApp store. |
+| appinstall | Request system to install a dApp using an EPK file. |
+| appdetails | Display a specific dApp details page on a dApp store. |
 | sign | Sign some binary content using a DID signature. |
 
 ### Specific elastOS intents
@@ -47,7 +47,7 @@ See {{< internallink "Elastos scheme" "/build/elastos/elastos_scheme.md" >}} for
 
 ##### Description
 
-Opens a given DApp.
+Opens a given dApp.
 
 ##### Request parameters
 
@@ -78,7 +78,7 @@ None
 
 ##### Description
 
-Register user as using a given DApp, on his DID profile. After publishing this information to the DID sidechain, other users / friends can view that this user has a profile in the given app, and easily reach him there.
+Register user as using a given dApp, on his DID profile. After publishing this information to the DID sidechain, other users / friends can view that this user has a profile in the given app, and easily reach him there.
 
 For example, if a developer creates CoolDApp and CoolDApp let users add friends and friends can write and read posts (similar to Facebook), Then CoolDApp can ask its users to register their application profile. That profile will include a CoolDApp-specific id in a VerifiableCredential. This way, when friends view this user's profile from the DID sidechain, they can reach others through a **connectapplicationprofile** intent that will receive all the regiter custom information and therefore be able to immediatelly connect inside CoolDApp.
 

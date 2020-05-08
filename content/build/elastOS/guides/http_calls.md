@@ -6,9 +6,9 @@ pre = ""
 alwaysopen = false
 +++
 
-## Allowing some HTTP calls in your DApp
+## Allowing some HTTP calls in your dApp
 
-HTTP calls are forbidden by default in elastOS applications. But some specific domains can be added to your DApp manifest to allow you calling HTTP APIs from your app.
+HTTP calls are forbidden by default in elastOS applications. But some specific domains can be added to your dApp manifest to allow you calling HTTP APIs from your app.
 
 ### Manifest change
 

@@ -1,5 +1,5 @@
 +++
-title = "Inter-app communication"
+title = "Inter-App Communication"
 weight = 20
 chapter = false
 pre = ""
@@ -10,15 +10,15 @@ alwaysopen = false
 
 ## elastOS intents
 
-Similarly to Android that provides a great architecture, elastOS has a **intent** mechanism that allows DApps to communicate with each other. Intents are needed for various kind of actions, such as requesting user to make a purchase, sign with his email address, handle a scanned QR code, rating a DApp through the DApp store app, and much more.
+Similarly to Android that provides a great architecture, elastOS has a **intent** mechanism that allows dApps to communicate with each other. Intents are needed for various kind of actions, such as requesting user to make a purchase, sign with his email address, handle a scanned QR code, rating a dApp through the dApp store app, and much more.
 
 ### elastOS intents and Elastos scheme
 
 {{< todo "Link to the elastos scheme API reference" >}}
 
-elastOS conforms to the Elastos scheme. Most standard commands are handled by built-in DApps. For example, the /pay command will be handled by the wallet DApp to start a payment, or /credaccess will be handled by the DID DApps to request user to share credentials with the requesting DApp.
+elastOS conforms to the Elastos scheme. Most standard commands are handled by built-in dApps. For example, the /pay command will be handled by the wallet dApp to start a payment, or /credaccess will be handled by the DID dApps to request user to share credentials with the requesting dApp.
 
-In addition, elastOS has a few custom scheme commands, specific to elastOS itself, such as opening DApp details pages in the DApp store in order to rate it.
+In addition, elastOS has a few custom scheme commands, specific to elastOS itself, such as opening dApp details pages in the dApp store in order to rate it.
 
 ### Sending intents
 
@@ -43,11 +43,11 @@ Sending intents is done through the AppManager plugin. Here is an example:
 
 ### Handling intents
 
-Your DApp must declare which intents it can handle in its manifest.json:
+Your dApp must declare which intents it can handle in its manifest.json:
 
     "intent_filters": [
         {
-            "action": "pay" // Example of Elastos scheme action handled by the wallet DApp
+            "action": "pay" // Example of Elastos scheme action handled by the wallet dApp
         }       
     ]
 

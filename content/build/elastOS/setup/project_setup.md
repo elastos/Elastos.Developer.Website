@@ -24,11 +24,11 @@ Open a terminal at the location you want your application to be created. A subfo
 $ trinity-cli new
 ```
 
-Provide a few information such as your app name, package name, author information, and a new folder will be created with your DApp.
+Provide a few information such as your app name, package name, author information, and a new folder will be created with your dApp.
 
 The created application uses the ionic framework. It simply embeds an additional *manifest.json* file to be considered as a elastOS application.
 
-## Converting an existing ionic app to a elastOS DApp
+## Converting an existing ionic app to a elastOS dApp
 
 In case you already have a ionic application, and would like to run it inside elastOS, you have to generate a elastOS manifest to make it become compatible. 
 
@@ -46,7 +46,7 @@ You can build any kind of ionic-based application in Elastos, as the whole ionic
 
 ### elastOS plugins Typescript typings
 
-In case the default DApp you've created does not include typescript types for elastOS plugins, you may have to add them by yourself:
+In case the default dApp you've created does not include typescript types for elastOS plugins, you may have to add them by yourself:
 
 ```bash
 $ npm i @elastosfoundation/trinity-types
@@ -75,7 +75,7 @@ Then in your application, you can use it this way:
     // In a method
     appManager.sendIntent(...);
 
-### Running your DApp on Android
+### Running your dApp on Android
 
 **Checklist:**
 
@@ -91,13 +91,13 @@ $ trinity-cli run -p android
 
 That will package your application as a EPK file, send it to your device, install it inside elastOS, and run it.
 
-### Developing your DApp
+### Developing your dApp
 
 After your app is launched inside elastOS, you can directly edit your app content from its src/ folder. Changes will automatically reload in elastOS.
 
-### elastOS DApps manifest
+### elastOS dApps manifest
 
-A *manifest.json* file is created by default in your elastOS DApp project. You can manually edit it whenever needed. The elastOS manifest format is fully described in the {{< internallink "elastOS manifest guide" "/build/elastos/guides/trinity_manifest.md" >}}.
+A *manifest.json* file is created by default in your elastOS dApp project. You can manually edit it whenever needed. The elastOS manifest format is fully described in the {{< internallink "elastOS manifest guide" "/build/elastos/guides/trinity_manifest.md" >}}.
 
 {{< spacer 2 >}}
 

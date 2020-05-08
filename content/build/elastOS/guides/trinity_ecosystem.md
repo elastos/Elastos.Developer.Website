@@ -8,9 +8,9 @@ alwaysopen = false
 
 ##  The elastOS native application
 
-The Elastos browser, also know as elastOS, is for now a native **Android or iOS application** that has to be launched to enter the whole Elastos ecosystem of DApps and services.
+The Elastos browser, also know as elastOS, is for now a native **Android or iOS application** that has to be launched to enter the whole Elastos ecosystem of dApps and services.
 
-This browser can run DApps independently and securely, and provides access to all of the Elastos modules such as:
+This browser can run dApps independently and securely, and provides access to all of the Elastos modules such as:
  
 - Hive
 - Carrier
@@ -22,7 +22,7 @@ This browser can run DApps independently and securely, and provides access to al
 
 ### dApps inside elastOS
 
-Similarly to android and iOS home screens, elastOS provides a way to browse installed DApps, find and install new DApps, uninstall them. 
+Similarly to android and iOS home screens, elastOS provides a way to browse installed dApps, find and install new dApps, uninstall them. 
 
 dApps also have several ways to interact with each other while keeping their content secure. 
 

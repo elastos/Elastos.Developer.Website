@@ -1,5 +1,5 @@
 +++
-title = "Writing a third party library"
+title = "Writing a Third Party Library"
 weight = 90
 chapter = false
 pre = ""

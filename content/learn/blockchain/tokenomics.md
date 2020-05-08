@@ -14,14 +14,14 @@ The sidechains are what allow other smart contracts like NEO, Ethereum, etc to r
 
 On elastos platform, the transfer of data such as videos, music, games goes through the decentralised secure P2P network called Elastos Carrier. The main chain is not cluttered with unnecessary data so there are no scaling issues. 
 
-Incentive for DApps to use Elastos does not come from an incentive to use the Elastos blockchain itself. DApps are incentivized to use the Elastos network operating system/P2P infrastructure and using elastos blockchain for decentralised IDs is a requirement to use that. And they may create their own sidechains for other tasks such as running smart contracts.
+Incentive for dApps to use Elastos does not come from an incentive to use the Elastos blockchain itself. dApps are incentivized to use the Elastos network operating system/P2P infrastructure and using elastos blockchain for decentralised IDs is a requirement to use that. And they may create their own sidechains for other tasks such as running smart contracts.
 
 ### Utilities of ELA
 
-* Every sidechain on Elastos is tied to the main chain and the token in main chain(ELA) in some way. For example, if sidechains decide to merge mine on top of ELA which is then merged mined on top of BTC, this means that the transaction fees for all the DApps built utilizing these sidechains will have to be paid in ELA. One simple example is the DID sidechain that is merged mined with ELA. Any transactions recorded on the DID sidechain will need to be paid in ELA as a fee to the miners. This means, the more DApps and the more sidechains get built on top of the Elastos and the more traffic there is on the elastos ecosystem, there will always be a utility use case for ELA.
+* Every sidechain on Elastos is tied to the main chain and the token in main chain(ELA) in some way. For example, if sidechains decide to merge mine on top of ELA which is then merged mined on top of BTC, this means that the transaction fees for all the dApps built utilizing these sidechains will have to be paid in ELA. One simple example is the DID sidechain that is merged mined with ELA. Any transactions recorded on the DID sidechain will need to be paid in ELA as a fee to the miners. This means, the more dApps and the more sidechains get built on top of the Elastos and the more traffic there is on the elastos ecosystem, there will always be a utility use case for ELA.
 * There are over 10,000 unique movies and over 2000 unique tv shows on netflix alone. Imagine creating 10,000 copies of each of the movies content creators want to sell on elastos platform. They would need to be paid with ELA for securing these digital assets which will utilize digital assets sidechain.
-* DApps will be paying in ELA for the services they'll be using like Domain name registrations, search engines, page rankings, acquisition of UUIDs for digital assets, etc. They'll all be using ELA which subsides for bandwidth, IPFS, etc
-* ELA will be the main currency that will be used to reward developers for creating DApps on the Elastos platform.
+* dApps will be paying in ELA for the services they'll be using like Domain name registrations, search engines, page rankings, acquisition of UUIDs for digital assets, etc. They'll all be using ELA which subsides for bandwidth, IPFS, etc
+* ELA will be the main currency that will be used to reward developers for creating dApps on the Elastos platform.
 * Apps built on elastos can implement their system to process transactions using ELA/SELA.
 * As part of the development efforts, around 16 million of ELA were exclusively reserved for the growth of elastos ecosystem development. These will be given to community members who contribute to the Cyber Republic. Anyone can contribute to the ever growing ecosystem of elastos: be it content creators, users, developers, testers, or leaders. More info is available at https://www.cyberrepublic.org
 
@@ -40,7 +40,7 @@ Another way to look at the elastos platform is to imagine it being a self sustai
 ### Any existing smart contract VM may be ported to Elastos
 
 
-Elastos provides a platform for any kind of DApps to be built that can run directly on the device instead of running on top of the blockchain itself like most DApps today. This creates an incentive to port existing VMs(eg. NEO, Ethereum, etc) from other blockchains to be run on top of elastos, thereby leading to the true interoperability between all the different kinds of blockchains all running under the same umbrella that provides solutions to three of the most common problems faced today by most blockchains and DApps — scalability, security and decentralization, all without sacrificing anything in the process.
+Elastos provides a platform for any kind of dApps to be built that can run directly on the device instead of running on top of the blockchain itself like most dApps today. This creates an incentive to port existing VMs(eg. NEO, Ethereum, etc) from other blockchains to be run on top of elastos, thereby leading to the true interoperability between all the different kinds of blockchains all running under the same umbrella that provides solutions to three of the most common problems faced today by most blockchains and dApps — scalability, security and decentralization, all without sacrificing anything in the process.
 
 
 {{< spacer 1 >}}

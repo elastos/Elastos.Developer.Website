@@ -1,5 +1,5 @@
 +++
-title = "The title bar"
+title = "The Title Bar"
 weight = 110
 chapter = false
 pre = ""

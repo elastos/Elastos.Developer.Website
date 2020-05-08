@@ -12,7 +12,7 @@ alwaysopen = false
 ## Try out our elastOS Hive Demo:
 
 {{< hero >}}
-    {{< heroitem title="elastOS Capsule Hive Demo" link="https://github.com/elastos/Elastos.Trinity.DApps.Demo.Hive" linkBlank="true" rightArrow="true" >}}
+    {{< heroitem title="elastOS Capsule Hive Demo" link="https://github.com/elastos/Elastos.Trinity.dApps.Demo.Hive" linkBlank="true" rightArrow="true" >}}
         A demo elastOS capsule that uses the built-in Hive plugin
     {{< /heroitem >}}
 {{< /hero >}}

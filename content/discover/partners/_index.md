@@ -21,7 +21,7 @@ alwaysopen = false
     
         <img src="/discover/partners/elaphant.png" onclick="event.preventDefault();" style="margin: 0 auto; padding: 0; height: 100px;"/>    
     
-        A team building an multi-currency wallet with DApp support.
+        A team building an multi-currency wallet with dApp support.
     {{< /heroitem >}}
     
     {{< heroitem title="Elastos DMA" link="/discover/partners/elastos_dma" colspan="4" >}}

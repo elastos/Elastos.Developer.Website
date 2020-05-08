@@ -290,9 +290,9 @@ The **wallet** application implementing those scheme commands verifies the valid
 
 *   Extract the JWT payload, and get the App DID
 *   Make sure the JWT is not expired
-*   Retrieve App information from the DApp sidechain, from the App ID: App name (use it for display), Developer information (for display), callback url and app public key.
+*   Retrieve App information from the dApp sidechain, from the App ID: App name (use it for display), Developer information (for display), callback url and app public key.
 *   (If the JWT is signed:) Use the public key to verify that the JWT was signed using the right keypair.
-*   Make sure that the callback url in the JWT matches whitelisted URLs from the DApp sidechain (those whitelisted urls have been registered by the developer when creating his app ID).
+*   Make sure that the callback url in the JWT matches whitelisted URLs from the dApp sidechain (those whitelisted urls have been registered by the developer when creating his app ID).
 *   Display information such as app name and developer name inside the wallet, while requesting user action.
 *   With this procedure, we make sure that we will send private user information, such as credentials, to an authorized callback url.
 

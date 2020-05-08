@@ -14,7 +14,7 @@ alwaysopen = false
     {{< /heroitem >}}
     
     {{< heroitem title="elastOS Wallet DApp" link="https://github.com/elastos/Elastos.Trinity.DApps.Wallet" linkBlank="true" >}}
-        Default elastOS wallet DApp that you can use as an example to start building your own wallet.
+        Default elastOS wallet dApp that you can use as an example to start building your own wallet.
     {{< /heroitem >}}
         
     {{< heroitem title="Ethereum contracts in elastOS" link="https://github.com/elastos/Elastos.Trinity.DApps.Demo.ETHSidechain" linkBlank="true" >}}
