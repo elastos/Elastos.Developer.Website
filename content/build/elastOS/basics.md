@@ -6,11 +6,15 @@ pre = ""
 alwaysopen = false
 +++
 
-- elastOS capsules are dApps, we call them **"capsules"**
+##### The development codename for {{< rawspan fontweight="400" >}}elastOS{{< /rawspan >}} is **Trinity**
 
-- use our included **trinity-cli** tool to easily package and deploy them  
+You will notice a lot of the tools and repos are named "trinity", this is analagous to {{< rawspan fontweight="400" >}}elastOS{{< /rawspan >}}.
 
-- elastOS capsules must be written in {{< externallink title="Ionic 4.0 using React or Angular" >}}https://ionicframework.com{{< /externallink >}}
+### {{< rawspan fontweight="400" >}}elastOS{{< /rawspan >}} capsules are dApps, we call them **"capsules"**
+
+- use our included **trinity-cli** tool to easily package and deploy your capsules  
+
+- {{< rawspan fontweight="400" >}}elastOS{{< /rawspan >}} capsules must be written in {{< externallink title="Ionic 4.0 using React or Angular" >}}https://ionicframework.com{{< /externallink >}}
 
 - by default external requests are blocked, you must whitelist URLs in the `manifest.json` and even then users will be prompted to approve the connection through a native pop-up
 
@@ -21,7 +25,7 @@ alwaysopen = false
     - QR scanner
     - storage and other common Cordova plugins
     
-- elastOS provides a set of custom plugins to access the Elastos ecosystem
+- {{< rawspan fontweight="400" >}}elastOS{{< /rawspan >}} provides a set of custom plugins to access the Elastos ecosystem
 
     - Hive Storage
     - DID Sidechain

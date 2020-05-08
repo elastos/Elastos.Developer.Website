@@ -34,15 +34,15 @@ alwaysopen = false
 {{< spacer 2 >}}
 
 {{< hero >}}
-    {{< heroitem title="Guides" link="/build/mainchain/guides" colspan="4" >}}
+    {{< heroitem title="Guides" link="/services/mainchain/guides" colspan="4" >}}
         Learn how to deploy a local ELA Node and use the ELA CLI to interact with it
     {{< /heroitem >}}
     
-    {{< heroitem title="Reference" link="/build/mainchain/reference" colspan="4" >}}
+    {{< heroitem title="Reference" link="/services/mainchain/reference" colspan="4" >}}
         API Documentation for interacting with the ELA node
     {{< /heroitem >}}   
     
-    {{< heroitem title="Crypto Exchange Resources" link="/build/mainchain/connect_to_elastos" colspan="4" >}}
+    {{< heroitem title="Exchange Integration" link="/services/mainchain/exchanges" colspan="4" >}}
         Information for crypto currency exchanges that need to connect to Elastos
     {{< /heroitem >}}
 {{< /hero >}}

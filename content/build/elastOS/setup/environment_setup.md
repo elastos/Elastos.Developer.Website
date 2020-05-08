@@ -12,7 +12,7 @@ alwaysopen = false
 Trinity CLI is a command line tool that helps you manage your elastOS applications, including creating a new application, running during development, and publishing.
 
 {{< hero >}}
-    {{< heroitem title="Using Windows 10?" link="/build/mainchain/guides" rightArrow="true" >}}
+    {{< heroitem title="Using Windows 10?" link="/build/elastos/setup/windows_setup" rightArrow="true" >}}
         Please click here for our Windows guide
     {{< /heroitem >}}
 {{< /hero >}}
@@ -39,7 +39,6 @@ $ sudo npm install -g @elastosfoundation/trinity-cli --unsafe-perm
 {{< highlight "shell" >}}
 $ trinity-cli
 {{< /highlight >}}
-
 
 {{< spacer 2 >}}
 

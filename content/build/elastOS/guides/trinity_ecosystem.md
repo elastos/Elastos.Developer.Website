@@ -8,15 +8,28 @@ alwaysopen = false
 
 ##  The elastOS native application
 
-The Elastos browser, also know as elastOS, is for now a native android or ios application that has to be launched to enter the whole Elastos ecosystem of DApps and services.
+The Elastos browser, also know as elastOS, is for now a native **Android or iOS application** that has to be launched to enter the whole Elastos ecosystem of DApps and services.
 
-This browser can run DApps independently and securely, and provides access to all of the Elastos modules such as Hive, Carrier, Ethereum sidechain, DID sidechain, DMA, Token sidechain and more, usually through cordova/ionic plugins.
+This browser can run DApps independently and securely, and provides access to all of the Elastos modules such as:
+ 
+- Hive
+- Carrier
+- Ethereum Sidechain
+- DID sidechain (Identity)
+- DMA
 
-## DApps inside elastOS
+{{< rawspan fontweight="400" >}}<i>Usually through cordova/ionic plugins</i>{{< /rawspan >}}
 
-Similarly to android and ios home screens, elastOS provides a way to browse installed DApps, find and install new DApps, uninstall them. DApps also have several ways to interact with each other while keeping their content secure. All together, this creates a great user experience from inside the elastOS browser.
+### dApps inside elastOS
 
-{{< spacer 1 >}}
+Similarly to android and iOS home screens, elastOS provides a way to browse installed DApps, find and install new DApps, uninstall them. 
+
+dApps also have several ways to interact with each other while keeping their content secure. 
+
+All together, this creates a great user experience from inside the elastOS browser.
+
+
+### Let's explore the base elastOS application:
 
 {{< hero >}}
     {{< heroitem link="/build/elastos/guides/trinity_manifest" rightArrow="true" >}}
