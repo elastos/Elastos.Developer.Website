@@ -109,7 +109,7 @@ A *manifest.json* file is created by default in your elastOS dApp project. You c
 {{< spacer 2 >}}
 
 {{< hero >}}
-    {{< heroitem link="/build/elastos/guides/trinity_ecosystem/" rightArrow="true" >}}
-        <h5>First Capsule Tutorial</h5>
+    {{< heroitem link="/build/elastos/setup/testing" rightArrow="true" >}}
+        <h5>Running Your Capsule</h5>
     {{< /heroitem >}}
 {{< /hero >}}
