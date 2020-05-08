@@ -80,7 +80,7 @@
       </svg>
     {{end}}
     <h3 style="margin-top: 0; {{if .Params.leftArrow }}text-align: right;{{end}}">{{ .Get "title" }}</h3>
-    <p style="{{if .Params.leftArrow }}text-align: right;{{end}}">
+    <p style="{{if .Params.leftArrow }}text-align: right;{{end}} {{if .Params.center }}text-align: center;{{end}}">
       {{ .Inner }}
     </p>
   </div>

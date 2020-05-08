@@ -473,6 +473,20 @@ blockquote > p {
 	margin: 12px 0;
 }
 
+.bg-img-item {
+	user-select: none;
+	box-sizing: border-box;
+	flex: 1;
+	background-size: cover;
+	border-radius: 8px;
+	display: inline-block;
+	height: 108px;
+	width: 175px;
+	cursor: pointer;
+	background-position: center;
+	text-decoration: none;
+}
+
 @media only all and (max-width: 768px) {
 	.hero .hero-item .hero-arrow {
 		display: none;

@@ -1,5 +1,5 @@
 +++
-title = "Ecosystem"
+title = "Understanding elastOS"
 weight = 10
 chapter = false
 pre = ""

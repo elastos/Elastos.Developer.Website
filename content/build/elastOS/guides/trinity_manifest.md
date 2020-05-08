@@ -1,6 +1,6 @@
 +++
 title = "The Manifest File"
-weight = 10
+weight = 15
 chapter = false
 pre = ""
 alwaysopen = false

@@ -12,13 +12,13 @@ HTTP calls are forbidden by default in elastOS applications. But some specific d
 
 ### Manifest change
 
-Add your API domain to your manifest.json:
+Add your API domain to your `manifest.json`:
 
     "urls": [
         "http://api.yourdomain.com/*",
     ],
 
-### Http calls in Typescript
+### HTTP calls in Typescript
 
 Here is a typical http GET call from an ionic app:
 

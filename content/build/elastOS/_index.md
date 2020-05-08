@@ -23,13 +23,13 @@ alwaysopen = false
 
 {{< hero >}}
     {{< heroitem link="#" nopad="true" noshadow="true" colspan="4">}}
-        {{< figure src="/build/elastos/WechatIMG94.jpeg" width="200" >}}
+        {{< figure src="/build/elastOS/demos_imgs/WechatIMG94.jpeg" width="200" >}}
     {{< /heroitem >}}
     {{< heroitem link="#" nopad="true" noshadow="true" colspan="4">}}
-        {{< figure src="/build/elastos/WechatIMG95.jpeg" width="200" >}}
+        {{< figure src="/build/elastOS/demos_imgs/WechatIMG95.jpeg" width="200" >}}
     {{< /heroitem >}}
     {{< heroitem link="#" nopad="true" noshadow="true" colspan="4">}}
-        {{< figure src="/build/elastos/WechatIMG96.jpeg" width="200" >}}
+        {{< figure src="/build/elastOS/demos_imgs/WechatIMG96.jpeg" width="200" >}}
     {{< /heroitem >}}
 {{< /hero >}}
 

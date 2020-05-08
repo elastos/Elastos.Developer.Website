@@ -8,6 +8,10 @@ alwaysopen = false
 +++
 
 {{< hero >}}
+    {{< heroitem title="dApps" link="/discover/dapps"  colspan="6" >}}
+        See some of our dApps, both on elastOS and standalone
+    {{< /heroitem >}}
+
     {{< heroitem title="Partners" link="/discover/partners/"  colspan="6" >}}
         Learn about Partners building on us and how to become one
     {{< /heroitem >}}

@@ -32,3 +32,11 @@ Here is how to declare the existing global plugin instances from your dApps and 
 | Wallet | ```declare let walletManager: WalletPlugin.WalletManager;``` |
 | DID | ```declare let didManager: DIDPlugin.DIDManager;``` |
 | Standard cordova plugins | View examples in plugins API reference. |
+
+{{< spacer 1 >}}
+
+{{< hero >}}
+    {{< heroitem link="https://developer.elastos.org/references/trinity_plugins/index.html" linkBlank="true" rightArrow="true" >}}
+        <h5>Plugins API</h5>
+    {{< /heroitem >}}
+{{< /hero >}}
