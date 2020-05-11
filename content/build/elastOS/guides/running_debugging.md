@@ -41,13 +41,24 @@ $ trinity-cli run -p android|ios --nodebug
     Also when running without <span style="font-weight: 400;">--nodebug</span>, after the capsule installs the screen may not automatically update to show the installed capsule, force a refresh by navigating elsewhere and back. 
 {{</ notice >}}
 
-Note that as soon as your device stops being on the same network as your computer, or if the `trinity-cli run` command is stopped, your dApp in elastOS will show a network error with an empty page. 
+Note that if you're running without `--nodebug` as soon as your device stops being on the same network as your computer, or if the `trinity-cli run` command is stopped, your dApp in {{< rawspan fontweight="400" >}}elastOS{{< /rawspan >}} will show a network error with an empty page. 
 
-## Debugging your application
+{{< spacer 1 >}}
+
+## Debugging Your Application
 
 **On Android**:
 
 Open the Chrome browser on your computer and visit `chrome://inspect` to inspect your dApp pages.
+
+{{< notice warning >}}
+    {{< rawspan fontweight="400" >}}You need to be running a debug build of <b>elastOS</b>{{< /rawspan >}} and not the production builds or the version from Play Store suggested by some basic guides.<br/>
+    <br/> 
+    See: <a target="_blank" href="https://github.com/elastos/Elastos.Trinity/releases">https://github.com/elastos/Elastos.Trinity/releases</a> and get a <b>daily</b> .apk file.
+    
+{{</ notice >}}
+
+- Also you can use `adb logcat` to view the device logs for certain error messages.
 
 **On iOS**:
 
@@ -55,7 +66,9 @@ Open safari, **development** menu, find your device, and select then dApp in the
 
 Safari doesn't show logs history if you start the debug panel after starting your dApp. You can choose to restart your app manually using **ctrl+r** or **cmd+r** in the debugguer, to get all startup logs.
 
-## Debugging user issues remotely
+{{< spacer 1 >}}
+
+## Debugging User Issues Remotely
 
 After your dApp is published, some users may face issues, including fatal exceptions, that you haven't seen during development and tests.
 

@@ -16,6 +16,8 @@ Therefore you need to have elastOS running first, typically the way to do this i
     {{< rawspan fontweight="400" >}}elastOS is not yet released for iOS,{{< /rawspan >}} therefore we will only be supporting Android at the moment
 {{</ notice >}}
 
+{{< spacer 1 >}}
+
 ### Running an Android Emulator
 
 #### 1. Download Android Studio - {{< externallink title="https://developer.android.com/studio" >}}https://developer.android.com/studio{{< /externallink >}}

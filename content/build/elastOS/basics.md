@@ -16,6 +16,18 @@ You will notice a lot of the tools and repos are named "trinity", this is analag
 
 - {{< rawspan fontweight="400" >}}elastOS{{< /rawspan >}} capsules must be written in {{< externallink title="Ionic 4.0 using React or Angular" >}}https://ionicframework.com{{< /externallink >}}
 
+    {{< notice note >}}
+        {{< rawspan fontweight="400" >}}There is a bug in the React template right now{{< /rawspan >}}, temporarily you must import <b>appManager</b>:
+        <code>declare const appManager: AppManagerPlugin.AppManager</code><br/>
+        <br/>
+        Then ensure we set visibility to show on App mount (within React.Component Parent App):
+        <code>
+            useEffect(() => {
+                appManager.setVisible("show")
+            }, [])
+        </code>
+    {{</ notice >}}
+
 - by default external requests are blocked, you must whitelist URLs in the `manifest.json` and even then users will be prompted to approve the connection through a native pop-up
 
 - your capsule can access a **suite of plugins** to use native features such as the:
