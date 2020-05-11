@@ -6,7 +6,7 @@ pre = ""
 alwaysopen = false
 +++
 
-## _Coming Soon_
+_The {{< rawspan fontweight="400" >}}elastOS app{{< /rawspan >}} is still on TestFlight for iOS and will be coming soon._
 
 {{< spacer 1 >}}
 

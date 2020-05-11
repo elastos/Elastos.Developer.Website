@@ -1,5 +1,5 @@
 +++
-title = "dApp Distribution"
+title = "Publishing Your dApp"
 weight = 100
 chapter = false
 pre = ""
