@@ -20,16 +20,16 @@ The Elastos blockchain distinguishes itself from other projects in the space by 
 
 ### Types of Elastos Sidechains
 1. **DID Sidechain**: This sidechain's sole function is to issue decentralized IDs to users, apps, and devices and to provide the capability to store data and information for each DID
-2. **Token Sidechain**: This sidechain's sole function is to issue fungible and non-fungible tokens for projects and DApps
+2. **Token Sidechain**: This sidechain's sole function is to issue fungible and non-fungible tokens for projects and dApps
 3. **Ethereum Sidechain**: This sidechain's sole function is to mimic the public Ethereum blockchain in running smart contracts written in Solidity, issuing ERC20 and ERC721 tokens to projects and other basic functions. Basically, anything a user or developer can do on the public Ethereum blockchain, they can aldo do using the Elastos Ethereum Sidechain
 4. **NEO Sidechain**: This sidechain's sole function is to mimic the public NEO blockchain in running NEO smart contracts and all other basic functions of the public NEO blockchain.
-5. **Elastos DApp Sidechain**: TBD
+5. **Elastos dApp Sidechain**: TBD
 6. **Elastos Digital Assets Sidechain**: TBD
 
 ### Elastos sidechains scale horizontally and easily
 If a blockchain platform is robust and more developers prefer it, it is quite simple to port that platform to Elastos as a brand new sidechain(eg. EOS sidechain, etc). This process is in the very spirit of decentralized open source projects.  
 
-In the future, if there ever comes a time when an Ethereum DApp experiences a surge in popularity and receives an influx of users, data, and transactions, a single Ethereum Sidechain may not suffice. In that case, it is possible to create an additional Ethereum Sidechain and place the heavily trafficked DApp on that Sidechain.This process can be repeated to as many iterations as are necessary to support near-infinite DApps. With this, we could potentially see not one, not two, but perhaps five Ethereum Sidechains and five NEO Sidechains running concurrently on Elastos’ infrastructure. That is the power of the seminal architecture that Elastos has built.
+In the future, if there ever comes a time when an Ethereum dApp experiences a surge in popularity and receives an influx of users, data, and transactions, a single Ethereum Sidechain may not suffice. In that case, it is possible to create an additional Ethereum Sidechain and place the heavily trafficked dApp on that Sidechain.This process can be repeated to as many iterations as are necessary to support near-infinite dApps. With this, we could potentially see not one, not two, but perhaps five Ethereum Sidechains and five NEO Sidechains running concurrently on Elastos’ infrastructure. That is the power of the seminal architecture that Elastos has built.
 
 {{< figure src="../sidechains_images/ethereum_sidechain_scalability_solution.png" >}}
 

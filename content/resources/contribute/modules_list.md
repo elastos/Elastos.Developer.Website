@@ -130,7 +130,7 @@ You can find more information about each repository going to [the root Elastos G
 * Elastos.App.Wallet.Desktop
 * Elastos.ORG.Wallet.Lib.Android
 
-### elastOS (Trinity) DApps
+### elastOS (Trinity) dApps
 
 * Elastos.Trinity.DApps.Wallet
 * Elastos.Trinity.DApps.Launcher

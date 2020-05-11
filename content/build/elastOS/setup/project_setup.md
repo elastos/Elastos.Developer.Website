@@ -93,7 +93,7 @@ Then in your application, you can use it this way:
 Enter your app's folder in a terminal then run the following command:
 
 ```bash
-$ trinity-cli run -p android
+$ trinity-cli run -p android --nodebug
 ```
 
 That will package your application as a EPK file, send it to your device, install it inside elastOS, and run it.

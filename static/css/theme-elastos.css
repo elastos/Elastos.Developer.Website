@@ -487,6 +487,11 @@ blockquote > p {
 	text-decoration: none;
 }
 
+#body .img-inline img {
+	display: inline-block;
+	margin: 0;
+}
+
 @media only all and (max-width: 768px) {
 	.hero .hero-item .hero-arrow {
 		display: none;

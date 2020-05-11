@@ -2,11 +2,16 @@
 
 {{ $scratch.Set "css" "" }}
 
-{{ if .Params.fontweight }}
-  {{ if eq .Params.fontweight "300" }}
+{{ with .Params }}
+  {{ if eq .fontweight "300" }}
     {{ $scratch.Add "css" " text-normal" }}
-  {{ else if eq .Params.fontweight "400" }}
-{{ $scratch.Add "css" " text-medium" }}
+  {{ else if eq .fontweight "400" }}
+    {{ $scratch.Add "css" " text-medium" }}
+  {{ end }}
+
+  {{ if .imginline }}
+    {{ $scratch.Add "css" " img-inline" }}
   {{ end }}
 {{ end }}
+
 <span class='{{ $scratch.Get "css" }}'>{{.Inner}}</span>

@@ -23,7 +23,7 @@ Trinity CLI provides an **easy way to run and debug** your dApp from your develo
 
 ```bash
 # To deploy and run on android - check the CLI help for other options.
-$ trinity-cli run -p android|ios
+$ trinity-cli run -p android|ios --nodebug
 ```
 
 **What happens in background**:
@@ -31,16 +31,23 @@ $ trinity-cli run -p android|ios
 * Your app's manifest is slightly edited to **use your computer's local content remotely**, so that every time you will save one of your app's files the app will automatically reload inside elastOS.
 * Your app is packaged as a EPK file and signed using a debug signature.
 * Your app is sent to the device, and the native elastOS browser catches it then installs it.
-* `ionic serve` is called to start a simple server that the dApp will contact to get your dApp files.
-* When you change your source code on your computer, your DApp on the device detects it and reload the app content.
+* {{< rawspan >}}<i class="fas fa-exclamation-triangle"></i>{{< /rawspan >}} **see note below** - ~~`ionic serve` is called to start a simple server that the dApp will contact to get your dApp files.~~
+* ~~When you change your source code on your computer, your dApp on the device detects it and reload the app content.~~
 
-Note that as soon as your device stops being on the same network as your computer, or if the `trinity-cli run` command is stopped, your DApp in elastOS will show a network error with an empty page. 
+{{< notice note >}}
+    {{< rawspan fontweight="400" >}}<b>ionic serve</b> is a bit buggy at the moment{{< /rawspan >}}, temporarily you can call <span style="font-weight: 400;">trinity-cli</span> run without <span style="font-weight: 400;">--nodebug</span>, 
+    but you will need to close the {{< rawspan fontweight="400" >}}elastOS app{{< /rawspan >}} and re-open it after your capsule installs, this gives the <span style="font-weight: 400;">ionic server</span> enough time to start.<br/>
+    <br/>
+    Also when running without <span style="font-weight: 400;">--nodebug</span>, after the capsule installs the screen may not automatically update to show the installed capsule, force a refresh by navigating elsewhere and back. 
+{{</ notice >}}
+
+Note that as soon as your device stops being on the same network as your computer, or if the `trinity-cli run` command is stopped, your dApp in elastOS will show a network error with an empty page. 
 
 ## Debugging your application
 
 **On Android**:
 
-Open the Chrome browser on your computer and visit `chrome://inspect` to inspect your DApp pages.
+Open the Chrome browser on your computer and visit `chrome://inspect` to inspect your dApp pages.
 
 **On iOS**:
 
