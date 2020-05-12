@@ -40,7 +40,7 @@ alwaysopen = false
         For a list of our custom elastOS plugins that give you access to all the features of the Elastos ecosystem.
     {{< /heroitem >}}
     
-    {{< heroitem title="Ionic Plugins" link="/build/elastos/guides/running_debugging" colspan="4" >}}
+    {{< heroitem title="Debugging" link="/build/elastos/guides/running_debugging" colspan="4" >}}
         For help running and debugging your elastOS capsule/dApp
     {{< /heroitem >}}
     
