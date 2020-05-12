@@ -1,6 +1,6 @@
 {
     "name":"elastOS browser",
-    "lastupdated":"2020.04.02",
+    "lastupdated":"2020.05.12",
     "useplatforms": true,
     "notes":"iOS release dates are currently undetermined, this is best effort until Apple accepts elastOS on their app store. iOS and Android releases will usually be deployed in similar time ranges with identical content.",
     "links":[
@@ -14,42 +14,35 @@
     "releases":{
         "current":[
             {
-                "platform":"android", "version":"1.0.1", "date":"2020.02.12", "quality": "Developers beta", "newfeatures":[
-                    "Full redesign",
-                    "DID dApp, DPoS voting dApp, dApp store dApp",
-                    "Inter-app communication mechanisms",
-                    "Latest Wallet, DID and Carrier plugins"
+                "platform":"android", "version":"1.1.1", "date":"2020.04.30", "quality": "Developers beta", "newfeatures":[
+                    "elastOS as a browser",
+                    "New launcher app design",
+                    "Customizable networks"
                 ]
             }
         ],
         "next":[
             {
-                "platform":"ios", "date":"Undetermined", "quality": "Developers alpha", "content":[
+                "platform":"ios", "date":"2020.05", "quality": "Alpha", "content":[
                     "Initial iOS release",
                     "elastOS as a browser",
-                    "New launcher app design"
-                ]
-            },
-            {
-                "platform":"android", "date":"2020.04", "quality": "Developers beta", "content":[
-                    "Trying to synchronize with the initial iOS release",
-                    "elastOS as a browser",
                     "New launcher app design",
-                    "Customizable networks",
-                    "Friends connectivity improvements"
+                    "Very basic native iOS wallet instead of ionic wallet"
                 ]
             },
             {
                 "platform":"android", "date":"2020.05", "quality": "Developers beta", "content":[
+                    "Friends connectivity improvements",
                     "Background services",
                     "Local notifications",
-                    "Improved initial on boarding",
                     "Easy DID publication",
-                    "DID sessions"
+                    "DID sessions",
+                    "Better Carrier offline support"
                 ]
             },
             {
                 "platform":"android", "date":"2020.06", "quality": "Developers beta", "content":[
+                    "Improved initial on boarding",
                     "Remote notifications",
                     "Silent intents / Pre-authorizations",
                     "Ethereum support in wallet",
@@ -65,6 +58,16 @@
             {
                 "platform":"desktop", "date":"2020.06", "quality": "Project start", "content":[
                     "Attempt to setup a team to build elastOS for desktop (computers)"
+                ]
+            }
+        ],
+        "previous": [
+            {
+                "platform":"android", "version":"1.0.1", "date":"2020.02.12", "quality": "Developers beta", "newfeatures":[
+                    "Full redesign",
+                    "DID dApp, DPoS voting dApp, dApp store dApp",
+                    "Inter-app communication mechanisms",
+                    "Latest Wallet, DID and Carrier plugins"
                 ]
             }
         ]
