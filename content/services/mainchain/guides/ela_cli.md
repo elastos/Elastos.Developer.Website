@@ -21,9 +21,9 @@ The Elastos CLI provides several useful commands for development, deployment, id
 
 To get a more detailed list of commands and parameters:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 $ ./ela-cli help
-{{% /highlight %}}
+{{< /highlight >}}
 
 ## Most useful commands
 
@@ -44,9 +44,9 @@ The Elastos CLI will connect to the default rpcport[20336] of the local ela node
 | --rpcuser     | Specify the username of the BasicAuth. The default value is "".                       |
 | --rpcpassword | Specify the password of the BasicAuth. The default value is "".                       |
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 $ ./ela-cli info getcurrent --rpcport YourRPCPort --rpcuser YourRPCUser --rpcpassword YourRPCPassword
-{{% /highlight %}}
+{{< /highlight >}}
 
 ## Wallet
 
@@ -54,166 +54,166 @@ $ ./ela-cli info getcurrent --rpcport YourRPCPort --rpcuser YourRPCUser --rpcpas
 
 The create account command is used to create a standard account and store the private key encryption in the keystore file. Each wallet has a default account, which is generally the first account added. The default account cannot be deleted.
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 $ ./ela-cli wallet create -p PASSWORD
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ADDRESS                            PUBLIC KEY
 ---------------------------------- ------------------------------------------------------------------
 ESVMKLVB1j1KQR8TYP7YbksHpNSHg5NZ8i 032d3d0e8125ac6215c237605486c9fbd4eb764f52f89faef6b7946506139d26f8
 ---------------------------------- ------------------------------------------------------------------
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### View Public Key
 
 Show the public keys stored in the keystore.dat file.
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 $ ./ela-cli wallet account -p PASSWORD
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ADDRESS                            PUBLIC KEY
 ---------------------------------- ------------------------------------------------------------------
 ESVMKLVB1j1KQR8TYP7YbksHpNSHg5NZ8i 032d3d0e8125ac6215c237605486c9fbd4eb764f52f89faef6b7946506139d26f8
 ---------------------------------- ------------------------------------------------------------------
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Check Balance
 
 The command below will check the balances of all the addresses in the keystore.dat file.
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 $ ./ela-cli wallet balance
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 INDEX                            ADDRESS BALANCE                           (LOCKED)
 ----- ---------------------------------- ------------------------------------------
     0 EJMzC16Eorq9CuFCGtyMrq4Jmgw9jYCHQR 505.08132198                (174.04459514)
 ----- ---------------------------------- ------------------------------------------
     0 8PT1XBZboe17rq71Xq1CvMEs8HdKmMztcP 10                                     (0)
 ----- ---------------------------------- ------------------------------------------
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Add Standard Account
 
 Add a new address in the keystore.dat file.
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 $ ./ela-cli wallet add -p PASSWORD
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ADDRESS                            PUBLIC KEY
 ---------------------------------- ------------------------------------------------------------------
 ET15giWpFNSYcTKVbj3s18TsR6i8MBnkvk 031c862055158e50dd6e2cf6bb33f869aaac42c5e6def66a8c12efc1fdd16d5597
 ---------------------------------- ------------------------------------------------------------------
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Add Multi-Signature Account
 
 Adding multi-signature account requires specifying the public key list `pks`, and a minimum number of signatures `m`.
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 $ ./ela-cli wallet addmultisig -m 3 --pks 0325406f4abc3d41db929f26cf1a419393ed1fe5549ff18f6c579ff0c3cbb714c8,0353059bf157d3eaca184cc10a80f10baf10676c4a39695a9a092fa3c2934818bd,03fd77d569f766638677755e8a71c7c085c51b675fbf7459ca1094b29f62f0b27d,0353059bf157d3eaca184cc10a80f10baf10676c4a39695a9a092fa3c2934818bd -p PASSWORD
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 8PT1XBZboe17rq71Xq1CvMEs8HdKmMztcP
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Delete Account
 
 Delete the specified address in the keystore.dat file. While the default account cannot be deleted.
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 $ ./ela-cli wallet delete ET15giWpFNSYcTKVbj3s18TsR6i8MBnkvk
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ADDRESS                            PUBLIC KEY
 ---------------------------------- ------------------------------------------------------------------
 EJMzC16Eorq9CuFCGtyMrq4Jmgw9jYCHQR 034f3a7d2f33ac7f4e30876080d359ce5f314c9eabddbaaca637676377f655e16c
 ---------------------------------- ------------------------------------------------------------------
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Export Account
 
 Delete the specified address in the keystore.dat file. While the default account cannot be deleted.
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 $ ./ela-cli wallet delete ET15giWpFNSYcTKVbj3s18TsR6i8MBnkvk
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ADDRESS                            PUBLIC KEY
 ---------------------------------- ------------------------------------------------------------------
 EJMzC16Eorq9CuFCGtyMrq4Jmgw9jYCHQR 034f3a7d2f33ac7f4e30876080d359ce5f314c9eabddbaaca637676377f655e16c
 ---------------------------------- ------------------------------------------------------------------
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Import Account
 
 Import an account by the private key.
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli wallet import b2fe3300e44b27b199d97af43ed3e82df4670db66727732ba8d9442ce680da35
-{{% /highlight %}}
+{{< /highlight >}}
 
 Enter a password when prompted.
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ADDRESS                            PUBLIC KEY
 ---------------------------------- ------------------------------------------------------------------
 EQJP3XT7rshteqE1D3u9nBqXL7xQrfzVh1 03f69479d0f6aa11aae5fbe5e5bfca201d717d9fa97a45ca7b89544047a1a30f59
 ---------------------------------- ------------------------------------------------------------------
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Generate Deposit Address
 
 Generate a deposit address from a standard address:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli wallet depositaddr EJMzC16Eorq9CuFCGtyMrq4Jmgw9jYCHQR
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 DVgnDnVfPVuPa2y2E4JitaWjWgRGJDuyrD
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Generate Cross Chain Address
 
 Generate a cross chain address from a side chain genesis block hash:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli wallet crosschainaddr 56be936978c261b2e649d58dbfaf3f23d4a868274f5522cd2adb4308a955c4a3
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 XKUh4GLhFJiqAMTF6HyWQrV9pK9HcGUdfJ
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Transaction
 
@@ -231,16 +231,16 @@ Build transaction command can build transaction raw data. Note that before sendi
 
 ##### Build standard signature transaction
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli wallet buildtx --to EJbTbWd8a9rdutUfvBxhcrvEeNy21tW1Ee --amount 0.1 --fee 0.01
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 Hex:  090200010013373934373338313938363837333037373435330139eaa4137a047cdaac7112fe04617902e3b17c1685029d259d93c77680c950f30100ffffffff02b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a3809698000000000000000000210fcd528848be05f8cffe5d99896c44bdeec7050200b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a36ea2d2090000000000000000210d4109bf00e6d782db40ab183491c03cf4d6a37a000000000001002321034f3a7d2f33ac7f4e30876080d359ce5f314c9eabddbaaca637676377f655e16cac
 File:  to_be_signed.txn
-{{% /highlight %}}
+{{< /highlight >}}
 
 ##### Build multi-signature transaction
 
@@ -248,51 +248,51 @@ The from address must exist in the keystore file.
 
 Command:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli wallet buildtx --from 8PT1XBZboe17rq71Xq1CvMEs8HdKmMztcP --to EQJP3XT7rshteqE1D3u9nBqXL7xQrfzVh1 --amount 0.51 --fee 0.001
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 Hex:
 0902000100133334393234313234323933333338333335313701737a31035ebe8dfe3c58c7b9ff7eb13485387cd2010d894f39bf670ccd1f62180000ffffffff02b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a3c0320a030000000000000000214e6334d41d86e3c3a32698bdefe974d6960346b300b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a3a0108f380000000000000000125bc115b91913c9c6347f0e0e3ba3b75c80b94811000000000001008b53210325406f4abc3d41db929f26cf1a419393ed1fe5549ff18f6c579ff0c3cbb714c8210353059bf157d3eaca184cc10a80f10baf10676c4a39695a9a092fa3c2934818bd210353059bf157d3eaca184cc10a80f10baf10676c4a39695a9a092fa3c2934818bd2103fd77d569f766638677755e8a71c7c085c51b675fbf7459ca1094b29f62f0b27d54ae
 File:  to_be_signed.txn
-{{% /highlight %}}
+{{< /highlight >}}
 
 ##### Build multi-output transaction
 
 To build a multi-output transaction, you need to prepare a file in CSV format that specifies the recipients' addresses and amounts. For example: addresses.csv
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 EY55SertfPSAiLxgYGQDUdxQW6eDZjbNbX,0.001
 Eeqn3kNwbnAsu1wnHNoSDbD8t8oq58pubN,0.002
 EXWWrRQxG2sH5U8wYD6jHizfGdDUzM4vGt,0.003
-{{% /highlight %}}
+{{< /highlight >}}
 
 The first column is the recipient's address and the second column is the amount. (note that the above is sample data, and you need to fill in your own data when sending the real transaction)
 
 Specify the addresses.csv file with the `—-tomany` parameter.
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli wallet buildtx --tomany addresses.csv --fee 0.001
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result：
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 Multi output address: EY55SertfPSAiLxgYGQDUdxQW6eDZjbNbX , amount: 0.001
 Multi output address: Eeqn3kNwbnAsu1wnHNoSDbD8t8oq58pubN , amount: 0.002
 Multi output address: EXWWrRQxG2sH5U8wYD6jHizfGdDUzM4vGt , amount: 0.003
 Hex:  09020001001235353938383739333333353636383730383501b9932e31681c63ce0425eecb50c2dfc8298bb3e1bcf31b1db648c11f65fd2caf0000ffffffff03b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a3a0860100000000000000000021a3a01cc2e25b0178010f5d7707930b7e41359d7e00b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a3400d0300000000000000000021ede51096266b26ca8695c5452d4d209760385c3600b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a3e09304000000000000000000219d7798bd544db55cd40ed3d5ba55793be4db170a00000000000100232103c5b92b875b9820aba064dd1c93007c8a971fc43d318f7dc7fd6ea1509a424195ac
 File:  to_be_signed.txn
-{{% /highlight %}}
+{{< /highlight >}}
 
 ##### Build special transaction
 
 ###### Build activation transaction
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 NAME:
    ./ela-cli wallet buildtx activate - Build a tx to activate producer which have been inactivated
 
@@ -303,28 +303,28 @@ OPTIONS:
    --nodepublickey value       the node public key of an arbitrator which have been inactivated
    --wallet <file>, -w <file>  wallet <file> path (default: "keystore.dat")
    --password value, -p value  wallet password
-{{% /highlight %}}
+{{< /highlight >}}
 
 The `nodepublickey` parameter is used to specify the node public key of an arbiter.
 
 The account associated with node publickey must exist in the specified keystore file.
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli wallet buildtx activate --nodepublickey 032895050b7de1a9cf43416e6e5310f8e909249dcd9c4166159b04a343f7f141b5
-{{% /highlight %}}
+{{< /highlight >}}
 
 You need to enter a password to sign the payload of the transaction.
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 Hex:  090d0021032895050b7de1a9cf43416e6e5310f8e909249dcd9c4166159b04a343f7f141b540b78018ce13a67366aab73584c66237a5345420049d141f1ba84876d0c015345cc6e503b2a3cd7c9b20e7677e8e0f8f5bb2bf311c480a9aba1eed217501d3e2ab0000000000000000
 File:  ready_to_send.txn
-{{% /highlight %}}
+{{< /highlight >}}
 
 ###### Build Voting transaction
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 NAME:
    ./ela-cli wallet buildtx vote - Build a tx to vote for candidates using ELA
 
@@ -338,7 +338,7 @@ OPTIONS:
    --fee <fee>                 the transfer <fee> of the transaction
    --wallet <file>, -w <file>  wallet <file> path (default: "keystore.dat")
    --password value, -p value  wallet password
-{{% /highlight %}}
+{{< /highlight >}}
 
 --for
 
@@ -352,25 +352,25 @@ To build a voting transaction, you need to prepare a file that specifies the can
 
 For example: candidates.csv
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 033b4606d3cec58a01a09da325f5849754909fec030e4cf626e6b4104328599fc7
 032895050b7de1a9cf43416e6e5310f8e909249dcd9c4166159b04a343f7f141b5
-{{% /highlight %}}
+{{< /highlight >}}
 
 Vote 1 ELA for each of the above candidates.
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli wallet buildtx vote --for candidates.csv --amount 1 --fee 0.1
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 candidate: 033b4606d3cec58a01a09da325f5849754909fec030e4cf626e6b4104328599fc7
 candidate: 032895050b7de1a9cf43416e6e5310f8e909249dcd9c4166159b04a343f7f141b5
 Hex:  0902000100133931333133393830343439313038373335313101b9932e31681c63ce0425eecb50c2dfc8298bb3e1bcf31b1db648c11f65fd2caf0000ffffffff01b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a300e1f5050000000000000000214cbc08129018f205d99007d8b57be7600c772afe010001000221033b4606d3cec58a01a09da325f5849754909fec030e4cf626e6b4104328599fc721032895050b7de1a9cf43416e6e5310f8e909249dcd9c4166159b04a343f7f141b5000000000100232103c5b92b875b9820aba064dd1c93007c8a971fc43d318f7dc7fd6ea1509a424195ac
 File:  to_be_signed.txn
-{{% /highlight %}}
+{{< /highlight >}}
 
 #### Sign Transaction
 
@@ -386,87 +386,87 @@ The `file` parameter is used to specify the raw transaction file which to be sig
 
 ##### Standard Signature
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli wallet signtx -f to_be_signed.txn
-{{% /highlight %}}
+{{< /highlight >}}
 
 Enter a password when prompted.
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 [ 1 / 1 ] Transaction successfully signed
 Hex:  090200010013373934373338313938363837333037373435330139eaa4137a047cdaac7112fe04617902e3b17c1685029d259d93c77680c950f30100ffffffff02b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a3809698000000000000000000210fcd528848be05f8cffe5d99896c44bdeec7050200b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a36ea2d2090000000000000000210d4109bf00e6d782db40ab183491c03cf4d6a37a0000000000014140b3963ac174e922592905154c34519765c246441132707ccd6b4fb98d6107cc391e180d106bb02ce8e895d4662eb353f72f4859366ddf01fb97ae32f39bf6d1752321034f3a7d2f33ac7f4e30876080d359ce5f314c9eabddbaaca637676377f655e16cac
 File:  ready_to_send.txn
-{{% /highlight %}}
+{{< /highlight >}}
 
 ##### Multi Signature
 
 Attach the first signature:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli wallet signtx -f to_be_signed.txn -w keystore1.dat
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 [ 1 / 3 ] Transaction successfully signed
 Hex:  0902000100133334393234313234323933333338333335313701737a31035ebe8dfe3c58c7b9ff7eb13485387cd2010d894f39bf670ccd1f62180000ffffffff02b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a3c0320a030000000000000000214e6334d41d86e3c3a32698bdefe974d6960346b300b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a3a0108f380000000000000000125bc115b91913c9c6347f0e0e3ba3b75c80b9481100000000000141406952da35f525b4db087654f2b0317b6ea7d385d22539f5ecf2001cc6db169be0b6945e073180796f2a070a29e90c1c62e5b9a3f8b3f040b3fe8ea6be57da5a858b53210325406f4abc3d41db929f26cf1a419393ed1fe5549ff18f6c579ff0c3cbb714c8210353059bf157d3eaca184cc10a80f10baf10676c4a39695a9a092fa3c2934818bd210353059bf157d3eaca184cc10a80f10baf10676c4a39695a9a092fa3c2934818bd2103fd77d569f766638677755e8a71c7c085c51b675fbf7459ca1094b29f62f0b27d54ae
 File:  to_be_signed_1_of_3.txn
-{{% /highlight %}}
+{{< /highlight >}}
 
 Attach the second signature:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli wallet signtx -f to_be_signed_1_of_3.txn -w keystore2.dat
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 [ 2 / 3 ] Transaction successfully signed
 Hex:  0902000100133334393234313234323933333338333335313701737a31035ebe8dfe3c58c7b9ff7eb13485387cd2010d894f39bf670ccd1f62180000ffffffff02b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a3c0320a030000000000000000214e6334d41d86e3c3a32698bdefe974d6960346b300b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a3a0108f380000000000000000125bc115b91913c9c6347f0e0e3ba3b75c80b9481100000000000182406952da35f525b4db087654f2b0317b6ea7d385d22539f5ecf2001cc6db169be0b6945e073180796f2a070a29e90c1c62e5b9a3f8b3f040b3fe8ea6be57da5a854089aef5f476793d22f2403b575463129041bc37392109f3a96b43a4a94876b43991d40b8fd0ee591a6faa948aea9053fa7a767a21d8772958c498dfb753f576d68b53210325406f4abc3d41db929f26cf1a419393ed1fe5549ff18f6c579ff0c3cbb714c8210353059bf157d3eaca184cc10a80f10baf10676c4a39695a9a092fa3c2934818bd210353059bf157d3eaca184cc10a80f10baf10676c4a39695a9a092fa3c2934818bd2103fd77d569f766638677755e8a71c7c085c51b675fbf7459ca1094b29f62f0b27d54ae
 File:  to_be_signed_2_of_3.txn
-{{% /highlight %}}
+{{< /highlight >}}
 
 Attach the third signature:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli wallet signtx -f to_be_signed_2_of_3.txn -w keystore3.dat
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 [ 3 / 3 ] Transaction successfully signed
 Hex:  0902000100133334393234313234323933333338333335313701737a31035ebe8dfe3c58c7b9ff7eb13485387cd2010d894f39bf670ccd1f62180000ffffffff02b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a3c0320a030000000000000000214e6334d41d86e3c3a32698bdefe974d6960346b300b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a3a0108f380000000000000000125bc115b91913c9c6347f0e0e3ba3b75c80b94811000000000001c3406952da35f525b4db087654f2b0317b6ea7d385d22539f5ecf2001cc6db169be0b6945e073180796f2a070a29e90c1c62e5b9a3f8b3f040b3fe8ea6be57da5a854089aef5f476793d22f2403b575463129041bc37392109f3a96b43a4a94876b43991d40b8fd0ee591a6faa948aea9053fa7a767a21d8772958c498dfb753f576d6408dfd58568cd95be995fa69ab9924c28c23fdc738caf19fb243a285c1cda01793d676c0459d546e92cd69b4f9837f750adc3b6f66fe0eff5dcd5a9cc46c1ec6138b53210325406f4abc3d41db929f26cf1a419393ed1fe5549ff18f6c579ff0c3cbb714c8210353059bf157d3eaca184cc10a80f10baf10676c4a39695a9a092fa3c2934818bd210353059bf157d3eaca184cc10a80f10baf10676c4a39695a9a092fa3c2934818bd2103fd77d569f766638677755e8a71c7c085c51b675fbf7459ca1094b29f62f0b27d54ae
 File:  ready_to_send.txn
-{{% /highlight %}}
+{{< /highlight >}}
 
 #### Send transaction
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli wallet sendtx -f ready_to_send.txn
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 5b9673a813b90dd73f6d21f478736c7e08bba114c3772618fca232341af683b5
-{{% /highlight %}}
+{{< /highlight >}}
 
 #### Show Transaction
 
 The showtx command parses the contents from the raw transaction. You can specify the raw transaction by `hex` or `file` parameters.
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli wallet showtx --hex 0902000100123132333835343835313135373533343433340139eaa4137a047cdaac7112fe04617902e3b17c1685029d259d93c77680c950f30100ffffffff02b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a380778e06000000000000000012e194f97570ada85ec5df31e7c192edf1e3fc199900b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a36ec1dc030000000000000000210d4109bf00e6d782db40ab183491c03cf4d6a37a0000000000014140433f2f2fa7390db75af3a3288943ce178f9373b2362a3b09530dd30fbb50fa5f007716bf07abd7ee0281d422f3615b474ed332ba63fe7209f611e547d68e4c0f2321034f3a7d2f33ac7f4e30876080d359ce5f314c9eabddbaaca637676377f655e16cac
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 Transaction: {
   Hash: 4661854b9441d52f78f5f4c025b37270af3aaa60332c4bfe041fa3cbc91b0a7e
   Version: 9
@@ -499,11 +499,11 @@ Transaction: {
     Parameter: 40433f2f2fa7390db75af3a3288943ce178f9373b2362a3b09530dd30fbb50fa5f007716bf07abd7ee0281d422f3615b474ed332ba63fe7209f611e547d68e4c0f
     }]
   }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ## Get Blockchian Information
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 NAME:
    ./ela-cli info - With ./ela-cli info, you could look up node status, query blocks, transactions, etc.
 
@@ -523,43 +523,43 @@ COMMANDS:
 
 OPTIONS:
    --help, -h  show help
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Get Connections Count
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli info getconnectioncount
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 1
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Get Neighbors Information
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli info getneighbors
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 [
   "127.0.0.1:30338 (outbound)"
 ]
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Get Node State
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli info getnodestate
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 [
   {
     "Addr": "127.0.0.1:30338",
@@ -578,55 +578,55 @@ Result:
     "Version": 10002
   }
 ]
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Get Current Height
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli info getcurrentheight
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 395
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Get Best Block Hash
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli info getbestblockhash
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 "0affad77eacef8d5e69bebd1edd24b43ca8d8948dade9e23b14a9d8ceca060e6"
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Get Block Hash By Height
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli info getblockhash 100
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 "1c1e1c22ce891184d390def30a9b8f15f355c05a7bd6e7e7912b571141e01415"
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Get Block Information
 
 Get block information by hash:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli info getblock 1c1e1c22ce891184d390def30a9b8f15f355c05a7bd6e7e7912b571141e01415
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 {
   "auxpow":   "01000000010000000000000000000000000000000000000000000000000000000000000000000000002cfabe6d6d1514e04111572b91e7e7d67b5ac055f31  58f9b0af3de90d3841189ce221c1e1c01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000  00000000000000000000000ffffff7f000000000000000000000000000000000000000000000000000000000000000073f93ed7b4401e54aef152505f4d4b8  8c7c5462453e77069455262bed04575df3f236e5c00000000e6ef0600",
   "bits": 520095999,
@@ -710,17 +710,17 @@ Result:
   "versionhex": "00000000",
   "weight": 2240
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 Get block information by height:
 
-`{{% highlight "shell" %}}``
+`{{< highlight "shell" >}}``
 ./ela-cli info getblock 100
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
   {
   "auxpow":   "01000000010000000000000000000000000000000000000000000000000000000000000000000000002cfabe6d6d1514e04111572b91e7e7d67b5ac055f31  58f9b0af3de90d3841189ce221c1e1c01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000  00000000000000000000000ffffff7f000000000000000000000000000000000000000000000000000000000000000073f93ed7b4401e54aef152505f4d4b8  8c7c5462453e77069455262bed04575df3f236e5c00000000e6ef0600",
   "bits": 520095999,
@@ -804,29 +804,29 @@ Result:
   "versionhex": "00000000",
   "weight": 2240
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Get Raw Transaction
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli info getrawtransaction 17296308c322aee00274da494e0b9a08423b65d170bd2235c3b658f7030fd9b9
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result：
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 "0902000100133233313431363030303939333439323932373506f9a9deeaf33bde5646567b129c8da3fee08db6210a8d17f359caf6e3b353bf320100ffffffff01ac3c65375d4f0f882a7b76639e3408c1b1fa39731ace92a352e1b650ce35a20100ffffffffe85c7e34e11fd8e1257333d509fc1828f8feef1120b0822940be9c88ee58c31d0100ffffffffdce53502041b2a22a354ffbf03d1c0aed9ff44f731aec4d3a2376c84cbc5696b0100ffffffff8234bf50743e34707a48d9c0cc31ccef29c6f3013b44170ee73835099e3574c60100ffffffffcb1210fe4fbd42cd71c4a5ce46a7862e3e4e557cc5ee6c1d3189208525ecf6de0100ffffffff02b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a300ca9a3b0000000000000000125bc115b91913c9c6347f0e0e3ba3b75c80b9481100b037db964a231458d2d6ffd5ea18944c4f90e63d547c5d3b9874df66a4ead0a3d4d634030000000000000000210d4109bf00e6d782db40ab183491c03cf4d6a37a00000000000141403c72d894b0138348a7640f689b0c4003f1a91969e1b1a1f767303f0fda8226fee42f4b15ac650a8df31a68000fc979036a29dec4383be0571f7bf1bcf3c1cd842321034f3a7d2f33ac7f4e30876080d359ce5f314c9eabddbaaca637676377f655e16cac"
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Get Transaction Pool Information
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli info getrawmempool
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 [
   {
     "attributes": [
@@ -908,17 +908,17 @@ Result:
     "vsize": 494
   }
 ]
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### List Producer Information
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli info listproducers
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result：
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 {
   "producers": [
     {
@@ -955,11 +955,11 @@ Result：
   "totalcounts": 2,
   "totalvotes": "3"
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ## Mining
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 NAME:
    ./ela-cli mine - Toggle cpu mining or manual mine
 
@@ -972,49 +972,49 @@ DESCRIPTION:
 OPTIONS:
    --toggle value, -t value  use --toggle [start, stop] to toggle cpu mining
    --number value, -n value  user --number [number] to mine the given number of blocks
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Start CPU Mining
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli mine -t start
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 mining started
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Stop CPU Mining
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli mine -t stop
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 mining stopped
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Discrete Mining
 
 The `n` parameter is used to specify the number of blocks to want mine
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli mine -n 1
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 [e9c1d12d5f4e7679737d1d348e53ce20fc6966e156d0a40d10e3fcf39c94c2f2]
-{{% /highlight %}}
+{{< /highlight >}}
 
 ## Rollback Block
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 NAME:
    ./ela-cli rollback - Rollback blockchain data
 
@@ -1026,20 +1026,20 @@ DESCRIPTION:
 
 OPTIONS:
    --height value  the final height after rollback (default: 0)
-{{% /highlight %}}
+{{< /highlight >}}
 
 The height parameter is used to set the final height after rollback.
 
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 ./ela-cli rollback --height 20
-{{% /highlight %}}
+{{< /highlight >}}
 
 Result:
-{{% highlight "shell" %}}
+{{< highlight "shell" >}}
 current height is 22
 blockhash before rollback: 74858bcb065e89840f27b28a9ff44757eb904f1a7d135206d83b674b9b68fd4e
 blockhash after rollback: 0000000000000000000000000000000000000000000000000000000000000000
 current height is 21
 blockhash before rollback: 18a38afc7942e4bed7040ed393cb761b84e6da222a1a43df0806968c60fcff8a
 blockhash after rollback: 0000000000000000000000000000000000000000000000000000000000000000
-{{% /highlight %}}
+{{< /highlight >}}

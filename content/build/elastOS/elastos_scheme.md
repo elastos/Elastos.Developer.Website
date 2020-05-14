@@ -127,6 +127,7 @@ On the other hand, native apps may prefer calling the **elastos://** scheme for 
 
 The following parameters are common to all requests. All scheme requests must provide the parameters if they are mandatory. Some of those parameters are used as information to the end user, while some others are used to secure the communication and verify that requests and responses are genuine.
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -197,6 +198,7 @@ The JWT response is appended to the given url as a fragment (yourcallback?params
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 1. Usually, one of callbackurl or redirecturl is required, but some commands do not await any response (ex: issue credential)
 
@@ -207,6 +209,7 @@ Responses are created by the app that received a request, as a response to that 
 
 The JWT token contains the response payload, and a signature that can be used to verify the provided payload.
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -279,6 +282,7 @@ The JWT token contains the response payload, and a signature that can be used to
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ## Verifying requests
 
@@ -323,6 +327,7 @@ Those credentials have been attached as verified credentials on user’s DID bef
 
 ### Request parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -355,10 +360,11 @@ Those credentials have been attached as verified credentials on user’s DID bef
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Claims format
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
     "claims": {
       // default parameters: required: true, no reason, no specific iss requirement
       "CLAIM_NAME": true, 
@@ -375,7 +381,7 @@ Those credentials have been attached as verified credentials on user’s DID bef
         }
       }
     }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Request example
 
@@ -383,7 +389,7 @@ Those credentials have been attached as verified credentials on user’s DID bef
 
 **JWT Payload**:
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
     {
       "iss": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
       "iat": 1566352213,
@@ -405,10 +411,11 @@ Those credentials have been attached as verified credentials on user’s DID bef
         }
       }
     }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Response parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -431,12 +438,13 @@ Those credentials have been attached as verified credentials on user’s DID bef
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Response example
 
 **JWT Payload:**
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
     {
       "type": "credaccess",
       "iss": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
@@ -446,11 +454,11 @@ Those credentials have been attached as verified credentials on user’s DID bef
       "req": "440645e21aabd6820110f3dc2449e02e05a2e7dc29a5f2a5882c509a566fd7f2aa4d0bd2bca040a2f3a7dc8b8dc2ec14a98688b28602f6a2efb3f0513ef04ac4",
       "presentation": [PRESENTATION_CONTENT]
     }
-{{% /highlight %}}
+{{< /highlight >}}
 
 **Presentation content:**
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
     {
       "@context": [
         "https://www.w3.org/2018/credentials/v1",
@@ -492,7 +500,7 @@ Those credentials have been attached as verified credentials on user’s DID bef
         }
       }]
     }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Claim Taxonomy
 
@@ -515,6 +523,7 @@ In order to issue a credential, the issuer needs to have a DID himself first, be
 
 ### Request parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -537,10 +546,11 @@ In order to issue a credential, the issuer needs to have a DID himself first, be
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Verifiable credentials format
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
 {
   "issuedcredentials": [{
     "@context": [
@@ -573,7 +583,7 @@ In order to issue a credential, the issuer needs to have a DID himself first, be
     }
   }]
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Response parameters
 
@@ -593,6 +603,7 @@ Used to get user ELA address, ELA wallet amount, or other wallet related informa
 
 The following parameters could or should be part of the JWT structure:
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -615,10 +626,11 @@ The following parameters could or should be part of the JWT structure:
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Request field format
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
 {
   "reqfields": [{
     // default parameters: required: true, no reason
@@ -635,10 +647,11 @@ The following parameters could or should be part of the JWT structure:
     }
   }]
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Standard fields
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Field</strong>
@@ -657,6 +670,7 @@ The following parameters could or should be part of the JWT structure:
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Request example
 
@@ -664,7 +678,7 @@ The following parameters could or should be part of the JWT structure:
 
 **JWT Payload**:
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
 {
   "iss": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
   "iat": 1566352213,
@@ -683,10 +697,11 @@ The following parameters could or should be part of the JWT structure:
     }
   }]
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Response parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -709,12 +724,13 @@ The following parameters could or should be part of the JWT structure:
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Response example
 
 JWT Payload:
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
 {
   "type": "walletaccess",
   "iss": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
@@ -726,7 +742,7 @@ JWT Payload:
     "elaaddress": "abcdef"
   }]
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ## Pay Command
 
@@ -746,6 +762,7 @@ In case of ERC20 tokens, token smart contract addresses are hardcoded by the imp
 
 ### Request parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -788,9 +805,11 @@ In case of ERC20 tokens, token smart contract addresses are hardcoded by the imp
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Response parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -813,6 +832,7 @@ In case of ERC20 tokens, token smart contract addresses are hardcoded by the imp
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Request example
 
@@ -820,7 +840,7 @@ In case of ERC20 tokens, token smart contract addresses are hardcoded by the imp
 
 JWT Payload:
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
 {
   "iss": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
   "iat": 1566352213,
@@ -829,13 +849,13 @@ JWT Payload:
   "amount": 20.50,
   "receiver": "EfPaLGVqoBTCRtioLN5CFbExBVu7NsgFpX"
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Response example
 
 JWT Payload:
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
 {
   "type": "pay",
   "iss": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
@@ -845,7 +865,7 @@ JWT Payload:
   "req": "440645e21aabd6820110f3dc2449e02e05a2e7dc29a5f2a5882c509a566fd7f2aa4d0bd2bca040a2f3a7dc8b8dc2ec14a98688b28602f6a2efb3f0513ef04ac4",
   "txid": "cLx02f6a26FxLKE4eYJiEz8n9e02e05zC"
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 
 ## ESC Transaction command
@@ -858,6 +878,7 @@ Transaction to execute an **ethereum sidechain smart contract**.
 
 ### Request parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -900,9 +921,11 @@ Transaction to execute an **ethereum sidechain smart contract**.
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Response parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -925,6 +948,7 @@ Transaction to execute an **ethereum sidechain smart contract**.
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Request example
 
@@ -932,7 +956,7 @@ https://scheme.elastos.org/esctransaction/[JWT]
 
 JWT Payload:
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
 {
   "iss": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
   "iat": 1566352213,
@@ -942,13 +966,13 @@ JWT Payload:
   "receiver": "EfPaLGVqoBTCRtioLN5CFbExBVu7NsgFpX",
   "payload": [......]
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Response example
 
 JWT Payload:
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
 {
   "type": "esctransaction",
   "iss": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
@@ -958,7 +982,7 @@ JWT Payload:
   "req": "440645e21aabd6820110f3dc2449e02e05a2e7dc29a5f2a5882c509a566fd7f2aa4d0bd2bca040a2f3a7dc8b8dc2ec14a98688b28602f6a2efb3f0513ef04ac4",
   "txid": "cLx02f6a26FxLKE4eYJiEz8n9e02e05zC"
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ## DID Transaction Command
 
@@ -970,6 +994,7 @@ Used to record a given DID request (ex: including updated DID document given by 
 
 ### Request parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -992,9 +1017,11 @@ Used to record a given DID request (ex: including updated DID document given by 
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Response parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -1017,6 +1044,7 @@ Used to record a given DID request (ex: including updated DID document given by 
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Request example
 
@@ -1024,7 +1052,7 @@ Used to record a given DID request (ex: including updated DID document given by 
 
 JWT Payload:
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
 {
   "iss": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
   "iat": 1566352213,
@@ -1042,13 +1070,13 @@ JWT Payload:
     }
   }
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Response example
 
 JWT Payload:
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
 {
   "type": "didtransaction",
   "iss": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
@@ -1058,7 +1086,7 @@ JWT Payload:
   "req":  "440645e21aabd6820110f3dc2449e02e05a2e7dc29a5f2a5882c509a566fd7f2aa4d0bd2bca040a2f3a7dc8b8dc2ec14a98688b28602f6a2efb3f0513ef04ac4",
   "txid": "cLx02f6a26FxLKE4eYJiEz8n9e02e05zC"
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ## DPoS Vote Transaction Command
 
@@ -1070,6 +1098,7 @@ Used to record a user vote to the mainchain.
 
 ### Request parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -1092,9 +1121,11 @@ Used to record a user vote to the mainchain.
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Response parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -1118,6 +1149,7 @@ Used to record a user vote to the mainchain.
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Request example
 
@@ -1125,7 +1157,7 @@ Used to record a user vote to the mainchain.
 
 JWT Payload:
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
 {
     "iss": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
     "iat": 1566352213,
@@ -1133,13 +1165,13 @@ JWT Payload:
     "redirecturl": "myapp://elastosschemeresponse",
     "publickeys": ["abcd","defg","hijk"]
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ### Response example
 
 JWT Payload:
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
 {
   "type": "dpostransaction",
   "iss": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
@@ -1149,7 +1181,7 @@ JWT Payload:
   "req": "440645e21aabd6820110f3dc2449e02e05a2e7dc29a5f2a5882c509a566fd7f2aa4d0bd2bca040a2f3a7dc8b8dc2ec14a98688b28602f6a2efb3f0513ef04ac4",
   "txid": "cLx02f6a26FxLKE4eYJiEz8n9e02e05zC"
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ## Register as a CR member Command
 
@@ -1161,6 +1193,7 @@ Registers a CR council member candidate so that other persons can vote for her/h
 
 ### Request parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -1213,9 +1246,11 @@ Registers a CR council member candidate so that other persons can vote for her/h
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Response parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -1238,6 +1273,7 @@ Registers a CR council member candidate so that other persons can vote for her/h
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Request example
 
@@ -1245,7 +1281,7 @@ Registers a CR council member candidate so that other persons can vote for her/h
 
 JWT Payload:
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
 {
     "iss": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
     "iat": 1566352213,
@@ -1256,7 +1292,7 @@ JWT Payload:
     "nickname": "The candidate",
     "location": "86"
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 
 ## Vote for CR members Command
@@ -1269,6 +1305,7 @@ Allows a user to vote for one or more CR council members
 
 ### Request parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -1291,9 +1328,11 @@ Allows a user to vote for one or more CR council members
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Response parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -1316,6 +1355,7 @@ Allows a user to vote for one or more CR council members
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Request example
 
@@ -1323,7 +1363,7 @@ Allows a user to vote for one or more CR council members
 
 JWT Payload:
 
-{{% highlight "json" %}}
+{{< highlight "json" >}}
 {
     "iss": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
     "iat": 1566352213,
@@ -1334,7 +1374,7 @@ JWT Payload:
       "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC":"2500000"
     }
 }
-{{% /highlight %}}
+{{< /highlight >}}
 
 ## Sign Data Command
 
@@ -1346,6 +1386,7 @@ Used to sign a document. Later on, anyone can check the signed result to make su
 
 ### Request parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -1368,9 +1409,11 @@ Used to sign a document. Later on, anyone can check the signed result to make su
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ### Response parameters
 
+{{< rawhtml >}}
 <table>
   <tr>
    <td><strong>Parameter</strong>
@@ -1413,6 +1456,7 @@ Used to sign a document. Later on, anyone can check the signed result to make su
    </td>
   </tr>
 </table>
+{{< /rawhtml >}}
 
 ## Custom scheme commands
 
