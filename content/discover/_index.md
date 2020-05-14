@@ -19,6 +19,10 @@ alwaysopen = false
     {{< heroitem title="External Tools" link="/discover/tools/" colspan="6" >}}
         Discover community built external tools for Elastos
     {{< /heroitem >}}
+
+    {{< heroitem title="Hackathons" link="/discover/hackathons/" colspan="6" >}}
+        Browse on going or past hackathons content
+    {{< /heroitem >}}
 {{< /hero >}}
 
 ## See All The elastOS dApps at:

@@ -1,5 +1,3 @@
-
-
 +++
 title = "Partners"
 weight = 40
