@@ -17,4 +17,5 @@ alwaysopen = false
 
 ### Elastos 社区项目
 
-{{% children %}}
+{{< children >}}
+
