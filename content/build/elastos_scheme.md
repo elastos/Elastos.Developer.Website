@@ -1,5 +1,5 @@
 +++
-title = "elastOS Scheme"
+title = "Elastos Scheme"
 date = 2020-03-15T21:15:46+02:00
 weight = 60
 chapter = false

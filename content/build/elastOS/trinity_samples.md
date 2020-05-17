@@ -32,8 +32,8 @@ alwaysopen = false
 #### Or Try Out elastOS With These Demos:
 
 {{< hero >}}
-    {{< heroitem title="Empty elastOS Sample" link="https://github.com/elastos/Elastos.Trinity.DApps.Samples" linkBlank="true" >}}
-        A default elastOS app example, based on ionic's tab sample app. Also contains a default elastOS manifest file for a quickstart.
+    {{< heroitem title="elastOS React Demo" link="https://github.com/getmoonshotHQ/elastOS.Playchat" linkBlank="true" >}}
+        ElastOS Playchat - <b>React</b> Example Demo
     {{< /heroitem >}}
     
     {{< heroitem title="elastOS Wallet DApp" link="https://github.com/elastos/Elastos.Trinity.DApps.Wallet" linkBlank="true" >}}
