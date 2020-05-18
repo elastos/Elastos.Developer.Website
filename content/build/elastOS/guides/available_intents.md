@@ -14,7 +14,11 @@ But the initiating dApp doesn't really know which dApp will realize this operati
 
 ## How to send intents?
 
-See {{< internallink "Interapp communication" "/build/elastos/guides/interapp_communication.md" >}}.
+{{< hero >}}
+    {{< heroitem link="/build/elastos/interapp_communication" rightArrow="true" >}}
+        <h5>Interapp Communication</h5>
+    {{< /heroitem >}}
+{{< /hero >}}
 
 ## What can you do with those intents?
 
@@ -27,7 +31,7 @@ You can either:
 
 ### Standard Elastos scheme intents
 
-See {{< internallink "Elastos scheme" "/build/elastos/elastos_scheme.md" >}} for more details about the following standard intents.
+See  for more details about the following standard intents.
 
 | Intent action | Description |
 | ------------- | ----------- |

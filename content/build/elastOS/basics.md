@@ -47,8 +47,8 @@ You will notice a lot of the tools and repos are named "trinity", this is analag
 
 {{< hero >}}
     {{< heroitem link="https://developer.elastos.org/references/trinity_plugins/index.html" linkBlank="true" >}}
-            <h5>Preview the Plugins API Here</h5>
-        {{< /heroitem >}}
+        <h5>Preview the Plugins API Here</h5>
+    {{< /heroitem >}}
 
     {{< heroitem link="/build/elastos/setup/environment_setup" rightArrow="true" >}}
         <h5>Let's Setup Your Environment First</h5>

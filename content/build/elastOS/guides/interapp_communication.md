@@ -14,7 +14,11 @@ Similarly to Android that provides a great architecture, elastOS has a **intent*
 
 ### elastOS intents and Elastos scheme
 
-{{< todo "Link to the elastos scheme API reference" >}}
+{{< hero >}}
+    {{< heroitem link="/build/elastos_scheme" rightArrow="true" >}}
+        <h5>Elastos Scheme</h5>
+    {{< /heroitem >}}
+{{< /hero >}}
 
 elastOS conforms to the Elastos scheme. Most standard commands are handled by built-in dApps. For example, the /pay command will be handled by the wallet dApp to start a payment, or /credaccess will be handled by the DID dApps to request user to share credentials with the requesting dApp.
 

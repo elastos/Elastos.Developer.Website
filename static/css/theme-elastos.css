@@ -514,4 +514,23 @@ blockquote > p {
 	}
 }
 
+.highlight table > tbody > tr > td:first-child > pre {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-right: 0;
+}
 
+.highlight table > tbody > tr > td:first-child > pre code {
+	padding: 0;
+}
+
+.highlight table > tbody > tr > td:first-child > pre .copy-to-clipboard {
+	display: none;
+}
+
+.highlight table > tbody > tr > td:nth-child(2) > pre {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	line-height: 1.3em;
+}
