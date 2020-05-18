@@ -204,6 +204,8 @@ export default connect(mapStateToProps)(Tab1)
 
 {{< figure src="/build/elastOS/tutorials/react/img/elastOS_tab1.png" >}}
 
+If something isn't working you can view the source code for this tutorial at this point in time here: 
+{{< externallink title="https://github.com/elastosjs/elastOS-react-tutorial/tree/6a481cd343881177f6d05ee436726b17246b5bfe" >}}https://github.com/elastosjs/elastOS-react-tutorial/tree/6a481cd343881177f6d05ee436726b17246b5bfe{{< /externallink >}}
 
 {{< spacer 2 >}}
 
