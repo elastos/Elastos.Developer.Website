@@ -10,6 +10,8 @@ alwaysopen = false
 
 {{< spacer 1 >}}
 
+{{< todo "Separate into categories" >}}
+
 {{< hero >}}
     {{< heroitem title="Understanding elastOS" link="/build/elastos/guides/trinity_ecosystem" colspan="4" >}}
         Learn how capsules function and the module ecosystem of elastOS
