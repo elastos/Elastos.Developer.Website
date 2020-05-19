@@ -32,16 +32,16 @@ alwaysopen = false
 #### Or Try Out elastOS With These Demos:
 
 {{< hero >}}
+    {{< heroitem title="elastOS React Tutorial" link="https://github.com/elastosjs/elastOS-react-tutorial" linkBlank="true" >}}
+        ElastOS React Tutorial
+    {{< /heroitem >}}
+    
     {{< heroitem title="elastOS React Demo" link="https://github.com/getmoonshotHQ/elastOS.Playchat" linkBlank="true" >}}
         ElastOS Playchat - <b>React</b> Example Demo
     {{< /heroitem >}}
     
     {{< heroitem title="elastOS Wallet DApp" link="https://github.com/elastos/Elastos.Trinity.DApps.Wallet" linkBlank="true" >}}
         Default elastOS wallet dApp that you can use as an example to start building your own wallet.
-    {{< /heroitem >}}
-        
-    {{< heroitem title="Ethereum contracts in elastOS" link="https://github.com/elastos/Elastos.Trinity.DApps.Demo.ETHSidechain" linkBlank="true" >}}
-        Deploy and run Ethereum sidechain smart contracts for elastOS.
     {{< /heroitem >}}
 {{< /hero >}}
 
