@@ -209,10 +209,6 @@ If something isn't working you can view the source code for this tutorial at thi
 
 {{< spacer 2 >}}
 
-{{< hero >}}
-    {{< heroitem rightArrow="true" >}}
-        <h5>Connecting to a Smart Contract</h5> - Coming Soon 
-    {{< /heroitem >}}
-{{< /hero >}}
+## _More Coming Soon_
 
 {{< spacer 8 >}}

@@ -248,4 +248,10 @@ if not you can learn more about Redux at {{< externallink title="https://redux.j
 
 {{< spacer 2 >}}
 
-## _More Coming Soon_
+{{< hero >}}
+    {{< heroitem link="/build/elastos/tutorials/react/login" rightArrow="true" >}}
+        <h5>Add DID Login</h5> 
+    {{< /heroitem >}}
+{{< /hero >}}
+
+{{< spacer 8 >}}
