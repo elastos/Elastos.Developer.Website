@@ -56,7 +56,8 @@ Raw requests can be used only for commands with flat parameters list (ex: pay), 
 | Command | Link | Description |
 | --- | --- | --- |
 | Access credentials | [ The **credaccess** command](#access-credentials-command) | Request access to user credentials |
-| Issue credentials | [ The **credissue** command](#issue-credential-command) | Request from a credential issuer to prompt user to attach this credential to his DID |
+| Issue a credential | [ The **credissue** command](#issue-credential-command) | Issue a new credential to a third party after signing it with user's DID |
+| Import credentials | [ The **credimport** command](#import-credentials-command) | Let a user attach a previously issued credential to his DID |
 | Access wallet info | [ The **walletaccess** command](#access-wallet-info-command) | Access wallet information such as ELA address, ELA amount |
 | Pay | [ The **pay** command](#pay-command) | Send secure ELA payments, with blockchain confirmations |
 | Ethereum transaction | [ The **esctransaction** command ](#esc-transaction-command) | Publish an ethereum transaction on the ethereum side chain |
@@ -509,13 +510,11 @@ The elastos scheme is agnostic to different claim types. This allows you to plug
 Whenever possible, for apps communication compatibility, we recommend to use the list of standard claim names that has been defined in the [Elastos Verifiable Claims Specification](https://github.com/elastos/Elastos.DID.Method/blob/master/VerifiableClaims/Elastos-Verifiable-Claims-Specification_en.md#credential-subject).
 
 
+
+
 ## Issue Credential Command
 
-Requests the user to accept or reject a credential issued by an issuer (ex: a university issues a diploma for this user) before attaching this credential to user’s DID. The issuers credential is first attached to the local DID on user's device, and the user can choose to make it public or not (DID sidechain) later.
-
-Credentials can be generated using a DID SDK, such as the Elastos native or Java SDKs, or the elastOS DID plugin.
-
-In order to issue a credential, the issuer needs to have a DID himself first, because this DID is used to sign the credential. Later on, this signing DID can also be checked on the DID sidechain by a service, to make sure if the credential issuer is valid and trusted or not.
+Used to generate a Verifiable Credential given a set of properties and other information. The generated credential if signed by current user's identity and targets a subject identity.
 
 ### Endpoint
 
@@ -536,7 +535,172 @@ In order to issue a credential, the issuer needs to have a DID himself first, be
    </td>
   </tr>
   <tr>
-   <td>issuedcredentials
+   <td>identifier
+   </td>
+   <td>The credential key (credential "id" in W3C terms)
+   </td>
+   <td>yes
+   </td>
+   <td>String
+   </td>
+  </tr>
+  <tr>
+   <td>types
+   </td>
+   <td>Array of custom credential types. At least one type must be provided.
+   </td>
+   <td>yes
+   </td>
+   <td>String
+   </td>
+  </tr>
+  <tr>
+   <td>subjectdid
+   </td>
+   <td>DID of the entity that should receive the issued credential.
+   </td>
+   <td>yes
+   </td>
+   <td>DID String
+   </td>
+  </tr>
+  <tr>
+   <td>properties
+   </td>
+   <td>Custom JSON object with all the properties to attach as credentialSubject to the credential.
+   </td>
+   <td>yes
+   </td>
+   <td>JSON object
+   </td>
+  </tr>
+  <tr>
+   <td>expirationdate
+   </td>
+   <td>Date at which the issued credential will be no longer valid.
+   </td>
+   <td>no
+   </td>
+   <td>ISO 8601 date string
+   </td>
+  </tr>
+</table>
+{{< /rawhtml >}}
+
+### Request example
+
+`https://scheme.elastos.org/credissue/[JWT]`
+
+**JWT Payload**:
+
+{{< highlight "json" >}}
+    {
+      "identifier": "customcredentialkey",
+      "types": ["MyCredentialType"],
+      "subjectdid": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
+      "properties": {
+          "customData": "Here is a test data that will appear in someone else's DID document after he imports it.",
+          "moreComplexData": {
+            "info": "A sub-info"
+          }
+      },
+      "expirationdate": "2025-05-25T08:08:04.000Z"
+    }
+{{< /highlight >}}
+
+### Response parameters
+
+{{< rawhtml >}}
+<table>
+  <tr>
+   <td><strong>Parameter</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Mandatory</strong>
+   </td>
+   <td><strong>Format</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>credential
+   </td>
+   <td>The verifiable credential
+   </td>
+   <td>yes
+   </td>
+   <td>W3C’s verifiable credential
+   </td>
+  </tr>
+</table>
+{{< /rawhtml >}}
+
+### Response example
+
+**JWT Payload:**
+
+{{< highlight "json" >}}
+    {
+        "@context": [
+          "https://www.w3.org/2018/credentials/v1",
+          "https://www.w3.org/2018/credentials/examples/v1"
+        ],
+        "id": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC#customcredentialkey",
+        "type": ["MyCredentialType"],
+        "issuer": "did:ela:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
+        "issuanceDate": "2020-01-01T19:73:24Z",
+        "credentialSubject": {
+          "id": "did:example:iUQtoHoQx8zgxRcLx6FxLKE4eYJiEz8nzC",
+          "customData": "Here is a test data that will appear in someone else's DID document after he imports it.",
+          "moreComplexData": {
+            "info": "A sub-info"
+          }
+        },
+        "proof": { 
+          "type": "RsaSignature2018",
+          "created": "2020-06-18T21:19:10Z",
+          "proofPurpose": "assertionMethod",
+          "verificationMethod": "https://example.edu/issuers/keys/1",
+          "jws": "eyJhbGciOiJSUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..TCYt5X
+            sITJX1CxPCT8yAV-TVkIEq_PbChOMqsLfRoPsnsgw5WEuts01mq-pQy7UJiN5mgRxD-WUc
+            X16dUEMGlv50aqzpqh4Qktb3rk-BuQy72IFLOqV0G_zS245-kronKb78cPN25DGlcTwLtj
+            PAYuNzVBAh4vGHSrQyHUdBBPM"
+        }
+      }
+{{< /highlight >}}
+
+
+
+
+
+## Import Credentials Command
+
+Requests the user to accept or reject one or more credentials issued by an issuer (ex: a university issues a diploma for this user) before attaching this credential to user’s DID. The issuer's credential is first attached to the local DID on user's device, and the user can choose to make it public or not (DID sidechain) later.
+
+Credentials can be generated using a DID SDK, such as the Elastos native or Java SDKs, or the elastOS DID plugin.
+
+In order to issue a credential, the issuer needs to have a DID himself first, because this DID is used to sign the credential. Later on, this signing DID can also be checked on the DID sidechain by a service, to make sure if the credential issuer is valid and trusted or not.
+
+### Endpoint
+
+**/credimport/**
+
+### Request parameters
+
+{{< rawhtml >}}
+<table>
+  <tr>
+   <td><strong>Parameter</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Mandatory</strong>
+   </td>
+   <td><strong>Format</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>credentials
    </td>
    <td>Array of verifiable credentials as per the W3C specification
    </td>
@@ -552,7 +716,7 @@ In order to issue a credential, the issuer needs to have a DID himself first, be
 
 {{< highlight "json" >}}
 {
-  "issuedcredentials": [{
+  "credentials": [{
     "@context": [
       "https://www.w3.org/2018/credentials/v1",
       "https://www.w3.org/2018/credentials/examples/v1"
