@@ -82,5 +82,9 @@ In our case, we want a Verificable Credential signed by company **"V"** that ver
 - The provided digital photo match her likeness
     
 - *Any other data Alice wants to submit for verification*
+
+{{< notice todo >}}
+    Under Development
+{{< /notice >}}
     
 {{< spacer 8 >}}

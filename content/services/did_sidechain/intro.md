@@ -37,10 +37,12 @@ This specification allows any platform to interoperate and use each others ident
     
     Of course the most intuitive use of DIDs is for a global decentralized official identity that is recognized by 
     multiple countries and goes beyond a passport with additional verifiable data such as credit worthiness, education,
-    skills and security clearances.    
+    skills and security clearances.   
     
 - For a person, they should have full control over their identity and what they choose to share. This is related to the
     {{< rawspan fontweight="400" >}}self-sovereign identity (SSI){{< /rawspan >}} movement - https://sovrin.org/faq/what-is-self-sovereign-identity.
+    
+- You can find other design decisions by the W3C DID Working Group here: https://www.w3.org/TR/vc-data-model/#use-cases-and-requirements
 
 {{< notice note >}}
     Think of it like a {{< rawspan fontweight="400" >}}NFT (non-fungible token){{< /rawspan >}} that has a standard way 
