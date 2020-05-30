@@ -30,7 +30,7 @@ $ trinity-cli did create
 
 Save your **DID string** and **mnemonics** in a safe place. You will need to use them to publish your dApp, now but also every time you want to publish an updated version.
 
-Your signature needs to be uploaded on the DID sidechain. You have to user the elastOS mobile application itself to scan the QR code provided during the DID creation, and **pay a very low transaction fee to publish your DID on chain**.
+Your signature needs to be uploaded on the DID sidechain. You have to use the elastOS mobile application itself to scan the QR code provided during the DID creation, and **pay a very low transaction fee to publish your DID on chain**.
 
 At first, your wallet app may have all ELA stored on the ELA mainchain, but nothing on the DID sidechain. You need to use the wallet dApp to **transfer some amount to the DID sidechain** (only the first time). A very small amount such as 0.1 ELA or less is enough to write several DID transactions.
 
