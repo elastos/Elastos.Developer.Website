@@ -27,9 +27,16 @@ to ensure that its DID services follow the W3C Decentralized Identifier (DID) sp
 
 ### Learn How It's Used
 
+Typically you can imagine DID applications across various blockchains would be able to use DIDs to communicate identity
+and prove **"claims"** about just about anything. 
+
+#### For example here's a simple age verification use case: 
+
+{{< figure src="/services/did_sidechain/did_2.png" >}}
+
 {{< hero >}}
     {{< heroitem link="/services/did_sidechain/intro" rightArrow="true" >}}
-        <h5>Start with a Typical Use Case: <span style="font-weight: 400;">Decentralized Proof of Age</span></h5>
+        <h5>Learn More Through a Typical Use Case: <span style="font-weight: 400;">Decentralized Proof of Age</span></h5>
     {{< /heroitem >}}
 {{< /hero >}}
 

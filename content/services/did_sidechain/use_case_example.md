@@ -70,6 +70,21 @@ In our example we use the basic actors: **issuer, subject, verifier**. For more 
 
 {{< spacer 1 >}}
 
+### Potential Improvements
+
+- **Biometrics** - we can use more biometric data than an identity photo, which would be harder to impersonate.
+
+    But this is a double-edged sword, it is virtually impossible to guarantee a nefarious verifier wouldn't save the biometric data
+    they collect. {{< rawspan fontweight="400" >}}By default we should use the minimal amount of information to satisfy the verifier's request.{{< /rawspan >}}
+    
+- **Trusted Claim Verification** - there is a distinction between sharing your birth date and proving you are over a certain age.
+    Ideally Bob and Alice can agree on a 3rd party verifier they both trust, Alice could expose a Verifiable Credential with
+    her actual birth date to the 3rd party only, which would sign a Verifiable Presentation to Bob that Alice is over a certain age.
+    
+    *By doing this Alice doesn't need to share her full birth date with Bob.* 
+
+{{< spacer 1 >}}
+
 {{< hero >}}
     {{< heroitem link="/services/did_sidechain/tutorial" rightArrow="true" >}}
         <h5>Now Let's Put This Into Practice by Building It</h5> 
