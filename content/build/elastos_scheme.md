@@ -499,7 +499,14 @@ Those credentials have been attached as verified credentials on user’s DID bef
             X16dUEMGlv50aqzpqh4Qktb3rk-BuQy72IFLOqV0G_zS245-kronKb78cPN25DGlcTwLtj
             PAYuNzVBAh4vGHSrQyHUdBBPM"
         }
-      }]
+      }],
+      "proof": {
+        "type": "ECDSAsecp256r1",
+        "verificationMethod": "did:example:icJ4z2DULrHEzYSvjKNJpKyhqFDxvYV7pN#keys-1",
+        "nonce": "6c573d7abe8720b5a659671335788a6f",
+        "realm": "example.com",
+        "signature": "eyJhbGci...AnKb78="
+      }
     }
 {{< /highlight >}}
 
