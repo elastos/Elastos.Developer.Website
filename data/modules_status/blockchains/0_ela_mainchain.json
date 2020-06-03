@@ -1,6 +1,6 @@
 {
     "name":"ELA mainchain",
-    "lastupdated":"2020.04.09",
+    "lastupdated":"2020.06.03",
     "links":[
         {
             "title": "Node Github", "url": "https://github.com/elastos/Elastos.ELA"
@@ -9,14 +9,7 @@
     "releases":{
         "current":[
             {
-                "version":"0.4.2", "date":"2020.03.05", "quality": "Production", "newfeatures":[
-                    "Support registering CR by CID and DID"
-                ]
-            }
-        ],
-        "next":[
-            {
-                "date":"2020.04", "quality": "Production", "content":[
+                "version":"0.5.0", "date":"2020.05.22", "quality": "Production", "newfeatures":[
                     "CR Committee",
                     "CR proposal",
                     "Impeach CR committee",
@@ -24,7 +17,25 @@
                 ]
             }
         ],
+        "next":[
+            {
+                "date":"2020.08", "quality": "Production", "content":[
+                    "Support to change Secretary-General and Proposer",
+                    "Support CR member to run their own DPoS node"
+                ]
+            }
+        ],
         "previous":[
+            {
+                "version":"0.4.3", "date":"2020.01.09", "quality": "Production", "newfeatures":[
+                    "Separate blocks size check to header and context checks"
+                ]
+            },
+            {
+                "version":"0.4.2", "date":"2020.01.09", "quality": "Production", "newfeatures":[
+                    "Support registering CR by CID and DID"
+                ]
+            },
             {
                 "version":"0.4.1", "date":"2020.01.09", "quality": "Production", "newfeatures":[
                     "Display as address when acquiring output payload information of CR",

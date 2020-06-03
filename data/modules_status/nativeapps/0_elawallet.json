@@ -1,6 +1,6 @@
 {
     "name":"ELA Wallet",
-    "lastupdated":"2020.05.06",
+    "lastupdated":"2020.06.03",
     "useplatforms": true,
     "links":[
         {
@@ -31,13 +31,13 @@
         ],
         "next":[
             {
-                "platform":"android", "date":"2020.05", "quality": "Production", "content":[
+                "platform":"android", "date":"2020.06", "quality": "Production", "content":[
                     "Support CR Committee.",
                     "Support CR proposal."
                 ]
             },
             {
-                "platform":"iOS", "date":"2020.05", "quality": "Production", "content":[
+                "platform":"iOS", "date":"2020.06", "quality": "Production", "content":[
                     "Support CR Committee.",
                     "Support CR proposal."
                 ]
