@@ -25,6 +25,14 @@ Recognizing the importance of self-sovereign identities and the global movement 
 model, the Elastos Foundation has joined the Decentralized Identity Foundation (DIF) and dedicated significant resources 
 to ensure that its DID services follow the W3C Decentralized Identifier (DID) specification.
 
+{{< spacer 1 >}}
+
+#### Elastos DID Specification: <b><a href="https://github.com/elastos/Elastos.DID.Method" target="_blank" onclick="event.stopPropagation();">https://github.com/elastos/Elastos.DID.Method</a></b>
+
+This is the v0.2 Elastos DID specification that conforms to the W3C DID Specification. It is published and maintained by the Elastos Foundation. Its aim is to explain the general data model and format of Elastos DID, as well as related operations. In the future, Elastos Foundation will continue to upgrade this document so that it reflects the latest state of development of the Elastos DID technology.
+
+
+
 ### Learn How It's Used
 
 Typically you can imagine DID applications across various blockchains would be able to use DIDs to communicate identity
