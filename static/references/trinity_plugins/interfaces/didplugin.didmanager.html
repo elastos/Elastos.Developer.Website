@@ -96,6 +96,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.didmanager.html#getversion" class="tsd-kind-icon">get<wbr>Version</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.didmanager.html#initdidstore" class="tsd-kind-icon">init<wbr>Did<wbr>Store</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.didmanager.html#ismnemonicvalid" class="tsd-kind-icon">is<wbr>Mnemonic<wbr>Valid</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.didmanager.html#parsejwt" class="tsd-kind-icon">parseJWT</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="didplugin.didmanager.html#resolvediddocument" class="tsd-kind-icon">resolve<wbr>Did<wbr>Document</a></li>
 							</ul>
 						</section>
@@ -498,6 +499,48 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="parsejwt" class="tsd-anchor"></a>
+					<h3>parseJWT</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">parseJWT<span class="tsd-signature-symbol">(</span>verifySignature<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, jwtToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">String</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/didplugin.html#parsejwtresult" class="tsd-signature-type">ParseJWTResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Parses a JWT token and does several things:</p>
+									<ul>
+										<li>Extract the JWT payload and return it</li>
+										<li>Optionally, verifies the signing DID using the DID sidechain.</li>
+									</ul>
+								</div>
+								<p>If verifySignature is true, the issuing DID (iss)&#39;s public key is retrieved from the DID
+								sidechain, so that the JWT signature can be verified.</p>
+								<p>In case the DID cannot be found on chain, or if the signature is wrong, the app is informed of it and
+								it (or the user) can decide to use the JWT or not.</p>
+								<p>In case the DID cannot be resolved on chain, signatureIsValid is considered as false, as it&#39;s impossible
+								to verify the signature.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>verifySignature: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>True to resolve the DID on chain to verify the signatrue, false to not verify.</p>
+									</div>
+								</li>
+								<li>
+									<h5>jwtToken: <span class="tsd-signature-type">String</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/didplugin.html#parsejwtresult" class="tsd-signature-type">ParseJWTResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Various informations about the parse result. See ParseJWTResult.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="resolvediddocument" class="tsd-anchor"></a>
 					<h3>resolve<wbr>Did<wbr>Document</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
@@ -510,7 +553,7 @@
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Resolve any kind of DID document that does not belong to a local DIDStore. This is useful to
-									resolve DID Document of public/friends/external DID entities that we don&#39;t own in a local DIDStore.</p>
+									resolve DID documents of public/friends/external DID entities that we don&#39;t own in a local DIDStore.</p>
 								</div>
 								<p>Those resolved documents are cached inside the shared DIDBackend.</p>
 							</div>
@@ -587,6 +630,9 @@
 						<a href="../modules/carrierplugin.html">Carrier<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/contactnotifierplugin.html">Contact<wbr>Notifier<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/cordovabatterystatusplugin.html">Cordova<wbr>Battery<wbr>Status<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
@@ -611,10 +657,19 @@
 						<a href="../modules/didplugin.html">DIDPlugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/didsessionmanagerplugin.html">DIDSession<wbr>Manager<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/fingerprintplugin.html">Fingerprint<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/hiveplugin.html">Hive<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/notificationmanagerplugin.html">Notification<wbr>Manager<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/passwordmanagerplugin.html">Password<wbr>Manager<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/titlebarplugin.html">Title<wbr>Bar<wbr>Plugin</a>
@@ -671,6 +726,9 @@
 								<a href="didplugin.didmanager.html#ismnemonicvalid" class="tsd-kind-icon">is<wbr>Mnemonic<wbr>Valid</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="didplugin.didmanager.html#parsejwt" class="tsd-kind-icon">parseJWT</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="didplugin.didmanager.html#resolvediddocument" class="tsd-kind-icon">resolve<wbr>Did<wbr>Document</a>
 							</li>
 						</ul>
@@ -715,6 +773,9 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../modules/didplugin.html#oncreateidtransaction" class="tsd-kind-icon">On<wbr>Create<wbr>IdTransaction</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/didplugin.html#parsejwtresult" class="tsd-kind-icon">ParseJWTResult</a>
 					</li>
 				</ul>
 			</nav>

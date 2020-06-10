@@ -93,6 +93,7 @@
 								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/carrierplugin.networktopology.html" class="tsd-kind-icon">Network<wbr>Topology</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/carrierplugin.portforwardingprotocol.html" class="tsd-kind-icon">Port<wbr>Forwarding<wbr>Protocol</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/carrierplugin.presencestatus.html" class="tsd-kind-icon">Presence<wbr>Status</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/carrierplugin.receiptstate.html" class="tsd-kind-icon">Receipt<wbr>State</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/carrierplugin.streammode.html" class="tsd-kind-icon">Stream<wbr>Mode</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/carrierplugin.streamstate.html" class="tsd-kind-icon">Stream<wbr>State</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/carrierplugin.streamtype.html" class="tsd-kind-icon">Stream<wbr>Type</a></li>
@@ -121,6 +122,7 @@
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="carrierplugin.html#groupcallbacks" class="tsd-kind-icon">Group<wbr>Callbacks</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="carrierplugin.html#int" class="tsd-kind-icon">Int</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="carrierplugin.html#onfriendinviteresponse" class="tsd-kind-icon">On<wbr>Friend<wbr>Invite<wbr>Response</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="carrierplugin.html#onfriendmessagereceipt" class="tsd-kind-icon">On<wbr>Friend<wbr>Message<wbr>Receipt</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="carrierplugin.html#onsessionrequestcomplete" class="tsd-kind-icon">On<wbr>Session<wbr>Request<wbr>Complete</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported"><a href="carrierplugin.html#opaque" class="tsd-kind-icon">Opaque</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="carrierplugin.html#options" class="tsd-kind-icon">Options</a></li>
@@ -960,6 +962,53 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="onfriendmessagereceipt" class="tsd-anchor"></a>
+					<h3>On<wbr>Friend<wbr>Message<wbr>Receipt</h3>
+					<div class="tsd-signature tsd-kind-icon">On<wbr>Friend<wbr>Message<wbr>Receipt<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The callback function to process to friend message receipt notification</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>callback</dt>
+							<dd><p>OnFriendMessageReceipt</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>The message identifer</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>The message receipt state</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>messageId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, state<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>messageId: <span class="tsd-signature-type">number</span></h5>
+											</li>
+											<li>
+												<h5>state: <span class="tsd-signature-type">Number</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 					<a name="onsessionrequestcomplete" class="tsd-anchor"></a>
 					<h3>On<wbr>Session<wbr>Request<wbr>Complete</h3>
 					<div class="tsd-signature tsd-kind-icon">On<wbr>Session<wbr>Request<wbr>Complete<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
@@ -1050,10 +1099,10 @@
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
-								<h5>bootstraps<span class="tsd-signature-symbol">: </span><a href="carrierplugin.html#bootstrapnode" class="tsd-signature-type">BootstrapNode</a><span class="tsd-signature-symbol">[]</span></h5>
+								<h5>binary<wbr>Used<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Boolean</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
-										<p>BootstrapNode Array.</p>
+										<p>Send/receive binary message</p>
 									</div>
 								</div>
 							</li>
@@ -1549,6 +1598,9 @@
 						<a href="carrierplugin.html">Carrier<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="contactnotifierplugin.html">Contact<wbr>Notifier<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="cordovabatterystatusplugin.html">Cordova<wbr>Battery<wbr>Status<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
@@ -1573,10 +1625,19 @@
 						<a href="didplugin.html">DIDPlugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="didsessionmanagerplugin.html">DIDSession<wbr>Manager<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="fingerprintplugin.html">Fingerprint<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="hiveplugin.html">Hive<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="notificationmanagerplugin.html">Notification<wbr>Manager<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="passwordmanagerplugin.html">Password<wbr>Manager<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="titlebarplugin.html">Title<wbr>Bar<wbr>Plugin</a>
@@ -1608,6 +1669,9 @@
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../enums/carrierplugin.presencestatus.html" class="tsd-kind-icon">Presence<wbr>Status</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../enums/carrierplugin.receiptstate.html" class="tsd-kind-icon">Receipt<wbr>State</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../enums/carrierplugin.streammode.html" class="tsd-kind-icon">Stream<wbr>Mode</a>
@@ -1662,6 +1726,9 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="carrierplugin.html#onfriendinviteresponse" class="tsd-kind-icon">On<wbr>Friend<wbr>Invite<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="carrierplugin.html#onfriendmessagereceipt" class="tsd-kind-icon">On<wbr>Friend<wbr>Message<wbr>Receipt</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="carrierplugin.html#onsessionrequestcomplete" class="tsd-kind-icon">On<wbr>Session<wbr>Request<wbr>Complete</a>

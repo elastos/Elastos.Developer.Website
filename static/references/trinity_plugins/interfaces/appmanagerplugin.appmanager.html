@@ -1167,12 +1167,15 @@
 							<aside class="tsd-sources">
 							</aside>
 							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Check is there is a pending intent for the current application. A pending intent is an action
-										requested by a third party application, launching the current application to execute a specific
-										action. In such case, when hasPendingIntent() is true, we want to directly show the appropriate
-									application screen instead of going through the home screen.</p>
-								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Replaced by getStartMode() == INTENT</p>
+										<p>Check is there is a pending intent for the current application. A pending intent is an action
+											requested by a third party application, launching the current application to execute a specific
+											action. In such case, when hasPendingIntent() is true, we want to directly show the appropriate
+										application screen instead of going through the home screen.</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1669,7 +1672,7 @@
 								<li>
 									<h5>id: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The dapp id.</p>
+										<p>The dapp id. If null, the message is sent to all active dApps.</p>
 									</div>
 								</li>
 								<li>
@@ -1882,9 +1885,12 @@
 							<aside class="tsd-sources">
 							</aside>
 							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Set intent listener for message callback.</p>
-								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Replaced by getStartIntent() but this keeps receiving the start intent for some time for compatibility.</p>
+										<p>Set intent listener for message callback.</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -2515,6 +2521,9 @@
 						<a href="../modules/carrierplugin.html">Carrier<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/contactnotifierplugin.html">Contact<wbr>Notifier<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/cordovabatterystatusplugin.html">Cordova<wbr>Battery<wbr>Status<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
@@ -2539,10 +2548,19 @@
 						<a href="../modules/didplugin.html">DIDPlugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/didsessionmanagerplugin.html">DIDSession<wbr>Manager<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/fingerprintplugin.html">Fingerprint<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/hiveplugin.html">Hive<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/notificationmanagerplugin.html">Notification<wbr>Manager<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/passwordmanagerplugin.html">Password<wbr>Manager<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/titlebarplugin.html">Title<wbr>Bar<wbr>Plugin</a>
@@ -2703,6 +2721,12 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../modules/appmanagerplugin.html#receivedmessage" class="tsd-kind-icon">Received<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/appmanagerplugin.html#receivedservice" class="tsd-kind-icon">Received<wbr>Service</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/appmanagerplugin.html#receivedwidget" class="tsd-kind-icon">Received<wbr>Widget</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../modules/appmanagerplugin.html#urlauthority" class="tsd-kind-icon">Url<wbr>Authority</a>

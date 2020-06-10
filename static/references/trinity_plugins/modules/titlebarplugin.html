@@ -83,9 +83,12 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Enumerations</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/titlebarplugin.builtinicon.html" class="tsd-kind-icon">Built<wbr>InIcon</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/titlebarplugin.titlebaractivitytype.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Activity<wbr>Type</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/titlebarplugin.titlebarbehavior.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Behavior</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/titlebarplugin.titlebardisplaymode.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Display<wbr>Mode</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/titlebarplugin.titlebarforegroundmode.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Foreground<wbr>Mode</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/titlebarplugin.titlebariconslot.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Icon<wbr>Slot</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/titlebarplugin.titlebarnavigationmode.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Navigation<wbr>Mode</a></li>
 							</ul>
 						</section>
@@ -98,6 +101,7 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="titlebarplugin.html#titlebaricon" class="tsd-kind-icon">Title<wbr>Bar<wbr>Icon</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="titlebarplugin.html#titlebarmenuitem" class="tsd-kind-icon">Title<wbr>Bar<wbr>Menu<wbr>Item</a></li>
 							</ul>
 						</section>
@@ -107,24 +111,27 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-					<a name="titlebarmenuitem" class="tsd-anchor"></a>
-					<h3>Title<wbr>Bar<wbr>Menu<wbr>Item</h3>
-					<div class="tsd-signature tsd-kind-icon">Title<wbr>Bar<wbr>Menu<wbr>Item<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<a name="titlebaricon" class="tsd-anchor"></a>
+					<h3>Title<wbr>Bar<wbr>Icon</h3>
+					<div class="tsd-signature tsd-kind-icon">Title<wbr>Bar<wbr>Icon<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Type describing a context menu entry opened from the title bar.</p>
+							<p>Type used to configure icons on the title bar, with their respective actions.
+								An icon &quot;configuration&quot; is made of an icon picture (custom, or predefined), and
+							a unique key (to identify the action when clicked).</p>
 						</div>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
-								<h5>icon<wbr>Path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">String</span></h5>
+								<h5>icon<wbr>Path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">String</span><span class="tsd-signature-symbol"> | </span><a href="../enums/titlebarplugin.builtinicon.html" class="tsd-signature-type">BuiltInIcon</a></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
-										<p>Path to an icon picture illustrating this menu item.</p>
+										<p>Path to an icon picture illustrating this menu item. Path can be either a built-in value to use
+										built-in icons, or a path to a custom icon (ex: &quot;assets/...&quot;)</p>
 									</div>
 								</div>
 							</li>
@@ -132,19 +139,24 @@
 								<h5>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">String</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
-										<p>Unique key to identity each item.</p>
-									</div>
-								</div>
-							</li>
-							<li class="tsd-parameter">
-								<h5>title<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">String</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<div class="lead">
-										<p>Localized menu item display title.</p>
+										<p>Unique key to identify each item.</p>
 									</div>
 								</div>
 							</li>
 						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="titlebarmenuitem" class="tsd-anchor"></a>
+					<h3>Title<wbr>Bar<wbr>Menu<wbr>Item</h3>
+					<div class="tsd-signature tsd-kind-icon">Title<wbr>Bar<wbr>Menu<wbr>Item<span class="tsd-signature-symbol">:</span> <a href="titlebarplugin.html#titlebaricon" class="tsd-signature-type">TitleBarIcon</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Type describing a context menu entry opened from the title bar. This is a standard icon type, with
+							an additional title.</p>
+						</div>
 					</div>
 				</section>
 			</section>
@@ -160,6 +172,9 @@
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="carrierplugin.html">Carrier<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="contactnotifierplugin.html">Contact<wbr>Notifier<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="cordovabatterystatusplugin.html">Cordova<wbr>Battery<wbr>Status<wbr>Plugin</a>
@@ -186,10 +201,19 @@
 						<a href="didplugin.html">DIDPlugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="didsessionmanagerplugin.html">DIDSession<wbr>Manager<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="fingerprintplugin.html">Fingerprint<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="hiveplugin.html">Hive<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="notificationmanagerplugin.html">Notification<wbr>Manager<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="passwordmanagerplugin.html">Password<wbr>Manager<wbr>Plugin</a>
 					</li>
 					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="titlebarplugin.html">Title<wbr>Bar<wbr>Plugin</a>
@@ -202,19 +226,31 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../enums/titlebarplugin.builtinicon.html" class="tsd-kind-icon">Built<wbr>InIcon</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../enums/titlebarplugin.titlebaractivitytype.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Activity<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../enums/titlebarplugin.titlebarbehavior.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Behavior</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../enums/titlebarplugin.titlebardisplaymode.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Display<wbr>Mode</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../enums/titlebarplugin.titlebarforegroundmode.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Foreground<wbr>Mode</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../enums/titlebarplugin.titlebariconslot.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Icon<wbr>Slot</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../enums/titlebarplugin.titlebarnavigationmode.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Navigation<wbr>Mode</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../interfaces/titlebarplugin.titlebarmanager.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Manager</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="titlebarplugin.html#titlebaricon" class="tsd-kind-icon">Title<wbr>Bar<wbr>Icon</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="titlebarplugin.html#titlebarmenuitem" class="tsd-kind-icon">Title<wbr>Bar<wbr>Menu<wbr>Item</a>

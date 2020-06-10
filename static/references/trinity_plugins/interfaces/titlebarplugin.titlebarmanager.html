@@ -82,10 +82,15 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="titlebarplugin.titlebarmanager.html#addonitemclickedlistener" class="tsd-kind-icon">add<wbr>OnItem<wbr>Clicked<wbr>Listener</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="titlebarplugin.titlebarmanager.html#hideactivityindicator" class="tsd-kind-icon">hide<wbr>Activity<wbr>Indicator</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="titlebarplugin.titlebarmanager.html#removeonitemclickedlistener" class="tsd-kind-icon">remove<wbr>OnItem<wbr>Clicked<wbr>Listener</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="titlebarplugin.titlebarmanager.html#setbackgroundcolor" class="tsd-kind-icon">set<wbr>Background<wbr>Color</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="titlebarplugin.titlebarmanager.html#setbadgecount" class="tsd-kind-icon">set<wbr>Badge<wbr>Count</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="titlebarplugin.titlebarmanager.html#setbehavior" class="tsd-kind-icon">set<wbr>Behavior</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="titlebarplugin.titlebarmanager.html#setforegroundmode" class="tsd-kind-icon">set<wbr>Foreground<wbr>Mode</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="titlebarplugin.titlebarmanager.html#seticon" class="tsd-kind-icon">set<wbr>Icon</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="titlebarplugin.titlebarmanager.html#setnavigationiconvisibility" class="tsd-kind-icon">set<wbr>Navigation<wbr>Icon<wbr>Visibility</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="titlebarplugin.titlebarmanager.html#setnavigationmode" class="tsd-kind-icon">set<wbr>Navigation<wbr>Mode</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="titlebarplugin.titlebarmanager.html#settitle" class="tsd-kind-icon">set<wbr>Title</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="titlebarplugin.titlebarmanager.html#setupmenuitems" class="tsd-kind-icon">setup<wbr>Menu<wbr>Items</a></li>
@@ -97,6 +102,54 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="addonitemclickedlistener" class="tsd-anchor"></a>
+					<h3>add<wbr>OnItem<wbr>Clicked<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>OnItem<wbr>Clicked<wbr>Listener<span class="tsd-signature-symbol">(</span>onItemClicked<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a listener to be notified when an icon is clicked. This works for both flat icons
+										(setIcon()) and menu items (setupMenuItems()). Use the icon &quot;key&quot; field to know which
+									icon was clicked.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>onItemClicked: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Callback called when an item is clicked.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>icon<span class="tsd-signature-symbol">: </span><a href="../modules/titlebarplugin.html#titlebaricon" class="tsd-signature-type">TitleBarIcon</a><span class="tsd-signature-symbol"> | </span><a href="../modules/titlebarplugin.html#titlebarmenuitem" class="tsd-signature-type">TitleBarMenuItem</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>icon: <a href="../modules/titlebarplugin.html#titlebaricon" class="tsd-signature-type">TitleBarIcon</a><span class="tsd-signature-symbol"> | </span><a href="../modules/titlebarplugin.html#titlebarmenuitem" class="tsd-signature-type">TitleBarMenuItem</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="hideactivityindicator" class="tsd-anchor"></a>
 					<h3>hide<wbr>Activity<wbr>Indicator</h3>
@@ -120,6 +173,52 @@
 									<div class="tsd-comment tsd-typography">
 										<p>Type of activity indicator to stop showing for the active dApp.</p>
 									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="removeonitemclickedlistener" class="tsd-anchor"></a>
+					<h3>remove<wbr>OnItem<wbr>Clicked<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>OnItem<wbr>Clicked<wbr>Listener<span class="tsd-signature-symbol">(</span>onItemClicked<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Remove a listener.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>onItemClicked: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Callback called when an item is clicked.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>icon<span class="tsd-signature-symbol">: </span><a href="../modules/titlebarplugin.html#titlebaricon" class="tsd-signature-type">TitleBarIcon</a><span class="tsd-signature-symbol"> | </span><a href="../modules/titlebarplugin.html#titlebarmenuitem" class="tsd-signature-type">TitleBarMenuItem</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>icon: <a href="../modules/titlebarplugin.html#titlebaricon" class="tsd-signature-type">TitleBarIcon</a><span class="tsd-signature-symbol"> | </span><a href="../modules/titlebarplugin.html#titlebarmenuitem" class="tsd-signature-type">TitleBarMenuItem</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -155,6 +254,38 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="setbadgecount" class="tsd-anchor"></a>
+					<h3>set<wbr>Badge<wbr>Count</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Badge<wbr>Count<span class="tsd-signature-symbol">(</span>iconSlot<span class="tsd-signature-symbol">: </span><a href="../enums/titlebarplugin.titlebariconslot.html" class="tsd-signature-type">TitleBarIconSlot</a>, count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a badge marker on the top right of an icon slot. Used for example to shows that some
+									notifications are available, unread messages, etc.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>iconSlot: <a href="../enums/titlebarplugin.titlebariconslot.html" class="tsd-signature-type">TitleBarIconSlot</a></h5>
+								</li>
+								<li>
+									<h5>count: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Number to display as a badge over the icon. A value of 0 hides the badge.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="setbehavior" class="tsd-anchor"></a>
 					<h3>set<wbr>Behavior</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
@@ -164,19 +295,10 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Changes the overall behavior of the title bar.
-									Accessible only by the launcher app. Other apps use the DEFAULT behavior.</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>behavior: <a href="../enums/titlebarplugin.titlebarbehavior.html" class="tsd-signature-type">TitleBarBehavior</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>A @TitleBarBehavior behavior to globally configure the title bar.</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -213,6 +335,74 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="seticon" class="tsd-anchor"></a>
+					<h3>set<wbr>Icon</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Icon<span class="tsd-signature-symbol">(</span>iconSlot<span class="tsd-signature-symbol">: </span><a href="../enums/titlebarplugin.titlebariconslot.html" class="tsd-signature-type">TitleBarIconSlot</a>, icon<span class="tsd-signature-symbol">: </span><a href="../modules/titlebarplugin.html#titlebaricon" class="tsd-signature-type">TitleBarIcon</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Configures icons displayed on the left or right of the main title.</p>
+								</div>
+								<p>Only some privileged apps can configure the OUTER_LEFT slot. Other slots are accessible to all apps.
+									The OUTER_LEFT icon is visible only in case the navigation icon is hidden. Otherwise, the navigation
+								icon overwrites the OUTER_LEFT icon.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>iconSlot: <a href="../enums/titlebarplugin.titlebariconslot.html" class="tsd-signature-type">TitleBarIconSlot</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Location to configure.</p>
+									</div>
+								</li>
+								<li>
+									<h5>icon: <a href="../modules/titlebarplugin.html#titlebaricon" class="tsd-signature-type">TitleBarIcon</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Icon and action to be used at this slot. Use null to clear any existing configuration.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="setnavigationiconvisibility" class="tsd-anchor"></a>
+					<h3>set<wbr>Navigation<wbr>Icon<wbr>Visibility</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Navigation<wbr>Icon<wbr>Visibility<span class="tsd-signature-symbol">(</span>visible<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Shows or hide the top left navigation icon. That navigation icon is controlled by the runtime,
+									not by the application, so that users can always minimize or exit the application.</p>
+								</div>
+								<p>This API is protected and usable only by some privileged apps. Other apps are not allowed to
+								hide the navigation icon.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>visible: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether to show the navigation icon or not.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="setnavigationmode" class="tsd-anchor"></a>
 					<h3>set<wbr>Navigation<wbr>Mode</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
@@ -227,8 +417,6 @@
 									<p>Changes the top left icon appearance and behaviour. See @TitleBarNavigationMode for available
 									navigation modes.</p>
 								</div>
-								<p>Applications are responsible for managing their &quot;back&quot; state when opening screens that can go back.
-								They can also choose to always close only.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -256,7 +444,7 @@
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Sets the main title bar title information. Pass null to clear the previous title.
-									DApps are responsible for managing this title from their internal screens.</p>
+									Apps are responsible for managing this title from their internal screens.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -276,7 +464,7 @@
 					<a name="setupmenuitems" class="tsd-anchor"></a>
 					<h3>setup<wbr>Menu<wbr>Items</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">setup<wbr>Menu<wbr>Items<span class="tsd-signature-symbol">(</span>menuItems<span class="tsd-signature-symbol">: </span><a href="../modules/titlebarplugin.html#titlebarmenuitem" class="tsd-signature-type">TitleBarMenuItem</a><span class="tsd-signature-symbol">[]</span>, onItemClicked<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">setup<wbr>Menu<wbr>Items<span class="tsd-signature-symbol">(</span>menuItems<span class="tsd-signature-symbol">: </span><a href="../modules/titlebarplugin.html#titlebarmenuitem" class="tsd-signature-type">TitleBarMenuItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -286,40 +474,18 @@
 								<div class="lead">
 									<p>Configures the menu popup that is opened when the top right menu icon is touched.
 										This menu popup mixes app-specific items (menuItems) and native system actions.
-									When a menu item is touched, onItemClicked() is called.</p>
+									When a menu item is touched, the item click listener is called.</p>
 								</div>
+								<p>In case this menu items is configured, it overwrites any icon configured on the OUTER_RIGHT
+								slot.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>menuItems: <a href="../modules/titlebarplugin.html#titlebarmenuitem" class="tsd-signature-type">TitleBarMenuItem</a><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>List of app-specific menu entries @TitleBarMenuItem .</p>
+										<p>List of app-specific menu entries @TitleBarMenuItem . Pass null to remove the existing menu.</p>
 									</div>
-								</li>
-								<li>
-									<h5>onItemClicked: <span class="tsd-signature-type">function</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Callback called when an item is clicked.</p>
-									</div>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>TitleBarMenuItem<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>TitleBarMenuItem: <span class="tsd-signature-type">any</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -330,7 +496,7 @@
 					<a name="showactivityindicator" class="tsd-anchor"></a>
 					<h3>show<wbr>Activity<wbr>Indicator</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">show<wbr>Activity<wbr>Indicator<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/titlebarplugin.titlebaractivitytype.html" class="tsd-signature-type">TitleBarActivityType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">show<wbr>Activity<wbr>Indicator<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/titlebarplugin.titlebaractivitytype.html" class="tsd-signature-type">TitleBarActivityType</a>, hintText<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -351,6 +517,12 @@
 										<p>Type of activity indicator to start showing.</p>
 									</div>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> hintText: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional text to display during the animation.</p>
+									</div>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
@@ -369,6 +541,9 @@
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/carrierplugin.html">Carrier<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/contactnotifierplugin.html">Contact<wbr>Notifier<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/cordovabatterystatusplugin.html">Cordova<wbr>Battery<wbr>Status<wbr>Plugin</a>
@@ -395,10 +570,19 @@
 						<a href="../modules/didplugin.html">DIDPlugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/didsessionmanagerplugin.html">DIDSession<wbr>Manager<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/fingerprintplugin.html">Fingerprint<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/hiveplugin.html">Hive<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/notificationmanagerplugin.html">Notification<wbr>Manager<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/passwordmanagerplugin.html">Password<wbr>Manager<wbr>Plugin</a>
 					</li>
 					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/titlebarplugin.html">Title<wbr>Bar<wbr>Plugin</a>
@@ -411,13 +595,22 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../enums/titlebarplugin.builtinicon.html" class="tsd-kind-icon">Built<wbr>InIcon</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../enums/titlebarplugin.titlebaractivitytype.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Activity<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../enums/titlebarplugin.titlebarbehavior.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Behavior</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../enums/titlebarplugin.titlebardisplaymode.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Display<wbr>Mode</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../enums/titlebarplugin.titlebarforegroundmode.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Foreground<wbr>Mode</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../enums/titlebarplugin.titlebariconslot.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Icon<wbr>Slot</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../enums/titlebarplugin.titlebarnavigationmode.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Navigation<wbr>Mode</a>
@@ -428,16 +621,31 @@
 						<a href="titlebarplugin.titlebarmanager.html" class="tsd-kind-icon">Title<wbr>Bar<wbr>Manager</a>
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="titlebarplugin.titlebarmanager.html#addonitemclickedlistener" class="tsd-kind-icon">add<wbr>OnItem<wbr>Clicked<wbr>Listener</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="titlebarplugin.titlebarmanager.html#hideactivityindicator" class="tsd-kind-icon">hide<wbr>Activity<wbr>Indicator</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="titlebarplugin.titlebarmanager.html#removeonitemclickedlistener" class="tsd-kind-icon">remove<wbr>OnItem<wbr>Clicked<wbr>Listener</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="titlebarplugin.titlebarmanager.html#setbackgroundcolor" class="tsd-kind-icon">set<wbr>Background<wbr>Color</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="titlebarplugin.titlebarmanager.html#setbadgecount" class="tsd-kind-icon">set<wbr>Badge<wbr>Count</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="titlebarplugin.titlebarmanager.html#setbehavior" class="tsd-kind-icon">set<wbr>Behavior</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="titlebarplugin.titlebarmanager.html#setforegroundmode" class="tsd-kind-icon">set<wbr>Foreground<wbr>Mode</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="titlebarplugin.titlebarmanager.html#seticon" class="tsd-kind-icon">set<wbr>Icon</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="titlebarplugin.titlebarmanager.html#setnavigationiconvisibility" class="tsd-kind-icon">set<wbr>Navigation<wbr>Icon<wbr>Visibility</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="titlebarplugin.titlebarmanager.html#setnavigationmode" class="tsd-kind-icon">set<wbr>Navigation<wbr>Mode</a>
@@ -455,6 +663,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../modules/titlebarplugin.html#titlebaricon" class="tsd-kind-icon">Title<wbr>Bar<wbr>Icon</a>
+					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../modules/titlebarplugin.html#titlebarmenuitem" class="tsd-kind-icon">Title<wbr>Bar<wbr>Menu<wbr>Item</a>
 					</li>
