@@ -1,6 +1,6 @@
 {
     "name":"ELA mainchain",
-    "lastupdated":"2020.06.03",
+    "lastupdated":"2020.06.27",
     "links":[
         {
             "title": "Node Github", "url": "https://github.com/elastos/Elastos.ELA"
@@ -18,6 +18,11 @@
             }
         ],
         "next":[
+            {
+                "date":"2020.07", "quality": "Production", "content":[
+                    "Check and clean transactions in tx pool after the status hash changed"
+                ]
+            },
             {
                 "date":"2020.08", "quality": "Production", "content":[
                     "Support to change Secretary-General and Proposer",

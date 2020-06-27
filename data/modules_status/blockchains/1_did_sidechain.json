@@ -1,6 +1,6 @@
 {
     "name":"DID sidechain",
-    "lastupdated":"2020.05.06",
+    "lastupdated":"2020.06.27",
     "links":[
         {
             "title": "Node Github", "url": "https://github.com/elastos/Elastos.ELA.SideChain.ID"
@@ -9,10 +9,8 @@
     "releases":{
         "current":[
             {
-                "version":"0.1.4", "date":"2020.4.20", "quality": "Production", "newfeatures":[
-                    "Optimize SPV synchronization speed",
-                    "Add check to the \"expires\" field of DID transaction",
-                    "Fix the bug about the time format in \"resolveDID\""
+                "version":"0.1.5", "date":"2020.6.12", "quality": "Production", "newfeatures":[
+                    "Solve the problem of repeatable register did"
                 ]
             }
         ],
@@ -25,6 +23,13 @@
             }
         ],
         "previous":[
+            {
+                "version":"0.1.4", "date":"2020.4.20", "quality": "Production", "newfeatures":[
+                    "Optimize SPV synchronization speed",
+                    "Add check to the \"expires\" field of DID transaction",
+                    "Fix the bug about the time format in \"resolveDID\""
+                ]
+            },
             {
                 "version":"0.1.3", "date":"2019.12.30", "quality": "Production", "newfeatures":[
                     "Conform to W3C DID and Verifiable Claims specifications."

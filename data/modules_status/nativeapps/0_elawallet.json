@@ -1,6 +1,6 @@
 {
     "name":"ELA Wallet",
-    "lastupdated":"2020.06.03",
+    "lastupdated":"2020.06.27",
     "useplatforms": true,
     "links":[
         {
@@ -12,6 +12,44 @@
     ],
     "releases":{
         "current":[
+            {
+                "platform":"iOS", "version":"1.4.3", "date":"2020.06.09", "quality": "Production", "newfeatures":[
+                    "The CR Council function allows you to view information for each council member.",
+                    "The CR proposal function allows you to view the contents of classified proposals and vote on these proposals.",
+                    "Support for CR website functions like DID associate, login, signature, voting, proposal and others."
+                ]
+            },
+            {
+                "platform":"android", "version":"1.4.3.1", "date":"2020.06.10", "quality": "Production", "newfeatures":[
+                    "Elimination of spontaneous crash when entering \"CR Council\""
+                ]
+            }
+        ],
+        "next":[
+            {
+                "platform":"android", "date":"2020.07", "quality": "Production", "content":[
+                    "Support impeaching CR Council Member.",
+                    "Optimize proposal processing flow.",
+                    "Fix some bugs"
+                ]
+            },
+            {
+                "platform":"iOS", "date":"2020.07", "quality": "Production", "content":[
+                    "Support impeaching CR Council Member.",
+                    "Optimize proposal processing flow.",
+                    "Fix some bugs"
+                ]
+            }
+        ],
+        "previous":[
+            {
+                "platform":"iOS", "version":"1.4.3", "date":"2020.06.09", "quality": "Production", "newfeatures":[
+                    "The CR Council function allows you to view information for each council member.",
+                    "The CR proposal function allows you to view the contents of classified proposals and vote on these proposals.",
+                    "Support for CR website functions like DID associate, login, signature, voting, proposal and others.",
+                    "The re-voting function allows you to quickly add the candidates that have voted to the candidate list."
+                ]
+            },
             {
                 "platform":"iOS", "version":"1.4.2", "date":"2020.05.01", "quality": "Production", "newfeatures":[
                     "Adds the function of creating DID, which supports adding personal credentials.",
@@ -27,23 +65,7 @@
                     "Optimize the synchronization speed of ID-Sidechain.",
                     "Fix the bug that the CR candidate deposit cannot be returned in some cases."
                 ]
-            }
-        ],
-        "next":[
-            {
-                "platform":"android", "date":"2020.06", "quality": "Production", "content":[
-                    "Support CR Committee.",
-                    "Support CR proposal."
-                ]
             },
-            {
-                "platform":"iOS", "date":"2020.06", "quality": "Production", "content":[
-                    "Support CR Committee.",
-                    "Support CR proposal."
-                ]
-            }
-        ],
-        "previous":[
             {
                 "platform":"android", "version":"1.4.2", "date":"2020.03.31", "quality": "Production", "newfeatures":[
                     "Adds the function of creating DID, which supports adding personal credentials.",
