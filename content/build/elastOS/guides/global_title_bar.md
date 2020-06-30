@@ -13,10 +13,11 @@ In order to provide a more homogenous browser-like experience to end users, elas
 ### Title bar features
 
 * **Set a title**. Default: Application name
+* **Customize icons**: 3 available slots, using built-in or custom pictures.
 * **Change the background color** to any hex color.
 * **Change foreground color mode** to predefined dark or light modes.
 * **Setup a menu with actions**. This menu is optional.
-* **Control the navigation mode**: minimize, go back, close...
+* **Control the navigation mode**: minimize or close.
 * **Control the progress bar** with several possible actions: launch, download, other...
 
 ### Minimal implementation
@@ -49,51 +50,77 @@ ionViewWillEnter() {
     {{< /tab >}} 
 {{< /tabs >}}
 
-### Controlling the navigation (main screen)
+### Custom and built-in icons
 
-On your main screen you probably want to minimize the app when back is pressed:
+There are 4 available icon slots on the title bar: outer left, inner left, inner right, and outer right. Though, the outer left slot is reserved for the minimize/close default action, to make sure users always have a way to exit a dApp (for example in case it becomes unresponsive).
 
-{{< tabs >}} 
-    {{< tab name="Angular" codelang="typescript" >}} 
-ionViewWillEnter() {
-    titleBarManager.setNavigationMode(TitleBarPlugin.TitleBarNavigationMode.HOME);
-}
-    {{< /tab >}} 
-{{< /tabs >}}
-
-### Controlling the navigation (secondary screen)
-
-On a secondary screen, you may want to come back to the previous screen:
+In order to configure the 3 other slots, you can call the following code:
 
 {{< tabs >}} 
     {{< tab name="Angular" codelang="typescript" >}} 
 ionViewWillEnter() {
-    titleBarManager.setNavigationMode(TitleBarPlugin.TitleBarNavigationMode.BACK);
-}
-    {{< /tab >}} 
-{{< /tabs >}}
-
-In this mode, the title bar send a message to your application and it's up to your application to handle it the way you want. The message is a **navback** command sent to app manager's messages and you can catch it from a service in your app, like this:
-
-{{< tabs >}} 
-    {{< tab name="Angular" codelang="typescript" >}} 
-myServiceInitSomewhere() {
-    appManager.setListener((ret) => {
-        this.onMessageReceived(ret);
+    titleBarManager.setIcon(TitleBarPlugin.TitleBarIconSlot.INNER_LEFT, {
+        key: "back",
+        iconPath: TitleBarPlugin.BuiltInIcon.BACK
     });
 }
+    {{< /tab >}} 
+{{< /tabs >}}
 
-onMessageReceived(ret: AppManagerPlugin.ReceivedMessage) {
-    if (ret.message == "navback") {
-        this.navController.back();
-    }
+The above code uses one of the built-in icons for convenient. You can also choose to use your own icons:
+
+{{< tabs >}} 
+    {{< tab name="Angular" codelang="typescript" >}} 
+ionViewWillEnter() {
+    titleBarManager.setIcon(TitleBarPlugin.TitleBarIconSlot.OUTER_RIGHT, {
+        key: "myicon",
+        iconPath: "assets/icons/ic_myicon.png"
+    });
 }
     {{< /tab >}} 
 {{< /tabs >}}
 
-### Controlling the navigation (single use screens)
+### Removing an icon
 
-Some of your screens started for example by intents, may need to be closed, when you don't want users to see them again after minimizing, or you don't want to allow back navigation. In this case, you can use the close navigation mode, that shows a close icon and totally cloes your app:
+{{< tabs >}} 
+    {{< tab name="Angular" codelang="typescript" >}} 
+ionViewWillEnter() {
+    titleBarManager.setIcon(TitleBarPlugin.TitleBarIconSlot.OUTER_RIGHT, null);
+}
+    {{< /tab >}} 
+{{< /tabs >}}
+
+### Handle icon events
+
+Each icon you configure on the title bar has a **key** value that should be unique. In order to receive click events, you can register one or several listeners like this:
+
+{{< tabs >}} 
+    {{< tab name="Angular" codelang="typescript" >}} 
+let myIconListener = (menuIcon) => {
+    if (menuIcon.key == "back") {
+        // Do something
+    }
+    else if (menuIcon.key == "myicon") {
+        // Do something else
+    }
+};
+titleBarManager.addOnItemClickedListener(myIconListener);
+    {{< /tab >}} 
+{{< /tabs >}}
+
+### Removing icon listeners
+
+When you leave a screen, don't forget to unregister you icon listeners to not receive unsollicited events:
+
+{{< tabs >}} 
+    {{< tab name="Angular" codelang="typescript" >}} 
+titleBarManager.removeOnItemClickedListener(myIconListener);
+    {{< /tab >}} 
+{{< /tabs >}}
+
+### Configure the navigation mode
+
+On your main screen you probably want to minimize the app when back is pressed. This is the default mode, so you don't have anything to do. Though for some screen, you may want to forbid minimization and instead, force closing the screen like this:
 
 {{< tabs >}} 
     {{< tab name="Angular" codelang="typescript" >}} 
@@ -134,7 +161,8 @@ longOperation() {
 
 ### Managing menu items
 
-By default, there is no title bar menu icon. You can add choose to setup a list of menu items with icons and titles. When clicked, those menu items call a specific callback in your app and you can proceed to the appropriate action:
+By default, there is no title bar menu icon. You can add choose to setup a list of menu items with icons and titles. When menu items are configured, they overwite any configured icon on the outer right icon slot.
+Icon events are receive by icon clicked listeners, like for other icons outside of menu items.
 
 {{< tabs >}} 
     {{< tab name="Angular" codelang="typescript" >}} 
@@ -151,16 +179,7 @@ ionViewWillEnter() {
             title: "Do something else"
         }
     ];
-    titleBarManager.setupMenuItems(menuItems, (selectedMenuItem)=>{
-        switch (selectedMenuItem.key) {
-            case "action1":
-                // Execute your action 1
-                break;
-            case "action2": 
-                // Execute your action 2
-                break;
-        }
-    });
+    titleBarManager.setupMenuItems(menuItems);
 }
     {{< /tab >}} 
 {{< /tabs >}}
