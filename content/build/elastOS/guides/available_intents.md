@@ -41,7 +41,6 @@ See  for more details about the following standard intents.
 | dposvotetransaction | Record a vote for a list of supernodes on the ELA mainchain. |
 | credaccess | Get user information (name, email, ...) from his DID profile. |
 | walletaccess | Get information about user's wallet (Ex: ELA address). |
-| appinstall | Request system to install a dApp using an EPK file. |
 | appdetails | Display a specific dApp details page on a dApp store. |
 | sign | Sign some binary content using a DID signature. |
 

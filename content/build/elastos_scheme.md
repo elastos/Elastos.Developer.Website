@@ -758,7 +758,31 @@ In order to issue a credential, the issuer needs to have a DID himself first, be
 
 ### Response parameters
 
-No response is expected for this command.
+{{< rawhtml >}}
+<table>
+  <tr>
+   <td><strong>Parameter</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Mandatory</strong>
+   </td>
+   <td><strong>Format</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>importedcredentials
+   </td>
+   <td>List of IDs of credentials that were imported
+   </td>
+   <td>yes
+   </td>
+   <td>Array of strings
+   </td>
+  </tr>
+</table>
+{{< /rawhtml >}}
+
 
 
 
