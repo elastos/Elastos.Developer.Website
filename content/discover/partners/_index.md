@@ -30,4 +30,8 @@ alwaysopen = false
     {{< heroitem title="Hyperconnect IoT" link="/discover/partners/hyperconnect_iot" colspan="4" >}}
         HyperConnect is an enterprise-grade, open source <b>Internet-of-Things framework</b> that utilizes the Elastos Peer-to-Peer Carrier Network to route network traffic between IoT devices.
     {{< /heroitem >}}
+
+    {{< heroitem title="CryptoName" link="/discover/partners/cryptoname" colspan="4" >}}
+        <b>CryptoName</b> allows you to <b>control your name</b> via a Token and link your crypto addresses simply to one name, your CryptoName. But not only that, also DID, email and a website can be linked to your personal CryptoName.
+    {{< /heroitem >}}
 {{< /hero >}}
