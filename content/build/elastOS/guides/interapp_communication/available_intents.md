@@ -6,26 +6,13 @@ pre = ""
 alwaysopen = false
 +++
 
-## What are intents?
-
-They are a way to **let dApps communicate with each other** without really knowing each other. For example, a dApp can send a "pay" intent request, that follows the elastos scheme standardized definition, and another dApp can catch this intent to handle the payment. 
-
-But the initiating dApp doesn't really know which dApp will realize this operation. As a consequence, several applications being able to handle the pay intent (wallet dApps in our case) could exist in elastOS, and the user could choose which of them he wants to use to proceed to the payment.
-
 ## How to send intents?
 
 {{< hero >}}
-    {{< heroitem link="/build/elastos/interapp_communication" rightArrow="true" >}}
+    {{< heroitem link="/build/elastos/guides/interapp_communication" rightArrow="true" >}}
         <h5>Interapp Communication</h5>
     {{< /heroitem >}}
 {{< /hero >}}
-
-## What can you do with those intents?
-
-You can either:
-
-* **Send intents** to request other dApps to do something (ex: pay, if you want to let your users purchase something)
-* Or **handle intents** (using intent filters in your manifest) to handle actions requested by other dApps (ex: handle "handlescannedcontent_did" if you want to do something when a end user scans a QR code in elastOS).
 
 ## Supported intents in elastOS
 
@@ -41,7 +28,6 @@ See  for more details about the following standard intents.
 | dposvotetransaction | Record a vote for a list of supernodes on the ELA mainchain. |
 | credaccess | Get user information (name, email, ...) from his DID profile. |
 | walletaccess | Get information about user's wallet (Ex: ELA address). |
-| appdetails | Display a specific dApp details page on a dApp store. |
 | sign | Sign some binary content using a DID signature. |
 
 ### Specific elastOS intents
@@ -50,7 +36,7 @@ See  for more details about the following standard intents.
 
 ##### Description
 
-Opens a given dApp.
+Opens a given capsule.
 
 ##### Request parameters
 
@@ -81,9 +67,9 @@ None
 
 ##### Description
 
-Register user as using a given dApp, on his DID profile. After publishing this information to the DID sidechain, other users / friends can view that this user has a profile in the given app, and easily reach him there.
+Register user as using a given capsule, on his DID profile. After publishing this information to the DID sidechain, other users / friends can view that this user has a profile in the given app, and easily reach him there.
 
-For example, if a developer creates CoolDApp and CoolDApp let users add friends and friends can write and read posts (similar to Facebook), Then CoolDApp can ask its users to register their application profile. That profile will include a CoolDApp-specific id in a VerifiableCredential. This way, when friends view this user's profile from the DID sidechain, they can reach others through a **connectapplicationprofile** intent that will receive all the regiter custom information and therefore be able to immediatelly connect inside CoolDApp.
+For example, if a developer creates CoolCapsule and CoolCapsule let users add friends and friends can write and read posts (similar to Facebook), Then CoolCapsule can ask its users to register their application profile. That profile will include a CoolCapsule-specific id in a VerifiableCredential. This way, when friends view this user's profile from the DID sidechain, they can reach others through a **connectapplicationprofile** intent that will receive all the regiter custom information and therefore be able to immediatelly connect inside CoolCapsule.
 
 ##### Request parameters
 
@@ -105,7 +91,7 @@ None
 
     appManager.sendIntent("registerapplicationprofile", {
         identifier: "did-demo-app-profile",
-        connectactiontitle: "Reach out in DID Demo dApp",
+        connectactiontitle: "Reach out in DID Demo capsule",
         sharedclaims: [
             {
                 diddemoid: "abcdef"
@@ -125,7 +111,7 @@ Opens a target app using a **ApplicationProfileCredential** information register
 
 When opening, the app receives the original fields registered by **registerapplicationprofile** (ex: "diddemoid").
 
-Usually, as a dApp developer you don't need to emit this intent. Instead, you will most likely listen to this intent emitted by the elastOS runtime.
+Usually, as a capsule developer you don't need to emit this intent. Instead, you will most likely listen to this intent emitted by the elastOS runtime.
 
 ##### Request parameters
 
@@ -161,9 +147,9 @@ Received by the **appManager.setIntentListener()** callback.
 
 ##### Description
 
-Intent emitted by the scanner dApp after scanning a QR code.
+Intent emitted by the scanner capsule after scanning a QR code.
 
-This intent is sent only if the scanner dApp was started manually by the user. Otherwise if the scanner app is started by **scanqrcode** intent, the scanned data will be received in the sendIntent() callback.
+This intent is sent only if the scanner capsule was started manually by the user. Otherwise if the scanner app is started by **scanqrcode** intent, the scanned data will be received in the sendIntent() callback.
 
 ##### Request parameters
 
@@ -204,7 +190,7 @@ Similar to **handlescannedcontent**, but the passed data is a DID string (ex: di
 
 ##### Description
 
-Requests the scanner dApp to scan a QR code and return the scanned data.
+Requests the scanner capsule to scan a QR code and return the scanned data.
 
 ##### Request parameters
 
@@ -236,7 +222,7 @@ Received by the **appManager.sendIntent()** onSuccess callback.
 
 ##### Description
 
-Shares some content either inside another elastOS dApp, or thr ough the native OS share feature.Shared content includes a title and a (optional) url.
+Shares some content either inside another elastOS capsule, or thr ough the native OS share feature.Shared content includes a title and a (optional) url.
 
 It's up to the receiving app to share the content in a suitable way. A chat application would show a new clickable message to a user, and when clicked, the "url" is activated. The built-in friends app would instead let the user pick a friend and send a remote notification to that friend with the embedded shared content.
 

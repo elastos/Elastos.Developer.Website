@@ -24,7 +24,7 @@ Open a terminal at the location you want your application to be created. A subfo
 $ trinity-cli new
 ```
 
-Provide a few information such as your app name, package name, author information, and a new folder will be created with your dApp.
+Provide a few information such as your app name, package name, author information, and a new folder will be created with your capsule.
 
 The created application uses the ionic framework. It simply embeds an additional *manifest.json* file to be considered as a elastOS application.
 
@@ -34,7 +34,7 @@ We offer a few app templates, for example on **Angular** there is a full demo te
 
 {{< figure src="/build/elastos/setup/demo-template.png" >}} 
 
-## Converting an existing ionic app to a elastOS dApp
+## Converting an existing ionic app to a elastOS capsule
 
 In case you already have a ionic application, and would like to run it inside elastOS, you have to generate a elastOS manifest to make it become compatible. 
 
@@ -53,7 +53,7 @@ You can build any kind of ionic-based application in Elastos, as the whole ionic
 
 ### elastOS plugins Typescript typings
 
-In case the default dApp you've created does not include typescript types for elastOS plugins, you may have to add them by yourself:
+In case the default capsule you've created does not include typescript types for elastOS plugins, you may have to add them by yourself:
 
 ```bash
 $ npm i @elastosfoundation/trinity-types
@@ -82,7 +82,7 @@ Then in your application, you can use it this way:
     // In a method
     appManager.sendIntent(...);
 
-### Running your dApp on Android
+### Running your capsule on Android
 
 **Checklist:**
 
@@ -98,18 +98,18 @@ $ trinity-cli run -p android --nodebug
 
 That will package your application as a EPK file, send it to your device, install it inside elastOS, and run it.
 
-### Developing your dApp
+### Developing your capsule
 
 After your app is launched inside elastOS, you can directly edit your app content from its src/ folder. Changes will automatically reload in elastOS.
 
-### elastOS dApps manifest
+### elastOS capsule manifest
 
-A *manifest.json* file is created by default in your elastOS dApp project. You can manually edit it whenever needed. The elastOS manifest format is fully described in the {{< internallink "elastOS manifest guide" "/build/elastos/guides/trinity_manifest.md" >}}.
+A *manifest.json* file is created by default in your elastOS capsule project. You can manually edit it whenever needed. The elastOS manifest format is fully described in the {{< internallink "elastOS manifest guide" "/build/elastos/guides/trinity_manifest.md" >}}.
 
 {{< spacer 2 >}}
 
 {{< hero >}}
-    {{< heroitem link="/build/elastos/setup/testing" rightArrow="true" >}}
+    {{< heroitem link="/build/elastos/setup/running" rightArrow="true" >}}
         <h5>Running Your Capsule</h5>
     {{< /heroitem >}}
 {{< /hero >}}

@@ -159,7 +159,7 @@ where I am now showing `props.profile.name` in **Tab1.tsx**
 const Tab1: React.FC = (props: any) => {
 
   const closeApp = useCallback( () => {
-    console.log("dApp is closing!")
+    console.log("capsule is closing!")
     appManager.close();
   }, [appManager])
 

@@ -77,13 +77,13 @@ const App: React.FC = () => {
 }
 ```
 
-This will wait for `"deviceready"` and then use elastOS's AppManagerPlugin `setVisible` method to show the dApp when
+This will wait for `"deviceready"` and then use elastOS's AppManagerPlugin `setVisible` method to show the capsule when
 it's ready.
 
 {{< notice note >}}
     Make sure your Android emulator is running, elastOS is installed and developer mode is on before this next step.
     
-    See: <a href="/build/elastos/setup/testing">Running Your dApp</a> if you need help.
+    See: <a href="/build/elastos/setup/testing">Running Your capsule</a> if you need help.
 {{</ notice >}}
 
 Now call `trinity-cli run` in the following fashion:
@@ -96,15 +96,9 @@ see your app.
 
 {{< figure src="/build/elastOS/tutorials/react/img/elastOS_home.png" >}}
 
-{{< notice warning >}}
-    Don't open your capsule/dApp yet! There is a bug and the <b>trinity-cli run</b> server doesn't start fast enough.
-{{</ notice >}}
-
-{{< spacer 2 >}}
-
 ### Close and Re-Open elastOS
 
-We need to do this the first time to ensure the dApp connects to a running `trinity-cli run` server instance.
+We need to do this the first time to ensure the capsule connects to a running `trinity-cli run` server instance.
 
 Now when you click your capsule it should open properly:
 

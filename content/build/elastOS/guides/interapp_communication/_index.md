@@ -1,6 +1,6 @@
 +++
 title = "Inter-App Communication"
-weight = 20
+weight = 30
 chapter = false
 pre = ""
 alwaysopen = false
@@ -10,7 +10,16 @@ alwaysopen = false
 
 ## elastOS intents
 
-Similarly to Android that provides a great architecture, elastOS has a **intent** mechanism that allows dApps to communicate with each other. Intents are needed for various kind of actions, such as requesting user to make a purchase, sign with his email address, handle a scanned QR code, rating a dApp through the dApp store app, and much more.
+Intents are a way to **let capsules communicate with each other** without really knowing each other. For example, a capsule can send a "pay" intent request, that follows the elastos scheme standardized definition, and another capsule can catch this intent to handle the payment. 
+
+But the initiating capsule doesn't really know which capsule will realize this operation. As a consequence, several applications being able to handle the pay intent (wallet capsule in our case) could exist in elastOS, and the user could choose which of them he wants to use to proceed to the payment.
+
+## What can you do with those intents?
+
+You can either:
+
+* **Send intents** to request other capsules to do something (ex: pay, if you want to let your users purchase something)
+* Or **handle intents** (using intent filters in your manifest) to handle actions requested by other capsules (ex: handle "handlescannedcontent_did" if you want to do something when a end user scans a QR code in elastOS).
 
 ### elastOS intents and Elastos scheme
 
@@ -20,9 +29,9 @@ Similarly to Android that provides a great architecture, elastOS has a **intent*
     {{< /heroitem >}}
 {{< /hero >}}
 
-elastOS conforms to the Elastos scheme. Most standard commands are handled by built-in dApps. For example, the /pay command will be handled by the wallet dApp to start a payment, or /credaccess will be handled by the DID dApps to request user to share credentials with the requesting dApp.
+elastOS conforms to the Elastos scheme. Most standard commands are handled by built-in capsules. For example, the /pay command will be handled by the wallet capsule to start a payment, or /credaccess will be handled by the DID capsule to request user to share credentials with the requesting capsule.
 
-In addition, elastOS has a few custom scheme commands, specific to elastOS itself, such as opening dApp details pages in the dApp store in order to rate it.
+In addition, elastOS has a few custom scheme commands, specific to elastOS itself, such as opening capsule details pages in the capsule store in order to rate it.
 
 ### Sending intents
 
@@ -47,11 +56,11 @@ Sending intents is done through the AppManager plugin. Here is an example:
 
 ### Handling intents
 
-Your dApp must declare which intents it can handle in its manifest.json:
+Your capsule must declare which intents it can handle in its manifest.json:
 
     "intent_filters": [
         {
-            "action": "pay" // Example of Elastos scheme action handled by the wallet dApp
+            "action": "pay" // Example of Elastos scheme action handled by the wallet capsule
         }       
     ]
 
@@ -77,7 +86,7 @@ In order to do the proper UI routing when your app starts, you can also use the 
 {{< spacer 1 >}}
 
 {{< hero >}}
-    {{< heroitem link="/build/elastos/guides/available_intents" rightArrow="true" >}}
+    {{< heroitem link="/build/elastos/guides/interapp_communication/available_intents" rightArrow="true" >}}
         <h5>Supported Intents</h5>
     {{< /heroitem >}}
 {{< /hero >}}

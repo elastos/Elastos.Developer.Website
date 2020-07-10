@@ -4,6 +4,7 @@ weight = 25
 chapter = false
 pre = ""
 alwaysopen = false
+draft = true
 +++
 
 ## The Best Place to Start is with Our Angular Demo
@@ -41,7 +42,7 @@ alwaysopen = false
     {{< /heroitem >}}
     
     {{< heroitem title="elastOS Wallet DApp" link="https://github.com/elastos/Elastos.Trinity.DApps.Wallet" linkBlank="true" >}}
-        Default elastOS wallet dApp that you can use as an example to start building your own wallet.
+        Default elastOS wallet capsule that you can use as an example to start building your own wallet.
     {{< /heroitem >}}
 {{< /hero >}}
 

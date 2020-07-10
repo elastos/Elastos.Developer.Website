@@ -1,5 +1,3 @@
-
-
 +++
 title = "Windows Setup"
 date = 2019-05-24T21:15:33+02:00
@@ -73,6 +71,6 @@ adb --version
 
 {{< hero >}}
     {{< heroitem link="/build/elastos/setup/project_setup" rightArrow="true" >}}
-        <h5>You can now create a elastOS dApp, next we'll setup your first project</h5>
+        <h5>You can now create a elastOS capsule, next we'll setup your first project</h5>
     {{< /heroitem >}}
 {{< /hero >}}

@@ -1,14 +1,12 @@
-
-
 +++
-title = "Running Your dApp"
+title = "Installing elastOS"
 weight = 40
 chapter = false
 pre = ""
 alwaysopen = false
 +++
 
-### elastOS is a Mobile Application That Runs Your dApp
+### elastOS is a Mobile Application That Runs Your Capsules
 
 Therefore you need to have elastOS running first, typically the way to do this is running an emulator, but of course you can also connect your Android phone to your computer. 
 
@@ -16,9 +14,11 @@ Therefore you need to have elastOS running first, typically the way to do this i
     {{< rawspan fontweight="400" >}}elastOS is not yet released for iOS,{{< /rawspan >}} therefore we will only be supporting Android at the moment
 {{</ notice >}}
 
-{{< spacer 1 >}}
+### Option 1: Running a real Android device
 
-### Running an Android Emulator
+If you already own a android phone, simply connect it through USB in order to let the android debugging tool (adb) be able to deploy capsules later.
+
+### Option 2: Running an Android Emulator
 
 #### 1. Download Android Studio - {{< externallink title="https://developer.android.com/studio" >}}https://developer.android.com/studio{{< /externallink >}}
 
@@ -26,36 +26,25 @@ Therefore you need to have elastOS running first, typically the way to do this i
 
 Make sure the image you are using has **Play Store** support, which avoids us having to build and install the `elastOS.apk` file.
 
-{{< figure src="/build/elastos/setup/testing/avd_manager.png" >}} 
+{{< figure src="/build/elastos/setup/running/avd_manager.png" >}} 
 
 Follow this guide for detailed instructions: {{< externallink title="https://developer.android.com/studio/run/emulator" >}}https://developer.android.com/studio/run/emulator{{< /externallink >}}
-
-{{< spacer 2 >}}
 
 #### 3. Now Run Your Virtual Device Emulator 
 
 Clicking the **Green Arrow** circled in orange should launch a device, in this example I am using a Pixel 2 emulator. 
 
-{{< figure src="/build/elastos/setup/testing/emulator.png" >}} 
+{{< figure src="/build/elastos/setup/running/emulator.png" >}} 
 
-{{< spacer 2 >}}
+### Install elastOS from the Play Store
 
-#### 4. Install elastOS from the Play Store
-
-The emulator still needs a real Google account to access the play store, we recommend you create a new account for development.
+The emulator still needs a real Google account to access the play store, we recommend you create a new account for development. On a physical device, you may already have a google account ready.
 
 - After you have access to Play Store, search for **elastOS** and install it.
     
-    {{< rawspan imginline="true" >}}<img src="/build/elastos/setup/testing/elastOS_play-store.png"></img>{{< /rawspan >}}
+    {{< rawspan imginline="true" >}}<img src="/build/elastos/setup/running/elastOS_play-store.png"></img>{{< /rawspan >}}
 
-{{< spacer 1 >}}
-
-#### 5. Enable **Developer Mode** in the {{< rawspan fontweight="400" >}}elastOS{{< /rawspan >}} app
-
-{{< figure src="elastOS_dev-mode.png" >}}
-
-
-#### 4. Verify that adb sees your emulator
+### Verify that adb sees your device
 
 `adb` is the Android Debug Bridge which is a command line tool that should be installed with Android Studio, 
 for more information see: {{< externallink title="https://developer.android.com/studio/command-line/adb" >}}https://developer.android.com/studio/command-line/adb{{< /externallink >}}
@@ -65,31 +54,10 @@ for more information see: {{< externallink title="https://developer.android.com/
     List of devices attached
     emulator-5554	device
     
-    
-#### 5. Now run your capsule with elastOS opened, it will automatically launch elastOS in the emulator/device and then install itself
-
-    trinity-cli run -p android --nodebug
-
-{{< figure src="/build/elastos/setup/testing/elastOS_home.png" >}} 
-
-{{< spacer 2 >}}
-
-#### 6. It should automatically launch your capsule, or you can click your capsule to run it
-
-{{< figure src="/build/elastos/setup/testing/template_demo.png" >}} 
-
-{{< spacer 2 >}}
-
-## Now Learn How to Build Your dApp With Our Guides
+## Now Learn How to Run Your Capsule in elastOS:
 
 {{< hero >}}
-    {{< heroitem link="/build/elastos/guides" rightArrow="true" >}}
-        <h5>How to Guides</h5>
+    {{< heroitem title="Running & Debugging" link="/build/elastos/setup/running/running_debugging" colspan="12" >}}
+        Now that elastOS is ready, it's time to <b>deploy your capsule</b>.
     {{< /heroitem >}}
-{{< /hero >}}
-
-{{< hero >}}
-    {{< heroitem link="/build/elastos/guides/running_debugging" rightArrow="true" >}}
-        <h5>For more help on how to run and debug your capsule, go straight to our running & debugging guide</h5>
-    {{< /heroitem >}}
-{{< /hero >}}  
+ {{< /hero >}}

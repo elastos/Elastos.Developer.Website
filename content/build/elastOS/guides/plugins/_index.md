@@ -1,6 +1,6 @@
 +++
-title = "Ionic Plugins"
-weight = 28
+title = "Using Plugins"
+weight = 20
 chapter = false
 pre = ""
 alwaysopen = false
@@ -12,17 +12,17 @@ If you are familiar with ionic or cordova development, you already know that cor
 
 In elastOS, the native elastOS application itself already embeds a **fixed set of plugins**. This means that **you cannot add your own native plugins**. 
 
-Writing dApps for elastOS is different than writing ionic applications in the sense that elastOS dApps only deal with HTML/Javascript parts, and not with native parts (whereas native ionic apps mix both javascript and native code through plugins).
+Writing capsules for elastOS is different than writing ionic applications in the sense that elastOS capsules only deal with HTML/Javascript parts, and not with native parts (whereas native ionic apps mix both javascript and native code through plugins).
 
-When you write a elastOS dApp, you can then access a **limited set of plugins** (you can find them in the elastOS plugins API reference), and nothing else.
+When you write a elastOS capsule, you can then access a **limited set of plugins** (you can find them in the elastOS plugins API reference), and nothing else.
 
 ## Application compilation
 
-An other consequence of dealing only with javascript code in elastOS is that **writing and releasing dApps don't require any compilation**, contrary to real ionic applications. You simply write your HTML/Javascript code, and send it to the elastOS native app who will handle your dApp (using trinity-cli during development, or through the dApp store for distribution).
+An other consequence of dealing only with javascript code in elastOS is that **writing and releasing capsules doesn't require any compilation**, contrary to real ionic applications. You simply write your HTML/Javascript code, and send it to the elastOS native app who will handle your capsule (using trinity-cli during development, or through the dApp store for distribution).
 
 ## Plugins usage
 
-Here is how to declare the existing global plugin instances from your dApps and start using them right away:
+Here is how to declare the existing global plugin instances from your capsules and start using them right away:
 
 | Plugin | Usage |
 | ------ | ----- |

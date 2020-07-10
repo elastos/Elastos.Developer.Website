@@ -8,7 +8,7 @@ alwaysopen = false
 
 ## Introduction
 
-In order to provide a more homogenous browser-like experience to end users, elastOS encapsulates all dApps with a global title bar.
+In order to provide a more homogenous browser-like experience to end users, elastOS encapsulates all capsules with a global title bar.
 
 ### Title bar features
 
@@ -22,7 +22,7 @@ In order to provide a more homogenous browser-like experience to end users, elas
 
 ### Minimal implementation
 
-By default, your dApp doesn't need to edit anything. The title bar has default colors and its title is set to the application name. The navigation mode is configured to minimize the dApp when users press the "back" icon. No menu is displayed.
+By default, your capsule doesn't need to edit anything. The title bar has default colors and its title is set to the application name. The navigation mode is configured to minimize the capsule when users press the "back" icon. No menu is displayed.
 
 But for further customization and better user experience, you may want to do something like this:
 
@@ -40,7 +40,7 @@ declare let titleBarManager: TitleBarPlugin.TitleBarManager;
 
 ### Setting a different title on each screen
 
-You have to call **setTitle()** every time you enter your screen, because the title bar may have been changed by other screens during navigation. On angular dApps this is usually done in the **ionViewWillEnter()** method:
+You have to call **setTitle()** every time you enter your screen, because the title bar may have been changed by other screens during navigation. On angular capsules this is usually done in the **ionViewWillEnter()** method:
 
 {{< tabs >}} 
     {{< tab name="Angular" codelang="typescript" >}} 
@@ -52,7 +52,7 @@ ionViewWillEnter() {
 
 ### Custom and built-in icons
 
-There are 4 available icon slots on the title bar: outer left, inner left, inner right, and outer right. Though, the outer left slot is reserved for the minimize/close default action, to make sure users always have a way to exit a dApp (for example in case it becomes unresponsive).
+There are 4 available icon slots on the title bar: outer left, inner left, inner right, and outer right. Though, the outer left slot is reserved for the minimize/close default action, to make sure users always have a way to exit a capsule (for example in case it becomes unresponsive).
 
 In order to configure the 3 other slots, you can call the following code:
 

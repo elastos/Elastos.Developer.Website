@@ -13,4 +13,4 @@ draft = true
 
 ## Deployment
 
-## Using this library in dapps
+## Using this library in capsules

@@ -7,7 +7,7 @@ pre = ""
 alwaysopen = false
 +++
 
-### elastOS is a mobile application that runs Ionic-based dApps and has an integrated suite of plugins to access decentralized services
+**elastOS** is a mobile application that runs Ionic-based capsules and has an integrated suite of plugins to access decentralized services.
 
 {{< rawhtml >}}
     <h3>
@@ -43,7 +43,7 @@ Read the latest release notes: {{< externallink title="https://github.com/elasto
 
 ## How Does It Work?
 
-elastOS runs dApps called **"Capsules"** which are built on Ionic. It's easy to package your dApp into a capsule 
+elastOS runs dApps called **"capsules"** which are built on Ionic. It's easy to package your dApp into a capsule 
 using our handy **trinity-cli** tool.  
 
 {{< spacer 1 >}}
