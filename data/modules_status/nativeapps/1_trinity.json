@@ -1,6 +1,6 @@
 {
     "name":"elastOS browser",
-    "lastupdated":"2020.05.12",
+    "lastupdated":"2020.07.13",
     "useplatforms": true,
     "notes":"iOS release dates are currently undetermined, this is best effort until Apple accepts elastOS on their app store. iOS and Android releases will usually be deployed in similar time ranges with identical content.",
     "links":[
@@ -14,54 +14,56 @@
     "releases":{
         "current":[
             {
-                "platform":"android", "version":"1.1.1", "date":"2020.04.30", "quality": "Developers beta", "newfeatures":[
-                    "elastOS as a browser",
-                    "New launcher app design",
-                    "Customizable networks"
+                "platform":"android", "version":"1.2.3", "date":"2020.07.13", "quality": "Developers beta", "newfeatures":[
+                    "Background services",
+                    "Assist capsule / Easy DID publication"
                 ]
             }
         ],
         "next":[
             {
-                "platform":"ios", "date":"2020.05", "quality": "Alpha", "content":[
-                    "Initial iOS release",
-                    "elastOS as a browser",
-                    "New launcher app design",
-                    "Very basic native iOS wallet instead of ionic wallet"
+                "platform":"ios", "date":"2020.08", "quality": "Alpha", "content":[
+                    "Initial iOS release with a hardcoded list of usable capsules, no dApp store"
                 ]
             },
             {
-                "platform":"android", "date":"2020.05", "quality": "Developers beta", "content":[
-                    "Friends connectivity improvements",
-                    "Background services",
-                    "Local notifications",
-                    "Easy DID publication",
-                    "DID sessions",
-                    "Better Carrier offline support"
+                "platform":"android", "date":"2020.08.31", "quality": "Developers beta", "content":[
+                    "New wallet design",
+                    "Ethereum smart contract support for capsules",
+                    "ERC20 tokens in wallet capsule"
                 ]
             },
             {
-                "platform":"android", "date":"2020.06", "quality": "Developers beta", "content":[
-                    "Improved initial on boarding",
-                    "Remote notifications",
-                    "Silent intents / Pre-authorizations",
-                    "Ethereum support in wallet",
-                    "Decentralized dApps publications",
-                    "CR council and CR proposal dApps"
+                "platform":"android", "date":"2020.10.31", "quality": "Developers beta", "content":[
+                    "Preliminary Hive++ backup/restore solution",
+                    "Basic Hive++ plugin and hive++ support for capsules",
+                    "Basic Hive++ configuration capsule"
                 ]
             },
             {
-                "platform":"android", "date":"2020.07", "quality": "Developers beta", "content":[
-                    "Widgets"
-                ]
-            },
-            {
-                "platform":"desktop", "date":"2020.06", "quality": "Project start", "content":[
-                    "Attempt to setup a team to build elastOS for desktop (computers)"
+                "platform":"desktop", "date":"2020.10 (TBC)", "quality": "Alpha", "content":[
+                    "First public version of elastOS for desktop, UI similar to mobile versions"
                 ]
             }
         ],
         "previous": [
+            {
+                "platform":"android", "version":"1.2.0", "date":"2020.06.05", "quality": "Developers beta", "newfeatures":[
+                    "DID sessions",
+                    "Local and remote notifications",
+                    "Password manager",
+                    "New identity and contact capsule designs",
+                    "Improved carrier offline support",
+                    "Remote communication with friends through contact notifier"
+                ]
+            },
+            {
+                "platform":"android", "version":"1.1.1", "date":"2020.04.30", "quality": "Developers beta", "newfeatures":[
+                    "elastOS as a browser",
+                    "New launcher app design",
+                    "Customizable networks"
+                ]
+            },
             {
                 "platform":"android", "version":"1.0.1", "date":"2020.02.12", "quality": "Developers beta", "newfeatures":[
                     "Full redesign",
