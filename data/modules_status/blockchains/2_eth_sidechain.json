@@ -1,6 +1,6 @@
 {
     "name":"ETH sidechain",
-    "lastupdated":"2020.04.09",
+    "lastupdated":"2020.07.18",
     "links":[
         {
             "title": "Node Github", "url": "https://github.com/elastos/Elastos.ELA.SideChain.ETH"
@@ -9,11 +9,8 @@
     "releases":{
         "current":[
             {
-                "version":"0.0.2", "date":"2019.11.01", "quality": "Production", "newfeatures":[
-                    "Support Solidity v0.4.25 and below",
-                    "Update SPV module dependency to version with 6-confirmed perception.",
-                    "Fix bootnode IP",
-                    "Update ELA dependency to a more stable version"
+                "version":"0.0.2.1", "date":"2020.7.13", "quality": "Production", "newfeatures":[
+                    "Fixed the bug of numerical precision"
                 ]
             }
         ],
@@ -24,6 +21,16 @@
                     "Based on ETH v1.9.7",
                     "Support Solidity v0.5.x and below"
                     
+                ]
+            }
+        ],
+        "previous":[
+            {
+                "version":"0.0.2", "date":"2019.11.01", "quality": "Production", "newfeatures":[
+                    "Support Solidity v0.4.25 and below",
+                    "Update SPV module dependency to version with 6-confirmed perception.",
+                    "Fix bootnode IP",
+                    "Update ELA dependency to a more stable version"
                 ]
             }
         ]

@@ -1,6 +1,6 @@
 {
     "name":"ELA mainchain",
-    "lastupdated":"2020.06.27",
+    "lastupdated":"2020.07.18",
     "links":[
         {
             "title": "Node Github", "url": "https://github.com/elastos/Elastos.ELA"
@@ -9,20 +9,12 @@
     "releases":{
         "current":[
             {
-                "version":"0.5.0", "date":"2020.05.22", "quality": "Production", "newfeatures":[
-                    "CR Committee",
-                    "CR proposal",
-                    "Impeach CR committee",
-                    "Migrate leveldb business to ffldb"
+                "version":"0.5.1", "date":"2020.06.28", "quality": "Production", "newfeatures":[
+                    "Check and clean transactions in tx pool after the status hash changed"
                 ]
             }
         ],
         "next":[
-            {
-                "date":"2020.07", "quality": "Production", "content":[
-                    "Check and clean transactions in tx pool after the status hash changed"
-                ]
-            },
             {
                 "date":"2020.08", "quality": "Production", "content":[
                     "Support to change Secretary-General and Proposer",
@@ -31,6 +23,14 @@
             }
         ],
         "previous":[
+            {
+                "version":"0.5.0", "date":"2020.05.22", "quality": "Production", "newfeatures":[
+                    "CR Committee",
+                    "CR proposal",
+                    "Impeach CR committee",
+                    "Migrate leveldb business to ffldb"
+                ]
+            },
             {
                 "version":"0.4.3", "date":"2020.01.09", "quality": "Production", "newfeatures":[
                     "Separate blocks size check to header and context checks"

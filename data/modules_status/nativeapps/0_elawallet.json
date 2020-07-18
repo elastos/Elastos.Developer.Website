@@ -1,6 +1,6 @@
 {
     "name":"ELA Wallet",
-    "lastupdated":"2020.06.27",
+    "lastupdated":"2020.07.18",
     "useplatforms": true,
     "links":[
         {
@@ -13,6 +13,62 @@
     "releases":{
         "current":[
             {
+                "platform":"android", "version":"1.4.5", "date":"2020.07.17", "quality": "Production", "newfeatures":[
+                    "Supported the short domain name function of Cryptoname for payment address.",
+                    "Optimized wallet UTXO processing capacity.",
+                    "Optimized the display effect for the Proposals.",
+                    "Optimized the main network DID synchronization function.",
+                    "Improved the operation log recording function."
+                ]
+            },
+            {
+                "platform":"iOS", "version":"1.4.4", "date":"2020.06.30", "quality": "Production", "newfeatures":[
+                    "Added CR Council member impeachment function.",
+                    "Optimized Proposal process flow.",
+                    "Added data reset function, which can re-synchronize data without uninstalling a given wallet.",
+                    "Added log compression function.",
+                    "Fixed some bugs."
+                ]
+            }
+        ],
+        "next":[
+            {
+                "platform":"iOS", "date":"2020.07", "quality": "Production", "content":[
+                    "Support the short domain name function of Cryptoname for payment address.",
+                    "Optimize wallet utxo processing capacity.",
+                    "Optimize the display effect for the Proposals.",
+                    "Optimize the main network DID synchronization function.",
+                    "Improve the operation log recording function."
+                ]
+            },
+            {
+                "platform":"android", "date":"2020.08", "quality": "Production", "content":[
+                    "Support to change Secretary-General and Proposer",
+                    "Support CR member to run their own DPoS node"
+                ]
+            },
+            {
+                "platform":"iOS", "date":"2020.08", "quality": "Production", "content":[
+                    "Support to change Secretary-General and Proposer",
+                    "Support CR member to run their own DPoS node"
+                ]
+            }
+        ],
+        "previous":[
+            {
+                "platform":"android", "version":"1.4.4", "date":"2020.06.30", "quality": "Production", "newfeatures":[
+                    "Added CR Council member impeachment function.",
+                    "Optimized Proposal process flow.",
+                    "Added data reset function, which can re-synchronize data without uninstalling a given wallet.",
+                    "Fix some bugs."
+                ]
+            },
+            {
+                "platform":"android", "version":"1.4.3.1", "date":"2020.06.10", "quality": "Production", "newfeatures":[
+                    "Elimination of spontaneous crash when entering \"CR Council\""
+                ]
+            },
+            {
                 "platform":"iOS", "version":"1.4.3", "date":"2020.06.09", "quality": "Production", "newfeatures":[
                     "The CR Council function allows you to view information for each council member.",
                     "The CR proposal function allows you to view the contents of classified proposals and vote on these proposals.",
@@ -20,30 +76,7 @@
                 ]
             },
             {
-                "platform":"android", "version":"1.4.3.1", "date":"2020.06.10", "quality": "Production", "newfeatures":[
-                    "Elimination of spontaneous crash when entering \"CR Council\""
-                ]
-            }
-        ],
-        "next":[
-            {
-                "platform":"android", "date":"2020.07", "quality": "Production", "content":[
-                    "Support impeaching CR Council Member.",
-                    "Optimize proposal processing flow.",
-                    "Fix some bugs"
-                ]
-            },
-            {
-                "platform":"iOS", "date":"2020.07", "quality": "Production", "content":[
-                    "Support impeaching CR Council Member.",
-                    "Optimize proposal processing flow.",
-                    "Fix some bugs"
-                ]
-            }
-        ],
-        "previous":[
-            {
-                "platform":"iOS", "version":"1.4.3", "date":"2020.06.09", "quality": "Production", "newfeatures":[
+                "platform":"android", "version":"1.4.3", "date":"2020.06.09", "quality": "Production", "newfeatures":[
                     "The CR Council function allows you to view information for each council member.",
                     "The CR proposal function allows you to view the contents of classified proposals and vote on these proposals.",
                     "Support for CR website functions like DID associate, login, signature, voting, proposal and others.",
