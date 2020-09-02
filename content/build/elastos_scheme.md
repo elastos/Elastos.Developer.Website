@@ -1026,6 +1026,16 @@ In case of ERC20 tokens, token smart contract addresses are hardcoded by the imp
    <td>
    </td>
   </tr>
+   <td>status
+   </td>
+   <td>Transaction status
+   </td>
+   <td>yes
+   </td>
+   <td>"cancelled", "published", “error”
+   </td>
+  <tr>
+  </tr>
 </table>
 {{< /rawhtml >}}
 
@@ -1142,6 +1152,16 @@ Transaction to execute an **ethereum sidechain smart contract**.
    <td>
    </td>
   </tr>
+  </tr>
+   <td>status
+   </td>
+   <td>Transaction status
+   </td>
+   <td>yes
+   </td>
+   <td>"cancelled", "published", “error”
+   </td>
+  <tr>
 </table>
 {{< /rawhtml >}}
 
@@ -1238,6 +1258,16 @@ Used to record a given DID request (ex: including updated DID document given by 
    <td>
    </td>
   </tr>
+  </tr>
+   <td>status
+   </td>
+   <td>Transaction status
+   </td>
+   <td>yes
+   </td>
+   <td>"cancelled", "published", “error”
+   </td>
+  <tr>
 </table>
 {{< /rawhtml >}}
 
@@ -1343,6 +1373,16 @@ Used to record a user vote to the mainchain.
    Array of public key dids
    </td>
   </tr>
+  </tr>
+   <td>status
+   </td>
+   <td>Transaction status
+   </td>
+   <td>yes
+   </td>
+   <td>"cancelled", "published", “error”
+   </td>
+  <tr>
 </table>
 {{< /rawhtml >}}
 
@@ -1467,6 +1507,16 @@ Registers a CR council member candidate so that other persons can vote for her/h
    <td>
    </td>
   </tr>
+  </tr>
+   <td>status
+   </td>
+   <td>Transaction status
+   </td>
+   <td>yes
+   </td>
+   <td>"cancelled", "published", “error”
+   </td>
+  <tr>
 </table>
 {{< /rawhtml >}}
 
@@ -1549,6 +1599,16 @@ Allows a user to vote for one or more CR council members
    <td>
    </td>
   </tr>
+  </tr>
+   <td>status
+   </td>
+   <td>Transaction status
+   </td>
+   <td>yes
+   </td>
+   <td>"cancelled", "published", “error”
+   </td>
+  <tr>
 </table>
 {{< /rawhtml >}}
 
