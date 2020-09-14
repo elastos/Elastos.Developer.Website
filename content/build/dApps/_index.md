@@ -17,6 +17,10 @@ For a quick review or if you're new to dApps, go to this tutorial to learn about
     {{< heroitem title="What's a Decentralized App (dApp)?" link="/build/dapps/dapps_what" rightArrow="true">}}
         Click here if you need a deep dive into what a dApp is, and what are the pros and cons.
     {{< /heroitem >}}
+    
+    {{< heroitem title="Ethereum Overview" link="https://www.trufflesuite.com/tutorials/ethereum-overview" linkBlank="true" rightArrow="true">}}
+        If you're new to Ethereum we also recommend you read this quick overview.
+    {{< /heroitem >}}
 {{< /hero >}}
 
 {{< spacer 1 >}}
