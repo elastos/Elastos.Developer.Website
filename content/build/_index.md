@@ -16,7 +16,7 @@ alwaysopen = false
         Create dApps as elastOS capsules in our mobile app, access our rich library of plugins and growing user base.
     {{< /heroitem >}}
     
-    {{< heroitem title="Native dApps" link="/build/dapps" >}}
+    {{< heroitem title="Browser dApps" link="/build/dapps" >}}
         Build any dApp using our EVM-compatible sidechain and optional P2P Carrier Network or Hive Storage Layer.
     {{< /heroitem >}}   
     

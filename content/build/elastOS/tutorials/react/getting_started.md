@@ -90,15 +90,9 @@ Now call `trinity-cli run` in the following fashion:
 
     trinity-cli run -p android
     
-This will build your project and automatically install it, but there is a minor bug right now where the app won't show 
-until the elastOS app refreshes, click a button like the Settings app and return to the home screen, then you should
-see your app.
+This will build your project and automatically install it, then you should see your app.
 
 {{< figure src="/build/elastOS/tutorials/react/img/elastOS_home.png" >}}
-
-### Close and Re-Open elastOS
-
-We need to do this the first time to ensure the capsule connects to a running `trinity-cli run` server instance.
 
 Now when you click your capsule it should open properly:
 
