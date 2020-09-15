@@ -1231,6 +1231,16 @@ Used to record a given DID request (ex: including updated DID document given by 
    <td>DID Request
    </td>
   </tr>
+  <tr>
+   <td>signedindid
+   </td>
+   <td>Currently signed in DID on elastOS 
+   </td>
+   <td>no
+   </td>
+   <td>String
+   </td>
+  </tr>
 </table>
 {{< /rawhtml >}}
 
@@ -1288,12 +1298,13 @@ JWT Payload:
       "specification": "elastos/did/1.0",
       "operation": "create"
     },
-  "payload": "eyJpZCI6ImRpZDplbGFzdG9zOmlZY3A3SkRCenhTZnFlcVV0VlQ1TG5yZ1dvNDhpUVV0Q2oiLCJwdWJsaWNLZXkiOlt7ImlkIjoiI3ByaW1hcnkiLCJwdWJsaWNLZXlCYXNlNTgiOiJ6bkduc042N3BFUXBwQ3FIS2t4TDJuNzV4MnlqSmNtcllrbW1MdnNoNGZSQSJ9XSwiYXV0aGVudGljYXRpb24iOlsiI3ByaW1hcnkiXSwiZXhwaXJlcyI6IjIwMjQtMTEtMTJUMTM6MDA6MDBaIn0",
-  "proof":{
+    "payload": "eyJpZCI6ImRpZDplbGFzdG9zOmlZY3A3SkRCenhTZnFlcVV0VlQ1TG5yZ1dvNDhpUVV0Q2oiLCJwdWJsaWNLZXkiOlt7ImlkIjoiI3ByaW1hcnkiLCJwdWJsaWNLZXlCYXNlNTgiOiJ6bkduc042N3BFUXBwQ3FIS2t4TDJuNzV4MnlqSmNtcllrbW1MdnNoNGZSQSJ9XSwiYXV0aGVudGljYXRpb24iOlsiI3ByaW1hcnkiXSwiZXhwaXJlcyI6IjIwMjQtMTEtMTJUMTM6MDA6MDBaIn0",
+    "proof":{
       "verificationMethod": "#primary",
       "signature": "h3PQyLMVR+vWXF6jPGmHSXDD/3QwjtBy17aqZ9DErL+2xNUE9s1NdSQ5jpBUAqXrG/8nGkBDVDYTHixV2uvBSw=="
     }
-  }
+  },
+  "signedindid": "did:ela:iMdtoHoQx8zgxRcLx6FxLKE4eYJiEz8nJk"
 }
 {{< /highlight >}}
 
