@@ -1231,16 +1231,6 @@ Used to record a given DID request (ex: including updated DID document given by 
    <td>DID Request
    </td>
   </tr>
-  <tr>
-   <td>signedindid
-   </td>
-   <td>Currently signed in DID on elastOS 
-   </td>
-   <td>no
-   </td>
-   <td>String
-   </td>
-  </tr>
 </table>
 {{< /rawhtml >}}
 
@@ -1303,8 +1293,7 @@ JWT Payload:
       "verificationMethod": "#primary",
       "signature": "h3PQyLMVR+vWXF6jPGmHSXDD/3QwjtBy17aqZ9DErL+2xNUE9s1NdSQ5jpBUAqXrG/8nGkBDVDYTHixV2uvBSw=="
     }
-  },
-  "signedindid": "did:ela:iMdtoHoQx8zgxRcLx6FxLKE4eYJiEz8nJk"
+  }
 }
 {{< /highlight >}}
 
