@@ -463,6 +463,12 @@ blockquote > p {
 	margin: 0;
 }
 
+.hero .hero-item.active.shadow > .col-inner {
+	cursor: default;
+	border: 1px solid #00bdf3;
+	box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.5);
+}
+
 .hero .hero-item:hover {
 	transition-property: border-color;
 	transition-duration: 0.5s;

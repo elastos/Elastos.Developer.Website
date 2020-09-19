@@ -11,6 +11,10 @@
   {{ $scratch.Add "css" " no-pad" }}
 {{ end }}
 
+{{ if .Params.active }}
+  {{ $scratch.Add "css" " active" }}
+{{ end }}
+
 {{/* We're using lg breakpoint 1024px, however the menu hides at 768px */}}
 {{ if .Params.colspan }}
   {{ if eq .Params.colspan "3" }}

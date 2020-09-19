@@ -175,6 +175,13 @@ Starting migrations...
 
 ...
 
+Migrating 'Storage'
+   -------------------
+   > transaction hash:    0x246068657b7c4aa079fca053f98ac8db72c4fc7c9573568e5933a47b9c0a072a
+   > Blocks: 0            Seconds: 9
+   > contract address:    0x654Ff88970F04B8C2A75dfeEB0B133dE8024c671
+
+
 Summary
 =======
 > Total deployments:   2
@@ -187,12 +194,35 @@ All of this should take a minute or two, when it's done you can verify it worked
 <a href="https://testnet.elaeth.io" target="_blank">https://testnet.elaeth.io</a>.
 {{< /rawhtml >}}
 
+Where you should see your most recent contract deployments and transactions.
+
+{{< figure src="/build/dapps/env_setup/testnet_explorer.png" >}}
+
+### But what does this really mean?
+
+Your smart contract is now on-chain at the contract address shown under the `'Storage'` contract address. 
+
+Now search for that contract address and you should see something like this:
+
+{{< figure src="/build/dapps/env_setup/testnet_contract.png" >}}
+
+This shows your smart contract on the testnet accessible at that smart contract address.
+
+### 5. Interacting with your Smart Contract
+
+There are three general ways to interact with your smart contract:
+
+#### 1. A Command Line Tool (CLI) like `truffle console` 
+
+#### 2. Via a programmatic script or process, usually this is used by tests
+
+#### 3. A client-side dApp that works with your smart contracts   
+
 {{< spacer 2 >}}
 
 {{< hero >}}
-    {{< heroitem title="Tutorial 1: Connecting Users" link="/build/dapps/tutorials/accounts" rightArrow="true">}}
-        For users to interact with a smart contract, they won't be using Truffle, but instead they would be using a web application
-        of some sort, connecting their own wallet (usually via Metamask) and interacting directely with your smart contract.
+    {{< heroitem title="Tutorial 1: Interacting with Smart Contracts" link="/build/dapps/tutorials/interaction/cli" rightArrow="true">}}
+        Let's walkthrough these <b>3</b> general ways to connect with your newly created Storage contract.
     {{< /heroitem >}}
 {{< /hero >}}
 
