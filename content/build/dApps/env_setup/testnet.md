@@ -36,7 +36,7 @@ Copy paste that mnemonic into a `secrets.json` file and add it to the top of the
 
 **Remember to `npm install --save @truffle/hdwallet-provider` the HDWallet Provider too.**
 
-```
+```javascript
 const secrets = require('./secrets.json')
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const mnemonic = secrets.mnemonic
@@ -50,7 +50,7 @@ Basically now you should have the same addresses on the TestNet as you had local
 
 Now in the `networks` section you want to add the `elaethTest` network:
 
-```
+```javascript
 elaethTest: {
   host: 'https://rpc.elaeth.io',
   port: 8545,
@@ -105,7 +105,7 @@ Now let's create a very basic smart contract which we'll build on in the next tw
 
 `contracts/Storage.sol`
 
-```
+```solidity
 pragma solidity >=0.4.22 <0.7.0;
 
 /**
@@ -134,7 +134,17 @@ contract Storage {
 }
 ```
 
-This simple smart contract allows you to `store` and `retrieve` a number.
+This simple smart contract allows you to `store` and `retrieve` a number. 
+
+{{< notice note >}}
+    Notice how the <b>store</b> function doesn't return anything.<br/>
+    <br/>
+    Changing state on the chain requires that the transaction gets accepted and confirmed, this means that these methods
+    act like Javascript asynchronous functions, but can have no return. Although we can await the "sendTransaction" it
+    will only return the transaction hash.<br/>
+    <br/>
+    <b>Read more here:<b/> <a href="https://web3js.readthedocs.io/en/v1.3.0/web3-eth-contract.html#methods-mymethod-send" target="_blank">https://web3js.readthedocs.io/en/v1.3.0/web3-eth-contract.html#methods-mymethod-send</a> 
+{{< /notice >}}
 
 Now hopefully you've learned how Truffle works, if not please read up here:
 
@@ -145,7 +155,7 @@ Now hopefully you've learned how Truffle works, if not please read up here:
 You'll be adding a second step to the migration:
 
 `migrations/2_deploy_storage.js`
-```
+```javascript
 const Storage = artifacts.require("Storage");
 
 module.exports = function(deployer) {
@@ -155,7 +165,7 @@ module.exports = function(deployer) {
 
 Now assuming you have test ELAETHSC, you should be able to deploy it to the Elastos ETH Sidechain TestNet.
 
-``` 
+```javascript
 | => truffle migrate --network elaethTest
 
 Compiling your contracts...

@@ -90,7 +90,7 @@ truffle(elaethTest)> const storageDeployed = await Storage.deployed()
 Now inspecting `storageDeployed` you can see that you can directly interact with the methods, here's a compact version of 
 what you should see in the specially created "TruffleContract":
 
-```
+```javascript
 {
   ...
   methods: {

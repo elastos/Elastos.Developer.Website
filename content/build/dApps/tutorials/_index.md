@@ -7,6 +7,12 @@ pre = ""
 alwaysopen = false
 +++
 
+{{< hero >}}
+    {{< heroitem title="Environment Setup" link="/build/dapps/env_setup" leftArrow="true">}}
+        If you haven't yet set up your dev environment, please click here.
+    {{< /heroitem >}}
+{{< /hero >}}
+
 #### Once you have your development environment set up, these tutorials will take you through learning the fundamental skills and design patterns to work with smart contracts.
 
 {{< spacer 1 >}}

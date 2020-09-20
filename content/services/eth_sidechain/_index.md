@@ -52,16 +52,20 @@ _This is hosted by the community run CR ETH Task Force and they take no liabilit
 
 {{< spacer 1 >}}
 
-#### Guides:
+## Tutorials:
 
 {{< hero >}}
-    {{< heroitem link="/services/eth_sidechain/guides/deploying_smart_contracts" colspan="4" >}}
-        <h5>Deploy a Smart Contract</h5>
+    {{< heroitem title="dApp Tutorials" link="/build/dapps/tutorials" rightArrow="true" >}}
+        You can find tutorials on setting up an Elastos ETH Sidechain dev environment and more here.
     {{< /heroitem >}}
-    
-    {{< heroitem link="/services/eth_sidechain/guides/calling_smart_contracts" colspan="4" >}}
-        <h5>Call a Smart Contract</h5>
-    {{< /heroitem >}}   
+{{< /hero >}}       
+
+#### Additional Guides:
+
+{{< hero >}}
+    {{< heroitem link="/services/eth_sidechain/guides/deploying_smart_contracts" rightArrow="true" colspan="6" >}}
+        <h5>Transferring ELA from Mainchain<br/>to the Elastos ETH Sidechain</h5>
+    {{< /heroitem >}}
 {{< /hero >}}
 
 {{< spacer 8 >}}
