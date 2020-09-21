@@ -220,6 +220,8 @@ export default App;
 
 ```
 
+{{< spacer 1 >}}
+
 #### There are some important changes here:
 
 1. We now need to initialize web3 inside the React.FC component, we wrap this in a `useEffect` since it only needs to run once. The call to
