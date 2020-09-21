@@ -27,7 +27,7 @@ or
 
 ## JWT requests and responses
 
-The Elastos scheme usually uses signed or unsigned JWT tokens to transport requests and responses data. 
+The Elastos scheme usually uses signed or unsigned JWT tokens to transport requests and responses data.
 
 ### Unsigned JWT requests
 
@@ -103,7 +103,7 @@ A mobile browser requires its back-end to generate a signed request. This reques
 ### Format
 
 The following formats are usable:
- 
+
 `http://scheme.elastos.org/[command]/[JWT]`
 
 `http://scheme.elastos.org/[command]?[query as get parameters]`
@@ -187,7 +187,7 @@ Callback receiver must return an HTTP code 200 to notify the wallet app that the
   <tr>
    <td>redirecturl
    </td>
-   <td>The redirect URL is called using mobile OS open url API or intent. This allows the calling app to directly handle this call. 
+   <td>The redirect URL is called using mobile OS open url API or intent. This allows the calling app to directly handle this call.
 <p>
 Custom parameters in the url are preserved and passed back to the receiving mobile application.
 <p>
@@ -263,7 +263,7 @@ The JWT token contains the response payload, and a signature that can be used to
    </td>
   </tr>
   <tr>
-   <td>exp 
+   <td>exp
    </td>
    <td>Expiration time of the JWT. After this time, response should be handled in error by the receiver.
    </td>
@@ -368,17 +368,17 @@ Those credentials have been attached as verified credentials on user’s DID bef
 {{< highlight "json" >}}
     "claims": {
       // default parameters: required: true, no reason, no specific iss requirement
-      "CLAIM_NAME": true, 
+      "CLAIM_NAME": true,
       // or
       "CLAIM_NAME": {
         // If a required field cannot be provided, the request will fail
-        "required": true | false, 
+        "required": true | false,
         // Optional
-        "reason": "Reason displayed to user", 
+        "reason": "Reason displayed to user",
         // Requirements about the credential issue (ex: if we want to target a specific organization)
         "iss": {
           // Credential must have been issued by this specific DID
-          "did":"issuer_did" 
+          "did":"issuer_did"
         }
       }
     }
@@ -489,7 +489,7 @@ Those credentials have been attached as verified credentials on user’s DID bef
           }
         },
         // Optional. Only for credentials that can be verified (not self issued)
-        "proof": { 
+        "proof": {
           "type": "RsaSignature2018",
           "created": "2017-06-18T21:19:10Z",
           "proofPurpose": "assertionMethod",
@@ -663,7 +663,7 @@ Used to generate a Verifiable Credential given a set of properties and other inf
             "info": "A sub-info"
           }
         },
-        "proof": { 
+        "proof": {
           "type": "RsaSignature2018",
           "created": "2020-06-18T21:19:10Z",
           "proofPurpose": "assertionMethod",
@@ -788,7 +788,7 @@ In order to issue a credential, the issuer needs to have a DID himself first, be
 
 ## Access Wallet Info Command
 
-Used to get user ELA address, ELA wallet amount, or other wallet related information. 
+Used to get user ELA address, ELA wallet amount, or other wallet related information.
 
 ### Endpoint
 
@@ -829,11 +829,11 @@ The following parameters could or should be part of the JWT structure:
 {
   "reqfields": [{
     // default parameters: required: true, no reason
-    "FIELD_NAME": true, 
+    "FIELD_NAME": true,
     // or
-    "FIELD_NAME": { 
+    "FIELD_NAME": {
       // Optional
-      "reason": "Reason displayed to user", 
+      "reason": "Reason displayed to user",
       // or
       "reason": [{
         "lang":"en|fr|zh|etc",
@@ -1224,7 +1224,7 @@ Used to record a given DID request (ex: including updated DID document given by 
   <tr>
    <td>didrequest
    </td>
-   <td>DID request (JSON), as provided by the DID SDK 
+   <td>DID request (JSON), as provided by the DID SDK
    </td>
    <td>yes
    </td>
@@ -1633,11 +1633,11 @@ JWT Payload:
 
 ## Sign Data Command
 
-Used to sign a document. Later on, anyone can check the signed result to make sure of the original data ownership.
+Used to sign a document with user's DID. Later on, anyone can check the signed result to make sure of the original data ownership.
 
 ### Endpoint
 
-**/sign/**
+**/didsign/**
 
 ### Request parameters
 
@@ -1661,6 +1661,26 @@ Used to sign a document. Later on, anyone can check the signed result to make su
    <td>yes
    </td>
    <td>String
+   </td>
+  </tr>
+  <tr>
+   <td>signatureFieldName
+   </td>
+   <td>Name of the field that holds the signature output, in the response. Useful for example to customize a generated JWT with a custom signature field name.
+   </td>
+   <td>no
+   </td>
+   <td>String
+   </td>
+  </tr>
+  <tr>
+   <td>jwtExtra
+   </td>
+   <td>Object that holds fields that are directly added to the resulting response / JWT. Useful for example to send server side challenges back, or other custom application data.
+   </td>
+   <td>no
+   </td>
+   <td>JSON Object
    </td>
   </tr>
 </table>
