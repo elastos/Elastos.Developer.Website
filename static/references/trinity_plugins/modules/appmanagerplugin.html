@@ -87,6 +87,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/appmanagerplugin.authoritystatus.html" class="tsd-kind-icon">Authority<wbr>Status</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/appmanagerplugin.messagetype.html" class="tsd-kind-icon">Message<wbr>Type</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/appmanagerplugin.startupmode.html" class="tsd-kind-icon">Startup<wbr>Mode</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
@@ -99,16 +100,18 @@
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#appinfo" class="tsd-kind-icon">App<wbr>Info</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#buildinfo" class="tsd-kind-icon">Build<wbr>Info</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#framework" class="tsd-kind-icon">Framework</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#icon" class="tsd-kind-icon">Icon</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#intentoptions" class="tsd-kind-icon">Intent<wbr>Options</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#locale" class="tsd-kind-icon">Locale</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#platform" class="tsd-kind-icon">Platform</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#platform-1" class="tsd-kind-icon">Platform</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#pluginauthority" class="tsd-kind-icon">Plugin<wbr>Authority</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#receivedintent" class="tsd-kind-icon">Received<wbr>Intent</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#receivedmessage" class="tsd-kind-icon">Received<wbr>Message</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#receivedservice" class="tsd-kind-icon">Received<wbr>Service</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#receivedwidget" class="tsd-kind-icon">Received<wbr>Widget</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#startupinfo" class="tsd-kind-icon">Startup<wbr>Info</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="appmanagerplugin.html#urlauthority" class="tsd-kind-icon">Url<wbr>Authority</a></li>
 							</ul>
 						</section>
@@ -204,6 +207,14 @@
 								</div>
 							</li>
 							<li class="tsd-parameter">
+								<h5>did<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The app did.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
 								<h5>frameworks<span class="tsd-signature-symbol">: </span><a href="appmanagerplugin.html#framework" class="tsd-signature-type">Framework</a><span class="tsd-signature-symbol">[]</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
@@ -260,7 +271,7 @@
 								</div>
 							</li>
 							<li class="tsd-parameter">
-								<h5>platforms<span class="tsd-signature-symbol">: </span><a href="appmanagerplugin.html#platform" class="tsd-signature-type">Platform</a><span class="tsd-signature-symbol">[]</span></h5>
+								<h5>platforms<span class="tsd-signature-symbol">: </span><a href="appmanagerplugin.html#platform-1" class="tsd-signature-type">Platform</a><span class="tsd-signature-symbol">[]</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
 										<p>The app platforms.</p>
@@ -354,6 +365,42 @@
 										<p>The app version code.</p>
 									</div>
 								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="buildinfo" class="tsd-anchor"></a>
+					<h3>Build<wbr>Info</h3>
+					<div class="tsd-signature tsd-kind-icon">Build<wbr>Info<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Information about build.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>platform<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>android | ios | windows | linux | macos</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>elastOS | native</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>variant<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 							</li>
 						</ul>
 					</div>
@@ -454,6 +501,14 @@
 									</div>
 								</div>
 							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> silent<wbr>Response<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>If true, the calling app is not displayed on top of other apps when receiving the intent response. Default: false</p>
+									</div>
+								</div>
+							</li>
 						</ul>
 					</div>
 				</section>
@@ -515,7 +570,7 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-					<a name="platform" class="tsd-anchor"></a>
+					<a name="platform-1" class="tsd-anchor"></a>
 					<h3>Platform</h3>
 					<div class="tsd-signature tsd-kind-icon">Platform<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
@@ -619,7 +674,7 @@
 								</div>
 							</li>
 							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> original<wbr>Jwt<wbr>Request<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">String</span></h5>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> original<wbr>Jwt<wbr>Request<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
 										<p>In case the intent comes from outside elastOS and was received as a JWT, this JWT is provided here.</p>
@@ -737,6 +792,39 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="startupinfo" class="tsd-anchor"></a>
+					<h3>Startup<wbr>Info</h3>
+					<div class="tsd-signature tsd-kind-icon">Startup<wbr>Info<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Information about startup.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> service<wbr>Name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>If startup mode is service, it will be return</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>startup<wbr>Mode<span class="tsd-signature-symbol">: </span><a href="../enums/appmanagerplugin.startupmode.html" class="tsd-signature-type">StartupMode</a></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The start up mode</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 					<a name="urlauthority" class="tsd-anchor"></a>
 					<h3>Url<wbr>Authority</h3>
 					<div class="tsd-signature tsd-kind-icon">Url<wbr>Authority<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
@@ -841,11 +929,17 @@
 					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../enums/appmanagerplugin.messagetype.html" class="tsd-kind-icon">Message<wbr>Type</a>
 					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../enums/appmanagerplugin.startupmode.html" class="tsd-kind-icon">Startup<wbr>Mode</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../interfaces/appmanagerplugin.appmanager.html" class="tsd-kind-icon">App<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="appmanagerplugin.html#appinfo" class="tsd-kind-icon">App<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="appmanagerplugin.html#buildinfo" class="tsd-kind-icon">Build<wbr>Info</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="appmanagerplugin.html#framework" class="tsd-kind-icon">Framework</a>
@@ -860,7 +954,7 @@
 						<a href="appmanagerplugin.html#locale" class="tsd-kind-icon">Locale</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="appmanagerplugin.html#platform" class="tsd-kind-icon">Platform</a>
+						<a href="appmanagerplugin.html#platform-1" class="tsd-kind-icon">Platform</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="appmanagerplugin.html#pluginauthority" class="tsd-kind-icon">Plugin<wbr>Authority</a>
@@ -876,6 +970,9 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="appmanagerplugin.html#receivedwidget" class="tsd-kind-icon">Received<wbr>Widget</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="appmanagerplugin.html#startupinfo" class="tsd-kind-icon">Startup<wbr>Info</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
 						<a href="appmanagerplugin.html#urlauthority" class="tsd-kind-icon">Url<wbr>Authority</a>

@@ -67,81 +67,46 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>This is about Hive which provides the IPFS(InterPlanetary File System, a protocol and
-							peer-to-peer network for storing and sharing data in a distributed file system)-based
-							APIs.
-							<br><br>
-							Please use &#39;HivePlugin&#39; as the plugin name in the manifest.json if you want to use
-							this facility.
-							<br><br>
-							Usage:
-							<br>
-						declare let hiveManager: HivePlugin.HiveManager;</p>
+						<p>Hive is the Elastos storage solution. It lets users deploy their own hive vaults in any location and
+						keep ownership of their data.</p>
 					</div>
+					<p>Hive can manage database data, files, server side scripting a with limited set of instructions.
+					It uses DID to authenticate users and applications before giving access to data.</p>
+					<p><br><br>
+						Declaration:
+					<br></p>
+					<pre><code class="language-typescript"><span class="hljs-keyword">declare</span> <span class="hljs-keyword">let</span> hiveManager: HivePlugin.HiveManager;
+<span class="hljs-keyword">let</span> client = <span class="hljs-keyword">await</span> hiveManager.getClient(...);
+<span class="hljs-keyword">let</span> myVault = client.getVault(myDid);
+myVault.getDatabase().insertOne(...);</code></pre>
 				</div>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Enumerations</h3>
+						<section class="tsd-index-section ">
+							<h3>Modules</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported"><a href="../enums/hiveplugin.drivetype.html" class="tsd-kind-icon">Drive<wbr>Type</a></li>
+								<li class="tsd-kind-module tsd-parent-kind-module tsd-is-not-exported"><a href="hiveplugin.database.html" class="tsd-kind-icon">Database</a></li>
+								<li class="tsd-kind-module tsd-parent-kind-module"><a href="hiveplugin.files.html" class="tsd-kind-icon">Files</a></li>
+								<li class="tsd-kind-module tsd-parent-kind-module tsd-is-not-exported"><a href="hiveplugin.keyvalues.html" class="tsd-kind-icon">Key<wbr>Values</a></li>
+								<li class="tsd-kind-module tsd-parent-kind-module"><a href="hiveplugin.scripting.html" class="tsd-kind-icon">Scripting</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Classes</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-module tsd-is-not-exported"><a href="../classes/hiveplugin.clientcreationoptions.html" class="tsd-kind-icon">Client<wbr>Creation<wbr>Options</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/hiveplugin.authenticationhandler.html" class="tsd-kind-icon">Authentication<wbr>Handler</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/hiveplugin.authenticator.html" class="tsd-kind-icon">Authenticator</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/hiveplugin.client.html" class="tsd-kind-icon">Client</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/hiveplugin.files.html" class="tsd-kind-icon">Files</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/hiveplugin.clientcreationoptions.html" class="tsd-kind-icon">Client<wbr>Creation<wbr>Options</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/hiveplugin.hivemanager.html" class="tsd-kind-icon">Hive<wbr>Manager</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/hiveplugin.ipfs.html" class="tsd-kind-icon">IPFS</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/hiveplugin.ipfsclientcreationoptions.html" class="tsd-kind-icon">IPFSClient<wbr>Creation<wbr>Options</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/hiveplugin.keyvalues.html" class="tsd-kind-icon">Key<wbr>Values</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/hiveplugin.onedriveclientcreationoptions.html" class="tsd-kind-icon">One<wbr>Drive<wbr>Client<wbr>Creation<wbr>Options</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Type aliases</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="hiveplugin.html#int" class="tsd-kind-icon">Int</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported"><a href="hiveplugin.html#opaque" class="tsd-kind-icon">Opaque</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/hiveplugin.jsonobject.html" class="tsd-kind-icon">JSONObject</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/hiveplugin.vault.html" class="tsd-kind-icon">Vault</a></li>
 							</ul>
 						</section>
 					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Type aliases</h2>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-					<a name="int" class="tsd-anchor"></a>
-					<h3>Int</h3>
-					<div class="tsd-signature tsd-kind-icon">Int<span class="tsd-signature-symbol">:</span> <a href="hiveplugin.html#opaque" class="tsd-signature-type">Opaque</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"Int"</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
-					<a name="opaque" class="tsd-anchor"></a>
-					<h3>Opaque</h3>
-					<div class="tsd-signature tsd-kind-icon">Opaque&lt;T, K&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-					</aside>
-					<h4 class="tsd-type-parameters-title">Type parameters</h4>
-					<ul class="tsd-type-parameters">
-						<li>
-							<h4>T</h4>
-						</li>
-						<li>
-							<h4>K</h4>
-						</li>
-					</ul>
 				</section>
 			</section>
 		</div>
@@ -192,6 +157,20 @@
 					</li>
 					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="hiveplugin.html">Hive<wbr>Plugin</a>
+						<ul>
+							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+								<a href="hiveplugin.database.html">Database</a>
+							</li>
+							<li class=" tsd-kind-module tsd-parent-kind-module">
+								<a href="hiveplugin.files.html">Files</a>
+							</li>
+							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+								<a href="hiveplugin.keyvalues.html">Key<wbr>Values</a>
+							</li>
+							<li class=" tsd-kind-module tsd-parent-kind-module">
+								<a href="hiveplugin.scripting.html">Scripting</a>
+							</li>
+						</ul>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="notificationmanagerplugin.html">Notification<wbr>Manager<wbr>Plugin</a>
@@ -209,38 +188,26 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../enums/hiveplugin.drivetype.html" class="tsd-kind-icon">Drive<wbr>Type</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="../interfaces/hiveplugin.authenticationhandler.html" class="tsd-kind-icon">Authentication<wbr>Handler</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../classes/hiveplugin.clientcreationoptions.html" class="tsd-kind-icon">Client<wbr>Creation<wbr>Options</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/hiveplugin.authenticator.html" class="tsd-kind-icon">Authenticator</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../interfaces/hiveplugin.client.html" class="tsd-kind-icon">Client</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/hiveplugin.files.html" class="tsd-kind-icon">Files</a>
+						<a href="../interfaces/hiveplugin.clientcreationoptions.html" class="tsd-kind-icon">Client<wbr>Creation<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="../interfaces/hiveplugin.hivemanager.html" class="tsd-kind-icon">Hive<wbr>Manager</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/hiveplugin.ipfs.html" class="tsd-kind-icon">IPFS</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/hiveplugin.jsonobject.html" class="tsd-kind-icon">JSONObject</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/hiveplugin.ipfsclientcreationoptions.html" class="tsd-kind-icon">IPFSClient<wbr>Creation<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/hiveplugin.keyvalues.html" class="tsd-kind-icon">Key<wbr>Values</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/hiveplugin.onedriveclientcreationoptions.html" class="tsd-kind-icon">One<wbr>Drive<wbr>Client<wbr>Creation<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="hiveplugin.html#int" class="tsd-kind-icon">Int</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
-						<a href="hiveplugin.html#opaque" class="tsd-kind-icon">Opaque</a>
+						<a href="../interfaces/hiveplugin.vault.html" class="tsd-kind-icon">Vault</a>
 					</li>
 				</ul>
 			</nav>

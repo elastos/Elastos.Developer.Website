@@ -80,162 +80,399 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.hivemanager.html#database" class="tsd-kind-icon">Database</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.hivemanager.html#scripting" class="tsd-kind-icon">Scripting</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.hivemanager.html#createclient" class="tsd-kind-icon">create<wbr>Client</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.hivemanager.html#getversion" class="tsd-kind-icon">get<wbr>Version</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.hivemanager.html#setlistener" class="tsd-kind-icon">set<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.hivemanager.html#getclient" class="tsd-kind-icon">get<wbr>Client</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.hivemanager.html#getvaultaddress" class="tsd-kind-icon">get<wbr>Vault<wbr>Address</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.hivemanager.html#setvaultaddress" class="tsd-kind-icon">set<wbr>Vault<wbr>Address</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="database" class="tsd-anchor"></a>
+					<h3>Database</h3>
+					<div class="tsd-signature tsd-kind-icon">Database<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>new<wbr>Object<wbr>Id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-siganture">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hiveplugin.database.objectid.html" class="tsd-signature-type">ObjectId</a></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>_id: <span class="tsd-signature-type">string</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <a href="hiveplugin.database.objectid.html" class="tsd-signature-type">ObjectId</a></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="scripting" class="tsd-anchor"></a>
+					<h3>Scripting</h3>
+					<div class="tsd-signature tsd-kind-icon">Scripting<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>Conditions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>Database<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter">
+												<h5>new<wbr>Query<wbr>Has<wbr>Results<wbr>Condition<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></h5>
+												<ul class="tsd-parameters">
+													<li class="tsd-parameter-siganture">
+														<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
+															<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryParameters<span class="tsd-signature-symbol">: </span><a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hiveplugin.scripting.conditions.database.queryhasresultscondition.html" class="tsd-signature-type">QueryHasResultsCondition</a></li>
+														</ul>
+														<ul class="tsd-descriptions">
+															<li class="tsd-description">
+																<h4 class="tsd-parameters-title">Parameters</h4>
+																<ul class="tsd-parameters">
+																	<li>
+																		<h5>collectionName: <span class="tsd-signature-type">string</span></h5>
+																	</li>
+																	<li>
+																		<h5>queryParameters: <a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a></h5>
+																	</li>
+																</ul>
+																<h4 class="tsd-returns-title">Returns <a href="hiveplugin.scripting.conditions.database.queryhasresultscondition.html" class="tsd-signature-type">QueryHasResultsCondition</a></h4>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>new<wbr>And<wbr>Condition<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></h5>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter-siganture">
+												<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
+													<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>conditions<span class="tsd-signature-symbol">: </span><a href="hiveplugin.scripting.conditions.condition.html" class="tsd-signature-type">Condition</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hiveplugin.scripting.conditions.andcondition.html" class="tsd-signature-type">AndCondition</a></li>
+												</ul>
+												<ul class="tsd-descriptions">
+													<li class="tsd-description">
+														<h4 class="tsd-parameters-title">Parameters</h4>
+														<ul class="tsd-parameters">
+															<li>
+																<h5>conditions: <a href="hiveplugin.scripting.conditions.condition.html" class="tsd-signature-type">Condition</a><span class="tsd-signature-symbol">[]</span></h5>
+															</li>
+														</ul>
+														<h4 class="tsd-returns-title">Returns <a href="hiveplugin.scripting.conditions.andcondition.html" class="tsd-signature-type">AndCondition</a></h4>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>new<wbr>OrCondition<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></h5>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter-siganture">
+												<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
+													<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>conditions<span class="tsd-signature-symbol">: </span><a href="hiveplugin.scripting.conditions.condition.html" class="tsd-signature-type">Condition</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hiveplugin.scripting.conditions.orcondition.html" class="tsd-signature-type">OrCondition</a></li>
+												</ul>
+												<ul class="tsd-descriptions">
+													<li class="tsd-description">
+														<h4 class="tsd-parameters-title">Parameters</h4>
+														<ul class="tsd-parameters">
+															<li>
+																<h5>conditions: <a href="hiveplugin.scripting.conditions.condition.html" class="tsd-signature-type">Condition</a><span class="tsd-signature-symbol">[]</span></h5>
+															</li>
+														</ul>
+														<h4 class="tsd-returns-title">Returns <a href="hiveplugin.scripting.conditions.orcondition.html" class="tsd-signature-type">OrCondition</a></h4>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>Executables<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>Database<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter">
+												<h5>new<wbr>Delete<wbr>Query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></h5>
+												<ul class="tsd-parameters">
+													<li class="tsd-parameter-siganture">
+														<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
+															<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, query<span class="tsd-signature-symbol">?: </span><a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a>, options<span class="tsd-signature-symbol">?: </span><a href="../modules/hiveplugin.database.html#deleteoptions" class="tsd-signature-type">DeleteOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hiveplugin.scripting.executables.database.deletequery.html" class="tsd-signature-type">DeleteQuery</a></li>
+														</ul>
+														<ul class="tsd-descriptions">
+															<li class="tsd-description">
+																<h4 class="tsd-parameters-title">Parameters</h4>
+																<ul class="tsd-parameters">
+																	<li>
+																		<h5>collectionName: <span class="tsd-signature-type">string</span></h5>
+																	</li>
+																	<li>
+																		<h5><span class="tsd-flag ts-flagOptional">Optional</span> query: <a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a></h5>
+																	</li>
+																	<li>
+																		<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../modules/hiveplugin.database.html#deleteoptions" class="tsd-signature-type">DeleteOptions</a></h5>
+																	</li>
+																</ul>
+																<h4 class="tsd-returns-title">Returns <a href="hiveplugin.scripting.executables.database.deletequery.html" class="tsd-signature-type">DeleteQuery</a></h4>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li class="tsd-parameter">
+												<h5>new<wbr>Find<wbr>Many<wbr>Query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></h5>
+												<ul class="tsd-parameters">
+													<li class="tsd-parameter-siganture">
+														<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
+															<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, query<span class="tsd-signature-symbol">?: </span><a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a>, options<span class="tsd-signature-symbol">?: </span><a href="../modules/hiveplugin.database.html#findoptions" class="tsd-signature-type">FindOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hiveplugin.scripting.executables.database.findmanyquery.html" class="tsd-signature-type">FindManyQuery</a></li>
+														</ul>
+														<ul class="tsd-descriptions">
+															<li class="tsd-description">
+																<h4 class="tsd-parameters-title">Parameters</h4>
+																<ul class="tsd-parameters">
+																	<li>
+																		<h5>collectionName: <span class="tsd-signature-type">string</span></h5>
+																	</li>
+																	<li>
+																		<h5><span class="tsd-flag ts-flagOptional">Optional</span> query: <a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a></h5>
+																	</li>
+																	<li>
+																		<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../modules/hiveplugin.database.html#findoptions" class="tsd-signature-type">FindOptions</a></h5>
+																	</li>
+																</ul>
+																<h4 class="tsd-returns-title">Returns <a href="hiveplugin.scripting.executables.database.findmanyquery.html" class="tsd-signature-type">FindManyQuery</a></h4>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li class="tsd-parameter">
+												<h5>new<wbr>Find<wbr>One<wbr>Query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></h5>
+												<ul class="tsd-parameters">
+													<li class="tsd-parameter-siganture">
+														<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
+															<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, query<span class="tsd-signature-symbol">?: </span><a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a>, options<span class="tsd-signature-symbol">?: </span><a href="../modules/hiveplugin.database.html#findoptions" class="tsd-signature-type">FindOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hiveplugin.scripting.executables.database.findonequery.html" class="tsd-signature-type">FindOneQuery</a></li>
+														</ul>
+														<ul class="tsd-descriptions">
+															<li class="tsd-description">
+																<h4 class="tsd-parameters-title">Parameters</h4>
+																<ul class="tsd-parameters">
+																	<li>
+																		<h5>collectionName: <span class="tsd-signature-type">string</span></h5>
+																	</li>
+																	<li>
+																		<h5><span class="tsd-flag ts-flagOptional">Optional</span> query: <a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a></h5>
+																	</li>
+																	<li>
+																		<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../modules/hiveplugin.database.html#findoptions" class="tsd-signature-type">FindOptions</a></h5>
+																	</li>
+																</ul>
+																<h4 class="tsd-returns-title">Returns <a href="hiveplugin.scripting.executables.database.findonequery.html" class="tsd-signature-type">FindOneQuery</a></h4>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li class="tsd-parameter">
+												<h5>new<wbr>Insert<wbr>Query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></h5>
+												<ul class="tsd-parameters">
+													<li class="tsd-parameter-siganture">
+														<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
+															<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, query<span class="tsd-signature-symbol">?: </span><a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a>, options<span class="tsd-signature-symbol">?: </span><a href="../modules/hiveplugin.database.html#insertoptions" class="tsd-signature-type">InsertOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hiveplugin.scripting.executables.database.insertquery.html" class="tsd-signature-type">InsertQuery</a></li>
+														</ul>
+														<ul class="tsd-descriptions">
+															<li class="tsd-description">
+																<h4 class="tsd-parameters-title">Parameters</h4>
+																<ul class="tsd-parameters">
+																	<li>
+																		<h5>collectionName: <span class="tsd-signature-type">string</span></h5>
+																	</li>
+																	<li>
+																		<h5><span class="tsd-flag ts-flagOptional">Optional</span> query: <a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a></h5>
+																	</li>
+																	<li>
+																		<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../modules/hiveplugin.database.html#insertoptions" class="tsd-signature-type">InsertOptions</a></h5>
+																	</li>
+																</ul>
+																<h4 class="tsd-returns-title">Returns <a href="hiveplugin.scripting.executables.database.insertquery.html" class="tsd-signature-type">InsertQuery</a></h4>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li class="tsd-parameter">
+												<h5>new<wbr>Update<wbr>Query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></h5>
+												<ul class="tsd-parameters">
+													<li class="tsd-parameter-siganture">
+														<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
+															<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, filter<span class="tsd-signature-symbol">: </span><a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a>, updateQuery<span class="tsd-signature-symbol">: </span><a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a>, options<span class="tsd-signature-symbol">?: </span><a href="../modules/hiveplugin.database.html#updateoptions" class="tsd-signature-type">UpdateOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hiveplugin.scripting.executables.database.updatequery.html" class="tsd-signature-type">UpdateQuery</a></li>
+														</ul>
+														<ul class="tsd-descriptions">
+															<li class="tsd-description">
+																<h4 class="tsd-parameters-title">Parameters</h4>
+																<ul class="tsd-parameters">
+																	<li>
+																		<h5>collectionName: <span class="tsd-signature-type">string</span></h5>
+																	</li>
+																	<li>
+																		<h5>filter: <a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a></h5>
+																	</li>
+																	<li>
+																		<h5>updateQuery: <a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a></h5>
+																	</li>
+																	<li>
+																		<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../modules/hiveplugin.database.html#updateoptions" class="tsd-signature-type">UpdateOptions</a></h5>
+																	</li>
+																</ul>
+																<h4 class="tsd-returns-title">Returns <a href="hiveplugin.scripting.executables.database.updatequery.html" class="tsd-signature-type">UpdateQuery</a></h4>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>new<wbr>Aggregated<wbr>Executable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></h5>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter-siganture">
+												<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
+													<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>executables<span class="tsd-signature-symbol">: </span><a href="hiveplugin.scripting.executables.executable.html" class="tsd-signature-type">Executable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hiveplugin.scripting.executables.executable.html" class="tsd-signature-type">Executable</a></li>
+												</ul>
+												<ul class="tsd-descriptions">
+													<li class="tsd-description">
+														<h4 class="tsd-parameters-title">Parameters</h4>
+														<ul class="tsd-parameters">
+															<li>
+																<h5>executables: <a href="hiveplugin.scripting.executables.executable.html" class="tsd-signature-type">Executable</a><span class="tsd-signature-symbol">[]</span></h5>
+															</li>
+														</ul>
+														<h4 class="tsd-returns-title">Returns <a href="hiveplugin.scripting.executables.executable.html" class="tsd-signature-type">Executable</a></h4>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="createclient" class="tsd-anchor"></a>
-					<h3>create<wbr>Client</h3>
+					<a name="getclient" class="tsd-anchor"></a>
+					<h3>get<wbr>Client</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Client<span class="tsd-signature-symbol">(</span>handler<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span>, options<span class="tsd-signature-symbol">: </span><a href="../classes/hiveplugin.clientcreationoptions.html" class="tsd-signature-type">ClientCreationOptions</a>, onSuccess<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, onError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Client<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="hiveplugin.clientcreationoptions.html" class="tsd-signature-type">ClientCreationOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="hiveplugin.client.html" class="tsd-signature-type">Client</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the singleton hive client instance for this application context, base for all
+									further operations.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>handler: <span class="tsd-signature-type">Function</span></h5>
-								</li>
-								<li>
-									<h5>options: <a href="../classes/hiveplugin.clientcreationoptions.html" class="tsd-signature-type">ClientCreationOptions</a></h5>
-								</li>
-								<li>
-									<h5>onSuccess: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>client<span class="tsd-signature-symbol">: </span><a href="hiveplugin.client.html" class="tsd-signature-type">Client</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>client: <a href="hiveplugin.client.html" class="tsd-signature-type">Client</a></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onError: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>err: <span class="tsd-signature-type">string</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
+									<h5>options: <a href="hiveplugin.clientcreationoptions.html" class="tsd-signature-type">ClientCreationOptions</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="hiveplugin.client.html" class="tsd-signature-type">Client</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="getversion" class="tsd-anchor"></a>
-					<h3>get<wbr>Version</h3>
+					<a name="getvaultaddress" class="tsd-anchor"></a>
+					<h3>get<wbr>Vault<wbr>Address</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Version<span class="tsd-signature-symbol">(</span>onSuccess<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, onError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Vault<wbr>Address<span class="tsd-signature-symbol">(</span>ownerDid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Tries to find a vault address in the public DID document of the given user&#39;s DID.</p>
+								</div>
+								<p>This API always tries to fetch this information from ID chain first (vault address published
+									publicly for this user) and falls back to the local DID/Vault mapping if it fails to resolve
+								from chain.</p>
+								<p>After being able to resolve from chain, any previously set local mapping is deleted.</p>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>onSuccess: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>version<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>version: <span class="tsd-signature-type">string</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onError: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-parameters-title">Parameters</h4>
-													<ul class="tsd-parameters">
-														<li>
-															<h5>err: <span class="tsd-signature-type">string</span></h5>
-														</li>
-													</ul>
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
+									<h5>ownerDid: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="setlistener" class="tsd-anchor"></a>
-					<h3>set<wbr>Listener</h3>
+					<a name="setvaultaddress" class="tsd-anchor"></a>
+					<h3>set<wbr>Vault<wbr>Address</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Listener<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, eventCallback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Vault<wbr>Address<span class="tsd-signature-symbol">(</span>ownerDid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, vaultAddress<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Locally maps the given owner DID with the given vault address. This is useful for example in case
+									a user doesn&#39;t publish his vault address on the ID chain, and shared it privately.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>type: <span class="tsd-signature-type">any</span></h5>
+									<h5>ownerDid: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>eventCallback: <span class="tsd-signature-type">Function</span></h5>
+									<h5>vaultAddress: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -288,6 +525,20 @@
 					</li>
 					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/hiveplugin.html">Hive<wbr>Plugin</a>
+						<ul>
+							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+								<a href="../modules/hiveplugin.database.html">Database</a>
+							</li>
+							<li class=" tsd-kind-module tsd-parent-kind-module">
+								<a href="../modules/hiveplugin.files.html">Files</a>
+							</li>
+							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+								<a href="../modules/hiveplugin.keyvalues.html">Key<wbr>Values</a>
+							</li>
+							<li class=" tsd-kind-module tsd-parent-kind-module">
+								<a href="../modules/hiveplugin.scripting.html">Scripting</a>
+							</li>
+						</ul>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/notificationmanagerplugin.html">Notification<wbr>Manager<wbr>Plugin</a>
@@ -305,53 +556,47 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../enums/hiveplugin.drivetype.html" class="tsd-kind-icon">Drive<wbr>Type</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
+						<a href="hiveplugin.authenticationhandler.html" class="tsd-kind-icon">Authentication<wbr>Handler</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../classes/hiveplugin.clientcreationoptions.html" class="tsd-kind-icon">Client<wbr>Creation<wbr>Options</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="hiveplugin.authenticator.html" class="tsd-kind-icon">Authenticator</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="hiveplugin.client.html" class="tsd-kind-icon">Client</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="hiveplugin.files.html" class="tsd-kind-icon">Files</a>
+						<a href="hiveplugin.clientcreationoptions.html" class="tsd-kind-icon">Client<wbr>Creation<wbr>Options</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="hiveplugin.hivemanager.html" class="tsd-kind-icon">Hive<wbr>Manager</a>
 						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="hiveplugin.hivemanager.html#createclient" class="tsd-kind-icon">create<wbr>Client</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="hiveplugin.hivemanager.html#database" class="tsd-kind-icon">Database</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="hiveplugin.hivemanager.html#scripting" class="tsd-kind-icon">Scripting</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="hiveplugin.hivemanager.html#getversion" class="tsd-kind-icon">get<wbr>Version</a>
+								<a href="hiveplugin.hivemanager.html#getclient" class="tsd-kind-icon">get<wbr>Client</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="hiveplugin.hivemanager.html#setlistener" class="tsd-kind-icon">set<wbr>Listener</a>
+								<a href="hiveplugin.hivemanager.html#getvaultaddress" class="tsd-kind-icon">get<wbr>Vault<wbr>Address</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="hiveplugin.hivemanager.html#setvaultaddress" class="tsd-kind-icon">set<wbr>Vault<wbr>Address</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="hiveplugin.ipfs.html" class="tsd-kind-icon">IPFS</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="hiveplugin.jsonobject.html" class="tsd-kind-icon">JSONObject</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="hiveplugin.ipfsclientcreationoptions.html" class="tsd-kind-icon">IPFSClient<wbr>Creation<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="hiveplugin.keyvalues.html" class="tsd-kind-icon">Key<wbr>Values</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="hiveplugin.onedriveclientcreationoptions.html" class="tsd-kind-icon">One<wbr>Drive<wbr>Client<wbr>Creation<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../modules/hiveplugin.html#int" class="tsd-kind-icon">Int</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter tsd-is-not-exported">
-						<a href="../modules/hiveplugin.html#opaque" class="tsd-kind-icon">Opaque</a>
+						<a href="hiveplugin.vault.html" class="tsd-kind-icon">Vault</a>
 					</li>
 				</ul>
 			</nav>
