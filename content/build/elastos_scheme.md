@@ -996,7 +996,7 @@ In case of ERC20 tokens, token smart contract addresses are hardcoded by the imp
    </td>
    <td>no
    </td>
-   <td>"ELA","ELA/ETHSC","TOK", etc
+   <td>"ELA","ELA/ETHSC","ELA/ETHSC:TOK", etc
    </td>
   </tr>
 </table>
