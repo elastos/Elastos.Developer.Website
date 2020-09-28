@@ -22,7 +22,7 @@ See  for more details about the following standard intents.
 
 | Intent action | Description |
 | ------------- | ----------- |
-| pay | Send a payment to a user or to purchase an item. | 
+| pay | Send a payment to a user or to purchase an item. |
 | didtransaction | Record a DID request on the DID sidechain (ex: publish/update a DID). |
 | esctransaction | Execute a smart contract transaction on the ETH sidechain. |
 | dposvotetransaction | Record a vote for a list of supernodes on the ELA mainchain. |
@@ -52,7 +52,7 @@ None
 
 **Raw Http GET request**
 
-    http://scheme.elastos.org/app?id=org.company.app | 
+    http://scheme.elastos.org/app?id=org.company.app |
 
 **elastOS**
 
@@ -78,7 +78,7 @@ For example, if a developer creates CoolCapsule and CoolCapsule let users add fr
 | identifier | Unique identifier for this profile inside the given app | Yes | string |
 | connectactiontitle | Description string to explain users viewing this profile (after registration on ID chain) what action they can expect if opening the target app | Yes | string or array of {lang:"", value:""} |
 | customcredentialtypes | Custom credential types to register with the app profile (as the application profile is a Verifiable Credential) | No | Array of strings |
-| sharedclaims | Claims to register to user's DID document as basic profile credential, independencly from the generated ApplicationProfileCredential | No | Array of key->value | 
+| sharedclaims | Claims to register to user's DID document as basic profile credential, independencly from the generated ApplicationProfileCredential | No | Array of key->value |
 | [Any field] | Any custom field passed to the intent will be saved in the ApplicationprofileCredential | No | key->value |
 
 ##### Response parameters
@@ -256,7 +256,7 @@ None
 
 ##### Description
 
-Allows the user to add a given friend (by DID) to his friends list. 
+Allows the user to add a given friend (by DID) to his friends list.
 
 For example, the built-in friends app simply saved the target DID as a friends in the friends list, in order to be able to reach that friend later.
 
@@ -344,3 +344,31 @@ Pick friend requests can be filtered to look for a specific credential type.
 	        }
 	    ]
 	}
+
+
+
+
+
+#### Open a url
+
+##### Description
+
+Opens an external url on the native platform, using a native browser.
+
+##### Request parameters
+
+| Parameter | Description | Format |
+| ----- | ----- | ----- |
+| url | Url to open | string |
+
+##### Response parameters
+
+None.
+
+##### Request example
+
+**elastOS**
+
+    appManager.sendIntent("openurl", {
+        url: "https://www.any.web.page.com"
+    }, ...)
