@@ -81,8 +81,11 @@ pre {
     background: #fff;
     border: 1px solid #eaeaea;
 }
-b, strong, label, th {
+label, th {
     font-weight: 600;
+}
+b, strong {
+    font-weight: 400 !important;
 }
 .default-animation, #header #logo-svg, #header #logo-svg path, #sidebar, #sidebar ul, #body, #body .padding, #body .nav {
     -webkit-transition: all 0.5s ease;

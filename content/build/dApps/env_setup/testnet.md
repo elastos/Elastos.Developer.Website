@@ -12,8 +12,10 @@ the mnemonic passphrase from your local Ganache.
 The example repo for this section is at: 
 
 {{< rawhtml >}}
-<a href="https://github.com/crregions/ela-eth-sidechain-doc" target="_blank" onclick="event.stopPropagation();">https://github.com/crregions/ela-eth-sidechain-doc</a>
+<a href="https://github.com/crregions/ela-eth-sidechain-doc/tree/client-initial" target="_blank">https://github.com/crregions/ela-eth-sidechain-doc/tree/client-initial</a>
 {{< /rawhtml >}}
+
+We'll be using the code at tag **"client-initial"** for now.
 
 ### 1. Get Your Mnemonic Passphrase
 
@@ -63,7 +65,7 @@ elaethTest: {
 }
 ```
 
-#### You can double check the example repo here: https://github.com/crregions/ela-eth-sidechain-doc 
+#### You can double check the example repo here: https://github.com/crregions/ela-eth-sidechain-doc/tree/client-initial 
 
 {{< spacer 1 >}}
 

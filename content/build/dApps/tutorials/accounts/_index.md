@@ -27,7 +27,7 @@ guide on the UX side of smart contract interaction:
     and there should be a menu item for **Networks**. In the top right there is an "Add Network" button, click that
     and add the RPC URL for the Elastos ETH Sidechain TestNet as follows:
     
-{{< figure src="/build/dapps/tutorials/accounts_1.png" >}}
+{{< figure src="/build/dapps/tutorials/accounts/accounts_1.png" >}}
 
 3. After adding the network, switch to it by clicking the rounded button showing **"Main Ethereum Network"** in the
     very top right, and selecting your new **"ELAETH Testnet"** network in the dropdown.
@@ -110,7 +110,7 @@ export default App;
 
 **If this worked properly you should still see the correct stored number displayed.**
 
-{{< figure src="/build/dapps/tutorials/accounts_2.png" width="50%">}}
+{{< figure src="/build/dapps/tutorials/accounts/accounts_2.png" width="50%">}}
 
 {{< spacer 1 >}}
 
@@ -121,20 +121,14 @@ The next step is actually issuing a transaction that requires gas!
 So let's add an actual action and button that does this, we've added a Loading spinner so ensure you get the latest code,
 `npm install` and add the new files (Loading.js, styles/bootstrap.min.css).
 
-Code is here: https://github.com/crregions/ela-eth-sidechain-doc/blob/master/client/src/App.js
+{{< rawhtml >}}
+Code is here: <a href="https://github.com/crregions/ela-eth-sidechain-doc/blob/client-initial/client/src/App.js" target="_blank">https://github.com/crregions/ela-eth-sidechain-doc/blob/client-initial/client/src/App.js</a>
+{{< /rawhtml >}}
 
 `App.js`
 
 ```javascript
-import React, { useState, useEffect, useRef } from 'react';
-import Web3 from 'web3'
-import logo from './logo.svg';
-import { LoadingOverlay } from './Loading'
-
-import './App.css'
-import './styles/bootstrap.min.css'
-
-import storageCompiledJSON from './contracts/Storage.json'
+import ...
 
 // ELAETHSC testnet
 const storageContractAddress = '0x654Ff88970F04B8C2A75dfeEB0B133dE8024c671'
@@ -151,24 +145,39 @@ function App() {
 
   // initial load
   useEffect(() => {
-    if (!window.ethereum) {
-      return
-    }
+    (async () => {
+      if (!window.ethereum) {
+        return
+      }
 
-    web3 = new Web3(window.ethereum)
+      // set our web3 variable to the one passed in by metamask
+      web3 = new Web3(window.ethereum)
 
-    // this triggers the Metamask permission request
-    window.ethereum.enable()
+      // this triggers the Metamask permission request to connect this app to Metamask
+      try {
+        await window.ethereum.enable()
+      } catch(err){
+        alert('You need to connect an account to interact with the smart contract')
+        return
+      }
 
-    storageInstance = new web3.eth.Contract(storageCompiledJSON.abi, storageContractAddress)
+      // instantiate an object to interact with the smart contract based on the ABI method spec
+      storageInstance = new web3.eth.Contract(storageCompiledJSON.abi, storageContractAddress)
 
-    ;(async () => {
+      // await fetching for the current stored value by calling the "retrieve" method
+      // on the smart contract
+
       const result = await storageInstance.methods.retrieve().call()
 
       setStoredNumber(parseFloat(result))
     })()
   }, [])
 
+
+  /**
+   * TODO: this needs to check if Metamask Ethereum.web3 is enabled
+   * @returns {Promise<void>}
+   */
   const storeNumber = async () => {
 
     setLoading(true)
@@ -181,6 +190,10 @@ function App() {
     }
 
     const accounts = await web3.eth.getAccounts()
+    if (accounts.length <= 0){
+      alert('Please select an account')
+      return
+    }
 
     await storageInstance.methods.store(numberToStore).send({
       from: accounts[0], // metamask only has one address for now
@@ -200,9 +213,14 @@ function App() {
   return (
     <div className="App">
         <img src={logo} className="App-logo" alt="logo"/>
+        <p className="my-3">
+          <span className="font-weight-light">Smart Contract:</span>
+
+          <a href="https://testnet.elaeth.io/address/0x654ff88970f04b8c2a75dfeeb0b133de8024c671/transactions" target="_blank">0x654Ff88970F04B8C2A75dfeEB0B133dE8024c671</a>
+        </p>
         {window.ethereum ?
           <p>
-            Stored Number: {storedNumber}
+            Stored Number: <b>{storedNumber}</b>
           </p> :
           <p>No Ethereum Extension Detected!</p>
         }
@@ -210,7 +228,7 @@ function App() {
       <div>
         {loading && <LoadingOverlay/>}
         <input type="number" ref={inputEl}/>
-        <button className="btn btn-info" onClick={storeNumber}>Store Number</button>
+        <button className="btn btn-info ml-1" onClick={storeNumber}>Store Number</button>
       </div>
     </div>
   );
@@ -222,13 +240,49 @@ export default App;
 
 {{< spacer 1 >}}
 
-#### There are some important changes here:
+#### Let's go through some of the important parts:
 
 1. We now need to initialize web3 inside the React.FC component, we wrap this in a `useEffect` since it only needs to run once. The call to
     `window.ethereum.enable()` actually triggers the Metamask extension window to pop-up and verify the connection.
+    
+    ```javascript
+    // initial load
+      useEffect(() => {
+        (async () => {
+          if (!window.ethereum) {
+            return
+          }
+    
+          // set our web3 variable to the one passed in by metamask
+          web3 = new Web3(window.ethereum)
+    
+          // this triggers the Metamask permission request to connect this app to Metamask
+          try {
+            await window.ethereum.enable()
+          } catch(err){
+            alert('You need to connect an account to interact with the smart contract')
+            return
+          }
+    
+          // instantiate an object to interact with the smart contract based on the ABI method spec
+          storageInstance = new web3.eth.Contract(storageCompiledJSON.abi, storageContractAddress)
+    
+          // await fetching for the current stored value by calling the "retrieve" method
+          // on the smart contract
+    
+          const result = await storageInstance.methods.retrieve().call()
+    
+          setStoredNumber(parseFloat(result))
+        })()
+      }, [])
+    ```
 
 2. We assume the `window.ethereum` variable is injected by Metamask, if it's not installed we can definitely do a better job at directing the user 
-    to where they need to go to get it.
+    to where they need to go to get it. For more info on the Metamask API read this: 
+
+    {{< rawhtml >}}    
+    <a href="https://docs.metamask.io/guide/ethereum-provider.html#properties" target="_blank">https://docs.metamask.io/guide/ethereum-provider.html#properties</a>
+    {{< /rawhtml >}}
     
 3. The transaction does take a while, 15 seconds now on the testnet and soon around 5 seconds on our next ETH Sidechain update.
 
@@ -236,10 +290,17 @@ export default App;
     This is intended behavior because you are actually spending ELAETHSC, which on MainNet is real money. This is to protect the user from
     spending their actual funds inadvertently.
 
+{{< spacer 1 >}}
+
+{{< figure src="/build/dapps/tutorials/accounts/accounts_3.png" caption="The default gas price on Elastos ETH Sidechain is only 1 Gwei" width="50%">}}
+
 {{< spacer 2 >}}
 
-### Coming Soon:
-
-Tutorials on Oracles (Calling existing smart contracts that are on-chain) and Gas Station Network (GSN) contracts that are pre-funded with gas fees so that users can more easily use them without Metamask or signing up.* 
+{{< hero >}}
+    {{< heroitem title="Granular Control of Connecting and Disconnecting Metamask" link="/build/dapps/tutorials/accounts/connecting" rightArrow="true">}}
+        In dApps users should have full control of which accounts they want to connect to your app, instead of immediately 
+        requesting a connection we should have a status indicator and allow them to connect/disconnect or change accounts as they see fit.
+    {{< /heroitem >}}
+{{< /hero >}}
 
 {{< spacer 5 >}}
