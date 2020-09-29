@@ -277,3 +277,20 @@ that this takes at least 15 seconds. Therefore we have a "Loading" spinner to wa
 {{< rawhtml >}}
     <i>The HTML UI is not included for brevity</i> - please see the code at: <a href="https://github.com/crregions/ela-eth-sidechain-doc/tree/metamask-mgmt" target="_blank">https://github.com/crregions/ela-eth-sidechain-doc/tree/metamask-mgmt</a>
 {{< /rawhtml >}} 
+
+{{< notice todo >}}
+    Coming soon is a guide on how to track data per user, obviously in this example it wouldn't work if we stored a single number for all users.
+{{</ notice >}}
+
+{{< spacer 1 >}}
+
+*For now the next tutorial is something extremely important, how to call oracles or other smart contracts to act on external data.*
+
+
+
+{{< hero >}}
+    {{< heroitem title="Oracles and Calling Other Smart Contracts from Your Smart Contract" link="/build/dapps/tutorials/oracles" rightArrow="true">}}
+        In dApps users should have full control of which accounts they want to connect to your app, instead of immediately 
+        requesting a connection we should have a status indicator and allow them to connect/disconnect or change accounts as they see fit.
+    {{< /heroitem >}}
+{{< /hero >}}
