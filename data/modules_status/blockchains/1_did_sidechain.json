@@ -1,6 +1,6 @@
 {
     "name":"DID sidechain",
-    "lastupdated":"2020.07.18",
+    "lastupdated":"2020.10.13",
     "links":[
         {
             "title": "Node Github", "url": "https://github.com/elastos/Elastos.ELA.SideChain.ID"
@@ -9,20 +9,27 @@
     "releases":{
         "current":[
             {
-                "version":"0.1.5", "date":"2020.6.12", "quality": "Production", "newfeatures":[
-                    "Solved the problem of repeatable register DID"
+                "version":"0.2.0", "date":"2020.9.23", "quality": "Production", "newfeatures":[
+                    "Support CR council member claim DPOS node."
                 ]
             }
         ],
         "next":[
             {
-                "date":"2020.08", "quality": "Production", "content":[
-                    "Deactivate DID",
-                    "DID Spec v0.3"
+                "date":"2021.02", "quality": "Production", "content":[
+                    "Key rolling",
+                    "Customized ID string",
+                    "Enhanced authorization / delegation",
+                    "Credential transactions"
                 ]
             }
         ],
         "previous":[
+            {
+                "version":"0.1.5", "date":"2020.6.12", "quality": "Production", "newfeatures":[
+                    "Solved the problem of repeatable register DID"
+                ]
+            },
             {
                 "version":"0.1.4", "date":"2020.4.20", "quality": "Production", "newfeatures":[
                     "Optimized SPV synchronization speed",

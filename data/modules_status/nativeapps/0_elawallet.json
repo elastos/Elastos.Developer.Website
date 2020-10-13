@@ -1,6 +1,6 @@
 {
     "name":"ELA Wallet",
-    "lastupdated":"2020.07.18",
+    "lastupdated":"2020.10.23",
     "useplatforms": true,
     "links":[
         {
@@ -13,27 +13,7 @@
     "releases":{
         "current":[
             {
-                "platform":"android", "version":"1.4.5", "date":"2020.07.17", "quality": "Production", "newfeatures":[
-                    "Supported the short domain name function of Cryptoname for payment address.",
-                    "Optimized wallet UTXO processing capacity.",
-                    "Optimized the display effect for the Proposals.",
-                    "Optimized the main network DID synchronization function.",
-                    "Improved the operation log recording function."
-                ]
-            },
-            {
-                "platform":"iOS", "version":"1.4.4", "date":"2020.06.30", "quality": "Production", "newfeatures":[
-                    "Added CR Council member impeachment function.",
-                    "Optimized Proposal process flow.",
-                    "Added data reset function, which can re-synchronize data without uninstalling a given wallet.",
-                    "Added log compression function.",
-                    "Fixed some bugs."
-                ]
-            }
-        ],
-        "next":[
-            {
-                "platform":"iOS", "date":"2020.07", "quality": "Production", "content":[
+                "platform":"iOS", "version":"1.4.5", "date":"2020.08.03", "quality": "Production", "newfeatures":[
                     "Support the short domain name function of Cryptoname for payment address.",
                     "Optimize wallet utxo processing capacity.",
                     "Optimize the display effect for the Proposals.",
@@ -42,19 +22,39 @@
                 ]
             },
             {
-                "platform":"android", "date":"2020.08", "quality": "Production", "content":[
+                "platform":"android", "version":"1.4.5", "date":"2020.07.17", "quality": "Production", "newfeatures":[
+                    "Supported the short domain name function of Cryptoname for payment address.",
+                    "Optimized wallet UTXO processing capacity.",
+                    "Optimized the display effect for the Proposals.",
+                    "Optimized the main network DID synchronization function.",
+                    "Improved the operation log recording function."
+                ]
+            }
+        ],
+        "next":[
+            {
+                "platform":"android", "date":"2020.10", "quality": "Production", "content":[
                     "Support to change Secretary-General and Proposer",
                     "Support CR member to run their own DPoS node"
                 ]
             },
             {
-                "platform":"iOS", "date":"2020.08", "quality": "Production", "content":[
+                "platform":"iOS", "date":"2020.10", "quality": "Production", "content":[
                     "Support to change Secretary-General and Proposer",
                     "Support CR member to run their own DPoS node"
                 ]
             }
         ],
         "previous":[
+            {
+                "platform":"iOS", "version":"1.4.4", "date":"2020.06.30", "quality": "Production", "newfeatures":[
+                    "Added CR Council member impeachment function.",
+                    "Optimized Proposal process flow.",
+                    "Added data reset function, which can re-synchronize data without uninstalling a given wallet.",
+                    "Added log compression function.",
+                    "Fixed some bugs."
+                ]
+            },
             {
                 "platform":"android", "version":"1.4.4", "date":"2020.06.30", "quality": "Production", "newfeatures":[
                     "Added CR Council member impeachment function.",

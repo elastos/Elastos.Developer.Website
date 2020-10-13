@@ -1,6 +1,6 @@
 {
     "name":"ETH sidechain",
-    "lastupdated":"2020.07.18",
+    "lastupdated":"2020.10.23",
     "links":[
         {
             "title": "Node Github", "url": "https://github.com/elastos/Elastos.ELA.SideChain.ETH"
@@ -9,14 +9,14 @@
     "releases":{
         "current":[
             {
-                "version":"0.0.2.1", "date":"2020.7.13", "quality": "Production", "newfeatures":[
-                    "Fixed the bug of numerical precision"
+                "version":"0.1.1", "date":"2020.10.9", "quality": "Production", "newfeatures":[
+                    "Automatically update chainID after the transition period ends"
                 ]
             }
         ],
         "next":[
             {
-                "date":"2020.08", "quality": "Production", "content":[
+                "date":"2021.02", "quality": "Production", "content":[
                     "DPOS Consensus",
                     "Based on ETH v1.9.7",
                     "Support Solidity v0.5.x and below"
@@ -25,6 +25,18 @@
             }
         ],
         "previous":[
+            {
+                "version":"0.1.0", "date":"2020.9.29", "quality": "Production", "newfeatures":[
+                    "DPOS Consensus",
+                    "Based on ETH v1.9.7",
+                    "Support Solidity v0.5.x and below"
+                ]
+            },
+            {
+                "version":"0.0.2.1", "date":"2020.7.13", "quality": "Production", "newfeatures":[
+                    "Fixed the bug of numerical precision"
+                ]
+            },
             {
                 "version":"0.0.2", "date":"2019.11.01", "quality": "Production", "newfeatures":[
                     "Support Solidity v0.4.25 and below",
