@@ -27,6 +27,7 @@ See  for more details about the following standard intents.
 | esctransaction | Execute a smart contract transaction on the ETH sidechain. |
 | dposvotetransaction | Record a vote for a list of supernodes on the ELA mainchain. |
 | credaccess | Get user information (name, email, ...) from his DID profile. |
+| credverify | Verify user information (name, email, ...) to generate a verifiable credential. |
 | walletaccess | Get information about user's wallet (Ex: ELA address). |
 | sign | Sign some binary content using a DID signature. |
 
