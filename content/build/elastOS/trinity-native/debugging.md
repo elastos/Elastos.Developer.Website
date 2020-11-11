@@ -8,7 +8,7 @@ alwaysopen = false
 
 ## How to quickly develop and debug?
 
-Trinity native dApps can take advantage of the Trinity CLI (command line tool) {{< internallink "similarly to when dApps are developed for inside elastOS" "build/elastOS/setup/running/running_debugging/_index.md" >}}.
+Trinity native dApps can {{< internallink "take advantage of the Trinity CLI" "build/elastOS/setup/running/running_debugging/_index.md" >}} (command line tool) similarly to when dApps are developed to run inside elastOS.
 
 ### Preliminary steps
 
