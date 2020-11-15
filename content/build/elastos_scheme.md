@@ -377,8 +377,12 @@ Those credentials have been attached as verified credentials on user’s DID bef
         "reason": "Reason displayed to user",
         // Requirements about the credential issue (ex: if we want to target a specific organization)
         "iss": {
-          // Credential must have been issued by this specific DID
-          "did":"issuer_did"
+          // Set selfproclaimed to true if you would like to only accept credentials that have been verified
+          // via specific issuer DIDs
+          "selfproclaimed": "false",
+          // Credential must have been issued by any of these specific DIDs. Note that "selfproclaimed" 
+          // must be set to true in order to use this parameter
+          "did":["issuer_did1", "issuer_did2"]
         }
       }
     }
@@ -407,7 +411,8 @@ Those credentials have been attached as verified credentials on user’s DID bef
             "value": "Language specific reason",
           }],
           "iss": {
-            "did":"did:elastos:my_university_did"
+            "selfproclaimed": true,
+            "did":["did:elastos:my_university_did"]
           }
         }
       }
