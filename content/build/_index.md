@@ -20,7 +20,7 @@ alwaysopen = false
         Build any dApp using our EVM-compatible sidechain and optional P2P Carrier Network or Hive Storage Layer.
     {{< /heroitem >}}   
     
-    {{< heroitem title="Services & SDKs" link="/build/services" >}}
+    {{< heroitem title="Services & SDKs" link="/services" >}}
         Use our decentralized services and SDKs to create revolutionary products for "The Modern Internet".
     {{< /heroitem >}}
 {{< /hero >}}
