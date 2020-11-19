@@ -14,7 +14,15 @@ As a first step, check {{< internallink "how to create, run and debug a elastOS 
 
 ## Get the Trinity native tool
 
-{{< todo "Wait for KP to complete trinity-native scripting" >}}
+Make sure to always get the latest script because there may be changes put in between the last time you downloaded it to today.
+```
+wget -O build https://raw.githubusercontent.com/elastos/Elastos.Trinity.ToolChains/master/native/bin/build && chmod +x build
+```
+
+You can learn more about what the script does and some helpful commands with:
+```
+./build -h
+```
 
 ## Configure your dApp for Trinity native
 
@@ -107,7 +115,29 @@ The trinity runtime will get this DID from your application and make sure that t
 
 ## Build your native app
 
-{{< todo "Wait for the final build command" >}}
+It is very easy to build your native app. You can either pass an absolute or relative path to the location of where your elastOS capsule is located:
+```
+./build -p ../Elastos.Trinity.DApps.Demo.DID
+```
+or
+```
+./build -p /home/user/github.com/elastos/Elastos.Trinity.DApps.Demo.DID
+```
+
+If you would like to first update your system before running the script, you can pass -u flag to the script:
+```
+./build -p ../Elastos.Trinity.DApps.Demo.DID -u yes
+```
+
+By default, Elastos.Trinity repository(that is involved in the build process) is saved to your ${HOME}/.trinity-native directory. If you want to get the latest changes from Elastos.Trinity before building your script, you can pass -t flag to the script:
+```
+./build -p ../Elastos.Trinity.DApps.Demo.DID -t yes
+```
+
+NOTE: You can combine multiple flags too. If you would like to update your system and update Elastos.Trinity repository before building your script, you would execute:
+```
+./build -p ../Elastos.Trinity.DApps.Demo.DID -u yes -t yes
+```
 
 ## Open and run your native projects
 
