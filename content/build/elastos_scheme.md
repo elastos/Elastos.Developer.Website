@@ -351,6 +351,12 @@ Those credentials have been attached as verified credentials on user’s DID bef
    </td>
   </tr>
   <tr>
+   <td>customization</td>
+   <td>UI customization values</td>
+   <td>no</td>
+   <td>UI customization object</td>
+  </tr>
+  <tr>
    <td>sub
    </td>
    <td>DID of the targeted user identity, in case user’s DID is already known and we want to get additional credentials. That will auto-select the right identity in the DID application.
@@ -359,6 +365,35 @@ Those credentials have been attached as verified credentials on user’s DID bef
    </td>
    <td>DID string
    </td>
+  </tr>
+</table>
+{{< /rawhtml >}}
+
+**UI Customization Object format:**
+
+{{< rawhtml >}}
+<table>
+  <tr>
+   <td><strong>Parameter</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Mandatory</strong>
+   </td>
+   <td><strong>Format</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>primarycolorlightmode</td>
+   <td>Color for icons, UI controls and heading texts when the light mode theme is enabled.</td>
+   <td>yes</td>
+   <td>Hex color string (ex: "#92e28b")</td>
+  </tr>
+  <tr>
+   <td> primarycolordarkmode </td>
+   <td>Color for icons, UI controls and heading texts when the dark mode theme is enabled.</td>
+   <td>yes</td>
+   <td>Hex color string (ex: "#92e28b")</td>
   </tr>
 </table>
 {{< /rawhtml >}}
