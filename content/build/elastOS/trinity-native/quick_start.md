@@ -113,6 +113,26 @@ To make this flow more secure, some steps are necessary (only the very first tim
 
 The trinity runtime will get this DID from your application and make sure that the redirecturl used for intent responses match the redirect url configured in your application DID on chain.
 
+## Configuring your domain for iOS apps
+
+In order to be activated/opened from a URL link (including intent responses sent by elastOS after a sign in or payment), you need to upload a special file on your web domain. This file must reference the APP ID of your application created on the apple developer portal, in order to proove that you own both the application and the domain. Without this, iOS will not let your application open urls, and your application won't be able to receive intent responses from elastOS. Application identifiers can be created and managed at https://developer.apple.com/account/resources/identifiers/list and are a mandatory step before publishing the applicaiton on the iOS app store.
+
+Here is a sample file. The file must be named **apple-app-site-association** and be uploaded at the root or your configured **redirect url** (ex: https://app.hyper.org/apple-app-site-association):
+
+```json
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "X3ZZSKA63E.org.hyper.app",
+                "paths": ["*"]
+            }
+        ]
+    }
+}
+```
+
 ## Build your native app
 
 It is very easy to build your native app. You can either pass an absolute or relative path to the location of where your elastOS capsule is located:
