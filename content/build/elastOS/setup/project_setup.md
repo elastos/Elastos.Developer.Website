@@ -5,7 +5,7 @@ weight = 20
 chapter = false
 pre = ""
 alwaysopen = false
-+++ 
++++
 
 ## Environment setup
 
@@ -32,18 +32,7 @@ The created application uses the ionic framework. It simply embeds an additional
 
 We offer a few app templates, for example on **Angular** there is a full demo template
 
-{{< figure src="/build/elastos/setup/demo-template.png" >}} 
-
-## Converting an existing ionic app to a elastOS capsule
-
-In case you already have a ionic application, and would like to run it inside elastOS, you have to generate a elastOS manifest to make it become compatible. 
-
-Enter your ionic app's folder then run the following command:
-
-```bash
-$ trinity-cli manifest
-$ npm i --save @elastosfoundation/trinity-types
-```
+{{< figure src="/build/elastos/setup/demo-template.png" >}}
 
 ### Learning Ionic
 

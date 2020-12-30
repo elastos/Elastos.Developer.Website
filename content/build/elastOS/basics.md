@@ -6,64 +6,50 @@ pre = ""
 alwaysopen = false
 +++
 
-##  The elastOS native application
+##  The elastOS application
 
-The Elastos browser, also know as elastOS, is for now a native **Android or iOS application** that has to be launched to enter the whole Elastos ecosystem of capsules and services.
+The Elastos browser, also know as **elastOS**, is a native **Android application** that has to be launched to enter the whole Elastos ecosystem of capsules and services. Its cousin for iOS, named **elastOS Essentials**, is a restricted version that complies with Apple guidelines. This iOS version cannot download or run third party capsules and instead, is mostly used as a super wallet for end users identity, storage space and tokens wallet. **elastOS** android is this same *companion*, plus a fully integrated capsule browser.
 
-This browser can run capsules independently and securely, and provides access to all of the Elastos modules such as:
- 
+The elastOS browser (android) can run capsules independently and securely, and provides access to all of the Elastos modules (usually through cordova/ionic plugins) such as:
+
+- DID (Decentralized Identity)
 - Hive
 - Carrier
 - Ethereum Sidechain
-- DID sidechain (Identity)
-- DMA
-
-{{< rawspan fontweight="400" >}}<i>Usually through cordova/ionic plugins</i>{{< /rawspan >}}
+- ELA Mainchain
 
 **The development codename for elastOS is Trinity.**
 
-You will notice a lot of the tools and repos are named "trinity", this is analagous to {{< rawspan fontweight="400" >}}elastOS{{< /rawspan >}}.
+On github, you will notice a lot of the tools and repos are named "trinity", this is analagous to {{< rawspan fontweight="400" >}}elastOS{{< /rawspan >}}.
 
 ### Capsules inside elastOS
 
 **elastOS** capsules are dApps, we call them **"capsules"**.
 
-Similarly to android and iOS home screens, elastOS provides a way to browse installed capsules, find and install new capsules, uninstall them. 
+Similarly to android and iOS home screens, elastOS provides a way to browse installed capsules, find and install new capsules, uninstall them.
 
-Capsules also have several ways to interact with each other while keeping their content secure. 
+Capsules also have several ways to interact with each other while keeping their content secure.
 
 All together, this creates a great user experience from inside the elastOS browser.
 
-- use our included **trinity-cli** tool to easily package and deploy your capsules  
+- use our included **trinity-cli** tool to easily package and deploy your capsules.
 
 - {{< rawspan fontweight="400" >}}elastOS{{< /rawspan >}} capsules must be written in {{< externallink title="Ionic 4.0 using React or Angular" >}}https://ionicframework.com{{< /externallink >}}
 
-    {{< notice note >}}
-        {{< rawspan fontweight="400" >}}There is a bug in the React template right now{{< /rawspan >}}, temporarily you must import <b>appManager</b>:
-        <code>declare const appManager: AppManagerPlugin.AppManager</code><br/>
-        <br/>
-        Then ensure we set visibility to show on App mount (within React.Component Parent App):
-        <code>
-            useEffect(() => {
-                appManager.setVisible("show")
-            }, [])
-        </code>
-    {{</ notice >}}
-
-- by default external requests are blocked, you must whitelist URLs in the `manifest.json` and even then users will be prompted to approve the connection through a native pop-up
-
 - your capsule can access a **suite of plugins** to use native features such as the:
-    
-    - camera
-    - fingerprint reader
+
+    - Camera
+    - Fingerprint reader
     - QR scanner
-    - storage and other common Cordova plugins
-    
+    - Storage and other common Cordova plugins
+
 - {{< rawspan fontweight="400" >}}elastOS{{< /rawspan >}} provides a set of custom plugins to access the Elastos ecosystem
 
+    - Decentralized identity
     - Hive Storage
-    - DID Sidechain
-    - ETH Sidechain - **Coming Soon**
+    - Carrier communications
+    - ETH Sidechain
+    - ELA mainchain
 
 {{< hero >}}
     {{< heroitem link="https://developer.elastos.org/references/trinity_plugins/index.html" linkBlank="true" >}}
