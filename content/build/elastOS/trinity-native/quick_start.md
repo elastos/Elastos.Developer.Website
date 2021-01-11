@@ -80,15 +80,17 @@ A intent scheme is a base url, that your native application can catch on the nat
 
 Let's take the Hyper IM dApp for example. If this dApp is built as native and wants to share invitation links with other users on traditional social networks, it may share links such as https://app.hyper.org/invitefriend?friendid=.
 
-For this, Hyper must define a intent scheme like this:
+For this, Hyper must define an intent scheme similar to this:
 
     "intentscheme": {
         "scheme": "https",
-        "path": "app.hyper.org"
+        "path": "app.hyper.org",
+        "custom": "hyper"
     }
 
 * When a user clicks such link on telegram, if hyper IM native is not installed, this will open the hyper.org web page and hyper developers can recommend end users to download hyper IM first.
 * If Hyper IM native is installed, then this directly opens the Hyper IM application, and the Hyper IM ionic dApp contained inside the Hyper IM native app receives the "invitefriend" intent and can proceed to the necessary action.
+* The "custom" field (custom intent scheme) must contain only a-z letters and is defined by you. This is mostly for android to be able to let your native app receive responses from elastOS, without android asking users if they want to use a browser app.
 
 ## Registering the application DID
 
@@ -100,6 +102,7 @@ To make this flow more secure, some steps are necessary (only the very first tim
 
 * Open the elastOS **dApps developer tools dApp** and create a new app.
 * Set the **native redirect url** field to match your intent scheme. In the Hyper IM example above, that would be: https://app.hyper.org
+* Set the **native custom scheme** field to match your custom scheme. In the example above, that would be: hyper://
 * Publish the application DID on the DID sidechain
 * Copy your application DID and update your dApp's manifest.json with a "did" entry like this:
 
