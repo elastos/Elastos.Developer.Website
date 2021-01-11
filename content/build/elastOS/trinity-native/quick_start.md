@@ -43,7 +43,8 @@ The Trinity native tool chain requires a configuration file in your elastOS dApp
             "splashscreen": "./native/splash.png",
             "intentscheme": {
                 "scheme": "https",
-                "path": "diddemo.trinity-tech.io"
+                "path": "diddemo.trinity-tech.io",
+                "custom": "diddemo"
             },
             "version": {
                 "code": 12346,
