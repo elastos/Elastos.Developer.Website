@@ -103,7 +103,7 @@ To make this flow more secure, some steps are necessary (only the very first tim
 
 * Open the elastOS **dApps developer tools dApp** and create a new app.
 * Set the **native redirect url** field to match your intent scheme. In the Hyper IM example above, that would be: https://app.hyper.org
-* Set the **native custom scheme** field to match your custom scheme. In the example above, that would be: hyper://
+* Set the **native custom scheme** field to match your custom scheme. In the example above, that would be: **hyper**
 * Publish the application DID on the DID sidechain
 * Copy your application DID and update your dApp's manifest.json with a "did" entry like this:
 
