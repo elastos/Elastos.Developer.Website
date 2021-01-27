@@ -72,6 +72,12 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Modules</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-module tsd-parent-kind-module"><a href="hiveplugin.database.exceptions.html" class="tsd-kind-icon">Exceptions</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/hiveplugin.database.database.html" class="tsd-kind-icon">Database</a></li>
@@ -89,8 +95,9 @@
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="hiveplugin.database.html#deleteoptions" class="tsd-kind-icon">Delete<wbr>Options</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="hiveplugin.database.html#deleteresult" class="tsd-kind-icon">Delete<wbr>Result</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="hiveplugin.database.html#findoptions" class="tsd-kind-icon">Find<wbr>Options</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="hiveplugin.database.html#insertmanyresult" class="tsd-kind-icon">Insert<wbr>Many<wbr>Result</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="hiveplugin.database.html#insertoneresult" class="tsd-kind-icon">Insert<wbr>One<wbr>Result</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="hiveplugin.database.html#insertoptions" class="tsd-kind-icon">Insert<wbr>Options</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="hiveplugin.database.html#insertresult" class="tsd-kind-icon">Insert<wbr>Result</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="hiveplugin.database.html#updateoptions" class="tsd-kind-icon">Update<wbr>Options</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="hiveplugin.database.html#updateresult" class="tsd-kind-icon">Update<wbr>Result</a></li>
 							</ul>
@@ -304,6 +311,46 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="insertmanyresult" class="tsd-anchor"></a>
+					<h3>Insert<wbr>Many<wbr>Result</h3>
+					<div class="tsd-signature tsd-kind-icon">Insert<wbr>Many<wbr>Result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Result after calls to insertMany() operations.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>inserted<wbr>Ids<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="insertoneresult" class="tsd-anchor"></a>
+					<h3>Insert<wbr>One<wbr>Result</h3>
+					<div class="tsd-signature tsd-kind-icon">Insert<wbr>One<wbr>Result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Result after calls to insertOne() operations.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>inserted<wbr>Id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="insertoptions" class="tsd-anchor"></a>
 					<h3>Insert<wbr>Options</h3>
 					<div class="tsd-signature tsd-kind-icon">Insert<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
@@ -317,26 +364,6 @@
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
-					<a name="insertresult" class="tsd-anchor"></a>
-					<h3>Insert<wbr>Result</h3>
-					<div class="tsd-signature tsd-kind-icon">Insert<wbr>Result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Result after calls to insert operations.</p>
-						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter">
-								<h5>inserted<wbr>Ids<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-							</li>
 						</ul>
 					</div>
 				</section>
@@ -394,50 +421,16 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="appmanagerplugin.html">App<wbr>Manager<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="carrierplugin.html">Carrier<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="contactnotifierplugin.html">Contact<wbr>Notifier<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="cordovabatterystatusplugin.html">Cordova<wbr>Battery<wbr>Status<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="cordovacameraplugin.html">Cordova<wbr>Camera<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="cordovadevicemotionplugin.html">Cordova<wbr>Device<wbr>Motion<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="cordovadeviceplugin.html">Cordova<wbr>Device<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="cordovafileplugin.html">Cordova<wbr>File<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="cordovamediacaptureplugin.html">Cordova<wbr>Media<wbr>Capture<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="cordovanetworkinfoplugin.html">Cordova<wbr>Network<wbr>Info<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="didplugin.html">DIDPlugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="didsessionmanagerplugin.html">DIDSession<wbr>Manager<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="fingerprintplugin.html">Fingerprint<wbr>Plugin</a>
-					</li>
 					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="hiveplugin.html">Hive<wbr>Plugin</a>
 						<ul>
-							<li class="current tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+							<li class="current tsd-kind-module tsd-parent-kind-module">
 								<a href="hiveplugin.database.html">Database</a>
+								<ul>
+									<li class=" tsd-kind-module tsd-parent-kind-module">
+										<a href="hiveplugin.database.exceptions.html">Exceptions</a>
+									</li>
+								</ul>
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module">
 								<a href="hiveplugin.files.html">Files</a>
@@ -446,21 +439,12 @@
 								<a href="hiveplugin.keyvalues.html">Key<wbr>Values</a>
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module">
+								<a href="hiveplugin.payment.html">Payment</a>
+							</li>
+							<li class=" tsd-kind-module tsd-parent-kind-module">
 								<a href="hiveplugin.scripting.html">Scripting</a>
 							</li>
 						</ul>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="notificationmanagerplugin.html">Notification<wbr>Manager<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="passwordmanagerplugin.html">Password<wbr>Manager<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="titlebarplugin.html">Title<wbr>Bar<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="walletplugin.html">Wallet<wbr>Plugin</a>
 					</li>
 				</ul>
 			</nav>
@@ -497,10 +481,13 @@
 						<a href="hiveplugin.database.html#findoptions" class="tsd-kind-icon">Find<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="hiveplugin.database.html#insertoptions" class="tsd-kind-icon">Insert<wbr>Options</a>
+						<a href="hiveplugin.database.html#insertmanyresult" class="tsd-kind-icon">Insert<wbr>Many<wbr>Result</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="hiveplugin.database.html#insertresult" class="tsd-kind-icon">Insert<wbr>Result</a>
+						<a href="hiveplugin.database.html#insertoneresult" class="tsd-kind-icon">Insert<wbr>One<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="hiveplugin.database.html#insertoptions" class="tsd-kind-icon">Insert<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="hiveplugin.database.html#updateoptions" class="tsd-kind-icon">Update<wbr>Options</a>

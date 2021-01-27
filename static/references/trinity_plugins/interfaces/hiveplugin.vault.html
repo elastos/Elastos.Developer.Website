@@ -84,9 +84,12 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.vault.html#getdatabase" class="tsd-kind-icon">get<wbr>Database</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.vault.html#getfiles" class="tsd-kind-icon">get<wbr>Files</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.vault.html#getnodeversion" class="tsd-kind-icon">get<wbr>Node<wbr>Version</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.vault.html#getpayment" class="tsd-kind-icon">get<wbr>Payment</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.vault.html#getscripting" class="tsd-kind-icon">get<wbr>Scripting</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.vault.html#getvaultownerdid" class="tsd-kind-icon">get<wbr>Vault<wbr>Owner<wbr>Did</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.vault.html#getvaultprovideraddress" class="tsd-kind-icon">get<wbr>Vault<wbr>Provider<wbr>Address</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.vault.html#revokeaccesstoken" class="tsd-kind-icon">revoke<wbr>Access<wbr>Token</a></li>
 							</ul>
 						</section>
 					</div>
@@ -130,6 +133,47 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="hiveplugin.files.files.html" class="tsd-signature-type">Files</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="getnodeversion" class="tsd-anchor"></a>
+					<h3>get<wbr>Node<wbr>Version</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Node<wbr>Version<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the deployment version for this vault&#39;s vault provider (node).
+									This can be useful to maintain backward compatibility with older nodes.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="getpayment" class="tsd-anchor"></a>
+					<h3>get<wbr>Payment</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Payment<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hiveplugin.payment.payment.html" class="tsd-signature-type">Payment</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gives access to the payment module that allows paying for vault usage, check active subscriptions
+									and quotas and more.</p>
+								</div>
+								<p>Returns null in case we are accessing a vault that is not the current user&#39;s.</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="hiveplugin.payment.payment.html" class="tsd-signature-type">Payment</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -183,10 +227,30 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Vault provider address (carrier or http)</p>
+									<p>  provider address (carrier or http)</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="revokeaccesstoken" class="tsd-anchor"></a>
+					<h3>revoke<wbr>Access<wbr>Token</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">revoke<wbr>Access<wbr>Token<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Revokes the existing access token linking the current user with the vault. Next operation on the vault
+									after calling launches a new authentication flow in order to generate a new access token.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -223,9 +287,6 @@
 						<a href="../modules/cordovafileplugin.html">Cordova<wbr>File<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/cordovamediacaptureplugin.html">Cordova<wbr>Media<wbr>Capture<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/cordovanetworkinfoplugin.html">Cordova<wbr>Network<wbr>Info<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
@@ -240,7 +301,7 @@
 					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/hiveplugin.html">Hive<wbr>Plugin</a>
 						<ul>
-							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+							<li class=" tsd-kind-module tsd-parent-kind-module">
 								<a href="../modules/hiveplugin.database.html">Database</a>
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module">
@@ -248,6 +309,9 @@
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
 								<a href="../modules/hiveplugin.keyvalues.html">Key<wbr>Values</a>
+							</li>
+							<li class=" tsd-kind-module tsd-parent-kind-module">
+								<a href="../modules/hiveplugin.payment.html">Payment</a>
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module">
 								<a href="../modules/hiveplugin.scripting.html">Scripting</a>
@@ -261,7 +325,13 @@
 						<a href="../modules/passwordmanagerplugin.html">Password<wbr>Manager<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/printerplugin.html">Printer<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/titlebarplugin.html">Title<wbr>Bar<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/videoeditoroptions.html">Video<wbr>Editor<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/walletplugin.html">Wallet<wbr>Plugin</a>
@@ -270,6 +340,12 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="../enums/hiveplugin.enhancederrortype.html" class="tsd-kind-icon">Enhanced<wbr>Error<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/hiveplugin.enhancederror.html" class="tsd-kind-icon">Enhanced<wbr>Error</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="hiveplugin.authenticationhandler.html" class="tsd-kind-icon">Authentication<wbr>Handler</a>
 					</li>
@@ -300,6 +376,12 @@
 								<a href="hiveplugin.vault.html#getfiles" class="tsd-kind-icon">get<wbr>Files</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="hiveplugin.vault.html#getnodeversion" class="tsd-kind-icon">get<wbr>Node<wbr>Version</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="hiveplugin.vault.html#getpayment" class="tsd-kind-icon">get<wbr>Payment</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="hiveplugin.vault.html#getscripting" class="tsd-kind-icon">get<wbr>Scripting</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
@@ -307,6 +389,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="hiveplugin.vault.html#getvaultprovideraddress" class="tsd-kind-icon">get<wbr>Vault<wbr>Provider<wbr>Address</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="hiveplugin.vault.html#revokeaccesstoken" class="tsd-kind-icon">revoke<wbr>Access<wbr>Token</a>
 							</li>
 						</ul>
 					</li>

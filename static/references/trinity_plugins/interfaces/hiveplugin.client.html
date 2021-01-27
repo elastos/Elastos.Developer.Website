@@ -82,6 +82,7 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.client.html#createvault" class="tsd-kind-icon">create<wbr>Vault</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="hiveplugin.client.html#getvault" class="tsd-kind-icon">get<wbr>Vault</a></li>
 							</ul>
 						</section>
@@ -90,6 +91,36 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="createvault" class="tsd-anchor"></a>
+					<h3>create<wbr>Vault</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Vault<span class="tsd-signature-symbol">(</span>vaultOwnerDid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, vaultProviderAddress<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="hiveplugin.vault.html" class="tsd-signature-type">Vault</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a new vault for the target DID on the target vault provider.
+									This is a mandatory step prior to using a vault provider, otherwise all API calls return an error.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>vaultOwnerDid: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>vaultProviderAddress: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="hiveplugin.vault.html" class="tsd-signature-type">Vault</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The created vault if it didn&#39;t exists, or null in case the vault already exists on this provider.</p>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="getvault" class="tsd-anchor"></a>
 					<h3>get<wbr>Vault</h3>
@@ -155,9 +186,6 @@
 						<a href="../modules/cordovafileplugin.html">Cordova<wbr>File<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/cordovamediacaptureplugin.html">Cordova<wbr>Media<wbr>Capture<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/cordovanetworkinfoplugin.html">Cordova<wbr>Network<wbr>Info<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
@@ -172,7 +200,7 @@
 					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/hiveplugin.html">Hive<wbr>Plugin</a>
 						<ul>
-							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+							<li class=" tsd-kind-module tsd-parent-kind-module">
 								<a href="../modules/hiveplugin.database.html">Database</a>
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module">
@@ -180,6 +208,9 @@
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
 								<a href="../modules/hiveplugin.keyvalues.html">Key<wbr>Values</a>
+							</li>
+							<li class=" tsd-kind-module tsd-parent-kind-module">
+								<a href="../modules/hiveplugin.payment.html">Payment</a>
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module">
 								<a href="../modules/hiveplugin.scripting.html">Scripting</a>
@@ -193,7 +224,13 @@
 						<a href="../modules/passwordmanagerplugin.html">Password<wbr>Manager<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/printerplugin.html">Printer<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/titlebarplugin.html">Title<wbr>Bar<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/videoeditoroptions.html">Video<wbr>Editor<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/walletplugin.html">Wallet<wbr>Plugin</a>
@@ -202,6 +239,12 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="../enums/hiveplugin.enhancederrortype.html" class="tsd-kind-icon">Enhanced<wbr>Error<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/hiveplugin.enhancederror.html" class="tsd-kind-icon">Enhanced<wbr>Error</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="hiveplugin.authenticationhandler.html" class="tsd-kind-icon">Authentication<wbr>Handler</a>
 					</li>
@@ -213,6 +256,9 @@
 					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
 						<a href="hiveplugin.client.html" class="tsd-kind-icon">Client</a>
 						<ul>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="hiveplugin.client.html#createvault" class="tsd-kind-icon">create<wbr>Vault</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="hiveplugin.client.html#getvault" class="tsd-kind-icon">get<wbr>Vault</a>
 							</li>

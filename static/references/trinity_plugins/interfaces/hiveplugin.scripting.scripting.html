@@ -86,7 +86,9 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="hiveplugin.scripting.scripting.html#call" class="tsd-kind-icon">call</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="hiveplugin.scripting.scripting.html#downloadfile" class="tsd-kind-icon">download<wbr>File</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="hiveplugin.scripting.scripting.html#setscript" class="tsd-kind-icon">set<wbr>Script</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="hiveplugin.scripting.scripting.html#uploadfile" class="tsd-kind-icon">upload<wbr>File</a></li>
 							</ul>
 						</section>
 					</div>
@@ -98,7 +100,7 @@
 					<a name="call" class="tsd-anchor"></a>
 					<h3>call</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">call<span class="tsd-signature-symbol">(</span>functionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, params<span class="tsd-signature-symbol">?: </span><a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">call<span class="tsd-signature-symbol">(</span>functionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, params<span class="tsd-signature-symbol">?: </span><a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a>, appDID<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -112,6 +114,9 @@
 								<p>Call parameters (params field) are meant to be used by scripts on the server side, for example as injected parameters
 									to mongo queries. Ex: if &quot;params&quot; contains a field &quot;name&quot;:&quot;someone&quot;, then the called script is able to reference this parameter
 								using &quot;$params.name&quot;.</p>
+								<p>The appDID parameter is used to override the default app did target that is (optionally) embedded in the authentication
+									challenge response. This allows calling scripts from other application contexts in case they chose to made their
+								script accessible anonimously.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -121,8 +126,38 @@
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> params: <a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a></h5>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> appDID: <span class="tsd-signature-type">string</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="hiveplugin.jsonobject.html" class="tsd-signature-type">JSONObject</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="downloadfile" class="tsd-anchor"></a>
+					<h3>download<wbr>File</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">download<wbr>File<span class="tsd-signature-symbol">(</span>transactionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="hiveplugin.files.reader.html" class="tsd-signature-type">Reader</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>After calling a script that runs a DownloadExecutable, a call() to that script returns a transaction_id in its
+										response. That transaction_id can be used with downloadFile() to download a file that is provided by the
+									script output.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>transactionId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="hiveplugin.files.reader.html" class="tsd-signature-type">Reader</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -130,7 +165,7 @@
 					<a name="setscript" class="tsd-anchor"></a>
 					<h3>set<wbr>Script</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Script<span class="tsd-signature-symbol">(</span>functionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, executable<span class="tsd-signature-symbol">: </span><a href="hiveplugin.scripting.executables.executable.html" class="tsd-signature-type">Executable</a>, accessCondition<span class="tsd-signature-symbol">?: </span><a href="hiveplugin.scripting.conditions.condition.html" class="tsd-signature-type">Condition</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Script<span class="tsd-signature-symbol">(</span>functionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, executable<span class="tsd-signature-symbol">: </span><a href="hiveplugin.scripting.executables.executable.html" class="tsd-signature-type">Executable</a>, accessCondition<span class="tsd-signature-symbol">?: </span><a href="hiveplugin.scripting.conditions.condition.html" class="tsd-signature-type">Condition</a>, allowAnonymousUser<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, allowAnonymousApp<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -147,15 +182,63 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>functionName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Reference script name that will be used later with scripting call().</p>
+									</div>
 								</li>
 								<li>
 									<h5>executable: <a href="hiveplugin.scripting.executables.executable.html" class="tsd-signature-type">Executable</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Simple or aggregated executables that are ran by the hive node, if the access condition is successful.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> accessCondition: <a href="hiveplugin.scripting.conditions.condition.html" class="tsd-signature-type">Condition</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional simple condition or aggregated conditions that are checked by the hive node when the script is called.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> allowAnonymousUser: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether to allow un-authenticated users to call this script to another user&#39;s vault. This allows making some resources available for public use. False by default.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> allowAnonymousApp: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether another application than the one registering the script is allowed to call the script or not. False by default.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="uploadfile" class="tsd-anchor"></a>
+					<h3>upload<wbr>File</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">upload<wbr>File<span class="tsd-signature-symbol">(</span>transactionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="hiveplugin.files.writer.html" class="tsd-signature-type">Writer</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>After calling a script that runs a UploadExecutable, a call() to that script returns a transaction_id in its
+										response. That transaction_id can be used with uploadFile() to upload a file that has to be provided as part
+									of the script.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>transactionId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="hiveplugin.files.writer.html" class="tsd-signature-type">Writer</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -167,49 +250,10 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/appmanagerplugin.html">App<wbr>Manager<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/carrierplugin.html">Carrier<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/contactnotifierplugin.html">Contact<wbr>Notifier<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/cordovabatterystatusplugin.html">Cordova<wbr>Battery<wbr>Status<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/cordovacameraplugin.html">Cordova<wbr>Camera<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/cordovadevicemotionplugin.html">Cordova<wbr>Device<wbr>Motion<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/cordovadeviceplugin.html">Cordova<wbr>Device<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/cordovafileplugin.html">Cordova<wbr>File<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/cordovamediacaptureplugin.html">Cordova<wbr>Media<wbr>Capture<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/cordovanetworkinfoplugin.html">Cordova<wbr>Network<wbr>Info<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/didplugin.html">DIDPlugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/didsessionmanagerplugin.html">DIDSession<wbr>Manager<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/fingerprintplugin.html">Fingerprint<wbr>Plugin</a>
-					</li>
 					<li class="current tsd-kind-module tsd-is-not-exported">
 						<a href="../modules/hiveplugin.html">Hive<wbr>Plugin</a>
 						<ul>
-							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
+							<li class=" tsd-kind-module tsd-parent-kind-module">
 								<a href="../modules/hiveplugin.database.html">Database</a>
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module">
@@ -217,6 +261,9 @@
 							</li>
 							<li class=" tsd-kind-module tsd-parent-kind-module tsd-is-not-exported">
 								<a href="../modules/hiveplugin.keyvalues.html">Key<wbr>Values</a>
+							</li>
+							<li class=" tsd-kind-module tsd-parent-kind-module">
+								<a href="../modules/hiveplugin.payment.html">Payment</a>
 							</li>
 							<li class="current tsd-kind-module tsd-parent-kind-module">
 								<a href="../modules/hiveplugin.scripting.html">Scripting</a>
@@ -231,18 +278,6 @@
 							</li>
 						</ul>
 					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/notificationmanagerplugin.html">Notification<wbr>Manager<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/passwordmanagerplugin.html">Password<wbr>Manager<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/titlebarplugin.html">Title<wbr>Bar<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="../modules/walletplugin.html">Wallet<wbr>Plugin</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -256,7 +291,13 @@
 								<a href="hiveplugin.scripting.scripting.html#call" class="tsd-kind-icon">call</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="hiveplugin.scripting.scripting.html#downloadfile" class="tsd-kind-icon">download<wbr>File</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="hiveplugin.scripting.scripting.html#setscript" class="tsd-kind-icon">set<wbr>Script</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="hiveplugin.scripting.scripting.html#uploadfile" class="tsd-kind-icon">upload<wbr>File</a>
 							</li>
 						</ul>
 					</li>

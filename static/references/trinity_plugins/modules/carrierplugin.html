@@ -1107,6 +1107,15 @@
 								</div>
 							</li>
 							<li class="tsd-parameter">
+								<h5>express<wbr>Enabled<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Boolean</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>set to use offline messaging mechanism or not. Setting this value to false will not enable offline
+										messaging. The offline mechanism is enabled defaultly.</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
 								<h5>persistent<wbr>Location<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
@@ -1186,7 +1195,7 @@
 							<li class="tsd-parameter">
 								<h5>on<wbr>Channel<wbr>Data<span class="tsd-signature-symbol">: </span>function</h5>
 								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Channel<wbr>Data<span class="tsd-signature-symbol">(</span>stream<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.stream.html" class="tsd-signature-type">Stream</a>, channel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Number</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+									<li class="tsd-signature tsd-kind-icon">on<wbr>Channel<wbr>Data<span class="tsd-signature-symbol">(</span>stream<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.stream.html" class="tsd-signature-type">Stream</a>, channel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Number</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -1217,7 +1226,7 @@
 												</div>
 											</li>
 											<li>
-												<h5>data: <span class="tsd-signature-type">string</span></h5>
+												<h5>data: <span class="tsd-signature-type">Uint8Array</span></h5>
 												<div class="tsd-comment tsd-typography">
 													<p>The received packet data.</p>
 												</div>
@@ -1420,7 +1429,7 @@
 							<li class="tsd-parameter">
 								<h5>on<wbr>Stream<wbr>Data<span class="tsd-signature-symbol">: </span>function</h5>
 								<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon">on<wbr>Stream<wbr>Data<span class="tsd-signature-symbol">(</span>stream<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.stream.html" class="tsd-signature-type">Stream</a>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+									<li class="tsd-signature tsd-kind-icon">on<wbr>Stream<wbr>Data<span class="tsd-signature-symbol">(</span>stream<span class="tsd-signature-symbol">: </span><a href="../interfaces/carrierplugin.stream.html" class="tsd-signature-type">Stream</a>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -1448,7 +1457,7 @@
 												</div>
 											</li>
 											<li>
-												<h5>data: <span class="tsd-signature-type">string</span></h5>
+												<h5>data: <span class="tsd-signature-type">Uint8Array</span></h5>
 												<div class="tsd-comment tsd-typography">
 													<p>The received packet data.</p>
 												</div>
@@ -1616,9 +1625,6 @@
 						<a href="cordovafileplugin.html">Cordova<wbr>File<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
-						<a href="cordovamediacaptureplugin.html">Cordova<wbr>Media<wbr>Capture<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="cordovanetworkinfoplugin.html">Cordova<wbr>Network<wbr>Info<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
@@ -1640,7 +1646,13 @@
 						<a href="passwordmanagerplugin.html">Password<wbr>Manager<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="printerplugin.html">Printer<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="titlebarplugin.html">Title<wbr>Bar<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="videoeditoroptions.html">Video<wbr>Editor<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-not-exported">
 						<a href="walletplugin.html">Wallet<wbr>Plugin</a>
