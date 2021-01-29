@@ -14,7 +14,7 @@ Though, elastOS for desktop may provide permanent background services, after it'
 
 ### Starting a background service at elastOS start
 
-In order to automatically start a service when elastOS starts, you need to add a specific **startup_service** manifest entry with the service name. You can choose any service name. This name will be used later to let the dAPP UI communicate with this service: 
+In order to automatically start a service when elastOS starts, you need to add a specific **startup_service** manifest entry with the service name. You can choose any service name. This name will be used later to let the dAPP UI communicate with this service:
 
 ```js
 {
@@ -38,13 +38,21 @@ Example (app.component.ts):
 ```typescript
 this.platform.ready().then(async () => {
     appManager.getStartupMode((startupInfo: AppManagerPlugin.StartupInfo) => {
-        if (startupInfo.startupMode === 'service')
-            console.log("Capsule has been started as a service.");
+        if (startupInfo.startupMode === AppManagerPlugin.StartupMode.SERVICE)
+            console.log("Started as a service.");
         else
-            console.log("Capsule has been started to display some user interface.");
+            console.log("Started to show a user interface.");
     });
 });
 ```
+
+After your service is started and has completed its most CPU-intensive initializations, it has to tell the application manager that it's ready so that the runtime can launch background services of other applications. If your service doesn't do this, other services are automatically started after an arbitrary amount of time.
+
+```typescript
+// All service initializations completed
+appManager.notifyServiceReady();
+```
+
 
 As your service runs permanently **while elastOS is running**, make sure to be gentle on CPU and RAM consumption. For now, end users have no way to disable startup services.
 
