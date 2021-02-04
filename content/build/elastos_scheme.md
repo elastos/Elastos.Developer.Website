@@ -366,6 +366,16 @@ Those credentials have been attached as verified credentials on user’s DID bef
    <td>DID string
    </td>
   </tr>
+  <tr>
+   <td>publisheddid
+   </td>
+   <td>Tells if the DID must be already published or not. Default: true. This is useful for applications that require to work only with published DIDs, so that they don't need to manually verify this by themselves.
+   </td>
+   <td>no
+   </td>
+   <td>Boolean
+   </td>
+  </tr>
 </table>
 {{< /rawhtml >}}
 
@@ -415,7 +425,7 @@ Those credentials have been attached as verified credentials on user’s DID bef
           // Set selfproclaimed to true if you would like to only accept credentials that have been verified
           // via specific issuer DIDs
           "selfproclaimed": "false",
-          // Credential must have been issued by any of these specific DIDs. Note that "selfproclaimed" 
+          // Credential must have been issued by any of these specific DIDs. Note that "selfproclaimed"
           // must be set to true in order to use this parameter
           "did":["issuer_did1", "issuer_did2"]
         }
