@@ -4,7 +4,7 @@ title = "Resources"
 weight = 40
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## elastOS
@@ -26,7 +26,7 @@ alwaysopen = false
     {{< heroitem link="/resources/apis/blockchain/spv_wallet_api/" >}}
         <h5>SPV Wallet API</h5>
     {{< /heroitem >}}
-    
+
     {{< heroitem link="https://elaeth.io" linkBlank="true" >}}
         <h5>Elastos ETH Sidechain</h5>
     {{< /heroitem >}}

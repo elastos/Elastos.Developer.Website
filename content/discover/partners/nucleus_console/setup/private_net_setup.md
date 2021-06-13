@@ -4,7 +4,7 @@ date = 2020-01-14
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++ 
 
 ## Details about the Elastos Private Network

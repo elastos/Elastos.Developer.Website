@@ -1,8 +1,8 @@
 <nav id="sidebar" class="{{if $.Site.Params.showVisitedLinks }}showVisitedLinks{{end}}">
 
-  <div style="z-index: 999999999;background: #f86c6b; color: white; font-weight: 300; text-align: center">
+  <!-- <div style="z-index: 999999999;background: #f86c6b; color: white; font-weight: 300; text-align: center">
     <i class="fas fa-exclamation-triangle"></i> Site under construction <i class="fas fa-exclamation-triangle"></i>
-  </div>
+  </div> -->
 
 
 {{ $currentNode := . }}
@@ -136,11 +136,11 @@
             <i class="fas fa-check read-icon"></i>
           {{ end }}
 
-          {{ if $isParent }}
+          <!-- {{ if $isParent }}
           <img src="/images/down_menu_icon.png" style="width:12px;margin-left:3px;margin-bottom:1px"/>
           {{ else }}
           <img src="/images/right_menu_icon.png" style="height:12px;margin-left:3px;margin-bottom:-1px"/>
-          {{ end }}
+          {{ end }} -->
       </a>
       {{ if ne $numberOfPages 0 }}
         <ul>

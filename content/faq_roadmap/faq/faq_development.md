@@ -4,7 +4,7 @@ date = 2019-05-24T21:15:33+02:00
 weight = 40
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++ 
 
 {{< faqentry question="In the Developers Beginner’s Guide to Elastos, there is very little info on the SDKs. Can you talk about the function of SDKs and how they fit into the project development workflow." >}}

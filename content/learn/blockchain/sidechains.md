@@ -3,7 +3,7 @@ title = "Sidechains"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ### Sidechains and Scalability

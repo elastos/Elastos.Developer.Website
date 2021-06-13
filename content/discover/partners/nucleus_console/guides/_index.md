@@ -3,7 +3,7 @@ title = "Guides"
 weight = 20
 chapter = true
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++ 
 
 {{< redirect href="/discover/partners/nucleus_console/guides/add_service" >}}

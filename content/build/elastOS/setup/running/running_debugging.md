@@ -3,7 +3,7 @@ title = "Running & Debugging a capsule"
 weight = 40
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 Trinity CLI provides an **easy way to run and debug** your capsule from your development station.

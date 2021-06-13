@@ -68,10 +68,10 @@ body #chapter h1 {
     }
 }
 a {
-    color: #00bdf3;
+    color: var(--main-color);
 }
 a:hover {
-    color: #0082a7;
+    color: var(--main-color);
 }
 pre {
     position: relative;
@@ -113,12 +113,12 @@ textarea:hover, input[type="email"]:hover, input[type="number"]:hover, input[typ
     border-color: #c4c4c4;
 }
 textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus {
-    border-color: #00bdf3;
+    border-color: #9D70FF;
     box-shadow: inset 0 1px 3px rgba(0,0,0,.06),0 0 5px rgba(0,169,218,.7)
 }
 #header-wrapper {
     /*background: #326A90;*/
-    background:#f4fcff;
+    background:var(--sidebar-color);
     color: #fff;
     text-align: center;
     /*border-bottom: 4px solid #528AB0;*/
@@ -143,7 +143,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     border-radius: 4px;
 }
 .searchbox label {
-    color: #1ebdf2;
+    color: var(--main-color);
     position: absolute;
     left: 10px;
     top: 3px;
@@ -191,7 +191,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 
 #sidebar {
-  background-color: #f4fcff;
+  background-color: var(--sidebar-color);
   position: fixed;
   top: 0;
   width: 325px;
@@ -679,13 +679,12 @@ code + .copy-to-clipboard {
 pre {
     padding: 1rem;
     margin: 2rem 0;
-    background: #282c34;
     border: 0;
     border-radius: 2px;
     line-height: 1.15;
 }
 pre code {
-    color: whitesmoke;
+    /* color: whitesmoke; */
     background: inherit;
     white-space: inherit;
     border: 0;
@@ -1149,7 +1148,7 @@ pre .copy-to-clipboard:hover {
     text-align: right;
 }
 #sidebar ul li.visited > a .read-icon {
-    color: #00bdf3;
+    color: var(--main-color);
     display: inline;
 }
 

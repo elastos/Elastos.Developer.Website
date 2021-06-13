@@ -3,7 +3,7 @@ title = "Environment Setup"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ### PrivateNet, TestNet and MainNet

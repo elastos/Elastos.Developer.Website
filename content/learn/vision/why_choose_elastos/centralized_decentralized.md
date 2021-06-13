@@ -3,7 +3,7 @@ title = "Centralized vs Decentralized"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ### Differences between centralized and decentralized apps

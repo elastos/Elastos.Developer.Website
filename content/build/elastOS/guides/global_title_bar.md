@@ -3,7 +3,7 @@ title = "The Title Bar"
 weight = 110
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## Introduction

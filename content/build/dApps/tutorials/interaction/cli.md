@@ -3,7 +3,7 @@ title = "CLI Console"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## Contract Interaction

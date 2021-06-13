@@ -3,7 +3,7 @@ title = "Private Net Setup"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 To setup an Elastos ETH Sidechain private net you'll be using the popular Ethereum tool called **Ganache**

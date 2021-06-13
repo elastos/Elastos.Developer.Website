@@ -3,7 +3,7 @@ title = "Quick start"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## Create your elastOS capsule

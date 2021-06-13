@@ -3,7 +3,7 @@ title = "Disconnecting and Status"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 For a better user experience we want to allow users to have control over connecting or disconnecting their Metamask.

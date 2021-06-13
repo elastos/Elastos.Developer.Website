@@ -3,7 +3,7 @@ title = "Whitepapers"
 weight = 30
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 Don't hesitate to read the following whitepapers, which were originally written when Elastos was launched in 2018. 

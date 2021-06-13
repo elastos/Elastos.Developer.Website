@@ -4,7 +4,7 @@ title = "Verifiable DID Structure"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 #### 1. Structure of a Verifiable DID Document

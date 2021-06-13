@@ -3,7 +3,7 @@ title = "Test Net Setup"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 To connect to the Test Net, we'll add a new network to the `truffle-config.js`, and to make things simple we'll use

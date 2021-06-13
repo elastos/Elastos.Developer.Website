@@ -4,7 +4,8 @@ title = "Discover"
 weight = 30
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
+draft = true
 +++
 
 {{< hero >}}
@@ -15,7 +16,7 @@ alwaysopen = false
     {{< heroitem title="Partners" link="/discover/partners/"  colspan="6" >}}
         Learn about Partners building on us and how to become one
     {{< /heroitem >}}
-    
+
     {{< heroitem title="External Tools" link="/discover/tools/" colspan="6" >}}
         Discover community built external tools for Elastos
     {{< /heroitem >}}

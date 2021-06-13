@@ -4,7 +4,7 @@ title = "Typical Use Case"
 weight = 15
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 

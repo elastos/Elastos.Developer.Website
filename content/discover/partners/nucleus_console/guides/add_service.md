@@ -4,7 +4,7 @@ date = 2020-01-14
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++ 
 
 ## How do you add a new service to the Nucleus Console?

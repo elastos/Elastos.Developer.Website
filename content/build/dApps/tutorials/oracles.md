@@ -3,7 +3,7 @@ title = "Oracles and Calling Other Contracts"
 weight = 30
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 Calling other smart contracts from your smart contract is extremely important, and also fundamental to how your 

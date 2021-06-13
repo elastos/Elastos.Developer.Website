@@ -5,7 +5,7 @@ title = "Plugins API"
 weight = 50
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 

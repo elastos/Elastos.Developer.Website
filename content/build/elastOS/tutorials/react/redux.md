@@ -4,7 +4,7 @@ title = "Redux Storage"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 The first thing you need in a dApp is local storage. With that we can store login and other client-side data that

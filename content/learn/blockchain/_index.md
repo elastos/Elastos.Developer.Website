@@ -4,7 +4,7 @@ title = "Elastos Blockchain"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 {{< figure src="/learn/blockchain/elastosorg-blockchain.png" >}}

@@ -5,7 +5,7 @@ title = "Elastos Carrier"
 weight = 30
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ### Elastos Carrier API References:

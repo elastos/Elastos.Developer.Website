@@ -4,7 +4,7 @@ title = "Build"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 #### There are a few typical ways to build useful dApps and projects on Elastos:
@@ -15,11 +15,11 @@ alwaysopen = false
     {{< heroitem title="elastOS" link="/build/elastos" >}}
         Create dApps as elastOS capsules in our mobile app, access our rich library of plugins and growing user base.
     {{< /heroitem >}}
-    
+
     {{< heroitem title="Browser dApps" link="/build/dapps" >}}
         Build any dApp using our EVM-compatible sidechain and optional P2P Carrier Network or Hive Storage Layer.
-    {{< /heroitem >}}   
-    
+    {{< /heroitem >}}
+
     {{< heroitem title="Services & SDKs" link="/services" >}}
         Use our decentralized services and SDKs to create revolutionary products for "The Modern Internet".
     {{< /heroitem >}}
@@ -43,7 +43,7 @@ to make developing easier, not to mention the secure runtime environment that El
     {{< heroitem link="/build/elastos/" rightArrow="true">}}
         <h5>Get Started Building on elastOS</h5>
     {{< /heroitem >}}
-    
+
 {{< /hero >}}
 
 {{< spacer 8 >}}

@@ -4,7 +4,7 @@ date = 2019-05-24T21:15:52+02:00
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 So you decided to contribute to some of [repository](https://github.com/elastos). Before contribution you should follow those rules:

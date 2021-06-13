@@ -3,7 +3,7 @@ title = "开源软件供应链点亮2020"
 weight = 70
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## **Open Source Promotion Plan** **-** **Summer 2020** | Elastos｜开源软件供应链点亮2020

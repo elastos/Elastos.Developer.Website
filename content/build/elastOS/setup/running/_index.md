@@ -3,7 +3,7 @@ title = "Running & Debugging"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 **Install elastOS** on a device, then **run your capsule**:

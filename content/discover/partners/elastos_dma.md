@@ -3,7 +3,7 @@ title = "Elastos DMA"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 The most important concept of Elastos, the SmartWeb network computer, is "you own your data". The confirmation of personal data ownership, and then turn personal data into personal fortune is clearly defined in Elastos vision and strategy. The best way to educate end-user is through commercially operated dApps. Building commercially viable dApp is the only and best way to engage with the community and enlarge it.

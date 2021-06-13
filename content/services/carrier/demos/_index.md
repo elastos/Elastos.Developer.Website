@@ -5,7 +5,7 @@ title = "Demos"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ### Browse Our Elastos Carrier Demos / Samples by Platform

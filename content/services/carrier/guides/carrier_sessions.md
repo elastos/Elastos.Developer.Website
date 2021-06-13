@@ -4,7 +4,7 @@ date = 2019-07-09T21:15:40+02:00
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 {{< todo "@BPI @TangZhiLong Find the equivalent codes for swift and elastOS" >}}

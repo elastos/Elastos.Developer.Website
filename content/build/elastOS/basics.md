@@ -3,7 +3,7 @@ title = "Basics"
 weight = 5
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ##  The elastOS application

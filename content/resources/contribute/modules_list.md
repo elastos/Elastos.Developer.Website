@@ -4,7 +4,7 @@ date = 2019-05-24T21:15:52+02:00
 weight = 40
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 If you're willing to contribute as a community leader, designer, or by running a supernode, please join Elastos telegram groups to get in touch with the Elastos community.

@@ -1,7 +1,7 @@
 
 
 +++
-title = "Elastos Hive (Storage)"
+title = "Hive storage"
 weight = 30
 chapter = false
 pre = ""
@@ -33,10 +33,10 @@ We have C, Java and Swift versions as well as **elastOS** plugins to meet your r
     {{< heroitem link="/services/hive/hive_guide" colspan="4" >}}
         <h5>Usage Guide</h5>
     {{< /heroitem >}}
-    
+
     {{< heroitem link="/services/hive/hive_demos" colspan="4" >}}
         <h5>Demos</h5>
-    {{< /heroitem >}}   
+    {{< /heroitem >}}
 
 {{< /hero >}}
 

@@ -3,7 +3,7 @@ title = "Client dApps"
 weight = 30
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## Contract Interaction

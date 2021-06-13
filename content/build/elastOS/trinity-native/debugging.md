@@ -3,7 +3,7 @@ title = "Debugging native dApps"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## How to quickly develop and debug?

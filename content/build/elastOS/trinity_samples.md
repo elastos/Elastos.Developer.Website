@@ -3,7 +3,7 @@ title = "Demos"
 weight = 25
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 draft = true
 +++
 

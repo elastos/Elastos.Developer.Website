@@ -4,7 +4,7 @@ title = "Login with DID"
 weight = 30
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 Now the fun begins, by being an elastOS capsule we can rely on elastOS's decentralized identity service.

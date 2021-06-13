@@ -3,7 +3,7 @@ title = "Using Plugins"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## Ionic native apps vs elastOS apps

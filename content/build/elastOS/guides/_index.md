@@ -3,7 +3,7 @@ title = "Development Guides"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## Learn How to Build a Capsule With Our Guides:

@@ -3,7 +3,7 @@ title = "Contract Interaction"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 {{< redirect href="/build/dapps/tutorials/interaction/cli" >}}

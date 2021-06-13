@@ -3,7 +3,7 @@ title = "Supported Intents"
 weight = 25
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## How to send intents?

@@ -3,7 +3,7 @@ title = "Ethereum Web3 provider"
 weight = 30
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## Purpose

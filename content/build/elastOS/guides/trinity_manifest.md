@@ -3,7 +3,7 @@ title = "The Manifest File"
 weight = 80
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 A capsule manifest is **the main descriptor** for the elastOS runtime to learn more about the capsule, know how to start it, know which services to start or which intents are supported. Here is the manifest format:

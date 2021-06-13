@@ -3,7 +3,7 @@ title = "Background services"
 weight = 120
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## elastOS background services

@@ -3,7 +3,7 @@ title = "Backup Restore helper"
 weight = 40
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## Purpose

@@ -3,7 +3,7 @@ title = "Roadmap"
 weight = 60
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 #### The long-term roadmap for the whole Elastos ecosystem can be found on the main Elastos website:

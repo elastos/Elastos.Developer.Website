@@ -6,7 +6,7 @@ title = "Angular"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 Our Angular tutorial is coming soon, however a lot of what you can do is showcased in the **demo** template application.

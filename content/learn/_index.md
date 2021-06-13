@@ -4,10 +4,11 @@ title = "Learn"
 weight = 35
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
+draft = true
 +++
 
-The Elastos Ecosystem in a basic sense is made up of (3) blockchains, a storage solution, a peer-to-peer (P2P secure communication layer and a flagship app called elastOS. 
+The Elastos Ecosystem in a basic sense is made up of (3) blockchains, a storage solution, a peer-to-peer (P2P secure communication layer and a flagship app called elastOS.
 
 {{< spacer 1 >}}
 
@@ -25,11 +26,11 @@ The Elastos Ecosystem in a basic sense is made up of (3) blockchains, a storage 
     {{< heroitem title="ELA Mainchain" link="/learn/blockchain" colspan="4" >}}
         Our base PoW blockchain merge-mined with Bitcoin and over 50% of BTC hashrate
     {{< /heroitem >}}
-    
+
     {{< heroitem title="Elastos DID" link="/learn/did_sidechain" colspan="4" >}}
         Build any dApp using our EVM-compatible sidechain and optional P2P Carrier Network or Hive Storage Layer.
-    {{< /heroitem >}}   
-    
+    {{< /heroitem >}}
+
     {{< heroitem title="ETH Sidechain" link="/learn/eth_sidechain" colspan="4" >}}
         Use our decentralized services and SDKs to create revolutionary products for "The Modern Internet".
     {{< /heroitem >}}
@@ -37,12 +38,12 @@ The Elastos Ecosystem in a basic sense is made up of (3) blockchains, a storage 
     {{< heroitem title="elastOS App" link="/build/elastos" colspan="4" >}}
         Use our decentralized services and SDKs to create revolutionary products for "The Modern Internet".
     {{< /heroitem >}}
-    
+
     {{< heroitem title="Elastos Hive" link="/learn/hive" colspan="4" >}}
         Our decentralized storage solution built on IPFS but compatible with personal storage and other solutions.
     {{< /heroitem >}}
-    
+
     {{< heroitem title="Elastos Carrier" link="/learn/carrier" colspan="4" >}}
         Build any dApp using our EVM-compatible sidechain and optional P2P Carrier Network or Hive Storage Layer.
-    {{< /heroitem >}}   
+    {{< /heroitem >}}
 {{< /hero >}}

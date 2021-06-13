@@ -3,7 +3,7 @@ title = "Ethereum smart contracts"
 weight = 145
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## About Ethereum in Elastos

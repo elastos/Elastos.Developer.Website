@@ -1,7 +1,3 @@
-
-
-
-
 +++
 title = "Elastos ETH Sidechain"
 weight = 50
@@ -23,7 +19,7 @@ You can build and run the above Geth clone locally to connect to our ETH Sidecha
         <i class="fab fa-github"></i> https://github.com/elastos/Elastos.ELA.SideChain.ETH
     </a>
 {{< /rawhtml >}}
- 
+
 {{< spacer 1 >}}
 
 ##### But we recommend you use one of the following provided RPC ports, works with Metamask, Openzeppelin, Truffle or any other standard tools as you would expect with Ethereum:
@@ -38,17 +34,17 @@ You can build and run the above Geth clone locally to connect to our ETH Sidecha
             Faucet: <a href="https://faucet.elaeth.io" target="_blank">https://faucet.elaeth.io</a>
         </div>
     {{< /heroitem >}}
-    
+
     {{< heroitem title="Mainnet" colspan="6" >}}
         <code>
             https://mainrpc.elaeth.io
         </code>
-    {{< /heroitem >}}   
+    {{< /heroitem >}}
 
 {{< /hero >}}
 
-For more info visit our sub-site: {{< externallink title="elaeth.io" >}}https://elaeth.io{{< /externallink >}}. 
-_This is hosted by the community run CR ETH Task Force and they take no liability for any issues._ 
+For more info visit our sub-site: {{< externallink title="elaeth.io" >}}https://elaeth.io{{< /externallink >}}.
+_This is hosted by the community run CR ETH Task Force and they take no liability for any issues._
 
 {{< spacer 1 >}}
 
@@ -58,7 +54,7 @@ _This is hosted by the community run CR ETH Task Force and they take no liabilit
     {{< heroitem title="dApp Tutorials" link="/build/dapps/tutorials" rightArrow="true" >}}
         You can find tutorials on setting up an Elastos ETH Sidechain dev environment and more here.
     {{< /heroitem >}}
-{{< /hero >}}       
+{{< /hero >}}
 
 #### Additional Guides:
 

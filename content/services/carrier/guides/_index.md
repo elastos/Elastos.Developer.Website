@@ -5,7 +5,7 @@ title = "Usage Guides"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ### Learn How to Use Elastos Carrier

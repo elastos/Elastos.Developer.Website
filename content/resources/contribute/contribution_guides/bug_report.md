@@ -4,7 +4,7 @@ date = 2019-05-24T21:15:52+02:00
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 This section guides you through submitting a bug. Following these guidelines helps maintainers and the community understand how to reproduce the behavior, and find related reports.

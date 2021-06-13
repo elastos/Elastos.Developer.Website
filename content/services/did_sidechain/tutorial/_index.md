@@ -4,7 +4,7 @@ title = "Getting Started"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 In this tutorial we will build the [Use Case Example: Decentralized Proof of Age](/services/did_sidechain/use_case_example).

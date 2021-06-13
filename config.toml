@@ -5,13 +5,13 @@ theme = "learn"
 
 # For search functionality
 [outputs]
-home = [ "HTML", "RSS", "JSON"]
+home = [ "HTML", "JSON"]
 
 [params]
 # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page.
 # Useful to give opportunity to people to create merge request for your doc.
 # See the config.toml file from this documentation site to have an example.
-editURL = "https://github.com/elastos/Elastos.Developer.Website/blob/master/content/"
+#editURL = "https://github.com/elastos/Elastos.Developer.Website/blob/master/content/"
 
 # Author of the site, will be used in meta information
 author = "Elastos Foundation"
@@ -19,7 +19,7 @@ author = "Elastos Foundation"
 # Description of the site, will be used in meta information
 description = "Developers documentation for the Elastos ecosystem"
 
-showHomeInMenu = true
+showHomeInMenu = false
 
 # Shows a checkmark for visited pages on the menu
 showVisitedLinks = false
@@ -32,10 +32,10 @@ disableSearch = false
 disableAssetsBusting = false
 
 # Set this to true to disable copy-to-clipboard button for inline code.
-disableInlineCopyToClipBoard = false
+disableInlineCopyToClipBoard = true
 
 # A title for shortcuts in menu is set by default. Set this to true to disable it.
-disableShortcutsTitle = false
+disableShortcutsTitle = true
 
 # When using mulitlingual website, disable the switch language button.
 disableLanguageSwitchingButton = true
@@ -107,3 +107,17 @@ weight = 45
 name = "<i class='fas fa-envelope menu-shortcut-icon'></i> Contact us"
 url = "mailto:contact@elastos.org"
 weight = 50
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = false # Disable Hugo's code highlighter as it conflicts with Academic's highligher.
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "manni"
+    tabWidth = 2

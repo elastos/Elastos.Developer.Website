@@ -3,7 +3,7 @@ title = "Inter-App Communication"
 weight = 30
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 {{< todo "Need to refine all of this - more details and examples (JWT encoding/decoding) when more mature" >}}

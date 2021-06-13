@@ -3,7 +3,7 @@ title = "C / C++ samples"
 weight = 5
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ### [Carrier - Multi-purpose shell demo](https://github.com/elastos/Elastos.NET.Carrier.Native.SDK/tree/master/apps/shell)

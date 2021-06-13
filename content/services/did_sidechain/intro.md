@@ -6,7 +6,7 @@ title = "Intro"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 This is a light introduction to the unique **"decentralized identifiers" (DID)** that follows the W3C DID Specification: https://w3c.github.io/did-core. 

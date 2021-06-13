@@ -3,7 +3,7 @@ title = "Cryptoname"
 weight = 40
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 CryptoName is your passport to the crypto world, as **it allows you to control your name via a Token** and link your crypto addresses simply to one name, your CryptoName. But not only that, also **DID, email and a website can be linked to your personal CryptoName**.

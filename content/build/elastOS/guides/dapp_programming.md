@@ -3,7 +3,7 @@ title = "Capsule Programming Quickstart"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 Once your **environment** and **project** setups are completed, you are ready to start customizing UI and logic from the default template application you've just created.

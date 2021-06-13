@@ -4,7 +4,7 @@ title = "Setup"
 weight = 5
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## Building the ELA Node

@@ -1,15 +1,15 @@
 
 +++
-title = "Elastos Core Services"
+title = "Core Services"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 {{< figure src="/services/elastOS_icons_row.png" >}}
 
-Elastos provides a set of **decentralized services** which can be integrated into any dApp or project 
+Elastos provides a set of **decentralized services** which can be integrated into any dApp or project
 
 You can find a full list of our repos here: {{< externallink title="https://github.com/elastos/Elastos" >}}https://github.com/elastos/Elastos{{< /externallink >}}
 
@@ -30,9 +30,9 @@ You can find a full list of our repos here: {{< externallink title="https://gith
 
 {{< hero >}}
     {{< heroitem title="A Real Decentralized Identity Solution" link="/services/did_sidechain" rightArrow="true">}}
-        The <b>DID Sidechain</b> supports W3C's Decentralized Identifiers (DID) standard - 
+        The <b>DID Sidechain</b> supports W3C's Decentralized Identifiers (DID) standard -
         <b><a href="https://w3c.github.io/did-core" target="_blank" onclick="event.stopPropagation();">https://w3c.github.io/did-core</a></b>.<br/>
-        And also comes with a set of plugins, QR code handlers and SDKs to make it easier to meet your identity requirements.    
+        And also comes with a set of plugins, QR code handlers and SDKs to make it easier to meet your identity requirements.
         <br/>
         <br/>
         <span style="font-weight: 300;">Currently supports:</span>
@@ -47,7 +47,7 @@ You can find a full list of our repos here: {{< externallink title="https://gith
 
 {{< hero >}}
     {{< heroitem title="Decentralized Storage" link="/services/hive" rightArrow="true">}}
-        <b>Elastos Hive</b> is standardized developer interface for IPFS storage with extensible options for private vaults and traditional solutions       
+        <b>Elastos Hive</b> is standardized developer interface for IPFS storage with extensible options for private vaults and traditional solutions
         <br/>
         <br/>
         <span style="font-weight: 300;">Currently supports:</span>
@@ -62,7 +62,7 @@ You can find a full list of our repos here: {{< externallink title="https://gith
 {{< hero >}}
     {{< heroitem title="P2P Robust Message Passing" link="/services/carrier" rightArrow="true">}}
         Building decentralized is already difficult, use our <b>Elastos Carrier</b> network to send encrypted E2E
-        data with built in blockchain features.<br/>       
+        data with built in blockchain features.<br/>
         <br/>
         <span style="font-weight: 300;">Reasons to use P2P Communications:</span>
         <ul>

@@ -4,7 +4,7 @@ title = "elastOS"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 {{< spacer 1 >}}

@@ -3,7 +3,7 @@ title = "Trinity native"
 weight = 50
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## What is Trinity native?

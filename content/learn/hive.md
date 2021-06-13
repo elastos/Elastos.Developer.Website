@@ -3,7 +3,7 @@ title = "Elastos Hive"
 weight = 70
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ### Overview 

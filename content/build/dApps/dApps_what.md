@@ -3,7 +3,7 @@ title = "What is a dApp?"
 weight = 5
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## A decentralized application - also called a dApp - has no **"central"** control. 

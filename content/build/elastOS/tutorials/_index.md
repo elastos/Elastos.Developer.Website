@@ -4,7 +4,7 @@ title = "Tutorials"
 weight = 15
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 #### Our elastOS templates are setup for **Typescript** and React or Angular

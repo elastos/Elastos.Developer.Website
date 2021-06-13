@@ -3,7 +3,7 @@ title = "Trinity dApp SDK"
 weight = 140
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## Introduction

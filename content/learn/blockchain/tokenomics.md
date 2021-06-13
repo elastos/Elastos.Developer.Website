@@ -3,7 +3,7 @@ title = "Tokenomics of ELA"
 weight = 30
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ### Overview

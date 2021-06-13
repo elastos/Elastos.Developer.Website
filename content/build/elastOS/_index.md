@@ -4,7 +4,8 @@ title = "elastOS"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
+draft = true
 +++
 
 **elastOS** is a mobile application that runs Ionic-based capsules and has an integrated suite of plugins to access Elastos ecosystem decentralized services.

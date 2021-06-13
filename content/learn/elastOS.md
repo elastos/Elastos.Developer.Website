@@ -5,7 +5,7 @@ title = "elastOS"
 weight = 80
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 elastOS is a native Android and iOS app that runs **"Capsules"** which are Elastos' version of dApps

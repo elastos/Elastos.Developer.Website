@@ -5,7 +5,7 @@ title = "Hackathons"
 weight = 50
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 

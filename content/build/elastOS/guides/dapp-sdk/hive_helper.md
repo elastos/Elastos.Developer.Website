@@ -3,7 +3,7 @@ title = "Hive helper"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## Purpose

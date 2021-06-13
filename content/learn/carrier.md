@@ -4,7 +4,7 @@ title = "Elastos Carrier"
 weight = 50
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ### Carrier presents a decentralized, fully encrypted, peer-to-peer platform that takes over all network traffic between virtual machines and transmits information on behalf of dApps. 

@@ -1,3 +1,7 @@
+:root {
+	--main-color: #00aeff;
+	--sidebar-color: #FFF;
+}
 
 @font-face {
 	font-family: 'Noto Sans';
@@ -41,6 +45,13 @@
 	src: url("./NotoSans-MediumItalic.ttf") format("truetype");
 }
 
+body {
+	font-size: 14px !important;
+}
+
+#body .padding {
+	padding: 0 10px;
+}
 
 .text-normal {
 	font-weight: 300;
@@ -77,7 +88,7 @@ h2 {
 h3 {
 	font-size: 1.8rem;
 	font-weight: 300;
-	color: #20a8d8;
+	color: #292929;
 }
 
 h4 {
@@ -87,7 +98,7 @@ h4 {
 
 h5 {
 	font-size: 1.2rem;
-	color: #20a8d8;
+	color: #292929;
 	font-weight: 300;
 }
 
@@ -159,6 +170,10 @@ blockquote > p {
 	text-align:center;
 }
 
+#sidebar {
+	width:auto;
+}
+
 #sidebar .menubuttons {
 	text-align:center;
 	margin-top:50px;
@@ -176,10 +191,10 @@ blockquote > p {
 }
 
 #sidebar .menubuttons a.elastosacademy {
-	background:#32c2f3;
+	background:#292929;
 }
 #sidebar .menubuttons a.elastosacademy:hover {
-	background:#42d2f3;
+	background:#292929;
 }
 
 #sidebar .menubuttons a.elastoshome {
@@ -190,6 +205,10 @@ blockquote > p {
 #sidebar .menubuttons a.elastoshome:hover {
 	background:#5a5b5b;
 	color:white;
+}
+
+#sidebar ul li.active > a {
+	font-weight: bold;
 }
 
 .invalidpagepatherror {
@@ -465,7 +484,7 @@ blockquote > p {
 
 .hero .hero-item.active.shadow > .col-inner {
 	cursor: default;
-	border: 1px solid #00bdf3;
+	border: 1px solid var(--main-color);
 	box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.5);
 }
 
@@ -518,6 +537,20 @@ blockquote > p {
 	h5 {
 		font-size: 1.2rem;
 	}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+pre {
+	border: solid 1px #DDD;
+	padding: 1px;
+}
+
+pre code {
+	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	line-height: 1.7em !important;
 }
 
 .highlight table > tbody > tr > td:first-child > pre {

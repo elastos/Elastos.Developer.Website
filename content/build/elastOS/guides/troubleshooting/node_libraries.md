@@ -5,7 +5,7 @@ title = "Node libraries VS browser"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## Scope

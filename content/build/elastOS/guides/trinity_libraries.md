@@ -3,7 +3,7 @@ title = "Writing a Third Party Library"
 weight = 90
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 draft = true
 +++
 

@@ -3,7 +3,7 @@ title = "HTTP Calls in elastOS"
 weight = 150
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## Allowing some HTTP calls in your capsule

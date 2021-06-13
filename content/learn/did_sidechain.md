@@ -4,7 +4,7 @@ title = "Elastos DID"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 Elastos provides a set of identity management tools that are 

@@ -3,7 +3,7 @@ title = "Android native samples"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ### [Carrier Demo](https://github.com/elastos/Elastos.NET.Carrier.Samples.Android)

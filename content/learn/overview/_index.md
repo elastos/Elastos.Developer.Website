@@ -5,7 +5,7 @@ title = "Overview"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 {{< figure src="/learn/elastos-ecosystem.png" >}}

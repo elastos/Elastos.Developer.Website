@@ -3,7 +3,7 @@ title = "Installing elastOS"
 weight = 40
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ### elastOS is a Mobile Application That Runs Your Capsules

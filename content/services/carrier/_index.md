@@ -1,7 +1,7 @@
 
 
 +++
-title = "Elastos Carrier"
+title = "Carrier communications"
 weight = 40
 chapter = false
 pre = ""
@@ -26,16 +26,16 @@ to each other in a secure decentralized manner.
                 <b>Swift</b> - <a style="font-weight: 300;" href="https://github.com/elastos/Elastos.NET.Carrier.Swift.SDK" target="_blank">https://github.com/elastos/Elastos.NET.Carrier.Swift.SDK</a>
             </li>
         </ul>
-        
+
         {{< spacer 1 >}}
-        
-        <h4>Check out our usage guides or demos:</h4> 
-        
+
+        <h4>Check out our usage guides or demos:</h4>
+
         {{< hero >}}
             {{< heroitem link="/services/carrier/guides" >}}
                 <h5>Usage Guides</h5>
             {{< /heroitem >}}
-            
+
             {{< heroitem link="/services/carrier/demos" >}}
                 <h5>Carrier Demos</h5>
             {{< /heroitem >}}
@@ -48,7 +48,7 @@ to each other in a secure decentralized manner.
     {{< heroitem title="2. Use the elastOS Plugin" link="/build/elastos" >}}
         The elastOS app has a Carrier Plugin that capsules can access.<br/>
         <br/>
-        You can preview the API here: 
+        You can preview the API here:
         <a href="https://developer.elastos.org/references/trinity_plugins/modules/carrierplugin.html" target="_blank" onclick="event.stopPropagation();">
             https://developer.elastos.org/references/trinity_plugins/modules/carrierplugin.html
         </a>

@@ -4,7 +4,7 @@ date = 2020-05-10T21:15:40+02:00
 weight = 30
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 In order to utilize the Elastos ETH Sidechain on {{< rawspan fontweight="400" >}}mainnet{{< /rawspan >}} of course

@@ -3,7 +3,7 @@ title = "Scripting & Tests"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ## Contract Interaction

@@ -4,7 +4,7 @@ date = 2019-05-24T21:15:33+02:00
 weight = 25
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++ 
 
 {{< faqentry question="How will the network be maintained? How will the Carrier see to its own needs?" >}}

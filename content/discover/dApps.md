@@ -4,7 +4,7 @@ title = "dApps"
 weight = 10
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ### Standalone Projects / Apps on Elastos:

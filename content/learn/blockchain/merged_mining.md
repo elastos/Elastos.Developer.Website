@@ -4,7 +4,7 @@ date = 2019-05-24T21:15:52+02:00
 weight = 15
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 Elastos implements the same merged mining specification as {{< externallink title="Namecoin" >}}https://www.namecoin.org{{< /externallink >}}. 

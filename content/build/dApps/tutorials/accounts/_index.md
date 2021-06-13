@@ -3,7 +3,7 @@ title = "Connecting Users"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 Introducing dApps to new users is difficult! Even if they already have used Metamask, Elastos introduces another

@@ -3,7 +3,7 @@ title = "Publishing Your capsule"
 weight = 40
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 {{% notice note %}}

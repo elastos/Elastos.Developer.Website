@@ -3,7 +3,7 @@ title = "Why choose Elastos?"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 {{< youtube vaJ5Pguxd4M >}}

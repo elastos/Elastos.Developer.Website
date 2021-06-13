@@ -4,7 +4,7 @@ date = {{ .Date }}
 weight = 5
 chapter = true
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 ### Chapter X

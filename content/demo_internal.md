@@ -4,7 +4,7 @@ date = 2019-05-24T21:15:40+02:00
 weight = 5
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 This demo page is for doc contributors to find examples of usable shortcodes.<br>

@@ -5,7 +5,7 @@ title = "Tools"
 weight = 50
 chapter = false
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 {{< hero >}}

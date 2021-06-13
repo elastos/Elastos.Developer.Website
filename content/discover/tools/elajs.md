@@ -5,7 +5,7 @@ title = "elajs [ALPHA]"
 weight = 10
 chapter = true
 pre = ""
-alwaysopen = false
+alwaysopen = true
 +++
 
 {{< figure src="/discover/tools/elajs.png" height="100">}}
