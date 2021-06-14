@@ -1,7 +1,7 @@
 
 
 +++
-title = "Hive storage"
+title = "Decentralized storage (Hive)"
 weight = 30
 chapter = false
 pre = ""

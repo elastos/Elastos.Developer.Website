@@ -42,6 +42,7 @@ disableLanguageSwitchingButton = true
 
 # Hide breadcrumbs in the header and only show the current page title
 disableBreadcrumb = false
+disableToc = true
 
 # Hide Next and Previous page buttons normally displayed full height beside content
 disableNextPrev = true
@@ -60,54 +61,6 @@ title = "Elastos Developer Documentation"
 weight = 1
 languageName = "English"
 
-# Add a [[menu.shortcuts]] entry for each extra shortcut we want in the menu
-[[languages.en.menu.shortcuts]]
-name = "<i class='fab fa-github menu-shortcut-icon'></i>Elastos Github"
-url = "https://github.com/elastos"
-weight = 10
-
-[[languages.en.menu.shortcuts]]
-name = "<i class='fas fa-coins menu-shortcut-icon'></i>Blockchain Explorer"
-url = "https://blockchain.elastos.org/"
-weight = 10
-
-[[languages.en.menu.shortcuts]]
-name = "<i class='fas fa-user menu-shortcut-icon'></i>DID Blockchain Explorer"
-url = "https://idchain.elastos.org/"
-weight = 20
-
-[[languages.en.menu.shortcuts]]
-name = "<i class='fas fa-user menu-shortcut-icon'></i>DID Explorer"
-url = "https://explorer.elaphant.app/"
-weight = 25
-
-[[languages.en.menu.shortcuts]]
-name = "<i class='fab fa-ethereum menu-shortcut-icon'></i>ETH Sidechain Explorer"
-url = "https://explorer.elaeth.io/"
-weight = 30
-
-[[languages.en.menu.shortcuts]]
-name = "<i class='fab fa-ethereum menu-shortcut-icon'></i>ETH Sidechain Resources (Faucet/RPC Ports)"
-url = "https://elaeth.io/"
-weight = 35
-
-
-[[languages.en.menu.shortcuts]]
-name = "<i class='fab fa-linode menu-shortcut-icon'></i> Carrier nodes statistics"
-url = "http://peerjet.net/"
-weight = 40
-
-
-[[languages.en.menu.shortcuts]]
-name = "<i class='fas fa-user-friends menu-shortcut-icon'></i> Cyber Republic DAO - Get Funded"
-url = "https://www.cyberrepublic.org/"
-weight = 45
-
-[[languages.en.menu.shortcuts]]
-name = "<i class='fas fa-envelope menu-shortcut-icon'></i> Contact us"
-url = "mailto:contact@elastos.org"
-weight = 50
-
 [markup]
   [markup.highlight]
     anchorLineNos = false
@@ -116,8 +69,8 @@ weight = 50
     hl_Lines = ""
     lineAnchors = ""
     lineNoStart = 1
-    lineNos = true
-    lineNumbersInTable = true
+    lineNos = false
+    lineNumbersInTable = false
     noClasses = true
     style = "manni"
     tabWidth = 2

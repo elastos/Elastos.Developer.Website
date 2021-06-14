@@ -1,7 +1,7 @@
 
 +++
 title = "Elastos Essentials"
-weight = 10
+weight = 20
 chapter = false
 pre = ""
 alwaysopen = true
@@ -41,7 +41,7 @@ The Elastos Essentials connector library currently provides the following capabi
 | ------- | ------- |
 | **Web3 requests** | Handle Web3 ethereum compatible transactions. For instance, a smart contract call. |
 
-### Hive storage
+### HIVE STORAGE
 
 | Feature | Summary |
 | ------- | ------- |
@@ -60,39 +60,34 @@ Calling methods below such as didAccess.getCredentials() does:
 
 #### Initial setup
 
-```bash
-npm install @elastosfoundation/elastos-connectivity-sdk-js
-npm install @elastosfoundation/essentials-connector-client-browser
-npm install @elastosfoundation/did-js-sdk
+```shell
+$ npm install @elastosfoundation/elastos-connectivity-sdk-js
+$ npm install @elastosfoundation/essentials-connector-client-browser
+$ npm install @elastosfoundation/did-js-sdk
 ```
 
 ```typescript
-import {
-    connectivity,
-    DID as ConnDID
-} from "@elastosfoundation/elastos-connectivity-sdk-js";
-
-import {
-    EssentialsConnector
-} from "@elastosfoundation/essentials-connector-client-browser";
+import { connectivity, DID } from "@elastosfoundation/elastos-connectivity-sdk-js";
+import { EssentialsConnector } from "@elastosfoundation/essentials-connector-client-browser";
 
 constructor() {
-  let essentialsConnector = new EssentialsConnector();
-  connectivity.registerConnector(this.essentialsConnector);
+  connectivity.registerConnector(new EssentialsConnector());
 }
 ```
 
 #### Get credentials
 
 ```typescript
-let didAccess = new ConnDID.DIDAccess();
-let presentation = await didAccess.getCredentials({claims: {
+let didAccess = new DID.DIDAccess();
+let presentation = await didAccess.getCredentials({
+  claims: {
     name: true,
     avatar: {
       required: false,
       reason: "To check if you are handsome or not"
     }
-}});
+  }
+});
 
 if (presentation) {
   let nameCredential = presentation.getCredentials().find((c) => {

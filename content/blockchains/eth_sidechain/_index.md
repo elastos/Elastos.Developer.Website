@@ -1,5 +1,5 @@
 +++
-title = "Elastos ETH Sidechain"
+title = "Smart Contract Chain (ESC)"
 weight = 50
 chapter = false
 pre = ""

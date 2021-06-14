@@ -12,15 +12,14 @@ alwaysopen = true
 
 Follow these helpful guides to see how Elastos Carrier is used:
 
-{{< spacer 1 >}}
-
 {{< hero >}}
-    {{< heroitem link="/services/carrier/guides/carrier_bases" colspan="6">}}
+    {{< heroitem link="/services/carrier/guides/carrier_bases">}}
         <h5>Basics - Friends and Messaging</h5>
     {{< /heroitem >}}
-    
-    {{< heroitem link="/services/carrier/guides/carrier_sessions" colspan="6">}}
+{{< /hero >}}
+{{< hero >}}
+    {{< heroitem link="/services/carrier/guides/carrier_sessions">}}
         <h5>Advanced - Sessions and Streams</h5>
     {{< /heroitem >}}
-        
+
 {{< /hero >}}

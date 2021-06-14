@@ -1,6 +1,6 @@
 :root {
-	--main-color: #00aeff;
-	--sidebar-color: #FFF;
+	--main-color: #9fa8c5;
+	--sidebar-color: #FFF; /* #9fa8c5; */
 }
 
 @font-face {
@@ -80,6 +80,11 @@ body[data-url="/resources/apis/elastos/"] h1 {
 	line-height: 1.5 !important;
 }
 
+h1 {
+	font-size: 3em;
+	display: block;
+}
+
 h2 {
 	font-size: 2rem;
 	font-weight: 300;
@@ -118,6 +123,11 @@ ol > li {
 	margin-bottom: 24px;
 }
 
+#sidebar {
+	background: var(--sidebar-color);
+	border-right: solid 3px #F6F6F6;
+}
+
 #sidebar ul.topics > li > a {
 	color: #292929;
 }
@@ -142,11 +152,13 @@ blockquote > p {
 	border-top-right-radius: 4px;
 }
 .tab-button.active{
-	background-color: #326A90;
-	color:white;
+	/* background-color: #333333; */
+	font-weight:bold;
+	color:#333;
 }
 .tab-content {
-	border: solid 1px #DDDDDD;
+	/* border: solid 1px #DDDDDD; */
+	border: none;
 }
 .tab-content .tab-pane{
 	display: none;
@@ -157,6 +169,11 @@ blockquote > p {
 .tab-content .tab-pane pre {
 	margin:0
 }
+.tab-content .tab-pane pre {
+	padding: 0;
+}
+
+
 /* Treatment of copy buttons inside a tab module */
 /*.tab-content .copy, .tab-content .copied{
 	display: none;
@@ -453,7 +470,7 @@ blockquote > p {
 	position: relative;
 	grid-area: next;
 	align-self: stretch;
-	box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+	/* box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1); */
 	align-items: center;
 	justify-self: stretch;
 	border-radius: 3px;
@@ -472,6 +489,12 @@ blockquote > p {
 	cursor: pointer;
 
 	line-height: 1.4;
+	transition: all 0.3s ease;
+}
+
+.hero .hero-item.shadow > .col-inner:hover {
+	box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+	border-color: #000;
 }
 
 .hero .hero-item.no-pad {

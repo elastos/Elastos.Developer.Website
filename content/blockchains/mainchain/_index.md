@@ -1,7 +1,7 @@
 
 
 +++
-title = "ELA Blockchain"
+title = "Main Chain (ELA)"
 weight = 10
 chapter = false
 pre = ""

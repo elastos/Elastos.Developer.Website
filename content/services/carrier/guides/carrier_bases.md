@@ -7,20 +7,14 @@ pre = ""
 alwaysopen = true
 +++
 
-{{< todo "@BPI @TangZhiLong Find the equivalent codes for swift" >}}
-
-## Introduction
-
 Elastos Carrier provides features such as direct messaging (text or binary) to a peer, group messaging, or file transfer. This guide will show several of carrier's main features.
-
-## Initialize carrier
 
 ### Configure carrier options
 
 Carrier needs a few options to be configured first. Mostly, we must tell him which bootstrap nodes it should use to start communicating with the rest of the P2P network.
 
-{{< tabs >}} 
-    {{< tab name="Java" codelang="java" >}} 
+{{< tabs >}}
+    {{< tab name="Java" codelang="java" >}}
 public class DefaultCarrierOptions extends Carrier.Options {
     public DefaultCarrierOptions(String path) {
         super();
@@ -74,34 +68,15 @@ public class DefaultCarrierOptions extends Carrier.Options {
         setBootstrapNodes(arrayList);
     }
 }
-    {{< /tab >}} 
-    {{< tab name="Swift" codelang="swift" >}} 
-    {{< /tab >}} 
-    {{< tab name="elastOS" codelang="js" >}} 
-declare let carrierPlugin: any;
-
-let callbacks = {};
-
-let carrierInst;
-
-function success(ret) {
-    carrierInst = ret;
-}
-
-function error(ret) {
-    // do something
-}
-
-carrierPlugin.createObject(success, error, null, callbacks);
-    {{< /tab >}} 
+    {{< /tab >}}
 {{< /tabs >}}
 
 ### Create a handler to receive status changes
 
 A handler object will be provided to carrier, and several callbacks will be triggered there. From that handler you will be able to handle some of your app's logic.
 
-{{< tabs >}} 
-    {{< tab name="Java" codelang="java" >}} 
+{{< tabs >}}
+    {{< tab name="Java" codelang="java" >}}
 public class DefaultCarrierHandler extends AbstractCarrierHandler {
     @Override
     public void onConnection(Carrier carrier, ConnectionStatus status) {
@@ -113,9 +88,9 @@ public class DefaultCarrierHandler extends AbstractCarrierHandler {
     }
 
     @Override
-    public void onFriendRequest(Carrier carrier, 
-                                String userId, 
-                                UserInfo info, 
+    public void onFriendRequest(Carrier carrier,
+                                String userId,
+                                UserInfo info,
                                 String hello) {
         Logger.getGlobal().info("Carrier received friend request. Peer UserId: " + userId);
         carrier.acceptFriend(userId);
@@ -127,8 +102,8 @@ public class DefaultCarrierHandler extends AbstractCarrierHandler {
     }
 
     @Override
-    public void onFriendConnection(Carrier carrier, 
-                                   String friendId, 
+    public void onFriendConnection(Carrier carrier,
+                                   String friendId,
                                    ConnectionStatus status) {
         Logger.getGlobal().info("Carrier friend connect. peer UserId: " + friendId);
         Logger.getGlobal().info("Friend status:" + status);
@@ -146,127 +121,15 @@ public class DefaultCarrierHandler extends AbstractCarrierHandler {
         Logger.getGlobal().info("Message: " + new String(message));
     }
 }
-  {{< /tab >}} 
-    {{< tab name="Swift" codelang="swift" >}} 
-    {{< /tab >}} 
-    {{< tab name="elastOS" codelang="js" >}} 
-declare let carrierPlugin: any;
-
-let callbacks = {
-    onConnection: connection_callback,
-    onReady: ready_callback,
-    onSelfInfoChanged: self_info_callback,
-    onFriends: friends_list_callback,
-    onFriendConnection: friend_connection_callback,
-    onFriendInfoChanged: friend_info_callback,
-    onFriendPresence: friend_presence_callback,
-    onFriendRequest: friend_request_callback,
-    onFriendAdded: friend_added_callback,
-    onFriendRemoved: friend_removed_callback,
-    onFriendMessage: message_callback,
-    onFriendInviteRequest: invite_request_callback,
-    onSessionRequest: session_request_callback,
-}
-
-function connection_callback(event) {
-    switch (event.status) {
-        case carrierPlugin.ConnectionStatus.CONNECTED:
-            // do something
-            break;
-
-        case carrierPlugin.ConnectionStatus.DISCONNECTED:
-            // do something
-            break;
-
-        default:
-            // do something
-    }
-}
-
-function ready_callback(event) {
-    // do something
-}
-
-function self_info_callback(event) {
-    // do something
-}
-
-function friends_list_callback(event) {
-    // do something
-}
-
-function friend_connection_callback(event) {
-    switch (event.status) {
-        case carrierPlugin.ConnectionStatus.CONNECTED:
-            // do something
-            break;
-
-        case carrierPlugin.ConnectionStatus.DISCONNECTED:
-            // do something
-            break;
-
-        default:
-            // do something
-    }
-}
-
-function friend_info_callback(event) {
-    // do something
-}
-
-function friend_presence_callback(event) {
-    if (event.presence >= carrierPlugin.PresenceStatus.NONE &&
-        event.presence <= carrierPlugin.PresenceStatus.BUSY) {
-        // do something
-    } else {
-        // do something
-    }
-}
-
-function friend_request_callback(event) {
-    // do something
-}
-
-function friend_added_callback(event) {
-    // do something
-}
-
-function friend_removed_callback(event) {
-    // do something
-}
-
-function message_callback(event) {
-    // do something
-}
-
-function invite_request_callback(event) {
-    // do something
-}
-
-function session_request_callback(event) {
-    // do something
-}
-
-let carrierInst;
-
-function success(ret) {
-    carrierInst = ret;
-}
-
-function error(ret) {
-    // do something
-}
-
-carrierPlugin.createObject(success, error, null, callbacks);
-    {{< /tab >}} 
+  {{< /tab >}}
 {{< /tabs >}}
 
 ### Start Carrier
 
 Now that we have options, and a handler, we can start carrier like this:
 
-{{< tabs >}} 
-    {{< tab name="Java" codelang="java" >}} 
+{{< tabs >}}
+    {{< tab name="Java" codelang="java" >}}
 // Initial setup
 Carrier.Options options = new DefaultCarrierOptions(context.getFilesDir().getAbsolutePath());
 CarrierHandler handler = new DefaultCarrierHandler();
@@ -277,27 +140,17 @@ Carrier carrier = Carrier.getInstance();
 
 // Start the service
 carrier.start(500); // Start carrier. Wait 500 milliseconds between each check of carrier status (polling)
-    {{< /tab >}} 
-    {{< tab name="Swift" codelang="swift" >}} 
-    {{< /tab >}} 
-    {{< tab name="elastOS" codelang="js" >}} 
-carrierInst.start(null, null, 500);
-    {{< /tab >}} 
+    {{< /tab >}}
 {{< /tabs >}}
 
 ### Create a peer address
 
 As a peer on carrier network, you can retrieve your carrier unique address using the following code:
 
-{{< tabs >}} 
-    {{< tab name="Java" codelang="java" >}} 
+{{< tabs >}}
+    {{< tab name="Java" codelang="java" >}}
 String myPeerAddress = Carrier.getInstance().getAddress()
-    {{< /tab >}} 
-    {{< tab name="Swift" codelang="swift" >}} 
-    {{< /tab >}} 
-    {{< tab name="elastOS" codelang="js" >}} 
-carrierInst.address;
-    {{< /tab >}} 
+    {{< /tab >}}
 {{< /tabs >}}
 
 This address can send me send to a friend (usually, through a QR code or a link) so he can add it into his own app to request to connect as a friend.
@@ -308,15 +161,10 @@ Carrier supports friends management. You can add a peer as a friend using its pe
 
 Note that all operations such as adding a friend or sending a message currently require **both parties to be online**.
 
-{{< tabs >}} 
-    {{< tab name="Java" codelang="java" >}} 
+{{< tabs >}}
+    {{< tab name="Java" codelang="java" >}}
 Carrier.getInstance().addFriend(peerAddr, CARRIER_HELLO_AUTH);
-    {{< /tab >}} 
-    {{< tab name="Swift" codelang="swift" >}} 
-    {{< /tab >}} 
-    {{< tab name="elastOS" codelang="js" >}} 
-carrierInst.addFriend(success, error, peerAddress, hello);
-    {{< /tab >}} 
+    {{< /tab >}}
 {{< /tabs >}}
 
 After requesting a peer address to become friend, that peer will receive your request in its DefaultCarrierHandler, inside onFriendRequest(). At that time, peer's app can choose to accept or reject your invitation.
@@ -325,12 +173,12 @@ After requesting a peer address to become friend, that peer will receive your re
 
 When a peer receives an invitation in onFriendRequest(), he can accept it like this:
 
-{{< tabs >}} 
-    {{< tab name="Java" codelang="java" >}} 
+{{< tabs >}}
+    {{< tab name="Java" codelang="java" >}}
     @Override
-    public void onFriendRequest(Carrier carrier, 
-                                String userId, 
-                                UserInfo info, 
+    public void onFriendRequest(Carrier carrier,
+                                String userId,
+                                UserInfo info,
                                 String hello) {
 if (hello.equals(YOUR_UNIQUE_KEY_FOR_YOUR_APP) == false) {
     Logger.getGlobal().geterror("Ignore to accept friend, not expected.");
@@ -338,12 +186,7 @@ if (hello.equals(YOUR_UNIQUE_KEY_FOR_YOUR_APP) == false) {
 }
                                 }
 Carrier.getInstance().acceptFriend(userId);
-    {{< /tab >}} 
-    {{< tab name="Swift" codelang="swift" >}} 
-    {{< /tab >}} 
-    {{< tab name="elastOS" codelang="js" >}} 
-carrierInst.acceptFriend(success, error, userId);
-    {{< /tab >}} 
+    {{< /tab >}}
 {{< /tabs >}}
 
 When the request is accepted, both parties receive the information in onFriendAdded().
@@ -352,86 +195,47 @@ When the request is accepted, both parties receive the information in onFriendAd
 
 You can know when friends come online or offline listening to the onFriendConnection() callback:
 
-{{< tabs >}} 
-    {{< tab name="Java" codelang="java" >}} 
+{{< tabs >}}
+    {{< tab name="Java" codelang="java" >}}
 @Override
 public void onFriendConnection(Carrier carrier, String userId, ConnectionStatus status) {
     if(status == ConnectionStatus.Connected) {
         // Do something
     }
 }
-    {{< /tab >}} 
-    {{< tab name="Swift" codelang="swift" >}} 
-    {{< /tab >}} 
-    {{< tab name="elastOS" codelang="js" >}} 
-declare let carrierPlugin: any;
-
-function friend_connection_callback(event) {
-    switch (event.status) {
-        case carrierPlugin.ConnectionStatus.CONNECTED:
-            // do something
-            break;
-
-        case carrierPlugin.ConnectionStatus.DISCONNECTED:
-            // do something
-            break;
-
-        default:
-            // do something
-    }
-}
-    {{< /tab >}} 
+    {{< /tab >}}
 {{< /tabs >}}
 
 ### Send a message to a friend
 
 Sending a message to a friend is as easy as this. Please note that only friends can receive messages to prevent spam.
-    
-{{< tabs >}} 
-    {{< tab name="Java" codelang="java" >}} 
+
+{{< tabs >}}
+    {{< tab name="Java" codelang="java" >}}
 Carrier.getInstance().sendFriendMessage(userId, message);
-    {{< /tab >}} 
-    {{< tab name="Swift" codelang="swift" >}} 
-    {{< /tab >}} 
-    {{< tab name="elastOS" codelang="js" >}} 
-carrierInst.sendFriendMessage(success, error, userId, message);
-    {{< /tab >}} 
+    {{< /tab >}}
 {{< /tabs >}}
 
 ### Receive a message
 
 Messages are received by the carrier handler:
 
-{{< tabs >}} 
-    {{< tab name="Java" codelang="java" >}} 
+{{< tabs >}}
+    {{< tab name="Java" codelang="java" >}}
 @Override
 public void onFriendMessage(Carrier carrier, String userId, String message) {
 }
-    {{< /tab >}} 
-    {{< tab name="Swift" codelang="swift" >}} 
-    {{< /tab >}} 
-    {{< tab name="elastOS" codelang="js" >}} 
-function message_callback(event) {
-    // do something
-}
-    {{< /tab >}} 
+    {{< /tab >}}
 {{< /tabs >}}
 
 ### Stop Carrier
 
-{{< tabs >}} 
-    {{< tab name="Java" codelang="java" >}} 
+{{< tabs >}}
+    {{< tab name="Java" codelang="java" >}}
 Carrier carrier = Carrier.getInstance();
 carrier.kill();
-    {{< /tab >}} 
-    {{< tab name="Swift" codelang="swift" >}} 
-    {{< /tab >}} 
-    {{< tab name="elastOS" codelang="js" >}} 
-carrierInst.destroy(null, null);
-    {{< /tab >}} 
+    {{< /tab >}}
 {{< /tabs >}}
-
-{{< spacer 2 >}}
 
 {{< hero >}}
     {{< heroitem link="/services/carrier/guides/carrier_sessions" rightArrow="true">}}

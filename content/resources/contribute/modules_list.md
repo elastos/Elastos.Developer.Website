@@ -5,6 +5,7 @@ weight = 40
 chapter = false
 pre = ""
 alwaysopen = true
+draft = true
 +++
 
 If you're willing to contribute as a community leader, designer, or by running a supernode, please join Elastos telegram groups to get in touch with the Elastos community.
@@ -97,10 +98,10 @@ You can find more information about each repository going to [the root Elastos G
 * Elastos.Trinity.Runtime
 * Elastos.Trinity.Plugins.File
 * Elastos.Trinity.ToolChains
-* Elastos.Trinity.Plugins.* 
+* Elastos.Trinity.Plugins.*
 * Elastos.Trinity.Plugins.IonicWebView
 
-> Voting 
+> Voting
 
 * Elastos.SDK.Vote.Client
 * Elastos.Service.DIDVote
@@ -139,7 +140,7 @@ You can find more information about each repository going to [the root Elastos G
 
 * Elastos.NET.Hive.HttpAPITests
 
-### Documentation & Web tools 
+### Documentation & Web tools
 
 * Elastos.Developer.Website
 
