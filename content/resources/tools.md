@@ -18,7 +18,7 @@ alwaysopen = true
 | --- | --- |
 | Main Chain explorer | https://blockchain.elastos.org |
 | ID Chain explorers | https://idchain.elastos.org, https://explorer.elaphant.app |
-| ESC Chain explorer | https://explorer.elaeth.io |
+| ESC Chain explorer | http://eth.elastos.io |
 
 ## Smart contract chain
 
