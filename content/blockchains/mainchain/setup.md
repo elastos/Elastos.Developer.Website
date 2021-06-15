@@ -11,10 +11,10 @@ alwaysopen = true
 
 {{< hero >}}
     {{< heroitem link="https://github.com/elastos/elastos.ELA" linkBlank="true" rightArrow="true">}}
-        Our Elastos (ELA) Node is open-source on Github, you can build and deploy it yourself and 
+        Our Elastos (ELA) Node is open-source on Github, you can build and deploy it yourself and
         directly connect it to our vast Elastos blockchain network.<br/>
         <br/>
-        Click here to visit the Github repo: 
+        Click here to visit the Github repo:
         <a href="https://github.com/elastos/Elastos.ELA" target="_blank" onclick="event.stopPropagation();">
             <b><i class="fab fa-github"></i> https://github.com/elastos/Elastos.ELA</b>
         </a>
@@ -23,7 +23,7 @@ alwaysopen = true
 
 ## Using the ELA CLI
 
-The {{< internallink "ELA CLI" "/services/mainchain/guides/ela_cli.md" >}} is a command line interface that helps you interact with an ELA Mainchain node.
+The {{< internallink "ELA CLI" "ela_cli.md" >}} is a command line interface that helps you interact with an ELA Mainchain node.
 
 This tool is built at the same time as the ELA node (make command). You can find more details at our Github repo [https://github.com/elastos/Elastos.ELA.Client](https://github.com/elastos/Elastos.ELA.Client).
 

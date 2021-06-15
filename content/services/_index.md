@@ -1,6 +1,6 @@
 
 +++
-title = "Core Services"
+title = "Application development"
 weight = 10
 chapter = false
 pre = ""

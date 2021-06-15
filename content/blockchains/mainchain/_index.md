@@ -8,9 +8,7 @@ pre = ""
 alwaysopen = false
 +++
 
-### The Elastos Mainchain is a global decentralized PoW blockchain merge-mined with Bitcoin with over 50% of BTC's hashrate
-
-{{< spacer 1 >}}
+The Elastos Mainchain is a global decentralized PoW blockchain merge-mined with Bitcoin with over 50% of BTC's hashrate.
 
 {{< rawhtml >}}
     <a target="_blank" href="https://github.com/elastos/Elastos.ELA" style="color: #333; font-size: 20px;">
@@ -31,18 +29,16 @@ alwaysopen = false
 
 - _There are no official public ELA nodes, connecting to any community node is at your own risk_
 
-{{< spacer 2 >}}
-
 {{< hero >}}
-    {{< heroitem title="Guides" link="/services/mainchain/guides" colspan="4" >}}
+    {{< heroitem title="Guides" link="guides" colspan="4" >}}
         Learn how to deploy a local ELA Node and use the ELA CLI to interact with it
     {{< /heroitem >}}
 
-    {{< heroitem title="Reference" link="/services/mainchain/reference" colspan="4" >}}
+    {{< heroitem title="Reference" link="reference" colspan="4" >}}
         API Documentation for interacting with the ELA node
     {{< /heroitem >}}
 
-    {{< heroitem title="Exchange Integration" link="/services/mainchain/exchanges" colspan="4" >}}
+    {{< heroitem title="Exchange Integration" link="exchanges" colspan="4" >}}
         Information for crypto currency exchanges that need to connect to Elastos
     {{< /heroitem >}}
 {{< /hero >}}

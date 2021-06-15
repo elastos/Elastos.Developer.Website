@@ -7,14 +7,6 @@ pre = ""
 alwaysopen = true
 +++
 
-{{< ownership "BoCheng, Benjamin Piette" >}}
-
-{{< todo "@BPI Simplify: basic commands first, complex later + introduction" >}}
-
-{{< todo "@BPI @BoCheng Tell users how to install a local ELA node, as that is used by the CLI. This part is unclear" >}}
-
-{{< todo "@BPI @NiuJingyu Explain a bit more to beginners. For example 'view public key': clarify what is that public key, when it is used, is that a test key or a permanent key, etc" >}}
-
 You can download ela-cli program from [https://download.elastos.org/elastos-ela/](https://download.elastos.org/elastos-ela/)
 
 The Elastos CLI provides several useful commands for development, deployment, identity management, etc. The main ones are listed in the table below.

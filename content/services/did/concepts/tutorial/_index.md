@@ -4,7 +4,8 @@ title = "Getting Started"
 weight = 20
 chapter = false
 pre = ""
-alwaysopen = true
+alwaysopen = false
+draft = true
 +++
 
 In this tutorial we will build the [Use Case Example: Decentralized Proof of Age](/services/did_sidechain/use_case_example).
@@ -13,7 +14,7 @@ In this tutorial we will build the [Use Case Example: Decentralized Proof of Age
 
 1. Alice must be able to create a DID with her name, digital photo hash and an endpoint service for the digital photo
 
-2. Alice needs a private vault with granular permissions 
+2. Alice needs a private vault with granular permissions
 
 3. Company **"V"** must be able to create a Verifiable Credential
 
@@ -22,7 +23,7 @@ In this tutorial we will build the [Use Case Example: Decentralized Proof of Age
 5. Bob needs to be able to scan the QR code, fetch her digital photo and verify the Verifiable Presentation without
     the issuer's help.
 
- 
+
 {{< notice todo >}}
     Under Development
 {{< /notice >}}

@@ -1,7 +1,7 @@
 
 
 +++
-title = "Decentralized Identity (DID)"
+title = "Decentralized identity (DID)"
 weight = 20
 chapter = false
 pre = ""
@@ -17,10 +17,10 @@ and prove **"claims"** about just about anything.
 
 #### For example here's a simple age verification use case:
 
-{{< figure src="/services/did_sidechain/did_2.png" >}}
+{{< figure src="concepts/did_2.png" >}}
 
 {{< hero >}}
-    {{< heroitem link="/services/did_sidechain/use_case_example" rightArrow="true" >}}
+    {{< heroitem link="./concepts/" rightArrow="true" >}}
         <h5>Typical Use Case: <span style="font-weight: 400;">Decentralized Proof of Age</span></h5>
     {{< /heroitem >}}
 {{< /hero >}}
@@ -28,7 +28,7 @@ and prove **"claims"** about just about anything.
 Already Know About DIDs? Start here to learn how to integrate Elastos DID into your apps:
 
 {{< hero >}}
-    {{< heroitem link="/services/did_sidechain/tutorial" rightArrow="true" >}}
+    {{< heroitem link="./guides" rightArrow="true" >}}
         <h5>Getting Started with DIDs</h5>
     {{< /heroitem >}}
 {{< /hero >}}

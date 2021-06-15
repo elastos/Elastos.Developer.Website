@@ -1,10 +1,10 @@
 
 +++
-title = "Typical Use Case"
-weight = 15
+title = "Concept / Use cases"
+weight = 10
 chapter = false
 pre = ""
-alwaysopen = true
+alwaysopen = false
 +++
 
 This is a light introduction to the unique **"decentralized identifiers" (DID)** that follows the W3C DID Specification: https://w3c.github.io/did-core.
@@ -78,11 +78,11 @@ In this example we will introduce a simple use case where a person `Alice` wants
 
 In our example we use the basic actors: **issuer, subject, verifier**. For more info refer to: https://www.w3.org/TR/vc-data-model/#ecosystem-overview
 
-{{< figure src="/services/did_sidechain/did_1.png" >}}
+{{< figure src="./did_1.png" >}}
 
 ### Bob Verifying Alice's DID and Age is greater than **"X"**
 
-{{< figure src="/services/did_sidechain/did_2.png" >}}
+{{< figure src="./did_2.png" >}}
 
 #### Some key things to help explain why this works:
 
