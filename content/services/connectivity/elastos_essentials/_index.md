@@ -38,3 +38,25 @@ Calling methods below such as didAccess.getCredentials() on the Connectivity SDK
   * Essentials shows appropriate confirmation screens to users.
   * Users confirm and the calling app gets the response (i.e.: user's DID profile information).
 
+## Advanced EIP commands support
+
+The following commands are supported by Elastos Essentials through the Essentials connector:
+
+### wallet_watchAsset
+
+Lets applications ask users to add a custom ERC token to their list of available tokens.
+
+```typescript
+const wasAdded = await ethereum.request({
+  method: 'wallet_watchAsset',
+  params: {
+    type: 'ERC20', // Initially only supports ERC20, but eventually more!
+    options: {
+      address: "0x2fceb9e10c165ef72d5771a722e8ab5e6bc85015", // The address that the token is at.
+      symbol: "BNA", // A ticker symbol or shorthand, up to 5 chars.
+      decimals: 18, // The number of decimals in the token
+      image: "http://placekitten.com/200/300", // A string url of the token logo
+    },
+  },
+});
+```
