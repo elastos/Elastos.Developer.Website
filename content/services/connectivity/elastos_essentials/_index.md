@@ -50,7 +50,7 @@ Lets applications ask users to add a custom ERC token to their list of available
 const wasAdded = await ethereum.request({
   method: 'wallet_watchAsset',
   params: {
-    type: 'ERC20', // Initially only supports ERC20, but eventually more!
+    type: 'ELA/ETHSC-ERC20',
     options: {
       address: "0x2fceb9e10c165ef72d5771a722e8ab5e6bc85015", // The address that the token is at.
       symbol: "BNA", // A ticker symbol or shorthand, up to 5 chars.
