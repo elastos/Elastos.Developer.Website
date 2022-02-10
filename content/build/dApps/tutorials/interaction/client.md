@@ -105,7 +105,7 @@ import './App.css';
 
 import storageCompiledJSON from './contracts/Storage.json'
 
-const web3 = new Web3('https://rpc.elaeth.io')
+const web3 = new Web3('https://api-testnet.elastos.io/esc')
 
 // ELAETHSC testnet
 const storageContractAddress = '0x654Ff88970F04B8C2A75dfeEB0B133dE8024c671'

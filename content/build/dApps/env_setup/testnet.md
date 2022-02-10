@@ -54,11 +54,11 @@ Now in the `networks` section you want to add the `elaethTest` network:
 
 ```javascript
 elaethTest: {
-  host: 'https://rpc.elaeth.io',
-  port: 8545,
+  host: 'https://api-testnet.elastos.io/esc',
+  port: 20636,
   network_id: '*',
   provider: () => new HDWalletProvider(
-    mnemonic, 'https://rpc.elaeth.io'
+    mnemonic, 'https://api-testnet.elastos.io/esc'
   ),
   gasLimit: 8000000,
   gasPrice: 1000000000

@@ -42,7 +42,7 @@ guide on the UX side of smart contract interaction:
 
 Metamask actually injects an object into the `window` for you which you can reference at `window.ethereum`.
 
-Since your Metamask is already connected to 'https://rpc.elaeth.io' you'll notice that this code no longer specifies 
+Since your Metamask is already connected to 'https://api-testnet.elastos.io/esc' you'll notice that this code no longer specifies 
 the RPC port. This actually makes sense because a dApp is not something you have control once deployed and it should
 work on any network as long as the contracts are deployed there.
 

@@ -148,7 +148,7 @@ const mnemonic = secrets.mnemonic
 const walletAddress = '0x243C7B804a1CB650c3f584FaC5e33FdB61Cd26CE'
 
 const runProcess = async function (){
-  let web3 = new Web3(new HDWalletProvider(mnemonic, 'https://rpc.elaeth.io'))
+  let web3 = new Web3(new HDWalletProvider(mnemonic, 'https://api-testnet.elastos.io/esc'))
 
   // if your mnemonic was imported correctly it should match the walletAddress you sent test ELAETHSC
   if (web3.currentProvider.addresses[0] !== walletAddress.toLowerCase()){
@@ -262,7 +262,7 @@ const storageCompiledJSON = require('../build/contracts/Storage.json')
 // self-executing function to wrap async - makes it easier to use await
 ;(async () => {
 
-  const web3 = new Web3(new HDWalletProvider(mnemonic, 'https://rpc.elaeth.io'))
+  const web3 = new Web3(new HDWalletProvider(mnemonic, 'https://api-testnet.elastos.io/esc'))
 
   // if your mnemonic was imported correctly it should match the walletAddress you sent test ELAETHSC
   if (web3.currentProvider.addresses[0] !== walletAddress.toLowerCase()){
@@ -323,7 +323,7 @@ const storageContractAddress = '0x654Ff88970F04B8C2A75dfeEB0B133dE8024c671'
 
 ;(async () => {
 
-  const web3 = new Web3('https://rpc.elaeth.io')
+  const web3 = new Web3('https://api-testnet.elastos.io/esc')
 
   const storageInstance = new web3.eth.Contract(storageCompiledJSON.abi, storageContractAddress)
 

@@ -24,7 +24,7 @@ You can build and run the above Geth clone locally to connect to our ETH Sidecha
 
     {{< heroitem title="Testnet" colspan="6" >}}
         <code>
-            https://rpc.elaeth.io
+            https://api-testnet.elastos.io/esc
         </code>
         <div>
             Faucet: <a href="https://faucet.elaeth.io" target="_blank">https://faucet.elaeth.io</a>
@@ -33,7 +33,7 @@ You can build and run the above Geth clone locally to connect to our ETH Sidecha
 
     {{< heroitem title="Mainnet" colspan="6" >}}
         <code>
-            https://mainrpc.elaeth.io
+            https://api.elastos.io/esc
         </code>
     {{< /heroitem >}}
 
